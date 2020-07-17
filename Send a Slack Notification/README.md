@@ -2,7 +2,7 @@
 
 Version: 1.18.27
 
-Creator Name: Joel Stocker @scriptbased
+Creator Name: [Joel Stocker](https://github.com/scriptbased)
 
 Date Created: 2020-02-21
 
