@@ -1,0 +1,2 @@
+﻿chglogon /drainuntilrestart
+@exit

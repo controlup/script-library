@@ -1,0 +1,1 @@
+﻿Bcdedit /set nx alwaysoff

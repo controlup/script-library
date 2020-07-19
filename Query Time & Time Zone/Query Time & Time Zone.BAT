@@ -1,0 +1,2 @@
+﻿tzutil /g
+time /T
