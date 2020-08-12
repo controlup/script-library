@@ -1,5 +1,4 @@
-﻿
-<#
+﻿<#
     .SYNOPSIS
         Starts a vnc program to connect to a IGEL endpoint.
 
@@ -30,7 +29,7 @@ Param (
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
-###$VerbosePreference = "continue"
+$VerbosePreference = "continue"
 
 function Invoke-IGELRestAPI {
     Param
@@ -127,8 +126,23 @@ $headers = @{ "Authorization" = "Basic $encodedCredentials"
             "User-Agent"="ControlUp Powershell"
             }
 
-#Ignore invalid certificates
+# Most IGEL UMS servers (igelrmserver) dont have valid SSL Cert, thus ignore them
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12;
+# https://stackoverflow.com/questions/11696944/powershell-v3-invoke-webrequest-https-error
+add-type @"
+    using System.Net;
+    using System.Security.Cryptography.X509Certificates;
+    public class TrustAllCertsPolicy : ICertificatePolicy {
+        public bool CheckValidationResult(
+            ServicePoint srvPoint, X509Certificate certificate,
+            WebRequest request, int certificateProblem) {
+            return true;
+        }
+    }
+"@
+[System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
+
+
 
 #Set the UMS Server to contain the port number. Set to the defaul 8443 if it was not specified on the parameter
 if ($UMSServer -notlike "*:*") {
