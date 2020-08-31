@@ -3,6 +3,10 @@
     Health check VMware App Volumes end-point
 
     @guyrleech 2020
+
+    Modification History:
+
+    @guyrleech 27/08/2020  Added code for edge case where SQL down when user logs in
 #>
 
 [CmdletBinding()]
@@ -563,7 +567,7 @@ else
     }
 }
 
-[System.Collections.Generic.List[psobject]]$badEvents = $null
+$badEvents = New-Object -TypeName System.Collections.Generic.List[psobject]
 
 # Check for svservice specific issues in event log - get relevant events into an array, oldest first so we can grab the first event and not have to work back when searching
 if( ! ( [array]$svserviceEventLogEntries = @( Get-WinEvent -FilterHashtable @{ ProviderName = $serviceName ; StartTime = $startDate } -Oldest -ErrorAction SilentlyContinue ) ) -or ! $svserviceEventLogEntries.Count )
@@ -582,19 +586,19 @@ else ## look for bad event log entries
     if( $avErrors -and $avErrors.Count )
     {
         #$warnings.Add( $message )
-        $badEvents = @( ForEach( $avError in $avErrors )
+        ForEach( $avError in $avErrors )
         {
             if( ( [string]::IsNullOrEmpty( ( [string]$errorText = ($avError.Text -replace '\r?\n' , ' ' -replace '\s+' , ' ').Trim() ) ) ) `
                 -and ! [string]::IsNullOrEmpty( $avError.Message ) )
             {
                 $errorText = $avError.Message -replace '\r?\n' , ' ' -replace 'Details:' -replace '\s+' , ' '
             }
-            [pscustomobject][ordered]@{
+            $badEvents.Add( ( [pscustomobject][ordered]@{
                 'Time' = $avError.TimeCreated
                 'Id' = $avError.Id
                 'Error' = $errorText
-            }
-        })
+            } ) )
+        }
     }
 }
 
@@ -739,7 +743,15 @@ $svserviceEventLogEntries.Where( { $_.Id -eq 218 } ) | . { Process { $username =
         if( ( $event.Properties[1].Value  -replace  "`r`n|\<[a-z]+\/\>", ' ' -replace '\s+' , ' ' ) -match '\bResponse\b\s+\(\d+ bytes\):\s+(.*)' ) ## Response (88 bytes): This request is taking too long.<br/>... 
         {
             ## we split the string and are reading in chunks so get all lines here, join and isolate the response text
-            $errorText = $Matches[1]
+            if( $Matches[1] -like '<html>*' )
+            {
+                ## it's html and probably not complete so unlikely we can pull anything useful out of it
+                $errorText = 'html response from server'
+            }
+            else
+            {
+                $errorText = $Matches[1]
+            }
         }
         $badEvents.Add( ([pscustomobject]@{ 'Time' = $event.TimeCreated ; 'Id' = $event.Id ; Error = "Error code $errorCode `"$($errorText.Trim( ' .'))`"" }) )
     }
@@ -756,6 +768,7 @@ $information.Add( ([pscustomobject]@{ 'Item' = "Logged On or Disconnected Sessio
 # Get disk mounts - may not be any if no users
 if( ( [array]$AVmounts = @( Get-Partition | Where-Object { $_.AccessPaths.Where( { $_ -match $mountPoint } , 1 ) } ) ) -and $AVmounts.Count -gt 0 )
 {
+    $information.Add( ([pscustomobject]@{ 'Item' = "Mounted $productName" ; 'Description' = $AVmounts.Count } ) )
 }
 ## labels are CVApps or CVWritables
 elseif( ( [array]$AVVolumes = @( Get-CimInstance -ClassName win32_volume -Filter "Label like 'CV%' and BootVolume = 'false' and systemvolume = 'false'" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty DeviceID )) -and $AVVolumes.Count -gt 0 )
@@ -769,8 +782,10 @@ elseif( $userSessions.Count )
 
 if( $userSessions -and $userSessions.Count )
 {
+    [int]$userSessionCounter = 0
     ForEach( $userSession in $userSessions )
     {
+        $userSessionCounter++
         ## WTS API logon time is not accurate so we need to find the LSASS one
         $lsaSession = $lsaSessions.Where( { $_.SessionId -eq $userSession.SessionId -and $_.Domain -eq $userSession.DomainName -and $_.Username -eq $userSession.UserName } , 1 )
         [datetime]$logonTime = $(if( $lsaSession ) { $lsaSession.LoginTime } else { $userSession.LogonTime })
@@ -779,7 +794,8 @@ if( $userSessions -and $userSessions.Count )
         {
             ## if we haven't parsed the service log file yet we'll do it now so that we only get events after the logon of the first session chronologically
             ## need to parse the log file for App Volumes v2 to get GUIDS so we can find disk mount times
-            if( ! $parsedLogFile -and $appVolumesVersion -match '^2\.' -and (Test-Path -Path $appVolumesLogFile -ErrorAction SilentlyContinue) )
+            ## we also need the log file for 4.x to see if it has completely failed because of SQL issues which don't go into the event log
+            if( ! $parsedLogFile -and (Test-Path -Path $appVolumesLogFile -ErrorAction SilentlyContinue) )
             {
                 $timeZone = Get-TimeZone
                 
@@ -799,6 +815,10 @@ if( $userSessions -and $userSessions.Count )
                     
                 }})
                 $parsedLogFile = $true
+            }
+
+            if( $appVolumesVersion -match '^2\.' )
+            {
                 ## now try and marry up GUIDs between log file and event log so we can map mount points to apps
                 ##[array]$AppVolGUIDMappings = $( @( 
                 Foreach ($App in $AppList) {
@@ -864,22 +884,13 @@ if( $userSessions -and $userSessions.Count )
                                             {
                                                 Add-Member -InputObject $app -MemberType NoteProperty -Name AppDevice -Value $AppDevice
                                             }
-                                            <#
-                                            $result = [pscustomobject]@{
-                                                'AppGUID' = $App.AppGUID
-                                                'AppDevice' = $appDevice
-                                                'DiskGUID' = $DiskGUID
-                                                'AppName' = $appName
-                                                'AppId' = $app.AppId }
-                                            $result
-                                            #>
                                         }
                                     }
                                 }
                             }}
                         }
                     } }
-                } ## ) | Sort-Object -Property AppGUID -Unique ) ## ensure only have 1 entry per app
+                }
             }
 
             ## There will be a pair of 226 (Detected new volume, processing...) and 227 (New volume finished processing) events for each disk mounted for the user so time each
@@ -923,6 +934,29 @@ if( $userSessions -and $userSessions.Count )
                     {
                         $warnings.Add( "Unable to find a mounted volume for GUID $GUID for user $($userSession.UserName) $($userApp.AppName)" )
                     }
+                }
+            }
+
+            ## Check for catastrophic failures via log file
+            if( $AppVolumesLogonEvents -and $AppVolumesLogonEvents.Count )
+            {
+                ## get logon time of next user session to ensure we only look before that
+                $nextlogontime = $null
+                if( $userSessionCounter -lt $userSessions.Count )
+                {
+                    $nextlsaSession = $lsaSessions.Where( { $_.SessionId -eq $userSessions[$userSessionCounter].SessionId -and $_.Domain -eq $userSessions[$userSessionCounter].DomainName -and $_.Username -eq $userSessions[$userSessionCounter].UserName } , 1 )
+                    $nextlogonTime = $(if( $nextlsaSession ) { $nextlsaSession.LoginTime } else { $userSessions[$userSessionCounter].LogonTime })
+                }
+                if( ( $theEvent = $AppVolumesLogonEvents.Where( { $_.Time -ge $logonTime -and ( ! $nextlogontime -or $_.Time -lt $nextlogontime ) -and $_.Message -match 'HttpUserLogin: (succeeded|failed) \(user login\)' } , 1 ) ) )
+                {
+                    if( $Matches[1] -eq 'failed' )
+                    {
+                        $badEvents.Add( ([pscustomobject]@{ 'Time' = $theEvent.Time ; 'Id' = $null ; Error = "Found failed logon to $productName server in log file, probably for user $($userSession.UserName) $($userApp.AppName)" }) )
+                    }
+                }
+                else
+                {
+                    $warnings.Add( "Unable to find successful logon to $productName server for user $($userSession.UserName) $($userApp.AppName)" )
                 }
             }
         }
