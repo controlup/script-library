@@ -1,6 +1,6 @@
 ﻿<#
     .SYNOPSIS
-        Runs a command against an IGEL device
+        Runs a command against an IGEL device 
 
     .DESCRIPTION
         Runs a command against an IGEL device 

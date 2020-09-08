@@ -53,7 +53,7 @@
 		Gets analysis of the logon process for the user 'Rick' in the current domain.
 #>
 
-## Last modified 0719 GMT 14/07/20 @guyrleech
+## Last modified 1216 GMT 03/09/20 @guyrleech
 
 ## A mechanism to allow script use offline with saved event logs
 [hashtable]$global:terminalServicesParams = @{ 'ProviderName' = 'Microsoft-Windows-TerminalServices-LocalSessionManager' }
@@ -77,6 +77,7 @@ $script:warnings = New-Object -TypeName System.Collections.Generic.List[string]
 [version]$global:appVolumesVersion = $null
 [bool]$global:WaitForFirstVolumeOnly = $true
 $script:ivantiEMNonBlockingPhases = New-Object -TypeName System.Collections.Generic.List[psobject]
+$script:vmwareDEMNonBlockingPhases = New-Object -TypeName System.Collections.Generic.List[psobject]
 
 ## https://www.codeproject.com/Articles/18179/Using-the-Local-Security-Authority-to-Enumerate-Us
 $LSADefinitions = @'
@@ -518,6 +519,7 @@ function Get-LogonDurationAnalysis {
         Write-Debug "Process command line auditing enabled is $SearchCommandLine"
         
         ## Event id 4689 (process stop)
+        Set-Variable -Name ProcessStopSid -Value 0 -Option ReadOnly
         Set-Variable -Name ProcessIdStop  -Value 5 -Option ReadOnly
         Set-Variable -Name ProcessName    -Value 6 -Option ReadOnly
 
@@ -1080,12 +1082,12 @@ function Get-LogonDurationAnalysis {
             if (-not(Test-Path HKU:\$($Logon.UserSID)\Printers\Connections\ -ErrorAction SilentlyContinue)) {
                 Write-Verbose "Unable to find mapped printers in the user session."  #we'll do our best though with what's available
             } else {
-                $UserPrinterGUIDs += Get-ItemProperty -Path HKU:\$($Logon.UserSID)\Printers\Connections\* -Name GuidPrinter
+                $UserPrinterGUIDs += Get-ItemProperty -Path HKU:\$($Logon.UserSID)\Printers\Connections\* -Name GuidPrinter -ErrorAction SilentlyContinue
                 $PrintServers = Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\Servers" -ErrorAction SilentlyContinue | Select-Object -ExpandProperty PSChildName
                 Write-Verbose "Found the following print servers:"
                 Write-Verbose "$printServers"
                 $PrinterClientSidePortGUIDs = @( foreach ($printServer in $printServers) {
-                   Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\Servers\$printServer\Monitors\Client Side Port\*" -Name PrinterPath
+                   Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Providers\Client Side Rendering Print Provider\Servers\$printServer\Monitors\Client Side Port\*" -Name PrinterPath -ErrorAction SilentlyContinue
                 })
                 if ($DebugPreference -eq "continue") {
                     Write-Debug "Printer GUIDS:"
@@ -2125,7 +2127,15 @@ function Get-LogonDurationAnalysis {
                 }
                 else
                 {
-                    $script:warnings.Add( "Horizon SessionData registry key `"$horizonSessionKey`" not yet present - it can take up to 10 minutes after logon to appear - logon was $([math]::Round( ([datetime]::Now - $logon.LogonTime).Minutes , 1 )) minutes ago" )
+                    [string]$message = "Horizon SessionData registry key `"$horizonSessionKey`" not yet present - it can take up to 10 minutes after logon to appear - logon was $([math]::Round( ([datetime]::Now - $logon.LogonTime).Minutes , 1 )) minutes ago"
+                    
+                    ## see if parent key exists as this has been observed to be missing
+                    [string]$parentKey = Split-Path -Path $horizonSessionKey -Parent
+                    if( ! ( Test-Path -Path $parentKey -PathType Container -ErrorAction SilentlyContinue ) )
+                    {
+                        $message += " (parent key `"$(Split-Path -Path $parentKey -Leaf)`" is missing)"
+                    }
+                    $script:warnings.Add( $message )
                     ## if whole key not there soon after logon then almost certainly RDP as PCOIP and BLAST cause session key to be created
                     Add-Member -InputObject $odataPhase -MemberType NoteProperty -Name 'Display Protocol' -Value 'RDP'
                 }
@@ -2239,7 +2249,7 @@ function Get-LogonDurationAnalysis {
                 }
             }
         }
-
+        
         [hashtable]$securityFilter = @{StartTime=$logon.LogonTime;EndTime=($logon.LogonTime.AddMinutes( 60 ));Id=4018,5018,4688,4689}
         if( $securityParams[ 'Path' ] )
         {
@@ -2255,6 +2265,154 @@ function Get-LogonDurationAnalysis {
             Write-Error "Failed to cache any relevant security event logs from $(Get-Date $logon.LogonTime -Format G) for 60 minutes"
         }
         
+        ## Get CSE finishes as we may need them for VMware DEM but if we don't they are useful/interesting anyway
+        
+        ## Find event id 4001 from GP log so we can get activity id to cross ref to 5016 event for finishing of GPO processing
+        ## TODO make work offline
+        [string]$query = "*[EventData[Data[@Name='PrincipalSamName'] and (Data='$($logon.UserDomain)\$($logon.Username)')]] and *[System[(EventID='4001')]]"
+        $CSEArray = $null
+        [hashtable]$CSE2GPO = @{}
+
+        if( $startProcessingEvent = Get-WinEvent -ProviderName Microsoft-Windows-GroupPolicy -FilterXPath $query -MaxEvents 1 -ErrorAction SilentlyContinue )
+        {
+            $query = "*[System[(EventID='4016' or EventID='5016' or EventID='6016' or EventID='7016') and TimeCreated[@SystemTime>='$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("s")).$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("fff"))Z'] and Correlation[@ActivityID='{$($startProcessingEvent.ActivityID.Guid)}']]]"
+            if( ! ( $CSEarray = @( Get-WinEvent -ProviderName Microsoft-Windows-GroupPolicy -FilterXPath $query -ErrorAction SilentlyContinue ) ) -or ! $CSEArray.Count )
+            {
+                $warnings.Add( "Failed to find any group policy event id 5016 instances for CSE finishes" )
+            }
+            else
+            {
+                ## build hash table of cse id and GPO names so we can output when we iterate over finish events later
+                $CSEArray.Where( { $_.Id -eq 4016 } ).ForEach( `
+                {
+                    $CSE2GPO.Add( $_.Properties[0].Value , $_.Properties[5].Value )
+                })
+            }
+        }
+        else
+        {
+            $warnings.Add( "Failed to find group policy processing starting event id 4001" )
+        }
+
+        ## TODO make work offline - difficult given we are looking at registry
+        if( Get-Service -Name ImmidioFlexProfiles -ErrorAction SilentlyContinue )
+        {
+            ## Need to see if we are being run via GPO or logon script          
+            if ( ! (Test-Path -Path HKU:\ -ErrorAction SilentlyContinue)) 
+            {
+                if( ! ( New-PSDrive -PSProvider Registry -Name HKU -Root HKEY_USERS ) )
+                {
+                    $warnings.Add( "Unable to map HKEY_USERS" )
+                }
+            }
+            [string]$productName = $null
+
+            ## get all flexeengine processes first as we use several. Need to check source and target subjectlogonid and domain\user as will use different ones depending on if run via CSE or logon script
+            [array]$flexEngineStarts = @( $securityEvents.Where( { $_.Id -eq 4688 -and (($_.Properties[$TargetLogonId].value -in $Logon.LogonId `
+                -and $_.Properties[$TargetUserName ].value -eq $Username -and $_.Properties[$TargetDomainName ].value -eq $UserDomain ) `
+                    -or ($_.Properties[$SubjectLogonId].value -in $Logon.LogonId `
+                        -and $_.Properties[$SubjectUserName ].value -eq $Username -and $_.Properties[$SubjectDomainName ].value -eq $UserDomain ))`
+                            -and $_.properties[$NewProcessName].Value -match '\\flexengine\.exe$' -and $_.TimeCreated -ge $logon.LogonTime } ) )
+
+            if( ! ( $immidioKey = Get-Item -Path "HKU:\$($Logon.UserSID.Value)\Software\Policies\Immidio\Flex Profiles\Arguments" -ErrorAction SilentlyContinue ) )
+            {
+                $warnings.Add( "Unable to get VMware DEM GPO settings from HKCU" )
+            }
+            elseif( $immidioKey.GetValue('GPClientSideExtension') -eq [int]1 ) ## GPO
+            {
+                Write-Verbose -Message "VMware DEM running as CSE"
+                ## reported later in CSEs
+                <#
+                if( $CSEarray -and $CSEarray.Count )
+                {
+                    # TODO what about older versions, eg. UEM?
+                    if( ! ( $DEMEvent = $CSEarray.Where( { $_.Properties[2].Value -match 'VMware\b.*\bEnvironment Manager' -or $_.Properties[2].Value -match 'VMware\b.*\bUEM\b' } , 1 ) ) )
+                    {
+                        $warnings.Add( "Failed to find group policy event log id 5016 for VMware DEM" )
+                    }
+                    else
+                    {
+                        $Script:output.Add( ([pscustomobject]@{
+                                        Source    = 'VMware DEM'
+                                        PhaseName = 'Logon'
+                                        StartTime = $DEMEvent.TimeCreated
+                                        EndTime   = $DEMEvent.TimeCreated.AddMilliseconds( -$DEMEvent.Properties[0].Value )
+                                        Duration  = $DEMEvent.Properties[0].Value / 1000 }))
+                    }
+                }
+                #>
+            }
+            else ## run by logon script so we look for the flexengine processes with specific command lines for this user after logon
+            {              
+                Write-Verbose -Message "VMware DEM not running as CSE"
+                ## look for flexengine.exe -r but don't insist as parent of gpscript.exe (logon script) in case launched some other way
+                if( ! $flexEngineStarts -or ! $flexEngineStarts.Count )
+                {
+                    $warnings.Add( "Failed to find any flexengine.exe process start events for VMware DEM" )
+                }
+                else
+                {
+                    ## find the flexengine start with -r argument - could be quoted or unquoted path to flexengine.exe. Need to exclude -ra and ::Async -r calls
+                    ## Don't use .Where() as doesn't work with $Matches
+                    ## "C:\Program Files\Immidio\Flex Profiles\FlexEngine.exe" -r
+                    if( $flexengineMinusRStart = $flexEngineStarts | Where-Object { ( $_.Properties[$NewProcessCmdLine].Value -match '^"([^"]+)"\s+(.*)$' -or $_.Properties[$NewProcessCmdLine].Value -match '^([^\s]+)\s+(.*)$' ) `
+                        -and ($theMatch = $Matches[2]) -like '*-r*' -and $theMatch -notlike '*-ra*' -and $theMatch -notlike '*::*' } | Select-Object -Last 1)
+                    {
+                        [string]$executable = $matches[1]
+                        ## find stop event
+                        if( $flexengineMinusRStop = $securityEvents.Where( { $_.Id -eq 4689 -and $_.TimeCreated -ge $flexengineMinusRStart.TimeCreated -and $_.Properties[$ProcessIdStop].value -eq $flexengineMinusRStart.Properties[$ProcessIdNew].value `
+                            -and $_.Properties[$SubjectLogonId].value -eq $flexengineMinusRStart.Properties[$SubjectLogonId].value } ) | Select -Last 1 )
+                        {
+                            ## try and pull the product name from the flexengine.exe file so we can report if DEM, UEM, etc
+                            $productName = $(if( ! [string]::IsNullOrEmpty( $executable ) -and ($properties = Get-ItemProperty -Path $executable -ErrorAction SilentlyContinue) ) { $properties | Select-Object -ExpandProperty VersionInfo | Select-Object -ExpandProperty ProductName })
+                            if( [string]::IsNullOrEmpty( $productName ) )
+                            {
+                                $productName = 'VMware DEM'
+                            }
+                            $Script:output.Add( ([pscustomobject]@{
+                                Source    = $productName
+                                PhaseName = 'Logon'
+                                StartTime = $flexengineMinusRStart.TimeCreated
+                                EndTime   = $flexengineMinusRStop.TimeCreated
+                                Duration  = ($flexengineMinusRStop.TimeCreated - $flexengineMinusRStart.TimeCreated).TotalSeconds }))
+                        }
+                        else
+                        {
+                            $warnings.Add( "Failed to find process terminated event for '$($flexengineMinusRStart[$NewProcessCmdLine].Value)' started at $(Get-Date -Date $flexengineMinusRStart.TimeCreated -Format G)" )
+                        }
+                    }
+                    else
+                    {
+                        $warnings.Add( "Unable to find VMware DEM flexengine.exe process start with -r argument" )
+                    }
+                }
+            }
+            ## see if any async flexengine runs and add those to a separate list for displaying in the non-blocking section
+            $flexEngineStarts | Where-Object { ( $_.Properties[$NewProcessCmdLine].Value -match '^"([^"]+)"\s+(.*)$' -or $_.Properties[$NewProcessCmdLine].Value -match '^([^\s]+)\s+(.*)$' ) -and (( $arguments = $Matches[2] ) -like '*::Async*' -or $arguments -like '*::DefaultApplications*' ) } | ForEach-Object `
+            {
+                $asyncFlexengineStart = $_
+                ## find stop event - may not be same subjectlogonid as may be launched in generic 999 but end up in the user's session
+                if( ! ( $asyncFlexengineStop = $securityEvents.Where( { $_.Id -eq 4689 -and $_.TimeCreated -ge $asyncFlexengineStart.TimeCreated -and $_.Properties[$ProcessIdStop].value -eq $asyncFlexengineStart.Properties[$ProcessIdNew].value `
+                    -and ( $_.Properties[$SubjectLogonId].value -eq $asyncFlexengineStart.Properties[$SubjectLogonId].value -or $_.Properties[$ProcessStopSid].Value -eq $logon.UserSID.Value ) } ) | Select -Last 1 ) )
+                {
+                    $warnings.Add( "Failed to find process terminated event for '$($asyncFlexengineStart.Properties[$NewProcessCmdLine].Value)' started at $(Get-Date -Date $asyncFlexengineStart.TimeCreated -Format G)" )
+                }
+                if( [string]::IsNullOrEmpty( $productName ) )
+                {
+                    if( [string]::IsNullOrEmpty( ( $productName = $(if( ! [string]::IsNullOrEmpty( $Matches[1] ) -and ($properties = Get-ItemProperty -Path $Matches[1] -ErrorAction SilentlyContinue) ) { $properties | Select-Object -ExpandProperty VersionInfo | Select-Object -ExpandProperty ProductName }) )))
+                    {
+                        $productName = 'VMware DEM'
+                    }
+                }
+                $script:vmwareDEMNonBlockingPhases.Add( ([pscustomobject]@{
+                    Source    = $productName
+                    PhaseName = $arguments -replace '.*::(\w+).*$' , '$1' -creplace '([a-z])([A-Z])' , '$1 $2' ## turn "DefaultApplications" into "Default Applications"
+                    StartTime = $asyncFlexengineStart.TimeCreated
+                    EndTime   = $asyncFlexengineStop | Select-Object -ExpandProperty TimeCreated
+                    Duration  = $(if( $asyncFlexengineStop ) { ($asyncFlexengineStop.TimeCreated - $asyncFlexengineStart.TimeCreated).TotalSeconds } )}))
+            }
+        }
+
         ## 14/05/19 GRL - if published app then logon finished when icast.exe exits, for published desktop it's explorer.exe start
         [bool]$isPublishedApp = $false
         [bool]$isScript = $false
@@ -3029,7 +3187,7 @@ function Get-LogonDurationAnalysis {
         if( ($emservice = Get-Service -name 'AppSense EmCoreService' -ErrorAction SilentlyContinue ) )
         {
             # 9659 is for personalisation success
-            # 9661 is perosnalisation server problem
+            # 9661 is personalisation server problem
             # 9662 is a trigger summary
             if( ( [array]$appSenseEvents = @( Get-WinEvent -Oldest -FilterHashtable @{ StartTime = $logon.LogonTime ; UserID = $logon.UserSid ; Id = 9662 , 9659 , 9661 ; ProviderName = 'AppSense Environment Manager.' } -ErrorAction SilentlyContinue ).Where( 
                 { ($_.Id -eq 9662 -and $_.Properties[4].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9659 -and $_.Properties[1].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9661 -and $_.Properties[0].Value -match "SessionID:$sessionID`$")} )) -and $appsenseEvents.Count )
@@ -3134,26 +3292,6 @@ function Get-LogonDurationAnalysis {
             {
                 Add-Member -InputObject $outputObject -MemberType NoteProperty -Name $property.Name -Value $property.Value
             }
-        <#
-            ## odataphase no longer built from OData
-            if( $odataPhase.PSObject.Properties[ 'PhaseName' ] )
-            {
-                Add-Member -InputObject $outputObject -MemberType NoteProperty -Name ( '{0} Time' -f $odataPhase.PhaseName ) -Value ( '{0:HH:mm:ss.f}' -f $odataPhase.StartTime )
-                Add-Member -InputObject $outputObject -MemberType NoteProperty -Name ( '{0:N1} Duration' -f $odataPhase.PhaseName ) -Value ( '{0} seconds' -f $odataPhase.Duration )
-            }
-            if( $odataPhase.PSObject.Properties[ 'Broker' ] )
-            {
-                Add-Member -InputObject $outputObject -MemberType NoteProperty -Name 'Broker' -Value $odataPhase.Broker
-            }
-            if( $odataPhase.PSObject.Properties[ 'Display Protocol' ] )
-            {
-                Add-Member -InputObject $outputObject -MemberType NoteProperty -Name 'Display Protocol' -Value $odataPhase.'Display Protocol'
-            }
-            if( $odataPhase.PSObject.Properties[ 'Client Name' ] )
-            {
-                Add-Member -InputObject $outputObject -MemberType NoteProperty -Name 'Client Name' -Value $odataPhase.'Client Name'
-            }
-        #>
         }
 
         ($outputObject | Format-List | Out-String).Trim()
@@ -3166,14 +3304,6 @@ function Get-LogonDurationAnalysis {
         [string]$indent = ''
         [string]$prelogonVendor = 'VMware'
 
-        <#
-        if( ( ! $prelogonData -or ! $prelogonData.Count ) -and $odataPhase -is [array] -and $odataPhase.Count )
-        {
-            [System.Collections.Generic.List[psobject]]$prelogonData = $odataPhase
-            $prelogonVendor = 'Citrix'
-        }
-        #>
-        
         if( $prelogonData -and $prelogonData.Count )
         {
             ForEach( $item in $prelogonData )
@@ -3318,6 +3448,13 @@ function Get-LogonDurationAnalysis {
         $LogonTaskList | Format-Table @{Expression={$_.TaskName};Label="Logon Scheduled Task"},@{Expression={'{0:s\.ff}' -f $_.Duration};Label="Duration (s)"},@{Expression={$_.ActionName};Label="Action Name"} -AutoSize
         
         $format.RemoveAt( $format.Count - 1 ) ## Remove "Gap (s)" as not relevant now
+        
+        if( $script:vmwareDEMNonBlockingPhases -and $script:vmwareDEMNonBlockingPhases.Count )
+        {
+            ##"$productName Phases"
+            ( $script:vmwareDEMNonBlockingPhases | Sort-Object -Property StartTime | Format-Table -Property $Format -AutoSize | Out-String).Trim() -split "`r`n" | ForEach-Object { "$indent$_" }
+            ''
+        }
 
         if( $Script:AppVolumesOutput -and $Script:AppVolumesOutput.Count )
         {
@@ -3334,7 +3471,68 @@ function Get-LogonDurationAnalysis {
             ''
         }
 
-        ## wraps text for reasons unknown
+        if( $CSEArray -and $CSEArray.Count )
+        {         
+             $Format.Add( @{Expression={ $_.GPOs };Label="GPO(s)"} )
+            'Group Policy Client Side Extension Processing'
+            ''
+            $lastToFinish = $null
+            [hashtable]$GPOTotalTimes = @{}
+
+            [array]$CSEtimings = @( $CSEArray.Where( { $_.Id -ne '4016' } ).ForEach( 
+            {
+                $CSE = $_
+                [double]$duration = $CSE.Properties[0].Value / 1000
+                if( ! $lastToFinish -or $CSE.TimeCreated -gt $lastToFinish )
+                {
+                    $lastToFinish = $CSE.TimeCreated
+                }
+
+                ## look up the list of GPOs via the CSE extension id from 4016 event we built earlier
+                [string[]]$GPOs = @( $CSE2GPO[ $CSE.Properties[3].Value ] -split "`n" )
+                ForEach( $GPO in $GPOs )
+                {
+                    try
+                    {
+                        if( ! [string]::IsNullOrEmpty( $GPO.Trim() ) )
+                        {
+                            $GPOTotalTimes.Add( $GPO , $duration )
+                        }
+                        ## else empty string so ignore
+                    }
+                    catch
+                    {
+                        ## already have it so we add to the time
+                        [double]$alreadyGot = $GPOTotalTimes.Get_Item( $GPO )
+                        $GPOTotalTimes.Set_Item( $GPO , $alreadyGot + $duration )
+                    }
+                }
+
+                [pscustomobject]@{
+                    Source    = 'CSE'
+                    PhaseName = $CSE.Properties[2].Value
+                    StartTime = $CSE.TimeCreated.AddMilliseconds( -$CSE.Properties[0].Value )
+                    EndTime   = $CSE.TimeCreated
+                    Duration  = $duration 
+                    GPOs      = ($GPOs -join ', ').Trim( '[, ]') }
+            } ) )
+            
+            if( $lastToFinish )
+            {
+                "Overall Group Policy Processing Duration:`t" + ( "{0:N2}" -f ( $lastToFinish - $startProcessingEvent.TimeCreated ).TotalSeconds ) + " Seconds"
+                ''
+            }
+            ($CSEtimings | Sort-Object -Property StartTime | Format-Table -Property $Format -AutoSize | Out-String).Trim() -split "`r`n" | ForEach-Object { "$indent$_" }
+            
+            if( $GPOTotalTimes -and $GPOTotalTimes.Count )
+            {
+                ''
+                "$($GPOTotalTimes.Count) processed GPO CSEs sorted by the most time spent processing them (seconds)"
+                $GPOTotalTimes.GetEnumerator() | Where-Object Name | Sort-Object -Property Value -Descending | Format-Table -AutoSize -Property @{n='GPO';e={$_.Name}},@{n='Time Spent (s)';e={$_.Value}}
+            }
+        }
+
+        ## wraps text for reasons unknown - bug
         if( $warnings -and $warnings.Count )
         {
             ''
@@ -3917,7 +4115,7 @@ Write-Debug "XDUsername:   $XDUserName"
 
 if( $args.Count -ge 2 -and ![string]::IsNullOrEmpty( $args[1] ) )
 {
-    $params.Add( 'CUDesktopLoadTime' , $args[1] )
+    $params.Add( 'CUDesktopLoadTime' , ( $args[1] -replace ',' , '.' ) ) ## if passed as 1,234 change to 1.234
     Write-Debug "CUDesktopLoadTime: $($params[ 'CUDesktopLoadTime' ])"
 }
 
