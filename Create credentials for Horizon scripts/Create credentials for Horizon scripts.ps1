@@ -19,11 +19,13 @@ $ErrorActionPreference = 'Stop'
     
     Modification history:   20/08/2019 - Anthonie de Vreede - First version
                             03/06/2020 - Wouter Kursten - Second version
+                            10/09/2020 - WOuter Kursten - Third Version
 
     Changelog ;
         Second Version
             - Added check for local profile
             - changed error message when failing to create the xml file
+            - Fixed issue where users without local admin rights and no active session on the target machine couldn't create a credentrials file ($env:USERPROFILE returns c:\users\default)
 
     .PARAMETER strUsername
     The username for the PSCredential object
@@ -140,7 +142,9 @@ Function New-CUStoredCredential {
 $userprofile = $env:USERPROFILE
 
 if ($userprofile -like "*default*"){
-    Out-CUConsole -message "$Env:Username has no profile on this system. This is a requirement otherwise powershell can't create the credentials file"  -exception "No local profile found" # this is a limitation of Powershell
+    if(!(Get-WmiObject -class win32_userprofile | where-object {$_.localpath -like "$env:systemdrive\Users\$env:username"})){
+        Out-CUConsole -message "User $Env:Username has no profile on this system. This is a requirement for creating the credentials file. Please log onto this machine once in order to create your user profile."  -exception "No local profile found" # this is a limitation of Powershell
+    }
 }
 
 

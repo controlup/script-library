@@ -14,13 +14,13 @@ PSCREDENTI    Connecting to a Horizon Connection server is required for running 
             - Added check for local profile
             - changed error message when failing to create the xml fileAL OBJECTS CAN ONLY BE USED BY THE USER THAT CREATED THE OBJECT AND ON THE MACHINE THE OBJECT WAS CREATED.
 
-Version: 2.3.7
+Version: 3.6.12
 
 Creator: Ton de Vreede
 
 Date Created: 12/02/2019 14:12:29
 
-Date Modified: 06/03/2020 10:21:47
+Date Modified: 09/11/2020 08:11:51
 
 Scripting Language: ps1
 
