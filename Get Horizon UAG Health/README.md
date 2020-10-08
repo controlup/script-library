@@ -5,13 +5,13 @@ This action should be executed against a Horizon endpoint machine (one which has
 
 Note: Requires PowerCLI 11.4 or higher and Horizon 7.10 or higher
 
-Version: 3.5.6
+Version: 4.6.9
 
 Creator: Wouter Kursten
 
 Date Created: 01/09/2020 09:32:59
 
-Date Modified: 02/04/2020 09:09:30
+Date Modified: 09/23/2020 07:55:45
 
 Scripting Language: ps1
 

@@ -1,17 +1,17 @@
 ﻿$ErrorActionPreference = 'Stop'
 <#
     .SYNOPSIS
-    Pulls all admin events from the Horizon Event Database
+    Pulls all Error, Warning and Audit_Fail events from the Horizon Event Database
 
     .DESCRIPTION
     Uses the Horizon PowerCLI api's to pull all admin related events from the Horizon Event database for all pods. If there is no cloud pod setup it will only process the local pod.
     After pulling the events it will translate the id's for the various objects to names to show the proper names where needed.
 
     .PARAMETER HVConnectionserverFQDN
-    Passes as the Primary COnnection server object from a machine
+    Passes as the Primary Connection server object from a machine
 
     .PARAMETER daysback
-    Amount of days to go back to gather the audit logs
+    Amount of days to go back to gather the logs
 
     .PARAMETER csvlocation
     Path to where the output csv file will be stored ending in \.
@@ -29,7 +29,7 @@
 
     This script require Powershell 11.4 or higher and Horizon 7.5 or Higher
 
-    Modification history:   06/05/2020 - Wouter Kursten - First version
+    Modification history:   27/08/2020 - Wouter Kursten - First version
                             10/09/2020 - WOuter Kursten - second version
     Changelog -
             10/09/2020 - Added check for export folder
@@ -209,7 +209,7 @@ function Disconnect-HorizonConnectionServer {
     }
 }
 
-function get-hvadminevents {
+function get-hverrorevents {
     param (
         [parameter(Mandatory = $true,
             HelpMessage = "Start date.")]
@@ -230,14 +230,20 @@ function get-hvadminevents {
         # entity type to query
         $defn.queryEntityType = 'EventSummaryView'
         # Filter on just the user and the vlsi module
-        $modulefilter = New-Object VMware.Hv.QueryFilterEquals -property @{'memberName'='data.module'; 'value' = "Vlsi"}
         $timeFilter = new-object VMware.Hv.QueryFilterBetween -property @{'memberName'='data.time'; 'fromValue' = $startDate; 'toValue' = $endDate}
-        $filterlist = @()
-        $filterlist += $modulefilter
-        $filterlist += $timeFilter
-        $filterAnd = New-Object VMware.Hv.QueryFilterAnd
-        $filterAnd.Filters = $filterlist
-        $defn.Filter = $filterAnd
+        $1=New-Object VMware.Hv.QueryFilterEquals -property @{'memberName'='data.severity'; 'value' = "WARNING"}
+        $2=New-Object VMware.Hv.QueryFilterEquals -property @{'memberName'='data.severity'; 'value' = "ERROR"}
+        $3=New-Object VMware.Hv.QueryFilterEquals -property @{'memberName'='data.severity'; 'value' = "AUDIT_FAIL"}
+        $orfilter=new-object VMware.Hv.QueryFilterOr
+        $orfilters=@()
+        $orfilters+=$1
+        $orfilters+=$2
+        $orfilters+=$3
+        $orfilter.Filters=$orfilters
+        $andfilter=new-object vmware.hv.queryfilterand
+        $andfilter.filters+=$timeFilter
+        $andfilter.filters+=$orfilter
+        $defn.Filter = New-Object VMware.Hv.QueryFilterAnd -Property @{ 'filters' = $andfilter }
 
         # Perform the actual query
         [array]$queryResults= ($queryService.queryService_create($HVConnectionServer.extensionData, $defn)).results
@@ -297,7 +303,9 @@ $date = get-date
 
 $sinceDate = (get-date).AddDays(-$daysback)
 
-$auditlog = @()
+$errorevents = @()
+
+
 
 foreach ($hvconnectionserver in $hvconnectionservers){
     if ($HVpodstatus.status -eq "ENABLED"){
@@ -305,7 +313,7 @@ foreach ($hvconnectionserver in $hvconnectionservers){
         # Retreive the name of the pod
         [string]$podname=$objHVConnectionServer.extensionData.pod.Pod_list() | where-object {$_.localpod -eq $True} | select-object -expandproperty Displayname
         Out-CUConsole -message "Processing Pod $podname"
-        $events= get-hvadminevents -HVConnectionServer $objHVConnectionServer -startDate $sinceDate -endDate $date
+        $events= get-hverrorevents -HVConnectionServer $objHVConnectionServer -startDate $sinceDate -endDate $date
 
         foreach ($event in $events){
             if($event.data.RDSServerid){
@@ -331,7 +339,7 @@ foreach ($hvconnectionserver in $hvconnectionservers){
                 $farmname = $event.namesdata.farmdisplayname
             }
 
-            $auditlog+=New-Object PSObject -Property @{"Event Type" = $event.data.eventType;
+            $errorevents+=New-Object PSObject -Property @{"Event Type" = $event.data.eventType;
                 "Pod" = $podname;
                 "Severity" = $event.data.severity;
                 "Time" = $event.data.time;
@@ -354,7 +362,7 @@ foreach ($hvconnectionserver in $hvconnectionservers){
         Out-CUConsole -message "Processing the local pod"
         [string]$podname="Local"
         Out-CUConsole -message "Processing Pod $podname"
-        $events= get-hvadminevents -HVConnectionServer $objHVConnectionServer -startDate $sinceDate -endDate $date
+        $events= get-hverrorevents -HVConnectionServer $objHVConnectionServer -startDate $sinceDate -endDate $date
 
         foreach ($event in $events){
             if($event.data.RDSServerid){
@@ -380,7 +388,7 @@ foreach ($hvconnectionserver in $hvconnectionservers){
                 $farmname = $event.namesdata.farmdisplayname
             }
 
-            $auditlog+=New-Object PSObject -Property @{"Event Type" = $event.data.eventType;
+            $errorevents+=New-Object PSObject -Property @{"Event Type" = $event.data.eventType;
                 "Pod" = $podname;
                 "Severity" = $event.data.severity;
                 "Time" = $event.data.time;
@@ -399,7 +407,7 @@ foreach ($hvconnectionserver in $hvconnectionservers){
     Disconnect-HorizonConnectionServer -HVConnectionServer $objHVConnectionServer
 }
 
-write-output $auditlog | select-object -property Time,Node,message | sort-object -property Pod,Time | format-table * -autosize -wrap
+write-output $errorevents | select-object -property Time,Node,message | sort-object -property Pod,Time | format-table * -autosize -wrap
 
 if ($csvlocation -eq "%temp%"){
     $csvlocation=$env:TEMP+"\" 
@@ -422,5 +430,5 @@ Catch {
     $csvpath=$csvpathnew
 }
 out-cuconsole -Message "Writing Logfile"
-$auditlog | sort-object -property Pod,Time | ConvertTo-Csv -NoTypeInformation | Out-File $csvpath -Encoding utf8 -force
+$errorevents | sort-object -property Pod,Time | ConvertTo-Csv -NoTypeInformation | Out-File $csvpath -Encoding utf8 -force
 out-cuconsole -message "Logfile written to $csvpath"

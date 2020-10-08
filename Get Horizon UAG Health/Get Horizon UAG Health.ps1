@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 <#
     .SYNOPSIS
-    Gets Unified Access Gateway(UAG) health information from all UAG in the Cloud Pod federation
+    Gets Unified Access Gateway(UAG) health information from all UAG in the Cloud Pod federation 
 
     .DESCRIPTION
     This script connects to all pod's in a Cloud Pod Architecture(CPA) or only the local one if CPA hasn't been initialized and pulls all health information for configured UAG's.
@@ -13,7 +13,11 @@
 
     Some functions require Powershell 11.4 or higher and Horizon 7.10 or Higher
 
-    Modification history:   21/12/2019 - Wouter Kursten - First version
+    Modification history:   01/09/2020 - Wouter Kursten - First version
+                            23/09/2020 - Wouter Kursten - Second version
+
+    Changelog
+        23/09/2020  -   Minor fix
 
     .LINK
     https://code.vmware.com/web/tool/11.4.0/vmware-powercli
@@ -329,5 +333,5 @@ foreach ($hvconnectionserver in $hvconnectionservers){
         }
     }
     Disconnect-HorizonConnectionServer -HVConnectionServer $objHVConnectionServer
-    Out-CUConsole -message ($uaghealthstatuslist | select-object Podname,Gateway_Name,Gateway_Address,Gateway_GatewayZone,Gateway_Version,Gateway_Type,Gateway_Active,Gateway_Stale,Gateway_Contacted,Gateway_Active_Connections,Gateway_Blast_Connections,Gateway_PCOIP_Connections | Out-String)
 }
+Out-CUConsole -message ($uaghealthstatuslist | select-object Podname,Gateway_Name,Gateway_Address,Gateway_GatewayZone,Gateway_Version,Gateway_Type,Gateway_Active,Gateway_Stale,Gateway_Contacted,Gateway_Active_Connections,Gateway_Blast_Connections,Gateway_PCOIP_Connections | Out-String)
