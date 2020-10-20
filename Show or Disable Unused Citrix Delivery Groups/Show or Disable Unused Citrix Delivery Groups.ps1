@@ -32,6 +32,8 @@ Computer (but only on a Citrix Delivery Controller)
 
     @guyrleech 02/10/2020  Initial release
     @guyrleech 06/10/2020  Changes after feedback. Added -disable argument
+    @guyrleech 07/10/2020  Added guard to stop all delivery groups being disabled
+    @guyrleech 09/10/2020  Added most sessions/host metric
 #>
 
 [CmdletBinding()]
@@ -67,6 +69,7 @@ Function Get-DeliveryGroupMachineDetails
     [int]$inMaintenanceMode = 0
     [int]$registered = 0
     [int]$sessionCount = 0
+    [int]$mostSessions = 0
     [int]$logonsDisabled = 0
     [int]$available = 0
     [string]$provisioning = $null
@@ -98,6 +101,10 @@ Function Get-DeliveryGroupMachineDetails
             {
                 $registered++
             }
+            if( $machine.SessionCount -gt $mostSessions )
+            {
+                $mostSessions = $machine.SessionCount
+            }
             $sessionCount += $machine.SessionCount
             if( ! [string]::IsNullOrEmpty( $provisioning ) )
             {
@@ -126,6 +133,7 @@ Function Get-DeliveryGroupMachineDetails
                 'Last User' = ($lastUsedBy -split '\\')[-1]
                 'Provisioning' = $provisioning
                 'Sessions' = $sessionCount
+                'Densest' = $mostSessions
                 'Machines' = $machines ## $deliveryGroupByMachine | Select-Object -ExpandProperty Group | Measure-Object | Select-Object -ExpandProperty Count
                 'Available' = $available
                 'Maintenance' = $inMaintenanceMode
@@ -149,8 +157,8 @@ if( $PSBoundParameters[ 'ddc' ] )
 }
 
 ## new CVAD have modules so use these in preference to snapins which are there for backward compatibility
-if( ! (  Import-Module -Name Citrix.DelegatedAdmin.Commands -ErrorAction SilentlyContinue -PassThru ) `
-    -and ! ( Add-PSSnapin -Name Citrix.Broker.Admin.* -ErrorAction SilentlyContinue -PassThru ) )
+if( ! (  Import-Module -Name Citrix.DelegatedAdmin.Commands -ErrorAction SilentlyContinue -PassThru -Verbose:$false) `
+    -and ! ( Add-PSSnapin -Name Citrix.Broker.Admin.* -ErrorAction SilentlyContinue -PassThru -Verbose:$false) )
 {
     Throw 'Failed to load Citrix PowerShell cmdlets - is this a Delivery Controller or have Studio or the PowerShell SDK installed ?'
 }
@@ -188,12 +196,19 @@ Write-Output -InputObject "Found $($results.Where( { $_.'Machines' -eq 0 } ).Cou
 
 if( $results -and $results.Count )
 {
-    Write-Output -InputObject "Found $($results.Where( { $_.'Delivery Group' } ).Count) delivery groups not used in last $daysNotAccessed days" ## already filtered in the function that builds the results
+    [int]$deliveryGroupsOverAge = $results.Where( { $_.'Delivery Group' } ).Count ## ignore those just in a machine catalogue but not a delivery group
+
+    Write-Output -InputObject "Found $deliveryGroupsOverAge delivery groups not used in last $daysNotAccessed days" ## already filtered in the function that builds the results
 
     $results | Sort-Object -Property 'Last Used (d)' | Format-Table -AutoSize -Property *
 
     if( $disable -eq 'true' )
     {
+        if( $deliveryGroups.Count -eq $deliveryGroupsOverAge )
+        {
+            Throw "Disabling is prohibited because all $($deliveryGroups.Count) delivery groups are targeted meaning there would be no enabled ones"
+        }
+
         [int]$disabled = 0
         [int]$actuallyDisabled = 0
 
