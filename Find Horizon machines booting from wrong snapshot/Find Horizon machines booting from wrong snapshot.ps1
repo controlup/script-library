@@ -20,7 +20,10 @@
 
     This script require Powershell 11.4 or higher and Horizon 7.5 or Higher
 
-    Modification history:   22/95/2020 - Wouter Kursten - First version
+    Modification history:   22/09/2020 - Wouter Kursten - First version
+                            21/10/2020 - Wouter Kursten - Second Version
+
+    Changelog: 21/10/2020: added option to delete VDI machines
 
     .LINK
     https://code.vmware.com/web/tool/11.4.0/vmware-powercli
@@ -38,6 +41,9 @@ $ErrorActionPreference = $(if( $PSBoundParameters[ 'erroraction' ] ) { $ErrorAct
 $ProgressPreference = 'SilentlyContinue'
 
 [string]$HVConnectionServerFQDN = $args[0]
+[string]$delete=$args[1]
+[string]$forcelogoff=$args[2]
+
 [int]$outputWidth = 400
 
 # Altering the size of the PS Buffer
@@ -219,7 +225,7 @@ function Get-HVDesktopPools {
         # Filter oud rds desktop pools since they don't contain machines
         
         # Perform the actual query
-        [array]$queryResults= ($queryService.queryService_create($HVConnectionServer.extensionData, $defn)).results
+       [array]$queryResults= ($queryService.queryService_create($HVConnectionServer.extensionData, $defn)).results 
         $queryResults = foreach ($queryResult in $queryResults){$HVConnectionServer.extensionData.desktop.desktop_get($queryResult.id) }
         $queryResults=$queryResults |  where-object {$_.automateddesktopdata.provisioningtype -ne "VIRTUAL_CENTER"}
         # Remove the query
@@ -323,7 +329,7 @@ function Get-HVRDSMachines {
 }
 
 # Test arguments
-Test-ArgsCount -ArgsCount 1 -Reason 'The Console or Monitor may not be connected to the Horizon View environment, please check this.'
+Test-ArgsCount -ArgsCount 3 -Reason 'The Console or Monitor may not be connected to the Horizon View environment, please check this.'
 
 # Set the credentials location
 [string]$strCUCredFolder = "$([environment]::GetFolderPath('CommonApplicationData'))\ControlUp\ScriptSupport"
@@ -385,14 +391,24 @@ foreach ($hvconnectionserver in $hvconnectionservers){
                 foreach ($wrongsnap in $wrongsnaps){
                     $wrongsnapdesktops+= New-Object PSObject -Property @{
                         "Pod Name"                  = $podname;
-                        "Desktop Name"              = $poolname;
-                        "VM Name"                   = $wrongsnap.base.name;
+                        "Desktop Pool Name"              = $poolname;
+                        "Machine Name"              = $wrongsnap.base.name;
                         "Status"                    = $wrongsnap.base.basicstate
-                        "VM Snapshot"               = ($wrongsnap.managedmachinedata.viewcomposerdata.baseimagesnapshotpath).split("/")[-1];
-                        "VM Golden image"           = ($wrongsnap.managedmachinedata.viewcomposerdata.baseimagepath).split("/")[-1];
-                        "Pool Snapshot"             = ($hvpool.automateddesktopdata.VirtualCenternamesdata.snapshotpath).split("/")[-1];
-                        "Pool Golden image"         = ($hvpool.automateddesktopdata.VirtualCenternamesdata.parentvmpath).split("/")[-1];
+                        "Booted Snapshot"               = ($wrongsnap.managedmachinedata.viewcomposerdata.baseimagesnapshotpath).split("/")[-1];
+                        "Booted Golden image"           = ($wrongsnap.managedmachinedata.viewcomposerdata.baseimagepath).split("/")[-1];
+                        "Configured Snapshot"             = ($hvpool.automateddesktopdata.VirtualCenternamesdata.snapshotpath).split("/")[-1];
+                        "Configured Golden image"         = ($hvpool.automateddesktopdata.VirtualCenternamesdata.parentvmpath).split("/")[-1];
                     }
+                }
+                
+                if ($delete -eq "True"){
+                    $deletespec=new-object vmware.hv.machinedeletespec
+                    $deletespec.deletefromdisk=$true
+                    $deletespec.allowDeleteFromMultiDesktops=$true
+                    if ($forcelogoff -eq "True"){
+                        $deletespec.forcelogoffsession=$true
+                    }
+                    $objHVConnectionServer.extensiondata.machine.Machine_DeleteMachines($wrongsnaps.id, $deletespec)
                 }
             }
         }
@@ -408,13 +424,13 @@ foreach ($hvconnectionserver in $hvconnectionservers){
                     $wrongsnaphosts+= New-Object PSObject -Property @{
                         "Pod Name"                  = $podname;
                         "Farm Name"                 = $farmname;
-                        "RDS Name"                  = $wrongsnap.base.name;
+                        "RDS Host Name"             = $wrongsnap.base.name;
                         "Status"                    = $wrongsnap.RuntimeData.Status
                         "Active Sessions"           = $wrongsnap.RuntimeData.SessionCount
-                        "VM Snapshot"               = ($wrongsnap.rdsservermaintenancedata.baseimagesnapshotpath).split("/")[-1];
-                        "VM Golden Image"           = ($wrongsnap.rdsservermaintenancedata.baseimagepath).split("/")[-1];
-                        "Farm Snapshot"             = ($HVFarm.automatedfarmdata.VirtualCenternamesdata.snapshotpath).split("/")[-1];
-                        "Farm Golden Image"         = ($HVFarm.automatedfarmdata.VirtualCenternamesdata.parentvmpath).split("/")[-1];
+                        "Booted Snapshot"               = ($wrongsnap.rdsservermaintenancedata.baseimagesnapshotpath).split("/")[-1];
+                        "Booted Golden Image"           = ($wrongsnap.rdsservermaintenancedata.baseimagepath).split("/")[-1];
+                        "Configured Snapshot"             = ($HVFarm.automatedfarmdata.VirtualCenternamesdata.snapshotpath).split("/")[-1];
+                        "Configured Golden Image"         = ($HVFarm.automatedfarmdata.VirtualCenternamesdata.parentvmpath).split("/")[-1];
                     }
                 }
             }
@@ -424,11 +440,11 @@ foreach ($hvconnectionserver in $hvconnectionservers){
 }
 if($wrongsnapdesktops){
     Out-CUConsole -Message "VDI Machines based on wrong snapshot"
-    $wrongsnapdesktops | format-table -groupby "Pod Name" -property "Desktop Name","VM Name","Status","VM Golden image","VM Snapshot","Pool Golden image","Pool Snapshot"
+    $wrongsnapdesktops | format-table -groupby "Pod Name" -property "Machine Name","Desktop Pool Name","Status","Booted Golden image","Booted Snapshot","Configured Golden image","Configured Snapshot"
 }
 if($wrongsnaphosts){
     Out-CUConsole -Message "RDS Hosts based on wrong snapshot"
-    $wrongsnaphosts | format-table -groupby "Pod Name" -property "Farm Name","RDS Name","Status","Active Sessions","VM Golden image","VM Snapshot","Farm Golden Image","Farm Snapshot"
+    $wrongsnaphosts | format-table -groupby "Pod Name" -property "RDS Host Name","Farm Name","Status","Active Sessions","Booted Golden image","Booted Snapshot","Configured Golden Image","Configured Snapshot"
 }
 if ($wrongsnaphosts.count -eq 0 -AND $wrongsnapdesktops.count -eq 0){
     Out-CUConsole -Message "No systems found running on the wrong snapshot."
