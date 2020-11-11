@@ -1,147 +1,145 @@
-﻿function Get-GPUserCSE
-{
-<#  
-.SYNOPSIS
-        Lists every Group Policy Client Side Extension
-        and their associated load time in milliseconds.
-.DESCRIPTION
-        This script looks under the 'Group Policy Event Log'
-        and lists every applied Group Policy Client Side Extensions.  
+﻿#requires -version 3
 
-.PARAMETER Username
-        Type in the Positional argument of the Down-Level Logon Name (Domain\User)
+<#
+.SYNOPSIS
+
+Show the durations of GPO Client Side Extension processing by matching events for the specified user in the Group Policy event log
+
+.DETAILS
+
+Find the latest event id 4001 ("Starting user logon Policy processing for username") for the specified user and use its activity id to find the 4016 ("Starting xxx Extension Processing") and 5016 ("") events so we can report on these
+
+.PARAMETER user
+
+The domain qualified name of the user being reported on
 
 .EXAMPLE
-        Get-GPUserCSE -Username MyDomain\MyUser
 
-        CSE Name                  Time(ms) GPOs                                  
-        --------                  -------- ----                                  
-        Group Policy Registry          531 VSI User-V4, XenApp 6.5 User Env      
-        Registry                       296 Local Group Policy, Local Group Policy
-        Citrix Group Policy            281 Local Group Policy, Local Group Policy
-        Scripts                         93 VSI User-V4, VSI System-V4            
-        Folder Redirection              78 None                                  
-        Citrix Profile Management       16 None                                  
-        
-        
-        Group Policy Client Side Extenstions with an error
-        
-        CSE Name                   Time(ms) ErrorCode GPOs                      
-        --------                   -------- --------- ----                      
-        Internet Explorer Branding       16       127 VSI User-V4, VSI System-V4
+& '.\Analyze GPO Extensions Load Time'  contoso\bob
 
-.LINK
-        See http://www.controlup.com
+Show a break down of the timings of GPO client side extension processing for the last logon of user bob in domain contoso
+
+.CONTEXT
+
+Session
+
+.NOTES
+
+Uses code used in Analyze Logon Durations script
+
+.MODIFICATION_HISTORY:
+
+    @guyrleech 06/11/2020  Initial release
+    @guyrleech 10/11/2020  Changed dates/times output to just times
 #>
 
-[CmdletBinding()] 
- Param( 
-    [Parameter(Mandatory=$false, 
-    ValueFromPipelineByPropertyName=$true)] 
-    [String]
-    $Username
-    ) 
+[CmdletBinding()]
 
-begin{ 
-    $ErrorActionPreference = "Stop"
+Param
+(
+    [Parameter(Mandatory,HelpMessage='domain\username to report on')]
+    [string]$user
+)
 
-    # XPath query used to get evend id 4001.
-    $Query = "*[EventData[Data[@Name='PrincipalSamName'] and (Data='$Username')]] and *[System[(EventID='4001')]]"
+$VerbosePreference = $(if( $PSBoundParameters[ 'verbose' ] ) { $VerbosePreference } else { 'SilentlyContinue' })
+$DebugPreference = $(if( $PSBoundParameters[ 'debug' ] ) { $DebugPreference } else { 'SilentlyContinue' })
+$ErrorActionPreference = $(if( $PSBoundParameters[ 'erroraction' ] ) { $ErrorActionPreference } else { 'Stop' })
+$ProgressPreference = 'SilentlyContinue'
+
+[int]$outputwidth = 400
+
+if( [string]::IsNullOrEmpty( $user ) -or $user.IndexOf( '\' ) -lt 0 )
+{
+    Throw 'Username must be in domain\username format'
 }
 
-Process{ 
-    try {
-        [array]$Events = Get-WinEvent -ProviderName Microsoft-Windows-GroupPolicy -FilterXPath "$Query"
-        $ActivityId = $Events[0].ActivityId.Guid
+if( ( $PSWindow = (Get-Host).UI.RawUI ) -and ( $WideDimensions = $PSWindow.BufferSize ) )
+{
+    $WideDimensions.Width = $outputWidth
+    $PSWindow.BufferSize = $WideDimensions
+}
+## Code below all from Analyze Logon Durations script
+
+## Find event id 4001 from GP log so we can get activity id to cross ref to 5016 event for finishing of GPO processing
+
+[string]$query = "*[EventData[Data[@Name='PrincipalSamName'] and (Data='$user')]] and *[System[(EventID='4001')]]"
+$CSEArray = $null
+[hashtable]$CSE2GPO = @{}
+
+if( $startProcessingEvent = Get-WinEvent -ProviderName Microsoft-Windows-GroupPolicy -FilterXPath $query -MaxEvents 1 -ErrorAction SilentlyContinue ) ## most recent
+{
+    $query = "*[System[(EventID='4016' or EventID='5016' or EventID='6016' or EventID='7016') and TimeCreated[@SystemTime>='$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("s")).$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("fff"))Z'] and Correlation[@ActivityID='{$($startProcessingEvent.ActivityID.Guid)}']]]"
+    if( ! ( $CSEarray = @( Get-WinEvent -ProviderName Microsoft-Windows-GroupPolicy -FilterXPath $query -ErrorAction SilentlyContinue ) ) -or ! $CSEArray.Count )
+    {
+        Throw "Failed to find any group policy event id 5016 instances for CSE finishes"
     }
-
-    catch {
-        Write-Host "Could not find relevant events in the Microsoft-Windows-GroupPolicy/Operational log. `n`
-        The default log size (4MB) only supports user sessions that logged on a few hours ago. `
-        Please increase the log size to support older sessions."
-        Exit 1
+    else
+    {
+        ## build hash table of cse id and GPO names so we can output when we iterate over finish events later
+        $CSEArray.Where( { $_.Id -eq 4016 } ).ForEach( `
+        {
+            $CSE2GPO.Add( $_.Properties[0].Value , $_.Properties[5].Value )
+        })
     }
-
-    try {
-
-        # Gets all events that match event id 4016,5016,6016 and 7016 and correlated with the activity id of event id 4001.
-        [array]$CSEarray = Get-WinEvent -ProviderName Microsoft-Windows-GroupPolicy -FilterXPath @"
-        *[System[(EventID='4016' or EventID='5016' or EventID='6016' or EventID='7016') and Correlation[@ActivityID='{$ActivityID}']]]
-"@
-    }
-
-    catch {
-        Write-Host "Could not find relevant events in the Microsoft-Windows-GroupPolicy/Operational log. `n`
-        It's seems like there are no Client Side Extensions applied to your session."
-        Exit 1
-    }
-
-    try {
-
-        [array]$GPEnd = Get-WinEvent -ProviderName Microsoft-Windows-GroupPolicy -FilterXPath "*[EventData[Data[@Name='PrincipalSamName'] and (Data='$Username')]] and *[System[(EventID='8001')]]"
-    }
-
-    catch {
-        Write-Host "Could not find relevant events in the Microsoft-Windows-GroupPolicy/Operational log. `n`
-        It's seems like there are no Client Side Extensions applied to your session."
-        Exit 1
-    }
-
-
-    $Output = @()
-
-    # Run only for for event id 4016 records.
-    foreach ($i in ($CSEarray | Where-Object {$_.Id -eq '4016'})) {
-        $obj = New-Object -TypeName psobject
-        $obj | Add-Member -MemberType NoteProperty -Name Name -Value ($i.Properties[1] | Select-Object -ExpandProperty Value)
-        $obj | Add-Member -MemberType NoteProperty -Name String -Value (($i.Properties[5] `
-        | Select-Object -ExpandProperty Value).trimend("`n") -replace "`n",", ")
-
-        # Every object in output has CSE Name and String of all the GPO Names.
-        $Output += $obj
-    }
-    # Run only for for event id 5016,6016 and 7016 records.
-    foreach ($i in ($CSEarray | Where-Object {$_.Id -ne '4016'})) {
-
-        # Add the duration of the CSE to the object.
-        $Output | Where-Object {$_.Name -eq ($i.Properties[2] | Select-Object -ExpandProperty Value)} `
-        | Add-Member -MemberType NoteProperty -Name Time -Value ($i.Properties[0] | Select-Object -ExpandProperty Value)
-
-        # Add the ErrorCode to the object
-        $Output | Where-Object {$_.Name -eq ($i.Properties[2] | Select-Object -ExpandProperty Value)} `
-        | Add-Member -MemberType NoteProperty -Name ErrorCode -Value ($i.Properties[1] | Select-Object -ExpandProperty Value)
-
-    }
-
+}
+else
+{
+    Throw "Failed to find group policy processing starting event id 4001 for user $user"
 }
 
-End{
-    $TableFormat = @{Expression={$_.Name};Label="CSE Name"}, `
-    @{Expression={$_.Time};Label="Time(ms)"}, `
-    @{Expression={$_.String};Label="GPOs"}
-    $TableFormatWithError = @{Expression={$_.Name};Label="CSE Name"}, `
-    @{Expression={$_.Time};Label="Time(ms)"}, `
-    @{Expression={$_.ErrorCode};Label="ErrorCode"}, `
-    @{Expression={$_.String};Label="GPOs"}
+if( $CSEArray -and $CSEArray.Count )
+{
+    $lastToFinish = $null
+    [hashtable]$GPOTotalTimes = @{}
 
-    $GPTotalDuration = $($GPEnd[0].TimeCreated - $Events[0].TimeCreated).TotalSeconds
-
-    if ($GPTotalDuration -gt 0) {
-        "Overall Group Policy Processing Duration:`t" + "{0:N2}" -f $GPTotalDuration + " Seconds"
-        } 
-    
-    $Output | Where-Object {$_.ErrorCode -eq 0} | Sort-Object Time -Descending | Format-Table $TableFormat -AutoSize -Wrap
-
-        if (($Output.ErrorCode | Measure-Object -Sum).Sum -ne 0) {
-            Write-Host "Group Policy Client Side Extenstions with an error"
-            $Output | Where-Object {$_.ErrorCode -ne 0} | Sort-Object Time -Descending | Format-Table $TableFormatWithError -AutoSize -Wrap
+    [array]$CSEtimings = @( $CSEArray.Where( { $_.Id -ne '4016' } ).ForEach( 
+    {
+        $CSE = $_
+        [double]$duration = $CSE.Properties[0].Value / 1000
+        if( ! $lastToFinish -or $CSE.TimeCreated -gt $lastToFinish )
+        {
+            $lastToFinish = $CSE.TimeCreated
         }
-        $TotalSeconds = (($Output | %{$_.Time} | Measure-Object -Sum | Select-Object -ExpandProperty Sum)/1000)
-        "GP Extensions Processing Duration:`t" + "{0:N2}" -f $TotalSeconds + " Seconds"
-        if ($GPTotalDuration -gt 0 -and $GPTotalDuration -gt $TotalSeconds) {
-        "GP Processing Duration (not attributed to specific extensions):`t" + "{0:N2}" -f $($GPTotalDuration-$TotalSeconds) + " Seconds"
+
+        ## look up the list of GPOs via the CSE extension id from 4016 event we built earlier
+        [string[]]$GPOs = @( $CSE2GPO[ $CSE.Properties[3].Value ] -split "`n" )
+        ForEach( $GPO in $GPOs )
+        {
+            try
+            {
+                if( ! [string]::IsNullOrEmpty( $GPO.Trim() ) )
+                {
+                    $GPOTotalTimes.Add( $GPO , $duration )
+                }
+                ## else empty string so ignore
+            }
+            catch
+            {
+                ## already have it so we add to the time
+                [double]$alreadyGot = $GPOTotalTimes.Get_Item( $GPO )
+                $GPOTotalTimes.Set_Item( $GPO , $alreadyGot + $duration )
+            }
         }
+
+        [pscustomobject]@{
+            CSE       = $CSE.Properties[2].Value
+            StartTime = $CSE.TimeCreated.AddMilliseconds( -$CSE.Properties[0].Value ).ToLongTimeString()
+            EndTime   = $CSE.TimeCreated.ToLongTimeString()
+            Duration  = $duration 
+            GPOs      = ($GPOs -join ', ').Trim( '[, ]') }
+    } ) )
+            
+    if( $lastToFinish )
+    {
+        ("Group Policy processing started at {0} , overall duration {1:N2} seconds" -f (Get-Date -Date $startProcessingEvent.TimeCreated -Format G) , ( $lastToFinish - $startProcessingEvent.TimeCreated ).TotalSeconds )
+    }
+
+    $CSEtimings | Sort-Object -Property Duration -Descending | Format-Table -AutoSize
+            
+    if( $GPOTotalTimes -and $GPOTotalTimes.Count )
+    {
+        "$($GPOTotalTimes.Count) processed GPO CSEs sorted by the highest total processing time"
+        $GPOTotalTimes.GetEnumerator() | Where-Object Name | Sort-Object -Property Value -Descending | Format-Table -AutoSize -Property @{n='GPO';e={$_.Name}},@{n='Time Spent (s)';e={$_.Value}}
     }
 }
 
-Get-GPUserCSE -Username $args[0]

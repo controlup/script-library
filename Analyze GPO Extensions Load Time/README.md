@@ -7,13 +7,13 @@ By default the log size is configured to 4MB,
 That means that this SBA can look back this much.
 Consider increasing the log size to view older entries.
 
-Version: 6.18.48
+Version: 8.20.51
 
 Creator: Niron Koren
 
 Date Created: 02/09/2015 18:04:57
 
-Date Modified: 07/08/2020 12:04:43
+Date Modified: 11/10/2020 16:52:38
 
 Scripting Language: ps1
 

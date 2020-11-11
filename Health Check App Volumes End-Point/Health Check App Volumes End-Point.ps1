@@ -7,6 +7,8 @@
     Modification History:
 
     @guyrleech 27/08/2020  Added code for edge case where SQL down when user logs in
+    @guyrleech 22/10/2020  Added call to /health_check and /images
+    @guyrleech 23/10/2020  Made health_check check compatible with App Volumes v2.18 (and v4.2)
 #>
 
 [CmdletBinding()]
@@ -468,6 +470,22 @@ else
     }
 }
 
+## in case we have certificate problems - probably should check first for better security !
+
+##https://stackoverflow.com/questions/41897114/unexpected-error-occurred-running-a-simple-unauthorized-rest-query?rq=1
+Add-Type -TypeDefinition @'
+public class SSLHandler
+{
+    public static System.Net.Security.RemoteCertificateValidationCallback GetSSLHandler()
+    {
+        return new System.Net.Security.RemoteCertificateValidationCallback((sender, certificate, chain, policyErrors) => { return true; });
+    }
+}
+'@
+
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback = [SSLHandler]::GetSSLHandler()
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
+
 # Get server details and check connectivity
 if( $configKey = Get-ItemProperty -Path $configKeyName -ErrorAction SilentlyContinue )
 {
@@ -482,7 +500,11 @@ if( $configKey = Get-ItemProperty -Path $configKeyName -ErrorAction SilentlyCont
     else
     {
         $information.Add( ([pscustomobject]@{ 'Item' = "$productName server" ; 'Description' =  "$($configKey.Manager_Address):$($configKey.Manager_Port)" } ) )
-        if( ! ( $networkTestResult = Test-NetConnection -ComputerName $configKey.Manager_Address -Port $configKey.Manager_Port -InformationLevel Detailed ) -or ! $networkTestResult.TcpTestSucceeded )
+        $networkTestResult = Test-NetConnection -ComputerName $configKey.Manager_Address -Port $configKey.Manager_Port -InformationLevel Detailed -ErrorAction SilentlyContinue
+
+        $information.Add( ([pscustomobject]@{ 'Item' = "Test Connection to $productName Server" ; 'Description' = $(if( ! $networkTestResult -or ! $networkTestResult.TcpTestSucceeded ) { 'FAILED' } else { 'OK' } ) } ) )
+        
+        if( ! $networkTestResult -or ! $networkTestResult.TcpTestSucceeded )
         {
            [string]$message = "Failed to connect to $($configKey.Manager_Address) on port $($configKey.Manager_Port)"
             if( ! $networkTestResult.NameResolutionSucceeded )
@@ -491,9 +513,148 @@ if( $configKey = Get-ItemProperty -Path $configKeyName -ErrorAction SilentlyCont
             }
             $warnings.Add( $message )
         }
+
+        ## even though we failed to connect we'll try the health check URLs
+
+        $newKey = $null
+        [string]$ieKey = 'HKCU:\SOFTWARE\Microsoft\Internet Explorer\Main'
+
+        ## if we don't set the first run registry value, we get this error but using -UseBasicParsing doesn't give us structured HTML "The response content cannot be parsed because the Internet Explorer engine is not available, or Internet Explorer's first-launch configuration is not complete."
+        if( ! ( $existingFirstRun = Get-ItemProperty -Path $ieKey -Name DisableFirstRunCustomize -ErrorAction SilentlyContinue | Select-Object -ExpandProperty DisableFirstRunCustomize ) )
+        {
+            if( ! ( Test-Path -Path $ieKey -ErrorAction SilentlyContinue ) )
+            {
+                $newKey = New-Item -Path $ieKey -Force
+            }
+            Set-ItemProperty -Path $ieKey -Name DisableFirstRunCustomize -Value 1
+        }
+
+        [string]$healthCheckResult = 'OK'
+        $exception = $null
+        [string]$healthURL = ('http{0}://{1}:{2}/health_check' -f $(if( $configKey.Manager_Port -ne 80 ) { 's' } ) , $configKey.Manager_Address , $configKey.Manager_Port )
+        try
+        {
+            $health = Invoke-WebRequest -Uri $healthURL
+        }
+        catch
+        {
+            $exception = $_
+            $health = $null
+        }
+
+        if( $health )
+        {
+            [string]$goodHealthRegex = $(if( $appVolumesVersion -match '^2\.' )
+            {
+                ## Process: 12316 - IP: 192.168.0.124 - Threads: 7 - Requests: 3 - Uptime: 652.298692s - Objects: 798890 - Browser: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36 Edg/86.0.622.43
+                'Process:.*IP:.*Threads:.*Requests:.*Uptime:.*Objects:'
+            }
+            else
+            {
+                ## OK <GUID>
+                '^OK\s'
+            })
+            if( $health.StatusCode -ne 200 -or $health.Content -notmatch $goodHealthRegex )
+            {
+                [string]$errorText = $null
+                [hashtable]$tags = @{}
+                ForEach( $element in $health.AllElements )
+                {
+                    try
+                    {
+                        $tags.Add( $element.tagname , $element.innerText )
+                    }
+                    catch
+                    {
+                        ## only expecting 1 element of each so ignore for now
+                    }
+                }
+                    
+                <#
+                    <h2>Startup Failure</h2>
+                    <h3>Unable to start App Volumes Manager</h3>
+                    <p>
+                        42000 (4060) [Microsoft][ODBC SQL Server Driver][SQL Server]Cannot open database "App_Volumes" requested by the login. The login failed.
+                    </p>
+                #>
+                ForEach( $tagname in @( 'h2' , 'h3' , 'p' ) )
+                {
+                    if( ! [string]::IsNullOrEmpty( ( $tag = $tags[ $tagname ] ) ) )
+                    {
+                        if( $errorText )
+                        {
+                            $errorText += ": $tag"
+                        }
+                        else
+                        {
+                            $errorText = $tag
+                        }
+                    }
+                }
+                [string]$warningText = $null
+                if( $health.StatusCode -eq 200 )
+                {
+                    $warningText = "Unexpected response"
+                }
+                else
+                {
+                    $warningText = "Error $($health.StatusCode)"
+                }
+                $warnings.Add( "$warningText from health check URL $healthURL - content `"$errorText`"" )
+                $healthCheckResult = $warningText
+            }
+            else
+            {
+                ## https://childebrandt42.wordpress.com/2020/10/15/appvolumes-monitoring-with-http-health-monitor/
+                ## now check /images
+                [string]$imagesURL = ('http{0}://{1}:{2}/images' -f $(if( $configKey.Manager_Port -ne 80 ) { 's' } ) , $configKey.Manager_Address , $configKey.Manager_Port )
+                try
+                {
+                    $images = Invoke-WebRequest -UseBasicParsing -Uri $imagesURL -ErrorAction SilentlyContinue
+                }
+                catch
+                {
+                    if( $_.Exception.message -match '\b404\b' )
+                    {
+                        $information.Add( ([pscustomobject]@{ 'Item' = "Calls to health check URLs" ; 'Description' = 'OK' } ) )
+                    }
+                    else
+                    {
+                        $warnings.Add( "Failed call to second health check URL $imagesURL - error $($_.Exception|Select-Object -ExpandProperty message)" )
+                    }
+                    $images = $null
+                }
+
+                if( $images ) ## this is actually bad
+                {
+                    if( $images.StatusCode -ne 404 ) ## expected
+                    {
+                        $warnings.Add( "Unexpected status code $($images.StatusCode) from /images URL $imagesURL - `"$($images.Content)`"" )
+                    }
+                }
+            }
+        }
         else
         {
-            $information.Add( ([pscustomobject]@{ 'Item' = "Test Connection to $productName Server" ; 'Description' = 'OK' } ) )
+            $warnings.Add( "Failed call to health check URL $healthURL - $exception" )
+            $healthCheckResult = 'FAILED'
+        }
+            
+        $information.Add( ([pscustomobject]@{ 'Item' = "Response from $productName health check URL" ; 'Description' = $healthCheckResult } ) )
+        if( $null -eq $existingFirstRun )
+        {
+            if( $newKey ) ## we created the key so delete it
+            {
+                Remove-Item -Path $ieKey -Recurse -Force
+            }
+            else
+            {
+                Remove-ItemProperty -Path $ieKey -Name DisableFirstRunCustomize -Force
+            }
+        }
+        elseif( $existingFirstRun -eq 0 )
+        {
+            Set-ItemProperty -Path $ieKey -Name DisableFirstRunCustomize -Value 0
         }
     }
 }
@@ -522,7 +683,7 @@ if( ! [string]::IsNullOrEmpty( $driverName ) )
     }
     else
     {
-        $information.Add( ([pscustomobject]@{ 'Item' = "Driver $driverName" ; 'Description' = 'Running ok' } ) )
+        $information.Add( ([pscustomobject]@{ 'Item' = "Driver $driverName" ; 'Description' = 'OK' } ) )
     }
 }
 
@@ -544,7 +705,7 @@ if( ( [array]$crashes = @( Get-WinEvent -FilterHashtable @{ ProviderName = 'Serv
 $oldestEvent = $null
 
 ## find oldest event in log containing events so we can report this
-if( ! ( $provider = Get-WinEvent -ListProvider $serviceName ) )
+if( ! ( $provider = Get-WinEvent -ListProvider $serviceName -ErrorAction SilentlyContinue ) )
 {
     $warnings.Add(  "No event provider $serviceName found" )
 }
@@ -570,7 +731,16 @@ else
 $badEvents = New-Object -TypeName System.Collections.Generic.List[psobject]
 
 # Check for svservice specific issues in event log - get relevant events into an array, oldest first so we can grab the first event and not have to work back when searching
-if( ! ( [array]$svserviceEventLogEntries = @( Get-WinEvent -FilterHashtable @{ ProviderName = $serviceName ; StartTime = $startDate } -Oldest -ErrorAction SilentlyContinue ) ) -or ! $svserviceEventLogEntries.Count )
+[array]$svserviceEventLogEntries = $null
+try
+{
+    $svserviceEventLogEntries = @( Get-WinEvent -FilterHashtable @{ ProviderName = $serviceName ; StartTime = $startDate } -Oldest -ErrorAction SilentlyContinue )
+}
+catch
+{
+}
+
+if( ! $svserviceEventLogEntries -or ! $svserviceEventLogEntries.Count )
 {
     $warnings.Add(  "No eventlog entries found for the event log provider $serviceName - this is unusual" )
     if( $oldestEvent )
@@ -700,62 +870,65 @@ $AppList = New-Object -TypeName System.Collections.Generic.List[psobject]
 [string]$username = $null
 [string]$domainname = $null
 
-$svserviceEventLogEntries.Where( { $_.Id -eq 218 } ) | . { Process { $username = $domainname = $null ; $event = $_ ; $_.properties[1].Value -split  "`r`n" } } | . { Process {
-    ## multiple lines of MOUNTED-READ;External SSD\appvolumes\packages\PuTTY.vmdk;{b2a70e3f-90ef-45b5-87a0-b7d07402a977}
-    if( $_  -match '\bLOGIN\s*(.*)\\(.*)$' ) {
-        $username   = $matches[2]
-        $domainname = $Matches[1]
-    }
-    elseif( $_ -match '(MOUNTED.*);(.+);({.+})' ) {
-        if( ! $username -or ! $domainname )
-        {
-            Write-Debug -Message "Failed to get username or domain for $_"
+if( $svserviceEventLogEntries -and $svserviceEventLogEntries.Count )
+{
+    $svserviceEventLogEntries.Where( { $_.Id -eq 218 } ) | . { Process { $username = $domainname = $null ; $event = $_ ; $_.properties[1].Value -split  "`r`n" } } | . { Process {
+        ## multiple lines of MOUNTED-READ;External SSD\appvolumes\packages\PuTTY.vmdk;{b2a70e3f-90ef-45b5-87a0-b7d07402a977}
+        if( $_  -match '\bLOGIN\s*(.*)\\(.*)$' ) {
+            $username   = $matches[2]
+            $domainname = $Matches[1]
         }
-        $AppList.Add( [pscustomobject]@{
-            'Time'       = $event.TimeCreated
-            'UserName'   = $username
-            'DomainName' = $domainname
-            'MountType'  = $matches[1]
-            'AppPath'    = $matches[2]
-            'AppGUID'    = $matches[3] 
-            'AppName'    = $matches[2].Split( '\' )[-1].Replace( '.vmdk' , '' ).Replace( '!20!' , ' ').Replace( '!2B!' , '+' ) 
-            'AppId'      = $null } )
-    }
-    elseif( $_ -match 'ENABLE-APP;({.+});({.+})' ) ## ENABLE-APP;{65950e61-0304-45a6-b354-f3b26ced3f64};{b2a70e3f-90ef-45b5-87a0-b7d07402a977}
-    {
-        if( $appObject = $AppList | Where-Object -Property AppGuid -eq $Matches[2] | Select-Object -First 1 )
-        {
-            $appObject.AppId = $Matches[1]
-        }
-        else
-        {
-            Write-Debug "Couldn't find appguid $($matches[2]) in AppList"
-        }
-    }
-    elseif( $_ -match '\bResponse\b.*!FAILURE!' )
-    {
-        $badEvents.Add( ([pscustomobject]@{ 'Time' = $event.TimeCreated ; 'Id' = $event.Id ; Error = "Found FAILURE response event" }) )
-    }
-    elseif( $_ -match '\bManager:.*\bStatus:\s+([45]\d\d)' ) ## Manager: grl-appvolv2.guyrleech.local, Status: 500
-    {
-        [int]$errorCode = $Matches[1]
-        [string]$errorText = $null
-        if( ( $event.Properties[1].Value  -replace  "`r`n|\<[a-z]+\/\>", ' ' -replace '\s+' , ' ' ) -match '\bResponse\b\s+\(\d+ bytes\):\s+(.*)' ) ## Response (88 bytes): This request is taking too long.<br/>... 
-        {
-            ## we split the string and are reading in chunks so get all lines here, join and isolate the response text
-            if( $Matches[1] -like '<html>*' )
+        elseif( $_ -match '(MOUNTED.*);(.+);({.+})' ) {
+            if( ! $username -or ! $domainname )
             {
-                ## it's html and probably not complete so unlikely we can pull anything useful out of it
-                $errorText = 'html response from server'
+                Write-Debug -Message "Failed to get username or domain for $_"
+            }
+            $AppList.Add( [pscustomobject]@{
+                'Time'       = $event.TimeCreated
+                'UserName'   = $username
+                'DomainName' = $domainname
+                'MountType'  = $matches[1]
+                'AppPath'    = $matches[2]
+                'AppGUID'    = $matches[3] 
+                'AppName'    = $matches[2].Split( '\' )[-1].Replace( '.vmdk' , '' ).Replace( '!20!' , ' ').Replace( '!2B!' , '+' ) 
+                'AppId'      = $null } )
+        }
+        elseif( $_ -match 'ENABLE-APP;({.+});({.+})' ) ## ENABLE-APP;{65950e61-0304-45a6-b354-f3b26ced3f64};{b2a70e3f-90ef-45b5-87a0-b7d07402a977}
+        {
+            if( $appObject = $AppList | Where-Object -Property AppGuid -eq $Matches[2] | Select-Object -First 1 )
+            {
+                $appObject.AppId = $Matches[1]
             }
             else
             {
-                $errorText = $Matches[1]
+                Write-Debug "Couldn't find appguid $($matches[2]) in AppList"
             }
         }
-        $badEvents.Add( ([pscustomobject]@{ 'Time' = $event.TimeCreated ; 'Id' = $event.Id ; Error = "Error code $errorCode `"$($errorText.Trim( ' .'))`"" }) )
-    }
-}}
+        elseif( $_ -match '\bResponse\b.*!FAILURE!' )
+        {
+            $badEvents.Add( ([pscustomobject]@{ 'Time' = $event.TimeCreated ; 'Id' = $event.Id ; Error = "Found FAILURE response event" }) )
+        }
+        elseif( $_ -match '\bManager:.*\bStatus:\s+([45]\d\d)' ) ## Manager: grl-appvolv2.guyrleech.local, Status: 500
+        {
+            [int]$errorCode = $Matches[1]
+            [string]$errorText = $null
+            if( ( $event.Properties[1].Value  -replace  "`r`n|\<[a-z]+\/\>", ' ' -replace '\s+' , ' ' ) -match '\bResponse\b\s+\(\d+ bytes\):\s+(.*)' ) ## Response (88 bytes): This request is taking too long.<br/>... 
+            {
+                ## we split the string and are reading in chunks so get all lines here, join and isolate the response text
+                if( $Matches[1] -like '<html>*' )
+                {
+                    ## it's html and probably not complete so unlikely we can pull anything useful out of it
+                    $errorText = 'html response from server'
+                }
+                else
+                {
+                    $errorText = $Matches[1]
+                }
+            }
+            $badEvents.Add( ([pscustomobject]@{ 'Time' = $event.TimeCreated ; 'Id' = $event.Id ; Error = "Error code $errorCode `"$($errorText.Trim( ' .'))`"" }) )
+        }
+    }}
+}
 
 [array]$userSessions = @( Get-WTSSessionInformation | Sort-Object -Property LogonTime )
 
@@ -790,7 +963,7 @@ if( $userSessions -and $userSessions.Count )
         $lsaSession = $lsaSessions.Where( { $_.SessionId -eq $userSession.SessionId -and $_.Domain -eq $userSession.DomainName -and $_.Username -eq $userSession.UserName } , 1 )
         [datetime]$logonTime = $(if( $lsaSession ) { $lsaSession.LoginTime } else { $userSession.LogonTime })
 
-        if( $logonTime -ge $startDate -and ( $logonRecord = $svserviceEventLogEntries.Where( { $_.Id -eq '210' -and $_.TimeCreated -ge $logonTime -and $_.Properties[1].Value -match "Session ID:\s*$($userSession.SessionId)$" } , 1 ) ) )
+        if( $logonTime -ge $startDate -and $svserviceEventLogEntries -and ( $logonRecord = $svserviceEventLogEntries.Where( { $_.Id -eq '210' -and $_.TimeCreated -ge $logonTime -and $_.Properties[1].Value -match "Session ID:\s*$($userSession.SessionId)$" } , 1 ) ) )
         {
             ## if we haven't parsed the service log file yet we'll do it now so that we only get events after the logon of the first session chronologically
             ## need to parse the log file for App Volumes v2 to get GUIDS so we can find disk mount times
@@ -991,4 +1164,4 @@ if( $badEvents -and $badEvents.Count )
 
     $badEvents | Sort-Object -Property Time | Format-Table -AutoSize
 }
- 
+
