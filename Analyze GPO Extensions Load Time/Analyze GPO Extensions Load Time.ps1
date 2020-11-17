@@ -1,5 +1,4 @@
-﻿#requires -version 3
-
+﻿
 <#
 .SYNOPSIS
 
@@ -31,13 +30,14 @@ Uses code used in Analyze Logon Durations script
 
     @guyrleech 06/11/2020  Initial release
     @guyrleech 10/11/2020  Changed dates/times output to just times
+    @guyrleech 13/11/2020  Changed so could run in PowerShell 2.0
 #>
 
 [CmdletBinding()]
 
 Param
 (
-    [Parameter(Mandatory,HelpMessage='domain\username to report on')]
+    [Parameter(Mandatory=$true,HelpMessage='domain\username to report on')]
     [string]$user
 )
 
@@ -76,23 +76,22 @@ if( $startProcessingEvent = Get-WinEvent -ProviderName Microsoft-Windows-GroupPo
     else
     {
         ## build hash table of cse id and GPO names so we can output when we iterate over finish events later
-        $CSEArray.Where( { $_.Id -eq 4016 } ).ForEach( `
+        $CSEArray | Where-Object { $_.Id -eq 4016 } | ForEach-Object `
         {
             $CSE2GPO.Add( $_.Properties[0].Value , $_.Properties[5].Value )
-        })
+        }
     }
 }
 else
 {
     Throw "Failed to find group policy processing starting event id 4001 for user $user"
 }
-
 if( $CSEArray -and $CSEArray.Count )
 {
     $lastToFinish = $null
     [hashtable]$GPOTotalTimes = @{}
 
-    [array]$CSEtimings = @( $CSEArray.Where( { $_.Id -ne '4016' } ).ForEach( 
+    [array]$CSEtimings = @( $CSEArray | Where-Object { $_.Id -ne '4016' } | ForEach-Object `
     {
         $CSE = $_
         [double]$duration = $CSE.Properties[0].Value / 1000
@@ -121,13 +120,13 @@ if( $CSEArray -and $CSEArray.Count )
             }
         }
 
-        [pscustomobject]@{
+        New-Object -Typename pscustomobject -Property (@{
             CSE       = $CSE.Properties[2].Value
             StartTime = $CSE.TimeCreated.AddMilliseconds( -$CSE.Properties[0].Value ).ToLongTimeString()
             EndTime   = $CSE.TimeCreated.ToLongTimeString()
             Duration  = $duration 
-            GPOs      = ($GPOs -join ', ').Trim( '[, ]') }
-    } ) )
+            GPOs      = ($GPOs -join ', ').Trim( '[, ]') })
+    } )
             
     if( $lastToFinish )
     {
@@ -139,7 +138,7 @@ if( $CSEArray -and $CSEArray.Count )
     if( $GPOTotalTimes -and $GPOTotalTimes.Count )
     {
         "$($GPOTotalTimes.Count) processed GPO CSEs sorted by the highest total processing time"
-        $GPOTotalTimes.GetEnumerator() | Where-Object Name | Sort-Object -Property Value -Descending | Format-Table -AutoSize -Property @{n='GPO';e={$_.Name}},@{n='Time Spent (s)';e={$_.Value}}
+        $GPOTotalTimes.GetEnumerator() | Where-Object { $_.Name } | Sort-Object -Property Value -Descending | Format-Table -AutoSize -Property @{n='GPO';e={$_.Name}},@{n='Time Spent (s)';e={$_.Value}}
     }
 }
 
