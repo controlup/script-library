@@ -234,6 +234,12 @@ Function Resolve-CrossReferences
                 ## save looking up again, especially if it errors as we are not looking up anything valid
                 $alreadyFetched.Add( $id , $id )
 
+                ## if it's a high volume, time specific table then we will filter it
+                if( $dateFields[ $id ] )
+                {
+                    $params.uri += Get-DateRanges -query $id -from $from -to $to -oDataVersion $oDataVersion
+                }
+
                 [hashtable]$table = @{}
                 try
                 {
@@ -310,7 +316,6 @@ Function Resolve-NestedProperties
             $property = $_
             if( ( $matchedEnum = $Matches[1] ) -eq 'EnumValue' )
             {
-                Write-Verbose -Message "Resolving enum $($property.Name)"
                 ## http://grl-xaddc01/Citrix/Monitor/OData/v3/Methods/GetAllMonitoringEnums('SessionFailureCode')/Values
                 ## need to find a generic way of doing this
                 $lookupTable = $null
@@ -318,6 +323,7 @@ Function Resolve-NestedProperties
                 {
                     if( ! $connectionFailureCodes -or ! $connectionFailureCodes.Count )
                     {
+                        Write-Verbose -Message "Resolving enum $($property.Name)"
                         ## v4 equivalent??
                         $params[ 'uri' ] = ( "{0}://{1}/Citrix/Monitor/OData/v3/Methods/GetAllMonitoringEnums('SessionFailureCode')/Values" -f $protocol , $ddc )
                         if( $enums = Invoke-RestMethod @params )
