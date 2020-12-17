@@ -10,22 +10,21 @@ Description: This script is used to clean up a disk by deleting the content of d
 %allusersprofile%\Microsoft\Windows Defender\Definition Updates
 %allusersprofile%\Microsoft\Windows Defender\Scans
 %allusersprofile%\Microsoft\Windows\WER
-
-And the if the following files exists thay are removed as well:
 %SystemRoot%memory.dmp
 %SystemRoot%Minidump.dmp
 
 Extra folders to be cleaned and specific files to be removed can be added when running the script.
-
 Option: Run CLEANMGR with all options set, and delete Volume Shadow Copies
+Option: Run DISM if CLEANMGR was supposed to run but is not available
+Note: The CLEANMGR option and DISM fallback remove installers of updates and old Windows versions. If either of these has been run, IT IS NOT POSSIBLE TO UNINSTALL UPDATES OR REVERT TO AN OLDER WINDOWS BUILD!
 
-Version: 1.2.26
+Version: 2.6.34
 
 Creator: Ton de Vreede
 
 Date Created: 12/02/2018 12:27:05
 
-Date Modified: 12/18/2018 13:42:17
+Date Modified: 12/09/2020 11:32:33
 
 Scripting Language: ps1
 

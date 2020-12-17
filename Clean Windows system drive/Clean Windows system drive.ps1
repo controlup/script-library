@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿#requires -version 3
+$ErrorActionPreference = 'Stop'
 <#
     .SYNOPSIS
     This script will delete files to clean disks
@@ -13,11 +14,14 @@
     .PARAMETER bolVolumeShadowCopy
     True/False value indicating if System Restore points should be deleted
 
+    .CHANGES
+                7-12-2020, Ton de Vreede, Added DISM.EXE fallback (for OS version > 2008R2), increased CLEANMGR timeout
 #>
 
 # Parse the arguments
-If ($args[0] -eq 'True') {[bool]$bolCleanmgr = $true} Else {[bool]$bolCleanmgr = $false}
-If ($args[1] -eq 'True') {[bool]$bolVolumeShadowCopy = $true} Else {[bool]$bolVolumeShadowCopy = $false}
+If ($args[0] -eq 'True') { [bool]$bolCleanmgr = $true } Else { [bool]$bolCleanmgr = $false }
+If ($args[1] -eq 'True') { [bool]$bolVolumeShadowCopy = $true } Else { [bool]$bolVolumeShadowCopy = $false }
+If ($args[2] -eq 'True') { [bool]$bolDISMFallback = $true } Else { [bool]$bolDISMFallback = $false }
 
 # Array of files to be cleaned
 [array]$arrFilesToBeDeleted = @(
@@ -71,42 +75,39 @@ If ($args[1] -eq 'True') {[bool]$bolVolumeShadowCopy = $true} Else {[bool]$bolVo
     'Windows Error Reporting Files',
     'Windows ESD installation files',
     'Windows Upgrade Log Files'
- )
+)
 
 # Get current disk free space
-[string]$strSystemDriveLetter = [System.Environment]::ExpandEnvironmentVariables("%systemdrive%") -replace (':','')
+[string]$strSystemDriveLetter = [System.Environment]::ExpandEnvironmentVariables("%systemdrive%") -replace (':', '')
 $SystemDrive = Get-PSDrive -Name $strSystemDriveLetter
 [double]$dblFreeSpace = $SystemDrive.Free
 
 # Create counter to optionally record how many files could not be deleted. Not output by default
 [long]$lngSkippedFileCount = 0
 
-Function Feedback ($strFeedbackString)
-{
-  # This function provides feedback in the console on errors or progress, and aborts if error has occured.
-  If ($error.count -eq 0)
-  {
-    # Write content of feedback string
-    Write-Host -Object $strFeedbackString -ForegroundColor 'Green'
-  }
+Function Feedback ($strFeedbackString) {
+    # This function provides feedback in the console on errors or progress, and aborts if error has occured.
+    If ($error.count -eq 0) {
+        # Write content of feedback string
+        Write-Host -Object $strFeedbackString -ForegroundColor 'Green'
+    }
   
-  # If an error occured report it, and exit the script with ErrorLevel 1
-  Else
-  {
-    # Write content of feedback string but in red
-    Write-Host -Object $strFeedbackString -ForegroundColor 'Red'
+    # If an error occured report it, and exit the script with ErrorLevel 1
+    Else {
+        # Write content of feedback string but in red
+        Write-Host -Object $strFeedbackString -ForegroundColor 'Red'
     
-    # Display error details
-    Write-Host 'Details: ' $error[0].Exception.Message -ForegroundColor 'Red'
+        # Display error details
+        Write-Host 'Details: ' $error[0].Exception.Message -ForegroundColor 'Red'
 
-    Exit 1
-  }
+        Exit 1
+    }
 }
 
-Function Remove-AllFilesInFolder ($strFolder){
+Function Remove-AllFilesInFolder ($strFolder) {
     $ExpFolder = [System.Environment]::ExpandEnvironmentVariables("$strFolder")
     # Make sure folder exists, Get-Childitem -recurse can hang on folders that don't exist
-    If ((Test-Path -Path "$ExpFolder") -eq $true){
+    If ((Test-Path -Path "$ExpFolder") -eq $true) {
         $Files = Get-ChildItem -Path $ExpFolder -Recurse -File -Force
 
         # Call the function to remove the files
@@ -114,8 +115,8 @@ Function Remove-AllFilesInFolder ($strFolder){
     }
 }
  
-Function Remove-FilesInArray ($arrFiles){
-    Foreach ($File in $Files){
+Function Remove-FilesInArray ($arrFiles) {
+    Foreach ($File in $Files) {
         try {
             # Remove the file
             Remove-Item -Path $file.Fullname -Force
@@ -127,12 +128,12 @@ Function Remove-FilesInArray ($arrFiles){
 }
 
 # Run CLEANMGR if required
-If ($bolCleanmgr){
+If ($bolCleanmgr) {
     # Is CLEANMGR available on the system?
     If (Test-Path ([System.Environment]::ExpandEnvironmentVariables("%systemroot%\System32\cleanmgr.exe"))) {
         # Create the SAGESET for CLEANMGR in registry
         [string]$strRegPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches'
-        Foreach ($key in $arrSageSetKeys){
+        Foreach ($key in $arrSageSetKeys) {
             try {
                 # Check if the path actually exists before trying to set the key (keys exisitng can depend on OS< patch level etc)
                 If (Test-Path "$strRegPath\$key") {
@@ -146,7 +147,7 @@ If ($bolCleanmgr){
         # Run CLEANMGR as a Job, so a time out can be used because cleanmgr sometimes hangs if run silently
         try {
             # Set timeout 
-           [int]$intTimeOut = 600
+            [int]$intTimeOut = 1800
             $CodeBlock = {
                 Start-Process cleanmgr.exe -Wait -ArgumentList '/SAGERUN:66'
             }
@@ -157,29 +158,72 @@ If ($bolCleanmgr){
             Wait-Job $Job -Timeout $intTimeOut | Out-Null
 
             # Has the job completed?
-            If ($Job.State -ne 'Completed'){
+            If ($Job.State -ne 'Completed') {
                 Feedback "CLEANMGR did not complete in the specified time of $intTimeOut seconds. It may have run but failed tot exit. Script will continue."
-                Stop-Process cleanmgr -Force
+                Stop-Process -Name cleanmgr -Force
             }
 
             # Cleanup
+            Stop-Job $Job
             Remove-Job $Job
         }
         catch {
             Feedback "CLEANMGR failed to run."
         }
+    }
+    elseif ($bolDISMFallback) { 
+        # Test for different Wndows, as DISM has different command line options depending on OS build.
+        [version]$verWindows = [Environment]::OSVersion.Version
+        if ($verWindows.Major -eq 6) {
+            if ($verWindows.Minor -le 1) {
+                Write-Host "CLEANMGR.EXE is not available on this system and the OS version is 2008R2 or lower, so the required DISM options are available."
+            }
+            elseif ($verWindows.Minor -eq 2) {
+                Write-Host "CLEANMGR.EXE is not available on this system, running DISM /online /Cleanup-Image /StartComponentCleanup to remove updates and old windows version(s) instead."
+                try {
+                    dism.exe /online /Cleanup-Image /StartComponentCleanup | Out-Null
+                    If ($LastExitCode -eq 0) {
+                        Write-Host "DISM.EXE ran successfully."
+                    }
+                    ElseIf ($LastExitCode -eq 2) {
+                        Write-Host 'DISM.exe returned exit code 2. Usually, the DISM commands have done (most) their work regardless of this error. We suggest that if you do not experience any other problems with the machine you ignore this error.'
+                    }
+                    Else {
+                        Write-Host "DISM.exe did not return the expected exit code 0, the exit code was: $lastExitCode"
+                    }
+                }
+                catch {
+                    Write-Host "There was an error running DISM.exe: $($_.Exception)"
+                }
+            }
         }
-    else {
-        Write-Host "CLEANMGR.EXE is not available on this system. It can be installed by installing the Desktop Experience feature."
+        else {
+            Write-Host "CLEANMGR.EXE is not available on this system, running DISM /online /Cleanup-Image /StartComponentCleanup /ResetBase to remove updates and old windows version(s) instead."
+            try {
+                dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase | Out-Null
+                If ($LastExitCode -eq 0) {
+                    Write-Host "DISM.EXE ran successfully."
+                }
+                ElseIf ($LastExitCode -eq 2) {
+                    Write-Host 'DISM.exe returned exit code 2. Usually, the DISM commands have done (most) their work regardless of this error. We suggest that if you do not experience any other problems with the machine you ignore this error.'
+                }
+                Else {
+                    Write-Host "DISM.exe did not return the expected exit code 0, the exit code was: $lastExitCode"
+                }
+            }
+            catch {
+                Write-Host "There was an error running DISM.exe: $($_.Exception)"
+            }
+        }
     }
 }
 
 # Clean Volume Shadow Copies if required
 If ($bolVolumeShadowCopy) {
-    try{
+    try {
         vssadmin.exe delete shadows /All /Quiet | Out-Null
     }
-    catch{
+    catch {
         Feedback "Volume Shadow Copies could not be deleted."
     }
 }
@@ -190,23 +234,23 @@ Foreach ($folder in $arrFoldersToBeCleaned) {
 }
 
 # Delete the specified files
-Foreach ($File in $arrFilesToBeDeleted){
-    Try{
+Foreach ($File in $arrFilesToBeDeleted) {
+    Try {
         # Check if the file exists at all before trying to remove it, because default files may not exist on system
         $File = [System.Environment]::ExpandEnvironmentVariables("$File")
         If (Test-Path -Path $File) {
             Remove-Item -Path $File -Force
         }
     }
-    catch{
+    catch {
         # File WAS FOUND but the file object could not be retreived, increase the Skipped File counter
-        $lngSkippedFileCount +=1
+        $lngSkippedFileCount += 1
     }
 }
 
 # Write space gained to console
 $SystemDrive = Get-PSDrive -Name $strSystemDriveLetter
 [double]$dblNewFreeSpace = $SystemDrive.Free
-[double]$dblSpaceFreed = [math]::Round((($dblNewFreeSpace - $dblFreeSpace) /1MB),2)
+[double]$dblSpaceFreed = [math]::Round((($dblNewFreeSpace - $dblFreeSpace) / 1MB), 2)
 
 Write-Host "$dblSpaceFreed MB of disk space freed"

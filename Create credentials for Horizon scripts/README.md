@@ -12,13 +12,13 @@ PSCREDENTIIAL OBJECTS CAN ONLY BE USED BY THE USER THAT CREATED THE OBJECT AND O
             - Added check for local profile
             - changed error message when failing to create the xml file
 
-Version: 4.6.13
+Version: 5.6.14
 
 Creator: Ton de Vreede
 
 Date Created: 12/02/2019 14:12:29
 
-Date Modified: 11/17/2020 15:01:05
+Date Modified: 12/08/2020 07:57:09
 
 Scripting Language: ps1
 
