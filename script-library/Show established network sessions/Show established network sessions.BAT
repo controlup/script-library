@@ -1,0 +1,1 @@
+﻿netstat -n | find "ESTABLISHED"
