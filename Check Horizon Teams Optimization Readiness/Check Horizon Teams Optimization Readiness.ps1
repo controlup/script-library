@@ -1,29 +1,26 @@
 ﻿#requires -Version 3.0
 <#  
-.SYNOPSIS     Check Citrix Teams Optimization Readiness [BETA]
-.DESCRIPTION  [BETA] Citrix HDX Optimization can improve the user experience for Teams video/audio use.
-              The optimization will also significantly reduce the resource consumption on the VDA.
+.SYNOPSIS     Check Horizon Teams Optimization Readiness [BETA]
+.DESCRIPTION  [BETA] VMware Horizon is capable of video/audio Optimization for Teams video/audio use.
+              The optimization will also significantly reduce the resource consumption on the DataCenter.
               
 
-.SOURCES      https://techcommunity.microsoft.com/t5/microsoft-teams/still-connecting-to-remote-devices/m-p/1906370
-              https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/opt-ms-teams.html
-              https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/opt-ms-teams.html#known-limitations
-              https://docs.microsoft.com/en-us/MicrosoftTeams/msi-deployment#clean-up-and-redeployment-procedure
-              https://docs.microsoft.com/en-us/MicrosoftTeams/teams-for-vdi
+.SOURCES      https://techzone.vmware.com/resource/microsoft-teams-optimization-vmware-horizon
+              https://docs.vmware.com/en/VMware-Horizon/2006/horizon-remote-desktop-features/GUID-F68FA7BB-B08F-4EFF-9BB1-1F9FC71F8214.html
+              https://techcommunity.microsoft.com/t5/microsoft-teams/teams-and-vmware-horizon-vdi-best-practices/m-p/1759816
 
-.EXAMPLE:     \\util01\share\research\MSFT_Teams_Citrix_optimization.ps1 -SessionID '1' -vdaVer '1912.0.0.24265' -protocol 'HDX' -ctxRx '20.12.1.42' -userChanges Discard
+.EXAMPLE:     \\util01\share\research\MSFT_Teams_VMware_Horizon_optimization.ps1 -SessionID 16 -hznVer 7.12.0 -protocol Blast -cltVer 8.1.0
 .CONTEXT      Session
-.TAGS         $HDX, $Citrix, $Teams
-.HISTORY      Marcel Calef     - 2021-01-06 - BETA Release 
-              Marcel Calef     - 2021-03-05 update to support 21.mm.x.y  (or any 2*.mm.x.y)
+.TAGS         $VMware, $Horizon, $Blast, $Teams
+.HISTORY      Marcel Calef     - 2021-03-24 - BETA Release
 #>
 
 [CmdLetBinding()]
 Param (
     [Parameter(Mandatory=$true,HelpMessage='SessionID')]             [string]$SessionID,
-    [Parameter(Mandatory=$false, HelpMessage='Citrix VDA ver.')]     [string]$vdaVer,
     [Parameter(Mandatory=$false, HelpMessage='protocol')]            [string]$protocol,
-    [Parameter(Mandatory=$false, HelpMessage='Citrix Client ver.')]  [string]$ctxRx,
+    [Parameter(Mandatory=$false, HelpMessage='Horizon Agent ver.')]  [string]$hznVer,
+    [Parameter(Mandatory=$false, HelpMessage='Horizon Client ver.')] [string]$cltVer,
     [Parameter(Mandatory=$false, HelpMessage='userChanges')]         [string]$userChanges
       )
 
@@ -33,40 +30,47 @@ $VerbosePreference = 'Continue'      # Remove the comment in the begining to ena
 
 Write-Verbose "Input:"
 #Write-Verbose "   SessionID :  $SessionID"  ## Not showing to allow better results grouping
-Write-Verbose "      vdaVer :  $vdaVer"
+Write-Verbose "      hznVer :  $hznVer"
 Write-Verbose "    protocol :  $protocol"
-Write-Verbose "       ctxRx :  $ctxRx"
+Write-Verbose "      cltVer :  $cltVer"
 
-# If not a Citrix session - no need to continue
-if($protocol -ne "HDX" -and $protocol -ne "Console"){Write-Output "INFO :   Not a Citrix session. Exiting"; exit }
+# If not a Horizon session - no need to continue
+if($protocol -ne "Blast" -and $protocol -ne "Console"){Write-Output "INFO :   Not a VMware Horizon session. Exiting"; exit }
 
 ###############################################################################################################
-# Citrix components versions and capability validations
+# Horizon components versions and capability validations
 
-# Check if the VDA supports it (1906 or newer)
-$vdaVerTest   = ($vdaVer -match '^19(06|09|12)\..+|^2.{3}\..+')
+# Check if the Horizon Agent supports it (7.13, 8 or newer)
+$hznVerTest   = ($hznVer -match '^7\.13\..+|^8\..+')
 
 # Check if the VDA has the webSockets service running
 Try{$CtxTeamsSvc = ((Get-Service CtxTeamsSvc).status -match "Running")}
 	catch {$CtxTeamsSvc = $false} # return $false if service not running
 
-# Check the WebBrowserRedirection Policy  1=enabled (implicitly enabled if not found in VDA > 7.??)
-Try {$redirPol = (get-itemproperty -path HKLM:\SOFTWARE\Policies\Citrix\$SessionID\User\MultimediaPolicies  -name "TeamsRedirection").TeamsRedirection}
-   catch {$redirPol = "notFound"} # return empty if not found
+# Check Horizon's Microsoft Teams Optimization Feature Policy - must be explicitly enabled
+Try {$optimPol = ($gpResult | select-string 'Enable Media Optimization for Microsoft Teams' -Context(1,2))}
+   catch {$optimPol = "notFound"} # return empty if not found
 
-# Check the Citrix Reciever (CWA) version    #2021-03-05 update to support 21.mm.x.y  (or any 2*.mm.x.y)
-$ctxRxVerTest = ($ctxRx -match '^2[0-9]\..+')
+# Check Horizon's per user Software Acoustic Echo Cancellation Policy - implicitly enabled
+Try {$echoPol = ($gpResult | select-string 'Enable software acoustic echo cancellation for Media Optimization for Microsoft Teams' -Context(1,2))}
+   catch {$echoPol = "notFound"} # return empty if not found
+# It is possible to configure from the client. No way to check here
+#Try {$ClientEchoPol = (get-itemproperty -path 'HKCU:\SOFTWARE\VMware, Inc.\VMware Html5mmr\WebrtcRedir'  -name "enableAEC").enableAEC}
+#   catch {$ClientEchoPol = "notFound"} # return empty if not found
 
-# Check if $ctxRx was empty
-if ($ctxRx -match 'Discard|On Local'){$ctxRx = 'not Received';Write-Verbose "       ctxRx :  $ctxRx"}
+# Check the Horizon Client version
+$cltVerTest = ($cltVer -match '^5\.5.+|^8\..+')
+
+# Check if $cltVer was empty
+if ($cltVer -match 'Discard|On Local'){$cltVer = 'not Received';Write-Verbose "       cltVer :  $cltVer"}
 
 
-# check HKEY_CURRENT_USER\SOFTWARE\Citrix\HDXMediaStream\\MSTeamsRedirSupport
+# check Horizon's handover registry key for MSTeamsRedirSupport   ###### Not implemented yet
 ## Teams will look for this to decide to enable or not redirection
-Try {$userMSTeamsSupp = (Get-ItemProperty -Path hkcu:software\Citrix\HDXMediaStream -Name "MSTeamsRedirSupport").MSTeamsRedirSupport}
+Try {$userMSTeamsSupp = (Get-ItemProperty -Path hkcu:software\VMware -Name "MSTeamsRedirSupport").MSTeamsRedirSupport}
      Catch {$userMSTeamsSupp = "notFound" }
 
-# Check if the CVAD Persist User Changes was provided, if not set as unknown
+# Check if the Hoziron MAchine Type was provided, if not set as unknown    ###### Not implemented yet
 if (!($userChanges -match '.+')) {$userChanges = 'Not Provided'}
 Write-Verbose " userChanges :  $userChanges"
 
@@ -96,40 +100,42 @@ Try{$preventMSIinstall = (Get-Itemproperty HKCU:Software\Microsoft\Office\Teams)
 #Write-Verbose "    teamsPID :  $teamsPID"    ## Not showing to allow better results grouping
 Write-Verbose "    teamsVer :  $teamsVer"
 
-# Check if Teams.exe received the Citrix HDX Redirection RegKey (would be 1, else 0 or not found)
+# Check if Teams.exe received the Horizon Redirection RegKey (would be 1, else 0 or not found)    ###### Not implemented yet
 if ($teamsVer -ne 'not running'){
     Try {$hdxRedirLogEntry = ((Select-String -path "$env:appdata\Microsoft\Teams\logs.txt" -Pattern "<$teamsPID> -- info -- vdiUtility: citrixMsTeamsRedir")[-1]).ToString()
-     $hdxRedir = $hdxRedirLogEntry.Substring($hdxRedirLogEntry.Length -2, 2)
+     $hznRedir = $hdxRedirLogEntry.Substring($hdxRedirLogEntry.Length -2, 2)
      }
-    Catch {$hdxRedir = "notFound"}
+    Catch {$hznRedir = "notFound"}
     }
-    else {$hdxRedir = "not running"}
+    else {$hznRedir = "not running"}
 
 
 ###############################################################################################################
 # Report findings - some tests return $true , other return a value
 
-Write-Output "====================== Citrix Readiness ======================"
-if ($vdaVerTest)      {Write-Output "PASS:       VDA Version $vdaVer supports HDX Teams Optimization" }
+Write-Output "====================== Horizon Readiness ======================"
+if ($hznVerTest)      {Write-Output "PASS:       Horizon Agent Version $hznVer supports Teams Optimization" }
          else 	      {Write-Output "`n======!!======!!"
-					   Write-Output "FAIL:       VDA Version $vdaVer does not support HDX Teams Optimization (or not found in the output)"
-                       Write-Output "      TRY:  Upgrade VDA to 1903 or newer. see https://docs.citrix.com/en-us/tech-zone/learn/poc-guides/microsoft-teams-optimizations.html"
+					   Write-Output "FAIL:       Horizon Agent Version $hznVer does not support Teams Optimization (or not found in the output)"
+                       Write-Output "      TRY:  Upgrade the Horizon Agent to 7.13, 8 or newer. see https://techzone.vmware.com/resource/microsoft-teams-optimization-vmware-horizon"
                       }
 					  
-if ($ctxRxVerTest)    {Write-Output "PASS:       Citrix Workspace App Version $ctxRx supports HDX Teams Optimization" }
+if ($cltVerTest)    {Write-Output "PASS:       VMware Horizon Client Version $cltVer supports Teams Optimization" }
 		 else 	      {Write-Output "`n======!!======!!"
-					   Write-Output "FAIL:       Receiver/CWA Version $ctxRx is old and does not support HDX Teams Optimization "
-				       Write-Output "      TRY:  Upgrade the Client device to latest version of Citrix Workspace App"
-					   if ($vdaVerTest -eq $false) {exit}
+					   Write-Output "FAIL:       VMware Horizon Client Version $cltVer is old and does not support Teams Optimization "
+				       Write-Output "      TRY:  Upgrade the Client device to latest version of VMware Horizon Client"
+					   if ($hznVerTest -eq $false) {exit}
 				      }
 
-if ($redirPol -eq 1)  {Write-Output "PASS:       HDX Teams Optimization policy explicitly ENABLED from Citrix Studio"}
+if ($optimPol -ne "notFound")  {Write-Output "PASS:       Horizon's Microsoft Teams Optimization Feature Policy FOUND - pending validate enabled"}
 
-if ($redirPol -eq 0)  {Write-Output "`n======!!======!!"
-					   Write-Output "FAIL:       HDX Teams Optimization DISABLED explicitly via policy"
-				       Write-Output "      TRY:  Review Citrix Policies in Citrix Studio"
+if ($optimPol -eq "notFound")  {Write-Output "`n======!!======!!"
+					   Write-Output "FAIL:       Horizon's Microsoft Teams Optimization Feature Policy NOT FOUND"
+				       Write-Output "      TRY:  See 'WebRTC Redirection' in https://techzone.vmware.com/resource/microsoft-teams-optimization-vmware-horizon"
 					   exit
 				      }
+
+# 
 				    
 if ($CtxTeamsSvc)    {Write-Output "PASS:       HDX Teams Optimization (CtxTeamsSvc) found running in the VDA" }
 		 else 	      {Write-Output "`n======!!======!!"
@@ -172,12 +178,12 @@ if ($machineInstall)  {Write-Output "PASS:       Teams found in the Program File
             }
     
                       		   
-Switch -Wildcard ($hdxRedir)
-    { '*1*'         { Write-Output "PASS:       Teams reports Citrix HDX Optimized - in the GUI: User-> About->Version"}
+Switch -Wildcard ($hznRedir)
+    { '*1*'         { Write-Output "PASS:       Teams reports Horizon Optimized - in the GUI: User-> About->Version"}
       '*0*'         { Write-Output "`n======!!======!!"
-                      Write-Output "WARN:       Citrix HDX NOT Optimized - in the GUI: User-> About->Version"}
+                      Write-Output "WARN:       Horizon NOT Optimized - in the GUI: User-> About->Version"}
       'not running' { Write-Output "`n======!!======!!"
                       Write-Output "INFO:       Teams was not detected running in this session"}
       default       { Write-Output "`n======!!======!!"
-                      Write-Output "WARN:       Teams did not detect Citrix HDX optimization"}
+                      Write-Output "WARN:       Teams did not detect Horizon optimization"}
     }
