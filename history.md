@@ -1,4 +1,4 @@
-### 11-01-2022
+## 11-01-2022
 ### Added:
 Send Teams message on machine condition\
 Send Teams message on session condition\
