@@ -1,15 +1,25 @@
+10-03-2022
+==========
+## Added:
+### _AZ Store Azure Credentials_
+### _AZ Change machine disk type_
+### _AZ Show machine network information_
+### _AZ Machine power action_
+### _AZ Resize machine_
+### _AZ RDP to machine_
+### _AZ Set Boot Diagnostics_
+### _AZ Get console screenshot_
+<BR><BR>
 10-02-2022
 ==========
-### Added:
+## Added:
 ### _Send Slack message on Local Admin logon_
 <BR><BR>
-
 09-02-2022
 ==========
 ## Added:
 ### _Show and Optionally Remove Installed Programs_
 <BR><BR>
-
 08-02-2022
 ==========
 ## Added:
@@ -19,7 +29,6 @@
 ### _Show Message Dialogue_
 ### _Remote event log tailer_
 <BR><BR>
-
 11-01-2022
 ==========
 ## Added:
