@@ -5,13 +5,13 @@ IF THE TARGET MACHINE IS ON THIS SCRIPT CAN TRIGGER A RESTART!
 
 Note that costs of this VM once updated could be very different.
 
-Version: 1.3.12
+Version: 2.3.13
 
 Creator: Guy Leech
 
 Date Created: 11/09/2021 16:20:57
 
-Date Modified: 03/03/2022 11:24:29
+Date Modified: 03/17/2022 12:07:56
 
 Scripting Language: ps1
 

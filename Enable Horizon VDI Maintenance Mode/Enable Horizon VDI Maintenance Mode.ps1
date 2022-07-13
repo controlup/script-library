@@ -2,10 +2,10 @@
 $ErrorActionPreference = 'Stop'
 <#
     .SYNOPSIS
-    Refreshes a Linked Clone in Horizon
+    Puts a Horizon machine (Linked/full clones) into maintenance mode
 
     .DESCRIPTION
-    This script will issue the Refresh command for a Horizon Linked Clone.
+    This script will issue the enter_maintenancemode command for a Horizon Linked or full Clone.
 
     .NOTES
     This script requires the VMWare PowerCLI (minimum 6.5R1) module to be installed on the machine running the script.
@@ -18,12 +18,6 @@ $ErrorActionPreference = 'Stop'
 
     .PARAMETER strHVMachineName
     Name of the Horizon View machine. Passed from the ControlUp Console.
-
-    .PARAMETER strHVMachinePool
-    Name of the Horizon View machine Pool. Passed from the ControlUp Console.
-
-    .PARAMETER strHVMachineSource
-    Type of machine. Passed from ControlUp Console.
 
     .PARAMETER strHVConnectionServerFQDN
     Name of the Horizon View connection server. Passed from the ControlUp Console.
@@ -40,14 +34,10 @@ $ErrorActionPreference = 'Stop'
 
 # Name of the Horizon View machine. Passed from the ControlUp Console.
 [string]$strHVMachineName = $args[0].Split('.')[0]
-# Name of the Horizon View machine Pool. Passed from the ControlUp Console.
-[string]$strHVMachinePool = $args[1]
-# Type of machine. Passed from ControlUp Console.
-[string]$strHVMachineSource = $args[2]
 # Name of the Horizon View connection server. Passed from the ControlUp Console.
-[string]$strHVConnectionServerFQDN = $args[3]
+[string]$strHVConnectionServerFQDN = $args[1]
 # Ignore certificate errors for connecting the environment
-[string]$strIgnoreCertificateError = $args[4]
+[string]$strIgnoreCertificateError = $args[2]
 
 
 Function Out-CUConsole {
@@ -259,29 +249,26 @@ function Invoke-HorizonQuery {
     $Results
 }
 
-function Refresh-HorizonViewMachine {
-    param (   
+function enter-maintenancemode{
+    param (
         [parameter(Mandatory = $true,
-            HelpMessage = "The Horizon Pool (Id) the machine is in.")]
-        [object]$HVDesktopPool,
-        [parameter(Mandatory = $true,
-            HelpMessage = "The Horizon View services object.")]
-        [object]$HVServices,
+        HelpMessage = "ID of the Desktop Machine.")]
+        [VMware.Hv.MachineId]$HVMachineID,
         [Parameter(Mandatory = $true,
-            HelpMessage = "The DesktopRefresh specification.")]
-        [VMware.Hv.DesktopRefreshSpec]$DesktopRefreshSpec
+        HelpMessage = 'The Horizon View Services object')]
+        $HVServices
     )
+    # This performs the api call to remove a machine from a manual pool
     try {
-        $HVServices.Desktop.Desktop_Refresh($HVDesktopPool.Id, $DesktopRefreshSpec)
-        Out-CUConsole -Message "`nRefresh command has been sent to Horizon."
+        $HVServices.machine.Machine_EnterMaintenanceMode($HVMachineID)
     }
     catch {
-        Out-CUConsole -Message 'There was a problem Refreshing the machine.' -Exception $_
+        out-CUConsole -Message 'There was a problem putting the machine in maintenance mode.' -Exception $_
     }
 }
 
 # Test correct ammount of arguments was passed
-Test-ArgsCount -ArgsCount 5 -Reason 'The Console or Monitor may not be connected to the Horizon environment, please check this.'
+Test-ArgsCount -ArgsCount 3 -Reason 'The Console or Monitor may not be connected to the Horizon environment, please check this.'
 
 # Check if the machine is an Instant Clone. Recovery only works for Instant and Linked Clones
 if ($strHVMachineSource -ne 'vCenter (linked clone)') {
@@ -317,39 +304,12 @@ $objFilter = New-Object VMware.Hv.QueryFilterEquals -Property @{memberName = 'ba
 # Create query for getting Machine Id
 [System.Object]$objHVQuery = New-HorizonQueryDefinition -queryEntityType MachineSummaryView -Filter $objFilter
 # Run the query
-$objMachine = Invoke-HorizonQuery -HVServices $objHVServices -HVQueryService $objHVQueryService -QueryDefinition $objHVQuery | Select-Object Id
+$objMachine = Invoke-HorizonQuery -HVServices $objHVServices -HVQueryService $objHVQueryService -QueryDefinition $objHVQuery
 
-# Now get the pool
-# Create filter on Desktop Pool name
-$objFilter = New-Object VMware.Hv.QueryFilterEquals -Property @{memberName = 'desktopSummaryData.displayName'; value = $strHVMachinePool }
-# Create query for getting Desktop Pool Id
-[System.Object]$objHVQuery = New-HorizonQueryDefinition -queryEntityType DesktopSummaryView -Filter $objFilter
-# Run the query
-$objDesktopPool = Invoke-HorizonQuery -HVServices $objHVServices -HVQueryService $objHVQueryService -QueryDefinition $objHVQuery | Select-Object Id, DesktopSummaryData
 
-# Test Provisioning is enabled
 
-if($objDesktopPool.count -eq 0){
-    Out-CUConsole -Message "No Desktop pool with display name $strHVMachinePool found. Exiting script." -Warning
-    Exit 0
-}
+enter-maintenancemode -HVServices $objHVServices -HVMachineID ($objMachine.id)
 
-if (!($objDesktopPool.DesktopSummaryData.ProvisioningEnabled)) {
-    Out-CUConsole -Message "Provisioning for the pool $strHVMachinePool is not enabled, Refreshing the machine now would break it. Exiting script." -Warning
-    Exit 0
-}
-
-# Check we got the machine, if we do Refresh it.
-If ($objMachine.Id.Count -eq 0) {
-    Out-CUConsole -Message "The machine was not found, perhaps it has been removed." -Warning
-    Exit 0
-}
-else {
-    # Create Refresh specification
-    [object]$objRefreshSpec = New-Object VMware.Hv.DesktopRefreshSpec -Property @{machines = $objMachine.Id; logoffSetting = 'WAIT_FOR_LOGOFF' } 
-    # Issue the Refresh command.
-    Refresh-HorizonViewMachine -HVDesktopPool $objDesktopPool -HVServices $objHVServices -DesktopRefreshSpec $objRefreshSpec
-}
 
 # Disconnect from the Horizon View
 Disconnect-HorizonConnectionServer -HVConnectionServer $objHVConnectionServer

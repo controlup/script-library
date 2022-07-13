@@ -1,3 +1,15 @@
+13-07-2022
+==========
+## Added:
+### _Show Local WMI Activity_
+### _Find hardware device problems_
+### _Disable Horizon VDI Maintenance Mode_
+### _Enable Horizon VDI Maintenance Mode_
+
+### Removed:
+### _Disable Horizon View Maintenance Mode_
+### _Enable Horizon View Maintenance Mode_
+<BR><BR>
 10-03-2022
 ==========
 ## Added:
@@ -53,3 +65,7 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+

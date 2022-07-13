@@ -11,13 +11,13 @@ Description: Change the type of disk assigned to the Azure VM. Valid disk types 
 
 Note that costs of this VM once updated could be very different.
 
-Version: 1.3.4
+Version: 2.3.5
 
 Creator: Guy Leech
 
 Date Created: 01/19/2022 18:47:57
 
-Date Modified: 02/22/2022 14:59:56
+Date Modified: 03/17/2022 12:07:37
 
 Scripting Language: ps1
 

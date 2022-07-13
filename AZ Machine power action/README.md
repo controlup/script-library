@@ -3,13 +3,13 @@
 Description: Perform a power action.
 A wait time of zero will not wait for the action to complete.
 
-Version: 1.7.13
+Version: 2.7.14
 
 Creator: Guy Leech
 
 Date Created: 11/25/2021 17:05:22
 
-Date Modified: 03/07/2022 12:01:57
+Date Modified: 03/17/2022 12:05:47
 
 Scripting Language: ps1
 

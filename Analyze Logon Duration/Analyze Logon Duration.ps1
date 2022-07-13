@@ -1,20 +1,20 @@
 ﻿#Requires -version 3
 
 <#
- 	.SYNOPSIS
+ .SYNOPSIS
         An advanced function that gives you a break-down analysis of a user's most recent logon on the machine.
-
+		
     .DESCRIPTION
         This function gives a detailed report on the logon process and its phases.
         Each phase documented have a column for duration in seconds, start time, end time
         and gap delay which is the time that passed between the end of one phase
         and the start of the one that comes after.
-
+		
 	.PARAMETER  DomainUser
 		The user to analyze their logon duration. Must be in the format %DOMAIN%\%USERNAME%
 
 	.PARAMETER  SessionID
-		The Session ID of the user the function reports for.
+		The Session ID of the user the function reports for. 
 
 	.PARAMETER  SessionName
         The session name of the user. Usually formatted like RDP-Tcp#2
@@ -36,14 +36,12 @@
 
     .PARAMETER  PrepMachine
 		Sets event logs to the defined size (in MB) and enables all pre-req's for ALD
-
+    
     .NOTES
-        The HDX duration is a new metric that requires changes to the ICA protocol.
+        The HDX duration is a new metric that requires changes to the ICA protocol. 
         This means that, if the new version of the client is not being used, the metrics returned are NULL.
         It may take a few seconds until the HDX duration is reported and available at the Delivery Controller.
-
-Known issue: Dynamic Environment Manager (DEM) can cause slowdowns but is not always identified correctly as the cause
-
+		
     .LINK
         For more information refer to:
             https://www.controlup.com
@@ -55,7 +53,7 @@ Known issue: Dynamic Environment Manager (DEM) can cause slowdowns but is not al
 
     .EXAMPLE
         C:\PS> Get-LogonDurationAnalysis -DomainUser BOTTHEORY\ttye
-
+		
 		Gets analysis of the logon process for the user 'Rick' in the current domain.
 #>
 [CmdletBinding(DefaultParameterSetName='Online')]
@@ -74,10 +72,9 @@ param (
     )
 
 ## All parameters are not mandatory to allow for offline analysis
-## Last modified 2323 GMT 2022/01/31 @guyrleech
+## Last modified 1209 GMT 2022/04/18 @guyrleech
 
 ## A mechanism to allow script use offline with saved event logs
-##$global = [hashtable]::new()
 [hashtable]$global:wmiactivityParams = @{ 'ProviderName' = 'Microsoft-Windows-WMI-Activity' }
 [hashtable]$global:terminalServicesParams = @{ 'ProviderName' = 'Microsoft-Windows-TerminalServices-LocalSessionManager' }
 [hashtable]$global:securityParams = @{ 'ProviderName' = 'Microsoft-Windows-Security-Auditing' }
@@ -94,7 +91,7 @@ param (
 [hashtable]$global:appReadinessParams = @{ 'ProviderName' = 'Microsoft-Windows-AppReadiness' }
 [hashtable]$global:FsLogixParams = @{ 'ProviderName' = 'Microsoft-FSLogix-Apps' }
 [int]$global:windowsMajorVersion = [System.Environment]::OSVersion.Version.Major
-$currentVersionKey = Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion"
+$currentVersionKey = Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion" -ErrorAction SilentlyContinue
 [string]$global:WindowsOSCaption     = $currentVersionKey | Select-Object -ExpandProperty ProductName  -ErrorAction SilentlyContinue
 [string]$global:WindowsOSReleaseId   = $currentVersionKey | Select-Object -ExpandProperty ReleaseId    -ErrorAction SilentlyContinue
 [string]$global:WindowsOSBuildNumber = $currentVersionKey | Select-Object -ExpandProperty CurrentBuild -ErrorAction SilentlyContinue
@@ -106,7 +103,7 @@ $script:warnings = New-Object -TypeName System.Collections.Generic.List[string]
 if (-not(Test-Path "$env:Windir\Temp\ALD\")) { New-Item -Path "$env:Windir\Temp\ALD" -ItemType Directory | Out-Null}
 
 ## Check to see if we are saving the WMI Log file TTYE
-$WMILogDirectory = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM' | Select-Object -ExpandProperty "Logging Directory" -ErrorAction SilentlyContinue
+$WMILogDirectory = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "Logging Directory" -ErrorAction SilentlyContinue
 
 $global:WMILogFile = Join-Path -Path $WMILogDirectory -ChildPath 'Framework.log'
 Write-Debug "WMILogDirectory = $WMILogDirectory"
@@ -138,7 +135,7 @@ $LSADefinitions = @'
             (out UInt64 LogonSessionCount, out IntPtr LogonSessionList);
 
     [DllImport("Secur32.dll", SetLastError = false)]
-    public static extern uint LsaGetLogonSessionData(IntPtr luid,
+    public static extern uint LsaGetLogonSessionData(IntPtr luid, 
         out IntPtr ppLogonSessionData);
 
     [StructLayout(LayoutKind.Sequential)]
@@ -175,23 +172,23 @@ $LSADefinitions = @'
 
     public enum SECURITY_LOGON_TYPE : uint
     {
-        Interactive = 2,        //The security principal is logging on
+        Interactive = 2,        //The security principal is logging on 
                                 //interactively.
-        Network,                //The security principal is logging using a
+        Network,                //The security principal is logging using a 
                                 //network.
         Batch,                  //The logon is for a batch process.
         Service,                //The logon is for a service account.
         Proxy,                  //Not supported.
         Unlock,                 //The logon is an attempt to unlock a workstation.
-        NetworkCleartext,       //The logon is a network logon with cleartext
+        NetworkCleartext,       //The logon is a network logon with cleartext 
                                 //credentials.
         NewCredentials,         //Allows the caller to clone its current token and
                                 //specify new credentials for outbound connections.
-        RemoteInteractive,      //A terminal server session that is both remote
+        RemoteInteractive,      //A terminal server session that is both remote 
                                 //and interactive.
-        CachedInteractive,      //Attempt to use the cached credentials without
+        CachedInteractive,      //Attempt to use the cached credentials without 
                                 //going out across the network.
-        CachedRemoteInteractive,// Same as RemoteInteractive, except used
+        CachedRemoteInteractive,// Same as RemoteInteractive, except used 
                                 // internally for auditing purposes.
         CachedUnlock            // The logon is an attempt to unlock a workstation.
     }
@@ -207,7 +204,7 @@ $AuditDefinitions = @'
     /// https://msdn.microsoft.com/en-us/library/windows/desktop/aa375702(v=vs.85).aspx
     [DllImport("advapi32.dll", SetLastError = true)]
     public static extern bool AuditQuerySystemPolicy(Guid pSubCategoryGuids, uint PolicyCount, out IntPtr ppAuditPolicy);
-
+        
     /// The AuditQuerySystemPolicy function retrieves system audit policy for one or more audit-policy subcategories.
     /// https://msdn.microsoft.com/en-us/library/windows/desktop/aa375702(v=vs.85).aspx
     [DllImport("advapi32.dll", SetLastError = true)]
@@ -378,7 +375,7 @@ Function Get-SystemPolicy( [Guid]$subCategoryGuid)
         $buffer = [IntPtr]::Zero
     }
 }
-
+        
 Function Set-SystemPolicy( [Guid]$subCategoryGuid , [Guid]$categoryGuid  )
 {
     [bool]$result = $false
@@ -412,7 +409,7 @@ Function Test-AuditSetting( [string]$GUID , [string]$name , [ref]$setting )
     if( $auditEvent )
     {
         $setting.Value = $auditEvent.AuditingInformation.ToString()
-        ( $auditEvent.AuditingInformation -band [Win32.Advapi32+AUDIT_POLICY_INFORMATION_TYPE]::Success ) -eq [Win32.Advapi32+AUDIT_POLICY_INFORMATION_TYPE]::Success
+        ( $auditEvent.AuditingInformation -band [Win32.Advapi32+AUDIT_POLICY_INFORMATION_TYPE]::Success ) -eq [Win32.Advapi32+AUDIT_POLICY_INFORMATION_TYPE]::Success 
     }
     else
     {
@@ -423,7 +420,7 @@ Function Test-AuditSetting( [string]$GUID , [string]$name , [ref]$setting )
 Function Test-AuditSettings
 {
     [CmdletBinding()]
-
+              
     [hashtable]$requiredAuditEvents = @{
         'Process Creation'    = '0cce922b-69ae-11d9-bed3-505054503030'
         'Process Termination' = '0cce922c-69ae-11d9-bed3-505054503030'
@@ -520,17 +517,17 @@ function Get-LogonDurationAnalysis {
         [Alias('User')]
         [String]
         $Username = $env:USERNAME,
-
+        
         [Parameter(Position=1, Mandatory=$false)]
         [Alias('Domain')]
         [String]
         $UserDomain = $env:USERDOMAIN,
-
+        
         [Parameter(Mandatory=$false)]
         [Alias('HDX')]
         [int]
         $SessionID,
-
+        
         [Parameter(Mandatory=$false)]
         [decimal]
         $CUDesktopLoadTime,
@@ -548,7 +545,7 @@ function Get-LogonDurationAnalysis {
 
         ## array indexes for event log property fields to make retrieval more meaningful
         ## Event id 4688 (process start)
-
+  
         Set-Variable -Name SubjectUserName   -Value 1  -Option ReadOnly
         Set-Variable -Name SubjectDomainName -Value 2  -Option ReadOnly
         Set-Variable -Name SubjectLogonId    -Value 3  -Option ReadOnly
@@ -560,7 +557,7 @@ function Get-LogonDurationAnalysis {
         Set-Variable -Name TargetDomainName  -Value 11 -Option ReadOnly
         Set-Variable -Name TargetLogonId     -Value 12 -Option ReadOnly
         Set-Variable -Name ParentProcessName -Value 13 -Option ReadOnly
-
+        
         [string]$auditingWarning = $null
         if( ! $offline )
         {
@@ -581,7 +578,7 @@ function Get-LogonDurationAnalysis {
             }
         }
         Write-Debug "Process command line auditing enabled is $SearchCommandLine"
-
+        
         ## Event id 4689 (process stop)
         Set-Variable -Name ProcessStopSid -Value 0 -Option ReadOnly
         Set-Variable -Name ProcessIdStop  -Value 5 -Option ReadOnly
@@ -589,26 +586,26 @@ function Get-LogonDurationAnalysis {
 
         # Generate a new XPath string
         function New-XPath {
-            [CmdletBinding(DefaultParameterSetName="None")]
+            [CmdletBinding(DefaultParameterSetName="None")]  
             param(
                 [ValidateNotNullOrEmpty()]
                 [array]
                 $EventId,
-
+        
                 [Parameter(ParameterSetName='DateTime',Mandatory=$true)]
                 [DateTime]
                 $FromDate,
-
+        
                 [Parameter(ParameterSetName='DateTime')]
                 [DateTime]
                 $ToDate,
-
+        
                 [hashtable]
                 $SecurityData,
                 [Alias('Data')]
-
+        
                 $EventData,
-
+        
                 [hashtable]
                 $UserData ,
 
@@ -659,7 +656,7 @@ function Get-LogonDurationAnalysis {
                             [void]$sb.Append(" and (Data=`"$($x)`"")
                         }
                         $counter++
-
+                        
                     }
                     [void]$sb.Append(")]]")
                 }
@@ -673,7 +670,7 @@ function Get-LogonDurationAnalysis {
             Write-Verbose "Generated XPath: $($sb.ToString())"
             $sb.ToString()
         }
-
+        
         # Get an event from the Windows Eventlog using specified parameters
         function Get-PhaseEventFromCache {
             [CmdletBinding(DefaultParameterSetName="None")]
@@ -691,7 +688,7 @@ function Get-LogonDurationAnalysis {
 
                 [string]$source = 'Windows'
             )
-
+            
             if( ! $startEvent )
             {
                 Write-Error "Get-PhaseEventFromCache - no start event"
@@ -713,7 +710,7 @@ function Get-LogonDurationAnalysis {
                 }
                 else {
                     $Duration = New-TimeSpan -Start $StartEvent.TimeCreated -End $EndEvent.TimeCreated
-                    $EventInfo.EndTime = $EndEvent.TimeCreated
+                    $EventInfo.EndTime = $EndEvent.TimeCreated 
                 }
             }
             $EventInfo.Source = $source
@@ -731,7 +728,7 @@ function Get-LogonDurationAnalysis {
                 $PSObject
             }
         }
-
+        
         function Get-EventLogEnabledStatus {
             [CmdletBinding(DefaultParameterSetName="None")]
             param (
@@ -756,11 +753,11 @@ function Get-LogonDurationAnalysis {
                 else
                 {
                     $status = "Unable to determine if event log `"$eventLog`" is enabled"
-                }
+                }                        
             }
             $status
         }
-
+            
         # Get an event from the Windows Eventlog using specified parameters
         function Get-PhaseEvent {
             [CmdletBinding(DefaultParameterSetName="None")]
@@ -768,7 +765,7 @@ function Get-LogonDurationAnalysis {
                 [AllowNull()]
                 [String]
                 $StartEventFile ,
-
+                
                 [AllowNull()]
                 [String]
                 $EndEventFile ,
@@ -776,32 +773,32 @@ function Get-LogonDurationAnalysis {
                 [ValidateNotNullOrEmpty()]
                 [String]
                 $PhaseName,
-
+            
                 [ValidateNotNullOrEmpty()]
                 [String]
                 $StartProvider,
-
+            
                 [ValidateNotNullOrEmpty()]
                 [String]
                 $EndProvider,
-
+            
                 [ValidateNotNullOrEmpty()]
                 [String]
                 $StartXPath,
-
+            
                 [ValidateNotNullOrEmpty()]
                 [String]
                 $EndXPath,
-
+            
                 [string]
                 $eventLog ,
 
                 [System.Diagnostics.Eventing.Reader.EventLogRecord]
                 $StartEvent,
-
+            
                 [System.Diagnostics.Eventing.Reader.EventLogRecord]
                 $EndEvent,
-
+            
                 [int]
                 $CUAddition ,
 
@@ -831,7 +828,7 @@ function Get-LogonDurationAnalysis {
                         [DateTime]$EndEvent = $StartEvent.TimeCreated.AddSeconds($CUAddition)
                     }
                     else {
-                        $EndEvent = Get-WinEvent -Oldest -MaxEvents 1 @endParams -FilterXPath $EndXPath
+                        $EndEvent = Get-WinEvent -Oldest -MaxEvents 1 @endParams -FilterXPath $EndXPath 
                     }
                 }
             }
@@ -859,7 +856,7 @@ function Get-LogonDurationAnalysis {
                     }
                     else {
                         $Duration = New-TimeSpan -Start $StartEvent.TimeCreated -End $EndEvent.TimeCreated
-                        $EventInfo.EndTime = $EndEvent.TimeCreated
+                        $EventInfo.EndTime = $EndEvent.TimeCreated 
                     }
                 }
                 $EventInfo.Source = $source
@@ -894,7 +891,7 @@ function Get-LogonDurationAnalysis {
                 if( $clientStartupJsonFile )
                 {
                     $clientStartup = Get-Content -Path $clientStartupJsonFile -ErrorAction SilentlyContinue | ConvertFrom-Json
-                }
+                } 
                 if( -Not $clientStartup )
                 {
                     Write-Warning -Message "Unable to get offline Citrix data from $clientStartupJsonFile"
@@ -910,7 +907,7 @@ function Get-LogonDurationAnalysis {
                 }
                 elseif( $dumpForOffline -and $clientStartupJsonFile )
                 {
-                    $clientStartup | ConvertTo-Json | Out-File -FilePath $clientStartupJsonFile
+                    $clientStartup | ConvertTo-Json -Depth 99 | Out-File -FilePath $clientStartupJsonFile
                 }
             }
 
@@ -966,14 +963,14 @@ function Get-LogonDurationAnalysis {
 
                 [datetime]$clicktime = $clientstartup.WfIcaTimestamp.AddMilliseconds($ClientStartup.SCCD).AddMilliseconds(-$ClientStartup.SCD)
                 $returning = New-Object -TypeName System.Collections.Generic.List[psobject]
-                $returning.Add(
+                $returning.Add( 
                     [pscustomobject]@{
                             Source = 'Citrix'
                             PhaseName = 'App/Desktop Icon Clicked until ICA File Downloaded'
                             StartTime = $clickTime
                             EndTime   = $clientStartup.WfIcaTimestamp
                             Duration  = ($ClientStartup.SCD - $ClientStartup.SCCD) / 1000 } )
-                $returning.Add(
+                $returning.Add( 
                     [pscustomobject]@{
                             Source = 'Citrix'
                             PhaseName = 'ICA File Opened until Remote Session Commences'
@@ -1019,15 +1016,15 @@ function Get-LogonDurationAnalysis {
             [Parameter(Mandatory=$true)]
             [string]
             $UserName,
-
+            
             [Parameter(Mandatory=$true)]
             [string]
             $UserDomain,
-
+            
             [Parameter(Mandatory=$true)]
             [DateTime]
             $Start,
-
+            
             [Parameter(Mandatory=$true)]
             [DateTime]
             $End
@@ -1045,12 +1042,12 @@ function Get-LogonDurationAnalysis {
                 $taskEnd = $logontaskEvents | Where-Object { $_.Id -eq 201 -and $taskStart.Properties[2].Value -eq $_.Properties[1].Value }  ## Correlate task instance id
                 if( $taskEnd )
                 {
-                    New-Object -TypeName psobject -Property @{
+                    New-Object -TypeName psobject -Property @{ 
                             'TaskName'="$($TaskEnd.Properties[0].Value)"
                             'ActionName'="$($TaskEnd.Properties[2].Value)"
                             'Duration'=$taskEnd.TimeCreated - $taskStart.TimeCreated
                         }
-                }
+                } 
             }
         }
 
@@ -1060,7 +1057,7 @@ function Get-LogonDurationAnalysis {
             [Parameter(Mandatory=$true)]
             [DateTime]
             $Start,
-
+            
             [Parameter(Mandatory=$true)]
             [DateTime]
             $End,
@@ -1093,7 +1090,7 @@ function Get-LogonDurationAnalysis {
             if (-not(Test-Path HKU:\)) {
                 New-PSDrive -PSProvider Registry -Name HKU -Root HKEY_USERS | out-null
             }
-
+            
             $UserPrinterGUIDs = [System.Collections.ArrayList]@()
             [array]$PrinterClientSidePortGUIDs = @()
 
@@ -1113,7 +1110,7 @@ function Get-LogonDurationAnalysis {
                         Write-Debug "$($ClientSidePortGUID.printerPath)"
                     }
                 }
-
+    
             }
             [hashtable]$printerParams = $global:printServiceParams.Clone() +  @{ StartTime = $start ; EndTime = $end ; Id = 300,306}
             [array]$printerTaskEvents = @( Get-WinEvent -FilterHashtable $printerParams -ErrorAction SilentlyContinue )
@@ -1143,7 +1140,7 @@ function Get-LogonDurationAnalysis {
                                 if ($SearchCommandLine) {
                                     Write-Verbose "We can search the command line for the print driver install events"
                                     #pull driver installation time -- requires 2012R2+ and command line capture policy enabled.
-                                    $printDriverInstallationStartEvent = ($securityEvents|Where-Object { $_.Id -eq 4688 -and $_.properties[$NewProcessName].Value -eq 'C:\Windows\System32\drvinst.exe' -and $_.properties[$CommandLine].Value -like "*$printerGUIDValue*" })
+                                    $printDriverInstallationStartEvent = ($securityEvents|Where-Object { $_.Id -eq 4688 -and $_.properties[$NewProcessName].Value -eq 'C:\Windows\System32\drvinst.exe' -and $_.properties[$CommandLine].Value -like "*$printerGUIDValue*" }) 
                                     $printDriverInstallationEndEvent = ($securityEvents|Where-Object { $_.Id -eq 4689 -and $_.properties[$ProcessIdStop].Value -eq $printDriverInstallationStartEvent.Properties[$ProcessIdNew].Value -and $_.properties[$processName].Value -eq 'C:\Windows\System32\drvinst.exe'})
                                     Write-Verbose "New-TimeSpan -Start $($printDriverInstallationStartEvent.TimeCreated) -End $($printDriverInstallationEndEvent.TimeCreated)"
                                     $Duration = New-TimeSpan -Start $($printDriverInstallationStartEvent.TimeCreated) -End $($printDriverInstallationEndEvent.TimeCreated)
@@ -1156,7 +1153,7 @@ function Get-LogonDurationAnalysis {
                                     $AllPrinterEvents +=  New-Object -TypeName PSObject -Property $EventInfo
                                     Write-Debug "Post event creation"
                                     $PSObject = New-Object -TypeName PSObject -Property $EventInfo
-
+        
                                     if ($EventInfo.Duration) {
                                         Write-Verbose "Adding driver phase to Output"
                                         $Script:Output.Add( $PSObject )
@@ -1188,7 +1185,7 @@ function Get-LogonDurationAnalysis {
                                             if ($SearchCommandLine) {
                                                 Write-Verbose "We can search the command line for the print driver install events"
                                                 #pull driver installation time -- requires 2012R2+ and command line capture policy enabled.
-                                                $printDriverInstallationStartEvent = ($securityEvents|Where-Object { $_.Id -eq 4688 -and $_.properties[$NewProcessName].Value -eq 'C:\Windows\System32\drvinst.exe' -and $_.properties[$CommandLine].Value -like "*$printerGUIDValue*" })
+                                                $printDriverInstallationStartEvent = ($securityEvents|Where-Object { $_.Id -eq 4688 -and $_.properties[$NewProcessName].Value -eq 'C:\Windows\System32\drvinst.exe' -and $_.properties[$CommandLine].Value -like "*$printerGUIDValue*" }) 
                                                 $printDriverInstallationEndEvent = ($securityEvents|Where-Object { $_.Id -eq 4689 -and $_.properties[$ProcessIdStop].Value -eq $printDriverInstallationStartEvent.Properties[$ProcessIdNew].Value -and $_.properties[$processName].Value -eq 'C:\Windows\System32\drvinst.exe'})
                                                 Write-Verbose "New-TimeSpan -Start $($printDriverInstallationStartEvent.TimeCreated) -End $($printDriverInstallationEndEvent.TimeCreated)"
                                                 $Duration = New-TimeSpan -Start $($printDriverInstallationStartEvent.TimeCreated) -End $($printDriverInstallationEndEvent.TimeCreated)
@@ -1201,7 +1198,7 @@ function Get-LogonDurationAnalysis {
                                                 $AllPrinterEvents +=  New-Object -TypeName PSObject -Property $EventInfo
                                                 Write-Verbose "Post event creation"
                                                 $PSObject = New-Object -TypeName PSObject -Property $EventInfo
-
+        
                                                 if ($EventInfo.Duration) {
                                                     Write-Verbose "Adding driver phase to Output"
                                                     $Script:Output.Add( $PSObject )
@@ -1232,7 +1229,7 @@ function Get-LogonDurationAnalysis {
             foreach ($printer in $listOfPrinters) {
                 $phaseName = "    Printer: $($printer.Name)"
                 Write-Verbose "Phase: $phaseName"
-
+                
                 #capture each event 300 and 306 for the target printer.  There are further events 312 and 314 (add forms, deleting forms) that
                 #occur for direct connection printers that is difficult to capture because the events lack targets, you can only do it via
                 #date stamps.  Relying on that would be risky if there were concurrent logons, so we'll rely on the interim delay.
@@ -1246,12 +1243,12 @@ function Get-LogonDurationAnalysis {
                     }
                     $Events.Add( $FoundPrinterEvent)
                     Write-Verbose "Found $($printer.name)"
-
+                    
                 }
                 write-Verbose "Events: $($events.count) for $($printer.name)" #this should be more than 1
                 if ($events.count -gt 1) {
                     if( $Duration = New-TimeSpan -Start $($Events[-1].TimeCreated) -End $($Events[0].TimeCreated) )
-                    {
+                    {             
                         $eventInfo = [pscustomobject]@{
                             'Source' = 'Printers'
                             'PhaseName' = $PhaseName
@@ -1285,14 +1282,14 @@ function Get-LogonDurationAnalysis {
                 Write-Debug "No printer events found for client $ClientName"
             }
         }
-
+        
         function Get-FSLogixProfileEvents {
             [CmdletBinding()]
             param(
             [Parameter(Mandatory=$true)]
             [DateTime]
             $Start,
-
+            
             [Parameter(Mandatory=$true)]
             [DateTime]
             $End,
@@ -1300,7 +1297,7 @@ function Get-LogonDurationAnalysis {
             [Parameter(Mandatory=$true)]
             [String]
             $Username,
-
+            
             [Parameter(Mandatory=$true)]
             [TimeSpan]
             $Offset
@@ -1336,7 +1333,7 @@ function Get-LogonDurationAnalysis {
                 [string]$FSLogixLogDir = $null
 
                 try {
-                    $FSLogixLogDir = Get-ItemProperty -Path HKLM:\SOFTWARE\FSLogix\Logging | Select-Object -ExpandProperty Logdir -ErrorAction SilentlyContinue
+                    $FSLogixLogDir = Get-ItemProperty -Path HKLM:\SOFTWARE\FSLogix\Logging  -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Logdir -ErrorAction SilentlyContinue
                 }
                 Catch {
                     #LogDir registry value not found. Set to default:
@@ -1363,7 +1360,7 @@ function Get-LogonDurationAnalysis {
                     if ($profileLog -and $profileLog -is [array] -and $profileLog.count -ge 2) { Write-Verbose "Multiple FSLogix Profile Log Files found!" }
                     foreach ($FSlogixLogFile in $profileLog) {
                         Write-Verbose "Found Profile Log file: $($FSlogixLogFile.FullName)"
-
+                    
                         $FSLogixLogFileContents = Get-Content -Path "$($FSlogixLogFile.fullname)"
 
                         $FSLogixLogObject = New-Object -TypeName System.Collections.Generic.List[psobject]
@@ -1371,8 +1368,8 @@ function Get-LogonDurationAnalysis {
                         #Create powershell object out of the FSLogix Log.
                         $FSLogixLogFileContents | . { Process {
                             $line = $_
-
-                            ## [14:08:54.654][tid:00000bbc.000007e0][INFO]           ===== Begin Session: Logon
+                            
+                            ## [14:08:54.654][tid:00000bbc.000007e0][INFO]           ===== Begin Session: Logon 
                             if( $line -match '^\[([^\]]+)\]\[([^\]]+)\]\[([^\]]+)\]\s*(.+)' `
                                 -and ( $fslogixTime = "$($matches[1]) $date" -as [datetime] ) `
                                 -and $fslogixTime -ge $start -and $fslogixTime -le $end ) {
@@ -1408,7 +1405,7 @@ function Get-LogonDurationAnalysis {
 
             if ( ! $SessionEvents -or ! $SessionEvents.message -or $SessionEvents.message.count -le 1 -or $profileLog -eq $null) {
                 #TTYE - It's been noticed that if TimeZone settings apply during the logon the timestamps in the log file
-                #will be modified to reflect that, this
+                #will be modified to reflect that, this 
                 Write-Verbose "FSLogix: Unable to find start or end event in the log file."
                 Write-Verbose "FSLogix: Will attempt to use WinLogon to track this phase"
                 if ($logon.OSReleaseId -eq $null -or $logon.OSReleaseId -gt 1607) {
@@ -1498,7 +1495,7 @@ function Get-LogonDurationAnalysis {
                     }
                 }
             }
-
+ 
 
         function Get-AppVolumeEvents {
             [CmdletBinding()]
@@ -1506,12 +1503,12 @@ function Get-LogonDurationAnalysis {
             [Parameter(Mandatory=$true)]
             [DateTime]
             $Start,
-
+            
             [Parameter(Mandatory=$true)]
             [DateTime]
             $End
             )
-
+            
             ## event log filters for using online or offline
             [hashtable]$onlineOfflineFilter = @{}
 
@@ -1527,29 +1524,29 @@ function Get-LogonDurationAnalysis {
             if( ! $global:appVolumesVersion -and ! $offline -and ( $appvolumesKey = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' -Name DisplayName -ErrorAction SilentlyContinue | Where-Object DisplayName -match 'App Volumes Agent' | Select-Object -ExpandProperty PSPath ) ) {
                 $global:appVolumesVersion = Get-ItemProperty -Path $appvolumesKey -Name DisplayVersion | Sort-Object -Descending -Property DisplayVersion | Select-object -ExpandProperty DisplayVersion -First 1
             }
-
+            
             if ($global:appVolumesVersion -lt [version]'2.12') {
                 $sharedVariables.warnings.Add( "Untested AppVolumes version detected: $global:appVolumesVersion" )
             }
 
             Write-Debug "AppVolumes: AppVolumes version detected: $global:appVolumesVersion"
-
+            
             <#
             https://docs.vmware.com/en/VMware-App-Volumes/2.18/com.vmware.appvolumes.admin.doc/GUID-8CB3E73C-2392-40A2-A19A-825D8D487D08.html
-            WaitForFirstVolumeOnly
-            REG_DWORD
-            Defined in seconds, only hold logon for the first volume. After the first volume is complete, the remaining are handled in the background,
-            and the logon process is allowed to proceed. To wait for all volumes to load before releasing the logon process,
+            WaitForFirstVolumeOnly	
+            REG_DWORD	
+            Defined in seconds, only hold logon for the first volume. After the first volume is complete, the remaining are handled in the background, 
+            and the logon process is allowed to proceed. To wait for all volumes to load before releasing the logon process, 
             set this value to 0. The default is 1.
 
             From the description this will block the logon process as it will wait for all volumes to attach. We'll track this and change how we measure
             The AppVolumes - VolumeAttach stage.
             #>
-
+            
             if( ! $offline )
             {
                 try {
-                    if( ( Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\svservice\Parameters | Select-Object -ExpandProperty WaitForFirstVolumeOnly -ErrorAction SilentlyContinue ) -eq  0 ) {
+                    if( ( Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\svservice\Parameters -ErrorAction SilentlyContinue | Select-Object -ExpandProperty WaitForFirstVolumeOnly -ErrorAction SilentlyContinue ) -eq  0 ) {
                        $global:WaitForFirstVolumeOnly = $false
                     }
                 } catch {
@@ -1567,7 +1564,7 @@ function Get-LogonDurationAnalysis {
             Determines if logon is ASYNC or synchronously. We'll do that by looking at event 218 and see if the last line in the message is 'ASYNC'. If
             it's not then we'll assume we're running synchonsouly.
             #>
-
+            
             [bool]$Async = $false
             if( ( Get-WinEvent -FilterHashtable ( @{ ProviderName='svservice'; StartTime=$Start; Id=218 } + $onlineOfflineFilter ) -ErrorAction SilentlyContinue | Where-Object { $_.properties -and $_.properties[1].value -cmatch 'ASYNC$' } ) ) {
                 $Async=$true
@@ -1575,13 +1572,13 @@ function Get-LogonDurationAnalysis {
             Write-Debug "AppVolumes: AppVolumes Mount Mode Async? : $Async"
 
             if (Test-Path -Path $appVolumesLogFile ) {
-
+            
                 ## Step 1, Parse the log file to a sortable, searchable object.
                 [int]$DEBUGNumberOfLines = 0
 
                 $StreamStartTime = Get-Date
-                $timeZone = Get-TimeZone
-
+                $timeZone = [System.TimeZoneInfo]::Local
+                
                 $svserviceLogObject = @( Get-Content -Path $appVolumesLogFile | . { Process {
                     ## [2020-01-10 13:43:23.383 UTC] [svservice:P7776:T1108] Service path: C:\Program Files (x86)\CloudVolumes\Agent\svservice.exe
                     ## Split into 3 - the first two [ ] delimited sections and then the rest
@@ -1596,7 +1593,7 @@ function Get-LogonDurationAnalysis {
                             'Message' = $Matches[3]
                         }
                     }
-
+                    
                 }})
 
                 $StreamEndTime = Get-Date
@@ -1606,7 +1603,7 @@ function Get-LogonDurationAnalysis {
                 ## Step 2, Create an object with the following relationship --> AppName, DiskGUID, AppGUID
                 ## sort-Object log by relevant events
                 [System.Collections.Generic.List[psobject]]$AppVolumesLogonEvents = $svserviceLogObject | Where-Object {($_.Time -ge $Start) -and ($_.Time -le $End)}
-
+                
                 ## Get Mapped in AppVolumes from the Event Logs
                 $AppList = New-Object -TypeName System.Collections.Generic.List[psobject]
                 Get-WinEvent -FilterHashtable ( @{ 'ProviderName' = 'svservice' ; Id = 218 ; StartTime = $start ; EndTime = $end } + $onlineOfflineFilter ) -ErrorAction SilentlyContinue | . { Process { $_.properties[1].Value -split  "`r`n" } } | . { Process {
@@ -1615,8 +1612,8 @@ function Get-LogonDurationAnalysis {
                         $AppList.Add( [pscustomobject]@{
                             'MountType' = $matches[1]
                             'AppPath'   = $matches[2]
-                            'AppGUID'   = $matches[3]
-                            'AppName'   = $matches[2].Split( '\' )[-1].Replace( '.vmdk' , '' ).Replace( '!20!' , ' ').Replace( '!2B!' , '+' ).Replace( '!5C!' , '\' )
+                            'AppGUID'   = $matches[3] 
+                            'AppName'   = $matches[2].Split( '\' )[-1].Replace( '.vmdk' , '' ).Replace( '!20!' , ' ').Replace( '!2B!' , '+' ).Replace( '!5C!' , '\' )  
                             'AppId'     = $null } )
                     }
                     elseif( $_ -match 'ENABLE-APP;({.+});({.+})' ) ## ENABLE-APP;{65950e61-0304-45a6-b354-f3b26ced3f64};{b2a70e3f-90ef-45b5-87a0-b7d07402a977}
@@ -1695,7 +1692,7 @@ function Get-LogonDurationAnalysis {
                     #get all Windows Application events for that specific AppVol Object
                     foreach ($AppVolWinEvent in $AppVolWinEvents) {
                         if (($AppVolWinEvent.message -like "*$($AppVolGUIDMappings[$i].DiskGUID)*") -or ($AppVolWinEvent.message -like "*$($AppVolGUIDMappings[$i].AppDevice)*") -or ($AppVolWinEvent.message -like "*$($AppVolGUIDMappings[$i].AppGUID)*") -or ($AppVolWinEvent.Message -like "*$($AppVolGUIDMappings[$i].AppId)*")){
-                            $perAppTimes.Add( [pscustomobject]@{
+                            $perAppTimes.Add( [pscustomobject]@{ 
                                 'Time' = $AppVolWinEvent.TimeCreated
                                 'Message' = $AppVolWinEvent.Message
                                 'ID' = $AppVolWinEvent.Id
@@ -1711,7 +1708,7 @@ function Get-LogonDurationAnalysis {
                     }
                     #Get svservice.log events
                     $svserviceLogObject | Where-Object { $_.Time -le $End -and $_.Time -ge $Start -and ( $_.message -like "*$($AppVolGUIDMappings[$i].DiskGUID)*" -or $_.message -like "*$($AppVolGUIDMappings[$i].AppDevice)*" -or $_.message -like "*$($AppVolGUIDMappings[$i].AppGUID)*" -or ( $AppVolGUIDMappings[$i].AppId -and $_.Message -like "*$($AppVolGUIDMappings[$i].AppId)*")) } | . { Process {
-                        $perAppTimes.Add( [pscustomobject]@{
+                        $perAppTimes.Add( [pscustomobject]@{ 
                             'Time' = $_.Time
                             'ID' = $_.ProcessInfo
                             'Message' = $_.Message
@@ -1762,7 +1759,7 @@ function Get-LogonDurationAnalysis {
                             'EventRecord' =  $perAppEvent }
                     }
                 }})
-
+                
                 #measure appvolumes logon blocking event (Wait for volume(s) to mount) -- start (eventID 210) and end event "227" in - last 227 event if WaitForVolumes is false/first if true
                 if( $startRecord = $AppVolWinEvents.Where( { $_.Id -eq "210" -and $_.Properties[1].Value -match "Session ID:\s*$SessionId$" } , 1 ) ) {
                     if ($global:WaitForFirstVolumeOnly) {
@@ -1775,7 +1772,7 @@ function Get-LogonDurationAnalysis {
                         if( $Duration = New-TimeSpan -Start $StartRecord.TimeCreated -End $EndRecord.TimeCreated -ErrorAction SilentlyContinue )
                         {
                             ## as this is a blocking phase we add to main output
-                            $Script:output.Add( [pscustomobject]@{
+                            $Script:output.Add( [pscustomobject]@{ 
                                 'Source' = 'App Volumes'
                                 'PhaseName' = 'Wait For Volume Attach'
                                 'Duration' = $Duration.TotalSeconds
@@ -1820,8 +1817,8 @@ function Get-LogonDurationAnalysis {
                                 $result = $null
                                 for ($a = $index ; $a -lt ($index + 8) -and ! $result ; $a++) {  #script launch events should occur within the next 4 lines (for AppVolumes 4) from where we found RunScript_Volume
                                     #sample line: CreateProcessCheckResult: Successfully launched: "C:\PROGRA~2\CLOUDV~1\Agent\Config\Default\app\SHELLS~1.BAT". WaitMilliseconds -1 ms, pid=6244 tid=2780
-                                    #if ( $AppVolumesLogonEvents[$a].Message -like '*launch*BAT*pid=*' -and $AppVolumesLogonEvents[$a].ProcessInfo -eq $ScriptStartEvent.Id ) {
-                                    if ( $AppVolumesLogonEvents[$a].Message -match 'launch.*\.BAT\b.*\bpid=(\d+)' -and $AppVolumesLogonEvents[$a].ProcessInfo -eq $ScriptStartEvent.Id ) {
+                                    #if ( $AppVolumesLogonEvents[$a].Message -like '*launch*BAT*pid=*' -and $AppVolumesLogonEvents[$a].ProcessInfo -eq $ScriptStartEvent.Id ) {  
+                                    if ( $AppVolumesLogonEvents[$a].Message -match 'launch.*\.BAT\b.*\bpid=(\d+)' -and $AppVolumesLogonEvents[$a].ProcessInfo -eq $ScriptStartEvent.Id ) {  
                                         [int]$processId = $Matches[1]
 
                                         Write-Verbose "AppVolumes: Found PID : $processId"
@@ -1900,7 +1897,7 @@ function Get-LogonDurationAnalysis {
                 }
 
                 if( $AppVolumesLogonPhase -and ( $Duration = New-TimeSpan -Start ($AppVolumesLogonPhase | sort-Object -Property StartTime)[0].StartTime -End ($AppVolumesLogonPhase | sort-Object -Property EndTime -Descending)[0].EndTime )) {
-                    $Script:AppVolumesOutput.Add( [pscustomobject]@{
+                    $Script:AppVolumesOutput.Add( [pscustomobject]@{ 
                         'PhaseName' = "AppVolumes - Logon"
                         'Duration'  = $Duration.TotalSeconds
                         'EndTime'   = $AppVolumesLogonPhase | Sort-Object -Property EndTime -Descending | Select-Object -First 1 -ExpandProperty EndTime
@@ -1922,11 +1919,11 @@ function Get-LogonDurationAnalysis {
                 Write-Verbose "AppVolumes log file `"$appVolumesLogFile`" not found. Skipping AppVolumes verbose enumeration"
             }
         }
-
+        
 
         ## Set up runspacepool as we will parallelise some operations
         $SessionState = [System.Management.Automation.Runspaces.InitialSessionState]::CreateDefault()
-
+        
         ## need to import the functions we need from this module
         @( 'New-XPath' , 'Get-PhaseEvent' , 'Get-EventLogEnabledStatus' ) | ForEach-Object `
         {
@@ -1935,7 +1932,7 @@ function Get-LogonDurationAnalysis {
             $SessionStateFunction = New-Object System.Management.Automation.Runspaces.SessionStateFunctionEntry -ArgumentList $function , $Definition
             $sessionState.Commands.Add($SessionStateFunction)
         }
-
+        
         ## sharing variables with the runspaces which includes the warnings output at the end
         $SessionState.Variables.Add( (New-Object -Typename System.Management.Automation.Runspaces.SessionStateVariableEntry  -ArgumentList 'sharedVariables' , $sharedVariables , 'Shared Variables hashtable' ) )
 
@@ -1945,7 +1942,7 @@ function Get-LogonDurationAnalysis {
             $sessionstate ,
             $host
         )
-
+        
         $sharedVars = [hashtable]::Synchronized(@{})
         $RunspacePool.Open()
         $tsevent = $null
@@ -1989,7 +1986,7 @@ function Get-LogonDurationAnalysis {
             }
 
             ## we use LSA to get the definitive logon time
-
+        
             if( ! ( ([System.Management.Automation.PSTypeName]'Win32.Secure32').Type ) )
             {
                 Add-Type -MemberDefinition $LSADefinitions -Name 'Secure32' -Namespace 'Win32' -UsingNamespace System.Text -Debug:$false
@@ -2013,7 +2010,7 @@ function Get-LogonDurationAnalysis {
                 Write-Error "No buffer returned by LsaEnumerateLogonSessions"
             }
             else
-            {
+            {   
                 Write-Debug "$count sessions retrieved from LSASS"
                 [IntPtr] $iter = $luidPtr
                 $earliestSession = $null
@@ -2035,7 +2032,7 @@ function Get-LogonDurationAnalysis {
                             $thisUser = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.Username.buffer) #get the account name
                             $thisDomain = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.LoginDomain.buffer) #get the domain name
                             try
-                            {
+                            { 
                                 $secType = [Win32.Secure32+SECURITY_LOGON_TYPE]$data.LogonType
                             }
                             catch
@@ -2100,10 +2097,10 @@ function Get-LogonDurationAnalysis {
                 ## Merge can add quite a bit if WMI is enabled, so it would be interesting to know if it's used
                 if (-not( $offline )) {
                     try {
-                        switch (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\System' | Select-Object -ExpandProperty "UserPolicyMode" -ErrorAction SilentlyContinue ) {
+                        switch (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\System' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "UserPolicyMode" -ErrorAction SilentlyContinue ) {
                         1 { $LoopBackProcessingMode = "Merge" }
                         2 { $LoopBackProcessingMode = "Replace" }
-                        }
+                        } 
                     } catch {
                         $LoopBackProcessingMode = "Not configured"
                     }
@@ -2111,10 +2108,10 @@ function Get-LogonDurationAnalysis {
 
                 if (-not( $offline )) {
                     try {
-                        switch (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\System' | Select-Object -ExpandProperty "RSoPLogging" -ErrorAction SilentlyContinue ) {
+                        switch (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\System' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "RSoPLogging" -ErrorAction SilentlyContinue ) {
                         1 { $RSoPLogging = "Enabled"  }
                         0 { $RSoPLogging = "Disabled" }
-                        }
+                        } 
                     } catch {
                         $RSoPLogging = "Not configured (Default: Enabled)"
                     }
@@ -2124,7 +2121,7 @@ function Get-LogonDurationAnalysis {
                     LogonTime = $lsaSessions[0].LoginTime
                     LogonTimeFileTime = $lsaSessions[0].LoginTime.ToFileTime()
                     FormatTime = $lsaSessions[0].LoginTime.ToString( 'HH:mm:ss.fff' )
-                    TimeZone = (Get-TimeZone).Id
+                    TimeZone = [System.TimeZoneInfo]::Local | Select-Object -ExpandProperty Id -ErrorAction SilentlyContinue
                     LogonID = $loginIds
                     UserSID = $lsaSessions[0].Sid
                     Type = $lsaSessions[0].Type
@@ -2134,7 +2131,7 @@ function Get-LogonDurationAnalysis {
                     InitialProgram = $initialProgram
                     UserName = $Username
                     UserDomain = $UserDomain
-                    WMILoggingMode = $(Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM' | Select-Object -ExpandProperty "Logging" -ErrorAction SilentlyContinue )
+                    WMILoggingMode = $(Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "Logging" -ErrorAction SilentlyContinue )
                     LoopbackProcessingMode = $LoopBackProcessingMode
                     RSOPLogging = $RSOPLogging
                     OSBuildNumber = $global:WindowsOSBuildNumber
@@ -2146,7 +2143,7 @@ function Get-LogonDurationAnalysis {
                 {
                     if( $logon )
                     {
-                        $logon | ConvertTo-Json | Set-Content -Path (Join-Path -Path $global:logsFolder -ChildPath 'logon.json' )
+                        $logon | ConvertTo-Json -Depth 99 | Set-Content -Path (Join-Path -Path $global:logsFolder -ChildPath 'logon.json' )
                     }
 
                     Write-Debug "Required files dumped to `"$logsFolder`". Please zip and email to support@controlup.com"
@@ -2190,7 +2187,7 @@ function Get-LogonDurationAnalysis {
         $odataPhase = [pscustomobject]@{}
 
         if ( ((Get-Service -Name BrokerAgent -ErrorAction SilentlyContinue) -and $SessionID ) -or $Global:services.Where( { $_.Name -eq 'BrokerAgent' } ) ) {
-
+        
             [System.Collections.Generic.List[psobject]]$prelogonData = Get-CitrixData -sessionId $SessionID
             if( $offline )
             {
@@ -2212,7 +2209,7 @@ function Get-LogonDurationAnalysis {
                 }
                 if( $dumpForOffline )
                 {
-                    $odataPhase | ConvertTo-Json | Out-File -FilePath $citrixDataJsonFile
+                    $odataPhase | ConvertTo-Json -Depth 99 | Out-File -FilePath $citrixDataJsonFile
                 }
             }
         }
@@ -2225,7 +2222,7 @@ function Get-LogonDurationAnalysis {
             {
                 $onlineOfflineTS.Add( 'Path' , $global:terminalServicesParams[ 'Path' ] )
             }
-
+            
             $horizonInfoValues = Get-ItemProperty -Path $horizonSessionKey -ErrorAction SilentlyContinue
             if( ! $offline -and ! $horizonInfoValues )
             {
@@ -2247,7 +2244,7 @@ function Get-LogonDurationAnalysis {
                 else
                 {
                     [string]$message = "Horizon SessionData registry key `"$horizonSessionKey`" not yet present - it can take up to 10 minutes after logon to appear - logon was $([math]::Round( ([datetime]::Now - $logon.LogonTime).Minutes , 1 )) minutes ago"
-
+                    
                     ## see if parent key exists as this has been observed to be missing
                     [string]$parentKey = Split-Path -Path $horizonSessionKey -Parent
                     if( ! ( Test-Path -Path $parentKey -PathType Container -ErrorAction SilentlyContinue ) )
@@ -2368,7 +2365,7 @@ function Get-LogonDurationAnalysis {
                 }
             }
         }
-
+        
         [hashtable]$securityFilter = @{StartTime=$logon.LogonTime;EndTime=($logon.LogonTime.AddMinutes( 20 ));Id=4018,5018,4688,4689}  ## TTYE Bringing search time down from 60min to 20min (perf enhancement)
         if( $securityParams[ 'Path' ] )
         {
@@ -2381,11 +2378,23 @@ function Get-LogonDurationAnalysis {
         [array]$securityEvents = @( Get-WinEvent -FilterHashtable $securityFilter -ErrorAction SilentlyContinue)
         if( ! $securityEvents -or ! $securityEvents.Count )
         {
-            Write-Error "Failed to cache any relevant security event logs from $(Get-Date $logon.LogonTime -Format G) for 60 minutes"
+            [string]$errorMessage = "Failed to cache any relevant security event log entries from $(Get-Date $logon.LogonTime -Format G) for 60 minutes"
+            $endTime = $securityFilter[ 'Endtime' ]
+            $securityFilter.Remove( 'StartTime' )
+            $securityFilter.Remove( 'EndTime' )
+            if( $oldestEvent = Get-WinEvent -FilterHashtable $securityFilter -ErrorAction SilentlyContinue -Oldest -MaxEvents 1 )
+            {
+                $errorMessage += ". Oldest event is $(Get-Date -Date $oldestEvent.TimeCreated -Format G)"
+                if( $endTime -and $oldestEvent.TimeCreated -gt $endTime )
+                {
+                    $errorMessage += "`nSecurity event log looks to have been overwritten"
+                }
+            }
+            Write-Error -Message $errorMessage
         }
-
+        
         ## Get CSE finishes as we may need them for VMware DEM but if we don't they are useful/interesting anyway
-
+        
         ## Find event id 4001 from GP log so we can get activity id to cross ref to 5016 event for finishing of GPO processing
         ## TODO make work offline
         [string]$query = "*[EventData[Data[@Name='PrincipalSamName'] and (Data='$($logon.UserDomain)\$($logon.Username)')]] and *[System[(EventID='4001')]]"
@@ -2426,8 +2435,8 @@ function Get-LogonDurationAnalysis {
         ## TODO make work offline - difficult given we are looking at registry
         if( ( Get-Service -Name ImmidioFlexProfiles -ErrorAction SilentlyContinue ) -or $Global:services.Where( { $_.Name -eq 'ImmidioFlexProfiles' } ) )
         {
-            ## Need to see if we are being run via GPO or logon script
-            if ( ! (Test-Path -Path HKU:\ -ErrorAction SilentlyContinue))
+            ## Need to see if we are being run via GPO or logon script          
+            if ( ! (Test-Path -Path HKU:\ -ErrorAction SilentlyContinue)) 
             {
                 if( ! ( New-PSDrive -PSProvider Registry -Name HKU -Root HKEY_USERS ) )
                 {
@@ -2472,7 +2481,7 @@ function Get-LogonDurationAnalysis {
                 #>
             }
             else ## run by logon script so we look for the flexengine processes with specific command lines for this user after logon
-            {
+            {              
                 Write-Verbose -Message "VMware DEM not running as CSE or offline analysis"
                 ## look for flexengine.exe -r but don't insist as parent of gpscript.exe (logon script) in case launched some other way
                 if( ! $flexEngineStarts -or ! $flexEngineStarts.Count )
@@ -2567,7 +2576,7 @@ function Get-LogonDurationAnalysis {
                 $publishedApp = [System.IO.Path]::GetFullPath( $( switch ( [System.IO.Path]::GetExtension( $publishedApp ) )
                 {
                     ## seems that .vbs scripts must be specified via wscript or cscript as the executable
-                    '.cmd'  { Join-Path -Path ([environment]::GetFolderPath('System')) -ChildPath 'cmd.exe' ; $isScript = $true }
+                    '.cmd'  { Join-Path -Path ([environment]::GetFolderPath('System')) -ChildPath 'cmd.exe' ; $isScript = $true } 
                     default { [System.Environment]::ExpandEnvironmentVariables( $publishedApp ) }
                 }))
             }
@@ -2576,12 +2585,12 @@ function Get-LogonDurationAnalysis {
                 Write-Error "Unable to retrieve published app from `"$initialProgram`""
             }
         }
-        else ## published desktop so logon finished is when explorer starts
+        else ## published desktop so logon finished is when explorer starts 
         {
             Write-Debug "Published desktop detected for session $sessionId"
             $publishedApp = $shellProgram = (Join-Path -Path $env:SystemRoot -ChildPath 'explorer.exe' )
         }
-
+        
         $userinitStartEvent = $null
 
         if( $global:windowsMajorVersion -ge 10 )
@@ -2615,13 +2624,13 @@ function Get-LogonDurationAnalysis {
             {
                 $logonFinishedEvent = ($securityEvents | Where-Object { $_.Id -eq 4688 -and $_.Properties[$SubjectLogonId].value -in $Logon.LogonId `
                     -and $_.Properties[$SubjectUserName ].value -eq $Username -and $_.Properties[$SubjectDomainName ].value -eq $UserDomain `
-                        -and $_.properties[$NewProcessName].Value -eq $publishedApp -and $_.Properties[$NewProcessCmdLine].Value -match [regex]::Escape( $publishedAppParameters ) } ) | Select-Object -Last 1
+                        -and $_.properties[$NewProcessName].Value -eq $publishedApp -and $_.Properties[$NewProcessCmdLine].Value -match [regex]::Escape( $publishedAppParameters ) } ) | Select-Object -Last 1 
             }
             if( ! $logonFinishedEvent ) ## probably older OS so we don't have userinit pid yet
             {
                 $logonFinishedEvent = ($securityEvents | Where-Object { $_.Id -eq 4688 -and $_.Properties[$SubjectLogonId].value -in $Logon.LogonId `
                     -and $_.Properties[$SubjectUserName ].value -eq $Username -and $_.Properties[$SubjectDomainName ].value -eq $UserDomain `
-                        -and $_.properties[$NewProcessName].Value -eq $publishedApp } ) | Select-Object -Last 1
+                        -and $_.properties[$NewProcessName].Value -eq $publishedApp } ) | Select-Object -Last 1 
             }
             if( $logonFinishedEvent )
             {
@@ -2651,7 +2660,7 @@ function Get-LogonDurationAnalysis {
                 Write-Debug "Couldn't find a shell process event for user"
             }
         }
-
+        
         ## Now that we don't user the security logon event 4624, we need another way to get the Winlogon PID to be able to find the mpnotify event but it's only required for that
         ## From the userinit start event, we have the pid of winlogon as that is the parent process
 
@@ -2679,7 +2688,7 @@ function Get-LogonDurationAnalysis {
                 }
                 $sharedVariables.warnings.Add( $warning )
             }
-        }
+        } 
 
         if ($offline) { #get the network providers events
             $networkStartEvent = $null
@@ -2789,7 +2798,7 @@ function Get-LogonDurationAnalysis {
             [void]$PowerShell.AddParameters( $Parameters )
             [void]$jobs.Add( [pscustomobject]@{ 'PowerShell' = $PowerShell ; 'Handle' = $PowerShell.BeginInvoke() } )
         }
-
+            
 #region TTYE ActiveSetup time
 
          if ( $global:windowsShellCoreParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'Microsoft-Windows-Shell-Core' -ErrorAction SilentlyContinue)) {
@@ -2908,11 +2917,11 @@ if ($logon.OSReleaseId -eq $null -or $logon.OSReleaseId -gt 1607) {
 
 #region TTYE Citrix RSOP time
 if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixCseEngine' -ErrorAction SilentlyContinue)) {
-    $GetWinEventParams = [hashtable]::new()
+    [hashtable]$GetWinEventParams = @{}
     if( $global:citrixUPMParams[ 'Path' ] ) { ## Offline
-        [hashtable]$GetWinEventParams = @{ 'Path' = $($global:citrixUPMParams[ 'Path' ])  }
+        $GetWinEventParams.Add( 'Path' , $global:citrixUPMParams[ 'Path' ] )  
     } else { ## Online
-        [hashtable]$GetWinEventParams = @{ 'ProviderName' = 'CitrixCseEngine' }
+        $GetWinEventParams.Add( 'ProviderName' , 'CitrixCseEngine' )
     }
 
     ## TTYE - There might be multiple Citrix RSOP events *BEFORE* Logon, and maybe after?
@@ -2920,9 +2929,15 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
     ## for each event 8, get the next 9 --> Add to phase and repeat
     $EventIds = @()
     [array]$EventIds = 8,9
-    $CitrixRSOPEventsXPath = New-XPath -EventId $EventIds -From (Get-Date -Date $Logon.LogonTime) -ToDate $userinitStartEvent.TimeCreated -EventData "$Userdomain\$UserName"
-    $CitrixRSOPEvents = @()
-    [array]$CitrixRSOPEvents = @( Get-WinEvent -Oldest @GetWinEventParams -FilterXPath $CitrixRSOPEventsXPath -ErrorAction SilentlyContinue )
+    $CitrixRSOPEventsXPath = $null
+    [array]$CitrixRSOPEvents = @()
+    if( $userinitStartEvent )
+    {
+        if( $CitrixRSOPEventsXPath = New-XPath -EventId $EventIds -From (Get-Date -Date $Logon.LogonTime) -ToDate $userinitStartEvent.TimeCreated -EventData "$Userdomain\$UserName" )
+        {
+            $CitrixRSOPEvents = @( Get-WinEvent -Oldest @GetWinEventParams -FilterXPath $CitrixRSOPEventsXPath -ErrorAction SilentlyContinue )
+        }
+    }
 
     if ($CitrixRSOPEvents -and $CitrixRSOPEvents.Count) { ## We have Citrix RSOP Events!
         $CitrixRSOPEventCount = $($($CitrixRSOPEvents.where({$_.Id -eq 8})).count)
@@ -3301,7 +3316,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
         [void]$PowerShell.AddScript( $scriptBlock )
         [void]$PowerShell.AddParameters( $Parameters )
         [void]$jobs.Add( [pscustomobject]@{ 'PowerShell' = $PowerShell ; 'Handle' = $PowerShell.BeginInvoke() } )
-
+        
         ($PowerShell = [PowerShell]::Create()).RunspacePool = $RunspacePool
 
         [scriptblock]$groupPolicyScriptBlock = $null
@@ -3345,17 +3360,17 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                     })
             }
         }
-
+         
         [void]$PowerShell.AddScript( $groupPolicyScriptBlock )
         [void]$PowerShell.AddParameters( $Parameters )
         [void]$jobs.Add( [pscustomobject]@{ 'PowerShell' = $PowerShell ; 'Handle' = $PowerShell.BeginInvoke() } )
-
+        
         ($PowerShell = [PowerShell]::Create()).RunspacePool = $RunspacePool
 
         [scriptblock]$gpScriptBlock = $null
         if( $global:groupPolicyParams[ 'Path' ] )
         {
-            $gpScriptBlock =
+            $gpScriptBlock = 
             {
                 Param( $logon , $UserDomain , $Username , $sharedVars , $groupPolicyEventFile )
                 Get-PhaseEvent -PhaseName 'GP Scripts' -StartProvider 'Microsoft-Windows-GroupPolicy' -SharedVars $sharedVars `
@@ -3375,7 +3390,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
         }
         else
         {
-            $gpScriptBlock =
+            $gpScriptBlock = 
             {
                 Param( $logon , $UserDomain , $Username , $sharedVars )
                 Get-PhaseEvent -PhaseName 'GP Scripts' -StartProvider 'Microsoft-Windows-GroupPolicy' -SharedVars $sharedVars `
@@ -3391,10 +3406,10 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                     })
              }
         }
-        [void]$PowerShell.AddScript( $gpScriptBlock )
+        [void]$PowerShell.AddScript( $gpScriptBlock )    
         [void]$PowerShell.AddParameters( $Parameters )
         [void]$jobs.Add( [pscustomobject]@{ 'PowerShell' = $PowerShell ; 'Handle' = $PowerShell.BeginInvoke() } )
-
+        
         ($PowerShell = [PowerShell]::Create()).RunspacePool = $RunspacePool
 
         if( $userinitStartEvent )
@@ -3484,7 +3499,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
         }
 
         if ($CUDesktopLoadTime -gt 0 ) {
-            $shellStartEvent = ($securityEvents|Where-Object { $_.Id -eq 4688 -and $_.Properties[$SubjectLogonId].value -in $Logon.LogonID -and $_.properties[$NewProcessName].Value -eq 'C:\Windows\explorer.exe' } | Select-Object -Last 1 )
+            $shellStartEvent = ($securityEvents|Where-Object { $_.Id -eq 4688 -and $_.Properties[$SubjectLogonId].value -in $Logon.LogonID -and $_.properties[$NewProcessName].Value -eq 'C:\Windows\explorer.exe' } | Select-Object -Last 1 ) 
             if( $shellStartEvent )
             {
                 $Script:Output.Add( ( Get-PhaseEventFromCache -source 'Windows' -PhaseName 'Shell' -startEvent $shellStartEvent -CUAddition $CUDesktopLoadTime ) )
@@ -3500,7 +3515,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                 $sharedVariables.warnings.Add( $warning )
             }
         }
-
+        
         $jobs | ForEach-Object `
         {
             $_.powershell.EndInvoke( $_.handle ) | ForEach-Object `
@@ -3521,7 +3536,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                 Get-PrinterEvents -Start $userinitStartEvent.TimeCreated -End $end -ClientName $ClientName
             }
         }
-
+        
         if( $userProfileEndTime = $Script:Output | Where-Object PhaseName -eq 'User Profile' | Select-Object -First 1 -ExpandProperty StartTime -ErrorAction SilentlyContinue )
         {
             ## Need to create a new dateTime object with the 'formatTime' as the actual time as that seems to match the remote system
@@ -3577,14 +3592,14 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
             $Deltas = New-TimeSpan -Start $Logon.LogonTime -End $Script:Output[0].StartTime
             $Script:Output[0] | Add-Member -MemberType NoteProperty -Name TimeDelta -Value $Deltas -Force
         }
-
+        
 #region Ivanti EM
         if( ($emservice = Get-Service -name 'AppSense EmCoreService' -ErrorAction SilentlyContinue ) -or ( $emservice = $Global:services.Where( { $_.Name -eq 'AppSense EmCoreService' } ) ) )
         {
             # 9659 is for personalisation success
             # 9661 is personalisation server problem
             # 9662 is a trigger summary
-
+            
             [bool]$abort = $false
             [hashtable]$appsenseOffline = @{}
             if( $offline )
@@ -3599,7 +3614,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                 }
             }
 
-            if( -Not $abort -and ( [array]$appSenseEvents = @( Get-WinEvent -Oldest -FilterHashtable ( @{ StartTime = $logon.LogonTime ; UserID = $logon.UserSid ; Id = 9662 , 9659 , 9661 ; ProviderName = 'AppSense Environment Manager.'  } + $appsenseOffline ) -ErrorAction SilentlyContinue ).Where(
+            if( -Not $abort -and ( [array]$appSenseEvents = @( Get-WinEvent -Oldest -FilterHashtable ( @{ StartTime = $logon.LogonTime ; UserID = $logon.UserSid ; Id = 9662 , 9659 , 9661 ; ProviderName = 'AppSense Environment Manager.'  } + $appsenseOffline ) -ErrorAction SilentlyContinue ).Where( 
                 { ($_.Id -eq 9662 -and $_.Properties[4].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9659 -and $_.Properties[1].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9661 -and $_.Properties[0].Value -match "SessionID:$sessionID`$")} )) -and $appsenseEvents.Count )
             {
                 ## Times are in UTC so convert to local time - https://devblogs.microsoft.com/scripting/powertip-convert-from-utc-to-my-local-time-zone/
@@ -3619,7 +3634,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                             ## could also check that parent is emcoreservice.exe
                             if( $emuserProcess = Get-Process -Name EmUser -ErrorAction SilentlyContinue | Where-Object { $_.SessionId -eq $SessionId -and $_.StartTime -ge $logon.LogonTime  -and $_.StartTime -le $appsenseEvent.TimeCreated -and $_.Path -match '\\Environment Manager\\Agent\\EmUser\.exe$' }  | Sort-Object -Property StartTime | Select-Object -First 1 )
                             {
-                                $Script:Output.Add( ( [pscustomobject]@{
+                                $Script:Output.Add( ( [pscustomobject]@{ 
                                     'Source' = 'Ivanti EM'
                                     'PhaseName' = 'Personalization Loading'
                                     'StartTime' = $emuserProcess.StartTime
@@ -3647,7 +3662,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                     }
                     else
                     {
-                         $emphase = [pscustomobject]@{
+                         $emphase = [pscustomobject]@{ 
                             'Source' = 'Ivanti EM'
                             'PhaseName' = (Get-Culture).TextInfo.ToTitleCase( ( $appsenseEvent.Properties[0].Value -replace '_' , ' ' ).ToLower()) ## LOGON_PRE_DESKTOP
                             'StartTime' = [System.TimeZoneInfo]::ConvertTimeFromUtc( [datetime]$appsenseEvent.Properties[1].Value , $TZ )
@@ -3706,7 +3721,7 @@ function Get-WMILogLevel {
                 2 { Return "Verbose Logging" }
         }
     } else {
-        $LoggingValue = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM' | Select-Object -ExpandProperty "Logging" -ErrorAction Stop
+        $LoggingValue = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "Logging" -ErrorAction Stop
         Write-Verbose -Message "WMI Logging Mode: $($LoggingValue)"
         switch ($LoggingValue) {
             0 { Return "Disabled"        }
@@ -3720,7 +3735,7 @@ function Get-WMILogDirectory {
     if ($offline) {
         return ($global:WMILogFile).Directory.FullName
     } else {
-        $LogDirectory = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM' | Select-Object -ExpandProperty "Logging Directory" -ErrorAction Stop
+        $LogDirectory = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "Logging Directory" -ErrorAction Stop
         return "$LogDirectory"
     }
 }
@@ -3730,7 +3745,7 @@ function Get-WMILogFile {
 
     if ($offline) {
         if ( -Not $Global:WMILogFile -or [string]::IsNullOrEmpty( $Global:WMILogFile.FullName )) {
-            $result = $false
+            $result = $false 
         } else {
             $result = Test-Path -Path $Global:WMILogFile.FullName -ErrorAction SilentlyContinue
         }
@@ -3845,7 +3860,7 @@ if (-not(Get-WMILogFile)) {
 
 if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should always be true, but sometimes multiple sessions on the same server means that GPO processing isn't done because
                                                               ## the new session inherits. Anyways, if the GPO processing time occurs *before* the session logon event, bail on WMI processing.
-    #Get GPO Downloading events (WMI filtering is executed in this phase)
+    #Get GPO Downloading events (WMI filtering is executed in this phase) 
     $query = "*[System[(EventID='4126' or EventID='5257' or EventID='5312' or EventID='5313' or EventID='5017'or EventID='4017') and TimeCreated[@SystemTime>='$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("s")).$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("fff"))Z'] and Correlation[@ActivityID='{$($startProcessingEvent.ActivityID.Guid)}']]]"
     if ($offline) {
         $ThisUsersGPOActivity = @( Get-WinEvent -Path $global:groupPolicyParams[ 'Path' ] -FilterXPath $query -ErrorAction SilentlyContinue )
@@ -3854,7 +3869,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
     }
 
     $query = "*[System[(EventID='4126' or EventID='5257') and Security[@UserID='$($Logon.UserSID)'] and TimeCreated[@SystemTime>='$($Logon.LogonTime.ToUniversalTime().ToString("s")).$($Logon.LogonTime.ToUniversalTime().ToString("fff"))Z' and @SystemTime<='$($ThisUsersGPOActivity[0].TimeCreated.ToUniversalTime().ToString("s")).$($ThisUsersGPOActivity[0].TimeCreated.ToUniversalTime().ToString("fff"))Z']]] or *[System[(EventID='5312' or EventID='5313' or EventID='5017'or EventID='4017') and TimeCreated[@SystemTime>='$($Logon.LogonTime.ToUniversalTime().ToString("s")).$($Logon.LogonTime.ToUniversalTime().ToString("fff"))Z' and @SystemTime<='$($ThisUsersGPOActivity[0].TimeCreated.ToUniversalTime().ToString("s")).$($ThisUsersGPOActivity[0].TimeCreated.ToUniversalTime().ToString("fff"))Z']]]"
-
+   
     if ($offline) {
         $GPODownloadEvents = @( Get-WinEvent -Path $global:groupPolicyParams[ 'Path' ] -FilterXPath $query -ErrorAction SilentlyContinue )
     } else {
@@ -3874,7 +3889,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
     Write-Debug "Use WMI Log? $useWMILog"
     if ($UseWMILog) {
         $WMIObject = New-Object -TypeName System.Collections.Generic.List[psobject]
-        $stream = [System.IO.StreamReader]::new($LogFile)
+        $stream = New-Object -TypeName System.IO.StreamReader -ArgumentList $LogFile
         Write-Verbose "Parsing $LogFile - $([math]::Round(((Get-Item $logfile).Length / 1MB)))MB"
         $ParseStartTime = Get-Date
         $id = 0
@@ -3882,7 +3897,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
         {
             $id = $id+1
             $data = $line.Split("`t")
-
+    
             if (-not($data[0] -like "ERROR*")) { ## Skip error events in the log
                 if ([datetime]$data[1] -ge $StartGPODownload -and [datetime]$data[1] -le $EndGPODownload ) {
                     $WMIObject.Add( ([pscustomobject]@{
@@ -3891,7 +3906,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                                     RecordId   = $id
                                     Operation    = $data[0]
                                     DebugInfo   = $data[3]
-
+                                
                             }))
                 }
             }
@@ -3979,7 +3994,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                 if (-not([string]::IsNullOrEmpty($global:logsFolder))) {
                     if(-not( Test-Path "$global:logsFolder\GPResult-$GPOName.xml")){
                         Export-Clixml -InputObject $GPresults -Path "$global:logsFolder\GPResult-$GPOName.xml"
-
+                
                     }
                     if(-not( Test-Path "$global:logsFolder\WMIFilterResults.xml")){
                         Export-Clixml -InputObject $WMIFilterResults -Path "$global:logsFolder\WMIFilterResults.xml"
@@ -4004,7 +4019,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                 } else {
                     Write-Warning "Offline GPO or WMI collection not found!"
                 }
-                Write-Verbose "Number of GPO's Detected      : $(Get-ChildItem -Name GPResult*| Select-Object -ExpandProperty Count -EA SilentlyContinue)"
+                Write-Verbose "Number of GPO's Detected      : $(Get-ChildItem -Name GPResult*| Select-Object -ExpandProperty Count -EA SilentlyContinue)" 
             }
 
             Write-Verbose "Number of WMI Filters Detected: $($WMIFilterResults.count)"
@@ -4017,7 +4032,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
             if ($GPresults.Properties.Contains("gpcwqlfilter")) {
                 $AttachedWMIFilter = $GPresults.Properties.gpcwqlfilter -split(";") -match "^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$"
                 $WMIFilterResult = $WMIFilterResults | Where-Object {$_.Path -like "*$AttachedWMIFilter*"}
-
+    
                 Return [PSCustomObject]@{
                     GPOName = $($GPresults.Properties.displayname)
                     WMIFilterName = $($WMIFilterResult.properties.'mswmi-name')
@@ -4058,7 +4073,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
         if ($notEnoughWMIData -eq $false ) {
             # Get WMI Filters
             $WMIFilters = @()
-
+            
             if (-not($offline)) {
                 # $search = new-object System.DirectoryServices.DirectorySearcher([adsi]('LDAP://CN=SOM,CN=WMIPolicy,CN=System,DC=X,DC=X,DC=X'))
                 $search = new-object System.DirectoryServices.DirectorySearcher([adsi](''))
@@ -4086,14 +4101,14 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                     [PSCustomObject]@{
                         GUID     = $GUID
                         Name = $NAME
-                        Description = $DESCRIPTION
+                        Description = $DESCRIPTION 
                         Author = $AUTHOR
                         ChangeDate = $CHANGEDATE
                         CreationDate = $CREATIONDATE
                         WQL = $WQLObject
                     }
                 })
-
+            
                 # Compare WMIFilters with the WMIFilters applied to the GPO's
                 $AppliedWMIFilters = New-Object -TypeName System.Collections.Generic.List[psobject]
                 foreach ($WMIGPOFilter in $WMIGPOFilters) {
@@ -4128,7 +4143,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                 } else {
                     Write-Warning "Offline GPO collection not found!"
                 }
-
+    
             }
             Write-Verbose "Number of GPO's Detected: $($GPOresults.count)"
 
@@ -4149,7 +4164,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                 $WQLQueryEvents = New-Object -TypeName System.Collections.Generic.List[psobject]
                 foreach ($AppliedWMIFilter in $AppliedWMIFilters) {
                     $WQLQuerys = $AppliedWMIFilter.WQL
-                    foreach ($WQLQuery in $WQLQuerys) {
+                    foreach ($WQLQuery in $WQLQuerys) {  
                         ## We need to prevent duplicates being added, but still need to add WQL queries where there are multiple of the same queries.
                         ## What we'll do is grab all matching queries, iterate through them and see if the WQLQueryEvents object already has an entry that matches
                         ## the query we are examining. If there is a complete match (time, thread, operation) then we skip adding the entry
@@ -4158,16 +4173,16 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                         foreach ($WQLquery in $WQLQueryEvent) {
                             if (-not($WQLQueryEvents.Contains($WQLquery))) {
                                 Write-Verbose "Adding WQL Query to WQLQueryEvents: $($WQLquery.operation)"
-                                $WQLQueryEvents.Add($WQLquery)
-
+                                $WQLQueryEvents.Add($WQLquery) 
+                    
                             } else {
                                 Write-Verbose "Query already exists: $($WQLquery.operation)"
                             }
                         }
                     }
                 }
-            }
-
+            }  
+            
             # Use the less precise method
             <#
                 SO... How this is going to work. We know when WMI completes because the event log records it.
@@ -4182,7 +4197,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                 In the WMI-Activity log each event is when the query completes. So we can judge how long it took by look at each 'Event Log entry' for the start of the 'download' of the GPO
                 to the download 'complete' of the GPO. Within this time frame, we can look at any "WMI Events". The duration between the 'WMI event' and the previous event
                 is approximately how long the query took.  This method will not be precise because some other factors can influence this duration (eg, if it actually takes time to download
-                the GPO... WMI processing won't occur until after it's download. I think odds of external factors causing this imprecise measurement to be off by a large factor are quite low,
+                the GPO... WMI processing won't occur until after it's download. I think odds of external factors causing this imprecise measurement to be off by a large factor are quite low, 
                 but do exist.
             #>
                 #Let's prep.
@@ -4198,7 +4213,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                 #Add the latest Group-Policy event *Before* the first WMI call so we can capture the duration
                 $GPOWMIEvents.Add(($GPODownloadEvents|Where-Object{$_.id -eq 5017 -and $_.TimeCreated -lt $GPOWMIEvents[-1].TimeCreated}|Select-Object -First 1 ) )
 
-                $GPOWMIEvents  = @( $GPOWMIEvents | sort-Object -Property TimeCreated -Descending ) #Sort in the proper order so we can index numbers
+                $GPOWMIEvents  = @( $GPOWMIEvents | sort-Object -Property TimeCreated -Descending ) #Sort in the proper order so we can index numbers 
 
                 foreach ($GPOWMIEvent in $GPOWMIEvents) {
                     if ($UseWMILog) {
@@ -4210,7 +4225,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                                 ## Find the GPO this applies to:
                                 if ($XMLGPOWMIevent.Event.EventData.data[-1].'#text' -like "*gpt*") { ##only show GPO events that have GPO info. This is to skip the line *after* the last WMI which may NOT be a reference to a GPO
                                     $GPOPath = $XMLGPOWMIevent.Event.EventData.data[-1].'#text'
-
+                
                                     $GPOName = ($GPOresults | Where-Object {$GPOPath -like "$($_.Properties.gpcfilesyspath)*"}).Properties["DisplayName"]
                                     Write-Debug "GPOName       = $($GPOName)"
                                     Write-Debug "GPOPath       = $($GPOPath)"
@@ -4222,11 +4237,11 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                                             $indexNumber = $GPOWMIEvents.IndexOf($GPOWMIEvent)
                                             $DurationMs = "$(($GPOWMIEvents[$indexNumber].TimeCreated - $GPOWMIEvents[$indexNumber+1].TimeCreated).TotalMilliseconds)"
                                             $duration = "$($($GPOWMIEvents[$indexNumber].TimeCreated - $GPOWMIEvents[$indexNumber+1].TimeCreated).TotalMilliseconds/1000)"
-
+                                            
                                             #TTYE Convert Duration to seconds and drop all but the last decimal
                                             [string]$durationStringBuilder = $duration
                                             $durationStringBuilder = "$($durationStringBuilder.split(".")[0]).$($($durationStringBuilder.split(".")[1])[0])"
-
+                            
                                             $time = $($GPOWMIEvents[$indexNumber].TimeCreated)
                                             Write-Debug "Time          = $time"
                                             Write-Debug "Duration (s)  = $($durationStringBuilder)"
@@ -4281,7 +4296,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                             ## Find the GPO this applies to:
                             if ($XMLGPOWMIevent.Event.EventData.data[-1] -and $XMLGPOWMIevent.Event.EventData.data[-1].'#text' -like "*gpt*") { ##only show GPO events that have GPO info. This is to skip the line *after* the last WMI which may NOT be a reference to a GPO
                                 $GPOPath = $XMLGPOWMIevent.Event.EventData.data[-1].'#text'
-
+                
                                 $GPOName = ($GPOresults | Where-Object {$GPOPath -like "$($_.Properties.gpcfilesyspath)*"}).Properties["DisplayName"]
                                 Write-Debug "GPOName       = $($GPOName)"
                                 Write-Debug "GPOPath       = $($GPOPath)"
@@ -4292,11 +4307,11 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                                             $indexNumber = $GPOWMIEvents.IndexOf($GPOWMIEvent)
                                             $DurationMs = "$(($GPOWMIEvents[$indexNumber].TimeCreated - $GPOWMIEvents[$indexNumber+1].TimeCreated).TotalMilliseconds)"
                                             $duration = "$($($GPOWMIEvents[$indexNumber].TimeCreated - $GPOWMIEvents[$indexNumber+1].TimeCreated).TotalMilliseconds/1000)"
-
+                                            
                                             #TTYE Convert Duration to seconds and drop all but the last decimal
                                             [string]$durationStringBuilder = $duration
                                             $durationStringBuilder = "$($durationStringBuilder.split(".")[0]).$($($durationStringBuilder.split(".")[1])[0])"
-
+                            
                                             $time = $($GPOWMIEvents[$indexNumber].TimeCreated)
                                             Write-Debug "Time          = $time"
                                             Write-Debug "Duration (s)  = $($durationStringBuilder)"
@@ -4332,8 +4347,8 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                             if ($durationStringBuilder -notmatch "[a-zA-Z]") {  ## WBEM error messages don't get the split and start with a letter not a number
                                 $durationStringBuilder = "$($durationStringBuilder.split(".")[0]).$($($durationStringBuilder.split(".")[1])[0])"
                             }
-
-
+                            
+                            
                             $time = $($GPOWMIEvents[$indexNumber].TimeCreated)
                             Write-Debug "Time          = $time"
                             Write-Debug "Duration (s)  = $($durationStringBuilder)"
@@ -4350,12 +4365,12 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                         }
                     }
                 }
-
-
+                
+            
 
 
             ## We have a list of all WMI events and (ideally) their succeeded counterpart. Now we just need to match each pair into a duration for that query. I don't think WMI runs async (counter to the log saying ExecQueryAsync)
-            ## because every set of queries I've tested seem to operate in the order the GPO WMI filter specifies.
+            ## because every set of queries I've tested seem to operate in the order the GPO WMI filter specifies. 
 
             if ($UseWMILog) {
                 $WQLQueryEvents = $WQLQueryEvents | Sort-Object -Property RecordId
@@ -4372,7 +4387,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                                 ## We also need to find the matching query in the WMI-Activity log and get the closest WMI event. This is because the query from the Framework log will complete slightly faster than the event log
                                 ## entry so the file downloads event log entry can start slightly before a subsequent query.
                                 ## Long story short, we need to find the closest event log query to the completed query and then get the next download event
-
+                    
                                 #$WMIActivityEvent = $WMIALDEventLogsEvents.where{$_.TimeCreated -ge $WQLQueryEvents[$indexNumber].Time}
                                 $Query    = $($WQLQueryEvents[$indexNumber].Operation.split(":")[1])
                                 $searchQuery = $query  -replace $specialCharacters
@@ -4393,12 +4408,12 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                                 if (Get-Variable duration -ErrorAction SilentlyContinue) { Remove-Variable duration }
                                 $DurationMs = "$(($WQLQueryEvents[$indexNumber+1].Time - $WQLQueryEvents[$indexNumber].Time).TotalMilliseconds)"
                                 $Duration = "$(($WQLQueryEvents[$indexNumber+1].Time - $WQLQueryEvents[$indexNumber].Time).TotalMilliseconds/1000)"
-
+                    
                                 [string]$durationStringBuilder = $duration
                                 $durationStringBuilder = "$($durationStringBuilder.split(".")[0]).$($($durationStringBuilder.split(".")[1])[0])"
-
-
-
+                            
+                    
+                    
                                 Write-Debug "GPOEvent Time     : $($([datetime]$GPOEvent.Event.System.TimeCreated.SystemTime).ToString("HH:mm:ss.fff"))"
                                 Write-Debug "WQLQueryEvent Time: $($Time.ToString("HH:mm:ss.fff"))"
                                 Write-Debug "Time     = $Time"
@@ -4407,16 +4422,16 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                                 Write-Debug "WMIActivity Query = $($WMIActivityEvent.Properties[5].Value)"
                                 Write-Debug "searchQuery     = $searchQuery"
 
-
+                                
                                 $WQLQueryTimings.Add([PSCustomObject]@{
                                 StartTime     = ([datetime]$EventLogFailure.system.TimeCreated.SystemTime).AddMilliseconds(-$DurationMs)
                                 EndTime     = $WQLQueryEvents[$indexNumber].Time
                                 [psobject]"Duration (s)" = $($durationStringBuilder)
                                 GPO = $GPOName[0] ## when we create this variable it's stored as a collection object. Just need to query the first object
                                 Query = $Query
-
-                            })
-
+               
+                            }) 
+                            
                         }
                     }
                 }
@@ -4432,7 +4447,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                     [xml]$GPOEvent = (($GPODownloadEvents|Where-Object{$_.id -eq 5017 -and $_.TimeCreated -ge [datetime]$EventLogFailure.system.TimeCreated.SystemTime})[-1]).ToXML()
                     $GPOPath = $GPOEvent.Event.EventData.data[-1].'#text'
                     ## Now we get the GPO name by converting it's GUID to the friendly name
-
+                
                     $GPOName = ($GPOresults | Where-Object {$GPOPath -like "$($_.Properties.gpcfilesyspath)*"}).Properties["DisplayName"]
                     $WQLQueryTimings.Add([PSCustomObject]@{
                         StartTime     = [datetime]$EventLogFailure.system.TimeCreated.SystemTime
@@ -4449,7 +4464,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
             $WQLformat.Add( (@{Expression={$_.GPO};Label="GPO"} ) )
             if ($UseWMILog) { $WQLformat.Add( (@{Expression={$_."Duration (s)"};Label="Duration (s)"} ) ) }
             else {            $WQLformat.Add( (@{Expression={$_."Duration (s)"};Label="Duration (s)*"} ) ) }  ## use the * to denote that this is imprecise -- using inferred event log timestamps
-
+        
             $WQLformat.Add( (@{Expression={'{0:HH:mm:ss.f}' -f $_.StartTime};Label="Start Time"} ) )
             $WQLformat.Add( (@{Expression={'{0:HH:mm:ss.f}' -f $_.EndTime};Label="End Time"} ) )
             $WQLformat.Add( ( @{Expression={$_.Query};Label="Query"} ) )
@@ -4471,13 +4486,13 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
 
 if( $offline ) {
     if ($Script:Output|Where-Object{$_."PhaseName" -eq "AppX - Load Packages"}) {
-        [hashtable]$params =  @{ 'Path' = $global:appReadinessParams[ 'Path' ] }
+        [hashtable]$params =  @{ 'Path' = $global:appReadinessParams[ 'Path' ] }  
         $params.Add('Id', 213)
         $params.Add('StartTime', $($Script:Output|Where-Object{$_."PhaseName" -eq "AppX - Load Packages"}).StartTime)
         $params.Add('EndTime', $($Script:Output|Where-Object{$_."PhaseName" -eq "AppX - Load Packages"}).EndTime)
         $AppXLoadedPackageEvents = get-winevent -FilterHashtable $params -ErrorAction SilentlyContinue
     }
-} else { ##online
+} else { ##online  
     if ($Script:Output|Where-Object{$_."PhaseName" -eq "AppX - Load Packages"}) {
         [hashtable]$params = @{'ProviderName'="Microsoft-Windows-AppReadiness"}
         $params.Add('Id', 213)
@@ -4520,7 +4535,7 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
         Add-Member -InputObject $outputObject -MemberType NoteProperty -Name 'RSoP Logging ' -Value $RSOPLogging
 
         if( $odataPhase -and $odataPhase.PSObject.Properties )
-        {
+        {   
             ## odataphase no longer built from OData so just copy
             ForEach( $property in ( $odataPhase.PSObject.Properties | Sort-Object -Property Name ))
             {
@@ -4530,10 +4545,10 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
 
         ($outputObject | Format-List | Out-String).Trim() | Tee-Object -FilePath $SaveOutputTo
         '' | Tee-Object -FilePath $SaveOutputTo -Append
-
+        
         $earliest = $null
         $latest = $null
-        [double]$totalDuration = 0
+        [double]$totalDuration = 0 
         [double]$duration = 0
         [string]$indent = ''
         [string]$prelogonVendor = 'VMware'
@@ -4604,14 +4619,14 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
             'Logon end'   = '{0} {1}' -f (Get-Date -Date $end -Format d), (Get-Date -Date $end -Format 'HH:mm:ss')
             'Duration'    = "$([math]::Round( ($end - $start).TotalSeconds , 1 )) seconds" } | Format-List | Out-String).Trim() | Tee-Object -FilePath $SaveOutputTo -Append
         '' | Tee-Object -FilePath $SaveOutputTo -Append
-
+        
         $Script:Output.Add( ( [pscustomobject]@{ 'Source' = 'Windows' ; 'PhaseName' = 'Windows Logon Time' ; 'StartTime' = $logon.LogonTime ; 'EndTime' = $logon.LogonTime ; 'Duration' = 0.0 } ) )
         $Script:Output.Add( ( [pscustomobject]@{ 'PhaseName' = 'Windows Duration' ; Duration = $duration } ) )
 
         ## find the longest source and phasenames so we can pad them all to the same width so the two tables have the same dimensions
         [int]$longestSource = 0
         [int]$longestPhasename = 0
-
+        
         ForEach( $horizonItem in $prelogonData )
         {
             if( $horizonItem.PSObject.Properties[ 'Source' ] -and $horizonItem.Source.Length -gt $longestSource )
@@ -4623,7 +4638,7 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
                 $longestPhasename = $horizonItem.PhaseName.Length
             }
         }
-
+        
         ForEach( $outputItem in $Script:Output )
         {
             if( $outputItem.PSObject.Properties[ 'Source' ] -and $outputItem.Source.Length -gt $longestSource )
@@ -4638,20 +4653,20 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
 
         ## have to do it this way as PS v4 errors if you declare and assign in the same statement
         $format = New-Object System.Collections.Generic.List[psobject]]
-
+        
         $format.Add( (@{Expression={$_.Source.PadRight($longestSource,' ')};Label="Source"} ) )
         $format.Add( (@{Expression={$_.PhaseName.PadRight($longestPhasename,' ')};Label="Phase"} ) )
         $format.Add( (@{Expression={'{0:N1}' -f $_.Duration};Label="Duration (s)"} ) )
         $format.Add( (@{Expression={'{0:HH:mm:ss.f}' -f $_.StartTime};Label="Start Time"} ) )
         $format.Add( ( @{Expression={'{0:HH:mm:ss.f}' -f $_.EndTime};Label="End Time"} ) )
-
+                 
         if( $prelogonData -and $prelogonData.Count )
         {
             ($prelogonData | Sort-Object -Property 'StartTime' | Format-Table -Property $Format -AutoSize | Out-String).Trim() -split "`r`n" | ForEach-Object { "$indent$_" } | Tee-Object -FilePath $SaveOutputTo -Append
             '' | Tee-Object -FilePath $SaveOutputTo -Append
             ## $delayBetweenPhases
         }
-
+        
         ## sort-Object on start time so we can calculate gap with previous phase
         $Script:Output = $Script:Output | Sort-Object -Property StartTime
 
@@ -4669,7 +4684,7 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
         $Format.Add(  @{Expression={'{0:N1}' -f ($_.TimeDelta | Select-Object -ExpandProperty TotalSeconds)};Label="Gap (s)"} )
 
         ( $Script:Output | Format-Table -Property $Format -AutoSize | Out-String).Trim() -split "`r`n" | ForEach-Object { "$indent$_" } | Tee-Object -FilePath $SaveOutputTo -Append
-
+        
         ##TTYE Should check that there are WQL timings or else don't display
         if ($WQLQueryTimings.count -ne 0 -or $WQLQueryTimings -ne $null) {
             '' | Tee-Object -FilePath $SaveOutputTo -Append
@@ -4682,7 +4697,7 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
             } else {
                 Write-Output "WMI Filter(s) total runtime: $WQLTotalDuration s"| Tee-Object -FilePath $SaveOutputTo -Append
             }
-
+            
             Write-Output "`r" | Tee-Object -FilePath $SaveOutputTo -Append
         }
         ##TTYE Should check that there are AppX Load Pacakge Events or else don't display
@@ -4703,9 +4718,9 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
         }
 
         $LogonTaskList | Format-Table @{Expression={$_.TaskName};Label="Logon Scheduled Task"},@{Expression={'{0:s\.ff}' -f $_.Duration};Label="Duration (s)"},@{Expression={$_.ActionName};Label="Action Name"} -AutoSize  | Tee-Object -FilePath $SaveOutputTo -Append
-
+        
         $format.RemoveAt( $format.Count - 1 ) ## Remove "Gap (s)" as not relevant now
-
+        
         if( $script:vmwareDEMNonBlockingPhases -and $script:vmwareDEMNonBlockingPhases.Count )
         {
             ##"$productName Phases"
@@ -4720,7 +4735,7 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
             ( $Script:AppVolumesOutput | Sort-Object -Property StartTime | Format-Table -Property $Format -AutoSize | Out-String).Trim() -split "`r`n" | ForEach-Object { "$indent$_" }  | Tee-Object -FilePath $SaveOutputTo -Append
             '' | Tee-Object -FilePath $SaveOutputTo -Append
         }
-
+        
         if( $script:ivantiEMNonBlockingPhases -and $script:ivantiEMNonBlockingPhases.Count )
         {
             '' | Tee-Object -FilePath $SaveOutputTo -Append
@@ -4729,14 +4744,14 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
         }
 
         if( $CSEArray -and $CSEArray.Count )
-        {
+        {         
              $Format.Add( @{Expression={ $_.GPOs };Label="GPO(s)"} )
             'Group Policy Client Side Extension Processing' | Tee-Object -FilePath $SaveOutputTo -Append
             '' | Tee-Object -FilePath $SaveOutputTo -Append
             $lastToFinish = $null
             [hashtable]$GPOTotalTimes = @{}
 
-            [System.Collections.Generic.List[psobject]]$CSEtimings = @( $CSEArray.Where( { $_.Id -ne '4016' } ).ForEach(
+            [System.Collections.Generic.List[psobject]]$CSEtimings = @( $CSEArray.Where( { $_.Id -ne '4016' } ).ForEach( 
             {
                 $CSE = $_
                 [double]$duration = $CSE.Properties[0].Value / 1000
@@ -4770,7 +4785,7 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
                     PhaseName = $CSE.Properties[2].Value
                     StartTime = $CSE.TimeCreated.AddMilliseconds( -$CSE.Properties[0].Value )
                     EndTime   = $CSE.TimeCreated
-                    Duration  = $duration
+                    Duration  = $duration 
                     GPOs      = ($GPOs -join ', ').Trim( '[, ]') }
             } ) )
 
@@ -4782,7 +4797,7 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
                 ''  | Tee-Object -FilePath $SaveOutputTo -Append
             }
             ($CSEtimings | Sort-Object -Property StartTime | Format-Table -Property $Format -AutoSize | Out-String).Trim() -split "`r`n" | ForEach-Object { "$indent$_" }  | Tee-Object -FilePath $SaveOutputTo -Append
-
+            
             if( $GPOTotalTimes -and $GPOTotalTimes.Count )
             {
                 '' | Tee-Object -FilePath $SaveOutputTo -Append
@@ -4790,7 +4805,7 @@ if ($AppXLoadedPackageEvents.count -ge 1) {
                 $GPOTotalTimes.GetEnumerator() | Where-Object Name | Sort-Object -Property Value -Descending | Format-Table -AutoSize -Property @{n='GPO';e={$_.Name}},@{n='Time Spent (s)';e={$_.Value}} | Tee-Object -FilePath $SaveOutputTo -Append
             }
         }
-
+        
         ## wraps text for reasons unknown - bug
         if( $sharedVariables.warnings -and $sharedVariables.warnings.Count )
         {
@@ -4868,17 +4883,17 @@ if ($PrepMachine -gt 0) {
     {
         Write-Warning "Security event log already has max size of $($logSize)MB so not changing"
     }
-
+    
     if( $securityEventLog.LogMode -ne 'Circular' )
     {
         Write-Warning "Security event log was previousy not set to overwrite (was $($securityEventLog.LogMode))"
     }
-
-    wevtutil.exe set-log Security /retention:false /autobackup:false $size
-
+    
+    wevtutil.exe set-log Security /retention:false /autobackup:false $size 
+    
     Write-Debug "Enabling Process Command Line Auditing"
     $null = New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit" -Name 'ProcessCreationIncludeCmdLine_Enabled' -Value 1 -PropertyType 'Dword' -Force
-
+    
     Write-Debug "Setting log sizes for teritary event logs"
     [string[]]$eventLogs = @( 'Application','Microsoft-Windows-Winlogon/Operational','Microsoft-Windows-Shell-Core/Operational','Microsoft-Windows-Shell-Core/AppDefaults','Microsoft-FSLogix-Apps/Operational','Microsoft-Windows-AppReadiness/Admin','Microsoft-Windows-WMI-Activity/Operational','Microsoft-Windows-PrintService/Operational' , 'Microsoft-Windows-GroupPolicy/Operational' , 'Microsoft-Windows-TaskScheduler/Operational' , 'Microsoft-Windows-User Profile Service/Operational' , 'Microsoft-Windows-TerminalServices-LocalSessionManager/Operational' )
     ForEach( $eventLog in $eventLogs )
@@ -4955,14 +4970,14 @@ if ($PsCmdlet.ParameterSetName -like "CreateOfflineAnalysisPackage")
     wevtutil.exe export-log "Microsoft-Windows-TerminalServices-LocalSessionManager/Operational" $(Join-Path -Path $global:logsFolder -ChildPath 'Terminal Services LSM.evtx')
     wevtutil.exe export-log "Microsoft-Windows-Winlogon/Operational" $(Join-Path -Path $global:logsFolder -ChildPath 'Winlogon.evtx')
     $global:dumpForOffline = $true
-
+    
     # Dump services so we can tell if Citrix, VMware, AppSense, Immidio
     Get-Service | Export-Csv -Path (Join-Path -Path $global:logsFolder -ChildPath 'Services.csv') -NoTypeInformation
 
     #region FSLogix Offline Dump
     [string]$FSLogixLogDir = $null
     try {
-        $FSLogixLogDir = Get-ItemProperty -Path HKLM:\SOFTWARE\FSLogix\Logging | Select-Object -ExpandProperty Logdir -ErrorAction SilentlyContinue
+        $FSLogixLogDir = Get-ItemProperty -Path HKLM:\SOFTWARE\FSLogix\Logging  -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Logdir -ErrorAction SilentlyContinue
     }
     Catch {
         #LogDir registry value not found. Set to default:
@@ -4972,7 +4987,7 @@ if ($PsCmdlet.ParameterSetName -like "CreateOfflineAnalysisPackage")
     if ($FSLogixLogDir.Length -eq 0) {
         $FSLogixLogDir = Join-Path -Path ([Environment]::GetFolderPath( [System.Environment+SpecialFolder]::CommonApplicationData )) -ChildPath 'FSLogix\Logs'
     }
-
+    
     [string]$FSLogixProfileLogDir = Join-Path -Path $FSLogixLogDir -ChildPath 'Profile'
     if (Test-Path -Path $FSLogixProfileLogDir -ErrorAction SilentlyContinue ) {
         Write-Verbose "Found FSLogix Profile Log directory."
@@ -4998,11 +5013,11 @@ if ($PsCmdlet.ParameterSetName -like "CreateOfflineAnalysisPackage")
     {
         if( ( $appvolumesKey = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' -Name DisplayName -ErrorAction SilentlyContinue | Where-Object DisplayName -match 'App Volumes Agent' | Select-Object -ExpandProperty PSPath ) )
         {
-            $global:appVolumesVersion = Get-ItemProperty -Path $appvolumesKey -Name DisplayVersion | Sort-Object -Property DisplayVersion -Descending | Select-Object -ExpandProperty DisplayVersion -First 1
+            $global:appVolumesVersion = Get-ItemProperty -Path $appvolumesKey -Name DisplayVersion -ErrorAction SilentlyContinue | Sort-Object -Property DisplayVersion -Descending | Select-Object -ExpandProperty DisplayVersion -First 1
             ## insert version number in file name so we can pull it out when processing since we do different things for different versions
             ## TODO also need to put WaitForFirstVolumeOnly in file name so can pull out when running offline
             try {
-                if( ( Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\svservice\Parameters | Select-Object -ExpandProperty WaitForFirstVolumeOnly ) -eq  0 ) {
+                if( ( Get-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\svservice\Parameters -ErrorAction SilentlyContinue | Select-Object -ExpandProperty WaitForFirstVolumeOnly -ErrorAction SilentlyContinue ) -eq  0 ) {
                     $global:WaitForFirstVolumeOnly = $false
                 }
             } catch {
@@ -5294,7 +5309,7 @@ public class RDPInfo
                 {
                     WTS_SESSION_INFO si = (WTS_SESSION_INFO)Marshal.PtrToStructure((System.IntPtr)currentSession, typeof(WTS_SESSION_INFO));
                     currentSession += dataSize;
-
+                    
 
                     WTSQuerySessionInformation(serverHandle, si.SessionID, WTS_INFO_CLASS.WTSUserName, out userPtr, out bytes);
                     WTSQuerySessionInformation(serverHandle, si.SessionID, WTS_INFO_CLASS.WTSDomainName, out domainPtr, out bytes);
@@ -5309,7 +5324,7 @@ public class RDPInfo
                             resultList.Add("UserName,SessionID,ClientName,SessionName,SessionState" );
                             doneHeader = true;
                         }
-                        if(Marshal.PtrToStringAnsi(clientNamePtr).Length < 1)
+                        if(Marshal.PtrToStringAnsi(clientNamePtr).Length < 1)                       
                             resultList.Add( Marshal.PtrToStringAnsi(domainPtr) + "\\" + Marshal.PtrToStringAnsi(userPtr) + "," + si.SessionID + ",N/A" + ",N/A" + "," + Marshal.ReadInt16( sessionStatePtr ) );
                         else
                             resultList.Add( Marshal.PtrToStringAnsi(domainPtr) + "\\" + Marshal.PtrToStringAnsi(userPtr) + "," + si.SessionID + "," + Marshal.PtrToStringAnsi(clientNamePtr) + "," + Marshal.PtrToStringAnsi(winStationNamePtr) + "," + Marshal.ReadInt16( sessionStatePtr ) );
@@ -5331,14 +5346,14 @@ public class RDPInfo
         finally
         {
             CloseServer(serverHandle);
-
+            
         }
         return resultList;
     }
 }
 '@
 
-#Split User parameter to UserDomain\Username
+#Split User parameter to UserDomain\Username 
 if( [string]::IsNullOrEmpty( $UserName ) -or [string]::IsNullOrEmpty( $UserDomain ) )
 {
     Write-Verbose "Username: $username"
@@ -5354,7 +5369,7 @@ if( [string]::IsNullOrEmpty( $UserName ) -or [string]::IsNullOrEmpty( $UserDomai
 }
 
 ## If we are doing an online analysis and don't have the session ID, we'll try and discover it
-if( -not $PSBoundParameters[ 'SessionId' ] -and $PsCmdlet.ParameterSetName -eq 'Online' -or  $PsCmdlet.ParameterSetName -eq 'CreateOfflineAnalysisPackage')
+if( -not $PSBoundParameters[ 'SessionId' ] -and ( $PsCmdlet.ParameterSetName -eq 'Online' -or  $PsCmdlet.ParameterSetName -eq 'CreateOfflineAnalysisPackage') )
 {
     Add-Type $TSSessions -Debug:$false
 
@@ -5362,7 +5377,7 @@ if( -not $PSBoundParameters[ 'SessionId' ] -and $PsCmdlet.ParameterSetName -eq '
     {
         if( $userSessions -is [array] )
         {
-            Throw "User $DomainUser has $($userSessions.Count) so must specify which one to analyze via -sessionid"
+            Throw "User $DomainUser has $($userSessions.Count) sessions so must specify which one to analyze via -sessionid"
         }
         $sessionid = $userSessions.SessionID
     }
