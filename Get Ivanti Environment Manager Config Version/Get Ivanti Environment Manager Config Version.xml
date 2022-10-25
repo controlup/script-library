@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7a37a7b2-8548-4c1d-aa11-3bbb07c37528</SBAId>
+    <RootSBAId>7b5ebb60-bdde-4596-bab8-bc4a83ce3fef</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636619129359520000</SQN>
+    <Name>Get Ivanti Environment Manager Config Version</Name>
+    <Description>Displays the currently installed Ivanti Application Control configuration. 
+Requires EM 10.1 FR1 or higher.</Description>
+    <Category />
+    <Version>1.1.3</Version>
+    <DateCreated>2018-04-12T01:23:37.807</DateCreated>
+    <DateModified>2018-05-13T15:54:51.04</DateModified>
+    <DatePublished>2018-04-12T01:23:37.807</DatePublished>
+    <LastEditorName />
+    <CreatorName>Landon Winburn</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Q2aiDqMn71GVM3nc65Wnp8vsbZk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAAlFJREFUWEftV7tKA1EQXQKChZ2tRWpLqxT5AiFCav0Df8bGD7AWBEGRiOILCxUfaCNWBkFQRMQHGtBd94x74uzde/duXDGNA4fZzL1zzuTsKwnqB/WoulPtC6Ad4CBYDfoC0f4fQA9QWav8GTIDsGjF8g+zBVrHOoCeEGieNAUTJxM9gX3kMbmRuwPoos5DG0NR2QCHjRtIOWDbhMxYuVsRtO5aKbC+dLuUymEYSp8WNLmdDujNiE7Y+aotxsD5tQHryMke9CBMbq3RkwO60URtvyaCFy8X0eD6oNQYtj7WCjuAsBFBTB6n8bfGEIjZq1lZY+g+U6e0A8Obw/LNMcTo7qjsm7uek4EYZp/mLu0AarBdx+nTqdSfP57lM/vMDPTkAPekEF9sOA2wHd8c4ojDx0PJCC1IsFbYAdgMu/EZgsTA+sD3/mQYLY5bUXOaOl4HIMDgfZ0XvPV0pIY0NLwO4Cn28P6QUBULDMph0VvqSZh6wGjYajZojgRaw+vAyPZI9/H6E6AXHJpbazgdEMSTz7RnxMoyAQ7tgh4k1wFc0byops+no/Gj8ahx3PACr2LsRQ8CHOAir9ZwOxBPTIKt+62vF8xCDDN7jtGLAJfNhYwDGu23tjRfvl5G8zfzcj7NV7EL2Ise9CLApbkzA5gLU2dT0vibAU7qUMvpwNjeWDR5Npn5mWWi6E81cIGTwtRxOtAFzttvQHMmyHXABe7T+221POh9uQ5oYoJret1W8/UwZxxwZR4Tvppr3cxOB2yZx7Z1Ww3Zty7a/f17Xo8+AZjnxf2kUIP0AAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Landon Winburn</Author>
+      <Tags />
+      <Credits>Credits to: Landon Winburn
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>landon.winburn@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>53</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAK2TS0vDUBCFz1rwP8SCtYp0oTvBVfGFtmorZCNITB9WbCJpbCvif/ebSVtfDW6kDMyde+6ZM6eTsXJlaijVSM964dTjHOiQqKhOrGtNHao5lVT3elSops68lmmioWKy4sWJ4y4d1aOeqwbDFEwC/4DINdaB3qhYP2MYw5oo4mbo2QXVCfEE4ypUT+/a0C2/Ch2rxLhkhqrPcEue8svJYmecaI/69rfJYhBPnFL1OU/plC2nKp+6riPNfNJr+trNK3ibueMTFB4E2iH6rmNEFrof+6i405VXu7wukKFO4WwTgVqoGLmKCzqfe22LbEI9cb8CaomrydwfQyfO03RMhOeFFw2/74Mc0Cv74vcmnAs3vqIWO1BswDE3mfeLUPqwdOW3YzZbmZ/GFPxQU/Rpc/vMi8h9rZWw13kZgVto33WF/+2Ice7OZ99eag7Zsxjc0PvbP28+pD+YDN2iwwyM5WfUV81b8e29gcH0/d2jQt6c+/rJlPheF57bVxDhoG1dd/nlmhtdEKbDzh97Gc/c8AMAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>2</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>VupbaMgAn3MtV6wvJcbBAEaJ814=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

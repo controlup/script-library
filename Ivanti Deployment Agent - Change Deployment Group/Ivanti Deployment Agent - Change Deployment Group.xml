@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e2a4edc3-4859-4c51-b613-af417ac3c0b6</SBAId>
+    <RootSBAId>ed04c1dd-5852-4410-bb80-0036dccba56d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636645695063880000</SQN>
+    <Name>Ivanti Deployment Agent - Change Deployment Group</Name>
+    <Description>Moves a computer to a new deployment group using the ccacmd.exe utility on the endpoint. 
+
+Note 1: The Allow unregistration option MUST be enabled in the original deployment group.
+Note 2: The Allow self-registration option MUST be enabled in the target deployment group.
+
+This script requires Management Center 8.6 or higher.
+See https://community.ivanti.com/docs/DOC-68222 for additional details.</Description>
+    <Category />
+    <Version>1.0.15</Version>
+    <DateCreated>2018-06-12T19:19:44.893</DateCreated>
+    <DateModified>2018-06-13T03:15:03.207</DateModified>
+    <DatePublished>2018-06-12T19:19:44.893</DatePublished>
+    <LastEditorName />
+    <CreatorName>Landon Winburn</CreatorName>
+    <Status>4</Status>
+    <CheckSum>NyGCEtX/agHlsC0jVxzXUFw0d74=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAptJREFUWEfVl7trVUEQxm9jYaeFrY/O1kqLVCkk9lZiYWtl4b9gp/+AjZ0BRQJRIhKDEAw+kKAoIoGAiWJ8oKJoUFTuOL/dHe7edfZ4bhI8OPAxe/c133w7c+D2xhb6svdmNyB2j0FvWjpBiN05gT1z/uK/QOcKhOT/GwUgeuyhv7ZRtFNgSnFJ5MqaBDtyL/5297bEtmvRDylgk+Yh9va7yOVXIhdWY3Dsww+RM0sii59Err4ZXGpn28D2NyrAfG79fhpkBgnvbA15cNBcAyr98/UYePadyD4lxAWH70YVMJQonyPP1IPtwVcV2HVD5PTTGOTzzzSvhMLBSZEJJYHxRKEm0jm7uIZyvarA/PsYACN7siTQ+q+4zkX5k3jdwR4PtoavKnD0QXxfbOmrzikBDlkH8BwYJOgO7w4PFthQrwFaT7299aknaU7lZx5VMLoj1EDaj4dMkyI2xlcVMPD+Zigxp4HzuYsvdV8qwp1aN4xpW5QZv6O/EyG7r1GBcvHg7RiEgKaEGd2BUYTsndHvAUGnX8d5xi++xVpifOLR8N2GvypwSEnY2GqC7rDMds/qWLM+uxzXciOw+QPzg3vyROs1UEIDUphkRIuGNzcogZOPY6A1zXr/LZ3TM2RtBCjasLe4d0iB8glcWND0e/uMyLMvMRBG0B3XB8V5/2MkAM6vDM4ZXAVaEUnwCFCMOQGzQKBQwVVgFAKmCE+AlU9g2deeoFEBfCsyevE5pwhzC0XoEBhSAJQq5CSayNCGmLUhZm2I1drwDwU8Ak3ewO/wIdIvJR8iLHyItA5Cgk72oJUCnq9CA3Hf8UVnzcGWKTAq7PyGFTA/Kspzm1bAfFuU5zatQOlrqO3bMgVy33YOH5LnLzKDLjC20Jff2EB7lmirl5kAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Landon Winburn</Author>
+      <Tags />
+      <Credits>Credits to: Landon Winburn
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>landon.winburn@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>35</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO1WXYvTUBA9z4L/4RKKbR9S9VXwYYnfuihtxYetD0uaxmA3qU0rFvG/75mTpLtpYs0KKwoSbprcO/fMmTNzJ+3hCSKssESGHS74nGKD51jzfct5h8ccPZxzJkaOMzzER9zFHc69xxhvWiwelBY2XmLB1QGvKbFzYvt4R9sNPnHeQ4BHmHHG/MW8n5ODwzMkZGT2M5yQxQoTMct5n+GUVilHzLeKsSNS8RQRZca3jGsXjCElViiPCecMwxEzLq3N0lYD2s4x4uw3Dg9DWvl8+qLYFrRYyvsQ3xWXKy+LICCeI1omHgsplxLNq1kackKLARUcauXHXiWPWqbkHZFXIpUsioRzMXeaVhF/Q8W0Inqxbr7WmruyaddmIvuvuntl9jLhFGhFDu9x9P+CjIRaDWsZ6dPmvvYeqnRYaf4+E4NGlFVGPVZjoVfGtUhRVmwckbfiEPGaa4xUEc3cP+VO08ly0cbtNjPYra7sdFveNg0uXfPh8JlPu9LrlP53BzqsxTQTO19cIkXkM9LqpPfxAq/ZLU5VXRO8ZUVN8YF+xlSxWVNO/SLkXsvmUrWYlPXXlXlfHMbC2ZJlgevTs2XM8lsoFQjBfB3L71WUbUpuxai7jt2yN+GK9dW27FnX+XlO8v1OX3GvxTssFUh1qiPlpal8QL2Ta6e4q9o3UTPvFFk3lV4RMxG7OlLvl9+2ecu6U9crLP7lXll9nXvXno7r8b+THquycfn/5ffOo51kU8jf+7/t01jvdIdcqt7wp9jcpDccV7rezUal5vVvnjGwf3GXDKKYht4KAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>09118e41-c2cf-4126-9b49-aa7c12c2a704</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>09118e41-c2cf-4126-9b49-aa7c12c2a704</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Management Server URL</Name>
+                  <DefaultValue>http://ManagementServer.domain.com:80</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>c6cdc4b0-3ae9-4742-8408-eed4afa6ff5e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c6cdc4b0-3ae9-4742-8408-eed4afa6ff5e</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Destination Deployment Group</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>CTEzoT0iEYp6dO8rOTKXyMHpcig=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

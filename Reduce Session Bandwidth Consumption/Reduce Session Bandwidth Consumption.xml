@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d1a4b53b-5ea1-451d-9a7d-9d9ec2656081</SBAId>
+    <RootSBAId>3c7b98a7-caea-4fac-907f-a901c2f3d4a9</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637069451458880196</SQN>
+    <Name>Reduce Session Bandwidth Consumption</Name>
+    <Description>When connecting to a remote session, the more graphics data sent the more bandwidth is needed.
+While modern protocols like HDX and Blast adjust, when task workers have extremely low bandwidth available (less than 1 or 2 Mbps) they might benefit from a simple trick: Reduce the maximum frames per second sent instead of sacrificing image quality and/or responsiveness.
+
+This script modifies the VMware Blast_VDI and Citrix sesison registry keys and therefore it is recommended to implement policies that would revert this to the desired defaults (periodically or upon reconnect)</Description>
+    <Category />
+    <Version>4.5.14</Version>
+    <DateCreated>2019-05-13T16:50:03.597</DateCreated>
+    <DateModified>2019-10-17T03:21:25.92</DateModified>
+    <DatePublished>2019-05-13T16:50:03.597</DatePublished>
+    <LastEditorName>mc</LastEditorName>
+    <CreatorName>mc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>60DaDg0DPuPhv9tdaCWEJ4vXGrY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>mc</Author>
+      <Tags />
+      <Credits>Author: Marcel Calef
+Citrix parameters from: 
+https://docs.citrix.com/en-us/advanced-concepts/implementation-guides/hdx-policy-templates.html
+VMware parameters from:
+https://docs.vmware.com/en/VMware-Horizon-7/7.0/com.vmware.horizon-view.desktops.doc/GUID-220442CF-EA01-470E-A381-1BED9BC0B81C.html</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes>Please review that the first paramaeter is:  Computer/Machine - Workstation.
+
+Last publishing failed to deliver this parameter and revered to Sessin - [Empty] for the value of %1</Notes>
+      <DownloadCount>179</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAL1XaW/bRhDdzwX6HwgBRGQgiFrXnwIYqFPZjtDKcSw5CVK3BS1SMqszJOUD6I/vm7fD5a4kx0iPgJBI7s7O8ebkj+bY/GRemzcmwu8E17fmG3OB1T5WDoMrwnVhMpOatRnhHplXJjELvN+ZHP+VucHayCyxVoJmTtrIXJsH/AtlBFk56Ar83+PttemaD7iXoCxx5TwbbUn2dXoPKRmprKQF3kbgmeNpgtUKqyItgpQMOiyxkm3JeE7KG+4ITcGnCe6JWWE9B88SKyneK3IrKbXaee56Bw45z4t2goL8XmzZkZuZ4yQ0Be1a4b6kHWLhjHxmoJ2StsbMShQfzPBcUrMEK38CeXkTC+8cVhVpplwTraeUJpxvsHNLzhl8UilqGbg+UO4SJ3ZbKOcS2pBgXyzx7ZOrzdWScipKEl2+x090iMw+fn2cXYFizyH7QERyeOOGVl3ThsyMGTsR7oLPXL0sHp2Dg0XSxtYI9r3citbGbwkslVNrchnT63NqKuhn1K1kXC0V5cb7OaNbYkrQ3rR4CW5CneCsaDKmNnVs5pQ9oRafID2hXyuXH6npKDIFtVlpLuX00EKxtHEUBbKHjKaSsq3kFbW1kWX1yJwfRP47nLuD1EIzuY6iP7DTNT0vwsKctXkksmyuyvkJ34VGLJnSh6XHwcos6MM6Z3JFs1QeI/p0TjttvoTY2rxufD13HlkxSyzOmRdrlUb7GrupSrmlHnUW50q99HBJ1b5Cq1dKrRNyqUjf1hjJFdsR/WjzxXpvrZ5rLGvq1N4O7/XMmTk3l/DigOuCccUaYXO1ZP5WWrsOTYwc8ukGQW3rwX9Csx/QjJllsv5DsN4xR5pvC4/GPsXYtVx8bUWGtbbGbEyUC60LFoMxo86u3BKhNWnvWDFmWr/nWj8zrXuZl2lt6iR1KXcRFBHtkvRJEM8HnizxTV2T9raQmqknzl2dFYsPSNd0wzA/Glpbk2srw9y4IOdM87WgNrbO5kE81BSpy4AIGuzWLQ70euG80UOvjsyvnzn3G/aPzVvEldDJ2yk4DGndGf7PsPtPOL0yvyBmBuAU8mzWhWuzbjtWrfdL7732isi7h0RB9hD7P4NT31yBl8wkQ+TBEaPvSmmaXL8KPFDLaLwYdoCm0kd8qrQvLIl/HfPCwVY121FT7vo6xpAb78g6Wb+kVQWeTjemiU3dJfdu8X/i9Z9znh0EvadDjMT+U1TnLtB4g7cud9JAc1kZf3X9h8ySCX0paPeZt3V//ffW+bXJt9GvSUe0M3c1MtEcXbmVptIXQUxsTzY+36+J4zvWAjsVvN2YDp5C6cDD5b/Uva99L9dpXurqY/oP2AUEyy/V/rtHvJpzmgo78nNTT0cV486fyK19E5y6165UeLtNF/K7fqJztXT5sdY+X4eaS4e6tHhuyh4lnXJf9ZsRoZJfSS1iHXM6tR2sbZ65CXyms5JwPEOVkvsJ563WhjdEp0+uM2x6SaT8bv7STiuo2wksROEZ5+qUtg5g0ZA9S/ZPuX/upgXR17e71nfq+nWHfaKjZ0SvbU6x82FT/49hZ9er/37vCftaU7cvia/k74r4V9otN78US69jWYo21pf6NdR8LVkfPj3zhvz3nrAk7Hh1NxMp7103a31hP/N1lFjvQY8R8Ll6VHvpgUtWSPlmam1l0YjxP+LXn82oZvbNdU6PHAIFc3jhvlkszkKxexptpnwfd8nuAWJlwDpip6Bm1ogf4RVzMpFJQ7pKoRPj7qnl/+rzvvdiV9uO6YX6K73PL8gTUA22qtvAfPxsZ7aRYyPpb5AiDAR+EQAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>bc89dc74-9b13-4b4b-bb45-ee4945134dd0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bc89dc74-9b13-4b4b-bb45-ee4945134dd0</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e28caf9e-bfb8-4286-b3e1-6b5c82801e90</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e28caf9e-bfb8-4286-b3e1-6b5c82801e90</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>MaxFPS</Name>
+                  <DefaultValue>12</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(([1-6][0-9])|[4-9])$</ValidationString>
+                  <ValidationError>Please input the Maximum desited Frames per secpond (between 4 and 60)</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>eb2a09ab-728e-4b79-bb93-f0ae742d8a9d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>eb2a09ab-728e-4b79-bb93-f0ae742d8a9d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>IsWorkstation</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5c2a99cd-5501-4354-81ec-a687e7fe7536</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5c2a99cd-5501-4354-81ec-a687e7fe7536</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>citrixReceiverVersion</Name>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5982ba94-1193-4dfa-9bde-0e3447550632</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5982ba94-1193-4dfa-9bde-0e3447550632</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>xdProtocol</Name>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>rrm1NGXvQ8C5Pk5FPAr+sIBGDms=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

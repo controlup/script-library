@@ -1,7 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>4de9d6c8-014d-404e-ba30-cfaa6e46493e</SBAId><RootSBAId>462697a2-ddfa-419f-a30f-0e73551dd821</RootSBAId><StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId><SQN>637799388127184433</SQN><Name>Warn user of high memory use</Name><Description>This is an example of how the 'Show message dialogue' script can be tailored for a specific use case.
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>4de9d6c8-014d-404e-ba30-cfaa6e46493e</SBAId>
+    <RootSBAId>462697a2-ddfa-419f-a30f-0e73551dd821</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637799388127184433</SQN>
+    <Name>Warn user of high memory use</Name>
+    <Description>This is an example of how the 'Show message dialogue' script can be tailored for a specific use case.
 _ClientMetric1 has been set to the Memory (Working Set) from ControlUp and the message includes this metric.
 Use WPF to display a modal dialogue in a user's session with a message, optional title, and solid colour background.
 Take a copy of the script and either add parameters to use as a regular SBA,  or set the defaults in the Param() block so it can be used in an automated action.  If you have created parameters, setting default values for these will also allow use in an automated action.
-Unless -showForSeconds is specified and the value is less than the script timeout, it will timeout and show an eror but if no other errors are shown, the message will have been displayed</Description><Category /><Version>1.11.48</Version><DateCreated>2021-05-07T18:37:22.123</DateCreated><DateModified>2022-02-07T15:57:44.04</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Ton.de.Vreede</LastEditorName><CreatorName>Guy Leech</CreatorName><Status>4</Status><CheckSum>3B5TCxOICw97X7ahRpclkH310t4=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><Icon><IconData /><IconType>0</IconType></Icon><ShareDescriptor><Author>Ton.de.Vreede</Author><Tags>message,user,memory</Tags><Credits>Credits to: guy.leech01
+Unless -showForSeconds is specified and the value is less than the script timeout, it will timeout and show an eror but if no other errors are shown, the message will have been displayed</Description>
+    <Category />
+    <Version>1.11.48</Version>
+    <DateCreated>2021-05-07T18:37:22.123</DateCreated>
+    <DateModified>2022-02-07T15:57:44.04</DateModified>
+    <DatePublished>2022-02-07T16:09:15.5</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>3B5TCxOICw97X7ahRpclkH310t4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton.de.Vreede</Author>
+      <Tags>message,user,memory</Tags>
+      <Credits>Credits to: guy.leech01
 Original code by:
-Taken from:</Credits><AllowExposeEmail>false</AllowExposeEmail><ContactEmail /><DownloadCount>10</DownloadCount></ShareDescriptor><ExecutionDescriptor><AllowedEntitiesEx>4096</AllowedEntitiesEx><AtomicEntityEx>4096</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>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</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>0</AltCredentialsType><Timeout>300</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>2</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>2</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>5080ab40-5430-4147-8007-626ac70b0e87</string></key><value><SBAArgumentDescriptor><ArgumentId>5080ab40-5430-4147-8007-626ac70b0e87</ArgumentId><ArgumentType>1</ArgumentType><Name>Ttitle</Name><DefaultValue>High memory use detected</DefaultValue><ArgumentNumber>2</ArgumentNumber><ValidationString /><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>c3b5988b-8643-4c08-bf19-298375ca9afc</string></key><value><SBAArgumentDescriptor><ArgumentId>c3b5988b-8643-4c08-bf19-298375ca9afc</ArgumentId><ArgumentType>1</ArgumentType><Name>-fontSize</Name><DefaultValue>-fontSize</DefaultValue><ArgumentNumber>3</ArgumentNumber><ValidationString>^\-fontSize$</ValidationString><ValidationError>Please do not change this value as it is used to make fontSize a named parameter.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>361b51cd-1788-42ad-a2d8-25751f7be5fa</string></key><value><SBAArgumentDescriptor><ArgumentId>361b51cd-1788-42ad-a2d8-25751f7be5fa</ArgumentId><ArgumentType>1</ArgumentType><Name>Font Size</Name><DefaultValue>20</DefaultValue><ArgumentNumber>4</ArgumentNumber><ValidationString>^[1-9]\d*$</ValidationString><ValidationError>Please enter a number for the font size.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>e81217a2-d0eb-4619-9793-921c2f52dd17</string></key><value><SBAArgumentDescriptor><ArgumentId>e81217a2-d0eb-4619-9793-921c2f52dd17</ArgumentId><ArgumentType>1</ArgumentType><Name>Message Text</Name><DefaultValue>Your system is using more memory than expected ({0} bytes). Please close any unnecessary applications.</DefaultValue><ArgumentNumber>1</ArgumentNumber><ValidationString>.+</ValidationString><ValidationError>The message to display in the dialogue. If specifying metrics from the console to be included, use {0} in the string to have it replaced with the first _ClientMetric parameter, {1} for _ClientMetric2 etc.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>78c4f5af-c892-42f5-8965-27dc5fb08555</string></key><value><SBAArgumentDescriptor><ArgumentId>78c4f5af-c892-42f5-8965-27dc5fb08555</ArgumentId><ArgumentType>2</ArgumentType><Name>WorkingSet</Name><DefaultValue>Please change this field to the record property you want to include in the message</DefaultValue><ArgumentNumber>0</ArgumentNumber><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>4096</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog></ExecutionDescriptor><ImportValidationString>LGaVIdbtgFEcInHu5/yLlB5DM4c=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>24</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>5080ab40-5430-4147-8007-626ac70b0e87</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5080ab40-5430-4147-8007-626ac70b0e87</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Ttitle</Name>
+                  <DefaultValue>High memory use detected</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>c3b5988b-8643-4c08-bf19-298375ca9afc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c3b5988b-8643-4c08-bf19-298375ca9afc</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>-fontSize</Name>
+                  <DefaultValue>-fontSize</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\-fontSize$</ValidationString>
+                  <ValidationError>Please do not change this value as it is used to make fontSize a named parameter.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>361b51cd-1788-42ad-a2d8-25751f7be5fa</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>361b51cd-1788-42ad-a2d8-25751f7be5fa</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Font Size</Name>
+                  <DefaultValue>20</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[1-9]\d*$</ValidationString>
+                  <ValidationError>Please enter a number for the font size.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e81217a2-d0eb-4619-9793-921c2f52dd17</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e81217a2-d0eb-4619-9793-921c2f52dd17</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message Text</Name>
+                  <DefaultValue>Your system is using more memory than expected ({0} bytes). Please close any unnecessary applications.</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>The message to display in the dialogue. If specifying metrics from the console to be included, use {0} in the string to have it replaced with the first _ClientMetric parameter, {1} for _ClientMetric2 etc.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>78c4f5af-c892-42f5-8965-27dc5fb08555</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>78c4f5af-c892-42f5-8965-27dc5fb08555</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>WorkingSet</Name>
+                  <DefaultValue>Please change this field to the record property you want to include in the message</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>0z+y8i2NziojRQmM27sztulUJ0U=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

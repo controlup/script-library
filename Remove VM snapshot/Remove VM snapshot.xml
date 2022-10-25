@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>15969a78-5430-4b52-9394-7adf6f431e12</SBAId>
+    <RootSBAId>22228500-9086-4966-bc49-087399fc129a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636898044062324737</SQN>
+    <Name>Remove VM snapshot</Name>
+    <Description>This script removes a named snapshot from the selected VMware virtual machine(s). If the name is left blank it will remove the latest snapshot. The script requires VMware PowerCLI to be installed on the computer the console runs on.</Description>
+    <Category />
+    <Version>6.13.35</Version>
+    <DateCreated>2016-12-07T17:50:10.223</DateCreated>
+    <DateModified>2019-03-31T20:47:12.653</DateModified>
+    <DatePublished>2016-12-07T17:50:10.223</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>fb4OFGxlXBHrvuJQIZ6c2+nrHTs=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>VMware, snapshot, PowerCLI</Tags>
+      <Credits>Credits to: Ton de Vreede
+Original code by: Ton de Vreede
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>80</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>327f6e9f-52c9-46ad-8393-308ea4c9aa0c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>327f6e9f-52c9-46ad-8393-308ea4c9aa0c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>4c1b869e-ef04-4c9a-9eb7-165f76815bd8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4c1b869e-ef04-4c9a-9eb7-165f76815bd8</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f1a752bf-4b68-4b75-bd9c-184b961d8d68</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f1a752bf-4b68-4b75-bd9c-184b961d8d68</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>If snapshot is parent delete snapshot chain</Name>
+                  <DefaultValue>Yes</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(yes|no)$</ValidationString>
+                  <ValidationError>Please enter either 'Yes' to delete the snapshot chain if the snapshot has children, or 'No' if you do not want this to happen.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8b847ec2-d838-47b8-9f09-6adb028d932a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8b847ec2-d838-47b8-9f09-6adb028d932a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCenter server</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>VCenter server name cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>536cab2f-df8a-45b0-8f98-43161375b649</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>536cab2f-df8a-45b0-8f98-43161375b649</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Snapshot name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\s*\S*\s*$|"[^\"]*"</ValidationString>
+                  <ValidationError>If you use spaces, put the entire name in double quotes.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>uHciBYgqqareX1zHXJYxptyQytc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

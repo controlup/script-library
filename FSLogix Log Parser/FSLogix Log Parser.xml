@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a12a3b76-2156-497b-833d-e9bdab1f1c0c</SBAId>
+    <RootSBAId>1648e9b6-e968-467f-a5a6-68e4125d6e45</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637991112666463026</SQN>
+    <Name>FSLogix Log Parser</Name>
+    <Description>Parses the Profile log for FSLogix event for a specific user and displays the results.</Description>
+    <Category>User Environment</Category>
+    <Version>2.3.8</Version>
+    <DateCreated>2019-12-03T11:13:26.233</DateCreated>
+    <DateModified>2022-09-15T15:50:11.13</DateModified>
+    <DatePublished>2022-09-18T14:55:24.5</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>pVvEMBvFC9d9kPU4C1/eP5tw8hE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAA1lJREFUOE9lk11M22UYxf93JtPEmBmdyVAzl2lcsmRjyGJidmGC06Bz3i3xypDsyjkTjVHGnEzcEHRlOMDGAgNUYJgNHKsF7KBA6QdsLW1JO9ry1UJb+kUp/WT8fNuxRONJnuRN/uc87/99znmkf0NpXqb4oprPOk2oLCvsON3LU2f6MC9EeO+qlsPfqRm2B9im/xdbW1uRM7/eo1A0+NvqYz64QdlvJj7ttrC2kaHbsEThpTtUK+3kuNuyh1j2LC0iMCCEVcr7xJNZwhtpvuyfpULlZj21iSeS5Fy/A70rlKPiXVpazIsrr6ksJ342YvPGKKzWcPiyjk6TnyuGFV5TWCkS1Ta9ikzroahOz1GZlrlgnKM1ozT2qC3SB/JJ9par0M2FeezzAXZVadHMR+l2RClodfHiNRdDC+vctId45pKOp8vvMBuI8/jpPk79bkVqVDv5Y8pLLJWly+RDeT9EIvuAUCxBf0MXSnmPmEGa9fQmfzrC9M8ESWY26dAt0q5bQJL95UA94yckBlUxNE+N3kcylSF54VtSJSUk3zpGSlZHOJGhasLH92NeEqLB9UkPbaNzSK+cH+TDZiM3pv3s+dHIfsUMGpuX4At7CD73vKgCQgcO0idsfbXZzstXTQw7w7zdqKNENop0SHhb1n6XW7YA+69McbDVjta+QvClfYRy4l27CRcVc9vm41CbgwNNZsbcUU78YuTdhgmkn4Zm0ThWhVVZKtULXDb4yGY3SdXUsvZOKbHS46QVivwMqsXzase9ZB9s0XvPS8eEmEGNCEabOETEG1sMXm7YRDNB9sczdClu0dOhIprdIiyy0WVdFYP2Exff5SNu5Bo30knFXfaeVaF1hdkhbNx5YZwhZ4R2W5jdzU4KRCnnYnQK8c6LEzxZrsbuW+eJT/r4+LoNqWfSYznVYcYlvH3jhzGKZXq6pwM0GX0cabHxeqtNiIM06Zc5Um/gzXod3kiC9xv0jNoDlnwaRTLzUR6fDSJTu9hIZ1kTv/zNoJvakcW87+F4mtpBJ+alaI6aw8MoP0JuQT5qEamsGKBXeOz0xzkuN3CyZYqVaJLGYTf7vh6kstf2/2V6hBGxqqX145y/aSV3fvaL2xR8pcQibi1rneRY3Vh+mbbpApL0D/JR2EiVs5fkAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>fslogix,logon duration,vdi</Tags>
+      <Credits>Credits to: Trentent Tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>509</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b147e796-8baa-4b7c-bb06-d6b0b3344b10</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b147e796-8baa-4b7c-bb06-d6b0b3344b10</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2276179c-81ad-4a11-a55a-aebd9282fb8c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2276179c-81ad-4a11-a55a-aebd9282fb8c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>SXW3sQphZTsXt4xxBvc0wkv5cNc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

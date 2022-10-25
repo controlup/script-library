@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>79455f02-eb69-4a31-a82d-8ae1c12861ed</SBAId>
+    <RootSBAId>f34ad3b3-c09c-4d17-95e3-1b8d7984494c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636972200800616263</SQN>
+    <Name>Prompt to kill process</Name>
+    <Description>Prompt the end user for a permission to forcefully terminate a process running in their session.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2019-03-20T22:07:14.847</DateCreated>
+    <DateModified>2019-03-20T22:07:14.847</DateModified>
+    <DatePublished>2019-03-20T22:07:14.847</DatePublished>
+    <LastEditorName>asafg</LastEditorName>
+    <CreatorName>asafg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>T5Lv3FKg6dV9ZUKOmhNRKJHczTc=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>asafg</Author>
+      <Tags>process, user experience, resource consumption, taskkill</Tags>
+      <Credits>Credits to: asafg
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>51</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>ZABpAG0AIABzAFAAcgBvAGMATgBhAG0AZQANAA0ACgBkAGkAbQAgAHMAUABJAEQAIAANAAoADQBkAGkAbQAgAGkAWQBlAHMATgBvACAADQAKAA0AZABpAG0AIABvAFMAaABlAGwAbAANAAoADQAKAHMAUAByAG8AYwBOAGEAbQBlACAAPQAgAFcAUwBjAHIAaQBwAHQALgBBAHIAZwB1AG0AZQBuAHQAcwAuAEkAdABlAG0AKAAwACkADQAKAA0AcwBQAEkARAAgAD0AIABXAFMAYwByAGkAcAB0AC4AQQByAGcAdQBtAGUAbgB0AHMALgBJAHQAZQBtACgAMQApAA0ACgANAAoAaQBZAGUAcwBOAG8AIAA9ACAAbQBzAGcAYgBvAHgAKAAiAFkAbwB1AHIAIAAiACYAIABzAFAAcgBvAGMATgBhAG0AZQAgACYAIgAgAGMAbwBuAHMAdQBtAGUAcwAgAGUAeABjAGUAcwBzAGkAdgBlACAAcgBlAHMAbwB1AHIAYwBlAHMAIABhAG4AZAAgAG0AYQB5ACAAYgBlACAAaQBuAHQAZQByAHIAdQBwAHQAaQBuAGcAIAB0AGgAZQAgAHcAbwByAGsAIABvAGYAIABvAHQAaABlAHIAIAB1AHMAZQByAHMAIABvAG4AIAB0AGgAaQBzACAAYwBvAG0AcAB1AHQAZQByAC4AIABJAHMAIABpAHQAIABzAGEAZgBlACAAdABvACAAYQBiAG8AcgB0ACAAaQB0AD8AIgAsADQALAAiAEMAbwBuAHQAcgBvAGwAVQBwACIAKQANAAoAaQBmACAAaQBZAGUAcwBOAG8AIAA9ACAANgAgAHQAaABlAG4ADQAKACAAIAAgAFMAZQB0ACAAbwBTAGgAZQBsAGwAIAA9ACAAQwByAGUAYQB0AGUATwBiAGoAZQBjAHQAKAAiAFcAUwBjAHIAaQBwAHQALgBTAGgAZQBsAGwAIgApAA0ACgAgACAAIABvAFMAaABlAGwAbAAuAFIAdQBuACAAIgB0AGEAcwBrAGsAaQBsAGwAIAAvAFAASQBEACAAIgAmAHMAUABJAEQALAAwACAALAAgAEYAYQBsAHMAZQANAAoAZQBuAGQAIABpAGYA</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>30</Timeout>
+      <ScriptType>2</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>15cf7786-21d3-4671-8940-404b24049653</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>15cf7786-21d3-4671-8940-404b24049653</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>68a149b6-76eb-4a79-8186-f51b37ef20ee</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>68a149b6-76eb-4a79-8186-f51b37ef20ee</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>NHuZb1HRnP0XbyoRPPaAO6RPcMs=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

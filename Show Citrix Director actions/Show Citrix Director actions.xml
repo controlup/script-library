@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>f6214b1f-c561-40bc-afb3-be52deabbeb9</SBAId>
+    <RootSBAId>c6e783de-8be9-4672-9833-8ba36dcd48b4</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789296352400000</SQN>
+    <Name>Show Citrix Director actions</Name>
+    <Description>Show the Citrix Director actions performed in a given time window, optionally filtered on a specific user. Use this SBA to see what actions have been taken which might affect end users such as logging them off.
+Arguments:
+  Start - optional time to show actions from. Can be specified as a date/time or as a number of units of time back from the present such as 7d or 1w where s=second,m=minute,h=hour,d=day,w=week,y=year (default is 7 days)
+  End - time to stop showing actions after. Can be specified either as a date/time or a number of units of time from the start value specified. (default is the current time)
+If date/time values are used, they must be enclosed in double quotes, e.g. "02/02/2018 08:00:00"
+  Username - optional name of a user to just show changes for</Description>
+    <Category />
+    <Version>1.4.6</Version>
+    <DateCreated>2018-10-29T12:49:26.497</DateCreated>
+    <DateModified>2018-11-26T21:15:31.71</DateModified>
+    <DatePublished>2018-10-29T12:49:26.497</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>rjQkq1RXiRT4FGiHEuI0RDUm/o8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Citrix,XenDesktop,Director,Auditing</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>95</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>53cf6894-cef5-437d-9060-a444e94b9606</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>53cf6894-cef5-437d-9060-a444e94b9606</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Username</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d31ab1ac-c55d-42df-8dad-535fc060218a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d31ab1ac-c55d-42df-8dad-535fc060218a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>End</Name>
+                  <DefaultValue>Now</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>..+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>45505053-fe73-4a94-8e8a-59a95b57740c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>45505053-fe73-4a94-8e8a-59a95b57740c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Start</Name>
+                  <DefaultValue>7d</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>..+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>+ZjxDqIitBjb+Hn6DLeNrOI2+/A=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

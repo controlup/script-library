@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>39a2a4ad-0bee-4fda-b1f0-8ebbcb72f4c3</SBAId>
+    <RootSBAId>534de3e1-3558-438c-9535-23cd69ea9ad3</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636813429993668000</SQN>
+    <Name>Show Citrix Receiver OS Platform</Name>
+    <Description>Show the client device Operating System type form for a specific user session.
+Use this script without requesting the display of the Receiver version to get the results grouped by client OS (available only as a ControlUp Script Based Action). 
+
+Categorization of the Client OS is accomplished by querying the Citrix VDA or XA65 worker for the ClientPlatformId registry value in the appropriate Citrix ICA hive for that user session and follow the conversion described in this document:
+https://www.citrix.com/mobilitysdk/docs/clientdetection.html
+</Description>
+    <Category />
+    <Version>2.8.23</Version>
+    <DateCreated>2018-12-08T17:27:32.703</DateCreated>
+    <DateModified>2018-12-16T13:44:06.983</DateModified>
+    <DatePublished>2018-12-08T17:27:32.703</DatePublished>
+    <LastEditorName>Marcel Calef</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>md063ZCv385TxmNViuEfTxpvUzw=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABSxJREFUSEuNVftP01cU5z9YGeW1gRQBeUyBIEJ5CS2DCUh5lUehLdBCkTfMCTFxiTB/MPMXZ1ziIlHIjEtgEEXZD+J4jYQoD00MyAjwgwiL0hHBuDBBP7vn0CIIbvs0J+k9957zOa97vzb4DwwPD+PKlStobGxEXV0dS0NDA5qamnDv3j3LqQ/jgwRtbW0oKChAUVERDAYD/8/Pz4fRaER1dTXKy8thMplY9+O1axarndhB8PLlS5SWlrJjMi4rK0NHRwceP36MpaUljI2NMUltbS1LTU0NTMUmGMV5s9ls8fIO2wgWFxeRlZXFDnQ6PTvbDXl5ee8IhFRVVuLYsWNIT0/H3NxTy6kNbCPIVGcKx1qOeis6Oztx8uRJ6PV6ZGdnc4ms0VdVVXG5SgWB0VgEVUoK1tfXLZZbCOpF87JzcqDVai0aYFRkkJqayjoqV74+n+teW/slai3OKyoqUFZaBlOJCQajARqNhgmtYILJyUnEx8cjLi4Ozxef88bdX+8i4UgCNzg3N5cbOTo2ys03FhmE80rhSDgX2ZaUlAidkQeBgomL+3yzvExQX1+PhIREfHPmDCupF8pYJR+ur6tn3VaoMzJRXlbBw0AZ0UAUCuc6nU4EoxFZp6DUUmYmiIyMgkKhwO8iE8Lx48c3mi2it+L+8H2cPn0aOr2Oh4CiLi4u5v8UuV6rg0ZkSnZpaWkIDQ1lO5upqSmER4QjIiKSFW/evEFEZCRUycl8yQjt7e1QigCSkpLYuEiUw2gwIk+bJxzSYFDkuVCrM3DkyBdQqVQICwvDw4cPYdPX2we5XM7MhOGRYcTGxkKpVPKaEB0djeRkFYaGhrgPaalpyNHk4MRXJ/DDpUtIOnoUGRnp3OCWlhZERUUhXBB03e6Cza2uWwg+GMypE3p6ehATE4P4uHheL/yxwAYmUzGvCTU11VDEKDA/P89rlSoZ0cLmTvcdXtOdCAoKQmtrK2y6u7sREBiIxMRE3hwZHWH2kNAQvBU/QvThaMSKjJqbm3H9p+ucIZXACrk8lG0GfhvgtVqthv9+f9y4cQM2ExMT8PPzw759+3iTnO4/cADh4eG43XWbdT29PQgICODGkQT6B6Drly7e6+vr5RL7+X2GV3+9Yp2fry98fX34MeQp8vLygre3N/r7+/kA3VCKUC7k7duNLKanp3Hu23M4e/YsJsS7ZEVU1GFxTs6NJ4yMjMDD0wNubm5sywQ0Zj4+vsjKzuRD5iUzvERGYcKQ6v9k7gnrt+LZs2dQKBVcHnd3d8wvbPSjoLBAVMMbGaJMBCagcXR2/kSIMwYGNuo4ODiIPXtccSg4GHs9PHgUz58/z1JYaBBO93IjXVxcNpv74MEDODo6wMnZCb29vaxjAgI9Yh4ennB1cYX5TzP34tH4IxwUBJ6eniJDH+4TiY8oJ+kCxXDQUBCWV5bhLnPnYJISk1hH2CRYXl6GTCYTJKJ+MjfMzs5adoCbnTdRVV2Fo2LeSeiB+7mj3bILzD2d47pTqVxcPt32XdgkIIyPj3OZZG4ySD6SoKGxAat/r1p2d+L12mtuukQi4aZKpfaiTNu/IdsICDMzM/AXYyqVSkU9HSGxlUCTk43vLlxAq3hJW9tacfH7i9CK74atrS0cHRwgdbDnKaRX+X3sICCsra3xR97JyUkQ2MLOTiqcSTgripZI7T624z17eym+PnUKq6u7Z7orgRUrKytovnqVv2R0wShKkpBDIfyUN12+jBcvXlhO745/JXgfdHGsF+//AfgHlDxz8bEW9wUAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags>citrix,receiver,xenapp,xendesktop</Tags>
+      <Credits>Original code by: Marcel Calef
+Resources from: https://www.citrix.com/mobilitysdk/docs/clientdetection.html</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes />
+      <DownloadCount>131</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAOVY227bRhCd5wL9B0L2gw3UdqPGrqs2BRy7qI3EiRG3ToEqDxJJS0QkkSXpi1rk33vm7FDiUhfLT30oCFJ7mZ09c2Z2Zu2fZEuCFc+pJFJKju8jeh8klhBvIvf45pwfoRfLBFKBvJdrfK8w1kP/VlLIjOVr+QrjQ/QeMFuiFeM39FZGaN2jH3LuvWTUr1oSSAwwdi1TKdCPoVG1TCkTzHapWgFWBZDMiDXBqGoN5A5jDrP+FngSyE9kn/h+56hDl6CtUiHtzojvgTyoDXfs55D+C+2YmCqMlW0RdWTkYYp+ChTz2UUW3W+FSCVTfAcYLWvrcu52B60lESruAUYVk1obYazP/cIlXtkBlnu8CVH18Y2JbILWlKwVxt0pR0tqHoGZjOzX2XhNabfjCWZKQ74LNh0ufU/pvxgYU6792/zpbPQ5WRZHiSEK8aTwcEaZgivmtjov5Gg3veDH7o2cAWtgMfIH2kdySM/qyGfzhOKu4mgZtmZsXxBJTisTxkJOVMr0iMgC4ppr68GOjNxmxOY4aqK9QF/RDi1KAg9VjyytimhnRQ+tyNaN8DRPn0o24y6iHufpvrE8R+/8EUE2xN5jY6TD3YZolbCoQP8AzwOffZ7Ayqp98+MB3hT6E/Ja8lxH8MCB6S7QqkdwxHMQ1+Jsn/uNIVPFmr7zrHXCUzokYx0buwQjOc/diGz3eAJuGyvPzB8dqWfBtnwrL+RY9vBt83vUWHfjMdmxVfvywwzdFffvkbfSpDsNLRdYGzJuInrppuGfPXoit7hy8XBLS1z28rVdN6LiAtb5EouZyN/RZW7NL465RcT/pd+35OcZu9vyC3bLyUk9I13xbN7SqpjsKk+v8LZmeU4jXBlteT7XZ4usDTCfcr3WtpS1LKBGt18h31jmrM6143Js/PeYyV0NGTH6+kuqhDttI4u/vGaZqzkZv2fUmRBNBDu2GVUDjP2JGP1kK/x8oH73JV/MJHP4x/ncl2ibhL4JM/UORgvzqebZT/B4B7oLeceaNELWzuGFMWvEFPJ17bt4lNF/5CM1qI17cg58BXNZC1rShSzYzGsua00sJpSBlvxIXzxyXQDLvsxwb61g4shmd+RXRtgext294qrmv5J5/FzeyFvkjo50oUVrVgk/9sh/10PbtZzdbZy77lIUXYu+iRffesInliOadUeRRWBapbXqaK2tS2QLEvMIUj9oTX1lPJce8pbxERgfqyqfr/+MuSfnyV5Vc30mmlj+L/xX52duu+6j90eN112eim3LA/ObhfrqI89axNpdoP/lSX3HT2h8a9nucUNt7bXaLnk720zTd2s1JZTfTNPLtZpOyJj6ImF+2ETj4VqNrzkWolL1LetPN9R79Azvam0ZMgpjrj2w+Q/y24a7ff+s3S5ntTjeUP/xs1mq/hacYizF83mjndrwx3pbzsHJJWL58Al9Y64MWa+XZ751u7yDD064Q3UX0KyTUUKzpJuf38wn1O/nwMUcsLqaLyKu7noVzlW107/H6+2zXnvrN5qW5bgU6GNEgssHsbG4Sv+yv8/cLk3eFv+DoLJ6Ejueb1ryL6jw6t92EAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>9775fedf-2094-4c6b-baa2-a950256c73f1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9775fedf-2094-4c6b-baa2-a950256c73f1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3c4ed1d7-f29d-40a6-8a4a-37bf52c02586</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3c4ed1d7-f29d-40a6-8a4a-37bf52c02586</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>citrixReceiverVersion</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>51601205-801c-45d7-9afa-7090a1311bb6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>51601205-801c-45d7-9afa-7090a1311bb6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include Version</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\bfalse\b|\btrue\b</ValidationString>
+                  <ValidationError>Please type on of the following:
+
+                                                        false
+                             or
+                                                        true</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>iddC46+xFAuPeobiZ72VFowLK88=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

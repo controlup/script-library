@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>844feb20-6672-43e6-b3eb-f5a0ea2f658b</SBAId>
+    <RootSBAId>f8f337a1-bf6d-4190-8988-04b538f5862d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637275374838819821</SQN>
+    <Name>Show or delete local user profiles</Name>
+    <Description>Finds and optionally deletes local user profiles. The user can provide two arguments - the minimum profile age in days and the minimum profile size. The default operation mode is to display the profiles that fit these criteria. When the "Delete" option is set to "true", the script will delete the profiles it found.</Description>
+    <Category />
+    <Version>2.4.20</Version>
+    <DateCreated>2018-12-26T18:02:53.44</DateCreated>
+    <DateModified>2020-06-10T16:26:39.707</DateModified>
+    <DatePublished>2020-06-12T05:40:18.053</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>c6gJ5X6EBlhJGxATD6ojsKfrimQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>user profiles,disk space,vdi,rds,citrix</Tags>
+      <Credits>Credits to: guy.leech
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>230</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>1800</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>fb9ddb05-55dc-43ee-a342-7d7c1ca2c1e4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fb9ddb05-55dc-43ee-a342-7d7c1ca2c1e4</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Over Size (MB)</Name>
+                  <DefaultValue>500</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Inetger values only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>0b6cc281-22cb-4ff7-a380-80e940a5f073</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0b6cc281-22cb-4ff7-a380-80e940a5f073</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Delete</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(true|false)$</ValidationString>
+                  <ValidationError>true or false only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>4c729db4-651a-4482-ad60-89a3aa03dcc0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4c729db4-651a-4482-ad60-89a3aa03dcc0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Last Used (days)</Name>
+                  <DefaultValue>90</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Integer values only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>LWrty0ztx9xqHt9efvK8kt1sozo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

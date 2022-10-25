@@ -1,8 +1,177 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>ead929fe-696d-4ecd-abeb-35705dfed5df</SBAId><RootSBAId>3621146e-3722-45ea-96ec-0ff104ff2f39</RootSBAId><StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId><SQN>637799380602530183</SQN><Name>Send Teams message on high CPU</Name><Description>Example script for an automated action when CPU threshold is exceeded using the 'Send Teams message on machine condition' script.When configured as an automated action triggered from high CPU use a message will be posted in the configured Teams environment, with a button that can be clicked to open the console in the machine location.
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ead929fe-696d-4ecd-abeb-35705dfed5df</SBAId>
+    <RootSBAId>3621146e-3722-45ea-96ec-0ff104ff2f39</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637799380602530183</SQN>
+    <Name>Send Teams message on high CPU</Name>
+    <Description>Example script for an automated action when CPU threshold is exceeded using the 'Send Teams message on machine condition' script.When configured as an automated action triggered from high CPU use a message will be posted in the configured Teams environment, with a button that can be clicked to open the console in the machine location.
 
 Sends a message to Teams using an Incoming Webhook, with an option to include a clickable button with a URI link.Customize the Message input to use this as an Automated Action for alerts on machine metrics.
 If you want to include a clickable button with your message, ButtonText and ButtonURI must be provided. If either of these is missing the script will return an error.
 Useful for Triggered scripts, fill the Title and message with data from the console as required.
-This script requires a webhook to be configured in your Teams site. See the link on how to do this: https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook</Description><Category /><Version>2.3.37</Version><DateCreated>2021-12-25T14:06:45.84</DateCreated><DateModified>2022-02-07T15:58:17.617</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Ton.de.Vreede</LastEditorName><CreatorName>Ton.de.Vreede</CreatorName><Status>4</Status><CheckSum>ZQ55E/rLwgLX7VG02fkVW/T9TQg=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><Icon><IconData>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9+w2f/wBVeAf8FF/2kde/Zs+CFne+Gtlvq+u6kumRX0sSyLYDypZWdVYFGkIiwoYEcsxB24P4n/Bfwz4d+MfxQg0nxb4q1zQLnxBfQWlpeWukDV3uru5uFjzNvuISo3PuL5YnnjNVP2qvhz4V+CHxH1Twr4b8V6t4q1Hw/qeoaRrD3+grpcNvc2s/kDydtzMZkZll5IjICrwd3y/suWeHNChmdOniK3tLe84unLlaX96/La/46HkVMfKVNuKt8z9MP2B/25viD4m/aE0fwn4m1mfxNpPidpoVNxFH51jKkMkwkjdFBKnyyrI2QAdw27SG9D0v/gtT8NNU/ayX4XppfiMW0utf8I5D4i2RNZSX5m8hQED+Z9naXEYmx1IYqIv3o+aP2FP2m/g9+zZ4V0HX9H8F+P8AWtYfSoo7e81vU7OaWyRkG8RiKONAW6FypfaSAQGYHy8/tFfs2+E/2z3+I9x8NvijHeWXiD+130qHWbKTSIL5Z/NN3HEVWclZf3yxGcR7sLtCAKO/MOF8NjsZWxH1GpGHs/d5ORXqa625u1l52baMoYqUIKPOm763vsfGvgH4saf8O/ip4Z1y6dZovD+t2WpTQRyKJZEt7mOVkXJADEIQM45IzVb9oT4v2vxd+OvjnxfYRT21j4s8R6lrltDMVMkMV1dyzoj7SV3BZADgkZBwa/plu/hj4av7qWafw9oc00ztJJJJYRM0jE5LElckk8k1+bv/AAUP/wCCM1jr/wAYNa8f+DfBNrrdh4lmN7qOn2UaC4sblgPNdIiMyJIw3nZuYPI/y7AMdeSeIuCx2OSq0lSk42TlP3d07fDZPtf07BVy+cIaO6v2Pkv4Ktu+DvhY+ulQH6/IK8h8eWcuo/E/VLaCNpZ7jUXiijQZaR2faqgdySQPxr7n/Z9/4J2fEP4karp+kL4Y1Twd4ftdkE9/q1o9r9jhXj93FJiSV8A7QF2k43MoOa+0vhJ/wSU+Cfwa+LkPjbT/AA9f6jrlnd/b7H+1NRlvILG4yWEyRMdpdWO5WcMUYKy7WAI+gzXj7LMoXsW/aVOXaFmk+ik76fi/LY5qeAq1ddlfqf/Z</IconData><IconType>2</IconType></Icon><ShareDescriptor><Author>Ton.de.Vreede</Author><Tags>message, notification, Teams, trigger</Tags><Credits>Credits to: Ton.de.Vreede
+This script requires a webhook to be configured in your Teams site. See the link on how to do this: https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook</Description>
+    <Category />
+    <Version>2.3.37</Version>
+    <DateCreated>2021-12-25T14:06:45.84</DateCreated>
+    <DateModified>2022-02-07T15:58:17.617</DateModified>
+    <DatePublished>2022-02-07T16:07:40.493</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Ton.de.Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>ZQ55E/rLwgLX7VG02fkVW/T9TQg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9+w2f/wBVeAf8FF/2kde/Zs+CFne+Gtlvq+u6kumRX0sSyLYDypZWdVYFGkIiwoYEcsxB24P4n/Bfwz4d+MfxQg0nxb4q1zQLnxBfQWlpeWukDV3uru5uFjzNvuISo3PuL5YnnjNVP2qvhz4V+CHxH1Twr4b8V6t4q1Hw/qeoaRrD3+grpcNvc2s/kDydtzMZkZll5IjICrwd3y/suWeHNChmdOniK3tLe84unLlaX96/La/46HkVMfKVNuKt8z9MP2B/25viD4m/aE0fwn4m1mfxNpPidpoVNxFH51jKkMkwkjdFBKnyyrI2QAdw27SG9D0v/gtT8NNU/ayX4XppfiMW0utf8I5D4i2RNZSX5m8hQED+Z9naXEYmx1IYqIv3o+aP2FP2m/g9+zZ4V0HX9H8F+P8AWtYfSoo7e81vU7OaWyRkG8RiKONAW6FypfaSAQGYHy8/tFfs2+E/2z3+I9x8NvijHeWXiD+130qHWbKTSIL5Z/NN3HEVWclZf3yxGcR7sLtCAKO/MOF8NjsZWxH1GpGHs/d5ORXqa625u1l52baMoYqUIKPOm763vsfGvgH4saf8O/ip4Z1y6dZovD+t2WpTQRyKJZEt7mOVkXJADEIQM45IzVb9oT4v2vxd+OvjnxfYRT21j4s8R6lrltDMVMkMV1dyzoj7SV3BZADgkZBwa/plu/hj4av7qWafw9oc00ztJJJJYRM0jE5LElckk8k1+bv/AAUP/wCCM1jr/wAYNa8f+DfBNrrdh4lmN7qOn2UaC4sblgPNdIiMyJIw3nZuYPI/y7AMdeSeIuCx2OSq0lSk42TlP3d07fDZPtf07BVy+cIaO6v2Pkv4Ktu+DvhY+ulQH6/IK8h8eWcuo/E/VLaCNpZ7jUXiijQZaR2faqgdySQPxr7n/Z9/4J2fEP4karp+kL4Y1Twd4ftdkE9/q1o9r9jhXj93FJiSV8A7QF2k43MoOa+0vhJ/wSU+Cfwa+LkPjbT/AA9f6jrlnd/b7H+1NRlvILG4yWEyRMdpdWO5WcMUYKy7WAI+gzXj7LMoXsW/aVOXaFmk+ik76fi/LY5qeAq1ddlfqf/Z</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton.de.Vreede</Author>
+      <Tags>message, notification, Teams, trigger</Tags>
+      <Credits>Credits to: Ton.de.Vreede
 Original code by: Samuel Legrand
-Taken from:</Credits><AllowExposeEmail>false</AllowExposeEmail><ContactEmail /><DownloadCount>10</DownloadCount></ShareDescriptor><ExecutionDescriptor><AllowedEntitiesEx>4352</AllowedEntitiesEx><AtomicEntityEx>256</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>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</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>1</AltCredentialsType><Timeout>60</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>1</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>1</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>493c3d2d-2afe-4c8d-943e-766df1983848</string></key><value><SBAArgumentDescriptor><ArgumentId>493c3d2d-2afe-4c8d-943e-766df1983848</ArgumentId><ArgumentType>1</ArgumentType><Name>Message Title</Name><DefaultValue>High CPU use detected</DefaultValue><ArgumentNumber>1</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter a Title for your message.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>0ec0328a-d0d0-41a2-9d27-d2432855ca56</string></key><value><SBAArgumentDescriptor><ArgumentId>0ec0328a-d0d0-41a2-9d27-d2432855ca56</ArgumentId><ArgumentType>1</ArgumentType><Name>Message content</Name><DefaultValue>COMPUTERNAME has high CPU use: CPUCOUNTER%</DefaultValue><ArgumentNumber>2</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter the message content.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>bb7fdb72-6a7d-40c3-b585-ae78420716e3</string></key><value><SBAArgumentDescriptor><ArgumentId>bb7fdb72-6a7d-40c3-b585-ae78420716e3</ArgumentId><ArgumentType>1</ArgumentType><Name>Proxy server if used, else set DoNotUse.</Name><DefaultValue>DoNotUse</DefaultValue><ArgumentNumber>3</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Proxy server FQDN or IP if used, set DoNotUse if there is no proxy server.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>8f15a418-9cd2-4d83-8fe7-8987b48f9169</string></key><value><SBAArgumentDescriptor><ArgumentId>8f15a418-9cd2-4d83-8fe7-8987b48f9169</ArgumentId><ArgumentType>1</ArgumentType><Name>Your Teams Webhook URI</Name><DefaultValue>YourTeamsURIHere</DefaultValue><ArgumentNumber>0</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter your Teams webhook URI.</ValidationError><MaskTypedCharacters>true</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>37d46c78-18df-41c4-9423-3ee28f5959e7</string></key><value><SBAArgumentDescriptor><ArgumentId>37d46c78-18df-41c4-9423-3ee28f5959e7</ArgumentId><ArgumentType>2</ArgumentType><Name>CPU</Name><ArgumentNumber>4</ArgumentNumber><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>256</EntityType></SBAArgumentDescriptor></value></item><item><key><string>6acec627-f553-4cb7-9052-5abaff22bc10</string></key><value><SBAArgumentDescriptor><ArgumentId>6acec627-f553-4cb7-9052-5abaff22bc10</ArgumentId><ArgumentType>2</ArgumentType><Name>sName</Name><ArgumentNumber>5</ArgumentNumber><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>256</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog></ExecutionDescriptor><ImportValidationString>q4vR4UbJcvNzjV7D+ogF6xQdJDs=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>40</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4352</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>493c3d2d-2afe-4c8d-943e-766df1983848</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>493c3d2d-2afe-4c8d-943e-766df1983848</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message Title</Name>
+                  <DefaultValue>High CPU use detected</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter a Title for your message.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>0ec0328a-d0d0-41a2-9d27-d2432855ca56</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0ec0328a-d0d0-41a2-9d27-d2432855ca56</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message content</Name>
+                  <DefaultValue>COMPUTERNAME has high CPU use: CPUCOUNTER%</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter the message content.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bb7fdb72-6a7d-40c3-b585-ae78420716e3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bb7fdb72-6a7d-40c3-b585-ae78420716e3</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Proxy server if used, else set DoNotUse.</Name>
+                  <DefaultValue>DoNotUse</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Proxy server FQDN or IP if used, set DoNotUse if there is no proxy server.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8f15a418-9cd2-4d83-8fe7-8987b48f9169</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8f15a418-9cd2-4d83-8fe7-8987b48f9169</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Your Teams Webhook URI</Name>
+                  <DefaultValue>YourTeamsURIHere</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter your Teams webhook URI.</ValidationError>
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>37d46c78-18df-41c4-9423-3ee28f5959e7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>37d46c78-18df-41c4-9423-3ee28f5959e7</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>CPU</Name>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6acec627-f553-4cb7-9052-5abaff22bc10</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6acec627-f553-4cb7-9052-5abaff22bc10</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>4ZGmO+EuAAcBWMEPgn8upG8MTiI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

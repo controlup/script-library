@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>1804e3d7-9a40-4a62-94d2-da828f11b8e3</SBAId>
+    <RootSBAId>6e52d219-fe93-4b40-9d05-c87325d239dc</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635747938744319692</SQN>
+    <Name>Test App-V Publishing Servers</Name>
+    <Description>Tests if the App-V publishing servers are reachable from the client computer</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2015-04-10T14:10:24.91</DateCreated>
+    <DateModified>2015-04-10T14:10:24.91</DateModified>
+    <DatePublished>2015-04-10T14:10:24.91</DatePublished>
+    <LastEditorName>at-nick</LastEditorName>
+    <CreatorName>at-nick</CreatorName>
+    <Status>4</Status>
+    <CheckSum>+923wNImvnc3DwFEgNkIVoUZOP4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>at-nick</Author>
+      <Tags>App-V</Tags>
+      <Credits>Credits to: Nicholas Cecere
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>nicholas.cecere@ufl.edu</ContactEmail>
+      <Notes>Wil test if a client with the AppV installed can reach the Publishing servers</Notes>
+      <DownloadCount>67</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ip79GutfY/lrTH+N9tcofo2Kfkt/jTe/Rv5rNPT39q9x/Gus6L+f/DVeUpvJr1FSi+bXmNO/y1/j4td4Ta3qX+OS//2Nf43k1/jF/G+q//1u0Xd+/+Cthtp9Rv//nP5yvV3eqjfTzznhXNOnGY1gTn9v3arnlD+9LZZ3gh7DcZr/CsIEvTvanTA1l/S3T1v5fEHjXNOngP+CcF/Qb7fDZuy1F1iYvZb+2uNPfoL+LpieIdabsXezBtwz+v/azs5Hv8YrS9+MscvpsxiUXxL9NKc3Gvr3m8LmKxrv9gfidBtKp7/Gz9D/j3+NGf23/Wt8QZ8t6A35Jvz7za9xTfOJGXlB84FZfUmfVvxZTX9f8xtu3j6ifty4PuJvf5L+Lulv4QN/3D7+4WhuMwrQDeNoWE7AJ9sR7HyeesocPKV/lzRygSkwABeUnjIc886IZuTVr/GcfvqjAp6CLf7/u/0ap9RXzTgce/IATHKSnJx/LrlXM8+ABiw/slDOVMbwf6MzvqA2M+qx5Dd9KhttcsL0yVVKtgcwwegKhoJ2JVFF5LdlCmBe7vDb+a/xi5jyS+6zpN9FzuKc/OP0f1DDULGlXq9/jbvUL+gkGgu/o/9Gx4tWcx4BZqGmd1eM+VT1RskjzxlHo3egZXKiA/6f/hpX9GnLsD+i0b7jv/xPc0sB4b301/jYa7dLf4HC+F74RuhZKV74dMm02f41fsB/VwzTvA88gUlc/4AiGO+Mf15S20J/T2lEldIJtMDI5a+Kx+iwBk9D8kA5UBfYGZqd01s1vy9QQOecRyDzf0Wf4P0ljwdt1gQHfNfQf+c8q+Mo5m947m7SWea/M54rkbkul8Y4M667UmrjOOV2PX+XKYdRb/8a36Z+hRYfEf4ye8CgYBqA5iumqWjQxa8hc5B5cm/o+pI+v+L3G/5EeH/hjWv8a2DUrYVuKLxiHCADEx0/+Fz4xJev8YAG7/7nc+qwxne65+t5M/8PxBDPwxYJAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>6lWnfF2+pBBWgBLtkVrdxcGRvgw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

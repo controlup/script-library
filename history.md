@@ -1,3 +1,28 @@
+25-10-2022
+==========
+## Added:
+### _Export Users from AD_
+<BR><BR>
+17-10-2022
+==========
+## Added:
+### _AVD RDP Shortpath for public networks validation_
+### _AZ Find Potentially Orphaned Azure Resources_
+### _Get Office 365 Details_
+### _AZ Show Current Issues for Subscription_
+### _AZ Show Emerging Issues for Chosen Resource Group or Subscription_
+### _Show FSLogix mounted container details_
+### _AZ Show Resources Not Used in last X days_
+### _AZ Activity logs_
+### _AZ New VM from this one_
+### _Manipulate Citrix Virtual Apps and Desktops Tags_
+### _CheckFix DNS Permissions_
+### _Backup DNS zone_
+### _APPV5 Resync with Publishing Server_
+
+### Removed:
+### _App-V Resync Simple_
+<BR><BR>
 13-07-2022
 ==========
 ## Added:
@@ -65,6 +90,14 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
+
+
+
+
 
 
 

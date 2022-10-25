@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>357f8429-a048-4d31-906f-42d0cbd1cd0a</SBAId>
+    <RootSBAId>50c14c27-e0a8-4ef3-a574-608ea0485d02</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053172399556000</SQN>
+    <Name>HDX Connectivity Health</Name>
+    <Description>The script runs on the ControlUp Console computer and initiates an HDX connection against one or more XenApp servers in order to check the server's health. The script does not perform any actual login activity to the targeted XenApp server.</Description>
+    <Category />
+    <Version>1.12.26</Version>
+    <DateCreated>2016-03-13T11:10:16.04</DateCreated>
+    <DateModified>2016-03-16T13:47:46.863</DateModified>
+    <DatePublished>2016-03-13T11:10:16.04</DatePublished>
+    <LastEditorName>Matan Nataf</LastEditorName>
+    <CreatorName>Matan Nataf</CreatorName>
+    <Status>4</Status>
+    <CheckSum>2B5u6bBKcEUXPRgkn8th1D9oMrI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Matan Nataf</Author>
+      <Tags>Citrix, XenApp, HDX, health check, PowerShell</Tags>
+      <Credits>Credits to: Matan Nataf
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>matann@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>1062</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a6T032/8ayS/xvjXeP1r/D6/xotf48tf4yX9dkb/x6dp5783v8b818jpZ/NrTH+N+tcofo3Vr9HSX4tfI/s13tLnDf2e/RpL+vfbv8bTX+P3pp/TX6Oiv5f03ZRaFvxXSr9V3BJwVvxd8Wuc0/+n9MnvTX8vf41j+nzF3+fUzyX/m/4aW7/Gp4TnjvYy458TgoXv79BfBUOvqO1M35Cepoz1lHDEJ2YEDvLHjDk+z36NkluMlSZPf41TosTJr/GKKPKSRn9G9HnxHpSpf4014QToZuTS6oT/bun7inr8iscqnzX8CdqAdgv6Zk3tZDRm1BhnwfTM+Lvb0j37NS7o/wX3AuwqbiEUwyziZx4d3fCsoO9vku5DlJwRRBnpkn7DJyuGcc79LpQC1/wTY14zzJT+X9GoCx2/UOOSqXcdHalgbrBt6Z2a3s+ZzqD9MCWA+zHhY2bLwIjPRWEp58/kzHvPxzwO44p+K3mUM4aXMVY544zROlz2WWpi420YJuDN6HfD9y9pJK/o/18Q/7+h/7+ilq+9sb4g6IsBXsH8yejCGRQqGlkoea4MB64YZ4FpcL5iOOAhQ60YD4Ef5L2Qd2ItunB+N53d7xF1vj+AhZM5vLnQvzFb4LtrS7FT4gzQ6+Wv8Zx+v0mGRE5POrN6yVw5pu+bX2O384ZP/R367772+yVpjzfUK/4d0tn5r/FOZSi3czJhzrrwqBHnsZLGCh0m8wC9gbGv6Tfp/znpxBe/xu8V7Rk4A/Kc3mhpDI9+jbv03xX/N47owLHqPMD68V/jiH/i/79blPfSX+OzX8PNYaOzKO1f/hrP7Peg4SX1/ZJ7utAZfsayk+s45I0Dsi/mrV9843tbRFW8cefX+CWK8Ymn72DRHG3P6LvjXwM6vqRvch63rwOEriVDBreF1kJmZtgyoPcz7m+L/nvD2LW/xjZhnjGM9Nf4SEf4+xIGBdO8IOx/3yhev++v8V2CdUa9ZDS74JQx4QTcPmIru632YnNPoMyH94b+fnHAWz/O7zs6T7iHJWMC/ZUqJYCNoa/Yx5Qw2idc5Q3w8jVjnxMtR5baoLtQ1tG/1nFiXvxZDfWbsTEp+zIyU0Z7AMJ2R5ZeErTXqt3w5r1fY8/DDtZ4xjDEIoknkfK344Aihc68z+mvSC+csO/ymn579Wv8/qzPT0jvnLE+P6F/v6JPTn8NzGf+a/yiXwMzB/31lKkE2od0/914ZJCN35PsNr5x2hK9f48pVPNYLkgO4zJ75xuTtu8RfDd/YxpLTnRAW6e9xjQicAVaTNjifJ96eER8VhH0mYW+9Q1z7c9Q6y+Zh7Zp5Gu10cD6iqEC522a+Uq56iPqG3hkjGtKsDNuNeb/wNG+l2D0dtd6yIg/4n4+onkE1xhfacrehEB3knHFsOBZXbEECOfFvArjU1xxmzm/B47d+TW6HsRHOsOGapjfF9Tiikb8JdHppxVfjPKZtjIUlL98OuN3UMVoaWmBeZ3RfyKXjfYS57jue7ClgD9VWoqmxfsfdXAf6xyKNvjCyiPafi+Cfay18Fvsm+96tC91HGHvzwNtISMEV657o3pD0M46GA61DblmSyXy9a8hni449jXjk7N/u800dbMrcx5C/PzXgLd0Sm9DcmvCQ0aDaCNnvRS2fM4z6r+xpZrelxsjm74FPyY5eUmcfUwjPiYZjM/4tkJ+zd+MCZp4P/h8yWOZMe0hQ/CaIPUY0cek2WJejGi+98fN90ENbsa3i3tLt52DvRvfFy06tfLh8PS15itqA/3w+6otvGJuhP7/fQP+bNhWXfFIXrPtg374fQneLo1oh35b2e8b+/3414DfCSptE0Xgo62ZBpBryIzRfTIzaDll+opMokeRU8QJ0O4LxjUnDAqCBQ6e8bvg6IX1zN+fX5y/vR3MmYsa4u8J5kZX/2zM6O9GekWkWSRnW6UXVBAP8n3HGpeNWN/wKrYUA+chvGCrkjMMSG7fT4j9N2T1YhYM0MUbnvD8Cz9hXhvijqnl6XO2q9e/xu+qWjvs8ZdEPgNXYn6/Pr6vmdMwE2IBL7itmYsrpgk+ffRryNzFMOvi9E6tbkwnxEbhZOGS8TtTWf7Z5IVvqseY9gvHuHmO4PsjSoLdh/8GzeB7zfCVvsOxKShqPOaYtx560Oa/nx2f8sP9ydD6GI8yrjF+NvyuoV7e1w/bBOdmv2z47Z8LP20Ym5v8tuE3b/bjht+N+3Xd9s1GK/Qg+k5cG3a9Op97PtwX7GsI+dfoh25W4Lsejt/2NPamvIuJjZBBXjMNoD/CSMzXIbGcpnAp/MN+tt7ESpuzQCZi+yW/xv8DNpvWwo4ZAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>6b025c23-596f-4e50-9ff4-3d32e489e7e4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6b025c23-596f-4e50-9ff4-3d32e489e7e4</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>yG8lC51Dft5n/Shrq7KhQMzCLAI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

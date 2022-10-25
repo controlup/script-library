@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>b208169e-16dc-461c-b9f7-26f5a1b98f10</SBAId>
+    <RootSBAId>e10ac2e6-535b-4599-8dbe-1bd318acaca5</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053174440972000</SQN>
+    <Name>PCoIP Bandwidth Usage Details</Name>
+    <Description>This SBA gives a deeper insight into the PCoIP protocol for VDI VMs.</Description>
+    <Category />
+    <Version>1.7.21</Version>
+    <DateCreated>2015-11-26T11:55:39.283</DateCreated>
+    <DateModified>2016-01-03T15:17:17.36</DateModified>
+    <DatePublished>2015-11-26T11:55:39.283</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>8qk4QMQH/NfqFVMo0EUk+CR2too=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>PCoIP, statistics, VDI</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>278</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor />
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>bCy0f+2n58u55FEXXPf6HRN3+pA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

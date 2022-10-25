@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c7cb599b-867c-47b8-aa0c-08c9acb63c21</SBAId>
+    <RootSBAId>da147a1f-c581-459a-a52b-008356675bc0</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053178221008000</SQN>
+    <Name>Enable XenDesktop Maintenance Mode</Name>
+    <Description>Enable XenDesktop maintenance mode for the selected computer(s). Highlight the target VMs, but run it on the broker for the VMs.</Description>
+    <Category />
+    <Version>6.0.8</Version>
+    <DateCreated>2013-11-24T10:15:54.563</DateCreated>
+    <DateModified>2016-02-22T09:58:50.98</DateModified>
+    <DatePublished>2013-11-24T10:15:54.563</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>uDXR3V+ANbqXVCHhR1mVeRSr2Y4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>XenDesktop,Citrix,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>453</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>272</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a/zGv0bya4x/jde/xu/za7z4Nb78NV7Sb2f0f3ya8n+nv8by18h+jcmvUf4aOf31e9O/y1/jKf3b/Bpvf43216h+jRV9uqAWBX3e8rcZ/X/KrRf0/Yx/O6ffavrZ/hpz/ruhfwFxyu/M6JMptVgQtDV/Uv8aW9TmDmEm+L38NY5/jVf0/y8Inzf0/1f0xhnDRq8F/f/aw/mN9gJcFvxbRRiEvde/xiX/m9LYcsb+gn7PvdECq236f8Y4VTxK9DWlnyX9d82Q1oTziv4q9I0Jf37ya3zF+Pz4r3HEP/H/343wruk/UOKYR17Q70saW03vnjM2uaXdZ/T/j2gmhMYfWShnPJIt/v/n1LIlHDFrrxnzFY8EeL+wYz9h+tT07zui5BPG4C33NiY8ZtQK74x/jW/xe3EcU4JfMFVAb4z9hD9v+d01fX6H385/jV9EP383/gw0SulzYP2LvdnB/NRMpfBT8x9wmvGoms6obj8SH+4v4Tcxd1Oa/6Fef/zXAA+ir5Zwr5ly4GTgec78XQafY65n9GnDs59xO2CXKq6G14Cd0FP4ztF0ZFstuZ3AdDw65ZGuGOYVwwb2Gf0fWAiWyw1jMbInvL/LMCvtIWOo4FLBCvLsf1Norxl/vqT3Wm65JrhTbt0QVMzxOIrBdxl3SLLPUeDorwJ90jJGJf2bdUbv5v2jX2MTX3b58H2w8SXye0Sh739wT6fEmUK73Q4P4i/5V3QBtAn4EdByT1oh978b/VWTPmoIqx3CyryFeX3CPASd1CgFAQOzJP8aChqdnPI8LYORdLWhz2mGhwFLtLFwtMxUxu9Beu8yFkamzukzM4IulxkpcpIA2OBo0RATfsuMb87tZ1YDyxjQr6E/YJTERyuaK/QLzStvXDNcyOLY0iyua343+lxoDEn6IpgLmQOjW30t85qxqxmzrg38iLTO7zs4r6K/Zf6HddH7Sc2MMQReC4v5rINVQ7+htzXTHNZsRd9AeguGJlpryZJ9Tv/Bugk9ZeaMTi0YUs2wCracgFTz72IXLrjnry+rP/sy2pVNJ43Gpm7mim396awbbN778NXP/Bqwo+/HV9uE3ZIh9T2sL34No+N/N56dTTT9Ns87Rv/RBu1jNAloGe8ztb0anoZkl6qN3ocaQ1L2krG+ZF7Lv5acmf6Lb2xebzeiofndPKIPmeEf5kybvjbNeAyfUJNBQkFl6HbjV5xz7+JRhbQZnuevqwXMfzdZarFI/w8M0B6ZIg0AAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>fc344a21-93a9-4fad-9b52-e7272879ae11</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fc344a21-93a9-4fad-9b52-e7272879ae11</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer>Please choose the XenDesktop broker that manages the VMs you want to put into maintenance mode.</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>+UObo4S0qKWUciAZH+jk+BmHjuY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

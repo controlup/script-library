@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>56f6cfa4-ecde-4414-8de5-7cc3b72a9cbb</SBAId>
+    <RootSBAId>c64a8902-5227-4a88-9ce9-17977b73a0db</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636899804723631504</SQN>
+    <Name>Get parent process</Name>
+    <Description>Retrieves the details of a process's parent process. 
+A WMI command is invoked to collect the Parent's PID and then used to filter tasklist results
+Additional output options REMarked</Description>
+    <Category />
+    <Version>1.1.5</Version>
+    <DateCreated>2019-04-03T10:26:27.06</DateCreated>
+    <DateModified>2019-04-03T14:50:10.243</DateModified>
+    <DatePublished>2019-04-03T10:26:27.06</DatePublished>
+    <LastEditorName>mc</LastEditorName>
+    <CreatorName>mc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>swOWbIzRF84c1WmNlXXENJ/RpLc=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAkxJREFUWEftlc2rElEYhx0v1/KCtQgEsV2bsNXNoJUQ0kaQID+CNoVG7gRBULRA8duo5V1If0DLoE2LEKJdi4JolxAtWha0KLhF3tNzakbkeBzG0T6g+4OHEZ3zPu+Zc8bjOcxcDPO6NI1GwzsYDM70er2rkOv3+3G+O2r+7DpSvPXroz5CCKPT6SSQvkAq5uG7T3CHRo6Zt2822Wx2C8EtZFNVPg/3vIQT5rCV4tMwWw6Kp8FWbkED40KhsG0OXTveUqnkp/B7VWTDlCYumePXDwUvdrvdA0ViCw08MYevHwreVgU6ms2mSCaTIhwOi0AgMGXoGK7AesvBbO5KAVetWFKtVkUwGBTcrnIAj2AH3AVxVSe1aLVaP2fNrXbsgbuw/jGaWLoHcrmcTqjyHUKwekaj0TaiiSq2iMfjOqGOLLgLogs8hW+qXBKLxXQyHdfBdQyW4gbCL2oD6XRaJ9NxDtYLwl2exJjrbE/UajXh8/nkbtdJLV6BFzYTTsOTkKCBy8Ph8KxhGPLxfgWd/CPswm+NPDcS8Br2QYo/w1M4DatFnu/Mrsjjfg5vnMJ/wqRcLr8tFovvKpXKhH1zv91unzLLOos805E/s9Z4GRQW+XxeZDIZW1Kp1H4kErlH6WtwHmz3gkHxPVWmUq/XRSgUUtfaCfKMeABHYDHMfgfBB1WoEo1GdcWdIt+Ym7AYdvZxnXAe1lX4/X5d4VV4CItx0oBce957XdFVeAyLOWzgn25Aiq3rH2+Af7nZ5/9nCeSsLf5KA8vYfAMezw+lgfDwqAsoPQAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>mc</Author>
+      <Tags>process,troubleshooting,tasklist,wmi</Tags>
+      <Credits>Original code by: Marcel Calef
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes />
+      <DownloadCount>135</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAJVUTU/CQBCdqyb+h8aEoAcleDQh0fgRPajEmHgjVFpgpdDaUtB/75vXLe1SSDSbLZ2PnX3z5pUruZMbeZAX8bDvsY7kUF7hfYLHk94fl+a+SihLScXgd4XtwZryty8+/KEs4FErlVhGsDOs/9yyb7mY9+MIGPERiXhzLGM8fezEwdRmNHFQuxnn8Li3XmO/4/0RvyNkzrF8nA1gG9YzsFaIzFAjIKrY5kZYId6Wezgr8PRR+5Z4F/b8lHFPcsTrNcfscAlfSp+P+AwexaF3pOwiZ07W6CPAMogY1FrgbESmcngSPtVKNvGMjOtpxVv0phV1Z+S7RN6TlnTpLzV37lj1ya3I1mSvhpItDY1hpTWOWvatteO+MrfD6R9b9j5QfwT8X5bFGe/KgPrCKkf5m9PTwym9o0XtGM7gRIayRtygShPfml2k7GSAXDduUH9AfkrUAzlF5sTyV1di86R2suKccniHPBlQB9mO8z2Lu5xROXmfc6/47sgzONMaa6phBL/2qpz9UA/alW/nEdvnnLlVFX36ZC+1SmuqsYN/nUdOopxeyCkoG9fE9yxvsI43mOu4C8WXTH1ymnUEoXzz28p5c4Q5h3Y+htiL7ya2ys7hO3P0XFUa2y81JiOFOiO+hXLpYNpWmKunbkNP3k49tXdyVUzl75y1a3qovrRKAwfyC23mrYUEBgAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>20</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>9def95ff-ef3a-4a01-9faa-f5eefe4f75ae</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9def95ff-ef3a-4a01-9faa-f5eefe4f75ae</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>AVOsfX0cN6pDZ355aE/qq9eNDCE=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

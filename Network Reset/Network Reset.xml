@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>fca122fc-3860-4e2c-a6b5-9504e1e1ab88</SBAId>
+    <RootSBAId>47a9bd69-7c9a-433f-9a48-693b382b17e5</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635483048728454721</SQN>
+    <Name>Network Reset</Name>
+    <Description>Flush the DNS cache, release and renew the DHCP lease.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2014-10-04T19:56:27.717</DateCreated>
+    <DateModified>2014-10-04T19:56:27.717</DateModified>
+    <DatePublished>2014-10-04T19:56:27.717</DatePublished>
+    <LastEditorName>Tom_Danzig</LastEditorName>
+    <CreatorName>Tom_Danzig</CreatorName>
+    <Status>4</Status>
+    <CheckSum>5tYC1FniP/fwDX+PzRIHNdzogXQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Tom_Danzig</Author>
+      <Tags>network</Tags>
+      <Credits>Credits to: Tom_Danzig
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>tom@danziger.co.il</ContactEmail>
+      <Notes />
+      <DownloadCount>451</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>aQBwAGMAbwBuAGYAaQBnACAALwBmAGwAdQBzAGgAZABuAHMADQAKAGkAcABjAG8AbgBmAGkAZwAgAC8AcgBlAGwAZQBhAHMAZQANAAoAaQBwAGMAbwBuAGYAaQBnACAALwByAGUAbgBlAHcA</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>J4HluVn8BSYblnhuNOYiuh3X94U=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

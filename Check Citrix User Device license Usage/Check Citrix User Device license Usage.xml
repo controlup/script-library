@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>8905bfc7-833f-4ed4-b890-9e0bc840f6a0</SBAId>
+    <RootSBAId>67c08976-716e-46a2-8ac4-00acaaa09a38</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637070338684469835</SQN>
+    <Name>Check Citrix User Device license Usage</Name>
+    <Description>The script uses udadmin.exe and display the license(s) checked out for the selected username and/or client device. Note that the script is required to run in the Citrix License Server.
+WARNING: avoid running the script against multiple sessions simultaneously to prevent significant resource consumption in the Citrix license server.</Description>
+    <Category />
+    <Version>1.19.27</Version>
+    <DateCreated>2019-10-03T22:34:27.173</DateCreated>
+    <DateModified>2019-10-18T20:52:43.183</DateModified>
+    <DatePublished>2019-10-03T22:34:27.173</DatePublished>
+    <LastEditorName>mc</LastEditorName>
+    <CreatorName>mc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>kdrzHUo8zt7wg7iaHvroWjYepOA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAIAAACQzIFuAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABdBJREFUSEullntMU1cYwOHetrdCaW8LpVBan1SR51CUp1StAglOBgKKFAu0CIjgYh0MdQ4nbs7x8sFINClMYbMOhJjhfPAssxIQmYLiwIBGBLfpYJNooij72p5ghOIc/nL/OKc953fu+b5zv3tNxibx6tWrly9f9vX1HTlyhMPhmBhDKpV2d3cPDg7CYADNnMREOwy9dOkSeDEMMzU1RbIpcHZ2VqlUjx49QpMn8Yb92bNnJSUlAoEAzX4H4CaCg4NfvHiBFG/y2v78+fPQ0FAzMzM07//g4OBgdAc6O0RjZGTE19cXjZ0WYrG4v79/Qg6QvbCwkE6no4HTJSIiYsIOdPaamhqhUIiGvB+wgMFrwGR0dDQvLw/9+d7gOA6nGbnBDuf6P0+eAa4VNzNiXSwDk3MZKd5LsuSKPbFxaX5esWwi0QKLsxd6urqBXSQSjUff5MCBA2j2m9BoNJIkUUePdHVAPAP7lMR3svF0EleS2A5S19jLwT/n4EkWmGy5P4tkc7ncp0+fIvtUR7C0tDQtLQ11TEzc3dxl8+eAOt+K8u0sUi1Z+lN0SFXIypPuc4ts6EetKLtJPMrbk8VkEQSRk5OD7BOArRkCxePxHB0dx4PmzmbKOXRQl/m53dfUDt/pfqjV9FWevlVUUC8LL+HPyObg610cmebmMDgqKsqIPTMzc2BgQKvV1tfXKxSK3NxcSDikvaulZQPJ+IyNn1rhMdTTNdx9+2FT3b0fy7qP5tzYvb1ZEXVRsqTIZsZmFjVFuok/c7YRO+zo8ePHkZGRVCoVumCHDcKD3lzXUJyauIPEiubzBrSavzqvD9acv1tW3JO7/2b61muydZeDfGq9F1Yt4H1jSYGEJ8QpjNghJvDEpqamghG6Bjs0trgsgIzlWFGqN679s62l/1xVn6qo56s9XR8ndEStaVu1RLt4Xu08drXQrJxHy2BhMQtFh44XT7QDUMLgMAFQlQz2zdI4BUnbx6Ec4lI1yuR7leo7Rfm3s9K7kmM6w1Z1+Lu2u/CbBfRGW9pFW1q1LW0fG0/gsY7/UG7EDjGxsLCAUwTJNOQzOXoT2A9a6uw1cZG3Cr7u3LmtIz6yY43/TT+n227Czlnm7XbEFT5Rp19AxaXEc2YU5uYZsU9m6QeLYi3Nd7CwAitK5YrFV7cntUpDrgZ6Xfdx7PKY1zOX2SMgOgVEK5+A24cFamxpyUx8V+iHd+8/0NnVajUyTQGXissZWBYHV81kNn4k0Sx3b/Zy+HWpqMOe/E1AdAuIDgHRwic0fKKJTzvBpSQxKTL/ZU2t13T23t5eQxrfwhfSjQoLPMeSclpoUeth/4uH/RUR+6odcUN/tdkRWj5Rb0vL5+BSBh7r4/Wd+ow+MGMmT548iY+PR5opsGaz4xe7KTlUlTW1chbzwmxWPZ+4zCea9Reor/Bpp7lUmdA60NdvvMgAugrc1tYGb0hkmoLlzk5b5tgc41JLralneLRzNroQN+iigeyHObjM1zs7O9vgNaCzw9OYkpLy9vgwGYxAJrGXjRdbU8usqYct8XQW9gkTyybxAg7+JYlvtaTLw8IfDP5u8BrQ2QFYAN6NyDQF6xznxzBMd5K4gkkJI83EfJGnwGW17dxNwtlruHb+jt7qip9HR18XdwDZAYhXQEAAFF4kM8YKOiZ3Eoln2gWtDtog2+K3MmKhW8ja8Ky4pKLw6IOS4IyKsxqk0/PaDgwPD8MLFkojkhnD3cUFtfTMEfkotp4oVPXCtXt/g39QWl1LO9JNsAOGrzCJRIJmvxVXV1eZfJcs8WR6liZjb5M0oXhZUFJ+aQVyTbYbgDWGhoaUSiVU+amAglp5tsFTrAyTHg+LPhYZW+Lpv219YgZS6DFufxeqzjY6uUd5+MR5iuUObhsX+WzzC9ysKq9Gf+uZpl3T1F5+pq6isvb8hab6ptbvT13wWKYIiVEO/jHpe2Ya/P3PCGrpgUg2Nnee11yDk41+AsbG/gWzfY7uAiCq6AAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>mc</Author>
+      <Tags>$ClientName</Tags>
+      <Credits>AUTHORS: Marcel Calef &amp; Dennis Geerlings
+Based on the Citrix commands described in:
+https://docs.citrix.com/en-us/licensing/current-release/admin-no-console/license-administration-commands.html#display-or-release-licenses-for-users-or-devices-udadmin</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes />
+      <DownloadCount>114</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>1052928</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1Y7U/bRhh/Pk/a/2BB1CYbNu0mTRNbJyFoV6QWUGm7D4AmkwTwmsRZnNB2NP/7fs/L5c7OhTdpWmXZvjvf8/56/pXW6Vv6hhK5MtqnbXpNz2nLVvTaoUvqU5c+yLigKU3w/ITZO6rwZYLRLt5XWO3indDARiP5nmDsMJQ0A3xIcxtY3tJLOqA3Qvc15cDI0AOhl+Pdp3OMHxmdEa4CmBP6HTOmz/RGdIE1j9ldI9AcUUpjwZvTEBAqwT+4+9QT/kqsD/F1hPlWBItSfwx+tuiEDgFfgp7iS+gFMDGXzFMbmvmZfqIO9oXaOqFXgVaU3xNAVXjOQDXHPZT1DHs+4X4MbKnIVgELj6cYD4VOqMFd8NIFjqHgngIT72OpVZJLzKeQv8J8E1dP9leA7Ab8ZaaFTcGSAl+F8WCJ502hNcGl1FIZsfS5WHszkCQV7aeCmTGUsm+z4R9pAKGyTgIZ0oZ1mG+WaAgs65gzxBjjnD5jbwnYJkdpg16FlXPbOTMPrhawvcCTK9kR2ob1uU6/yVvHe1gdi1erVVoiAfsa2+yZeSnraVek6tsuttbQdrRkP/vvMT2h0yXfW32t456C8wQ898WS59ADr11K5OXAqnZKLGb4qV4yEB2x/7OePYzqqDL9J1gtRSblu1jI2+T8acD5L/Zuibex7RhuA3On8ZHFotOAx5uZRdk324iCE9wdo96VdZXIY/BXk6cfwJNCTiQD9QGtmnpvdndSNiF/XEhzk469TlnXiXn6SGhNTbv1nHlU067zI/WlxLhqWnF7yYoTaErzIMdkIu/VFtTI0VzIOP4SK0wDiCaPhXCfiNbGEhnTBS3FWZhHFJKb2wuPzsSreCfj1gzGlJ7Chgld0x9CZSpx+dI8K6E11ADHSSmSTiRbvAP1uvzDBe9nsr+QqH6IP6+Zn3K2ZY7mDXlu9pj7yHkZyLlvNshv8Yw4d3yHmA8kYjRuGLuvyOonsXhz3rATjSUHF4+0NYkIx0nL6rmj/0w090iea/h6LfBXqDv1iunrpa+Wc8H9PSUS8bdXzlfQ1+rK2bmhdnaCjFABw0Byt3K/j7WPotczRIlGMUO/RTyOMd9faOIIK5VYgX1+R7x1YBCF1TvubiYi82eRwWfRifQ0fauiLFud4v14GUtt9bvuRuOLRFYPV4qui+U4M9+pzx29xHy3b9Ycy9epZKo04GbHpNeORPG9l/icyfcn/zt/rhvV6PlTfEjz3dfFaej3ob2/Zi6fIwLHK3jkWzsv7s34VMB5Vrt3l8uTRlbRaL2u9eStRg+6HDu3aSNbihmN4TGkaxtNT835x1Gjs/O8Z9BCLvG9J9mV89AB6HMe5LuzkD/s3Pak1rg65fXAPZOeJlzF7lpVzE1HXD2uRL+F5PLdhQcXyI4j07Gv0o5qITzFJUox/1veWsMSqWOeNlNWa84j0hwKHj3vOYlcH34lNWcqkuVCUW2tXVUuEDlswXvvaufsxjhuWoez0ZmdLbSCxLWw0bCpr/BpdH/TU27iNx7NG7dADaLR1ZTvDfXtFMR72w/W3AZ8lb01M00NJRrqHfma9AEd9MjsKRmudNFnh5poVoH/nufJvTCussfDsMXsFNfmfTw8psNj2X0hOeYUvdVWVJN1SObkBF8y+g7vDmaON8dJyFUzuo8RwaVkmtOlvimT/qt3i35U6nlw1jkE14VlhdL6xzBveAq8/2O0m65XCj07u3NiKH/PbB3WhrDz+wL8l1Yr0lpV4AzYgq9lEX92+TLWY+vfhGQFrIeMddlzk6FvffqqfwihTrjinAH/hcRmBbz8bWxaLXF9kL9rLdipHeBOZc3/sVBfLe08VYkWSvvvwl7TPH+EdOvWUO+diWT+vLDKLtybvBCdDUVC7nLDiuBPZXEMquOZ+VMqOdufxeLeE56WYjYsrRvR/08qldsdPx2FvFWkZ9HWHbnuUPO/aQUO5/QvwZYYm6QVAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7b9528fe-bd57-4318-8efa-dc497ce3eda4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7b9528fe-bd57-4318-8efa-dc497ce3eda4</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sClientName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d2c46450-6448-4237-aa71-927ab123dfcc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d2c46450-6448-4237-aa71-927ab123dfcc</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8858fac4-365d-4e19-9ae6-5b05caf31632</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8858fac4-365d-4e19-9ae6-5b05caf31632</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>citrixReceiverVersion</Name>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>74ca17cf-ff06-4c0c-b152-6cb75d138351</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>74ca17cf-ff06-4c0c-b152-6cb75d138351</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>PrivateUsage</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer>This script is designed to run on the Citrix License server itself. 
+You must have the ControlUp agent installed in this license server.</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>e4UP/p55dWyoPfSMRgNP7ZqqzOc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

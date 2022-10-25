@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>fdf761ca-e248-4de7-b0a6-abf66dc4c465</SBAId>
+    <RootSBAId>12e9f04a-0dae-40d5-a8cc-6a203ef5417f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789289571392000</SQN>
+    <Name>Show Citrix Studio administrators</Name>
+    <Description>Recurses AD groups found to show all user accounts with any access to Citrix Studio.
+Needs to be run using an account that has at least read-only Studio access.
+Use it to see exactly which users have access and what level.
+Arguments:
+  User Name to Query - an optional username or regular expression to restrict the display to
+
+If a name is specified as a parameter then only that account is reported on</Description>
+    <Category />
+    <Version>1.6.11</Version>
+    <DateCreated>2018-10-24T16:18:57.733</DateCreated>
+    <DateModified>2018-11-26T15:48:10.387</DateModified>
+    <DatePublished>2018-10-24T16:18:57.733</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>ZgsJ+dUvfIS2x/c6D8kXIofPeE8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Citrix,XenApp,XenDesktop,Citrix Studio</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>47</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b6804f41-e522-4578-8c2e-448e6c665fb5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b6804f41-e522-4578-8c2e-448e6c665fb5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>User Name to Query</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>hm545YQFwK6BndfkD+eIwmwZHx0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

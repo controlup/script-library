@@ -1,23 +1,4 @@
-﻿#Requires -Version 3.0
-
-<#
-    .SYNOPSIS
-    This script will publish an App-V application globally
-
-    .DESCRIPTION
-    This script will publish an App-V application globally
-
-    .LINK
-    http://virtualengine.co.uk
-
-    NAME: N/A
-    AUTHOR: Nathan Sperry, Virtual Engine
-    LASTEDIT: 05/06/2015
-    VERSI0N : 1.0
-    WEBSITE: http://www.virtualengine.co.uk
-
-#>
-
+﻿
 $ErrorActionPreference = 'Stop'
 
 # Check if App-V client is installed
@@ -41,66 +22,37 @@ Function Get-AppVClient{
     http://virtualengine.co.uk
     #>
 
-
-$Installed = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | where Displayname -match 'Microsoft Application Virtualization' | Select-Object Displayname
-
-if ($Installed -ne $null) {return $true} else {return $false}
-
-}
-
-$appvname = $args[0]
-
-if (Get-AppVClient -eq $true)
-{
-
-    # Import App-V PoSH Module to make sure its loaded
-    If ( ! (Get-module AppVClient ))
-    { 
-
-        # Find Installation Path
-        $strAppVClient = Get-ItemProperty HKLM:\SOFTWARE\Microsoft\AppV\Client
-        $strInstallPath = $strAppVClient.InstallPath
-	    Import-Module ($strInstallPath + "AppvClient\AppvClient.psd1")
-    }
-
-    try
-    {
-        
-        $allpackages = Get-AppvClientPackage -All
-        $packages = $allpackages | where {$_.Name -like $appvname}
-
-        if ($packages.count -ge 1)
-        {
-
-                foreach ($package in $packages)
-                {
-                    If ($package.IsPublishedGlobally -eq $false)
-                    {
-                         $result = Publish-AppvClientPackage -Name $package.Name -Global
-                         Write-host $package.Name 'has been published globally'
-                    }
-                    else
-                    {
-                        Write-Output ($package.Name + ' is already published globally')
-                    }
-
-                }
-
-        }
-        else
-        {
-            Write-Warning "No App-V packages that match '$appvname' are present on this device"
+    ## TTYE - check if this is the built-in AppV
+    if ([boolean](Get-Command -Name Get-AppvStatus -ErrorAction SilentlyContinue)) {
+        if ((Get-AppvStatus).AppVClientEnabled -eq $true) {
+            return $true
         }
     }
-    catch
-    {
-     
-        $ErrorMessage = $_.Exception.Message
-        Write-Output $ErrorMessage
 
+    $Installed = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | where Displayname -match 'Microsoft Application Virtualization' | Select-Object Displayname
+
+    if ($Installed -ne $null) {
+        return $true
+    } else {
+        return $false
     }
 }
-Else
-{
-    Write-Warning 'App-V 5.x client is not installed'
+
+
+
+
+if (Get-AppVClient -eq $true) {
+    If ( (Get-Module -Name AppvClient -ErrorAction SilentlyContinue) -eq $null ) {
+            # using try/catch can stop the script completely if needed with "Exit with error" - 'Exit 1' (or some other non-zero exit code)
+            # and avoid a long string of errors because the first statement was not successful.
+            Try {
+                    Import-Module AppvClient
+            } Catch {
+                    Write-Host "There is a problem loading the Powershell module. It is not possible to continue."
+                    Exit 1
+            }
+    }
 }
+
+Sync-AppvPublishingServer -ServerId 1 -global
+

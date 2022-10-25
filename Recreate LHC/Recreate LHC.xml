@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a0bcfd03-e9dc-47dc-83f2-f3384db2d9ae</SBAId>
+    <RootSBAId>17c9db7b-51b2-4b09-bd9e-148e3c796072</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635465449308300219</SQN>
+    <Name>Recreate LHC</Name>
+    <Description>Recreate the local host cache of a XenApp Server</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2014-08-28T12:45:00.55</DateCreated>
+    <DateModified>2014-08-28T12:45:00.55</DateModified>
+    <DatePublished>2014-08-28T12:45:00.55</DatePublished>
+    <LastEditorName />
+    <CreatorName />
+    <Status>4</Status>
+    <CheckSum>7yo0o0mb0TDp2Xh7lHLQhjHkwwA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author />
+      <Tags>XenApp, Cache</Tags>
+      <Credits>Credits to: Anonymous
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes>recreate the local host cache of a XenApp Server</Notes>
+      <DownloadCount>299</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>bgBlAHQAIABzAHQAbwBwACAAaQBtAGEAcwBlAHIAdgBpAGMAZQANAAoAZABzAG0AYQBpAG4AdAAgAHIAZQBjAHIAZQBhAHQAZQBsAGgAYwANAAoAbgBlAHQAIABzAHQAYQByAHQAIABpAG0AYQBzAGUAcgB2AGkAYwBlAA0ACgA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>sAVCvIKeguyecz1rPzqDVQxxSJU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0494bed5-07be-4c56-b6bd-2f2116b90321</SBAId>
+    <RootSBAId>ee682d01-81c4-4495-85a7-4c03c88d7263</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637412161121560350</SQN>
+    <Name>Analyze GPO Extensions Load Time</Name>
+    <Description>This SBA runs under the session context of a selected user and shows
+how long each "Group Policy Client Side Extension" took to complete based on the records inside the "Operational" log under "Microsoft-Windows-GroupPolicy".
+
+By default the log size is configured to 4MB,
+That means that this SBA can look back this much.
+Consider increasing the log size to view older entries.</Description>
+    <Category />
+    <Version>9.21.52</Version>
+    <DateCreated>2015-02-09T18:04:57.73</DateCreated>
+    <DateModified>2020-11-13T12:36:23.777</DateModified>
+    <DatePublished>2020-11-17T13:20:12.553</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Niron Koren</CreatorName>
+    <Status>4</Status>
+    <CheckSum>DmjMsP7lbE4BdtRX9EADcXBKkGQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>GPO, Group Policy, CSE, Extension, Session, Logon</Tags>
+      <Credits>Credits to: Niron Koren
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>4265</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b7c423ce-8928-4dda-881b-63c27e7eec75</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b7c423ce-8928-4dda-881b-63c27e7eec75</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>3y1biY/o8/GK6FOYA0jKNe2AdCA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

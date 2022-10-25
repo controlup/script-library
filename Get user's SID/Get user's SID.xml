@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e1dbbd9b-5aa9-4494-934b-f766da1fb6a1</SBAId>
+    <RootSBAId>163faaa7-41e2-4728-8418-741c3b3742a6</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637460763818131034</SQN>
+    <Name>Get user's SID</Name>
+    <Description>This script gets the user SID for the current username. If the same name exists in both the local computer and the domain, both SIDs will be returned.</Description>
+    <Category />
+    <Version>2.1.2</Version>
+    <DateCreated>2017-01-26T09:12:00.067</DateCreated>
+    <DateModified>2021-01-11T18:34:59.37</DateModified>
+    <DatePublished>2021-01-12T19:21:17.143</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Sebastien Le Gonidec</CreatorName>
+    <Status>4</Status>
+    <CheckSum>NZpk5Zj2TvDxPxQSjMXWqcY1BpU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>sid, security</Tags>
+      <Credits>Credits to: Sebastien Le Gonidec
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>563</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>IwAjACAAdwBpAG4AMwAyAF8AdQBzAGUAcgBhAGMAYwBvAHUAbgB0ACAAVwBNAEkAIABjAGwAYQBzAHMAIABmAG8AdQBuAGQAIAB0AG8AIABiAGUAIAB2AGUAcgB5ACAAcwBsAG8AdwANAAoAIwAjACAAdwBtAGkAYwAgAHUAcwBlAHIAYQBjAGMAbwB1AG4AdAAgAHcAaABlAHIAZQAgAG4AYQBtAGUAPQAnACUAdQBzAGUAcgBuAGEAbQBlACUAJwAgAGcAZQB0ACAAcwBpAGQADQAKAA0ACgAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABTAHkAcwB0AGUAbQAuAFMAZQBjAHUAcgBpAHQAeQAuAFAAcgBpAG4AYwBpAHAAYQBsAC4ATgBUAEEAYwBjAG8AdQBuAHQAKAAiACQAZQBuAHYAOgB1AHMAZQByAGQAbwBtAGEAaQBuAFwAJABlAG4AdgA6AHUAcwBlAHIAbgBhAG0AZQAiACkAKQAuAFQAcgBhAG4AcwBsAGEAdABlACgAWwBTAHkAcwB0AGUAbQAuAFMAZQBjAHUAcgBpAHQAeQAuAFAAcgBpAG4AYwBpAHAAYQBsAC4AUwBlAGMAdQByAGkAdAB5AEkAZABlAG4AdABpAGYAaQBlAHIAXQApAC4AdgBhAGwAdQBlAA0ACgA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>/tAziKdqLPem+EF9+HZTNiQpns8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

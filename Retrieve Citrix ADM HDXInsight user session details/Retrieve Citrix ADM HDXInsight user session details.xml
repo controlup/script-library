@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>307cef7a-e644-4830-9b5c-fff3f192e667</SBAId>
+    <RootSBAId>18a75b91-d9a2-43bb-967c-9d6b8c43db1c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637419946771645079</SQN>
+    <Name>Retrieve Citrix ADM HDXInsight user session details</Name>
+    <Description>This Script-Based action retrieves the HDX Insight information for a given user session</Description>
+    <Category />
+    <Version>2.1.4</Version>
+    <DateCreated>2020-11-15T02:46:53.05</DateCreated>
+    <DateModified>2020-11-26T13:36:56.58</DateModified>
+    <DatePublished>2020-11-26T13:36:49.307</DatePublished>
+    <LastEditorName>Esther Barthel, MSc</LastEditorName>
+    <CreatorName>Esther Barthel, MSc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>i8iPnZAWET7kMh+ZgD4U9teXGWk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Esther Barthel, MSc</Author>
+      <Tags>citrx, adm, netscaler, hdx</Tags>
+      <Credits>Credits to: ebarthel
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ebarthel@cognitionit.com</ContactEmail>
+      <Notes />
+      <DownloadCount>174</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>274877906944</AllowedEntitiesEx>
+      <AtomicEntityEx>274877906944</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO0daXMTR7Y/b9X+h1njDdbGkoENlV0S74YzIQHjsg0kS1FaWRLYsWwpOgCH5b/vO/pNnzPTIwmbJKopH5rpfv2ufv2OntbX6or6s/qTaql99ZPaUU/ULvz3EH7wbgbXXTVUZ3D1VVdN4fMUPuPdY/hvDL/fwafb6p56DH870K4Hf8fQmp/21Rv4ydR30OJH+PsQWkzg/mt1RNCO4fMrgDhWp9B7Cp9xtJbG6Z66D5jcVXvQb1cdwO8ngONlYrYJT2bU7gxaZoAZYnhAI+0CDDPS93AfsRVakLcH1FrwfwbjjwkWQr5F9+zrGvS6nre+DeNOATfEKGybAeQJPUeYmboDeIz15wFh/RhG7lq8Q04YujLgAn7qa9g3YHT8aQIG1+n3jbzvUzUCCrl1L4JL2Pdm3rfq2geozEHEvwfY/UqjZJqWDGQyg+ddRyKH0Hqi2zE10pp1BCU+BD4g5uEYE7i3AdqA/L6hGjmuuzDSGHoMCXZIJ0tkmOsHa0Rc/+ppWabeEpSjiIZNCD97DozUOY0nMDeAOw3424VnrwHasQX3IUBqEawBXJnVb6Jnx4Q06A1xk3X3ivoX/X0Bo53C3QHNoTuEe0/TvQEjvqRWu8TVDrTETxuO5F9YT/ukP2OvhVy7xHWD+TZIByUda/s4l+aUOHkOrddJBjMYoajXdzQzRtAbaZ5A79fw37a6Cvw+07jZehST6imNzD2RojPiP9oqtAM9uMYa+lUHB+GV4cszaD8A6DKvcK7iaCP4tKHeAz1taNfUWtIlzXhBI912xnmpW36IjDHRFKC8XsKddU0HQtl0tGpRWV2/VFk91Tq8o3Gvy/sdwGwKv2c0R54ApPsAByVxbul5GV95tvt4YK9G3k/4fYXkWnRJi//BzwPP8k3ofhoM/PEtJ1ujN/D/CWDX1NrwiKzGMT1/71D6tfYV5HOxz2BfNjxeocvnlLtSowXGnhMtecG8zG8w+JX7D5eFpe9DyEiuNPYI1pR0ntd9HK9rWeBMwzYQQm+kS7o9AEgtb261oO2P0O4xtHwE/8e4UqUfTcuCZM48uLiRzDP2aXraDh8T5ROaj7ukBbGnT8B3+Fl7kBeLM3t/h9q7cMd+BH121A/RUXGtnoI1moBHsgVXT3uyA/IEEGYT7g2BIpR519LeFnkEp9BnRP6Q0D2BO3a7Jq1dp/D3TN8d0r0RfGoSF1/ROH2yJn3ojf9tkY+IHusWjYOaj77FjNYQ0f0tGO2ceNEnTAY5v7Y8HoT+sn3V853ta7l+tH0t4lPbV5XfafsGGf3fz71xYxPiduuApDkDvRuQfUE+DC3v9TNaq0bqKyVrtevdxPCN8+Lj+6Uylvin8jnNTzXctv1VuRv3dNJ9IgM93Y+Vaz4fSa7L9Gvl8nls+Pfx/VwzVrW/W6XFy5B3sS9cLu9XeoValsQ7hF18HcSo2ayDOF5Xx80d4p9Yh5mehWeaI8YPGlEEPoG4dUgxdeibxDStrvbsW2tHK2qfWkFUzn5hjOrbtJIiRofUp6+tg9GUuM/gRhO2/rhWCWk+Ip6eKPQFX1VIYeLJAbMAHbrL6/UbmjfYazOHd0bWO6N2JxbXu5WYP6T+G+ov8FNOb8PKieD1PiodpPdb7ZeKHanm3zJkW8TPlxV0ZTBHUNZnOtKL4ZUCgaluFsyspjcvM7XmzMtzWo+LZVa1oq+Dp7RPNm3NoeBDVCPvQ98pWTTWsHozeky8L9dgwZYh25msHVrl98Cvs7ESDvvRskinjP+taIztQ94NKEmBzFLdod/c8yTaFm1GKxgj5D32fJ37O2G8KfKs4peB+IDG6hKvcN15S5zY177qIId8CDom0szAitgrsOAjUtsgfg7gc1PnKc+IYvbb+uQLH5Nn39Ur+MTSmX24HilZPSQzL9mKIqsx0TOgq71dP8I51FECSmVKMI8INlqEU8JkTKvuEPCaWlHOIfm3M5DbADDcIt/7Ovxswc8XOl7Z0jQOc0+hSXwawF/2uCY0t/FZk3zytzryEC43nYimqTFrUrtDwAV5zfqypeLr+HMae0pRpBsVoq34W64bTUtrkE8if1mdy3TA0JLpjECZPDcIJuLeUlmBRmSa0n2dY+hrGxaD2fBsU5HV39FS3de+/jHBQ7qOiYP2qjAG+34LLmmLv+9GR38W0fi7mguHZAlPtE14b/nZof00Oiu1HbaS56SfHT3rwxXEnuvbSmoSbzSuBxRdf0/6iy2+KVhf5VqzYuY1DbGqj+nr2/s18jXjFvirRJj+SmHD9O1iKkw3k9YmuSFOQ/IAcIS/wyy+VgrtQ/TpB4Vr8j2ANdJ29mahpKfkjceelPMbrVpxRtHPIdoRPHuIfh5xg+bIUK8+mYbKK/++07ZRitc69ZScVSzDaOId8W5SdespWbHi59skV7HtbNntiGzLyjZtAY5+HmnL0fsUjO4QRecVGNke9zZ8/tyZsSnjuBnaonE4Mpwm4u5K9RlJBf0NztsITOae2zYNvtRFeWU6IA+hH+CMOb8R2c6uk8P7WVur8rHi80+udUuerIkj7ScIfSn58G9qaXTcHsTudp38wyKxiZ8/cPNR6I93tS3iPvHYt3wO2h7Effh/nHtzqCO8SrlYoFdo44GRwR75mnsqo+xxl3wytjjoBeyS5nW0fNyI1Ni2Lo08VhLBFmeSml4mqUUal8H8yyi304rwpuXFUuXW7o62qydzyX0+q3+PvL4ZYIceWqrMTK9i2qUGaKpJ6A8ea5+uaUUDVTgaDbm1kFa9SJAXR1FiXzhWeqDjbRPpfU6yf5mghZevIX5eRyKnsPbWz3kWtzySgSmzhC0LSpfsWZ+k3Ve/KKxyxOlLtxZhvCGxhsEJNdl8Qu9kRpJhPr8iacZXApeDV2j+9xaOhP2cxjw1WBuG2389uqpiexMR1Kmks8e6zFq6QBSbi9x7Q7wtyhG5PFm0Sr7o+L+H+rfwIKUuve9pZLlv91vAcVW/jtWvrxAtA+1jrarZfK2q2atq9qqa/UevZi9X3m+89ai4Yi2a4a9vRfuuP62q9S7lmU1+ypZ76J8aTGwtqK5CiZ8wpHikfh0q9laF8M/1/B4CbLuOGG8VyjeeV++StT+hUe860mctsat8Lrda1F76FlWkjyjbcURQGY+Xwbj3iHIc1a4o3y3FLB4V237cY9KNQz1D1+D/NvlEpxrKQY7RWmTuxy5fC/fICxoou0LX8laXB1Q3e032CSstO9RqV6+3mBNE23ZIM+aicGDOPSDODshDuGgM+A0OfoOkS7YnZWSzyyC1fbl2p0H5hnQrbq3icyo2X7crtL6l18EZ9S3+tNx6mlit5VXUpLZUt6bm8uw4r4CFvFxetSrkYY90GvMnTMeIfqO/bed7vlNDnTFcy7l+K+DqmjIZRVwv2MvGOYGcHug18lt62terz7LrZ/G3+4pqaCLBV/kuq1UNrbiGJlK+rOrWopU5xj9lpOcKM+u+9+eOVO1RFV2fThWNObKqo63qaJ9GlWRVR0vXqlUdbbl1tLgtvOxK2jD3x+zPH6eaVi+iL6tryd5mhsHvtbrvsD8EKd4OVthlVLv2gqzCct6tF03raEoZNtPh+42TBaplnwb+v51qW7Wu3bYojuvd5dfjPk0q/sgVO/acBrB2TskHx9GPYLx3el+3kcyWM6fa2mNve3Nq9aaqXKva3qq2t6rtrWp7q9rex6ztXZwG3PiE3lX231SpK5lwTj31IM5XMw29+iL/XfStyDMvjsiuBPSs00qLueF5csCcgXxFHttbeuct5td8BuO+U/+AFTUefy6Gg5uHjmOwVlhJOM5jfF+K88TtLiXmE+dP/k3zCCt+2zmeoo3tfNxbVg5lI7AEnHdugW4cwLULWOMsGxBXznUlEbP9A9J7yUfE6WvkmBmfB/OHXcAP31w0d/kdK8bzkOam/x7VRPFe15H1TpXpP9LzEdv/SvPyhrppPZ/q/FNduF3CqE80sVXvkX9hWkyoylrepud59tvUB3neBg1rk4eILcqyJ5dRpfqUq0mi+8urBHH8m1YH+v1XZzjOdFeGVZVmVaX5NHLwqypNulatqjTLqtKk2MTLq9bEMrao3fPWaeTy3zJK4UJ1vad+NJJWNZivWuTuw7pPlKB1wR1ZkmE80N7hcmpE7oiZNSbqmpxEc0YxPvrR03x09tQG1JpP6pFMj2ljx5Dz14EuD8fqakU9iTWdFnK3Z+Vp61d9lo9B/UrHHyOHH985uMrhr3L4F5XD71uWTyzYonn5eqd1Gzi2zeD8IJ80ZFuW8gyhydKZTICx8obWrdy6h7Y9tOcbSva0TslXw3v2CiAtf6Xx8CmfjYTQOuSh8F7dqecjreffkhBaVYw/8eylt2An7Jw02lITN8es8W3KlM3yGWt89Ovqn+pLrX/Xrd/XIr9dPJ/QLl7OKDFuL/Ix/6Opfqhz/JxJe2TxB+OGfdXPd/WzVUVoTynWsaG7487oucsVzO1JRV/o57vF/GzpCtA+YTAkaU6oR6hhnN1rOpEOWiBfdkYDXPx83DY0brwTulVCu2QVL4/CBs2cJuDmPvsrvVli0+/7ziE3XM+UZ6frKce/CcRe22LfC9JUmZ7TJj/F3xPirgl7FJnMoA2vHsYLMf1uBl6CsRtm54KcATXQWWi2oPaefvbNe9o7D6taIZ3xk+G62tcfBvtcXmib8pI0yYz83BoXte+L4AwupAhXVbb8fqVO8sqyM03uo4eP83RG+ok9Xe3H58/1yoqU8OhGb+WthgadCPmQ3uzpQDv834X0XOdw7mm9OXNinu3oaC0Hs31NQzrcVsC3Iq6WUx3HQyCWYRDWtDJanye5xtk5maL66THxiL24t4rPcZAo0T8TwlR7fCi/6DeDzJ0OndvIet6nNQz5FM8Y2VSYjAJy6o6Sd1RCr2kCGn3VgnIVNButD1bxzd1dFe40kiyxzCrkDeK/5kX5dXFxIxQbH/fJIjitW3ks2XPGb/AVw9wnT2KkMxuxnIPt/aR8a8lzxWenSvUx5TtL7DFSTzmV82YPwBtAa3I9t9LLOmWyq2sl6FnuEl+ntA4NCQv2U4pHKustPhaPdUC1dNlzlcrrfRp1RJTzumUiRFlTUk5nQS0Ov0/LP4E6y08dbtSSZtoJ0YgDS9WcW8t4uPU1+1QiPxvViMr+45wrHT9LuqjVss6Ljlcbqk6RLtv9subISvaSF51gyTTGa3hhRavq+1HWnU/V3+kS8vZKNPNTf/7c0PMnPbfKUVxH2VnWjDK5fdrnyqfRck5CMvxn2geXnQX+PEydVeuKK5cxCcy7ez9FMn6fIk1oBjsair8hq0qGu3lu5szxNuIeC9d7it5+rbcX37eRPeW+9y9y57gpTl2Dsmtp79b+pFc3XO+Y+ricWyq+kyYWB5ucFkclSEObLGyX5ijuo5CTHDpE/ynxCN8hMPtfZA/IJvmDbao0H8Mnk3fg3TKHGprkEvh7C45ph8ihjuBOrP00mxTxsA0/ovMO3N0e/HxKGM0Id7zzJWF0pPXiiDjYg3v+fnCklE8+n+meQ4pNbGi2l9POq07u/U0ag/ec8GlP+L76JtnHKcHnnTd8krbwyK65IKfMmeBtzRG3OrwJ987o7uu8nRuF+lAGep1H7p0HTwVnw+uYtDq6vjXKpSVP+LyDKX32YRtNOiNaba7YGlfeMr4Lg/cDcXZp7NwPtcPfkcRVeXt3zmbBDBiT9Mq0Ca3KOz3HDD2H2r9Cfd0MMGpTdHVKfTGr2iavCue5id5tOYxzjtlUHJE33qaMcoesBUrQlUHduexSEde/mH5MdGww0toxJk1pk6dyStLrW7u/inC8Bj9vyWKH1MZ2kW0W8C0GWyQpNpG1qu3ova27ZXPKQO0CBjH9mpJOFe8Q9KVr25RiXbO1qm1B2MxnYUiHscl9sm+n+QhxinxrwW/0cBxkQ3M15WfSIPZDNwmWj4fbwu3tjymrx4yyRce5rhfNUltvqmeqi5c7U+PwWcrFkDvQ43UCZPfUeuFkR++BdOU5jtopt9URadcr7WsMc366kMw63ydsZfa0rZVpamneKY14rLjmw3k6tlgjqluM8zWgmiNlVtFfK2TW9Gkmu94EzyNXF4usE8fRm5p7fb22jiNz2rcm/sx5563YKTapbWWgfYjjKER7FRQe+CNxrsXGlXkf11d3PpXtlyqOEup4j7jrVDxZrO+Jd3uVqre4N2mUS0iqj+/1zqViG/kBLr/GiJ6+QE85v7cIM6mHMU5ZrmspGIf+bgxTf+TwTZReIn96Gn4d6Gn0YPS5occpsk9mZ9V1iFLeK7feskY5Uvx+MckNfiDNmNC8qwP9WhT67ajvZ4/yvmKEDxb3fE3aox34myoLZozUWX3/okwGsl+KoZZzfg1+rtG5aTfoHCeMlDj6k1wxvjfAWn2kc397eTRYxFWxHjeogtZI0JvngPFOQH+61pRFGka2Ta07a/DfDozY9CS4HG6URz02T6q4cg8kOT9Pynybi+ZJuZ9VhycmP2Jis3SexCLji+ZFPDqvw4M7QbSR6bfcZacFcxvX/nrz/wewNKPaVAllYRTUoDfgT8hvTbcG/ioSwr1IquaJmsvp9u3/gRcBy84146GVcesg957tHvU49Bh0yuaO0B7PGTF12CdFmnfyfsvS0iJs02IMQ0mcDl86oU8T7rwKNXiqeJ+kvYusjMY6e0yL1t1YHBCT0JUAX9+37ivZ35WCe5mH5UcM6dZ2GRzxR0+zr0/1+wvVlKNvuE4aKHvTBKN9ynRxdcHdg5RZtsWXVYPex+Tq2YRqL0fqv/r0y+WO8lhxTV5mNK5mH2ckt3VD2+Hi+RZ7F6nKBt61fK4syCWnxDfl2ehqnXExqBPHxfNkdUeMnydRd/RYLiNtvRbvbn5MqnO+KTzxK2Z3F8AoPd9TrM2P1JfK9+HLKOD2XUe2klGpFwssx1utk6NN9/CYyomjN5dPZUoWK8Wf42+dlW9kzpyax0TNky8q4pQN2Zxxb/uS88WL9eo16Wv6oiOlrN5Fc2eZvJq/tlWXV/OPtAivMHf0ZGF+cK1rORQzrBSaiuZKXZrKKrHL0fh0mork9CtBRHy47iR7j80u5r7+3rPFtdtUt5YjUQNvEal+HA5U1feWI/84B6rizy7V28aqo+Nc9HZ4r3K3wkv+jvLCfp0us+p0KV5RdbWvWpr3wTPDN7Pr+Ml+Pa56FPsUyzR/z98JUz3G47w63NTV4fSRwspyCuc4Mjd78vo0EuuB2Ssdq56mcZmr8x/Imyqv2PGuL/Zy7e82CL89R/aubajYOa+vSY8OdQ7LP13NnwH4LRUNxXuA++Shy75qgTdU5n1V3tUup5PgitmnXKDkNgQXfjuAd+TW/b7CxXYfxvcT/h9Uy2WH9poAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>9e5193cb-9a6d-485e-8338-72c9b877be29</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9e5193cb-9a6d-485e-8338-72c9b877be29</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>ADMIP</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>49c0c41b-cfdd-49a8-8c3d-4c58ac4d1601</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>49c0c41b-cfdd-49a8-8c3d-4c58ac4d1601</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HDXSessionUsername</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>274877906944</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>zfwKWFaO52D8RuzagVZFBNbnEV0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

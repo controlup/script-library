@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ae8aafea-091a-4605-af45-d26364a16da8</SBAId>
+    <RootSBAId>d6bab038-df0a-47b5-8676-74e8e0e3b16b</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637711432385565292</SQN>
+    <Name>LAPS - RDP to Local Admin Account</Name>
+    <Description>Retrieves the password for the selected machine protected by the Local Administrator Password Solution, generates an RDP file then connects to the machine. </Description>
+    <Category />
+    <Version>1.4.6</Version>
+    <DateCreated>2020-10-13T23:05:34.16</DateCreated>
+    <DateModified>2021-10-29T22:20:25.823</DateModified>
+    <DatePublished>2021-10-29T22:21:35.867</DatePublished>
+    <LastEditorName>trentent.tye</LastEditorName>
+    <CreatorName>trententtye00</CreatorName>
+    <Status>4</Status>
+    <CheckSum>+yFZKr5cElq37xJWQ80nY2SAbEk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAASBQTFRF////7+/vt7e3qKio0dHR/f39w8PDQ0NDNzc3ODg4cnJy9/f36urqQkJCjY2NRkZG+vr6lJSUPDw89fX1u7u7VVVV/fz5+OKk9NFv+OKi//77+fn5XFxcOTk5uLi49dV97rYZ77wr9dV69NV57OzsdHR0TU1Ns7Oz/v3677on7rYY8sta/fjr77sp6+vrq6ur8vLy+/v7ycnJy8rI77ws7rcb77sojIyMPj4+QUFB7e3tra2t4uLivr6+o6OjaFkw7bUZ+OCf+Pj4YGBgdXV1sbGxiod+w5gf57EZfWcruaVr/PLVhoaGPT070KEe6LIZbVwuS0tLbGxslZWV+fXrt5Iob14u1NTUSUlJ/PHT67Qbc2Etr6+v+fj2SUU7mpqae24FYgAAAAlwSFlzAAAOvgAADr4B6kKxwAAAALlJREFUKFNjwA4YmZhZWKFsEGBj5+Dg5OKG8hgYeHg5QIAPymVgYAbzOfgFoHwGQYiAkDCUzyACERAVE5eQlAIJSMuA+LJy8gqKSspgJSqqQrJq6hqaWto6uiC+nr60AY+hkbGJloKpGQODsLmFpZW1ja2dvYOWlqkjg5MzBwe7i5qrhZu7h6eXNwODNdgGHz1fP/8AjkCgU4LAAsEhof5hQDqcgSECIhAZFQ2iYxgYOCECsXFgOp4BAGpqFuTxd4PyAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>trentent.tye</Author>
+      <Tags />
+      <Credits>Credits to: trententtye00
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>32</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>48f47110-9304-4242-8e61-585d7b80f8b9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>48f47110-9304-4242-8e61-585d7b80f8b9</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>88ORorYdiT/MjyCswiJWmS/SsNc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>77e3ee2f-2185-457e-8eba-b32a6c03e5c8</SBAId>
+    <RootSBAId>fd5d58d3-1e58-47d9-a66c-11a1871bfcac</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789279417508000</SQN>
+    <Name>Cancel pending logoffs</Name>
+    <Description>Cancels any "Message and Logoff" SBAs which are still running on the selected computer(s) by finding the associated PowerShell process and terminating it.
+Arguments:
+  Cancellation Message - A message to display to the users so they can be informed that they will not be logged off (default is no mesage)</Description>
+    <Category />
+    <Version>1.3.3</Version>
+    <DateCreated>2018-10-12T18:19:16.267</DateCreated>
+    <DateModified>2018-11-23T18:30:34.487</DateModified>
+    <DatePublished>2018-10-12T18:19:16.267</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Ibb0uDF1vld72FkkpI0yF71RFKk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Logoff,Citrix,Idle,Disconnected</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>43</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAK1X227TQBCdZyT+YUkjpQUSFXhBCBAFERpANKKgPgACk5jWkNjBdqAV8O+cObu2147TpgJZjvcy1zOzs5MtSSWU77KUiKNMjPTlB0YpxpEkEmPljgxkV67KFbkvW/wa9wxBE8sUoxQyYjw6P8Z8DN6flHMoJ/jO8BhZYJ7IhJoyp+8EK5nkJWcCSSm+M4yO8X7BYyDlsezhGzh930BvZUbgHdSsek1bdEc5c+pXuSlWjqknIGcGS3RtARpDC+agnDobdG2Kb8i9hLqtVdbOY/AG9EX9CikpIXfG+YT6Iyfxs5N4RtkGMhJPWkiPY3wtdV7uqqYlsUqJlsVDvfU9fgS6JWSn4Amp+wSrtxG1W3KXlFvysOR6R7xTh/gH6dJvjUhAW4w8wNvFLMU8A/0uqNo5Ncqxs1+5nmGcI4fGtUhrVo3oWRfYRBzpSgyKGSyfgu6t8/IV9M5pxW/GPaRPE6LXl6dyCgk2C6wOi30O700pI3YyrM1qbU5ri6yxKKu9uyUqheUj/IbgNvQiYP4Y2cb7HNpUlr/uj7vgi3F67jkJC+4/wZ5qnXqUHawmtEo9mMHuBXL4pZfxGebXQWdkxyExZAY/Zc6dQO4Bcupricwn+vCrlhVdaosga+wwf0BPuvIR0iuc+8zYGU+SkZ68x24Pet9h55aLfCVz0YjsZlFvWqKRTEmd4lxPePpstTkkWiHRmSGqBVKK/NLZe37m+PbqGdxutXunRldH7iLuwUqmqVVaSU3jTPTLirUq49UKbw80Rd3MyrrZc1mwhceAXyX2GKs5M8qedntal5SoeGVc098f3Ivw+5nItnna7r8f9YA3REy9m8R8u6R4wsqqMdPqETB2oTsbM9qYeVgcMdJ3UL0+tsgeMjtyh26ngWmV5V3meRNx3d8B129Gb/O6Mva8r9s0osR/yefzcPfzz8e/nlXVTntOTaBnj5VdaXoruX+5XPCriyI0dzdq7lXVQ95gizXZEWNHb8N6BVs9oX2H1Rd2J3PU1S7GendnzsOxy543OAHagWxid4Vpu/0+tm0UA9mnVs2YqOQ6H9HLIVsh7N9XN/Bchvs176CE3dy6W83eBEMgp1r83LG3zeSC/CyePxtRhS5y/x+pI9a3nJ4e8TxUnWgHvgTuDFa91Wpkm92pcdWkvZKMXCX5d3Tad+urdvan7FWKHL4mzSwpMrGO30X4JOyYldv2pW19usWt0NXxLPLjul7vAc/8wvXBHXlRs7rpxaoFnTUYNDmr86voNDvWe3hGvG9szh+wp5rzP8CZk9fshnfWoKqUGWiaNa6ogAHvj7YaOHT5WJ3EnpM1wOop3h7p9hp3+kv2UBa/62VuNu3t8z5Y8G61N632dO/ZNRi5Se5PmHWYwW111Lg8icrbcd3dZuu8pbf/BbV/OSSaM+re5zma0oO2zuzaOUhu0qNZm1Wr7cALS6t/Lc1T9BdvybkO9g4AAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>f3da9d28-8474-4c8f-b05f-a51515d9264a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f3da9d28-8474-4c8f-b05f-a51515d9264a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Cancellation Message</Name>
+                  <DefaultValue>""</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^"[^"]*"$</ValidationString>
+                  <ValidationError>Message must be in double quotes</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>jGGTBXgyMwhdLB3H3vofUaBwW+I=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

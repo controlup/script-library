@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>24cff93c-fc41-4d09-ae4b-a78d2edb2c45</SBAId>
+    <RootSBAId>2d23dade-3df7-48dd-b45a-7a9d908b09ec</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637434583175778271</SQN>
+    <Name>Clean Windows system drive</Name>
+    <Description>This script is used to clean up a disk by deleting the content of directories which are known to accumulate large amounts of useless data. By default, the following folders are emptied of files (if they exist):
+%systemroot%\Downloaded Program Files
+%systemroot%\Temp
+%systemdrive%\Windows.old
+%systemdrive%\Temp
+%systemdrive%\MSOCache\All Users
+%allusersprofile%\Adobe\Setup
+%allusersprofile%\Microsoft\Windows Defender\Definition Updates
+%allusersprofile%\Microsoft\Windows Defender\Scans
+%allusersprofile%\Microsoft\Windows\WER
+%SystemRoot%memory.dmp
+%SystemRoot%Minidump.dmp
+
+Extra folders to be cleaned and specific files to be removed can be added when running the script.
+Option: Run CLEANMGR with all options set, and delete Volume Shadow Copies
+Option: Run DISM if CLEANMGR was supposed to run but is not available
+Note: The CLEANMGR option and DISM fallback remove installers of updates and old Windows versions. If either of these has been run, IT IS NOT POSSIBLE TO UNINSTALL UPDATES OR REVERT TO AN OLDER WINDOWS BUILD!</Description>
+    <Category />
+    <Version>2.6.34</Version>
+    <DateCreated>2018-12-02T12:27:05.713</DateCreated>
+    <DateModified>2020-12-09T11:32:33.833</DateModified>
+    <DatePublished>2020-12-09T11:33:32.883</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>RDdXEAbHXmfLiwqxeYHWb9ZW5Qs=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>disk,free space</Tags>
+      <Credits>Credits to: Ton de Vreede</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>768</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>3600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>246a1c68-1a41-4c91-b8a9-ec4724f59249</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>246a1c68-1a41-4c91-b8a9-ec4724f59249</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Run CLEANMGR with all options except clean System Restore Points. Can take a long time to run!</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please enter True or False.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e0b6b2e0-40d7-40a2-a565-b9dc67ec81e4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e0b6b2e0-40d7-40a2-a565-b9dc67ec81e4</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Use DISM if CLEANMGR is unavailable (update cleanup only)</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please enter True or False.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bd49d7d7-0e41-4ebd-b88f-db434e94aa19</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bd49d7d7-0e41-4ebd-b88f-db434e94aa19</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Remove Volume Shadow Copies?</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please enter True or False.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>yBQis/2tTQKMh7lMZlX/39Pp86c=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

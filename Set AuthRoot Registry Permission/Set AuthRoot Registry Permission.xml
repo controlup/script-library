@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7ce0e95e-d064-4ab8-abc5-07288adac27d</SBAId>
+    <RootSBAId>c26e5dbc-9976-41c1-b9a8-45ef497507b9</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637079846110956726</SQN>
+    <Name>Set AuthRoot Registry Permission</Name>
+    <Description>This script will set the correct permissions on HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot to fix CAPI event id 4110 by allowing NT SERVICE\CryptSvc full control on the HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot registry key and it's children	</Description>
+    <Category />
+    <Version>2.5.9</Version>
+    <DateCreated>2019-02-26T11:16:55.117</DateCreated>
+    <DateModified>2019-10-25T15:08:43.483</DateModified>
+    <DatePublished>2019-02-26T11:16:55.117</DatePublished>
+    <LastEditorName>dennis.geerlings00</LastEditorName>
+    <CreatorName>drew.robbins</CreatorName>
+    <Status>4</Status>
+    <CheckSum>XUQOLXEYbmOkxF38JSMyBAxllNM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>dennis.geerlings00</Author>
+      <Tags />
+      <Credits>Credits to: drew.robbins
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>dennis.geerlings@controlup.com</ContactEmail>
+      <Notes>This script will set the correct permissions on HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot to fix CAPI event id 4110.
+
+See 
+https://social.technet.microsoft.com/Forums/windowsserver/en-US/2b7e774d-2bd7-4833-818c-1429c7398ef1/correct-procedure-to-add-registry-key-permissions-for-certsvc?forum=winservergen
+
+https://social.technet.microsoft.com/Forums/windowsserver/en-US/1b620576-98e1-4fe9-aa0e-3e73eda92058/capi2-error-access-denied?forum=winserversecurity
+
+http://dieterboonen.blogspot.com/2017/10/root-certificate-update-issue-on-server.html</Notes>
+      <DownloadCount>12</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANVYaW/bRhCdry7Q/8DKRu0AIWXFqeMETQtBslOjkizIbtMABQqJlGy2EimQkl33+O9983Z56UjcIDVQEBKXy9053puZHelr2RVHPpfPZEc8uZR30pML6WN0jo954+DdjlzJjYSS4ikVXxKM57LA0x1GU1w6P+bMAivHuPsSY12Csc/5OUaJzCglxXcsEeXp3ZHv5HvpSFd+ht4LOYO+t9KUgZxipovVqjPG+lgmkKar7vG0gMyZtCh5gVUTrhxyPsWqpixpzwD7YmtdjG9d9zvuLazow1cH62/xibgmlADfz6WB6xC4ZPi0Yc0l9gywow8Lz2Fp71+jFON+S4Qeot2RETx14JPujykpkmvM9KDNgT2nsOdHSGkRqxa03lPrJWT69HVpdfvEekEkpznyGV+PxYBGxDVRWtBWR37DjPExou8h3uwTRZ94TjGbEJ+dnItT+Qmyu8Cvg3GZgy+x16N9Jh7XLRisWdDfEJseUEzBwb6VbS4Pvl4Qe7XgqvIuu1rYP8PuJVFIVvZ3sb8Nvs7IWTOPo1/AgGbdFZ4GyERno+yznM0IeM3InIvPW7KofB4ALYO/ch/TryH9buOqQ38X3+9wPSntNSt8jjS+xmRikwVtcnFHHGNE54gRmVpZz+QY0g9xrwO7l3b2HCtCxseQtt8SlwzpTVq6tMjE5h39Tijhj0+sp03UIpu1b/CkO6Y2yzKvGnJCPYcVbU1gFFikxqx1irZjMQxyKU9t7s3Il2ZgWor2N4xTF+yPsWO+tlYrgGa+jzxxVmKpA497yNvNTN0QQY3iV7C7ztz1LTYeI0T5jqjfY/RXc9yzltSBvnq2xDjFk6lBAatRyrqfWKTrtNmVHxDHdXAzkheYeYHrOda7nAnw5OL5RI5wubgruj5GDcw+A7o+VhzhfoK9E8zWV84SFz4l9EWxX3LeZWV34VtATatVxrVVxt1yDrk2V1xKTciR1s9v7bz6/tp6Xvb4mh7/n1hpgINj4HwoXwHnY8wbpBtkZYLRS+I4xArF9YgMHhHrId6ZnSdkZQg/Qsy4pfjXvT5RTIlrQO0h938IzZTeL22u338UrgbVgBpN/R2x8ke0w7PZpLk953lQ4KmeNeBrlumJPTGKmKieby4snefV1rURteQ4JuJl3zxaOIN2tX5XvuFdP3s4SzL0moxwE5V9RvGEu9V2nzX9NT77YFLjfW5Ppz10AJmnqvP9O/VENbVlCoxbtitQLtT2TKJWxhFmrj+BNOPxbl7t9m0FdDZKNj1a1pc0S9Hk5PKzHqZjc1zPvSbedniqZb1otcN5eC/iWQyMRMd6m1XqbDbrmF79xz1TgV6baIWM5bTkmcm4GPuiUpebobCt8za56Nl82oMvMe2YWswLeep97YEdZ61kb4sIZ54ZxiN7og8rvK72pgn7nCIaiv53u9fZiRnabA+4RnPi1nZDD+uEPxQVg9w2xaVHf1zwP5JfJfu1U2baYy9armteJaqrMe2t9afltYXug/cw9hQsZJ1iVXqN75o5mjXkS8FXEzzOmcdlNKpMFNlksmA9g6vZ49lOfJMXByU0n1TixnRA4covyqI7TbfaU53dzqWzkuN/WTuL/HZR+YaU9Li5bnBw8l8weqaMrN1pXp1D9prlutTKfy2FVq9m7WNZXiNigzzStfqorabKjJmtNzZuzxiLAWU7rGdO7pOJgz8rZ/zHxdLqbuXYKbHsM/er1nj896PgXeX8nbNyZzNYT/gbYmZ+V5l684X8A378/spQEQAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>R1y8ruiXF0eq7GohDnVQWsdpzz8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d5f454cf-4769-4fe9-bae5-adc3b2fae9da</SBAId>
+    <RootSBAId>963db4ea-e47f-44a7-bfc9-a288c8e480d7</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636050442314500000</SQN>
+    <Name>List Computer GPOs</Name>
+    <Description>This SBA shows the current computer Group Policy Objects applied based on the records inside the "Operational" log under "Microsoft-Windows-GroupPolicy".
+
+By default the log size is configured to 4MB,
+That means that this SBA can look back this much.
+Consider increasing the log size to view older entries.</Description>
+    <Category />
+    <Version>1.1.4</Version>
+    <DateCreated>2016-06-07T12:52:42.067</DateCreated>
+    <DateModified>2016-06-07T14:10:56.203</DateModified>
+    <DatePublished>2016-06-07T12:52:42.067</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>8N43qcyTeerQu6pYhpT+MFRBgL0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>Group Policy, gpresult, rsop, GPO, computer, logon</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>1286</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a/zGv0bya4x/jde/xu/za7z4Nb78NV7Sb2f0f3yadv778tdY/xrtr7Hifxv6e/prVL/GQv/Of42aPsnor9WvUf4aBf09o78v6NOKvl/R7yv6Dd9M+dtG+336a5xSbye/xivq9eWv8Yb+/ZLwiPX+5teY05votyEYNf2+on7x15wgX30DGKF140Fc0u8F/dvQvzNqkRLUOf88/TUu6eeS/n5OLS90LC9/jWMax/Gv8QV9/4b+/4paPqZeMuozI7xe8L/5r3EUHd8LgrRk6BmPq7XjBZ4F9yb9nP4avzf38pJ6P43Cekw09Wn0kmHOqeffN6DemP5tfo1dhXtGOLz8Nb4i3OPzbzCU1l9yy03tnzP+6L/6Nc5/jfebC+njOeP0e0Whv6Z2oNacegBXPvo17tJ/V/zfmDkBFKsZLvoYK3cA1o/rHMjvKX26VkwnDLOmvzH7V4QN6JbSpyX9/5LpKNivmIqX9H98c2Gxxv9/N5qXmvuuaaam9E7B+Lykv3OiRc4/l/QNevuM/v8RjaelNiv6zY3xx/VnRm0r5T5w9RV9cv1rgEcq/rf2/moUjuPWUF4KHtmUeR3fytwAruDbEKVSovuC56SmdzKmZErt8DckEf3dJakFNaZMH9AvYyqMA8o+Y/qINIKXJ4ypkx/0BGp+/Gvs/xo79N8+/Zb+Gls0QvT1lkeDXoR+za9xhzGuvTc+1Tca7uNSe0I74A3Yhg597bBUiZQ5+wn6Bp8DQ5mTb/0a3/NwfcqYZPSZ++33tFL9GeGB+QV9p0ztjEb+OpD8j3+N73t4bVk4ePd3414uiY/XOpYZ45sxxN838r3B/mMa7fcDyMD7NY2j4ZEu6K8tbxxn1O9nAcUdVYfbfWr7+cjOsOG8XxxIKOb9c4IhVsJQv2SOw4xvEUaV/g45mGp/wCL3OGPB1AF/gQIXwUyCzjKLBbUyfOXPoY/R7xZwHOZW8Nv+Nb7LsP1vt3kWK5bsGcMys5eSzi24b2APuXEQMFewQdsE2Wi1l1anXTNcXxZ+b6uTwWc+3h9x2y/o23ceXqDkbmdMRrMA05beFEn6jL9zb46j7caE55pHCJi/hP+dWnp3Z/S7lt7bv8a37dx9RBoAIy25X9FQ0BJCD5lbozWFtm52MR7RRGZOvz5t75ItWjH1nKaA7IHnYJ2hz/4A+uyN9oRZPacWa54N0wp6svg1fsAttojnv/g1njBHggsxf2Z8YiHAzTXru5RHBKwumHJGS5pxXf4aYoGEg0TbzlTu0WfGNAG9hB6gMzB+ybQzWlq0Su194uSqi72xA6CT0eEpYyH8nDIujdXY0PgfBfN9SrxX8Fu7Hn8YnQ6fp2Ld7EYb0+j3f4179P4e62dnSQ3efe74uMepAutj1c8h1v9vlOPb6V1HF6NP01/jZ34NSJnYd0jZl8RnP/1rQDe2JIu/26/x+w/IMfDJf41f9GsM6YNw5p7+GvDIVsy91zx/ZjY+JpqE1BXqiVwBmsxCXBN052bcgYY3/x/ie3zNbAwAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor />
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>ha6OJ37H8VpWRsWdyko+qtR+WMU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -34,7 +34,7 @@ Taken from:</Credits>
       <AllowExposeEmail>false</AllowExposeEmail>
       <ContactEmail />
       <Notes />
-      <DownloadCount>0</DownloadCount>
+      <DownloadCount>12</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>4352</AllowedEntitiesEx>
@@ -64,6 +64,7 @@ Taken from:</Credits>
                   <Name>Proxy server if used, else set DoNotUse.</Name>
                   <DefaultValue>DoNotUse</DefaultValue>
                   <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString>\S+</ValidationString>
                   <ValidationError>Proxy server FQDN or IP if used, set DoNotUse if there is no proxy server.</ValidationError>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
@@ -82,6 +83,7 @@ Taken from:</Credits>
                   <Name>Message Title</Name>
                   <DefaultValue>My title</DefaultValue>
                   <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString>\S+</ValidationString>
                   <ValidationError>Please enter a Title for your message.</ValidationError>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
@@ -100,6 +102,7 @@ Taken from:</Credits>
                   <Name>Optional button URI</Name>
                   <DefaultValue />
                   <ArgumentNumber>7</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString />
                   <ValidationError />
                   <MaskTypedCharacters>false</MaskTypedCharacters>
@@ -118,6 +121,7 @@ Taken from:</Credits>
                   <Name>Your Slack Webhook URI</Name>
                   <DefaultValue />
                   <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString>\S+</ValidationString>
                   <ValidationError>Please enter your Slack webhook URI.</ValidationError>
                   <MaskTypedCharacters>true</MaskTypedCharacters>
@@ -136,6 +140,7 @@ Taken from:</Credits>
                   <Name>Message content</Name>
                   <DefaultValue>My message</DefaultValue>
                   <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString>\S+</ValidationString>
                   <ValidationError>Please enter the message content.</ValidationError>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
@@ -154,6 +159,7 @@ Taken from:</Credits>
                   <Name>Username posting the message</Name>
                   <DefaultValue>ControlUp</DefaultValue>
                   <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString>\S+</ValidationString>
                   <ValidationError>Please enter the name of the user posting the message. This does not have to be an existing user, any name will do.</ValidationError>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
@@ -172,6 +178,7 @@ Taken from:</Credits>
                   <Name>Optional explanation for your button</Name>
                   <DefaultValue />
                   <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString />
                   <ValidationError />
                   <MaskTypedCharacters>false</MaskTypedCharacters>
@@ -190,6 +197,7 @@ Taken from:</Credits>
                   <Name>Optional button name</Name>
                   <DefaultValue />
                   <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString />
                   <ValidationError />
                   <MaskTypedCharacters>false</MaskTypedCharacters>
@@ -202,8 +210,10 @@ Taken from:</Credits>
       </Arguments>
       <InstructionsExecutionOnComputer />
       <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
-    <ImportValidationString>EFiDoMJuu+maF9DfOvd3qk/e8OQ=</ImportValidationString>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>4wpeY1BMTRLZ4TaDDEjuOeiprko=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

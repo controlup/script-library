@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>657964e1-479e-4658-a9be-7363ef5af2ba</SBAId>
+    <RootSBAId>15c99346-e3d1-4dde-a9a7-eb2cbed3bf55</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636896347115500526</SQN>
+    <Name>Take multiple screenshots</Name>
+    <Description>This script gets the dimensions of the users working display area and takes screenshots. The screenshots can be saved as a BMP, JPG or PNG in a location of choice. </Description>
+    <Category />
+    <Version>1.2.2</Version>
+    <DateCreated>2019-03-13T00:05:27.757</DateCreated>
+    <DateModified>2019-03-31T10:04:14.373</DateModified>
+    <DatePublished>2019-03-13T00:05:27.757</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>iLNuj5yUuxbIg8fTPcFXSS2tR6g=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>screenshot, user experience, vdi, rds, citrix</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>96</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>69888</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>3600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>2a14aa8d-451b-45a8-a36a-51a7cdeea980</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2a14aa8d-451b-45a8-a36a-51a7cdeea980</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name># of screeenshots</Name>
+                  <DefaultValue>3</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])$</ValidationString>
+                  <ValidationError>Please enter the amount of screenshots to take, between 1 and 999.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>a7d3059b-9813-4430-951a-59f573ef67e6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a7d3059b-9813-4430-951a-59f573ef67e6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>BMP, JPG or PNG</Name>
+                  <DefaultValue>JPG</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(bmp|jpg|png)$</ValidationString>
+                  <ValidationError>Please choose to save the screenshot as either BMP, JPG or PNG.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9a44477d-9697-46ff-ae66-004a1633cf63</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9a44477d-9697-46ff-ae66-004a1633cf63</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Interval (seconds)</Name>
+                  <DefaultValue>3</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])$</ValidationString>
+                  <ValidationError>Please enter the amount of seconds to wait between screenshots (1 to 999)</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>11082221-4fa2-41e5-9c3d-ba32abc9c609</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>11082221-4fa2-41e5-9c3d-ba32abc9c609</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Screenshot save path</Name>
+                  <DefaultValue>%TEMP%</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Please enter a path to save the screenshot (without trailing backslash).</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>3fXzokBbCz1VKabfAfLFMkpa92M=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

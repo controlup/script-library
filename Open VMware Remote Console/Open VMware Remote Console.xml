@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>61352deb-3dd5-4f9b-88e1-cf77a831bf29</SBAId>
+    <RootSBAId>e79ee4cc-842a-4140-9e46-95ce6566b2fa</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637966855644275292</SQN>
+    <Name>Open VMware Remote Console</Name>
+    <Description>Utilizes the vCenter REST API to query and open the VMware Remote Console </Description>
+    <Category />
+    <Version>2.3.13</Version>
+    <DateCreated>2021-09-22T07:49:26.183</DateCreated>
+    <DateModified>2022-08-18T18:43:24.39</DateModified>
+    <DatePublished>2022-08-18T18:44:34.343</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>WyTYhhX3Jhq5Tb2ttyJ1iFIM6lE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>$HypervisorPlatform=VMware</Tags>
+      <Credits>Credits to: guy.leech01
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes>Now uses the vCenter REST API and falls back to PowerCLI. Much faster. Thanks Guy Leech!</Notes>
+      <DownloadCount>372</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>4e045234-b7cb-458e-b252-4246dda193ab</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4e045234-b7cb-458e-b252-4246dda193ab</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorUrl</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>2</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>87201e16-1b8f-4a96-a0ae-f35ddcec1dbc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>87201e16-1b8f-4a96-a0ae-f35ddcec1dbc</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>fdjTECyU8NV6JBAZanUnGbMrSYs=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

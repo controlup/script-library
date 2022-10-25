@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>21a6b510-93df-4190-a452-e5fa54be617d</SBAId><RootSBAId>3621146e-3722-45ea-96ec-111104ff2c37</RootSBAId><StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId><SQN>637799378066945243</SQN><Name>Send Slack message on Local Admin logon</Name><Description>This is an example of how the 'Send Slack message on Session condition' script can be used in a Trigger follow up action.
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>21a6b510-93df-4190-a452-e5fa54be617d</SBAId>
+    <RootSBAId>3621146e-3722-45ea-96ec-111104ff2c37</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637799378066945243</SQN>
+    <Name>Send Slack message on Local Admin logon</Name>
+    <Description>This is an example of how the 'Send Slack message on Session condition' script can be used in a Trigger follow up action.
 Configure the defaults for your Slack environment and set the script as a follow up action on User Logon on a machine.
 NOTE: In Settings the following changes have been made (compared to the 'Send Slack message' script)
 	Action Assigned to: Session
@@ -8,6 +16,211 @@ NOTE: In Settings the following changes have been made (compared to the 'Send Sl
 Sends a message to Slack using an Incoming Webhook with an option to include a clickable button with a URI link. Customize the Message input to use this as an Automated Action for alerts on session metrics.
 If you want to include a clickable button with your message the ButtonExplanation, ButtonText and ButtonURI must be provided. If any of these is missing the script will return an error.
 Useful for Triggered scripts, fill the title and message with data from the console as required.
-This script requires a webhook to be configured in your Slack site. See the link on how to do this: https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack</Description><Category /><Version>2.15.44</Version><DateCreated>2021-12-25T14:06:45.84</DateCreated><DateModified>2022-02-08T13:29:18.373</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Ton.de.Vreede</LastEditorName><CreatorName>Ton.de.Vreede</CreatorName><Status>4</Status><CheckSum>cQeqsJKCLx+Te0Wj9FeDPK35SpA=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><Icon><IconData>/9j/4AAQSkZJRgABAQEAYABgAAD/4QBGRXhpZgAATU0AKgAAAAgABAESAAMAAAABAAEAAFEQAAEAAAABAQAAAFERAAQAAAABAAALE1ESAAQAAAABAAALEwAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/M18b/te/tgfET4J/tF/2fYyw6f4esUglt7aazRo9ZjKq0jNIyl/vl4/3bLt2c5PWT9vL4xfFHwL8XIbPRLrWNH8Nmzje0msLbcl3Ic+YXk2k71PGzIwoVsfNmvJ/AH7R3xquvGmmR6bq3ibWLyS4RUsp7TzIbnJGVcFOFIzlsjaMnIxmv0/hjhWUKSzGsqVWEoP3ZSatfrflaTVreV3sz+fvEDxEhVryyPCvEYerTqRvUpwT5raWUeeMpRd01quay0adnrftDf8FEviP8Pv22b7Q9LvrGHwroOrW+mvpLWcTLfxkR+YzzFTKrkyNtKMqrhMq2G3foNX5YftUfAjxjrH/BQfVrOz8N6xdN4g122vbCWK1doJ4CIcy+YBsCJht5JATac4r1Ff2q/jX4o/4KGSaHo7anN4bs/FB0eTSk00GxXTYrnyZp3kKbg3lq0vmF+GwBlcIfyaFRpvmvuepw/xhicBjcZDNFVqKeI5Kas3y3cr2u1aKXLpHumlqcB/wV61X9qa+/aq0/RfhqPiVb+EbzTYItFbwgLiKCa5fcJjdzw4CSB8f651jWNVYYzI1eS/8FF/2+PjR8Cv27L7RdH8d6tp9l8PYNKt4bCCUmyvpGsLa4na5QjFx5kksgJkyQuNu0jNfsvX47/8FQf+CfPxf+MH/BRXxBqPhnwVqmsaL47lsHsNVt03WNsI7O3tpftMv3YNjQsx343LjbuJxWs4tLQ/0J8IuK8mzLGUctzrDYelSw2HqJSkor2knKleUnLRy5FJ99ZvZ2X2x+0nrvxQh+LOoLp58WQaOFj+wf2THP8AZ2j2KTkxDl927O7kfTFZPwZ174sTfFPQ0Z/Gk1q15ELxdRjuDbC33DzSxlG0YTdg9c4xk4B6fx34M+KGnftNNLosmvHS7q+hnglW5c6esGE3rIM7FAw4KEZOMqCSpr6fr8Cybg3E5vneLxtTE4mh7Ku9JN2kuZv3JXXu2WnutKLjufk+Mzqlg8DRoRpUp88Fqt1pb3l3+erT2P/Z</IconData><IconType>2</IconType></Icon><ShareDescriptor><Author>Ton.de.Vreede</Author><Tags>message, notification, Slack, trigger</Tags><Credits>Credits to: Ton.de.Vreede
+This script requires a webhook to be configured in your Slack site. See the link on how to do this: https://slack.com/help/articles/115005265063-Incoming-webhooks-for-Slack</Description>
+    <Category />
+    <Version>2.15.44</Version>
+    <DateCreated>2021-12-25T14:06:45.84</DateCreated>
+    <DateModified>2022-02-08T13:29:18.373</DateModified>
+    <DatePublished>2022-02-08T13:29:46.457</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Ton.de.Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>cQeqsJKCLx+Te0Wj9FeDPK35SpA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>/9j/4AAQSkZJRgABAQEAYABgAAD/4QBGRXhpZgAATU0AKgAAAAgABAESAAMAAAABAAEAAFEQAAEAAAABAQAAAFERAAQAAAABAAALE1ESAAQAAAABAAALEwAAAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9/M18b/te/tgfET4J/tF/2fYyw6f4esUglt7aazRo9ZjKq0jNIyl/vl4/3bLt2c5PWT9vL4xfFHwL8XIbPRLrWNH8Nmzje0msLbcl3Ic+YXk2k71PGzIwoVsfNmvJ/AH7R3xquvGmmR6bq3ibWLyS4RUsp7TzIbnJGVcFOFIzlsjaMnIxmv0/hjhWUKSzGsqVWEoP3ZSatfrflaTVreV3sz+fvEDxEhVryyPCvEYerTqRvUpwT5raWUeeMpRd01quay0adnrftDf8FEviP8Pv22b7Q9LvrGHwroOrW+mvpLWcTLfxkR+YzzFTKrkyNtKMqrhMq2G3foNX5YftUfAjxjrH/BQfVrOz8N6xdN4g122vbCWK1doJ4CIcy+YBsCJht5JATac4r1Ff2q/jX4o/4KGSaHo7anN4bs/FB0eTSk00GxXTYrnyZp3kKbg3lq0vmF+GwBlcIfyaFRpvmvuepw/xhicBjcZDNFVqKeI5Kas3y3cr2u1aKXLpHumlqcB/wV61X9qa+/aq0/RfhqPiVb+EbzTYItFbwgLiKCa5fcJjdzw4CSB8f651jWNVYYzI1eS/8FF/2+PjR8Cv27L7RdH8d6tp9l8PYNKt4bCCUmyvpGsLa4na5QjFx5kksgJkyQuNu0jNfsvX47/8FQf+CfPxf+MH/BRXxBqPhnwVqmsaL47lsHsNVt03WNsI7O3tpftMv3YNjQsx343LjbuJxWs4tLQ/0J8IuK8mzLGUctzrDYelSw2HqJSkor2knKleUnLRy5FJ99ZvZ2X2x+0nrvxQh+LOoLp58WQaOFj+wf2THP8AZ2j2KTkxDl927O7kfTFZPwZ174sTfFPQ0Z/Gk1q15ELxdRjuDbC33DzSxlG0YTdg9c4xk4B6fx34M+KGnftNNLosmvHS7q+hnglW5c6esGE3rIM7FAw4KEZOMqCSpr6fr8Cybg3E5vneLxtTE4mh7Ku9JN2kuZv3JXXu2WnutKLjufk+Mzqlg8DRoRpUp88Fqt1pb3l3+erT2P/Z</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton.de.Vreede</Author>
+      <Tags>message, notification, Slack, trigger</Tags>
+      <Credits>Credits to: Ton.de.Vreede
 Original code by: Samuel Legrand
-Taken from:</Credits><AllowExposeEmail>false</AllowExposeEmail><ContactEmail /><DownloadCount>2</DownloadCount></ShareDescriptor><ExecutionDescriptor><AllowedEntitiesEx>4352</AllowedEntitiesEx><AtomicEntityEx>4096</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>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</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>0</AltCredentialsType><Timeout>60</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>1</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>2</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>8f15a418-9cd2-4d83-8fe7-8987b48f9169</string></key><value><SBAArgumentDescriptor><ArgumentId>8f15a418-9cd2-4d83-8fe7-8987b48f9169</ArgumentId><ArgumentType>1</ArgumentType><Name>Your Slack Webhook URI</Name><DefaultValue>YourURIHere</DefaultValue><ArgumentNumber>0</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter your Slack webhook URI.</ValidationError><MaskTypedCharacters>true</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>874984e9-bf8b-4931-b5a6-1c98e8318729</string></key><value><SBAArgumentDescriptor><ArgumentId>874984e9-bf8b-4931-b5a6-1c98e8318729</ArgumentId><ArgumentType>1</ArgumentType><Name>Username posting the message</Name><DefaultValue>ControlUp</DefaultValue><ArgumentNumber>1</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter the name of the user posting the message. This does not have to be an existing user, any name will do.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>45fbe5f9-3896-44e2-86a8-86e931e9b324</string></key><value><SBAArgumentDescriptor><ArgumentId>45fbe5f9-3896-44e2-86a8-86e931e9b324</ArgumentId><ArgumentType>1</ArgumentType><Name>Optional button URI</Name><DefaultValue>controlup://MyOrganization/Sessions/USERNAME</DefaultValue><ArgumentNumber>7</ArgumentNumber><ValidationString /><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>a4c35f69-892d-49f0-8c7c-8cf2a490dd80</string></key><value><SBAArgumentDescriptor><ArgumentId>a4c35f69-892d-49f0-8c7c-8cf2a490dd80</ArgumentId><ArgumentType>1</ArgumentType><Name>Optional explanation for your button</Name><DefaultValue>Go to user in Console</DefaultValue><ArgumentNumber>5</ArgumentNumber><ValidationString /><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>493c3d2d-2afe-4c8d-943e-766df1983848</string></key><value><SBAArgumentDescriptor><ArgumentId>493c3d2d-2afe-4c8d-943e-766df1983848</ArgumentId><ArgumentType>1</ArgumentType><Name>Message Title</Name><DefaultValue>Local Admin Logon</DefaultValue><ArgumentNumber>2</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter a Title for your message.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>0ec0328a-d0d0-41a2-9d27-d2432855ca56</string></key><value><SBAArgumentDescriptor><ArgumentId>0ec0328a-d0d0-41a2-9d27-d2432855ca56</ArgumentId><ArgumentType>1</ArgumentType><Name>Message content</Name><DefaultValue>User USERNAME has logged on with Local Administrator privileges on COMPUTERNAME.</DefaultValue><ArgumentNumber>3</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter the message content.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>17d86b57-3566-4324-a214-2aefa3e65622</string></key><value><SBAArgumentDescriptor><ArgumentId>17d86b57-3566-4324-a214-2aefa3e65622</ArgumentId><ArgumentType>1</ArgumentType><Name>Optional button name</Name><DefaultValue>USERNAME</DefaultValue><ArgumentNumber>6</ArgumentNumber><ValidationString /><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>bb7fdb72-6a7d-40c3-b585-ae78420716e3</string></key><value><SBAArgumentDescriptor><ArgumentId>bb7fdb72-6a7d-40c3-b585-ae78420716e3</ArgumentId><ArgumentType>1</ArgumentType><Name>Proxy server if used, else set DoNotUse.</Name><DefaultValue>DoNotUse</DefaultValue><ArgumentNumber>4</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Proxy server FQDN or IP if used, set DoNotUse if there is no proxy server.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog></ExecutionDescriptor><ImportValidationString>mQy2aKlT7W2JNfNtl1e3sB5sFhY=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>4</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4352</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO1b63MTyRGfr05V/gfxqJKp2AIuBUm5klRsYw5yxlZswd0VoYgsrSwdkqzTrjC+hP893b/u3pnZHdniYeBDyiVpHzM93T397vEtN3eZ+9Ut3AhXuWu4TfeCruZ0PXJnbkpP/uha7p77vfud+4u7hd81enLsfnYH7tC16eopfeT5Mc2duj7N6tJnApg5XZ/SVcMVBLFBY8b0pOfe0PW5G2KGjF/QWF5bnvPYIT1nrPbprkfXY7reJvgTwo5nzWj0yL2lz5hmnioNYxp9iiumgDEzrB+5PVp/1x0Rzm3Xoe9DokLedmi1EWbJdxcrZO4dXU1opTFoOHMD4HVGODJFQzxtBpSH9FU5IBw91qfG4R5++3Rf6LMmPc3pOVM3o6cNUM9jTwBHONUHrsa9DkafYiXm4YAgjcGLc8yYYVyvXKOldO/iboC5C8iBp6tP3wOatSA4BbjCUBn6Bf0ucBXSyzx4C2limBPcF8rLPmjKcG/wYxq7yvercTdOPi8lZh97Hr4TCeRZQ3ApKylmue2QJGzRiKfljhSAPlXJMQxDTORtAxC7uBZ547u3GM27I/LMK/fxbB37yxLUBXf7pSZcn/RU5eeOUr4d8XBb4ZyCO4bXVm0NmbtHmpDR/EUAQWSngJYUmOl3JAXjWCHMge1FEsIjyNwC2l6AfzGkJnhu69yJ9LtNNB3R5xlhyzt8RCN/pHEn0Ngz4upzrG3YhJYoHMXw2UZULYPsYRc7UyidE2hjUermDNLPWtAHV1tXYmi0HChk4/e0XMMkpQvuD1UHxRalNTGWnS9DRwe7Ok5S0AUV9v4qO/I1sH+WWDO1B6zZYnVNam0nbMTXpqSNGe+ItzLqaSAnDbVC4kPMonXLdd5BK7ME3Y/dP0k3D0DtHJazTd9TgjMBpvMaH0KIIuFv8d3C7Mf0/TNZ4uewREeEe0MtM2sERxUH7nu8Y4qO6M1PNJ65y1S+wPeG3ncgfU8QifDVIazqI1r9gD6FaljT3VhpB+TNRL1WF1ZxTlRczfkd6GcBO8X2cgZJmAJGbEvr/D2h933wKuZiDpt5pv5B8P0QmfO6ZmPP4BMEH4mpTgK8V+dQFc5GCYlHDBKyy9ScRTIecqxT6pPFC+FbscgftgcGcTnXvQ5/GJcs8vpc9ut6OJqWwc/H39BLprg7Bpfe/J+7pSTG/N2HlftB74cYPaOVttxd+stLmlsaQ94F98Y05q7agRG9GYMfd919+ntAudo9+v7OPcT1Q8rfNhHlCgSx+JuVeCenJ7JDmwGnQ0wtZj6u8TuO4esZJfuWanQl8a/4t14t/+hfsf854ogMfuQYEXfV54Q76GVQdsfnboxDv4zEmZpW0mOeY0eLcs4I3BzTu75GZQ3cj4Bfl+gaq0UPJfocWA8jquoZslBxtZRtfITtXCW2aCjtDKXqi3LMMe840phcIoh0RneOzHysclGAatOQBnRzDqlrBVJVpd9wtwyYn42B20nJ/bfQ5xHoNjsmuV39jcikxED8/Qv8axHEVmsUXVRnNZCbNEsdFQ09x19LZbgANWPkq6axTWfxUjMxSqA8I2oO6ekpKBy534J95rdhDpsTHJPRFHWG5yqYbTjLuUfYLdYF0dkpoqZGOdsi3kxlWKxqzAujs2rFQq3pQ0e64LbXOl9xMUvhNdzboO0g99mi+zVofxcynUHG9h3XgOaqAbaTYTVL5t0nuN+VEifaKZr8AhKR6d0mfY6cVEB6GgUKz/qldfEy3NCqQF8tzinGCgcl7i1Kn1JAR0Rz/kFUHCKuFj5JzWuIe7MlBmkS1FROUJUQiygY+QpAHmjU5fTtBrWMsDKRqZ0wv72sAie1Nosbb7m/4fclwZ2AE6z1O+Xe8zrrlLO/wqh26anXFduXwTPz3uvQgDgSb7i/0uc2+LhQ/jxRzxjncTKyuUKu3yzxYjy8BRBplTziAJWwMbR1DzUdrmKsRzPD3X1FOKbqDxvXTu/nrB5cF2eqdY8vy5VPqUhcF0d8BeXrSMin1Dauiycx9tfPl2+tWrKBkeZ1z+ErJbfKnNWdu9iper3jenbE15c+djcGwCVfaT/WCbc4b7tDz79kBWWj9ItZGYuPNKYfKu89DmHMbxEVR4GXcXSVeP9b4nRoHaZLqV89h2+uzB3Lc74tfljsXa1yXD8/fAXGd0JuE44WlYYdnzZs2QC4Z8hhw/ioQH2kWUK5hejwCUHgOuweKqvP6O4RKrWPiTdH4MZPqA+1KULcc1K53Svnd2px5DiII7uJTm6uFEiXaK62ta3095BZymzG+4Den1Mce0ictjyuUesytRLzWxSXSVTK1YA8MWKdOP8xkJ4iup5qbHFBO7ZFf99DOncjqtjKyq6Jz1lfge4WMljO/Y6Q0WUfjecOqjTcYwuhCbY+wh+p9Jkm3YEO/Edl8za6dZIfjpHD8a4wPheYlxGU1hfgYquMIXm1Gfwcv2m6f0GXDNuUnleftpDzzVQ3M0B5rl2HA62Fcu5cpf0l5ZWvgEt9/i5JKOvIc62ixnCka75V9okXal+mSpPHP13xESrS1cZPoyW1rmQwqVWt8vLpa77H955aai9v7BulVnEvGGfWRrr45u/DLrPEVgVszxmsh0W5vooZd9XF33e0mpAThDONGvbpyYXzPe54JaktGPwecvkMkPZhQe/jNE0jWLXuRVOnFl7C1hWqTXPU7Ji7bZo7gh4804hBzn+IvlTxa9f4IPoawr5sfIeezUor0cH+3NdaivcZc0SmUuOxaoavZYSnSHzEZlXLI3iajkvV8XPlRB0me8Uhnu2UEJmyv5eS0yxPF5lWcUzWKOU43YNvgsu8O69hy87Iy4wwU7zmFvhzAh691jpRRk+b5XxfpcnLFRsldlb3WAswXcO8Qjnt18rVv9kpiHi06HuzRvdyeBPC/Q3x6rwCLQUvzEz9yPfl9fsyHluFkr4blTXnebD2h0H5uvxInRao8kSu7iQslfj7CbTAKqFS3X7gJOc8RaYoHi53UrOSsTNIv5z/2lgaa+ao83Bu13fVU2NcG9+J+l4DxFE+phVc/rx0XVtV3oyimnGGqwVRMFQ7KNo+cWGPTOyr1C3TNLQqkRGfNNwBZLYU9aifa567+p7x2FQb/JCet9yforiF+wxzJ32gm+Sbp86f7fPVsvoumN2yequvB1R7PVJXXwT7ZJ3GmPL63AK4SVdL6vsLtZrV7o2vO9iutrUqID6nB0okv7B6hj+rFs8O+ygLlzo1EGOZLel9mqaEkrlatmgeIP027OoMnHUsjM8mez63Gil106UyV+X8BmQ85F8Gz29nIrvayQr3p94dS0mN1ZAY9kB1xCotLZK/esTzKVLP/VfW3VDe41xspB2+VN/M8zTW96o0hHFf2DNddzeAd6qDt6mQq/mBvJfYmbObbXSApF/FYyTiDOmpanCqb5iOTqvWann3cLku+brShZPu2LtIfuca0Zxqncj2eC3wArIn2xX716xZ8ZSPq8Y6rSjKaLg/wEetFlvEEcnqXrUayXxu/7rqSarY5zIsjsF66p2l9vMhUUDI/6uwrMKr81Zg+orh6wBGfWbI3eU5XXVePS711e5w7PsKNWzXxuVq9SzPn+xZPa6JY/9UBF/viTaCmF0stO+Isl4KxPA9e7Az1VfOyyRvs1MXnFXOnJy0mGl8PgaXVskfUha2nkuIRYr1IMwmlp85biJylC5cP6mBbaKdMyCfQxh/6uvJatXM57/OzlUbj7kLvEl8zdWubEZcelCu5E9jTzGrqh1dup/pSZfwjMIvCrmZkImqjQv7HHbqynuaMOa7EfUavG9LneyMq1LL97Kl+KyD0wZbzkKEq1Wl+0fNibPyP2ROIHnSR6/WlS7DoFqxiKOeq/5nhmeah/H0xqdreK/kdAhLH2N8pL4/lD2W6MuxFOplp3uQlHT8/FhrOOEJgrykrEpRmEvW6WPPy/a+p/Jp5zb+Td+3yX7eTEiYj2yMi3L2TP5rJc4iYk55iWJOxVIU7vghLONMI3g5Tyd3ceX55qXncHPVKx8PpOtZ9bpXKtqRmNKita52GHLQnQU7UD2htRzDFng51Nj3HXTfTkZVT3ANgM8kgOsrN70yVpZYy7gbZkHVnTA65lgzQ4VAsppwx/8HTlqGB7I2AAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>8f15a418-9cd2-4d83-8fe7-8987b48f9169</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8f15a418-9cd2-4d83-8fe7-8987b48f9169</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Your Slack Webhook URI</Name>
+                  <DefaultValue>YourURIHere</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter your Slack webhook URI.</ValidationError>
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>874984e9-bf8b-4931-b5a6-1c98e8318729</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>874984e9-bf8b-4931-b5a6-1c98e8318729</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Username posting the message</Name>
+                  <DefaultValue>ControlUp</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter the name of the user posting the message. This does not have to be an existing user, any name will do.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>45fbe5f9-3896-44e2-86a8-86e931e9b324</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>45fbe5f9-3896-44e2-86a8-86e931e9b324</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Optional button URI</Name>
+                  <DefaultValue>controlup://MyOrganization/Sessions/USERNAME</DefaultValue>
+                  <ArgumentNumber>7</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>a4c35f69-892d-49f0-8c7c-8cf2a490dd80</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a4c35f69-892d-49f0-8c7c-8cf2a490dd80</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Optional explanation for your button</Name>
+                  <DefaultValue>Go to user in Console</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>493c3d2d-2afe-4c8d-943e-766df1983848</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>493c3d2d-2afe-4c8d-943e-766df1983848</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message Title</Name>
+                  <DefaultValue>Local Admin Logon</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter a Title for your message.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>0ec0328a-d0d0-41a2-9d27-d2432855ca56</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0ec0328a-d0d0-41a2-9d27-d2432855ca56</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message content</Name>
+                  <DefaultValue>User USERNAME has logged on with Local Administrator privileges on COMPUTERNAME.</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter the message content.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>17d86b57-3566-4324-a214-2aefa3e65622</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>17d86b57-3566-4324-a214-2aefa3e65622</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Optional button name</Name>
+                  <DefaultValue>USERNAME</DefaultValue>
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bb7fdb72-6a7d-40c3-b585-ae78420716e3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bb7fdb72-6a7d-40c3-b585-ae78420716e3</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Proxy server if used, else set DoNotUse.</Name>
+                  <DefaultValue>DoNotUse</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Proxy server FQDN or IP if used, set DoNotUse if there is no proxy server.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>PHRyX0FpMXnzEEYTHQ4pHUpICOk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

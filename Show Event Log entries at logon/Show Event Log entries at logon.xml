@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c78dce05-c743-4a34-a497-d4f9893cd41a</SBAId>
+    <RootSBAId>dd0136ec-21ae-4107-b0e2-947394216911</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637327250435202866</SQN>
+    <Name>Show Event Log entries at logon</Name>
+    <Description>Pull all or just error, warning &amp; critical event log entries from a given number of seconds before logon to a given number of seconds after logon.
+Can assist in finding causes of slow or incorrect logons.</Description>
+    <Category />
+    <Version>1.3.18</Version>
+    <DateCreated>2020-06-19T13:48:48.79</DateCreated>
+    <DateModified>2020-06-19T17:14:10.337</DateModified>
+    <DatePublished>2020-08-11T06:19:40.933</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>nfMOLWTC/2JrHNX4bIYz+uSIVyM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>logon, event viewer, vdi, rds</Tags>
+      <Credits>Credits to: guy.leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>162</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>e52ac185-6840-428d-9c6b-9f05ab76fced</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e52ac185-6840-428d-9c6b-9f05ab76fced</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Horizontal resolution</Name>
+                  <DefaultValue>1080</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d*$</ValidationString>
+                  <ValidationError>Integers only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8e1fc4d1-f9d8-450a-9ad9-9a4266b0cfc5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8e1fc4d1-f9d8-450a-9ad9-9a4266b0cfc5</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>31861c75-81ac-4186-8458-469091130b59</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>31861c75-81ac-4186-8458-469091130b59</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Seconds after logon time</Name>
+                  <DefaultValue>120</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d*$</ValidationString>
+                  <ValidationError>Positive integers only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6745d5d1-c4bd-4528-ba87-bca8a917bcca</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6745d5d1-c4bd-4528-ba87-bca8a917bcca</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Bad events only</Name>
+                  <DefaultValue>yes</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([yY]es|[Nn]o)$</ValidationString>
+                  <ValidationError>Yes or no </ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5b91ab70-9259-48f2-88be-3ba366256235</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5b91ab70-9259-48f2-88be-3ba366256235</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5b0319f5-198a-4751-94a2-de17183173a0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5b0319f5-198a-4751-94a2-de17183173a0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Seconds before logon time</Name>
+                  <DefaultValue>10</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d*$</ValidationString>
+                  <ValidationError>Positive integers only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>GGDRMI/M9metfakEJepzgl4jjEE=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

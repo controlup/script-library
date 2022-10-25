@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0a9178f7-edbb-4717-8b57-eed732b7c2b2</SBAId>
+    <RootSBAId>810dea69-b846-48ab-b485-40b86455eb3a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636905001931545962</SQN>
+    <Name>Kill IE tabs</Name>
+    <Description>This script finds Internet Explorer processes corresponding to tabs in which the URL matches the pattern provided by the user in the "Tab Title Pattern" argument, and kills these processes.
+
+Internet Explorer may recover the killed tab automatically, which is a default behavior controlled by the  the "Enable automatic crash recovery" setting. When set to "yes", the "Disable Tab Recovery" setting of this script will prevent the killed tab from getting reopened. Tab recovery will then remain disabled at the user level.
+
+If the Force parameter is set to "yes", the script will terminate the processes it found, even if their count does not correlate to the number of tabs matching the provided pattern. Be advised that this option may result in closing more tabs than intended, and should be used with caution.</Description>
+    <Category />
+    <Version>1.5.28</Version>
+    <DateCreated>2019-04-01T15:47:15.01</DateCreated>
+    <DateModified>2019-04-10T11:51:43.267</DateModified>
+    <DatePublished>2019-04-01T15:47:15.01</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>KeUobf6sTLk+0rKR195c2uyc0I0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>internet explorer, rds, vdi, browser, troubleshooting</Tags>
+      <Credits>Credits to: @guyrleech</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>84</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>d3e5d0f9-ffe9-41f7-9c9d-7218e3c0872d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d3e5d0f9-ffe9-41f7-9c9d-7218e3c0872d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>URL Pattern</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^.+$</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>48da2223-8907-46fc-be26-48288f0662a7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>48da2223-8907-46fc-be26-48288f0662a7</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8530470d-d7c6-4703-809a-92c94965e1fb</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8530470d-d7c6-4703-809a-92c94965e1fb</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Force</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([yY]es|[Nn]o)$</ValidationString>
+                  <ValidationError>Yes or no</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>97dc9f81-a34c-4661-a320-95da4517c9a6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>97dc9f81-a34c-4661-a320-95da4517c9a6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Disable Tab Recovery</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([Yy]es|[Nn]o)$</ValidationString>
+                  <ValidationError>Yes or no</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>lGbrYs20jI7QDkMw3dtq+Duudbo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

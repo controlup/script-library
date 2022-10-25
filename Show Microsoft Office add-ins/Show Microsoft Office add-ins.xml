@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>48d9832e-04c9-4cba-bf13-6febda1f93d8</SBAId>
+    <RootSBAId>70eaea30-f2c8-44ed-8d9d-1dbf8bf064cf</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636813422958224000</SQN>
+    <Name>Show Microsoft Office add-ins</Name>
+    <Description>While add-ins enhance the functionality of Microsoft Office, in some cases they can affect performance and stability. This script will list the add-ins for a selected user session.
+This script leverages OfficeIns.exe from https://www.nirsoft.net/utils/officeins.html
+</Description>
+    <Category />
+    <Version>1.15.23</Version>
+    <DateCreated>2018-06-07T22:01:15.36</DateCreated>
+    <DateModified>2018-12-21T04:16:40.527</DateModified>
+    <DatePublished>2018-06-07T22:01:15.36</DatePublished>
+    <LastEditorName>Marcel Calef</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>7uyj+KUfIbZolNgzC3phvmVWxjw=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvwAADr8BOAVTJAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS41ZEdYUgAAAn5JREFUWEfVVT2LU0EU3S7p4r/Iz0inCEZETJ0mTWyCWIcsFnaurh9bxaSIoraCoqIWBvEDEkELsVAbya645kNZRXbN9Z65b96bSV7eZ1zxwLl7mXfnnrMzN++tEJEiY5eJZBEnzK/Mj8x3zFfMp8xV5gHdJy4lSBNTLBa73S638RcIowTDQKPRmGO9XqdarUbVapXK5TKVSiXK5/OugVwuR+12m1v5iwRRgmEgKmBM72k2m5TNZhOZkJDSAJDUhIQlGACSmJCwJANAXBMSUhpAbrJYLFImk6FKpYJSS3CWElIaCOEql1uiJiWkMFAoFKz/XhPrTs+/YyAMMOH0/E8N9Ho9arVa1O/3nZV4SG2g0+koA/gL6OdRCOz7CUynU5fAvs2AFv01eEs7b+7NGcEanjEsYU0JCQ1AZG9nRMM7Z2lz7SAN1g7Rzw8vXQPIsYZnqGFY4qCEhFegDPyY0OaFw0pE8fIx+nLtpCJyd51rGJY4KMHHgB6+sCGEieHtM57QAqIGbWYpIeEJADDw/cUNX1GTkydNlFvioISYM6DvWPH3nhy3Frt4lEb3zyki1+uoYVjioIQEQzh+uE7bt07T1sYJT5zvfHf4yakglZtzgFrswV5GsIGwK3BFDY4fbzhPPYwfXfKtZQQbCBpCwK8pjn0W6ip8ahnBBsJOYPzgPG3fPEVbV457jXEFo4FTwVfAuXUFXIs92MsINhCE2SH8fLVsmYAA7tkURw1D6ZmUkGAINWDi27PrnoEFXOrP0AQMLPVFFJfqVbx+xBPjY/d9FXONKazpJTONo3LuY/T+ObeTnsgjfYxUIqcQm7xXQX2OX99FaglE+hz/O9LKH4N7PPH3RtM4AAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags>Microsoft Office,Add-Ins,App Load Time</Tags>
+      <Credits>Credits to: Marcel Calef
+Original code by: Nir Sofer
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes>Credits:
+https://www.nirsoft.net/utils/officeins.html
+https://docs.microsoft.com/en-us/windows/desktop/bits/bitsadmin-examples
+Extract in CMD: https://superuser.com/questions/1314420/how-to-unzip-a-file-using-the-cmd
+</Notes>
+      <DownloadCount>157</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVXa2/bNhS9Xzdg/0EwYMzZJqvuiq4IlmCbm7RB81rstlgQIHD8SNz5NVNp2v76nntISpSl2AmKgZBNkZeX576v/pA9actrOZEIzz7GD/K9nGH1CCtduZGxGMyM9GWJ+UJSvE1kKB/xLKUn1/g3PD3CGINuKAcyw1oTs094IqwvZS5TzG5wPgUXI9uSYNxxNEE/Bo0B1Qj7+j7EfyK3+B3jPoP5PLhh7G5QflPsK+oQeRvchkCX8v4eHsU6k4HDoetT4JhzfSmfsTYghiH4p1z/TI4dcOxiNyGXy4zPjjSkjvv+lGN5CemP8PaT/CpP3Egwfyq/yXN5IVvys7TcegtclK+hhBHxL8BB794Bjy4lOMXswu1dYp7fWy+g+kKb7FTqxu4p9ZG8wQ0HQBvhfHhjPdPcGOcjWkwtnpIyxLLOvg1yiB44co/bB+5bSrXef2I8d/SDCWbHoFXZrQcqbrXeFWYp/cbwrB2K67tstHHyVP55lGyr+roocX1FPCf0MZWmzE3pt6jdCe3uNaanl/TEiCcm3FMfVSlm8iPtkNvkF7d7h70J/nvUXM9pUOlS+ol6sOf/OE/REz6G+ogujYZ/MbfeEUoWuczwXJ453edIFNcH6ML6URlx8T7Luw5bnOGGNm7vYJzg7RLRdUZvOaC92vh9S3x1nNjBiEBxBNsoilCroRy5v72nxJ8cdbwiY1G6Bt41+yjqOfcXzCc3tKSX1GJvgOcLcN0KvHMU+PaY/tRco0HvvyF+9Yxr7PwHPkOXo2qQ5I0cQq4L6mgfd72nlvawckTOmmt9Jr1wMlsbGLy3wW1J3jPsvyNnA5o53i/AaYERwRZWVj0xL+jBR0aNsRxTvphaqBU0USvI4m28B6RntO0h5u/wHNKWx5j9jf8n5LrZZ2NnxVXf1bGVvfn/3ANeYv4XfOgV6k/ZM5X3NXGew+NOXXZUDtY6hlRT0mlFSF1WNkCneixzLOcCPVeOiNo3VcYcb428yjkrpChrpQ0Umlu9/Oq3Rb16igjo3mL3nLv7Wc4q3/kYJA/LoN6y+myvpfS1rrra5XJbHrNM7vvrQNhbDHBqyijRPiHP3E32ScMsh/dJZ+OsR2vN6TcjdhdVt+V7C8awxuWV07CNwgV/Pd2UfK3MZU2vq2oJc7OtGFU1Tr1ygCjzFSIl5WqXdcr6OyMPi093U2SqxT2182F825S5R23dOi/03cMZ8723b8KskSBj3N/Z2PqZku4q8KAqP/4dCMIq2oVcu1zXuLtzUeEtvlvo5D6Cu0G2sl5v+0uV+RJy2r3avZ2W3a/Tc4aMs4RUCbJ/uK/ndwv0EevXDT2x45CMmC8i1sewEz7BqQ+uw20ATSfo6m0MNDNddGBF4+QIz9VcFO6u4MhRHBB5XgcVS5O93oTSLaljK7thF91i5eyyFs82cPf8QrlC3p7fei57rjIr1vWU3rpz6qBDjDYTbtaup226ujphNOa5YLMu/e3eKoaRfJ7VxSKmJrTeY87psFvRyFd9PMU9TcaAWtNsuPOhXFvk2gb9Ar7ymtrXnSqsm+Ss8txjzFJ+gapnPux8tZXKnPorX7RacWf0ojko5qWY+9aYrf4+HbiuYruwl4//82t58222hum5aamvbOJdv6QTRmzMXj/hN1reaybUi0HPmNJHkqyLSir6qZja7TFrWu+pRlnMz5HrxdqsCtsVUhhWkCFrveF/jt121iaLR0XWwnd7C53lM0SNfsXfUJqYMsRBZxQDQZxVAqsB618xfU3X+rhlIF8BLXEPMWQRAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>8rAJ8ncEcHM/gvni9cWNUkl/g5o=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

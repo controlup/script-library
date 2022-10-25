@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>9f06048d-4b5a-4448-8f42-f5b6abce914c</SBAId>
+    <RootSBAId>0b8a7ccf-8d05-4145-b088-4174b1294689</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636147950991610000</SQN>
+    <Name>Find Duplicate DNS entries</Name>
+    <Description>Find all the duplicate IP addresses and the duplicate names contained within the DNS zone for the local domain. It skips root entries for the domain, however ("@"). See the script for more documentation.</Description>
+    <Category />
+    <Version>1.6.10</Version>
+    <DateCreated>2016-10-06T16:09:38.25</DateCreated>
+    <DateModified>2016-11-07T10:42:17.903</DateModified>
+    <DatePublished>2016-10-06T16:09:38.25</DatePublished>
+    <LastEditorName>Michael B. Smith</LastEditorName>
+    <CreatorName>Michael B. Smith</CreatorName>
+    <Status>4</Status>
+    <CheckSum>EILWZz7EBICmHl5JqmQO4EmxQuM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Michael B. Smith</Author>
+      <Tags>DNS</Tags>
+      <Credits>Credits to: Michael B. Smith
+Original code by: Michael B. Smith
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>support@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>355</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>lzuCxdP+10a8PxlH1mRhmEmLXu8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

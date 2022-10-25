@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>bb2a0ba1-2bd3-40a2-8ce9-872cb7cfe0c9</SBAId>
+    <RootSBAId>105fb3b3-9448-40a0-ba66-ebd8bd4adbcb</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635465456049216219</SQN>
+    <Name>Disable DEP</Name>
+    <Description>This disables DEP which is recommended by Citrix.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2014-08-27T21:11:09.047</DateCreated>
+    <DateModified>2014-08-27T21:11:09.047</DateModified>
+    <DatePublished>2014-08-27T21:11:09.047</DatePublished>
+    <LastEditorName>jjordan</LastEditorName>
+    <CreatorName>jjordan</CreatorName>
+    <Status>4</Status>
+    <CheckSum>vnp9sq2rcNl8mN2ihtjES/tuf2I=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>jjordan</Author>
+      <Tags>Citrix, XenApp, DEP</Tags>
+      <Credits>Credits to: jjordan
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes>This disabled DEP which is recommended by Citrix.
+This is per a Citrix Advanced Admin Class for XA6.5</Notes>
+      <DownloadCount>326</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>QgBjAGQAZQBkAGkAdAAgAC8AcwBlAHQAIABuAHgAIABhAGwAdwBhAHkAcwBvAGYAZgA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>7Uroc4Wfo2OxwbdQaYuEV/NoJ/g=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,6 +1,8 @@
-﻿<#  
+﻿#require -version 3.0
+
+<#  
 .SYNOPSIS
-        The script sends Tracert.exe command from the server\VDI to the client IP.The output will be the tracert command results, with the latency.
+        The script executes the Tracert.exe command from the server\VDI to the client IP.The output will be the tracert command results, with the latency.
 .DESCRIPTION
         The script runs on the the target VDI\XenApp computer. It will initiate a trace route command from the VDI\XenApp 
         machine to the client device which is the ClientIP.
@@ -12,11 +14,32 @@
         The tracert command output, with all the latency between each and every hop.
 .LINK
         See http://www.ControlUp.com
+.NOTES
+		10-7-2022 Ton de Vreede
+		- Refactored
+		- Better handling of time-out of tracert, set to maximum 5 minutes
 #>
 
-$ClientIP = $args[0]
-if($ClientIP -eq "0.0.0.0"){
-    Write-Host "Session is disconnected"
-    exit 1
+[CmdletBinding()]
+Param
+(
+	[Parameter(Mandatory = $true, HelpMessage = 'The IP to trace the route to.')]
+	[IPAddress]$ClientIP
+)
+$ErrorActionPreference = 'Stop'
+
+if ($ClientIP.IPAddressToString -eq '0.0.0.0') {
+	Write-Output -InputObject 'Session is disconnected, exiting.'
+	Exit 1
 }
-tracert $ClientIP
+
+# Start process for maximum of 5 minutes. Error out if it takes too long (over 5 minutes).
+$prcTracert = Start-Process -FilePath 'C:\Windows\System32\TRACERT.EXE' -ArgumentList $ClientIP -PassThru -NoNewWindow
+try {
+	Wait-Process -Id $prcTracert.Id -Timeout 300
+}
+catch {
+	Stop-Process -Id $prcTracert.Id
+	Write-Output -InputObject "`nTRACERT.EXE execution exceeded 5 minute timeout."
+	Exit 1
+}

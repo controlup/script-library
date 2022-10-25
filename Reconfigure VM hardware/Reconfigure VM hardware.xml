@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>1afb6637-b622-4628-a0f0-a67ec6498f96</SBAId>
+    <RootSBAId>b29eca9f-d47c-462e-a615-358ec93c4b0f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636807216483482000</SQN>
+    <Name>Reconfigure VM hardware</Name>
+    <Description>This action allows you to set the amount of CPUs, memory size and hard disk size for a VMware virtual machine.The script requires VMware PowerCLI to be installed on the machine it runs on. ** IF THE VM IS ON IT WILL BE RESTARTED! **</Description>
+    <Category />
+    <Version>3.9.29</Version>
+    <DateCreated>2016-12-25T18:26:32.88</DateCreated>
+    <DateModified>2018-12-18T09:09:50.59</DateModified>
+    <DatePublished>2016-12-25T18:26:32.88</DatePublished>
+    <LastEditorName>gal.goanis</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>APYZPexcv3JO+Ov/h0Om+hmtnSk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>PowerShell, vSphere</Tags>
+      <Credits>Credits to: Ton de Vreede
+Original code by: Ton de Vreede
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes>Fixed missing arguments</Notes>
+      <DownloadCount>257</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO0c2W4cx7FfGSD/sKAELJlwV6KvBEZsRKYpm4gpESQtJZD8MNyDXGuvcHfJMDH/Pd1VXVNVfcxBybAdBASv2Znuuu+ev5hH5vfmd6bjv/rmzPzDvDAvzYn968h+y0/PzZWZmJX9a2UG5tr+vTRr+9/AFGZuf1+Ykf25sZ+OzND+tTYL+/Pa/jewf83N2D5xaT+/hvsK+/3KHJvX9i+88sp+fm2f2tgrU/v/sf09gD3n8PkV3Dk0t+UT4bqFfXoC1xzcGrOvzaHF58CcWrxOLC5HFssXEX6jCDsHy9SueQuYDwCKud1vAj8dlvjUjsW/sPdM7D27LaHt2J9jQZNbQZNjCzvDNrdPzoDS1+VTBxaf7+3Oe/bvmf1kZq9fmzvAZGL+7aGbwD7fmK8AOofDUEDZsd+Ot+8qn9KcZlo4fncVLXv2+wig2/Hw7VlMHGwdgK5jvrUc+RpWdXssLV5r+NtR2d3nqH9X3u1gmtnvKcBLsjUAOjpKzb0k5ik8gTtuYY1picPU/hzDJxt7l8YoxOfbiFYrQRO3yxQgvgb4C0+7EHLEB3cfmX9ZPJEXqR2RgsjPkZc13k3qhOQf0nBs79nAyntCSrVsMzUcJBMv7yt/P64z8Vi6HR0uQ5C9kd+1AHxxZ+TWEj7TmhjjRPDMAh3H3Zagb7jP0GO7F9kLJwMLC/1KYeLWkfYHKb2EZ1alpKBM5KAoPOZrsd4qWlHDOIT/3aqXgP8AJGsDUN2BDkvMVxEGhNXcXlkDVZcK4jrOhXR+BnKNdqJKL6o54WBae5s9F1R1O3Y9r9xnN7DeJuCeg3oNu5E1GQtNRCpXaSfuPBdS4Oh06XVrD55LrThWV3Maj/ftJnzFiaXeqf0+tj7j3H6fgvbfedm+Ado4nTwBrV6Drl1bCqa8yVXiOUcj/eReAtIl4EPedGzvW4D9PABKrOH/qbWsy/LaCq6MGmK0gjVe2WdRxhyMKQzmFo4Z/LVQunsDMj4vpWzlsRx5C30FGMZ4oTTOIS5YK12liGGjJPOklKcD853VIlxhBhI7B81shq+zHi88Lu3w1HFJqCl0XwH4sL+JLYbDgTjOMv3EX+s3xAP96YG37+skLmuwJ5egvdVRQ2iZUv64a57ab7pD8qaNB5Y2Gm1cKo5oSgWMJlxkUo9/AT50U9p+9KoyUuI457dKD4pOKA5oRpnq+O+3RZVD83egyYm1Eofqs0PrIwuIKafCt7GnHcH1G1g/FQPlfC9BhjkCWbIrsMwbC+mVeZi1dhnYOeQr8rrODGKrmItUJrDXWkFZ7fvRAs+jHEfSoe9hcz8fmS9LLB57v9LEX3bMF/b7sZfIlXljJegHtYr2TvH9+9H9bOPjuz8q7954bxXf83F5D/nfW4B2mLj3k/LeCcB4LnQL7Wv8zKcVz7BNi5/7rOI5zKXSz/3JP+e+KSPjz/ugi2QZe57/f4a87D9K+l4D5x0fena/BdC7Y7aT8j0D+krdzXt8lCzHN4wn0/HS2P9mndQxAK2HvHoH9uoEpL3wsbaGIdy/sHsuAYcl4Ekxaxoa3hO9B8ekfUuR0PJgHLoP1+9LXjwCO4AQXgPPRmAjcQe0vIMSem2BKDbf+EjD/UQoV/DZurS07jfGLw77mb/uqHPmPcBhueszFb9gXD/2Gc4cYr2+l0CGtC9w2PGx9OPMmieJFVFeuxaaNdC+W9Lnuc/IGaLn3r5dgLV65yUZ9T787Ayuov1CqFiaHeW5ljWO9kE5uPG5Lt4T7jwJ/Ju052RdmUqYlVyXa1/6bBRrNiRNhV1/AZEmZp9jtQb6alxp4D0qe0KHF2u35I/W75H5p/391NOkE2n5I6XphBnLE8ZOMT1Wgt71VqNn/duF+bHUxSZcdE8995WQS+9hHd0OgOpIoa61gdewxlzUo+7Lv6QEHPmKm+ZUSF2MDpaeL5hTSp5x3SRfYVlDHMA68R3EGiOIIPZLmA6hDjD6GfnirDHFa3OP2fAX5dapiSuHIdZfg55ivnwX8GoINqyAeGzVAJOuXU0+8Tlc07YXY5A+WO4B8J4sQx/8s9PaAvxuexyrPANL6n3G/n1nfxd2rV4i9tuJrFyntCE7Visc1j2ATPrMbfMHiMLnsKrLhoZQsRrZT3bVSrjulqXUid+T8nxnv7fsHs/LdY7FOrjHjV2bIte+qA8N7D0T2KtvIwDyX0hrB+WPQEUJx736jy1eCBVZuseQ+7q4d9fL1lZAI/pKY8a0OwJpmoEXoyonVqi/NX+zzx1baXoLPsBVlwjbt/b6BCzCovzsrZVOpBV2Fd7afWV+pCnx1sZU8yCGf2tp2jE/gX258v6UMjjSFK5m9ICWa4jwnUSG0tMF+ms90zAg3bYeSO+tUnq2shL0/nR+ba+8tlHyJzaC/8jmAAuwDv9b9L9PSu77cSVcrS7ej22Pzqars00Zu2P1YARRShitUzV96m0ee1y9flWVcOn9EllrrqDqTLrwlZC1/VqCV3hiv27hqx/YLoT8ib1rAxkDxgVPQNbQp5PMPokgehLkBuHXYaKSn7Z7956HMc+dTL4EuvaCGNj1dpdgb9f2uW3IVHZFxo0rVskSUnEfokdtS7Veo0Zv11r9Klqc+8yK7Ya0IQ7OWUn90OP0RAWAoara7V7tdCC0Ndw/t0ITzTkXtmLiez6UEVwA7E42SeLD2gtL0wquTH0tmjHHGh3nh6SRS4DB2ZILTyHqnmIMOQHrMIpy16qvVPSSpmzee498xFsvc9vWrm83lDqp232YKZjZLHQDOM9EpbEP0dA1xDpVVpU9UxMpc9dzGfUZRJ3oY1xP8CCg/655P4ud05km/KzSp//r0K9Jh6o0a6vMIpvo1Ke/Ap1yc0ZnECstfVbaTJe2a7Vp+xfTp2fQhanGrU6T3kd//td158PqTSfQnOossYq2iPWNitypMhNHp24vR/GwW7OB+FZGl1jlCyNkdwdOmgwFTYlbU1/BRviawtS8ri0rFfm6BMWV6XoGaixV5HtBr+fMyGkCrvTqu6jqoetGpLlpHj6K9ibqhd0mOdGQWinG4CiAO9fH6okOlOxG9RJdp1QnqufnoKhH1y7S4MoV1uBl1vDC28l83CZtU5rCcaU+tD80q5OyQLpTw3aojkM5aqd7QZjvE/dRa2Rt8WG6kJZ0zO0HH1Dem/YyBmDPV2ZkVibsVzCFufOOtWruylVRuxt8znVcpFm+kp2ih8zPm+wv18zRN9TGXmPtRI0ZQ+dsZj63d46h4iAr9KwVg1Ij0jjH+tBcG4YJ3EgnZEWjvV5sB5hUSfABQOtg7zXs7LMEN7m/vVwTPNwrI6lJ92xpkiP0rM7v3pnctEequ9ZmvoE66l01u9rN9t9SkqKrk9MKaDt+Bn3kK2aSYjyfrGmwMnquds9Lz9TIbv0l+A2MJtKzFuFMjZ4gkTvkOuRPW8gj5Q9yXX1+IDw9sJOEu63c4TysozfW+6RVjSf3m9jDx4qDn4Pu/whPY/YlMQ2rDjE+H8I27bSwTpoexO26ickU5H3Vc2ouAVo7cBIGuc2U3KuZmklJgctkumV0vgBLTPNn2OvjyD13xsXtTdPp6FlTs/z7hk5D8ERzOH/PnptiGO48a3vlIrm1594tPD0C/R2pSIfoRLN+bOdCeUzTV0omTR6iF34HUorSKnkQ29HUyn0x18rZu6MQ5e2xBL/xvP0hgh2vp/aRs1I5OArfQXBUvlPzlKxdOmtsol1dqK61Oc/BJznoJFDK8rN9pxkonq6P5XA/uVc/6MXnbTPdITUmlKnU2RieSBwADchboddZlPKPuxKes7KbxJPlGAXouVLaeU/oR8qDV0/Q9exO6Oeq5ae5D+82oo0+N+Qkn+ynPDOUpp2e6o13a0vJ2D40lYz2NhunHnFe8hnIOdcRzow8PyLtScpmnwbe+WETyLRiO7ui5z0Zzj5k1A4/1+982NrxXKhcHz/FSXZppd4YOf0T74Sfpmkd75K6j/lNtqA6c5AR0rmhs0+0HnrUei63zQt0XMb78pkrt9rcyJ41z7vPwSqlK2jy/FZ4XopOLbEnn4HOzoU/vzPxua+4fx5bsB0VFX4jYvOU53W9X8b6VYAJ+dhuq6ykqyJEiUNIbwnduaJXPCegpyplzvHSSomsyXDEXXVmECs/+rqORdMnONHSpqO6odH5Zv4kX4qT7axoTqdoWrb3wXKeI6gvbjxFCtjjCiqCfK5RnxnQHic+QYmcugV/tjZ0IvVarJC2PBxR66nLbqlfSM87kAp3gq9JliUpltOYVFbbrBIkIyGi6GuPecdHs5NkJoSySzTeM+Trx6bwTxTiHCeeLRkZPLOB1Vys8ufiYfyLYJGx9RdK6joeCo1HXN0983zH+ZIpwLI0VFlDbcETKB9nezPhdZQ/HdVI+qVPumGuksPvj/ar3f7jzJ7Eo88stcKzTWleYGSN8Yc8w7lnOJecAqUu4RrzOjVDHEIbRrEp3pJN/0xNeue5mrPxZAO44sjWoJkdQHzfJTB3OCzUadE0NXd9blB9+jm0rLGFjXuFcSeQNTX0sfWVl10VI8lzz+xhtS9C69WNqh7ur4dUbbqNqzar9+RrPwF1ncdCWr6wv29V1U77LLa2lybnv9LVHHrLRPW5qrpKkPv8Ajw5XvvehG+FyOUdqfpP+nxdKmeufnMF5m7vQP6XKgbB5898lhZDS08/Bipugt0pZyFvrc/E1sNUWF7ivCpC6GiJpyPonSncqaCumtMDrjzQWxnWMIfPtvm8wpc/Ask4BZ1LUb0KKx0TaP2ujgNkFtepkMAOzE/pjCx9v8zqquOMjvlSTLBURR0vyxiWTqWyjKXiWc3TcaT3YQVhCHfxGS6qKVbXYySU7L+q9Yx7Jyy7qTMJ0qK3q0hi35vlIPVUqgqY5qauID2Mm/cJT8Dd9oflZnXV+1AiwrmfOj/QvPojY8f6vCVfA6iL83kPrdeS8z9/h7ebfH+V48SFGfkYMp9h0kmtdUNOcvZL/MOoJ3xnSjuOnYosDOnYxD/nPCTP8iMP6LwtnvCYqDyGuCUheN+emPZ8mGvQaTo8r7zw76eSp93Icy2AI3hmIdcrwSdfijsRXox6wnN0Paun2ENm+N3MYHhXfBLmr4H0IR301xc11OiAjJLP4uyha3T1L+RAup7Z8RIv4wdnC+tXy1UvcUXyXbRWeFoottm5nXYb9XTi7oaTlmNDVXl9nWub5D3bzh7sqFgYNaf9rEWbmQTS9jT8zv9SL0K/E+MGrCNViCiL6RieJ6Ecl1bC6CP3HL0tBGuG0vfLWqrrgUyMPOnMNdDqGIxPOrv/KBZMP6UjsTZPaq/PT4Y2MOUfOFbTNMLa8lNFLfe+wRvvNcgiUcYTxu0EcdzDkbVzWY2em1wXO475Y66wRwnrmTInfGRyU5dNp73azIumJ540NN8Y3RPXkU71DINbo/0MSjq3+NJ0oniQYDwSWd5DObRnZF9EV6/lNDjXv/fFnrLmXlTQK8wUZP8S+YxSeyk8b7Nurtb7ei289BJIEwOshdUzIzpCrNsn5loo7aF8VXGOqMxxHFeQpKw9rHOqMYshJ4ifl3U1fvdZYfB9KBhrhtN2dwmbXsettI3WnKp/o06+B8u8qIIib/PrIYn7sdVdWx1nO0p/BdpY+Mlv1jb5ts2460SSsii1F7Vw5SuspElVFZC8NaBJI1ov9z4peu8MWoOilKJqz5zylG1mb9Abow1p64tDnr6B2oOrPvzQoA6BHJb1s/AtPvW2FWcxN4Z7VxRphZHPvNJStI+AqjTlobFRnbzH69bVVJvES6E3dbREXzIESlJ+jW/tmZR60+ZNzG2iGf0+PNmLfmnmwSf81tpcPzz93tpUlzzso+reCD4t38GK7/soSgnDKUEJr+xq6Teuulpf6H+r5kZ43rmq18F8bjsdUufJqAbUpDtet1bI77oqf33E+LAuSDpqrNL9Oj2us571NjEfQ1S/35lqWKght6qbGsvyylA1j2cEcYYRTx+hdrKNCKtdbeQ216Obg9SGHqR5LbOZlBH1dO0oN722A2vf+neyV0WVVC9clxGc26murtc0TyHcNNQ/gf3GakMBO5yXu6frWTijnatH7ZlcbQk/CWtEvfJsMvXFJIXrzh7FGWP701v57PO/H2RPl3JhAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>4a2d6df7-dc8c-4211-be6f-f21eb9cdd0ba</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4a2d6df7-dc8c-4211-be6f-f21eb9cdd0ba</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>381051c6-c388-408d-bb12-970ad76b54c4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>381051c6-c388-408d-bb12-970ad76b54c4</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>HDD in GB</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Please use whole numbers only.
+A value of '0' indicates hard disk size should not be changed.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>10d4d211-e623-4294-990b-748b6afa57ba</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>10d4d211-e623-4294-990b-748b6afa57ba</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCenter server</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Vcenter server name cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>dfe5b8ee-ca45-47e7-874a-3f69b1ed0886</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>dfe5b8ee-ca45-47e7-874a-3f69b1ed0886</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>CPU count</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Please use whole numbers only.
+A value of '0' indicates CPU count should not be changed.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f9a3aed2-8d98-4244-938c-d18838897ddc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f9a3aed2-8d98-4244-938c-d18838897ddc</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>User</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>User name cannot be empty</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e19b99a3-064e-4c74-b410-4cc8f546cd5e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e19b99a3-064e-4c74-b410-4cc8f546cd5e</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Memory in GB</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Please use whole numbers only.
+A value of '0' indicatesmemory size should not be changed.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8cde9749-892a-4234-b649-af63ca015e81</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8cde9749-892a-4234-b649-af63ca015e81</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>User name cannot be empty</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e790986f-3188-4289-88c0-90f76c6bf4c6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e790986f-3188-4289-88c0-90f76c6bf4c6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Password</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>7</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Password cannot be empty</ValidationError>
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>CfgI/7INrrcGjfcZV/YqBgXmUSo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

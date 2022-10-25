@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d365ea77-264a-499d-8b42-fa2cfb1bcbf8</SBAId>
+    <RootSBAId>e543494e-cb12-4f2c-9325-661a4c5042ca</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636807349983550000</SQN>
+    <Name>Show display adapter details</Name>
+    <Description>Gets the details of the display adapter/s installed in the computer.</Description>
+    <Category />
+    <Version>1.3.3</Version>
+    <DateCreated>2018-12-02T11:24:47.127</DateCreated>
+    <DateModified>2018-12-17T13:58:44.833</DateModified>
+    <DatePublished>2018-12-02T11:24:47.127</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>dsNy5itGOqYKiTzu1m1o/YYctSg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>display,gpu</Tags>
+      <Credits>Credits to: Ton de Vreede</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>93</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1aeW8cNRT330h8hxGptK3UBDZLCwWKgE0aIqUkJGlLVVUwmd1Nhu7FzGzSVel35/n37LE99hzbA1CUZA6/53df4y2RibH4S6xEiqtcRGJbXNNVRtepWIg5PRmIT8Un4pbYp6cZPcvEjyIRhXp/AsgJYMZ0n9DfSDyk3544o1ULsaQrieE7sYX/kfrZoffPxS/imHCciUP6td+eEp4ldivojikpxBWwFyKm55d0Ld/N6C6hNymtkW9HdJUT7JSer+k+picx3UsKI/qfgaYxMKfgWu7rUrZH3J6JIVFxSNSd099jorRKXwGeU0gst+g7IJgn4jY9uwPaJ51pj+n/CDArer/EXxvzCHAxrZ/S850A5fviN9LPY6LgiK7td/viNUHOIBmJKwXmOe0lKZGcyOfXoKEALXpnXpkTpRldL/H2BjRM6eoC2BJaPwWGkYLKwMUlXUUkyQWwymdTks2yfJbjyTjAibSMc+jBfn6uJJEQ3EjJfQI7iYjvayWbmKiS/1Pacy3ulrtN6MklSUfyGEMLmWXXQ4VTrn9KK+X1grBmSkcF3UvLX0Fad7FjAoufAlMMe5d4pL3ZNBg703xoTZt9HtPfGeDXxOUaNhrBWthuMsDk4K4o5bworSOFDGZ0JddJi7qElm3PeYb7gdgVvzscsocUykcS7JGXFrYlvi/1s0Xv9yCHqUXbVUlrpryOrT7kbZpqtpsMFi0lOgdPco8XFqaXFHn47sTBtSa7YB+SseYH8jZbuj2ynhiy6JGe3Dd7sGKOck+dWOevPYO3Sfpy7+0P4k25y0N6W2d9PfEtfG+pYqze7SHB3yLJ5fRbB/uC+LpFutqpXbFDtrIAnZnS+W2KOndIbm/pp41iW++niBsRwR+InwhDM91Mkw//uegDvn33ZsvvIrVmDEZ2zes2kWBVZnt0P7RobpP3JtGim91sgtG2pk3g3sfGusTdLpxuEr8Nn5tANXMpebyDv48oGsytCiiiJ2PErgtk81fwoVtEtcRUfWfjZ3xvSvltqfyWqqxW3Yej6bWyZl5T3dmN94mTY3UdNS55z/HM1EWXpQbuWjlKWgRXYjl2mDg4ItorVpikVXF2HKncIfk6BISUiYHaAW0rVWtsow6NxBdKJhLqjWNXW8hemcrCmrMCNWdR5htfHrklbxufwbUtfiboXNFxTLB/qjwfddKihHoEnsaQH3M1gl1NlYR6FBMz4JiraljS8La8si2ApRVXNFWVLmdOUyFLXmydjcmfUrzRtuDXbwVqM+MJR6j/xqjq+iVN+6g1xx9RL7IWWCku5oqz0X+qrVPA9xwaqlzvVfoMW1dund7OSQ81lYH4Bs8ix2NekHe8RIX/GrF7WUaGHeQ16bUc3TbnsdonsOX0K5b61qkCz5FFdTWXorPQ1qhtbojnQ/odIQJxBJkh4q7Kul9jci3r0MK4TRwamDBe36uGyGwJrNzF7Ufsz1RnwRXtjYpovhdK+cXoMdmaunO6Q3u4NGpJDrFrrDyIo+kVrOECkLnjr5KCBdG8Qhd1jb5rJXR/0VZR6nrZlUePdN0Tum8/VlxlFQ/oUd9gVj0hCbxC/3jjRDVeObBWnsL+dE/yOTIo944ngA7t9KUF/wwdgIavrrxnrTyEvs4hjcJbed9a+Yvqe38kKS4hnaSUdxXuKwvOUByRnCb0U139tSPJCeLfkerwq2sfBNbuIRauvbV98n+zek/5doxYU41VcnU/wO0hqoHC6tV9uN2KPM36yKnZqnCDGimdEfS1ikpRi9X0Hb3XYznCm8hZ8VjVcT7Oe51wcq83R1QISf9+DZYhrU6CdtOvtRx352b77jsWdUJrV8jHId09COj8FLFlFOBp17Eovd6umXW14UPa1vUrJohjVBj+ahPr3qWWr4tXNuWmZh6hgknVFDJVkVPie1VGbHsmMUUH7cuxK249PUsCMuOnGe5kfRLey/Y2ns6MYCe54JnavNxDZx57GmgmGWYKVgQp9nceVLjcFKPMbinme5I6PQVkjleqQx6hJmUsa9Qh8iqn6xzvZ4JnoGth5kF2rmCub4TuXGbC9O8a76LMVpHqXnifRHDv2pRZumm33YJkLpirDmsiuBrPK/LMA5LgCi1Vdeu6o0x9nu69ty7nqiLiqseXJEPGoKvZTmeWR/uU3g9QeoGKJuRHsdX9tnGgYTmXF5WqybYSGy5kIXbUHjq8TVBJ8ezHh/u6VQvah32djD1+UlVBpmoiIm3P3/PBB7dmtrukzDPVaYKe4k9LDFIqGVF6U06EeUe7Q63Wy76ntstj3imi9jvlBtdmucaRdIbwdckHE1Vth/3Traq60TRRXib7j7kw31ImapIQlqHx0lR5FPcwrMsQZSYPfNbi2WzFcv6zrvXDPwhbHqTN7n9C1V43qWjrDdktT5NSVKocYzUdWrt27JW2NFPf2ML+3Pfi6sfzLttvGOZC9SP8DZM52YYtrJAH3eioYabIkCFe7MjbrGeeL7IsJ2p/rv+bvLcuLjOfoTjr1sfN8pU9sZGqjhTatu2eIpy79Ky/ubqWtXJa6XlC1VY1WnWpt9zq/JGKFyul+VUZ482OT8Vr6vPcrBGqIO149/yD1xZurX/m1G4Thws5tdKznARxaA4KXK42q1r1PNTENWm146DPyVozV7HR+PkVfH9kZSeJIVFeNBeF5Udyv6pvmFwmK89rh58uet/tFPv1sxRTvIvaTLLrxOv/jzbmiPwfWhvVjLH7DtW7/qrE2O9679situlgfMu7Kvt4HS3qKn83qtTp1s43YTvMVYabKukWVm3FE8HudtmUET78bl1ifZOEedKZoiKSEfFSNPULIQra6vP2qG7OY5hc2UWv3av0agSor8b9qts9aVSVLEtO032puNZ1op3ZzYkw/Z2pracebDCPsTMd5+9D9cXIZCKeWv2l5try/jatOhW/Buixo1Gs+At1ev7+IT42n/1sXvG9z5xH5yJXR91qEX8St9k5gC6zuLb57qZfGQ5A1xJ8JaAhTHPTdGuAKqoJzpdM27msf/8rylN1wqZpnrVXs8bOK2c1a9xsEF5jx/B92u0Ynhpaacfan+Cr7MeyYpmjHskQpxfwiqiWcjtynogU0ufJA1u+izuMw50IDGv3cjv9QcO6XUee9esGzroDZ537DfBAjJ047J4hdb8nh8+J2tMuP0LUnXvVvYFryUzNtvqqab4C6fO98o0+I6hP+9SdLnTPfk5VZP4b+mJvTLCX+y1/2zvvF7WeBJQ4+bv3DP69je9uknIj72SDb8KmSqie02Xt+HrhMy1TJ9Pa5xzNeeGRYwX/ALxTFFaKLQAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>iJcZnZW6xJYfVxtoDuBmGgEaCTg=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>fcf1304a-152c-4618-9d9f-35f1abbc8cec</SBAId>
+    <RootSBAId>406b8013-9182-4d6f-ad58-e3e81faa5204</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789287910928000</SQN>
+    <Name>Show page file information</Name>
+    <Description>Show configuration for all page files including the path and current and peak usage</Description>
+    <Category />
+    <Version>1.3.7</Version>
+    <DateCreated>2018-10-12T19:48:29.23</DateCreated>
+    <DateModified>2018-11-26T14:22:01.863</DateModified>
+    <DatePublished>2018-10-12T19:48:29.23</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>CTePgNTLJlexk8Rjt5nuvUrzYdg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Page file,Pages/sec</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>1075</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAMVYbXPbRBDez8zwHwQx4wSQ67Z8YDKUITVpm6GBDG7Gw9ie4kROYrCtEsmlpuS/8+zu6XSST6plwjAeWdLpbl+ee3Zv7/bolqb0B61oJk8JBRTSWzzd4nlGMS3R8pg61KWP6SP6hvbkHpjfc/RMcX9DE7rGc0BXGDWXp0sZze/XkH+LHqmVOJMvMVoXhfYJ/iPcV9CuElmbq/E7kbbGSNYyhZYbtD6CfQ/pa+m5R9/aUUPISdGX9V3TmFri5TX9gP81xj3B1aYXeH9Jp3RII+rTL7he0THeR9QTy3nMEnJ6YiXLi6G9L76PSq0jaU8c9E7FK/XmFt9PcV+I7+vS14XR0za2z+SNrY5hRwqU+X+A9gj3G2P/V/C9az1uARHX5nOLpPbWGQth9Qz6TtCHEWIbLqUPf5njnT34EfeFtA7ElsfA+TWdGXnPzEyfb8wV28BfJrCi3PsI2vqwnT2J4NefgpFr2Qn+GYszQfSNoJYKVqFIU8/LMxk61rbFh+31tzHmb1w8c3PhVCoSj+mdMJs5uWlNcy2KTYQ+jNiF9NSRyk/WN5X544h4uzFn94HM9w2074pLMx15rE6EtxNIYc5nOSXLKL2afPJEMsP+PWPlWp7NbLIzKvXSnklGOEYfzmgh/QT0frPSfxWE3hcy4R5+nDEZy9jm0Uu0LTw5JQAHWeccTzf4puxaYmQgueovk/0nQDgVu/1ZfWnw+VLGrSV7sJai1qhCX9dcWZ7XMSv8zytGMF4z8Uz78Ih3krtWuFw8hkAslhw8NlkwMcj0jX/Kkxa8YVmJyVj5+PJaUbeCqSS2nS2uljOEpEzWAojyaJ2RxEp5LfxJ8HUuvjJbRnj/wkRHJnkGW5jjn8gov8RQeFT1vSNRtDKMCM2cPsR1UNBUZFr2+zAibWS+Mh8ngtB6gyFF3+4Kb1MzP5nHfm+GsHwsfnANw9q7Ek+h5VfVuEfecfeFQb82LrJo28b/+7Gn58RCYKOhXSmvOnKY16uSXUXLW6aO5LhIzbgh8E8KcmMnu43xnTkbSdZhjMbI5X5v23alzTJS29rmn+kupPklVa8nRZn+Pn6ZJ6VsleO3j0rvKRiWy/bljlzSaSHPNZd0580cVbO7HfPdme009LY6frfT1QSP6piv422xbu5LVZw63K+uq3n9HmDNUv6W1+73pDm+49QWWeapY205l1fFeJ7FmuTeeob4cdiFJeV49aOZa3FR0gpnad+vpKri2deqbWZW2sy/NWlFw6jnFUQka7E+z6U61PrGZ/0RekdAVPdoF6YOCoXpuvsqzm0523H9GIv8cgXoSuR1uirDufnJRSgoMM7H+So8exW8rdf+UmJNq5Em2o6EcbFwLxWuPZXd5NRG7L/x+jPHiqHh+Q1i5RC/n01lEwmP93fCJKAHtbG+jX8cJwF9TlxXdaXaPfiAz2fEu8jf/zNvM/n/j593W1cL/OXOytGznEAs0YjVijoQFFh/Yi2JkRvy9jPYGMDeFVqvbKy3pF1PMnRPrsju2z3jC7RyRjmA/+eI+Q5QnqAfP6sEPXuZyg5Xd1bZOU9ezZe1dAqWuFFQL6+zcdJTdQ7k986vN5NUpzlDP18Tmp1ZHHh2qwOZv1TWx4Hs9Jd2Pj8tSAxEV1DSGaGX8mPTuqanTbvaV9wJq5UJ6QloKjvpC9KTz8werfgn0iMp2VH2x6+leuU/NBJ09pucluTnDZpTQnplceY1LKsjXK7+Awd5kDEqFgAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>YwjPtaunQ9juSrgzql9yXDzcfXs=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

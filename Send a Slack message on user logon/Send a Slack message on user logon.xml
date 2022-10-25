@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>f98080b0-ca15-4ba4-9e03-84da79a60dc7</SBAId>
+    <RootSBAId>34fe9039-57f9-4604-8686-b4a879d3ff4a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637769894744144398</SQN>
+    <Name>Send a Slack message on user logon</Name>
+    <Description>This script will send a notification to a slack channel using the Incoming Webhooks app when a user logs on</Description>
+    <Category />
+    <Version>2.18.29</Version>
+    <DateCreated>2020-02-21T09:02:33.57</DateCreated>
+    <DateModified>2022-01-04T09:22:50.33</DateModified>
+    <DatePublished>2022-01-04T09:23:50.673</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Joel Stocker</CreatorName>
+    <Status>4</Status>
+    <CheckSum>aR2krztGQR7Bxl8KYZkzAT39bfw=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABRBJREFUWEetlltsVFUUho8aCbV9aJimhdIxtlRTaYtGhCeFhwoKaGI0BMqLb2hsCWo0KtVoTEjj5Z03gpG2TC+UltZYSAuFGi4thKgotp1LWzqd+3RmOtPpXPhda8+Zy2HmzAzCn/y97H1m76/7rPXvSshTNxfD+HZyCT/q/bAFo/JoUtZlD1pvD6DlVg8mnEZ5NLfyAvieNi0570TdJTc2jrqhOefEZWdIngVGrXdQcOogKvs+Q3X/5yjUvY+jf52VZ7MrJ4AxEEEpbb7198WEN4+58dxFl/wEoD3zCWoHW7Dp168TLiIIg88mP6GunAC6+SA2XHArANjaYScWgoDZ70BJd7Nic3Z570fQma7Jq6grJ8CNxRDW0WZpACMumBMAh9IAKno/RrvpiryKuvKqga105Pzu+ejZL5PXDxPAMgEE1AE6TFflFdSVFwDrvVtevHjZjZfIm8kVdCoCIMsJPFKAdN0TX2eWHhGAiaq9m15qZxbryBcdyfZjPQjAuMOANuMVGH12eUQG4D7nVqu64EJ1Fj9LrVdB7/4ZsicUC6N8AXisuOtD0R1FnR8kckLihCs570ir8mzmWuA6YM3mAdA4dgxVFFKp8xxWE04DJI5XTrhMG2Uz54B1BbhLRajpSs8BLQG003Gzas5+kRZUnJgc29JP+gCepxbLtImat4wtonLECReVg2vFi7WnD6N+8CvFBnwqwwt/C4DawSNpABzbfHdIfLFozjlEf2fa7H5vkTNhz3WPWJzVMPyDOGKGqKfFawa+RGnPIXk2BlCXAsgwBbqD4gITRcgXC2c7H6uWCkzN3PuVVIy7ry+KhVPFEGU9h8VfXjtwhIo0IMa5WTXdTVjT1URzzSjpaRZ3x6jljphX5MBsJMVhciBKjsS8HMUMjdnTb+KEbMEAPeeVf0vK5PdQm3swIztVyiAyLqTYLA+maMZCF3/yFkxT0An4ZxFdmkHYZxKO0M/w303xnPxwTALAP3ID+uK3MPX4jpil18T3WNYBUe8SjNp9NLYT00++gdlXmuSZpJxDDbDq1sLaoYH1VImqLWRblxZBy6j4nBS2ufCv9CqM6/fD9PQBYWPFfvp9n3iANb3qdRjL9sKkpTltIwzFb2MuBYI3t/dUwdFXD0f/ppy299XCcrIAkWUrJMc3J8SC8c0FAMEYymMA/qFxTNNpKOYJYnrVLkRsPkTDlAe6srw3j9veUwnfH62Q7J8eg0HzjnIDBli3VwB4TgxB/9Sbinn21GM7EDLYEA2ZxdE6+h8Q4HQ1fDdbIC1f/QeT0jbF4nwi8++2xAB+ZoA9inn21BM7CYCKkmQ/U0uuybiRmi1thQg5JmJF6PjuOEFsx/Tq3VSADTBuOCAWZmUHoG4hRUMeeg2ldBIaKrCK7O4sh7WtiI7/qPhsog1DBjM8x39D4NpteSSmfADiCpqHEdC3I2DoyGyeM+oQ8SX/bVfmQAblA3Av3q//Qw8HYHIgsjInej9WBxth762Be7RR/nRuPTRAdGUelo411Nt1or/ZNmoxe98L8grZlRtAtGEGAMqGJAC3obLKre3FWLGPy6uoKyeA95fz0K/elR1A5IASgKs9oG+TV1FXToCQYZ5ac7ticw4qvjvi4mzno08FsFCrhb0G+Ql15QRg2UVObBOJySE1SXcHX2Bx8cXC2c7v3kYJZzlZmOjzXMoLgMWJybHNd0fYStfufYoGrPD92QovxSsnXH4C/gMD5CUr5p3s2QAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Joel Stocker</Author>
+      <Tags>slack,notifications</Tags>
+      <Credits>Credits to: Joel Stocker
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>17</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>fbc5ed9f-c207-4ff7-ba8c-4933b3bd58e1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fbc5ed9f-c207-4ff7-ba8c-4933b3bd58e1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sServerName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>392989d8-e7db-46cd-adee-44b2c791f125</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>392989d8-e7db-46cd-adee-44b2c791f125</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>UserFullName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bf740fb7-ad6d-4d20-addb-b8d433afbf08</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bf740fb7-ad6d-4d20-addb-b8d433afbf08</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Your Slack Webhook URL</Name>
+                  <DefaultValue>https://hooks.slack.com/services/YOURWEBHOOK</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>jj80A4aq/RBExs0YDZ1fV81jiMQ=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

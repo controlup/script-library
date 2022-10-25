@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>bba93586-d8d6-4929-beab-0a8fbc8ba5d5</SBAId>
+    <RootSBAId>022a3fb8-b21c-4cf5-ad85-fb0549f69936</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789283938856000</SQN>
+    <Name>Message and schedule logoff</Name>
+    <Description>Send a message to all connected sessions and then log them all off after a specified amount of time. The message can be repeated at a specified interval if required.
+For instance, a delay of 15 minutes can be set and the users messaged every 5 minutes with the text specified in the "Message Text" argument.
+When the configured script timeout of 60 seconds is reached, an error will be displayed but the script will keep running. If you need to cancel the logoff once the script has timed out, run the "Cancel Logoffs" SBA for the same computer(s)
+Arguments:
+  Message Text - The text of the message to display to all connected users on the selected computer(s)
+  Delay Before Logoff - The period in minutes from when the script is invoked to when all users will be automatically logged off by the SBA
+  Message Every - how often, in minutes, the same message is displayed to the remaining users. Specify zero or a blank value to not repeat the message after the initial display</Description>
+    <Category />
+    <Version>1.3.13</Version>
+    <DateCreated>2018-10-12T16:20:49.58</DateCreated>
+    <DateModified>2018-11-23T18:48:46.533</DateModified>
+    <DatePublished>2018-10-12T16:20:49.58</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>qE7ltmrH7UvehbQzjvSQyjkwscM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Citrix,Idle,Disconnected,Logoff</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>148</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>ab0a0723-c6d4-4c26-b0b1-bb420eea459e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ab0a0723-c6d4-4c26-b0b1-bb420eea459e</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message Every (minutes)</Name>
+                  <DefaultValue>5</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Positive integer only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b8760219-a8f7-441e-987b-16cdcdb6646d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b8760219-a8f7-441e-987b-16cdcdb6646d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Delay Before Logoff (minutes)</Name>
+                  <DefaultValue>10</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Positive integer only for minutes</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>fa337666-c0b5-40b3-a89d-60b90030bb47</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fa337666-c0b5-40b3-a89d-60b90030bb47</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message Text</Name>
+                  <DefaultValue>"Please logoff as a reboot is required"</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^"[^"]*"$</ValidationString>
+                  <ValidationError>Message must be contained in double quotes</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>4f2seVcoluSiBuzGfDB9BSjHfkM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

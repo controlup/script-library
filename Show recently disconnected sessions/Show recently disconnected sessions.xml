@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7aa1d8f8-04b2-48c6-9529-b95f62d2015a</SBAId>
+    <RootSBAId>72990f7a-f7ab-4a9a-ad7d-92c8887008e7</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636784061709090000</SQN>
+    <Name>Show recently disconnected sessions</Name>
+    <Description>Use quser.exe to find disconnected sessions on the chosen computer and order on the most recently disconnected, showing the user's logon time too.
+Arguments:
+  Hours Back to Check - how far back to look for disconnected sessions so those disconnected before this time will not be included (default is 24 hours)</Description>
+    <Category />
+    <Version>1.6.19</Version>
+    <DateCreated>2018-07-18T14:14:07.57</DateCreated>
+    <DateModified>2018-11-21T14:07:21.2</DateModified>
+    <DatePublished>2018-07-18T14:14:07.57</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>bSDM347Jxujo7+mlJnCLzdAEpdU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>RDS,Sessions,Disconnected sessions,Citrix,XenApp</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>99</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAK1YaU8bRxh+P1fqf9gUKtshNhjSkkZN1AMSkDCJYhAfHNpssY3d+KA+mlLKf+/zPjsze6/XJFrtNfPe17wzP8qGfC1fiWeutgxkKp/w1ZWhzOUKfxNcPXwt8OxiZo73HNeQc3OOTGXm5nXUc3RmxO1hbCEjuS2k/Afnb8QHltKfyDX+/5Ilec6kgec/uJXHElg3fKr8UR1eY1TpnABSqQ/kCf52ZUea8iwF3QItlaiP+wqcF0YvT44o54K63abwlN42KDb5fOZ4vwNfT34Gza7RagQK14amUh9jXCltyEtHtQNIn3awEJey6b5PjS1fkIPC1OXAwAfYQ9o3wJni9sG1nfKT4u+kMAa0plr8F+BdycdcyJD2Qa4PszGj/rrAeBfvgYF+CvgdZwn1RBWjm4yCa3BpyK/EV1oeNPfxpZwe4e7QQzMTK5fyHNcxxk4BP8L1BnOHsOENoG4TdDvgeomRGm/lfRfzcL5lkjQU695psEH/j2iRmYti1bfHXBnKvyaG+5Hxt/CXBz5LjPaJqbQ2OX5BKt1IFFRdHBxhVG1Qg53OoXsDEegDTr8DCoG9e/TZmJmYjIk0l0ZMkraReTW9Rsq7eb7P1i6br6VUxDnMJPXNDM9bRl5etTk3NcXa4CdGRzWz2vxnqt7I4GsUthENQ2jlIfvV9mf09RgUagbjFSvHISNnAIw3qG9/OgofMiMuP3u3cEVh45Hfga6qrVYxlbMb8e3vlHcOWUeYVd4VeU+KlVRV22D0HoGGT8tNGOUebdpDbinMOWQ7RJSdIspb+PIKLoVs4zqG9qe5GMfwaAB9BogzB6HjJ/w7w7fFPAGt16QXjmfrMWSGZdVfXZ98aqYSbSMOW4SfUOtgHVDveQZqCuvdMNOCKqezugY8Fc9VCZvLE/c1I6dPoKi1SNe3IO8nfI/JQb9Cr8U9HNbPvCh+5TCjNfKF0b0a8f+YOl0xLwP/d6D7W1BvAaZi6uAd7n3c97iV7pzy6ej3HE3aOeQSj7ywSsdnkrW8h3zz1tav5jzcN14q263EPTOkrBP6Mi9S55wNdfDIxUoSUJiR15J9TtjHWD9XDY0Adj8itU85h/K3WRniGa9VxUMGTI2MC/IeULuPESoVtxpXXLyOWf9sxAX9Td/obSWfGLoT+OGQmT4inUHMw/EKlVWp8noBW7Gy8MvE9gGzKuzIWsRZctZWtw+Z1IujsyN7XPeTOfEbYN9T7hreW5G/55HvMFeCCNzDtYVKsAuoJrKkSJ5sWyavasI+LSdlj9I3Kf1jsfVnawW8wnmu03nMXN4phbdHvCKZ7wtnbQV5uB+KLN+UHzC/J999AZuXs3dZu+1+Ibt9Wb3Stl8tYRaE9eYjyeuR66YyPTy36+y18uiHvqhlSlhsmw5WcpVpaXZ3ug6HndklOkFd78pYt+K6yAlk075CIzTouuLW3llh7ZDiSaRbOTPdiqUa5tF666VdZ/clXOWr5HYHye450jTvXbwrxOln6FE3Ofskc263YK7pKlC6t8iSpUiGsnzKWTxr/RrmeCC5+/aMP+I79YbZ/8ejukqNHp4TNXPXzc4iqJoq08P1DPqVI5djVs+OoT4we+p3Jpq6K+JvlQ7bYjNXvdc0Gn2u/HEuYQ4+VMrsyImP3ptdv61Bwd4zfhoR3/smczirsmWdQ3wjtlsbsbtb5GKHYxqX5c5r8jvnoemXLY0aJImfdKyuR9FddnRPsBq+kej403a5oKUVT/fWUTtXabVN2mA9ThqNU0NlaqpP0Yla+iy0Sr7F+VPWZnEbbK+UxvZ3TZ6o6X9NvuWob3Y8eTw1xrYkeVoTjW1r9XK+1vOPtjkVXjd3w7OTwIZ1VGEfK3TQEdRRW5e0QvRUKojJdL9ZbK31Y+qUu7F1zsb7zvOfF1nFHorrv45eVqdiyYOVxuc5RrQK/A+fiyR4QBgAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>caf708e4-a764-4065-8094-3e2a1fbdf8bf</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>caf708e4-a764-4065-8094-3e2a1fbdf8bf</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Hours Back to Check</Name>
+                  <DefaultValue>24</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d*$</ValidationString>
+                  <ValidationError>Must be a positive numeric value</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Egmymlv1hwb+AyQJbi9f5BPp9O8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

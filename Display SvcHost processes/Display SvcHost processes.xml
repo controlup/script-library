@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>bae1d563-336b-4382-a12f-04529bd9cb42</SBAId>
+    <RootSBAId>c7f9f4c2-c7ea-4d22-a440-13f31670ba0c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635670368360960721</SQN>
+    <Name>Display SvcHost processes</Name>
+    <Description>This script looks at all of the services running under svchost.exe (a generic wrapper) and tells which service is using which wrapper.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2014-09-02T09:01:36.83</DateCreated>
+    <DateModified>2014-09-02T09:01:36.83</DateModified>
+    <DatePublished>2014-09-02T09:01:36.83</DatePublished>
+    <LastEditorName>ControlUp Support</LastEditorName>
+    <CreatorName>ControlUp Support</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Y1ZXqtTl1XD7gWTzb6EuVLG2kQs=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ControlUp Support</Author>
+      <Tags>services,PowerShell</Tags>
+      <Credits>Credits to: ControlUp Support
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>support@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>542</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ila/RvZr1PT/xa+R/hpbv8Zv/Gsk9FP++96v0fwaLX1X/BrLX+Pi1/j+r/G7/RrTX6OidqtfY02f5/RN+mt8Rv//6NcY0//x5h3+93ejb3J6d/1rlNSu0VZbv8bn9Gn7a2z/Gt8lGMWv8eWvMfk1fpo+mdJnKX16Qq0zao323+U+7/0ae7/G7/9rvCRoFbXK9Tu0DLF4wdjn9F0Mw+1f4xlBK+3fH9n2n/0aHxPES3pnTm9hrGP69B39/2Nqlf4aP0P//93p/784oMrvRtBDjD7jT3//oNXXG+trxvGSPgH0b2KsIfXOfo0ZYfu70VwA33Hk2zsbRm7+e0Htr6ivcFQvCfvuOAX+irFpf41r+uz3JJhxnEKqxnA7jGLzof8JhTFLLdNt9mt8Qf8u6NOaMI5h9l0a6c8OLi9pdi+on2f000hPnDb9dj87GBnqZMSjs1/jOfNqzjj9/opHS9JjuPJnB4dQKpz0Cg4/2323PEbXn/vkZ6fHpzTOhmYcGuK6N9r4tz87mMhIIblfEBfMejTwv/klAQY/1vlb/pPP4jYCn/0/lnU7R4oGAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>8Qoi28tzAu1ZWfD/s6HjMGi//XQ=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

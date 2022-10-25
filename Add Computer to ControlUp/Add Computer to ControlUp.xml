@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>9de7279e-7270-470d-b3fd-f7bea9e6bb3d</SBAId>
+    <RootSBAId>efa979d7-e7c0-4e8c-81dc-eceeaddd10f8</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637267795967930544</SQN>
+    <Name>Add Computer to ControlUp</Name>
+    <Description>Adds the chosen computer, which already has the ControlUp agent installed and running, to the chosen ControlUp folder.
+
+Must be run on a machine running the ControlUp Monitor Service (this is not the ControlUp Agent Service)</Description>
+    <Category />
+    <Version>1.1.10</Version>
+    <DateCreated>2020-05-11T13:35:28.18</DateCreated>
+    <DateModified>2020-06-03T11:11:57.94</DateModified>
+    <DatePublished>2020-06-03T11:12:06.28</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>L9LqJlqrngencNfomHTScbanO7A=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>controlup,agent</Tags>
+      <Credits>Credits to: guy.leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>61</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAK1WXU/UQBS9zyb+hxFIdkns+hVfjKgoohhBIqwvhEixhW3S3Ra6hRDjf/fcM9N2uu0CD2TT7nTu17n33DvtW1mVx/JIjPttSoSfkUJyieWPJHKGK+beVELsTPA8w06BnblkuH+SMaUZ9hPuXVLnHLsBJSW051idws5AWkJqqL/otZLOag/W+27L+4iYfdwfoFvKDWQpvMT0aOQFfs/kubzG/SX+1WJV3tXWR/A+RW5qM5ePjBm5yENZl+Nacx8oL3FN+TRsxT7ypOonxnoIxCG9hQ7zjTyVr5ClqOwu61dAdo7VhgyAI4N1jhysfVXb0PHRVHpQ42ria3Wrmh/LGrJve9tz2Aww3I38dpQzxsqgMYaOkW2uoxZqG9l0cBhivE8GZ57XCr1arNeMrMlnyC5Z201EmsNa0e3jOYZ9zP8ZJJr3Bq6BHBBfjpX18Itap9grsLrdMmGXaPYpuKwqoYhL7Fcet7A+xc75A3jTS+dvCJsnuPRfuS0XpuGAMa7w3MT4Qj4DeE5Qux1oa4XDGodKUjwrv013XBPBK8zKb1bE9xqAaUVdMbni2dmsusgG0DLgzDje/rZYP8SMKn/X9DaGXYjapfRo++jMTaQ+T7jf14HtmKaD/Jqniz0REp5bysgF0CZcRYyUuf6dOJ0CFtqROTvZ4rFn0wqz+OedIt35K3mqpK4232Ct0oDzNicSfz0Ehzm0E3K2TOdu7ke1fsNNwBxzsm3roawMyErg5t924rrriwl5jrzYfZOvsZS7mCgmPDNS7I5d/UeuAst6+ZCny/J821VsJIeYl5x5fMc9hE+V9p8F5s5Je5juPIGGj/eEfe/3XYF7BnlKffseTIiw6uyiZsw/+wxn1I9wG/+qtdid3RMk4Zms1nPX/dqjO95uwCgR8doeavqpjxc9RWy9yntXdBt2lpvm/eYjayrT12f2e6NBaGvZx8NiPewXTsB3afetG0C+1dlvZ79MFsAy4/eMovFttP+u5A0iHqBTf0JvD6st+YE6b6Lye+58bXj352DZu3CR3TV5f6/K73Nte3kq1TdG9b3VzXDmYo4gi7wMZ3WG1Tz4fWu56MO+yMp/zDhk4oQKAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b0dedc56-d53a-4b15-9918-4206838d417b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b0dedc56-d53a-4b15-9918-4206838d417b</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>ControlUp Folder</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2df19929-3fa4-41cd-8d9d-f52a3d71e20c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2df19929-3fa4-41cd-8d9d-f52a3d71e20c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer>Machine running the ControlUp Monitor Service</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>FqpI/r+7O1WwEfDt2bAZQo15o+s=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

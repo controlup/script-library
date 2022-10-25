@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>68468ce8-3048-46ea-8e3f-b80f938e2352</SBAId>
+    <RootSBAId>a044070e-80bd-4898-8dd3-a5dfa0e6c6fd</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636639031811498000</SQN>
+    <Name>Ivanti Environment Manager Logging - Disable</Name>
+    <Description>Disables Environment Manager logging on the selected endpoint if Environment Manager is installed. This SBA requires EM 8.6 or higher.</Description>
+    <Category />
+    <Version>2.2.6</Version>
+    <DateCreated>2018-03-26T15:27:26.913</DateCreated>
+    <DateModified>2018-06-06T17:22:58.57</DateModified>
+    <DatePublished>2018-03-26T15:27:26.913</DatePublished>
+    <LastEditorName />
+    <CreatorName>Landon Winburn</CreatorName>
+    <Status>4</Status>
+    <CheckSum>So+39a3dnFgFXTZza4qMWufNfPA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAAlFJREFUWEftV7tKA1EQXQKChZ2tRWpLqxT5AiFCav0Df8bGD7AWBEGRiOILCxUfaCNWBkFQRMQHGtBd94x74uzde/duXDGNA4fZzL1zzuTsKwnqB/WoulPtC6Ad4CBYDfoC0f4fQA9QWav8GTIDsGjF8g+zBVrHOoCeEGieNAUTJxM9gX3kMbmRuwPoos5DG0NR2QCHjRtIOWDbhMxYuVsRtO5aKbC+dLuUymEYSp8WNLmdDujNiE7Y+aotxsD5tQHryMke9CBMbq3RkwO60URtvyaCFy8X0eD6oNQYtj7WCjuAsBFBTB6n8bfGEIjZq1lZY+g+U6e0A8Obw/LNMcTo7qjsm7uek4EYZp/mLu0AarBdx+nTqdSfP57lM/vMDPTkAPekEF9sOA2wHd8c4ojDx0PJCC1IsFbYAdgMu/EZgsTA+sD3/mQYLY5bUXOaOl4HIMDgfZ0XvPV0pIY0NLwO4Cn28P6QUBULDMph0VvqSZh6wGjYajZojgRaw+vAyPZI9/H6E6AXHJpbazgdEMSTz7RnxMoyAQ7tgh4k1wFc0byops+no/Gj8ahx3PACr2LsRQ8CHOAir9ZwOxBPTIKt+62vF8xCDDN7jtGLAJfNhYwDGu23tjRfvl5G8zfzcj7NV7EL2Ise9CLApbkzA5gLU2dT0vibAU7qUMvpwNjeWDR5Npn5mWWi6E81cIGTwtRxOtAFzttvQHMmyHXABe7T+221POh9uQ5oYoJret1W8/UwZxxwZR4Tvppr3cxOB2yZx7Z1Ww3Zty7a/f17Xo8+AZjnxf2kUIP0AAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Landon Winburn</Author>
+      <Tags />
+      <Credits>Credits to: Landon Winburn
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>landon.winburn@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>48</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN2Yb2saQRDGn9eFfgd7L0oDJYS+KqUpNFbbEI1plIaCENQzl2vVk9OY/qHfvb8Zz54GQ33RQu5Y9nZ3ZnZmntm53durKtFEM81V0QedqKbPulRDLVX1lvZSTdoqvGOdwq3okFrRUygvdbBWXuixHqmtoetKdE4vQvq9U1rq6wu9Af1nCnSrGLtjJMZQZnqln1DGmiKTMjavenBi7zWgLqgj9G2TGuqXnqhL2aem0BOoXYVwrpC4YeYcG22eYebZmcst8GXPPbd6jHTu+z54J8wdE5ehvuP3LhF6joYASy3V1dEFvHOoXdopxeJj8R5CMe0L8KSOY+wci10Tjw1X5CiDTGPe7tG+1hueB9SOrn2m+W8rc4H2AfNirM0dwwCJxOfuZrFCP3F6nOVGj/iN4IXoC+619JFYxfSMb5ZCZCyiq+jmcX3nazn0lfvk2m/o7ZaB/yu+DaQG+orXCdk58XFEsRhEGeoiI1jm+4AZM9c+KyQm87GPX9HanlAEHHW8TrGT8EzxZ/pnb6v6+2sYi5NpNei2Mj3fYdO1VSnS+5J7feanyHUhvK4hsT32d9+Ih3qimdwi43UY98j+VdZsO+sO7znpHuY6/R1dzaX72YkaFB7P8py5m33FR9TOzsrlPn2KnGksC7o6VPO5rLjatD9oG35jsO/Spo5KgPII764oJr3CeFIKZCb/bQPfrBSobFw2VJt3iyajsBR7iH2h2/8F07KUW63Wthvtv7hrjzYiWcFGjNb8+8Bu3L8Ber1QLqYRAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>2</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>WTflsYR3SXCh5wcYRh5W4/py3Uw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

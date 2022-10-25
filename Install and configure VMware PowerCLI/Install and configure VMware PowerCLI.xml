@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d4da79be-229d-48aa-be03-d91bf7563d1d</SBAId>
+    <RootSBAId>4e4176e0-f27a-410d-b967-3b564f1c8687</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637267786515086906</SQN>
+    <Name>Install and configure VMware PowerCLI</Name>
+    <Description>Installs PowerCLI moduleand the required packageprovider NuGet for working with VMware and Powershell for All Users. Also changes the CEIP settings to not send data and Invalid Certificate handling to warn by default.
+- Used module Install-Module requires Powershell 5.0 minimum!
+- The script will overwrite any existing PowerCLI modules
+- MSI based modules must be uninstalled first</Description>
+    <Category />
+    <Version>2.1.16</Version>
+    <DateCreated>2018-11-26T14:25:15.757</DateCreated>
+    <DateModified>2020-06-02T09:40:54.887</DateModified>
+    <DatePublished>2020-06-03T10:51:51.953</DatePublished>
+    <LastEditorName>Wouter Kursten</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>9qvSPjr8bWCrEhpfprgwqylzG5k=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>vmware,powecli,horizon</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>165</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>627f0241-3807-49b5-90d4-737e35c124e7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>627f0241-3807-49b5-90d4-737e35c124e7</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Invalid Certificate Action</Name>
+                  <DefaultValue>Warn</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>Warn|Fail|Ignore|warn|fail|ignore</ValidationString>
+                  <ValidationError>Please use Fail,Warn or Ignore</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ccb18d8d-7de8-480d-b6df-650f0fda5fe1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ccb18d8d-7de8-480d-b6df-650f0fda5fe1</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>CEIP Configuration</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>boyz/lB0/cVw5ZVmKEawXRQwYRw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

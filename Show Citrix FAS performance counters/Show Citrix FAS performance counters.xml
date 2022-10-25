@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>15d34308-edb2-49f7-8d2a-87f0a0486b5a</SBAId>
+    <RootSBAId>c7f478cd-b401-4680-bb03-a5aadd71fe1a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636790926520264000</SQN>
+    <Name>Show Citrix FAS performance counters</Name>
+    <Description>This script queries and displays the values of performance counters for the Citrix Federated Authentication Service object. It requires the "CitrixFederatedAuthenticationService" service to exist on the target computer.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2018-11-29T12:45:07.403</DateCreated>
+    <DateModified>2018-11-29T12:45:07.403</DateModified>
+    <DatePublished>2018-11-29T12:45:07.403</DatePublished>
+    <LastEditorName>Samuel Legrand</LastEditorName>
+    <CreatorName>Samuel Legrand</CreatorName>
+    <Status>4</Status>
+    <CheckSum>ynQ87CGvWLT69EABVV0Xs1Qe++E=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Samuel Legrand</Author>
+      <Tags>Citrix,FAS</Tags>
+      <Credits>Credits to: Samuel Legrand</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>samuel@legsam.com</ContactEmail>
+      <Notes />
+      <DownloadCount>56</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1WTW/TQBCdM1L/w+Lm0IomEmcU0chQkGigIogLRZXrfFl13GA7bivgv/Pmeb2J49K0HEhk2V7Pzseb2bee3ZNnsod7X3yZykhCuRIjY7mWFO8T6ckAbx/fC0kkh0YqGSQ9KSSQSGI8L/mOMHtHX3qPqR9CFsE2gcUX2Gb4bluvH2E5o2yOUYjRW7mFtupohJ/OVwvfGrfArOol1vKC8gAzIbBf0DKFTiIT2Hdxe0AeWekt4o5kSE8BMxkCxwKjKX3m9B44xINaTM+hiZDbgTzHPYFc86mjM5BUCM0/Ym+jFikuXYVerYoD1rrEG6PePuU5LReQH+JaVs7Y64a+Nec2xho1cbE8t8rreSyIdnWdNfLRCi8SRM/xVl+aQQCNmJV9vVKxCsUlvGvOV27m9z0j40YnDQ69sxUv458Rb8nVGfwmxP2Gaxg0qrCPWfUyhjfVX2bRRG+slkrrXp7G4rptizrKtwzsPAaDDh/QeAEdT85rDDb3cNg8yGKzxuNzx6eCazwg9sxqZ41V+z+ICms/IaaS0yF8pGRMQo751Mm5/yqPI7sjJit8/gzpD+6Fcg12IaMz+i4c5g943uH9CViqONUKGCsz0re7Oq/9f7aXRb2yuhci+5fr8w8Rk/cju8+GW6r933iy7GG7hGoTe3eHDe+JdIqZU2gE9HCKGeVIvBVEfVpFsJntECrFcfNoPOHayarrThX1GT0T+GuS1Ww2+e00JNq35ux3yrJftv/H3L+6u4/RQbWXzfkPXvaILuQtnFg6LnqH3a88AR6wph462zcgfinf0dlfoQJ6elDvXZ7J6nlUPdSD7tEj4mom1zhF6OoU7Nq6X5pxvro5b8NJ4ynnij9/3hqEMgsAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>3Q8e7X9mdBP3TLCnGHUA43GIvro=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>18cff517-9868-402b-9b49-1e9e08ddcfcc</SBAId>
+    <RootSBAId>1c0adfea-1a70-424b-b275-c2066a00ac8a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636860087715896000</SQN>
+    <Name>Logoff session</Name>
+    <Description>Logs off the selected user session</Description>
+    <Category />
+    <Version>1.1.1</Version>
+    <DateCreated>2019-01-27T14:07:49.927</DateCreated>
+    <DateModified>2019-01-27T14:07:49.927</DateModified>
+    <DatePublished>2019-01-27T14:07:49.927</DatePublished>
+    <LastEditorName>ek</LastEditorName>
+    <CreatorName>ek</CreatorName>
+    <Status>4</Status>
+    <CheckSum>7kwlv2cgFDmbZo5I8ytzhsuxdTM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ek</Author>
+      <Tags>logoff, vdi, xendesktop, rds, xenapp, session</Tags>
+      <Credits>Credits to: ek</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ek@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>1427</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>bABvAGcAbwBmAGYAIAAlADEAIAAvAHYA</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>a8c7974d-9643-463f-aef3-ceb4453c27a1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a8c7974d-9643-463f-aef3-ceb4453c27a1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>c1hNv91Os3dPTCuqlCBEPg07K5Y=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

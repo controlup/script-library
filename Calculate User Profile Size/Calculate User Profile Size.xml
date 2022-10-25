@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>719b34a9-2794-4e60-8be6-233217100a11</SBAId>
+    <RootSBAId>9fd38b7d-3b4a-4f7b-aced-c1eb459b36ee</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636056365358352000</SQN>
+    <Name>Calculate User Profile Size</Name>
+    <Description>Calculates and displays the size of the user profile directory and any subfolders.</Description>
+    <Category />
+    <Version>1.7.7</Version>
+    <DateCreated>2014-07-27T17:39:16.033</DateCreated>
+    <DateModified>2015-09-24T11:33:06.05</DateModified>
+    <DatePublished>2014-07-27T17:39:16.033</DatePublished>
+    <LastEditorName>ControlUp Support</LastEditorName>
+    <CreatorName>Niron Koren</CreatorName>
+    <Status>4</Status>
+    <CheckSum>fivUKmeuMHDgvIwdDukWYU0rSPU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Niron Koren</Author>
+      <Tags />
+      <Credits>Credits to: Niron Koren
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>nironk@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>2195</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a/zGv0bya4x/jde/xu/za7z4Nb78NV7Sb2f0f3yadv47+TWyX2P6a5S/xpr+n/0a7a+R02ftrzHnn+tfo6GfNf22on+rX+P81yioFb45p7/KX2Om32a/xpJ+T6n1+teY/BrbwbcNf178Gj+gvwSrp7/GKeFy8mu8Ipxe/hpv6N8vCcsYbm8Ij0IhTAlWQXi09FdN/Sz58+zXuKD/F/wXvvm6mE/5U7SYEgxABky0rX+NBdOloN+X/MaEflvTJzGMTf9LarGgltIL+k8tDoK39OvwMjQaK5Ve/hrHRKHjX+MLotYb+v8ravOYRpMRxIxgv+B/81/jKIrHC4utoYrQcUWfY2St9nL6a/ze3MfLX+M5/R6D9Jjmyqf9S4Y5p35/32BWxvRv82vsKtwzwuDlr/EVYR7nupeEB0Zs6JoRFVIe2wVTLmccDeUMVZ/S31f0zTZhm/8al/R/vPWcPr3Q8RqqpL/GFrfG3GG8vy/hIhxxRzH8krHbhKN5A9iGPPQs4KHXOnPo08zr5vm/82uM6O9jotiKsAQ9s1/DcYDjjpJnTfjxZs4W6dske90R3g7bMf0lNHvO8/p7RWG9prbAYk6YtoTbo1/jLv13xf+NWb4wozVjt6bv5bMFw/px5WL8/3frUPsV/V4xL3xG///dmDMuCfpX1COk4iX9/0uakTPLwb8b/Q49trAz81zpKDB+T5qnO52WYYutX+Nz+rQlPjthyQE9Tct0A4ai+WoaWc5/1b8G9MmaZ0I+AYVrbpOxpjFa5bXCAo3KX+Oa+hV6FTw3ePcPYIx/hn77gv7OeLYBf5tGP/k1fvrXEM2FPoQvVtxXS7BShXzBPIQWDc/3h+Bj6HdMUC8YjwvmY2AqNPzo1/jFv8YOzdOLX2Pv1/gl9JdQB7TtU31sMbpL/9+lET6hHtJf4xOGk/LfoADejb8P/NaMId5zvPsH0N8fWd4qFIMLnd1C4aCXoVn9fVVOZyqnvy/rmylrLBnVqaXh8XvSMCUaffN8uAnjn4886kbvNPXPBocKn/0ST5N9k7Pan7mvS5eUZ+i7bE9is/OLCYffnz0QeI2NfV8sKd75JQrjNffediAI3QXXnHHDjIKqxa8hflUaoY2Thq5l+d069hY0fEG/X/Uwf02jbRTuOPjuNnAxomP6a0Zwv2AYxiKGf7+hXsC54mWhN5kxn5u3PU/kI8ILljnszXwvfPeTzJ8yO6DT2H4fxzzk5N+NZxb+61Drbv9fjzOB1zPtyY3vZ1+jdEf0/y4Nc9PsfI9pPqXPFjzL3yed84j7g8WasWTcPENxDTTE14I3oizDIbfpYao4/dzLi/OoZZwxKTGtfm5xNbROmTuEejFs/TmJYzzstX6ic+iPKbQ13/01EIfhfUgCotMV/wsM3/BIxPp3YwbT1yOG3/fmADuMU0JvIny/b2nFJm4a27Ad2cQJT38NeHfQOJAgyOOFwnrGsCRm36axI16XsW7TSECTykL9fwAejNZ5KhEAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>SUTZruZKQndoUZ6pWNXBTr23FCg=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

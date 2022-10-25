@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>040f03dd-4c49-42ef-8395-b1b7fb572c4b</SBAId>
+    <RootSBAId>b52bfa6c-afb0-4010-ae76-2e9b74d399dd</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636050586023104000</SQN>
+    <Name>Add to a group</Name>
+    <Description>Adds the selected user(s) to an Active Directory group or groups</Description>
+    <Category />
+    <Version>4.0.6</Version>
+    <DateCreated>2013-11-25T07:16:44.547</DateCreated>
+    <DateModified>2014-02-18T13:23:44.027</DateModified>
+    <DatePublished>2013-11-25T07:16:44.547</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Y9hxvg430kEBpIPpsYU3HssrUs8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>Active Directory,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>248</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>1052672</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a6S/xm/8ayS/xvjXeP1r/D6/xotf48tf4yX9dkb/x6ep/nf8a8zov4Z+a3+N+a+R08+G/i3p/1P6JKfv0l9jzZ/Vv8YW/bzDLSv6N/s1lvw+2hW/xiW/+5R+q/Xdin67ps8u6GdFMFb0Oz7zP2kUw5cE5xX9/4tf4/TXeEP/f0WtvtJeX1BPC/rNYf1GMV3qN4B77o3A4GswnfCnGY9URiSfm/Y+htvccs0tFvQbxjalnyX9h9E03G5FfxUKa8KfnxC+w2P53Pbw/qPxscNICmp5Qb8v6NMZ/XVuMdnmTzEvaw/jlv5daQu8i55//Nc44p/4/+9GONbcR21ns6J2L3kmz5mSOf09ZWw+o/9/RDwE+qzoNwPljHHe4v9/Ti1bwuYLxnDN3ATszNhDronxzPYATin1XDC8JX2G8Z3w5y2PbE2f3+G381/jF9HP340/Ax1S+hxY/uKA999ob+Gn5r8zwnXFGPTHshl/H9ov+TXAG+CjKc3nUF+QVXDZitqtGZrIF7A7p98wZv9zzCXmvmFOzLhdQe/KDDvewdwJFUWuHSVHttWS2wlMpwOm9E7B+KS/xhXDBvYZ/R9YCJbLDWMBtRwv7zJMI3MZQ4XECFa51T/yTaG9Zvz5kt5rueWa4E65dUNQMRfjKAbfZdyhvXw+At++UFgZSZLMpGiCkv7NAgr48/3Rr7GJI7sc+D4Y+bL3PaLS9z+4p9Nf453Sb7fDh/hL/hUNkP4aT5gjoO0apcWceSrVfw0toFOEr0D1ZYBTqKtCvjEcCVgr1qnCn8Z+4D3Iy13GwkjIOX1m9ESXZ4xMOL4GbPCnSLloejO+Obef8Rwa7Sf9GkoCRkl8uCKqo19oUnnjmuFCssaWZnF9IRZ0m34+9fT8FwRpwfhgnrdJm8wYdstUAZTfjaDXpMkbb+b9t5pOmx1qM1aJB4wt4svfl/5/R9+X+d2kbf7/oGV+7rTL7WR45wNkuCu7Tlr9vr9NEBpu9ZH1HWCLMQuZ1xOotOCZy/lNUD42ypJ5XCz5/wPorLNjNgoAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>5b81ef64-b326-4471-bdd2-22c132789722</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5b81ef64-b326-4471-bdd2-22c132789722</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>73227ad3-9a42-4c01-98d1-507fe337269c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>73227ad3-9a42-4c01-98d1-507fe337269c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Enter AD Group Name:</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>DWUOLIrMpwSHzHgt+BKjXEGRx3k=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

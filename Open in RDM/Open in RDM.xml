@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e48f11f9-3407-436c-84d7-0f0b48cec8fd</SBAId>
+    <RootSBAId>6d42db95-35d2-4b2d-9fc2-b89dd41729c4</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636056375164044000</SQN>
+    <Name>Open in RDM</Name>
+    <Description>This action finds a remote connection with the name of the selected resource in Remote Desktop Manager (by Devolutions) and opens it or prompts to select if multiple connections were found.</Description>
+    <Category />
+    <Version>1.2.4</Version>
+    <DateCreated>2015-10-19T11:47:55.82</DateCreated>
+    <DateModified>2015-10-19T13:30:15.88</DateModified>
+    <DatePublished>2015-10-19T11:47:55.82</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>y1y0Jw4KAwBzq4NKZ5r3iqoqJTM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>RDP, Remote Desktop,</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>168</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>IwBDAG8AbgB2AGUAcgB0ACAAdABoAGUAIABGAFEARABOACAAaQBuAHQAbwAgAGEAIABmAGwAYQB0ACAAbgBhAG0AZQANAAoASQBmACAAKAAkAGEAcgBnAHMAWwAwAF0ALgBJAG4AZABlAHgATwBmACgAIgAuACIAKQAgAC0AZwB0ACAALQAxACkAIAB7ACAADQAKACAAIAAgACAAJAB0AGEAcgBnAGUAdAAgAD0AIAAkAGEAcgBnAHMAWwAwAF0ALgBTAHUAYgBzAHQAcgBpAG4AZwAoADAALAAkAGEAcgBnAHMAWwAwAF0ALgBJAG4AZABlAHgATwBmACgAIgAuACIAKQApAA0ACgB9ACAAZQBsAHMAZQAgAHsAIAANAAoAIAAgACAAJAB0AGEAcgBnAGUAdAAgAD0AIAAkAGEAcgBnAHMAWwAwAF0AIAANAAoAfQANAAoADQAKACgATgBlAHcALQBPAGIAagBlAGMAdAAgAC0AQwBvAG0AIABTAGgAZQBsAGwALgBBAHAAcABsAGkAYwBhAHQAaQBvAG4AKQAuAE8AcABlAG4AKAAiAHIAZABtADoALwAvAGYAaQBuAGQALwA/AGgAbwBzAHQAPQAkAHQAYQByAGcAZQB0ACIAKQANAAoA</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>70c118af-b48c-4848-8b0b-4ce56cd196d1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>70c118af-b48c-4848-8b0b-4ce56cd196d1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>zdO6k0Q5D2Gqu3RIfgnUsOiAjik=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

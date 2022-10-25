@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>19c0ef4d-ff0d-4823-8621-60fd28c77b42</SBAId>
+    <RootSBAId>4d7b04f8-af48-482b-aa49-d39506472e8b</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636896347531075110</SQN>
+    <Name>Set VM resource allocation level</Name>
+    <Description>This script will change the resource allocation  of a given vSphere VM. By default, the allocation is increased one 'SharesLevel' for CPU, HDD, Memory or all three.
+If the SharesLevel for a resource is 'Custom' this will not be changed. ALL hard disks will be set to a new SharesLevel based on the current level of the FIRST disk. Example, script is set to Increase level for All resources:
+    CPU SharesLevel 'Normal' ---&gt; CPU ShareLevel 'High'
+    Memory SharesLevel 'Custom' ---&gt; Memory SharesLevel 'Custom'
+    FIRST HDD SharesLevel 'Low', SECOND HDD SharesLevel 'Normal' ---&gt; ALL HDD SharesLevel 'Normal'</Description>
+    <Category />
+    <Version>1.0.2</Version>
+    <DateCreated>2019-03-19T09:30:28.52</DateCreated>
+    <DateModified>2019-03-19T09:33:37.093</DateModified>
+    <DatePublished>2019-03-19T09:30:28.52</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>WDzYbgqPkP0S8fy/3itd8YdLlvI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>vmware,resource allocation,performance,cpu,disk,ram,vcpu,vsphere</Tags>
+      <Credits>Credits to: Ton de Vreede
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>29</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4352</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>33c29e3c-516f-402b-bbf8-acfb9f60b3e6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>33c29e3c-516f-402b-bbf8-acfb9f60b3e6</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9ceedf7a-41ed-46b4-8be6-e09d5ed17ae2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9ceedf7a-41ed-46b4-8be6-e09d5ed17ae2</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>vCenter FQDN</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7e4d2335-f876-4daa-aff5-bacdf2dabb4b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7e4d2335-f876-4daa-aff5-bacdf2dabb4b</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1de45459-360f-414c-90eb-96b70b4ca645</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1de45459-360f-414c-90eb-96b70b4ca645</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Increase, Decrease or Report</Name>
+                  <DefaultValue>Report</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\b(?:Report|Increase|Decrease)\b</ValidationString>
+                  <ValidationError>Please choose to either Increase, Decrease or just Report the VM resource allocation.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1ba6eda6-5734-4a9f-97d0-b78b07d16ae3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1ba6eda6-5734-4a9f-97d0-b78b07d16ae3</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Which resource</Name>
+                  <DefaultValue>All</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(all|cpu|memory|hdd)$</ValidationString>
+                  <ValidationError>Please choose the resource type to be increased or decreased: CPU, Memory, HDD or All
+* not relevant when reporting only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>EYwxzOcRoSPI8xZAAjPGxzkaHSM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

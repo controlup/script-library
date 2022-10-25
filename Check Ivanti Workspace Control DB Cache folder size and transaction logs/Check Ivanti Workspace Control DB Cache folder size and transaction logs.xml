@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c9ec092e-b3f9-4bdc-8377-3e7067399337</SBAId>
+    <RootSBAId>5ea3ba36-bf62-46f0-8f40-3be89d7e9498</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637057459556667414</SQN>
+    <Name>Check Ivanti Workspace Control DB Cache folder size and transaction logs</Name>
+    <Description>With this action you can check the size of the DB Cache folder and see if there are transaction logs in the transaction folder. </Description>
+    <Category />
+    <Version>2.1.3</Version>
+    <DateCreated>2018-12-29T12:51:00.36</DateCreated>
+    <DateModified>2019-10-03T10:56:25.657</DateModified>
+    <DatePublished>2018-12-29T12:51:00.36</DatePublished>
+    <LastEditorName>theartvark</LastEditorName>
+    <CreatorName>chris.twiest</CreatorName>
+    <Status>4</Status>
+    <CheckSum>4XUVBua/MFZoO1M5EMEW8dUADaA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>theartvark</Author>
+      <Tags>Ivanti Workspace Control DB Cache PowerShell</Tags>
+      <Credits>Credits to: Chris Twiest (www.Workspace-Guru.com)
+Original code by: Chris Twiest (www.Workspace-Guru.com)
+Taken from: Chris Twiest (www.Workspace-Guru.com)</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes>See a full blog on how this script-based action was created on https://workspace-guru.com/category/controlup/</Notes>
+      <DownloadCount>26</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVYa08bVxCdz5X6HzbGkrEUU0iqSkVtJYKhRYCNgJZWJWoXe42drB/1rmlI2v/eM+fe3b37MoUIWbav72PuzJkzj3VTDmSJ1xzvPRlILBOMZ3KG34GM8NbvGVYC8eR7vFtygV1zWWD0pXwh38kGvz372sL6b9KTPmRcyBHe7uq+jCFpIO8xPpI78SFb7/Tkijq8lwiSfXvfPnWJqV+I3115w1ldH3OHnh/iW/foOOJaYoWHU3O5xazqkNeyC8svIOscepzJJT770Nrd8yNuiCnb3BVB6keO5kAmm/98O146lkwoezP9PcaZv/E95cy9tAvWlm31IPEDZiOsle0+kF/h6VPYfIJx3jc+5dxQ5xXOBxbbOa0POD/J2a53DnAufBIOPvQNOONRX711gTuNVTOsZjcZzBJUltg5wyvZ1Zdj2OZak7da+XhJj+ctNvooXrHsYuYStxlNIui8xHhB7QY5bGKu3FL7pUVpRKumlLLP0QI6xtyReOEU80MiOKHEzHdj6y/F7J4y+vYOtdDgm9foBvtMPC2txpfgyQT3JX73HvF6Jd/KtnyD723ZwdiTDiUa7Ya0+hfaGthfur6H8dDar9GhNodcDdKsorYZr4XWWy+Jp5m9tafnxMogplwP6HdFq8zgEzCtB3/r7Ib8kO44JCfc6D+0+t6QgZpzPuVknWFeI2nKiKvC7HdnT2C9uQk/Gov81GMmNzbJjBUjep0HznBK8co01dPbiO23NVpElnOK2Fvcc0o/RzaCqm97rO4j8ix6ovY7tdo3EXcfmAEW6Zk6jSNyOCY/1M4+K02U290ucWJD3MgdlXiwIBfv8HtI3DxWtjwzJtyZZJsBT0bMUybjz3Ksjji3TGXfMjbUI24u9yFfd8XcbzJnMTKMpAFeK5tL8nnsyNaDF5U4ahwmt71w8GqXuO5idUUuxY6lcZqHTW0r4+MysEpuJrMjP5EhMX2fZ6rqe0jrA2I2p6+GzJihRaWFymsyzcz2GMkd/1Z63iDkFzxURNXj98L6w6Ourq9MzczXezffGl6OMco6phPsu8M7JP9dvQ5sJD2nF7QGrKzGc0dvFwOzP2AOqI7NxFdb8jOQ3HK0cu3UGwOwsOhP5VnRJ66NXcakVgWfmcbVbcis5GNHWIjwIvermF/P8Kfa1qiML1fLXfkTc1XaNGxWKupQZqyLzkHKuQyXsJZTGbeSUzsV0ZHdqDcUe1jTRSVdW6K97o5tLchjWq48x5CT1IwWED4GgqdA5hq9VR+xfQmU99BVH2DmCjNX6Cq+ltfoLHqs5wHmz9mJXVf2iKY++ba3aj2gjcbGIO2jF7RpbLXbtNZ34Hv1+ZRPNZofA+YAtaLDGmnONKFJYGd7tmp6sC7pcLN+PTnTZjdSv575w6A94D15hMs9SqeUM1usbkGF54rPIv+n6za13+eNUZp9VljTPDjD2PSXurIkgvo5ISvdTje71WTzifXOPVDxEHFRmqeGfJb0eUdcYcVWwc/r/dpgBPbQj+5aJp0BxS68fA5Oda111+R6JqOxJjq6JUSyZ731T5jRmthpOlKM3p/Q4+1C81fQQ5n+BnPqb5PlMr7us5dRfyTMXYdJB3YHttIZ7f+h9IDWmPrXQSTeyDvuiy3vi7Fwwupzm0q9wNkpR9X/EXjpPwFtPvWb3V8xL6lt7QIadQgadNbZ3qi1/hqRUS218QzRV2ZFdd3+vGgccWVIzzwUmz77xZb1Url6NeWPCt73c09bbhRHNkYj+0T1MDqNFJ2n/g+SebVoe5YnAttPx2sjwfT/Wdw1UqsnaSdRz8IOTvzF8zOiEFb0GI9DpP6uvJ0T+6/NlL67z3E3qOkkn1OThGeZRmXG+8zukcMfIynk/1VJ5h8xllWrpHeq02SLVX/qZOr/AHeZzyGcFAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>6kGLKQOY1m9JhdcWwDOKG2/bhMc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d0e8f610-1b33-4e39-b61d-2e1af2a5bfa0</SBAId>
+    <RootSBAId>24de5e17-b225-47b7-a833-82772aa32c4d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636619128979192000</SQN>
+    <Name>Ivanti Environment Manager Logging - Enable</Name>
+    <Description>Enables Environment Manager logging on the selected endpoint if Environment Manager is installed. This SBA requires EM 8.6 or higher.</Description>
+    <Category />
+    <Version>1.2.5</Version>
+    <DateCreated>2018-03-26T15:19:35.297</DateCreated>
+    <DateModified>2018-05-03T16:49:13.687</DateModified>
+    <DatePublished>2018-03-26T15:19:35.297</DatePublished>
+    <LastEditorName />
+    <CreatorName>Landon Winburn</CreatorName>
+    <Status>4</Status>
+    <CheckSum>bRMORwAD9KvWiNMPTzsym6FhQQ4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAAlFJREFUWEftV7tKA1EQXQKChZ2tRWpLqxT5AiFCav0Df8bGD7AWBEGRiOILCxUfaCNWBkFQRMQHGtBd94x74uzde/duXDGNA4fZzL1zzuTsKwnqB/WoulPtC6Ad4CBYDfoC0f4fQA9QWav8GTIDsGjF8g+zBVrHOoCeEGieNAUTJxM9gX3kMbmRuwPoos5DG0NR2QCHjRtIOWDbhMxYuVsRtO5aKbC+dLuUymEYSp8WNLmdDujNiE7Y+aotxsD5tQHryMke9CBMbq3RkwO60URtvyaCFy8X0eD6oNQYtj7WCjuAsBFBTB6n8bfGEIjZq1lZY+g+U6e0A8Obw/LNMcTo7qjsm7uek4EYZp/mLu0AarBdx+nTqdSfP57lM/vMDPTkAPekEF9sOA2wHd8c4ojDx0PJCC1IsFbYAdgMu/EZgsTA+sD3/mQYLY5bUXOaOl4HIMDgfZ0XvPV0pIY0NLwO4Cn28P6QUBULDMph0VvqSZh6wGjYajZojgRaw+vAyPZI9/H6E6AXHJpbazgdEMSTz7RnxMoyAQ7tgh4k1wFc0byops+no/Gj8ahx3PACr2LsRQ8CHOAir9ZwOxBPTIKt+62vF8xCDDN7jtGLAJfNhYwDGu23tjRfvl5G8zfzcj7NV7EL2Ise9CLApbkzA5gLU2dT0vibAU7qUMvpwNjeWDR5Npn5mWWi6E81cIGTwtRxOtAFzttvQHMmyHXABe7T+221POh9uQ5oYoJret1W8/UwZxxwZR4Tvppr3cxOB2yZx7Z1Ww3Zty7a/f17Xo8+AZjnxf2kUIP0AAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Landon Winburn</Author>
+      <Tags />
+      <Credits>Credits to: Landon Winburn
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>landon.winburn@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>61</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN1YbWvTUBQ+nwX/Q+0HsSClK26IqLBlrY6161yLQyiUNMm6uKYpSds5xf/uc869aW5LukVRlkjI27nPPfc855z7alFIM4ppQRX6SKfUoi80og71yKJDvEfUxdtC2QmdobRC73BX6Dkkr6lhXE16Sk+oT57oCukCXxOgP4ikR2P6ii8H3y+oSrfko90AiACSmN7QD0gCmgMT4Z+tslHiy1cH0hXuKfRloTz6Sc9oiKuOO4I8hHRILkqugFii5gJt9PF0tWXnglvBlppYzvcJ0KntdfCdoW4Av3h0B7vzeOglNFTRUo/aNKBLlF1AOsR7jov9w/72IGHtK/CJhEcgJey7LixmXhNhWdUa03cN77f0Hs8G7gFdS022nyNzCe0O6vlobSEcHCBCqZuvxQq+Q5H7Ojds+G+KMhf6qjtb+gRf+fjicm7JBYY9mng39avKkmNoCFHfpc/SwhLSfFn4r3zcAcqhG1gUIkNn8j/BxX6YaFQjkwtnVqRx5WCj8t9BjVi0x0aG5Y9WsRgeo3QMyybGiHFf1IqXgW3YH6EdtiqCPfP1GGhJP2e2D2dj8Xi1IOdo2TImR0akytq7UgbnMgdd/1H/edyYBDtikt17ijpDMm6lywb4t9FLzJzKP3emvCzo8fTaQnF7nFjdx6188+zDkWoJeqxXG0q6V3pWaubd7lWvCj/W5WXW16sINVOdAccazbF/hCdbNNrCZo+VZfRBG1LO2m32FvYdQ42JRVuw1uNpeV1YTws/c/yuL/p4fxeWvGvjvUGXjjR2H/26WXq+R7DuChejE7ana45NsDwoPUfGf9tgmuwVDnaMYeVix/9Z7Pb+g9ht7vm6+HPXY5PqfbbsNLJH3Fif9xwKxpYVXhXyAO2EskKKxQ621DHGPEYsdZkpi6EhljVVkImdirWhRMIsn2oWnuz0Zpm6PeQojzCmjE9+eGU+F8/caL8lCHUGlbQ5Q7TUuYeP1u/wl7eWK1kRoq1NixzxkKvj44tXg8yVeMpRcV8KmnPCRNzKLpf7nClVWbJAHdbPI1B6bsbnPrH4pJaZyV19MuaXbMbl/TGfArIWhUv67P3ZzD74G+dj041eVRFcumrlM7JftY9Wf1gVAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>2</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>rmntzU3wE23D/hiMgsg4tZ3Fg+Q=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

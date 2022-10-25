@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>11ff968a-7f8e-4f50-942e-824c2b0c304f</SBAId>
+    <RootSBAId>d6631708-bb5d-4df4-ac13-ac00c5217bad</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637428407118128917</SQN>
+    <Name>Geolocate HDX session source IP</Name>
+    <Description>ControlUp can display the Source IP of the HDX Sessions connected to the NetScaler. 
+This is a sample script using the non-Commercial, anonymous service from ip-api.com. For the commercial service options, see https://members.ip-api.com/</Description>
+    <Category />
+    <Version>2.14.24</Version>
+    <DateCreated>2020-11-30T17:04:46.46</DateCreated>
+    <DateModified>2020-12-02T16:51:59.703</DateModified>
+    <DatePublished>2020-12-02T17:10:51.713</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>XMGsDCJllvOQcJ1WubW9KXX/Z4E=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABYdJREFUWEetVmdXVUcU9ecksUtHpEpTwIoaEAiKIFixIFkaAtJEsVNE1FiDEhURYuxKVYRHldBBf8nO7GOuuW+Y96Ir+bDXem/WmbP3nHrnAPgqfDN/CdxBt/83GA91mIi+BLofE4yHdpgcfw10fzqMh4TJ2X+B7t+C8dDk4P+AzkPMOrCMv13ggeDlUUjP2oX6u/cwODiE9+/f40HjQ2Tu3IOULenIPZyHwuJj2HcwF9u278CmzSnwDwzDvMXes8gt6HxOf+yGHr4BSEpNQ2NTM9o7OvH4yVM8efpMfj97/gJH8gpwq+4OXrx8heLS4ziYexhFpWVYvzERizz9nEh12DldCggMjcD5ymq86+5BZXUNwqJiEBWzGuWnzqhoDOLuvQbs3Z+D2stXkPPjERQUlSB+02YsV3aLvPydCHXYOY3kRMzq9ai7XY/nL14ibk28hJUvC4+OlbPm3x9hRdxazF/iA/+gMMSt3SBROHu+Uv4zhbpPO5wEmAwiV65C3Z16tLW3IzF5i0rJMvgtC8XaDQl4qcLe+LBZbDx8ArA5ZSuqLlzEpsQUiUjWrmz4BARLJHwCQuTufENduBUQFBaJmtrLcPT24pdrN7A1PQtb0jNxrqJKCvLajVsiiAKOFpdid/YBEVJ+6ix+VbXBQk1O3YaikjL8lF8oqdGj4lZAYGikVPmAyvfE5OTfXTCM0dFROBy9qvIPYaGHr6TGyz9Q0rPQ01ei0viwSdVON3ocDkxNTYs9C3XuIi8nESLATmrHrr37VYuV4jfVgtMzM5ienhYMDw+r6r+NsMiV4oz4bqGnOGfIQ8Kj5W5La5vYf/jwQUQ3PGjEspAIsaN/3vHyCzS/nrh6/aa0W15BIbq63qmXTImjtvYObFfhXez9T6XTGft/Y0Iyrly9LjbDw3/i48ePAgrp7HyD+O+TJGrWHU9VGy4F8AW9vX1oUIOnouoCBgYGRcjps+dlRnx6tac49F4ahLSMHWhtaxehfLVFbqG3r08is0TVDP0zcgvUXZcCxsbGxFlfX78ircDx8tO4cPGSTECGmrlnATLnCUmpakI2yUt1YgusobITJ+HtH+TE41LApCq8GZX78YkJUX+uoholZSdkBuQVFCFSDaWVq9ahVJ09+uOxEJhebmFwaAgnz5yTaNl5XAoYUhcogE5ZyYyEQ6WEddCh8slosPXYauz9VpWyt11dYjMyMoIpLRoDAwM4WlQKT1V4dh6XAjj3JyennJxYoLDR0TH09Dhw736DpIB9zimZnrkT1TW1Qjgz8ykifATriXWy2HupE49LATW1l+S1OrkFKz39/f04pULrFxiq5oCfFBlbNL+wGN09PZJK4tXrFjWu47FAjW47j8tBxEXz5m2X27xSxIgSyWXEnrbuUgjnQVpGlmxP1gc3J8fzXNU9lp0MIlcCYtUCun7zlqg3kRMUN6q6hTUQpL4drLtsMeZ6nVrN7H+K2LMvR1rXzuFWAFssNW27dICJ3AJbj98ELEbr7jw17UIiVsgu4X3WBPeG3T/FfBZgEsGRGRQWhewDhySXrnqcaehW3wxMmTWWORvYJeyWa2qisl25tu3+Ld7PAgi7AcFJFRK+QpYSXzI+Pj6rJiiA3bBTTTlORb7056NFeN3SqvbIfSHXK9/O6VYAwYnnszRY2osO2RkUYQlhZDicklQKuEHzC0tkKh47Xi51Yfo+tHM6CSB0Y4aVTnzVh0V07Br1XZApu4FtxeHEyMgsSE7FxsRkZOzYLV9TXE6MIO/b/el8Tn8s2C9YoCO2F/s9PDpOPsE2qO2X9EPaZ0J+FzAF3BV6xRM6DzHrwIJ+2QSKYrGSTH+pDt2/BeOhHSZnXwPdnw7joQ6T4y+B7scE46E7mIjs0O3dA3P+AlB/dbTC/G6PAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags>hdx, netscaler, ip, geolocation</Tags>
+      <Credits>Credits to: marcel.calef
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail>mc@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>121</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>274877906944</AllowedEntitiesEx>
+      <AtomicEntityEx>274877906944</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAOVae28bRRCfv5H4DocTyQ3kTNryLLQQktJESpoQpw+oKrjY59jFL+xzWxf63Zn5ze7t7vmc2HHVFCHL9u3u7MzsvHZm7DUaUUp/0YQ6eBpTRDE95qcRP3doQH2euU012qKP6SP6ntZ4HOG5RnX6lR7SER3z0z6/o/y1R7v0lL/rwOkwnfN4QF1+NyihjEdCL+Ldx/y9zZ/7PBrzWo+GDJcaSrt0n3Ht0AkgT/nziCkLpR1gzphfwfuId0XALdSaTHcMPAlNeZxRGxTrDDvhHQ2MBGPEMy0Popz/MXDLU5/nG+C/iV0Db+9D/sx4p3DRhSRrRmLRBa+6d2aRQIP3dXic8SgBLStDpTZhGIEUmJghhvxk1wZ0xk8Jz/Q9voqyV3w1cHYZd5/y+2eGH/F3H/tiSL7HrxSS7OC0ji+B6bLUP/F29vCtXPdZ3gOcNMVMmznK+BRjukOf80vw9vgcaom14Jw1aKHHUMqZ2sgObOKULeUpf/rcz9OmPXmN4bfpQWDB9rVudivcHuz8lCmdsO37cIfMm1pUF1apum95EGLnt9iP5B3TTX7F7FlbZkUk0oFWVI71gg9cpJ1TYxlNSPIxZJyaUTntW/wpI11pgIr4zIQpbmKmjfG5sXDxF9HOBPborOyF8QPlfwyPSMyOFrSbwY4Fk3jBNq81c5zD3Ar1zDLqges3mJWnFs+JTJsz+8UyRsaylNsmwymtCNYlK0PQf5lHG/X2BHhGxh4iszuCdwzoT8hBcIgPdRErVAtrdC+3mmes5R7vOoC//wTKTUP/Bm3Qc0Adwy5ElxHP+pp85q2l4G7EEIeGlwRSHiFu3YUdiiQnDLUJixaZDBlaT5BAUwpZLYlv1ZwfR93XzXPGP/Z2yZ7N98Ztm/e+gkWoLjvGdhfnXDG8T653IC29eaaA7xsq9hwSo+Qci5ygUcD2fs5wws/nxgNXPcEowHXdltNALJ0uKHuFvX6u5W5ZzOI1r7l+jhuIlyMT9zTGjhe2eN05/gDOsY27/6GhuQj/Cc9Yf7l+/k/zm/M3c3MucgZ739rbVqA3vPutCH8/v3G3vYz0GL7fwjlTHjcCjjPc81Vze0aIOZIHvgSUzU0beS7Zz7MJtyq8vca83u+6U3KQFDo4M1mz1i1nvGJzUMlX5K3U1wsQF3Fu64oOsqLUnEDeTyAT0Ws8Q7HCMwnWLVeSz1YW2Ge1VLyFI96veWhxZRmsitndkj5WN7scxvDOchjD+WW59O8Rh9OfXRaj8qox3udSZ66CLTLx12HT8bK4/BgYys/OLovRj0oOoz+7DMZifHAYiyuV3DvWEI1SxA7nwWpz4km2prMebOu/FBGhD9m28JkZOdtokNC8bH6U1yqSYytNPYtb0Sxfq0/hPDGRxtYJHYyFM1uNFCvZTeOdDo9Uwhm4msDbO6ikpp4Vjw1OGTdNbN3H+W6UeHQN8VKwZ7z2BDJoM2SVK7YtXpWYvsF7/w7iuq/Lo6BOixlr34yOgmqtyjoKOx0N8G/jb3mV5GvDalY5e52/Q228wh0l1aTdvZgWbT2mnRwr5zOj0xSS68JimpifUtgJsR2CmonbVlb3mUO1rJuYf4tPuXNF150raeZrrqNVNxHoK+c3+P5UmyqrrQTfEBLPgEX3P2Nsz4Hl3Mj2q3eKVW/J2zz+EO1I5ShnjsHj/9eivs0l8c0H6/Uhj/9dTdk7S3qDsvaIM9SDOfmv6E9uBskQK3nHUvuV5f3JF+C2z0/z8jdL/4GhbyUs49lubWQqiAT7bOYVWsb6nE5v2GG+C9n3WY7S7xIrOjG39iE4aaP2F2sKx5bPmCU1Qs/ZykVlqt1Ypau6L3L3O8tHdCFycB3AmqE/NL3ZFN1W7SbaHrD0OeueTqTL9t3KXlGhX5Dhqyxtzy81Hcc9HmutMoX+JFNR3tO8E2l19gV9CQvX/KZnage18y4yJrW/AYXVjfbTXQ3k99PHGL+EJ6X0A/2Bikv7tWODWXuWNofxf4sox6m/iOjvGdKntRWQ86diN77MuitLeJfLCDUihn3WVziLnHXCuBsm8rR41C1kTJdbdg10EtR9+muWZq7VAvbqO4qplTymaiQr7yBba7KwIY8j+NQEuedlUU1j6R140lUksrGU3nZxzm6e8SbIZRPjKZo5NyHRTm5BQ/QI1Asy3C5+h11vF2uhPRNpHV7trcjouBSPxK0f4fmy079f/eo2JvlVU7RuuytW39El+D8z9b+LCVUevy1QK9a+zsquSi/sJ+/kndcIMdXmE8tgDHksO0VYa69+Br+fvArnPh7XkyvTgq3qV9f3DtmO8SwdW+2vTsV2eMstyvUCVqd0AI+vomqVkdNJSDfsGKxOVzqpZXRmewmr07JdT9fzjGbiV/gPAM0f5V6RrFug5kVQ/z8IEf1DmiF2TdyPC7dAXOB0eukZBKP+Lt4D1ZhP4zqZ8l+ICe7yOu94Q9qb/RfBuhOkriEAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>5111cea4-8b08-4c68-a25d-d1e909e9bae8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5111cea4-8b08-4c68-a25d-d1e909e9bae8</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include AS name</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>7</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)^false$|^true$</ValidationString>
+                  <ValidationError>Please enter true or false to include the Autonomous system name of the ISP in the output or not.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>129b126f-3587-4adc-b43d-c173cf98e925</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>129b126f-3587-4adc-b43d-c173cf98e925</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Full region name instead of abbreviation</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)^false$|^true$</ValidationString>
+                  <ValidationError>Please enter true to output the full region name, false to output the region abbreviation.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>49af0ff8-35f2-4c26-91ab-aea3aade1ecd</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>49af0ff8-35f2-4c26-91ab-aea3aade1ecd</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HDXSessionSourceIP</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>274877906944</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>683a0132-0706-4c1d-90b6-1c3548a69427</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>683a0132-0706-4c1d-90b6-1c3548a69427</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include coordinates</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)^false$|^true$</ValidationString>
+                  <ValidationError>Please enter true or false to include the coordinates in the output or not.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8d7bf911-9530-41c9-9e28-2f3b45ccb7b1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8d7bf911-9530-41c9-9e28-2f3b45ccb7b1</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include ISP</Name>
+                  <DefaultValue>true</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)^false$|^true$</ValidationString>
+                  <ValidationError>Please enter true or false to include the Internet service provider in the output or not.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f39b752f-aa83-42c7-bdee-85edf57fd2d5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f39b752f-aa83-42c7-bdee-85edf57fd2d5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Full country name instead of code</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)^false$|^true$</ValidationString>
+                  <ValidationError>Please enter true to output the full country name, false to output the country code.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7d9e8d9b-e7dd-4a5a-a5a2-bf95ec7d0d0f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7d9e8d9b-e7dd-4a5a-a5a2-bf95ec7d0d0f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include client IP</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)^false$|^true$</ValidationString>
+                  <ValidationError>Please enter true or false to include the HDX client IP number in the output or not.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bbc91b22-995d-4407-9db6-95df28d11765</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bbc91b22-995d-4407-9db6-95df28d11765</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include city</Name>
+                  <DefaultValue>true</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)^false$|^true$</ValidationString>
+                  <ValidationError>Please enter true or false to include the city in the output or not.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b34e44ba-3efa-45d3-b167-864da7386017</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b34e44ba-3efa-45d3-b167-864da7386017</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include time zone</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>8</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)^false$|^true$</ValidationString>
+                  <ValidationError>Please enter true or false to include the time zone of the HDX client location in the output or not.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>4KC+dM6Ek9uRmdgaW1TYeSORrWA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

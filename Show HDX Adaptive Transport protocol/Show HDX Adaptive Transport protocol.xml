@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>5f20cbf8-9f43-47bd-86f5-0fd9d6792cc8</SBAId>
+    <RootSBAId>10291ba9-1d3b-40cd-8a67-1249e8a80c72</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636813427433396000</SQN>
+    <Name>Show HDX Adaptive Transport protocol</Name>
+    <Description>Citrix Apps and Desktops (formerly XenApp and XenDesktop) introduced Adaptive transport which automatically chooses between TCP &amp; UDP for the HDX sessions. This script will leverage the ctxsession command to display the current status of the active HDX sessions.</Description>
+    <Category />
+    <Version>1.10.23</Version>
+    <DateCreated>2018-11-19T15:35:05.41</DateCreated>
+    <DateModified>2018-12-20T22:58:48.973</DateModified>
+    <DatePublished>2018-11-19T15:35:05.41</DatePublished>
+    <LastEditorName>Marcel Calef</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>IMxe2KN5IdFoTIa0b7JfuAglKxY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABkAAAAWCAIAAAC63aDhAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABJJJREFUOE+tlGtMW2UYx/eBxSzxw2J0mvDBDzNZTEyBZCNbN1GHOGBanF0pLbWlN0qva7g0DEzYEjCU2zodSBGESCgMGBRW5BIIl8MQBwWGgdFKL1DSgqUNSMullB4feo5uoJ+M/5yc/N//Oc/vPO973nNOoP+fDlk5aPTLB4I2r6DGu3skzs5ZievC90PFec/pQnfELc/FAh/5N3QSq/ynDlk6tFyLqj5FT3yN3mwPlDq8S9TtN6iWtwU/kti697mdVxmj4aQ/TsGQtniW4Qn1er1Y8THhc9xHfcAaQOstFkvGT1TwmaUirVY7PT1tNBoVluvASk9P5z6MgUslKqXD4cAKX9YR1sNVVVaWgtETSdo/ub29vbu7CzUmkynTFAcsdmv0F7Yz1GfvSCXS3NzclZUVrPZvHWHJ2xJFYnHxggj8vO1ZWVmZQqGQy+X0kTBIkvTnGH2R0lsSsViclpZWVFTk8/mwckw4yxfYg7vplR9WqdW/7iLgGd2Rwix+Vi1PgVB5k5cOnySXy2QyiUQiFAr5fD6bndLb2xsIBDACCGetuVbhbmb1xy6Xy2q1Mh4RP9sNgYQaOK3bqcyzk8nmt6RSabAjYSqfz+FwmEwmdL2xsYkRQDhrcnLyS1ayWq32eDxKpZLL4+l0uuUdw8jIiEqlys7OFoqEIpFQIEiDjrhcDpPFTE5OZrFY8GYwAghndXR0UKnUvr6+peUliVgCr8y57kRGES6Xm5mRmZGRIUgVAEUsFrE5bOgIKDQ6jUwmDw4OYgQQzvqhpiYxkYIgyPzzeTabfefuHZfbdf+b+zCvufk5/ZQ+NTW1UFk4MzMjkUqgo/Hx8crK7xISEjSaRowAwlnV1dU3bnw+ODQIlfDMnJwc6OtB+QMejzcwMNDVpYOwuaXZ7rDD2qekpICB4fX4+IaGBowAwlmP2tri4+NbWlvq11YhoohEFqvlsdFwxmj8JCfno/z80IWFi17vNbeboGmUyqRrv6/F/jz22vR0hMuVhKL6IARnISNIXFwctNO6uQlRDJ2eX1Aw5loHX9jfnz02BqZoczO6szPE671gMNjt9veGh19xu0us1hgUPReE4CzY3xQKJTo6utxohIgmkwFapFKBb7fZKu12MKLbt2Njr0VVVYGve/o0VKs9tbHhdDrVf1GwM7q3t1dXV3f5yuX4e/cgGpidpSYlXWKxwMMcrxQXg/mARIJt1WMwgCcqlW+2tp7e2fnW749AUXIQgrNg+9psNnhZ78pkEI1azCazSdjWBv6qQkEsLARTVlOzvLyct7YGPvwmJQxBwCQFAl+h6EEQAkNc+/v7s7OzcVweRITa2p7hodx1J/hfLGa1wwFm1GopffLk9ampV/V6BoNBd7tfFAd1ZAg/homJiYjubkjhOOnxxDzuLCktZbe3Y0mI03m6q4tZUDA3N5fm9xPxOlxHWCBYOJhIbX19rEBAJBLDw8MJhDACgRBx/jwxKopGozU2NsJqYH+IF591UMdZIL/fv7W1tbi42N/fr9FoKioqyssrmpqa4HMxm81w6eAAW5/j+hfWfxSK/gk+Garppmx6nAAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags>citrix,xenapp,xendesktop,hdx</Tags>
+      <Credits>Credits to: Marcel Calef
+Sources:
+https://stackoverflow.com/questions/8055371/how-do-i-run-two-commands-in-one-line-in-windows-cmd
+https://stackoverflow.com/questions/3001999/how-to-remove-trailing-and-leading-whitespace-for-user-provided-input-in-a-batch</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes />
+      <DownloadCount>453</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAL1W2W7aUBCd50r9h6tKbtIHN8tThZSqFChBykKBpn2KZMAGK4Aj2xAi5eN75vg6tllK+1JdOXebmXNmuUO+SEsacim3YvB9w3grb6SH02ucXOwYRu7El1hCCeQZu0tpyi/MdRmLJ4+S4mYFCYNVjJOFJDiNsE5x5uIbALGLWc+M/IB+dw9WwaXMagQ9H2ghLNaw1zHFOgVOgpMTjAmsR/IR8wy7Jdi1gTqBloFMCl4jeYDEir4EkIrkCXdlnENjSh0X1iL8VU5za9G1voewGyICE5xoJMaYZ7j3yD47f4Id9cRnnJSXD946dntfhzcpsWN6fw2dmFoz7BrYKUJgY30up3Imn7A+w9rlvmytS20PzH1yiBnB3MOErBLwi8DWSAe5+pcIlUeTCFlMjFxht7Kcj2E7YnWE4PFI/spnQUaasWfqfjhYm/9zKJcynz45pjavhlVhKlVhNnJvShlPsAsgHUHaML8+X8iSVa1/FSshhtbqiHk2jJInQ1oeM54eo6XrNa0vXvO3yVhfpdpWnZR4IbOsthP7gqesiexOOS7olXIu3nneAarVokh9IA1w04LEADG7sXn2iFO10uAr0L6y/qPNQx4EW7buYKte8SC1vmadYGajl/uf8kUmjETEilzat6HYP8GtRQaG/Ndbr+QzUZSVynfQU4041Omhx/ZQ+y1wamF2cHOD1XfMp4xT3ov7GzYzPpGN2zYzgz4S2r6wpH/7YrDt9Xsirym/GeF9Pmb4c9vVtHazbp5Xrla2DynNR4h5u5fs6yO78Vz676CLmVeOOeYJc/6OL+6BLyJBrZ3jLHsR2lX0pCb3yI0LSbXk4Bchz/ixHP0F7r28kGFArTHjGLMrNhDbI/Qn7XJZ9qp1n6Ep57KnufdF1ptYf8UvYps9eMg+Htn3l+VybmtJ7Tq0qNhXGAY6A9js0GYhk7PIo1agVe3o18b5gHc13N3a/wb0K2yXvcj9dBDtC0apfOvbmtIMDeU3Lu5AZ2oIAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>faefbd69-e490-47c5-899a-53620ba7385a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>faefbd69-e490-47c5-899a-53620ba7385a</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>4b626eb2-71c4-481d-9800-d2fa1da5adc1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4b626eb2-71c4-481d-9800-d2fa1da5adc1</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Detail level</Name>
+                  <DefaultValue>Basic</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\b([B|b]asic)\b|\b(Advanced)\b</ValidationString>
+                  <ValidationError>Only Basic output implemented so far. 
+
+Future versions might include Advanced detail output including metrics</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>xOmmlW8/e05ONHKsCtXWkbvw1iw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

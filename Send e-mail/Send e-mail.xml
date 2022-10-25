@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>eeb407d8-1bbb-41ae-a646-0eb0f1d05268</SBAId>
+    <RootSBAId>e8a8893c-c569-4434-b8af-45abf27c0ae0</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053179696144000</SQN>
+    <Name>Send e-mail</Name>
+    <Description>Send an e-mail message to the selected user(s) using Microsoft Outlook. Also requires the AD PowerShell module.</Description>
+    <Category />
+    <Version>3.1.22</Version>
+    <DateCreated>2013-11-24T13:06:37.243</DateCreated>
+    <DateModified>2014-02-20T15:32:33.04</DateModified>
+    <DatePublished>2013-11-24T13:06:37.243</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>gfFj74YMqQNYHh9x8KM+TFUupfo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>Email,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>240</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>1052672</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a/zGv0bya4x/jde/xu/za7z4Nb78NV7Sb2f0f3ya6n+vf43811j+GjP6LaOfKf21/Wss6Pfi1yjprwX93dB/2a9xQb+lv0b7a1T875z/aujfkv4/pU9yhrHmz+pfY4t+3tG/C4J7Qb9/Qb9N6buKPqt+jXN6JyWc1vSzpL+rX+MtYSr4Pv01Tgmvk1/jFWH78td4Q/9+SfjHsG48vA3Wh/RXTX//IoJd8G9oZXA+JugpQa1+jSvG9DV/XupoK4K55jEJ3Jm+mUWwTQl6w/8u6WdLbUp+E+9UjJPpc0p/L36NFb+NPoHfmlosLW1My5Nf4yttv2QqAZ6hykvC/RX9/wuizhv6/ytq+ZXSO6TNiuekIBoXOnqh0THPVPFrXHJfT5U6+Kyi365/DTd/GMHk1/hp/TYlngCMNbdcMDUwlzJivNfQdyv6r+QeQYEJf47xALcf/zWO+Cf+/7sR7jXzQW0xwnhfMjbn3D9md8pYfkb//4jGhJ5X9JuBckYtU+Iz/P9zatkSjl8E87dNPJMxB4cjj417ewAnULNgeEue+WsaUcW/Y+bW9PkdfhvcltLIltw7eOkOY/mLg5l5o72Fn5r/zphHgEF/LJvx96H9EqY6ZmhKPDXU14//GuCyjPprqY+a+wCPALtzlSP/c8zojPkdc5xxu4I5o2AqGf7F3AkVRTs4So5sK5FWJ1uiSaAZCsYnJcks+Bv0LbIsWC43jAXUAqSK+WKXYVbag0ivyBawchpBvim014w/X9J7LbdcE9wpt24IKuZiHMXgu4w7ZNvnI/DtVwQtI1mQWRTtCf2RBaP39c5Hv8Ymbuxy3/tg48vd94hC3//gnk5/jXdKu90OD+Iv+Vck3ukVyPPvRuOvSe81hMcO4RG2AcVEatF2K3h7WzlQev3o1/h96b+PiLf2SN5kTCEsZ8kEltEUx0RvozsB9Yy5R8bbMnfH8NlmHQU9hM/RVjjJ9HKH+MP83tVTMZy2CXbOfRm9EdMav9uvATsgI3hB7a/ovS872lksTPhp17YeWw0NyXcznXZ6C2kmvY+JHyCHeC+nMeHfBY1qh/XfEIQx2SixRCumFejbMCYz+i9GE0D7GYs7NLjQxYfv8/e3fw14E8ILxicwNjX0ZET2fF4S2e/j8NHgaKB5nQbc0tkSPj+lTwGnP39D8vgx2QORf/gONXtYwMhhOKOWwmFGJ0FjifXuej34BFQVf6fht3P2AMBj0DaiqeH/fPxrfF3J70q8jP3/AfBorxxqCgAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>aea49250-f653-4084-8251-605721c845e8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>aea49250-f653-4084-8251-605721c845e8</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>mJ2+zp06Wl51inO1rxH5EahgrUw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

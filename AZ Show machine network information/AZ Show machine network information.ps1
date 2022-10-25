@@ -2,7 +2,7 @@
 
 <#
 .SYNOPSIS
-    Get annd display network info for specified VM
+    Get and display network info for specified VM
 
 .DESCRIPTION
     Using REST API calls
@@ -444,6 +444,7 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
                 }
                 Add-Member -InputObject $result -NotePropertyMembers @{
                     'Nic Type' = $thisNetworkInterface.nicType
+					'Accelerated Networking' = $thisNetworkInterface.enableAcceleratedNetworking
                     'Subnet' = (( $IPproperties |Select-Object -ExpandProperty subnet -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Id -ErrorAction SilentlyContinue) -split '/') | Select-Object -Last 1
                     'Private IP' = $IPproperties | Select-Object -ExpandProperty privateIPAddress
                     'Private IP Allocation' = $IPproperties | Select-Object -ExpandProperty privateIPAllocationMethod

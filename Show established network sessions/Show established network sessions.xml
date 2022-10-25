@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6360913c-3cf0-480a-af18-673142ad7a6f</SBAId>
+    <RootSBAId>d3efa6cb-b55b-4aed-abaa-0aa64bcf03b1</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635844830556491107</SQN>
+    <Name>Show established network sessions</Name>
+    <Description>Executes the netstat command to show the network sessions established on the target computer/s</Description>
+    <Category />
+    <Version>1.1.1</Version>
+    <DateCreated>2014-05-27T15:51:13.303</DateCreated>
+    <DateModified>2014-05-27T15:51:13.303</DateModified>
+    <DatePublished>2014-05-27T15:51:13.303</DatePublished>
+    <LastEditorName>ControlUp Support</LastEditorName>
+    <CreatorName>ControlUp Support</CreatorName>
+    <Status>4</Status>
+    <CheckSum>9qv/M8Q/3m/HkJ2By1NsNABbKQY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ControlUp Support</Author>
+      <Tags />
+      <Credits>Credits to: Smart-X Support
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>support@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>732</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>bgBlAHQAcwB0AGEAdAAgAC0AbgAgAHwAIABmAGkAbgBkACAAIgBFAFMAVABBAEIATABJAFMASABFAEQAIgA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>9jA6ABa1HTvtECTjpMTnvosa/0A=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

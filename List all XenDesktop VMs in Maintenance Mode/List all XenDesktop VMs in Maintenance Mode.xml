@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>df51b267-08b2-43c8-b06e-e219422e282c</SBAId>
+    <RootSBAId>a2806c45-c922-4d9e-a77b-2eae151c8b0c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053171512540000</SQN>
+    <Name>List all XenDesktop VMs in Maintenance Mode</Name>
+    <Description>This script will list all the VMs in a specific XenDesktop site that are listed in maintenance mode in the DDC.  It must be run on a XenDesktop broker. The script prompts for and requires at least a XenDesktop read-only admin account.</Description>
+    <Category />
+    <Version>1.3.8</Version>
+    <DateCreated>2016-05-04T13:12:15.413</DateCreated>
+    <DateModified>2016-05-05T06:00:44.67</DateModified>
+    <DatePublished>2016-05-04T13:12:15.413</DatePublished>
+    <LastEditorName>Matan Nataf</LastEditorName>
+    <CreatorName>Matan Nataf</CreatorName>
+    <Status>4</Status>
+    <CheckSum>hJZYIjeXj3CjW3aqQ3rCrW6ahz0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Matan Nataf</Author>
+      <Tags>PowerShell, XenDesktop, maintenance mode</Tags>
+      <Credits>Credits to: Matan Nataf
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>matann@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>267</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a6T032/8ayS/xvjXeP1r/D6/xotf48tf4yX9dkb/x6ep99+bX2P+axS/RkO/Nb/G9Neo6ffVr9HSX9WvsaafK/4X32b0/5Jbyrfn/FlJ/6X0yfzXyOnnT/4aX3Dbc4JT/RoLfev3pu+Wv8ZT+rf5Nd5S24qgoreCfs9/jZG+nzHcjN4EpILeSAlCxr+1DCGj/0/52wXBmNFvYx3j01/jlEZ28mu8ohG+pBGd0Xhf3HqkV/SbjMONb2hkglfGMFb0zZQ+Oaf/T28c54eO0h/JGUNZ0NwIthNuX9PfgFdZHOMYTXh23tKntaXgy1/jmKh3TKM8JTqd0u9pr9eUaFrRvyvGP6P+c8a5JugGzin1CSgvf43n9HsfQvprfM5vfREd8xc6Ynw75dlaMu5j6rP5NXa1jy9/ja8Ix5f8b5+f8d/xrwFq57/GO6aOm9Urnov5r7FpXi/o90vG6md7RsdEozOi6e8VHcNraod35gQFcvjo17hL/13xf2Pi9YrhYyZLosSKPpuyzAHWj/8aR/wT///daB5qblcTXab0TsHvvmSMz3n+covhZ/T/j6hvGetHHhRDKbT4PX+NrV/jjv3ujHXBFv9fZnebtc1rHvtKabJNIxWeSQn7gnEvaIbGv8aTgB+PiUILfmf8a3yL34vjDwpBbnOmQ/lrXFua4N01fX6H385/jV9EP383/kxkWjD/xQHV3xD0a/oZfur4aUb/xUb1PiP5Gfr/l6xPQQvBxu/tlzA88NOUeTSOy3e5N3DW9q/xbepNOPsj4gHgNWGKgDMhqSX9mxEWIZ5pMIbxr2H0iejGJb2Dv1YMG7wewpx2qDxWLunieUo9FQxptzNK/CX/9jnL8I9Pya78bRO+yxs0CGYc4wWGXT41PYI/QhoP0barj1LGIB3AIbVYPOrQ5hlz8alCE1wu2U4KNw1jZv6T9uMORkayum/8kt4nQyN8w7MOqwecpRfoXcjUmkcos4Z5LekbjPJ2tHvDmla0o9GS4DHRkiFV49oz1J2/q9LUcdD/A2OUOcLwCAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>GwMuVIt/MVzR+AUcpJ0MhzQq/jc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

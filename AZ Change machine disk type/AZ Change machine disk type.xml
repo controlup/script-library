@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>739299fa-a87a-43cb-9b9e-e409dd0cc04c</SBAId><RootSBAId>03cc8d3d-9a4d-4325-81ae-7dee283bfb2d</RootSBAId><StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId><SQN>637824251597521025</SQN><Name>AZ Change machine disk type</Name><Description>Change the type of disk assigned to the Azure VM. Valid disk types are:
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>5577c2ec-3626-448c-970b-55f6359ebfc7</SBAId>
+    <RootSBAId>03cc8d3d-9a4d-4325-81ae-7dee283bfb2d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637831160578662656</SQN>
+    <Name>AZ Change machine disk type</Name>
+    <Description>Change the type of disk assigned to the Azure VM. Valid disk types are:
 
   Standard_LRS
   Premium_LRS
@@ -7,12 +15,116 @@
   Premium_ZRS
   StandardSSD_ZRS
 
-Note that costs of this VM once updated could be very different.</Description><Category /><Version>1.3.4</Version><DateCreated>2022-01-19T18:47:57.787</DateCreated><DateModified>2022-02-22T14:59:56.897</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Trentent Tye</LastEditorName><CreatorName>Guy Leech</CreatorName><Status>4</Status><CheckSum>TRc6dMuORCz1cf3k/HPAeIEhynE=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><Icon><IconData>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</IconData><IconType>2</IconType></Icon><ShareDescriptor><Author>Guy Leech</Author><Tags>Azure,machine,disk</Tags><Credits>Credits to: Guy Leech
+Note that costs of this VM once updated could be very different.</Description>
+    <Category />
+    <Version>2.3.5</Version>
+    <DateCreated>2022-01-19T18:47:57.787</DateCreated>
+    <DateModified>2022-03-17T12:07:37.507</DateModified>
+    <DatePublished>2022-03-17T12:09:21.86</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>TRc6dMuORCz1cf3k/HPAeIEhynE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton.de.Vreede</Author>
+      <Tags>Azure,machine,disk</Tags>
+      <Credits>Credits to: Guy Leech
 Original code by:
-Taken from:</Credits><AllowExposeEmail>false</AllowExposeEmail><ContactEmail /><DownloadCount>2</DownloadCount></ShareDescriptor><ExecutionDescriptor><AllowedEntitiesEx>256</AllowedEntitiesEx><AtomicEntityEx>256</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>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</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>1</AltCredentialsType><Timeout>300</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>1</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>1</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>94aa44ef-5bb9-45ce-886d-781befcaa962</string></key><value><SBAArgumentDescriptor><ArgumentId>94aa44ef-5bb9-45ce-886d-781befcaa962</ArgumentId><ArgumentType>2</ArgumentType><ArgumentNumber>1</ArgumentNumber><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>def86d6a-d679-426d-8266-cc3097c28499</string></key><value><SBAArgumentDescriptor><ArgumentId>def86d6a-d679-426d-8266-cc3097c28499</ArgumentId><ArgumentType>2</ArgumentType><Name>AzureID</Name><ArgumentNumber>0</ArgumentNumber><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>256</EntityType></SBAArgumentDescriptor></value></item><item><key><string>3f4153e3-00dc-4ff9-bf78-713304b67431</string></key><value><SBAArgumentDescriptor><ArgumentId>3f4153e3-00dc-4ff9-bf78-713304b67431</ArgumentId><ArgumentType>1</ArgumentType><Name>Disk Type</Name><DefaultValue /><ArgumentNumber>2</ArgumentNumber><ValidationString>^(Standard_LRS|Premium_LRS|StandardSSD_LRS|UltraSSD_LRS|Premium_ZRS|StandardSSD_ZRS)$</ValidationString><ValidationError>Must be one of 
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>13</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>94aa44ef-5bb9-45ce-886d-781befcaa962</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>94aa44ef-5bb9-45ce-886d-781befcaa962</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureTenantID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>def86d6a-d679-426d-8266-cc3097c28499</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>def86d6a-d679-426d-8266-cc3097c28499</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3f4153e3-00dc-4ff9-bf78-713304b67431</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3f4153e3-00dc-4ff9-bf78-713304b67431</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Disk Type</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(Standard_LRS|Premium_LRS|StandardSSD_LRS|UltraSSD_LRS|Premium_ZRS|StandardSSD_ZRS)$</ValidationString>
+                  <ValidationError>Must be one of 
 Standard_LRS
 Premium_LRS
 StandardSSD_LRS
 UltraSSD_LRS
 Premium_ZRS
-StandardSSD_ZRS</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog></ExecutionDescriptor><ImportValidationString>EX2S1o5FIrRWlE+/xvO7q8jJoLs=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+StandardSSD_ZRS</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>QNr6ZYV5MU1TwmYEmtcwTvVC/qw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

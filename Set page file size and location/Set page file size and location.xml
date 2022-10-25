@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>f219acc5-fca1-4eee-9094-5d075b5d9373</SBAId>
+    <RootSBAId>94ade49e-c5ed-46a8-a43b-a46d20d48541</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789308083756000</SQN>
+    <Name>Set page file size and location</Name>
+    <Description>Set the page file to a specific drive or full path and its initial and maximum sizes. If the sizes are not specified, or specified as zero, then the page file sizes will be system managed. If the page file location is empty or set to "auto" then the page file will be automatically managed.
+A reboot will be required for the changes to take effect.
+Arguments:
+  Page File Location - Either a drive, drive and folder or empty or set to "auto" where the latter two will result in the page file being automatically managed
+  Initial Size - The initial size of the page file in MB. If zero then sizes will be system managed.
+  Maximum Size - The maximum size of the page file in MB. If zero then sizes will be system managed.</Description>
+    <Category />
+    <Version>1.3.9</Version>
+    <DateCreated>2018-10-14T22:05:04.973</DateCreated>
+    <DateModified>2018-11-26T11:47:35.727</DateModified>
+    <DatePublished>2018-10-14T22:05:04.973</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>zioTEJuFEa7jUksSPPeHzqKOBI8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Page file,RAM,Pages/sec</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>241</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>a25c9ec9-dc47-4bb8-9dde-84eb7997ece0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a25c9ec9-dc47-4bb8-9dde-84eb7997ece0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Page file location</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>502b5389-acee-42d1-bfe1-c7084b2ef043</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>502b5389-acee-42d1-bfe1-c7084b2ef043</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Initial Size (MB)</Name>
+                  <DefaultValue>0</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Positive integer only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9834810d-f5f0-4b0b-9fdd-a55da68a8ecb</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9834810d-f5f0-4b0b-9fdd-a55da68a8ecb</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Maximum Size (MB)</Name>
+                  <DefaultValue>0</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Positive integer only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>KSoVEQ7z11Ri9DCQi226nqE0X5E=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

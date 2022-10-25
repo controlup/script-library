@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e68359b0-e42f-46e3-aff2-73f6a20f58dd</SBAId>
+    <RootSBAId>c95f26f6-70d0-4e0c-be0f-da867424a664</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637013763339812018</SQN>
+    <Name>Ivanti Deployment Agent - Poll Now</Name>
+    <Description>Issues a poll now to the designated endpoint. It will also force the endpoint to download the assigned config regardless of the installation schedule as long as the "Allow update initiation" is selected for the assigned deployment group. </Description>
+    <Category />
+    <Version>2.2.9</Version>
+    <DateCreated>2018-04-12T01:21:47.407</DateCreated>
+    <DateModified>2019-08-14T10:44:35.183</DateModified>
+    <DatePublished>2018-04-12T01:21:47.407</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Landon Winburn</CreatorName>
+    <Status>4</Status>
+    <CheckSum>AGtNHMxrRPuYSLiTaGB7kAU8Vr0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAptJREFUWEfVl7trVUEQxm9jYaeFrY/O1kqLVCkk9lZiYWtl4b9gp/+AjZ0BRQJRIhKDEAw+kKAoIoGAiWJ8oKJoUFTuOL/dHe7edfZ4bhI8OPAxe/c133w7c+D2xhb6svdmNyB2j0FvWjpBiN05gT1z/uK/QOcKhOT/GwUgeuyhv7ZRtFNgSnFJ5MqaBDtyL/5297bEtmvRDylgk+Yh9va7yOVXIhdWY3Dsww+RM0sii59Err4ZXGpn28D2NyrAfG79fhpkBgnvbA15cNBcAyr98/UYePadyD4lxAWH70YVMJQonyPP1IPtwVcV2HVD5PTTGOTzzzSvhMLBSZEJJYHxRKEm0jm7uIZyvarA/PsYACN7siTQ+q+4zkX5k3jdwR4PtoavKnD0QXxfbOmrzikBDlkH8BwYJOgO7w4PFthQrwFaT7299aknaU7lZx5VMLoj1EDaj4dMkyI2xlcVMPD+Zigxp4HzuYsvdV8qwp1aN4xpW5QZv6O/EyG7r1GBcvHg7RiEgKaEGd2BUYTsndHvAUGnX8d5xi++xVpifOLR8N2GvypwSEnY2GqC7rDMds/qWLM+uxzXciOw+QPzg3vyROs1UEIDUphkRIuGNzcogZOPY6A1zXr/LZ3TM2RtBCjasLe4d0iB8glcWND0e/uMyLMvMRBG0B3XB8V5/2MkAM6vDM4ZXAVaEUnwCFCMOQGzQKBQwVVgFAKmCE+AlU9g2deeoFEBfCsyevE5pwhzC0XoEBhSAJQq5CSayNCGmLUhZm2I1drwDwU8Ak3ewO/wIdIvJR8iLHyItA5Cgk72oJUCnq9CA3Hf8UVnzcGWKTAq7PyGFTA/Kspzm1bAfFuU5zatQOlrqO3bMgVy33YOH5LnLzKDLjC20Jff2EB7lmirl5kAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags />
+      <Credits>Credits to: Landon Winburn
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>37</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAJVV227aQBCd11bqP1h+SIJEoOljpahChKioNGmBqi+8uFyMW2wj26TN3/fM8a4vgAORZby7czszc3a4lEtx5F4CiWSBVSZrWeKr+xQ7TzZ4PKwCiXHmyArfDXSXkphdUrHryRbPBGu1X0pXhvIE+4geHLnD2Rb2sTxLSK2MVr5Zd6WPp4czzyBSJE/Q/0P/czwe3hCyDk7+8TSD3GKZG/xZcb4l4k0F5Vd69xi1RNE3K83snbzl+wjrMvcB4in6AFE0gtW6wy6E/CdyXiN7jaIR26ztBF4crrWiifwwFfCQg1omNanNv80sJuxBJjtIbTStbnYkmiO35nQOPwGRd+AtgdxjXo/yS37jO8fuStwD3dKXK61aLJvFayNMKpraSR/6yrYNdCbgQEqrsGZnY+ub1107khimaawU9QjZyYgcyDvRXN3bI9XqyBgrn7+qewUdVz7LFxmBHzPmey9T2PWgM8DJPrcdSBXxGvuYMX3EU3Qz1CQGwhA4I7KlvEFpje8zaJR4HbyK2MWq1ZC/j2/O6/dFlYbgvkOuNOfv0uuU+Ue0co70Ms8npv6giPqRt8szfVtUblxQuaWn50XO6bRyE0/Ng33PGv0TsDXh/4565nf/hjoDg08rZKulE29M1sWYLEsza56JKjFZ5lx10J+yvmOc+sCdkSsv3+UbdtBWfnZQ+zcn2DqC5uqsSCP6fFlPkVwXqJrqUp8/r0MxhL+cf1rZpzMsbFVaRHfBk2PT3d1j+QPu5ZQTKYXXcprobA4YM61Et9m0zuD+oJH7rkFY93lhJBFvZM70HevaOYuhH0wnNpwmVr8+85tn18503TVPM8Jc2mUnFmZO93k7V2R0Cnmb86TNKiXwvSyYck61vhX/sA9Y/eX/tM6/LTuT0du1QVdmlk8Ci/zwv26fo/8BRVz4rKwIAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>2</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>MT7pGkR83tjCHv4fhMuFFa+Bf0Y=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

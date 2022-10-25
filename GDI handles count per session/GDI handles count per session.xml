@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a24f6e88-fc2e-4bcf-ad25-48312ae60a58</SBAId>
+    <RootSBAId>92494688-b180-43cb-bfb4-e59073b5c1cd</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636214498495540000</SQN>
+    <Name>GDI handles count per session</Name>
+    <Description>Number of GDI handles per process in a given user session</Description>
+    <Category />
+    <Version>1.2.2</Version>
+    <DateCreated>2016-05-24T13:57:18.217</DateCreated>
+    <DateModified>2017-01-31T14:01:25.77</DateModified>
+    <DatePublished>2016-05-24T13:57:18.217</DatePublished>
+    <LastEditorName>Noel Mahnkopf</LastEditorName>
+    <CreatorName>Noel Mahnkopf</CreatorName>
+    <Status>4</Status>
+    <CheckSum>sSq/0BOpiqg/S5BuesmOUSx+3Yk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Noel Mahnkopf</Author>
+      <Tags />
+      <Credits>Credits to: Noel Mahnkopf
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>80</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAL1WXW/aQBDc50r9DyenUkCNUdW+paoUFJLUUqGo0OYh4sEJDrgiQLFpitr8987Nnc0ZDkqlqrLAvr3dvdnZD/tIlFxJSyLcZ3IrXyWRO8klk+fyTI4g7chSHrCTyII6947FWGKZylAm2M2wnlutOf5n8KOlxtMLuYBMSxfS5AkpnqfSxTqBz4T3KW2UvMMvkB60ZvAV0IPxksFuZDXO5JjSG6CZ4IqAc84TcqnB6jO0td838loaRDmBtC4DWs0R1y0kKc5U0MwRS25XifzAs7adYpXiP2fUCe5XsEvlE2Ob4Xlh46zhfK3XxW9BbroVFk4cT9rDJc6OEUsGRG+J6BgRFZE2gXcoofRlRVYVntu4F5lokTXtLy25VA4/IdYxtBNm0ET2Has2YxhDf8iMrfUynBNb/q/pWfO2Zr6aU5NvnYUb5GlF/jS6BpCljGsK7cwymkFeZWMgp7gMo90tzzVwYjJrGBvg/BEQp/Leqbhz8m8Y1UheWaRNZrpF3zFsJiXWs9LzJevkghGPsVNjhCZDyhttHfKftFX26kNntSUtLh/iNWdrhht78uOytLvuNNpG5ZwTslH34orYwbWd+ELcv1n7XbHp6441lzOOJWx8ek8HM+Pm8iU58uPz+3N1PsAmK2uiA8kjYvrozDaFiutVJId7/YWd2Pbmg9OPm/257tsOItO9YarcTMicdRMy86ZHg40uUOVeQM0vWE3Is7L5Lvb/DnsxV9r/GHuEfttGWtRmhDP91fi/Wa5Wk4/bw6vOP2eK6vXF5fqp9sY5Z4CZRf6e0+/ia0SVMs4Q/me2zgPn3ao40Yoq0r052qqYwIPjqZz0u87YntIKnZVyWu36Igj2TmSd5Z59X2926P5+0Jb31AshXfI7YR/2PqtDZ1lxWh32PXP6x1ll4vsNH366ZUQJAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor />
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>9V0nLXQM3JIJpXeAiP1GXt8oF4A=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

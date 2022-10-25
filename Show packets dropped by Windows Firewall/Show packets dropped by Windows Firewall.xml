@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>2039985f-6511-44b6-9929-eb54b48f60a8</SBAId>
+    <RootSBAId>e9405d44-ad08-41c5-b25c-e4c9c709f006</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636860086622960000</SQN>
+    <Name>Show packets dropped by Windows Firewall</Name>
+    <Description>Creates a report of the packets dropped by Windows firewall during the specified interval.</Description>
+    <Category />
+    <Version>1.4.16</Version>
+    <DateCreated>2018-11-22T18:48:37.963</DateCreated>
+    <DateModified>2019-02-17T09:04:43.307</DateModified>
+    <DatePublished>2018-11-22T18:48:37.963</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>sU37L1et77Vg5lLlwmm+m/a5BNM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>Windows Firewall, dropped packets, security</Tags>
+      <Credits>Credits to: Ton de Vreede
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>138</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>1080</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>8c4e3fe5-0f72-406b-baa4-e23637a67ae0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8c4e3fe5-0f72-406b-baa4-e23637a67ae0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Log for X minutes</Name>
+                  <DefaultValue>1</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([1-9]|1[0-5])$</ValidationString>
+                  <ValidationError>Please provide a number between 1 and 15 for the logging duration in minutes</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d24743f1-88b8-4218-9c49-434dfe9b2db3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d24743f1-88b8-4218-9c49-434dfe9b2db3</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Report on outbound traffic</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please enter True or False.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>50c96afc-50de-4c5e-bf2b-079181011794</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>50c96afc-50de-4c5e-bf2b-079181011794</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Maximum amount of groups of traffic to be returned,</Name>
+                  <DefaultValue>10</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([1-5]|1[0-9])$</ValidationString>
+                  <ValidationError>Please enter a number between 1 and 50</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>656e4602-679b-49e7-8b24-a5d268ef0876</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>656e4602-679b-49e7-8b24-a5d268ef0876</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Report on incoming traffic</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please enter True or False.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>wa1igJfBVr97KMsjLjfVncmehIA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

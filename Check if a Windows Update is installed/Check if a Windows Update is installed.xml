@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d9e260f4-4002-4e90-9e08-601b18910793</SBAId>
+    <RootSBAId>385c8057-b7c5-41b6-bb4c-5f5e35ae5fb3</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635960575974384000</SQN>
+    <Name>Check if a Windows Update is installed</Name>
+    <Description>The script checks if a Windows Update is installed, using Get-WMIObject commandlet and WMI information under 'win32_quickfixengineering' and 'win32_ReliabilityRecords'. 
+
+About Win32_ReliabilityRecords:
+They are enabled by default on Windows 7 but Group Policy has to be used to enable them on the server side. See Computer Settings – Administrative Templates – Windows Components – Windows Reliability Analysis. 
+
+MSDN Win32_ReliabilityRecords class https://msdn.microsoft.com/en-us/library/ee706630(v=vs.85).aspx
+</Description>
+    <Category />
+    <Version>1.12.57</Version>
+    <DateCreated>2015-02-21T14:14:25.793</DateCreated>
+    <DateModified>2016-04-05T21:25:29.167</DateModified>
+    <DatePublished>2015-02-21T14:14:25.793</DatePublished>
+    <LastEditorName>ajal</LastEditorName>
+    <CreatorName>ajal</CreatorName>
+    <Status>4</Status>
+    <CheckSum>On5OmUvmL6Y8DgV5TQLQJjDX1rQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ajal</Author>
+      <Tags>Windows Updates, Updates, PowerShell, HotFix,</Tags>
+      <Credits>Credits to: ZeevE@ControlUp.com</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ajdin.aliu@matho.ch</ContactEmail>
+      <Notes />
+      <DownloadCount>467</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>272</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>90</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>cc9059f6-ea91-4ba5-a3a0-47baf0bba9e2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>cc9059f6-ea91-4ba5-a3a0-47baf0bba9e2</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Enter HotFixID</Name>
+                  <DefaultValue>KB2992611</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1277de43-f311-4425-b996-754e84a612df</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1277de43-f311-4425-b996-754e84a612df</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>A31qrYq8KciCn2Twr7H2DmhS5o4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>3388601a-7d34-48fb-b19d-3d0fd6d289ea</SBAId>
+    <RootSBAId>f72fcef3-9f37-4f43-a42b-c35a0ab11e5f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637711397252917895</SQN>
+    <Name>Notify user when poor Wi-Fi detected</Name>
+    <Description>Create a message for users alerting them about wi-fi signal strength issues. </Description>
+    <Category />
+    <Version>1.3.14</Version>
+    <DateCreated>2021-05-12T11:52:38.393</DateCreated>
+    <DateModified>2021-10-29T21:13:48.27</DateModified>
+    <DatePublished>2021-10-29T21:15:46.643</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>cIIrTSqMCXhWuheRtI4oHi/sT6k=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAbBJREFUOE9jQAZ+fn7MfHx8Qezs7CtUVVUfODg4/AZhEBskxsvLGxgdHc0MVY4KhIWFjcTFxS/W19f/v3///n90cO/evf91dXX/RUVFzwsICOhDtUGAkJCQk5WV1ZfHjx9DleMGjx49+m9hYfEZqMcBrFlCQkJcT0/vzYcPH6BKCIP379//19HReaWgoCDGwMbG1rN3716wBNA8OEbnI4uDwM6dO/9zcHB0Mqirq9/99+8fVJh4ANKjrKx8k8Hd3R0qBLERRqPbisyGATc3tz8MwMB7D+WTDOzs7D4zAON2++vXr8ECyLYi24jOB4E3b978B6aZnQycnJy+ZWVlUGHiQXFx8X+gXm+GgIAABm5u7pUrVqyAShEGS5YsAWle3N3dDXQUEDAzM7OKiYndhcrjBKC0UlRUBIq+xUBtrBDdQACMCTZHR8cvIEUvXrz439fX93/OnDn/d+3a9X/37t3/586d+z8hIeE/MKlfAPo7JDs7G6oTCoBp2xQUnZGRkf/4+fn3A70UxcPDkwCka4FOrQbSCcC8oj5jxgyoDjQATNdJQGdNAnpDCypEL8DAAAAXgx2CDqf7BgAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags />
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>63</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>999</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>9ce181fe-8240-406c-b595-dcf4677aaf8b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9ce181fe-8240-406c-b595-dcf4677aaf8b</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>-message</Name>
+                  <DefaultValue>-message</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-message</ValidationString>
+                  <ValidationError>This is a parameter identifier, please do not modify</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b98ca200-c748-47e5-95be-365d08535f96</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b98ca200-c748-47e5-95be-365d08535f96</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Application</Name>
+                  <DefaultValue>Windows Powershell</DefaultValue>
+                  <ArgumentNumber>9</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b58aaf88-4b7b-4733-98c2-860ee1dc87bf</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b58aaf88-4b7b-4733-98c2-860ee1dc87bf</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message</Name>
+                  <DefaultValue>A weak Wi-Fi signal can adversely affect your application and work-from-home performance. Your wi-fi signal strength was detected as {0}%</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.</ValidationString>
+                  <ValidationError>Must contain at least 1 character</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5ba69a91-433c-4d99-b6a9-b7047a39dada</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5ba69a91-433c-4d99-b6a9-b7047a39dada</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>-application</Name>
+                  <DefaultValue>-application</DefaultValue>
+                  <ArgumentNumber>8</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-application</ValidationString>
+                  <ValidationError>This is a parameter identifier, please do not modify</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>55b04585-a27d-41ee-8dfc-e2a098ea32b7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>55b04585-a27d-41ee-8dfc-e2a098ea32b7</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>WiFiSignal</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1d6e8fc8-3ee5-4c5a-8232-43ba4762fbbc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1d6e8fc8-3ee5-4c5a-8232-43ba4762fbbc</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>-logo</Name>
+                  <DefaultValue>-logo</DefaultValue>
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-logo</ValidationString>
+                  <ValidationError>This is a parameter identifier, please do not modify</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>02d6cb79-58ca-466f-9f9a-91c984f329ae</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>02d6cb79-58ca-466f-9f9a-91c984f329ae</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Title</Name>
+                  <DefaultValue>Weak Wi-Fi Detected!</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.</ValidationString>
+                  <ValidationError>Must contain at least 1 character</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5a656a5d-156c-4e2e-9fd1-796d05255dd5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5a656a5d-156c-4e2e-9fd1-796d05255dd5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>-title</Name>
+                  <DefaultValue>-title</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-title</ValidationString>
+                  <ValidationError>This is a parameter identifier, please do not modify</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>cf06c0b4-7c45-4d32-be36-b0adef720b2d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>cf06c0b4-7c45-4d32-be36-b0adef720b2d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Logo</Name>
+                  <DefaultValue>DefaultSystemNotification</DefaultValue>
+                  <ArgumentNumber>7</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e28ef7cb-aca0-4688-9d74-df1a016a406c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e28ef7cb-aca0-4688-9d74-df1a016a406c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>-_clientMetric1</Name>
+                  <DefaultValue>-_clientMetric1</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-_clientMetric1</ValidationString>
+                  <ValidationError>This is a parameter identifier, please do not modify</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>DKWKqwIk25tD1LqAFI9MtIBnBL8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

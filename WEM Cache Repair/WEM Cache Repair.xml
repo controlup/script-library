@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>bc1a5aa2-86fd-4b1c-904b-7353e0e7581b</SBAId>
+    <RootSBAId>f7468467-040c-498a-bd94-ae53a3aec1da</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637079840673022444</SQN>
+    <Name>WEM Cache Repair</Name>
+    <Description>https://support.citrix.com/article/CTX247927</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2019-04-23T16:23:06.713</DateCreated>
+    <DateModified>2019-04-23T16:23:06.713</DateModified>
+    <DatePublished>2019-04-23T16:23:06.713</DatePublished>
+    <LastEditorName>zanercl</LastEditorName>
+    <CreatorName>zanercl</CreatorName>
+    <Status>4</Status>
+    <CheckSum>tKWqzO1JtWMIuf8ajrhvGUPUfDM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>zanercl</Author>
+      <Tags />
+      <Credits>Credits to: zanercl
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zanercl@cpchem.com</ContactEmail>
+      <Notes>Red X appears under Synchronization State for WEM Agent
+
+Taken From https://support.citrix.com/article/CTX247927</Notes>
+      <DownloadCount>88</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1V22rbQBCd50L/QSiBxKX2YymBPoQ4vUBrTN00D3UfbEm2QlzLSMqllPx7z5yVpV1dopZCKGJXu6uZ2bPnjGYP5IvEciWZeGiBpBjvJMfMrN2gjyTEKJeEfYr3jSxlg/UMvgketb+Uc/mE96ms8WXLtRSjFXu1NDEzeOv8uTxjO5SPiBDIAhHH6HO0JZruO4ZHCr83aEdyJicylykRrNEv5AfW38LGYPHkWO7ltbySAewmsEqxes3IUcuKi/U9vmYYzS08XgNRBhx9qDMifodRLkOgjokwlA+YR8Ts/ydnmcsLGeEdQiW/VOTAyYkI/jlmCWJ3ZcU1cW84j4nmq1wwHy5w6grZCO97ft/x5AFRZIy7Yl9lXopdtniu0NYF51PHa0LWoiI/9nxPa5GHll07KrU5h1dKTk+d884KRdRuIz+hW8KxotI8NrhmGKVyi9Wg1F9VnhDThhqrny8vufon2nm1qEYfw9NxJxcDWnl4fpUjjaQ67XrYOUTcb9w7LVj/3rnPqHd/rQgpFY2wS3Uqv1OFmHnp0U7R7phjfhnxgaMInGUF817jpH+/q8m2bVHF3KzzrcgP1v+x59Nr0XIBz5BfXO3Nv2RnicZa0T+CV8AKqcq6dh6xeC1ZNujkoK76rBbRVb2+3xB1SFEFDst9/DbjtOs56mR1TG0jxq4qSdu9clbwZfAF5Lv/HlHbz6zACVAq/qoiP17P1bPr3HbN1hPfEvUSfUTdQutUoVVlq0xaIHLemjF13e5Yl02m3JU1N3NiuPlo6pPh0GbwaW/Ux2+Doyf5EwxDzX+hvsu/ZHzbzdWV7zamZlXeazBlLsbEWVfxN2wn1zq8CQAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>k338tEUyox+6p+2o+bYs5WhEOGI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

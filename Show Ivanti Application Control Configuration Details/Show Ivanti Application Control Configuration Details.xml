@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>13355af2-4312-4cd5-a7b5-b2e6023bd622</SBAId>
+    <RootSBAId>dbb45e3a-f449-41c8-817e-afad1dc28bb6</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637013762214790502</SQN>
+    <Name>Show Ivanti Application Control Configuration Details</Name>
+    <Description>For end-points with Ivanti UWM agents and configurations installed, retrieve and show details of the configurations installed for each installed agent, whether installed via MSI or a native configuration.
+Will also show details of any pending install/uninstall tasks for the Deployment Agent.</Description>
+    <Category />
+    <Version>2.3.8</Version>
+    <DateCreated>2019-07-28T14:27:52.65</DateCreated>
+    <DateModified>2019-08-14T10:40:52.74</DateModified>
+    <DatePublished>2019-07-28T14:27:52.65</DatePublished>
+    <LastEditorName>guy.leech</LastEditorName>
+    <CreatorName>guy.leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>PgH0EehwInqSYYX26OQ6Vz0wNuM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>/9j/4AAQSkZJRgABAAEAYABgAAD/4QB2RXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAZKGAAcAAABAAAAALAAAAABVTklDT0RFAABMAEUAQQBEACAAVABlAGMAaABuAG8AbABvAGcAaQBlAHMAIABJAG4AYwAuACAAVgAxAC4AMAAxAAD/2wBDAAUFBQgFCAwHBwwMCQkJDA0MDAwMDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ3/2wBDAQUICAoHCgwHBwwNDAoMDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ3/wAARCAAgACADAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwChLKwdvmbqe59a+Ue5/REYxstOiI/Nf1b8zSK5Y9o/PcXzX9W/M0Byx7RHwSv5g+Zuo7n2ov8A180TKMUnZLrttsdn8Pv+Rjth73H/AKIl/l1711YfStHr8WnyPns60y2t6Ute372Hkr7dz0m1+Js93Ck8diuyW6WzXN0QRIyb9zD7OcRheWbJxjGDXesTJq6hpzcu9v0Z8hUyGnRnKlLEyvCjKs7UdOWLa5V+9Xv6aK2q1M/VPHk8aS3UlvJGkVy1iyw3uP3iRStvQfZuVZX3K+fmKRHaMZqJYh2bcbe9y/F5P+7/AE+U6sPk0HKFGFWMpSorEpzw9/cc4Llk/baNONnHXSU19o4bx/8A8jHcj3t//RENcWI/iy+X5RPpMl/5FtH/ALi/+nKgfD7jxHbH3uP/AERL+H8qrD/xY+XNb7h51/yLaqT1tT63t+8ptaXfZ7I6TT/Cuu2VpDbNZuWh1CO5YrNb4MCgblAM4HmMwPJXJT5S+07RvGlUilHlvaalul7vzaPJr5jga1apWjXilPDSpJOnWuqrk7Nv2bailbRNpP3lG4mo+E9avLSe2WydWm1CS6UtNa7QjAhScSlg6riPauU2DjB4olSqNNKFvfcr80dtLd+gsPmWCo1qdaWIVoYaFFpQrKTkmm1fkXuN3d3abk7vQ5zx/wAeI7n62/8A6IhrnxH8WXy/KJ62S6ZbRX/X3/05UOMlibe3ynqfX1rme59FGS5Vr0RH5Tf3W/I0rFcy7h5bejfrRYOZdySGJ94+U9R2PtRb+vmiZNWevf8AI//Z</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>guy.leech</Author>
+      <Tags />
+      <Credits>Credits to: guy.leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>32</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>kaXZ0JYEDbPGbGFKYCcsy9XS7Hs=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>37096a96-4a48-4ae4-acba-8355d64c21d1</SBAId>
+    <RootSBAId>41db2b3c-cafc-495c-8107-a63a15781cd0</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636056368457136000</SQN>
+    <Name>Get PVS Target Device Retries</Name>
+    <Description>Gets the PVS target device retries count via the "Mcli-Get DeviceStatus" PowerShell command. This action should be executed on a PVS server with the MCLI PowerShell snap-in installed.</Description>
+    <Category />
+    <Version>1.2.4</Version>
+    <DateCreated>2015-08-09T12:03:49.687</DateCreated>
+    <DateModified>2015-08-10T14:14:34.31</DateModified>
+    <DatePublished>2015-08-09T12:03:49.687</DatePublished>
+    <LastEditorName>Yoni Avital</LastEditorName>
+    <CreatorName>Yoni Avital</CreatorName>
+    <Status>4</Status>
+    <CheckSum>FNWha0ek4N/2nMDQZVi+w3pleAo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Yoni Avital</Author>
+      <Tags>PVS, Citrix</Tags>
+      <Credits>Credits to: Yoni Avital
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>yavital@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>540</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/In63X2P2a+S/xuWvUfwaU/q5/DWyX2NBP9Nf4zP6/+9Gf9W/xsWv0fwa3/s1dn6N7/8a41/j9a+x+jVKatv+Glu/xkf090e/xh397jf+NRL+/+/2a5zSO/WvUdH/jwlmS60rgvuS/s5/jXP6f839TG0vHxHUltqs6DcD5YxaptQH/v85tWx/jW2C8Jr+A4Yrgrmk77Z/jRcW3y8IIjDzW51pqzhGKbUr6B1g09LP61/jhD9vGfqaPr/Db+e/xi9iWuCzkv5L6XPg+Iv531T/e0PQr+ln+Kn574ywXDEGGMkX9NuMoQHzjwg2cLj8NR5RG+B5Qf9iXOeKX/Nr/L6EG6he07/v6K+X3A6z1uhogPMFjwkUNvPZ0Ccyqob+Bazfd5BSY8IJ4/uIMd7+Nb7Ls28gvx/lfBr8EsYho2+nv8Z8kELf5bG19O72r/FtgtbQ76DNG3pHeCbl0aYEKVU6TRiHBf1d0l8Z4W+o0PJbKY2x+jWu+P2GP5H5C0eN2Wkt9CW90XIPwAHUlV4As6J/p52RQgZi4zmleSoY0m6HGvhL/sX/43xj5mhbsV7RZz9D//+S+myZ74UXHaxhCm+irIw5HDno+/LX+EmiUkqfCzfhX1DKjEro3B17d8w3jfJ343lt+TvQdc2UFa2wRfNqaHDBrdJAU2EUGPGacd9mCsU02We/xpCG22YdE8L5Gf4k5xkHv2/z97WOF1Tz2z9i/TdmLJfMC02gH+X77xE1oDsFzoK+ufOzPm/AsY7S7fZzNty/D/upBzv9NV7pfBa/hugesSKxWRYs/h8GVneCfgYAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>26f152d6-5fc2-4c52-82d3-16ac5e1ef264</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>26f152d6-5fc2-4c52-82d3-16ac5e1ef264</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer>Please select the PVS server that you wish to check.</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>8GCKJoVZ+XQFMUgykv1GInDVatM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

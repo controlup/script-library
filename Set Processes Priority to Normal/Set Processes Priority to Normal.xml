@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0354015c-c4ab-42d4-b201-11c2a0f3d812</SBAId>
+    <RootSBAId>25a4817f-ccbf-4b61-89fc-b5e5cb97b694</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637005042112597214</SQN>
+    <Name>Set Processes Priority to Normal</Name>
+    <Description>Sets the priority of all processes within a session to normal</Description>
+    <Category />
+    <Version>1.3.3</Version>
+    <DateCreated>2019-05-13T13:34:26.273</DateCreated>
+    <DateModified>2019-05-17T15:11:58.637</DateModified>
+    <DatePublished>2019-05-13T13:34:26.273</DatePublished>
+    <LastEditorName>trentent.tye</LastEditorName>
+    <CreatorName>trentent.tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>mKxZ2Q5jHs/vIJmA1vygN8s3HoA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>john.kresz</Author>
+      <Tags />
+      <Credits>Credits to: trentent.tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>john.kresz@nfiindustries.com</ContactEmail>
+      <Notes />
+      <DownloadCount>54</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>JABzAGUAcwBzAGkAbwBuAEkAZAAgAD0AIAAkAGEAcgBnAHMAWwAwAF0ADQAKAA0ACgAkAHUAcwBlAHIAUAByAG8AYwBlAHMAcwBlAHMAIAA9ACAAZwBlAHQALQBwAHIAbwBjAGUAcwBzACAAfAAgAFcAaABlAHIAZQAgAHsAJABfAC4AUwBJACAALQBlAHEAIAAkAHMAZQBzAHMAaQBvAG4ASQBkAH0ADQAKACQAcAByAGkAbwByAGkAdAB5AGgAYQBzAGgAIAA9ACAAQAB7AC0AMgA9ACIASQBkAGwAZQAiADsALQAxAD0AIgBCAGUAbABvAHcATgBvAHIAbQBhAGwAIgA7ADAAPQAiAE4AbwByAG0AYQBsACIAOwAxAD0AIgBBAGIAbwB2AGUATgBvAHIAbQBhAGwAIgA7ADIAPQAiAEgAaQBnAGgAIgA7ADMAPQAiAFIAZQBhAGwAVABpAG0AZQAiAH0AIAANAAoADQAKAGYAbwByAGUAYQBjAGgAIAAoACQAcAByAG8AYwBlAHMAcwAgAGkAbgAgACQAdQBzAGUAcgBQAHIAbwBjAGUAcwBzAGUAcwApACAAewANAAoAIAAgACAAIAB0AHIAeQAgAHsADQAKACAAIAAgACAAIAAgACAAIABpAGYAIAAoACQAcAByAG8AYwBlAHMAcwAuAHAAcgBpAG8AcgBpAHQAeQBjAGwAYQBzAHMAIAAtAGUAcQAgACQAcAByAGkAbwByAGkAdAB5AGgAYQBzAGgAWwAtADEAXQApACAAewANAAoAIAAgACAAIAAgACAAIAAgACAAIAAgACAAKABHAGUAdAAtAFAAcgBvAGMAZQBzAHMAIAAtAEkAZAAgACQAcAByAG8AYwBlAHMAcwAuAGkAZAApAC4AcAByAGkAbwByAGkAdAB5AGMAbABhAHMAcwAgAD0AIAAkAHAAcgBpAG8AcgBpAHQAeQBoAGEAcwBoAFsAMABdACAADQAKACAAIAAgACAAIAAgACAAIAB9AA0ACgAgACAAIAAgAH0AIABjAGEAdABjAGgAIAB7AA0ACgAgACAAIAAgACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIAUwBrAGkAcABwAGUAZAAgAHAAcgBvAGMAZQBzAHMAIAAkACgAJABwAHIAbwBjAGUAcwBzAC4AbgBhAG0AZQApACIADQAKACAAIAAgACAAfQANAAoAfQA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>184a10e2-c47f-4e6c-90e7-add3a24344a6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>184a10e2-c47f-4e6c-90e7-add3a24344a6</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Q6XUNwHeHbMJfVfOxy+1N08vc5w=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

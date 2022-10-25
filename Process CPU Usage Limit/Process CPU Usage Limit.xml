@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e265c23e-f144-4b41-96be-283a9c3aaf25</SBAId>
+    <RootSBAId>234c1360-d0d9-467d-bb8a-24f8f146576f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637079806114559314</SQN>
+    <Name>Process CPU Usage Limit</Name>
+    <Description>Finds threads over consuming CPU in the selected process and reduces their average CPU consumption based on the agressiveness argument. The higher the agressiveness, the more CPU throttling is performed. The number can be between 1 and 10 including decimal places.
+A duration can be set, in minutes or parts there of, for how long the selected process will be monitored/adjusted but if set to 0 then the process will be monitored/adjusted until it exits.
+
+WARNING: This may make interactive applications become sluggish for users if they are targeted</Description>
+    <Category />
+    <Version>1.2.7</Version>
+    <DateCreated>2019-10-03T08:55:15.37</DateCreated>
+    <DateModified>2019-10-29T21:15:31.823</DateModified>
+    <DatePublished>2019-10-03T08:55:15.37</DatePublished>
+    <LastEditorName>rickytrigalo</LastEditorName>
+    <CreatorName>guy.leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Ba3+f26GRl/tuTrHBQAS/i0SL3I=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>rickytrigalo</Author>
+      <Tags />
+      <Credits>Credits to: guy.leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>rickytrigalo@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>518</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>15</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7386d248-e40b-41ff-947f-6a5efb1e343c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7386d248-e40b-41ff-947f-6a5efb1e343c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>65536</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f864b8de-b508-47ff-9797-5c700b623f4c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f864b8de-b508-47ff-9797-5c700b623f4c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Aggressiveness (1 - 10)</Name>
+                  <DefaultValue>5</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8c3b5ddc-8381-46e4-be09-58577f97978f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8c3b5ddc-8381-46e4-be09-58577f97978f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Duration (minutes)</Name>
+                  <DefaultValue>0</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[\d\.]+$</ValidationString>
+                  <ValidationError>Minutes only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>ltZKJjv60mgx1neOxybW7dzbmjU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

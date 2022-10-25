@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>9c733697-ffcc-4b3b-b4d3-72823ab0642c</SBAId>
+    <RootSBAId>cee01ff9-0766-4140-8f4f-a34866e5a2ba</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636902233240932081</SQN>
+    <Name>Restart service associated with process</Name>
+    <Description>This script attempts to locate a Windows service associated with a given process and issues it a start command, if not already started.</Description>
+    <Category />
+    <Version>1.1.2</Version>
+    <DateCreated>2019-02-17T16:32:55.02</DateCreated>
+    <DateModified>2019-02-24T11:34:43.367</DateModified>
+    <DatePublished>2019-02-17T16:32:55.02</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>/MPpZvtB8YxT3ipPxgN0JA4eSx4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>service,watchdog,restart</Tags>
+      <Credits>Credits to: @guyrleech</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>156</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>22201b60-7b56-439d-a1c1-bf793feea974</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>22201b60-7b56-439d-a1c1-bf793feea974</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sCommandLine</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>fElFNzZgamBNaZIqqbXMygOxqCM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

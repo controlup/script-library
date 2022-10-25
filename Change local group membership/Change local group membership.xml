@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>467a5b70-924e-479f-b060-fde94ba58416</SBAId>
+    <RootSBAId>7a788391-c9a7-4f83-bf9a-30a275aa3053</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789294768844000</SQN>
+    <Name>Change local group membership</Name>
+    <Description>Add or remove domain or local accounts to/from local groups on selected computers. Can either be done immediately or at a given date/time in the future via a scheduled task, e.g. remove specific users from the local admininstrators group in 1 day's time.
+Arguments:
+  Users - a comma separated list of AD user accounts to add/remove to/from the specified group
+  Local group - the name of the local group which will have the users added or removed
+  Remove from group - if true then the specified users will be removed from the group, if false then the users will be added to the group (default is false)
+  When - If nothing is specified, the action is taken immediately otherwise a scheduled task is created to perform the action at the data/time specified which can also be a number followed by a time unit, e.g. 8h for 8 hours or 1d for 1 day. If specifying a date/time, it must be enclosed in double quotes.</Description>
+    <Category />
+    <Version>1.4.12</Version>
+    <DateCreated>2018-10-22T18:44:28.36</DateCreated>
+    <DateModified>2018-11-26T20:53:26.783</DateModified>
+    <DatePublished>2018-10-22T18:44:28.36</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>XrairnRRFoOFj0Um8nIh1VxD1tE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Users,Groups,Security</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>56</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>f4f03821-fdf9-4708-bf15-1e822e0e61bb</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f4f03821-fdf9-4708-bf15-1e822e0e61bb</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>When</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>81132bed-305a-461b-9ca5-8ab7f2b852e6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>81132bed-305a-461b-9ca5-8ab7f2b852e6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Users</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>32dd5be2-7647-4b33-a491-753ca29545ff</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>32dd5be2-7647-4b33-a491-753ca29545ff</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Remove from Group</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(True|False)$</ValidationString>
+                  <ValidationError>Can only be True or False</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>a95bb3f3-c5d5-4e23-9de6-3ff0a0d6fec9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a95bb3f3-c5d5-4e23-9de6-3ff0a0d6fec9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Local Group</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>EtJs8w+YF0XI9/L0pKge8NeVGIQ=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

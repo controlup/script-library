@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>5f23264b-0d2a-4d88-9de2-216307dc77df</SBAId>
+    <RootSBAId>d114d17b-e090-4e9d-8722-e329eee82d70</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637739057838504901</SQN>
+    <Name>AVD Prepare PowerShell Modules prerequisites</Name>
+    <Description>This AVD Script Based Action prepares the machine with the required PowerShell modules to run the AVD script based actions
+README: https://support.controlup.com/hc/en-us/articles/360011378518</Description>
+    <Category />
+    <Version>1.1.1</Version>
+    <DateCreated>2020-07-22T21:20:47.627</DateCreated>
+    <DateModified>2020-07-22T21:20:47.627</DateModified>
+    <DatePublished>2020-07-22T21:36:43.513</DatePublished>
+    <LastEditorName>Esther Barthel, MSc</LastEditorName>
+    <CreatorName>Esther Barthel, MSc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>J2sGdwdc5THyFVy3zurDFBB3UUk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAABCRJREFUSEudk3tMW2UYh48jwlwWt5iMMHEGcBv3i1xKgdKyQrkVZltYwyYtMMExGmOMl2RBzSC7JERjMmZiVDSOOdlch2Pihs4ZUEDBsiWlpfQChbanBcr1L//Qvb7f6QmhtDC2N3mSr9/3+z1fzmlLbTadpdxtBmVejrFKdMZYLbppqhYNIgNkjZwZU+bxLxembmPjW5+fJZkBOoWw1qDMnTBW54O5tggsJ0rAcvKwB1yb64oBLwHMmPUKYZ1azNnaRSNHBft0lcIBQ1UemFE0oZJsCsmQrK7yUP9IhWAfq/E/w3J+jPZYDj1+vAAmGg4/FoaafMCufUieHc3qvKdPlhlyv4I/RYKWenwdT8AYdtEx/bssM5jVrs5Tw0d4XaMKIVheL94SU00qWLKawX6x2WufONB1k/V6pk+aUaiRZ4OpthC/0EdjbUa5i4bl5WWYt1m9zohDI+cBOvNZPUX1S7l3tZU5YDoueiTWpgZYoB2wuLgIbicNxuY3fDLEhc4eRn5VlBgyIOX+O16dC6aazZk8fRLcDjvMz8/DrH0aDB/W+80RF3F+m5cYTPWUpJT9WcYFY9UhH0wnisHWehp/70LmM60ZhLm5OYbJby745NcyKONCjzhFSvWIkxuHyjLAqBD44P67H1ZWVsDVfRWMyhwYe08JjgkzzMzMgGvKCpb36/z2CMSJ7lPUT0VJHw2VpcP4q9nr4IPtXjcsLS0xOG9/D+OKHNC/owC7xQQulwuc1gkwn6rx082Gv9DZXZjUQnXlJ54flKSB4WiWD/pKAUzdvQULCwsM9B01lvmge1cJNryEpmmwPRj22yVOdJ+lrufGqXpLk8FQkeEX/TEeTP36I7jdbgZ71xVmn1xiHhmG0Q/qfTqE3pJkQHcD9QUvknunIAHG5On+qcgEOz7F7Owsg7njy9UzvZzrnV3dTwfi/DwrkkOF7ggK+iE31jUiSQF9eZoXJDx9q4N53wST+hLojqBgXW49GnR1CmPppOd2BjH/hfbsyJZfCuJBL8NL1mC9/jU4nU4G4412GC1DwbqMP4gLnecZOZm3YkKfvyaIWhgqSQSd5OVVTLc7weFwwPiNyzCKxbVnG0Ec6HKrovaGsHrPtHIiXlMLIuFBaQLoXsGLEG05B7Rn3watNHl1bzPuY1ctiHp4IS2ihtV6TcBn6RGtav5BGBHHwWhp/GOhwQ7pouMT4vIofSfwYmrYx99l7X/YJ4oCrTh2S/Ri9krW/v9aU8NaQrY/Hci6NpyApvjQ8rb08MlrWS/Bb7n4RIV4WVG0Fxrcuyc8CCTTxgm3NmOHdD2KLUzS7h27zyWEqj5NefGPNk7YP+3ccOjI9EDWX+EeOTuX8ILqwM6gXWztiSYwbtczwW8eCOY1RofIGmP2ysg65tnte8iZJ7LRUNT/VC9a3ATir+YAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Esther Barthel, MSc</Author>
+      <Tags>wvd</Tags>
+      <Credits>Credits to: ebarthel
+Original code by: Esther Barthel, MSc
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ebarthel@cognitionit.com</ContactEmail>
+      <Notes />
+      <DownloadCount>22</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>xQ4w9I97Aljvyw4zBapQI6ZxUOY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>2c016686-8e7e-4e02-8a04-b2d2266c158a</SBAId>
+    <RootSBAId>740b76b3-2e96-4da0-8773-7db35cb0292f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635978801678600000</SQN>
+    <Name>Citrix Provisioning Services 7.8 Farm Check</Name>
+    <Description>The following script runs a report against the PVS farm using the latest PowerShell 7.7 and above PowerShell cmdlets.</Description>
+    <Category />
+    <Version>1.0.9</Version>
+    <DateCreated>2016-04-13T20:21:19.793</DateCreated>
+    <DateModified>2016-04-22T13:43:33.167</DateModified>
+    <DatePublished>2016-04-13T20:21:19.793</DatePublished>
+    <LastEditorName>Andrew Morgan</LastEditorName>
+    <CreatorName>Andrew Morgan</CreatorName>
+    <Status>4</Status>
+    <CheckSum>fyaMg1u+Q6frHxHyFIk/x4jP1Rg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Andrew Morgan</Author>
+      <Tags>Citrix, Provisioning Services,</Tags>
+      <Credits>Credits to: Andrew Morgan
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>andrew@andrewmorgan.ie</ContactEmail>
+      <Notes />
+      <DownloadCount>299</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>2</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>liIJ/A3+vbT5X2vErz3lbdqXpLM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

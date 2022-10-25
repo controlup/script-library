@@ -1,7 +1,182 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>a92b37d5-4736-48e1-af19-e65d6e64542e</SBAId><RootSBAId>f462b554-3965-451d-b6ed-30b244b1639a</RootSBAId><StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId><SQN>637799387257233780</SQN><Name>Remote event log tailer</Name><Description>This script can be used to watch events being written in the logs on several machines in real-time. For example, if a user logs on to a remote session the events recorded for this on several machines such as the RDS/VDA machine, Storefront and Delivery Controller can all be displayed as they are being written.
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a92b37d5-4736-48e1-af19-e65d6e64542e</SBAId>
+    <RootSBAId>f462b554-3965-451d-b6ed-30b244b1639a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637799387257233780</SQN>
+    <Name>Remote event log tailer</Name>
+    <Description>This script can be used to watch events being written in the logs on several machines in real-time. For example, if a user logs on to a remote session the events recorded for this on several machines such as the RDS/VDA machine, Storefront and Delivery Controller can all be displayed as they are being written.
 Run the script with an account or Shared Credential with sufficient privileges on all targeted machines to read the event logs.
-NOTE: this script should be run in the Real-time Console. Due to a dependcy on Gridview it cannot be run in Solve.</Description><Category /><Version>1.3.10</Version><DateCreated>2022-02-07T14:40:42.61</DateCreated><DateModified>2022-02-08T15:53:42.56</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Ton de Vreede</LastEditorName><CreatorName>Guy Leech</CreatorName><Status>4</Status><CheckSum>y6moIGLDJ84QsNgFcn7b1keWSHY=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><Icon><IconData /><IconType>0</IconType></Icon><ShareDescriptor><Author>Guy Leech</Author><Tags>event,log,tail,real-time</Tags><Credits>Credits to: 
+NOTE: this script should be run in the Real-time Console. Due to a dependcy on Gridview it cannot be run in Solve.</Description>
+    <Category />
+    <Version>1.3.10</Version>
+    <DateCreated>2022-02-07T14:40:42.61</DateCreated>
+    <DateModified>2022-02-08T15:53:42.56</DateModified>
+    <DatePublished>2022-02-08T15:54:05.077</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>y6moIGLDJ84QsNgFcn7b1keWSHY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>event,log,tail,real-time</Tags>
+      <Credits>Credits to: 
 Original code by:
-Taken from:</Credits><AllowExposeEmail>false</AllowExposeEmail><ContactEmail /><DownloadCount>10</DownloadCount></ShareDescriptor><ExecutionDescriptor><AllowedEntitiesEx>256</AllowedEntitiesEx><AtomicEntityEx>256</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>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</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>1</AltCredentialsType><Timeout>300</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>1</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>1</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>f5a3333d-9ea7-43d3-b4d9-05244845f941</string></key><value><SBAArgumentDescriptor><ArgumentId>f5a3333d-9ea7-43d3-b4d9-05244845f941</ArgumentId><ArgumentType>1</ArgumentType><Name>Computers, comma separated values</Name><DefaultValue /><ArgumentNumber>0</ArgumentNumber><ValidationString>.+</ValidationString><ValidationError>Please enter the names of the computers to tail the event log on, in a comma-separated format:
-computer1,computer2,computer3</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>28e01255-38d1-4bdf-aa60-2a01edd89fa2</string></key><value><SBAArgumentDescriptor><ArgumentId>28e01255-38d1-4bdf-aa60-2a01edd89fa2</ArgumentId><ArgumentType>1</ArgumentType><Name>Ignore analytic and debug logs?</Name><DefaultValue>Yes</DefaultValue><ArgumentNumber>4</ArgumentNumber><ValidationString>^(?i:Yes|No)$</ValidationString><ValidationError>Ignore analytic and debug logs? Please enter Yes or No.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>d15dcf8c-48c3-410d-b887-2d9a1055a2d7</string></key><value><SBAArgumentDescriptor><ArgumentId>d15dcf8c-48c3-410d-b887-2d9a1055a2d7</ArgumentId><ArgumentType>1</ArgumentType><Name>Enable disabled logs?</Name><DefaultValue>No</DefaultValue><ArgumentNumber>3</ArgumentNumber><ValidationString>^(?i:Yes|No)$</ValidationString><ValidationError>Temporarily enable disabled logs? Please enter Yes or No.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>dfd8ce6a-ad12-470b-b141-f17f518f8494</string></key><value><SBAArgumentDescriptor><ArgumentId>dfd8ce6a-ad12-470b-b141-f17f518f8494</ArgumentId><ArgumentType>1</ArgumentType><Name>Run for X minutes</Name><DefaultValue>3</DefaultValue><ArgumentNumber>1</ArgumentNumber><ValidationString>^[0-9]*$</ValidationString><ValidationError>Please enter for how many minutes the script should run.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>83db11f1-1bcf-4582-b175-068b41a2716d</string></key><value><SBAArgumentDescriptor><ArgumentId>83db11f1-1bcf-4582-b175-068b41a2716d</ArgumentId><ArgumentType>1</ArgumentType><Name>Report problems only?</Name><DefaultValue>No</DefaultValue><ArgumentNumber>2</ArgumentNumber><ValidationString>^(?i:Yes|No)$</ValidationString><ValidationError>Show only 'problem' events? Please enter Yes or No.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>b47aad66-0400-4fed-8419-f0078e4187c7</string></key><value><SBAArgumentDescriptor><ArgumentId>b47aad66-0400-4fed-8419-f0078e4187c7</ArgumentId><ArgumentType>1</ArgumentType><Name>Event logs to monitor, comma separated.</Name><DefaultValue>*-TerminalServices-*/*,*-User Profile Service*/Operational,*-GroupPolicy*/Operational,*-RemoteDesktopServices*/Operational,Application,System</DefaultValue><ArgumentNumber>5</ArgumentNumber><ValidationString>.+</ValidationString><ValidationError>Please enter the names of the event logs to tail in a comma-separated format:
-'*-TerminalServices-*/*,*-User Profile Service*/Operational'</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog></ExecutionDescriptor><ImportValidationString>Jb808kZ7+O9mN6/MBi1mX2IFjtw=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>28</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>f5a3333d-9ea7-43d3-b4d9-05244845f941</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f5a3333d-9ea7-43d3-b4d9-05244845f941</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Computers, comma separated values</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Please enter the names of the computers to tail the event log on, in a comma-separated format:
+computer1,computer2,computer3</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>28e01255-38d1-4bdf-aa60-2a01edd89fa2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>28e01255-38d1-4bdf-aa60-2a01edd89fa2</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Ignore analytic and debug logs?</Name>
+                  <DefaultValue>Yes</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i:Yes|No)$</ValidationString>
+                  <ValidationError>Ignore analytic and debug logs? Please enter Yes or No.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d15dcf8c-48c3-410d-b887-2d9a1055a2d7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d15dcf8c-48c3-410d-b887-2d9a1055a2d7</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Enable disabled logs?</Name>
+                  <DefaultValue>No</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i:Yes|No)$</ValidationString>
+                  <ValidationError>Temporarily enable disabled logs? Please enter Yes or No.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>dfd8ce6a-ad12-470b-b141-f17f518f8494</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>dfd8ce6a-ad12-470b-b141-f17f518f8494</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Run for X minutes</Name>
+                  <DefaultValue>3</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[0-9]*$</ValidationString>
+                  <ValidationError>Please enter for how many minutes the script should run.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>83db11f1-1bcf-4582-b175-068b41a2716d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>83db11f1-1bcf-4582-b175-068b41a2716d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Report problems only?</Name>
+                  <DefaultValue>No</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i:Yes|No)$</ValidationString>
+                  <ValidationError>Show only 'problem' events? Please enter Yes or No.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b47aad66-0400-4fed-8419-f0078e4187c7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b47aad66-0400-4fed-8419-f0078e4187c7</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Event logs to monitor, comma separated.</Name>
+                  <DefaultValue>*-TerminalServices-*/*,*-User Profile Service*/Operational,*-GroupPolicy*/Operational,*-RemoteDesktopServices*/Operational,Application,System</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Please enter the names of the event logs to tail in a comma-separated format:
+'*-TerminalServices-*/*,*-User Profile Service*/Operational'</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>gg1JWR6FNFqTseY5/+F9fGDFQJY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c5618219-afe1-4b8a-911b-6776b0a5ab99</SBAId>
+    <RootSBAId>c119511e-020f-42d8-8829-77c18b39dd0b</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637109770171792254</SQN>
+    <Name>Horizon exit maintenance mode</Name>
+    <Description>Take Horizon View machine out of Maintenance.
+Can be used as an Automated action to remove a machine from maintenance after a plannend maintenance window
+    This script requires VMWare PowerCLI and the Vmware.Hv.Helper module to be installed on the machine running the script.
+    PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers'
+    Vmware.Hv.Helper can be installed using the 'Prepare machine for Horizon View scripts' script. It can also be found on Github (see LINK). Download the module and place it in your systemdrive Program Files\WindowsPowerShell\Modules folder 
+</Description>
+    <Category />
+    <Version>1.6.12</Version>
+    <DateCreated>2019-08-22T11:47:27.727</DateCreated>
+    <DateModified>2019-12-03T13:33:48.59</DateModified>
+    <DatePublished>2019-08-22T11:47:27.727</DatePublished>
+    <LastEditorName>theartvark</LastEditorName>
+    <CreatorName>theartvark</CreatorName>
+    <Status>4</Status>
+    <CheckSum>MAk28nNpRZjGYDjea9XI24gJ2F4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>theartvark</Author>
+      <Tags />
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>24</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7f8e25f7-176f-486c-a2a0-4556b6b445c1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7f8e25f7-176f-486c-a2a0-4556b6b445c1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>13befc89-033f-45fc-8d4e-ebb59a5afd35</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>13befc89-033f-45fc-8d4e-ebb59a5afd35</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HzPrimaryConnectionServer</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>L2Xm7RRT/BpIpz/yqFygrCOoY6U=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

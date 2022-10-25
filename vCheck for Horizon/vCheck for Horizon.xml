@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>60948766-8fae-463c-bec9-3dcb19849897</SBAId>
+    <RootSBAId>75129525-e8e9-477c-9bee-20e926c37a7c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637732877320506266</SQN>
+    <Name>vCheck for Horizon</Name>
+    <Description>The vCheck for Horizon is based on the regular vCheck for vSphere and uses the Horizon SOAP api's to gather data. It outputs the results to an html file to file and optionally sends it by email.
+Required:
+-	Connection server fqdn
+-	Output Path
+-	Send Email: true or false ( default)
+-	Use SSL for Email: true or false (default)
+Optional:
+-	SMTP server
+-	From Email Address
+-	To Email Address
+-	Email Subject
+The vCheck for Horizon SBA downloads the regular vCheck for Horizon from Github if no previous download can be found. To get the newest version of the vCheck for Horizon just remove the %programdata%\Controlup\ScriptSupport \vCheck-HorizonView-master folder.
+By default the html file will be saved to the supplied output path. Set the enable email to true and configure all parameters to receive an email as well.
+
+Requirements: Configured Horizon Credentials object for the shared account that will be used. See the Horizon Credentials SBA to create this.
+Requirements : PowerCLI 12
+Source: https://github.com/vCheckReport/vCheck-HorizonView
+</Description>
+    <Category />
+    <Version>1.6.10</Version>
+    <DateCreated>2021-05-07T14:48:56.213</DateCreated>
+    <DateModified>2021-05-11T18:24:19.707</DateModified>
+    <DatePublished>2021-05-11T18:25:13.607</DatePublished>
+    <LastEditorName>wouter.kursten</LastEditorName>
+    <CreatorName>wouter.kursten</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Whozvo5cAmkTV+4l9yldFt8+hco=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDAAACwwBP0AiyAAAA9lJREFUSEutlP1vGnUcx+8fE5bKiNvUkPkQM02qv2jmGq2J0aqNq2Sr0q2O6daQQCeF1kK7AqMtD4UK46HlytNRyvFw0OPh7ngoUHCQzkqtHzjssNVmjb7yzuU+uc/nfd/7fO77RQ7/P5CDg4P9/f3f/xvgAD5Io9EoNbBgfjyQvw3yM7f8zJiP+c5Hf+ulR730jY22hCj9DUqBRlDq+kmVGv5ms4lUq1WirDMm3jHEryzH31qKvbkYe00fFeiir2rxS5rIhYUI/+EWb36rby58Th3mqsOck4rvzNXrdaRSqcQKWj3+tjH+vicztp4RuUjhQlhgjH/g3BY6t0fMiYFZ7EVLYtCe+tKW/EITvjwT5NqSn9uSQyAVxp8OvBDJq+u1OlIul0M5lSp42ZEUPe3wpFlRBQRYbnqvA1lyTXl5hd0YGz4mRhVe/t7eUzbUhN59gHLAoVarITs7Oz5yWuLkLG9+Bt8M1H4tKVCBj1SyIcE4pG4eXcahs4AVvylz8xuNJhuqfP1Q6yd/3t3dRUqlkodQ3l3lqDcGipV0sZLJlXCpU+CISUrVXKmaxdKL9228OO2CR5CgDw7fs/E6mW3J3Veg1kPMQN+RYrHoxBUiA6dX35vO/2B5+a7lknjlwh0zf9zEu23qGzOeExm4xzJZuaJK6DtSKBR+CcmFWo7E+l6QsILQmB5ClXt4M2UDWTDpqJ7nCM9gSStGWOX2j2/o+rCkpR0mrWLj65Bs21RArxCGYcz+B1+pOVLrJ7BGIEtvQ7iI3mNDb3RFOH8xnPCw4axTeH2ex94D4uV+SF4JyKFXCEPTy+jkp0ruhHEwzzAgMktAqHH/SOVy6XQaBsRuDOguRVFTqyNDM+fzTJ5NHtP1Q7IB/Ql8EXj8yC37aJL79ewbKrsYpFwVQXjr4dUIHmm1Wn/0ABvFHTYOTvapbHdUNjFoSPkKJOvXJqFXba8Fh/SqhHtMcr34t39BZrh5LFnjkOXzeQQ+5JFTMSB5qauJiyOyD8enhikqB9viyT+RZchrE3/ld6R3KqHvCE3TKIqGsBAIwwKZTAb6AgOGK4wGgI1xEiwYZEtYbaAo9K59fsFvls1k8GgkkUyA9enkcjm4rtqt6541HMehEAQO7fOrc4q1gUVuPwcwWfaGJMlUKgVT7tb3ekUiEXjPWSEIolt/5AXD3tjwBs6O3x+Af4U1ebYu99ra+tlxOJ2wDtbhmVd4a8v++My4XO5ufa/XQatlMpnN5hXrc6NfXKIoulvf6wXAan1en1arU6nnTpdaPbe0ZID/o1vZ4W9eR7C773S6qUccHv4J3ArZ3Zc7NnEAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>wouter.kursten</Author>
+      <Tags />
+      <Credits>Credits to: wouter.kursten
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>25</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>5</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>6d53ce9f-b55c-49d5-934a-dfb65778db9b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6d53ce9f-b55c-49d5-934a-dfb65778db9b</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>SMTP Server</Name>
+                  <DefaultValue>n/a</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e830e9ff-1e2c-476c-8245-abea2c4feba9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e830e9ff-1e2c-476c-8245-abea2c4feba9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>To Email Address</Name>
+                  <DefaultValue>n/a</DefaultValue>
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9ae0a0be-dd61-4acb-9241-ed5ce47e6340</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9ae0a0be-dd61-4acb-9241-ed5ce47e6340</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Send Email</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>08e58e89-3377-4944-8f32-276e33dc7c7c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>08e58e89-3377-4944-8f32-276e33dc7c7c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>From Email Address</Name>
+                  <DefaultValue>n/a</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8322810f-abe8-4055-a5c7-3c5012172aef</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8322810f-abe8-4055-a5c7-3c5012172aef</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Use SSL for Email</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>70ae87e0-d529-4c2f-bddf-05c5dfd27fec</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>70ae87e0-d529-4c2f-bddf-05c5dfd27fec</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Email Subject</Name>
+                  <DefaultValue>vCheck for Horizon by ControlUp</DefaultValue>
+                  <ArgumentNumber>7</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>44bd2836-dba0-4721-b04e-4c9e8e120000</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>44bd2836-dba0-4721-b04e-4c9e8e120000</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Horizon Connection Server fqdn</Name>
+                  <DefaultValue>hzn8pod1cs1.cuemea.io</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>63e9b279-2639-4c6c-b70d-cd5c23075266</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>63e9b279-2639-4c6c-b70d-cd5c23075266</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Output Path i.e. c:\</Name>
+                  <DefaultValue>\\cufs\source\script_output</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>ewEkza8WY3eFuioaZdHCM1b+D8s=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7d43b0d4-69d3-4847-9ea2-e7f881b9ec11</SBAId>
+    <RootSBAId>a921e8b0-ccdc-4734-b9fe-cc2a0e3f7605</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636860088114320000</SQN>
+    <Name>Terminate process</Name>
+    <Description>Forcefully terminates a process using the built-in taskkill command</Description>
+    <Category />
+    <Version>1.1.1</Version>
+    <DateCreated>2019-01-16T15:35:13.713</DateCreated>
+    <DateModified>2019-01-16T15:35:13.713</DateModified>
+    <DatePublished>2019-01-16T15:35:13.713</DatePublished>
+    <LastEditorName>ek</LastEditorName>
+    <CreatorName>ek</CreatorName>
+    <Status>4</Status>
+    <CheckSum>fekX3rsZ11JVTsHztLc3M14L73g=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ek</Author>
+      <Tags>taskkill, terminate, process</Tags>
+      <Credits>Credits to: ek</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ek@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>418</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>dABhAHMAawBrAGkAbABsACAALwBGACAALwBwAGkAZAAgACUAMQA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b52e3ca4-b792-4809-a7f2-041e733e2ba8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b52e3ca4-b792-4809-a7f2-041e733e2ba8</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>ufo6TFBIZMeO64vb3AhsYmQ8gZ4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

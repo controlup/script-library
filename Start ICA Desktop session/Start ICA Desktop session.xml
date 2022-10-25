@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>70c89995-c8e8-45b1-b69f-a39c3d1fc893</SBAId>
+    <RootSBAId>efd498ca-46e5-49f4-89f7-cfc82982e7f3</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636056377381584000</SQN>
+    <Name>Start ICA Desktop session</Name>
+    <Description>This script modifies the default ICA template from ControlUp and launches a session based on that, so that any customization done in the template will be retained here.
+This script requires the Citrix Receiver is installed locally and that Direct Desktop Connection is enabled on the target for your user account.</Description>
+    <Category />
+    <Version>1.4.5</Version>
+    <DateCreated>2014-04-08T13:59:41.397</DateCreated>
+    <DateModified>2014-04-27T12:57:11.867</DateModified>
+    <DatePublished>2014-04-08T13:59:41.397</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>fZDHs0G2kqF75ww6tJcALyjItFk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags />
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:
+Credits to: Joel Bennett for the Set-IniValue function
+http://poshcode.org/160</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>285</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>764d6ce0-5492-4ee2-9e51-97e680547df7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>764d6ce0-5492-4ee2-9e51-97e680547df7</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5fbb8fc8-9a57-4a51-9844-abd188253bf0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5fbb8fc8-9a57-4a51-9844-abd188253bf0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Fullscreen (Yes/No)?</Name>
+                  <DefaultValue>No</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(yes|y|no|n)$</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>IJ7zSLzVCUFkQe6RECWIZ2P7aWA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a255c73e-6149-456d-be9d-1ee18c1a95d0</SBAId>
+    <RootSBAId>94f2e3d5-68ea-4e9c-86b7-8b3eec56f411</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635241583963116845</SQN>
+    <Name>Disable XenApp Logons</Name>
+    <Description>Disable XenApp Logon to the selected server</Description>
+    <Category />
+    <Version>1.0.0</Version>
+    <DateCreated>2013-11-24T10:05:36.42</DateCreated>
+    <DateModified>2013-11-24T10:05:36.42</DateModified>
+    <DatePublished>2013-11-24T10:05:36.42</DatePublished>
+    <LastEditorName>Smart-X Support</LastEditorName>
+    <CreatorName>Smart-X Support</CreatorName>
+    <Status>4</Status>
+    <CheckSum>IRv9rPjjQhxPrmcnOU0gm2i6938=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Smart-X Support</Author>
+      <Tags />
+      <Credits>Credits to: Smart-X Support
+Original code by: Smart-X Support
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>support@smart-x.com</ContactEmail>
+      <Notes />
+      <DownloadCount>16</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>272</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>aQBmACAAKAAgACgARwBlAHQALQBQAFMAUwBuAGEAcABpAG4AIAAtAE4AYQBtAGUAIABDAGkAdAByAGkAeAAuAFgAZQBuAEEAcABwAC4AQwBvAG0AbQBhAG4AZABzACAALQBFAHIAcgBvAHIAQQBjAHQAaQBvAG4AIABTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACkAIAAtAGUAcQAgACQAbgB1AGwAbAAgACkADQAKAHsADQAKACAAIABBAGQAZAAtAFAAcwBTAG4AYQBwAGkAbgAgAEMAaQB0AHIAaQB4AC4AWABlAG4AQQBwAHAALgBDAG8AbQBtAGEAbgBkAHMADQAKAH0ADQAKAA0ACgBEAGkAcwBhAGIAbABlAC0AWABBAFMAZQByAHYAZQByAEwAbwBnAE8AbgAgAC0AUwBlAHIAdgBlAHIATgBhAG0AZQAgACQAYQByAGcAcwBbADAAXQAgAA0ACgA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b3634f84-645b-422d-98ca-6c0face39d6d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b3634f84-645b-422d-98ca-6c0face39d6d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>1K3sHQmnO9BTtXlE1YCxSnx5F6E=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>43b0656e-ef9b-4194-af9e-e78fec67f3df</SBAId>
+    <RootSBAId>d04998ab-7663-476d-ac1f-9bd9d8f5d696</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053177954404000</SQN>
+    <Name>Remove XenApp server from published app</Name>
+    <Description>Remove selected server(s) from the list of servers on which a selected application is published</Description>
+    <Category />
+    <Version>2.0.2</Version>
+    <DateCreated>2013-11-24T10:08:25.7</DateCreated>
+    <DateModified>2014-02-20T09:40:34.63</DateModified>
+    <DatePublished>2013-11-24T10:08:25.7</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>jIgwpXDigpWyX6xq1WV3luAZ8k8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>XenApp,Citrix,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>157</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>272</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a/zGv0bya4x/jde/xu/za7z4Nb78NV7Sb2f0f3ya8n+vfo3811j8GtWvcUk/01+joX9L+v/012jp35l+UvO39a+xRX/doc/O6feK3kqp1ZzfK3+Ngr5r6beKvg3favjTJf17Ra0Lgj2n37Nob9mvsaL/Sm6V0aeFvlkwlNWvsf41JtrXnN8Y6/he/hrHNJLjX+OLX+P013hD/39FrZ8wlleKywuCt6Df3MhfEzz0XRDGBf2GHsx4JsG7KeEgb5vxmXZ9jIbGMKZvtun/C/psSW9l1KL8Na7pk5z+brkfeX/Cn6617+HxvfZobEbX3HJ8ZjwyN/6IujPX0vfACd8BQ8MrwLTPB7enh1Ajo/Ytw5Bvph5dGvrOvOlT5uTX+IpH+eO/xhH/xP9/N6JJzdjURKWp7eUl43yu1F3SN8DyM/r/R0Qf9Lyi3wyUM6bEFv//c2rZEo6QmNdMrxXBFLwNtYFLQa1q+vcdzdLvzX0cM9Zj+g7jkvmeMS23B7DEXBUsCeAEjP6EP2+5xzV9foffzn+NX0Q/fzf+DFRK6XPg/Yu9WU+JP2qmU/ip+e+YcJnxuJrOuN5nLD7kX8LvYv5EsuP9/jj9f8q9tYR9zdQDNGB6Tr9h/P7nmO8Z8xE4ION2wC9VbA3H5ZaiwruOqiPbasntBKbj8ymPdcUwrxi20UvAQrBcbhhLRfCcRthlmJAVwMkYKjhVsHLSJ98U2mvGny/pvZZbrgnulFs3BBWzPI5i8F3GHVrD5ylw9Vc8pxPmJiO9Jf2bdUbvZv6jX2MTZ3Y58X2w8aXye0Sh739wT6fEm0K73Q4P4i/5V3QD9H/OHCeaVMYudqSws4HPwdXCU6D4MsCpqxt9njHcaCyT4U2hecbvQRLvqt4T6YDONNqjyy9GHhxPAzZ4U6RdtLAZ35zbz3imMbcyBvRrKAkYJXHEiqiOfqFH5Y1rhgupGluaxfWG7x9sk1Y4Vp3Q1ee+NcIsx60veCKjvy/o8+/9GjvKEXFLFrYF98gcb9I2/3/QMj932uV2cmxm7evIcVd+ncT6fX+bIIg3+RFx5VzpAG+m5hGankClBc9czm+C8rFRlsznYuf/H3TL7OUUCwAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>aab2df88-4068-43f3-9fd8-8c8c55c9f470</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>aab2df88-4068-43f3-9fd8-8c8c55c9f470</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Enter a published application name:</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>89148a35-9e7a-4e17-9479-4e3cfe7b451c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>89148a35-9e7a-4e17-9479-4e3cfe7b451c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>2cCsmwlDRXfzmYdr62al9D3qyRw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

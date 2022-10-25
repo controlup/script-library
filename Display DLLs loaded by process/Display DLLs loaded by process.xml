@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>f06b06a6-dc2a-48d6-a43d-b0a987b5b625</SBAId>
+    <RootSBAId>b0077456-aa49-4a48-8684-b62855259527</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635907770374338000</SQN>
+    <Name>Display DLLs loaded by process</Name>
+    <Description>For every selected process, displays the list of DLLs currently loaded</Description>
+    <Category />
+    <Version>1.0.2</Version>
+    <DateCreated>2014-04-01T14:30:30.877</DateCreated>
+    <DateModified>2014-04-01T14:36:49.97</DateModified>
+    <DatePublished>2014-04-01T14:30:30.877</DatePublished>
+    <LastEditorName>ControlUp Support</LastEditorName>
+    <CreatorName>ControlUp Support</CreatorName>
+    <Status>4</Status>
+    <CheckSum>5nlpYpbz4B9H6SNy7tF52jMk5Vg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ControlUp Support</Author>
+      <Tags>DLL,PowerShell</Tags>
+      <Credits>Credits to: 
+Original code by: GrayWizardx
+Taken from: http://stackoverflow.com/questions/9041062/retrieving-dll-path-of-a-running-process</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>support@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>664</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>VAByAHkAIAB7AA0ACgAgACAAIAAgACQATQBvAGQAdQBsAGUAcwAgAD0AIAAoAEcAZQB0AC0AUAByAG8AYwBlAHMAcwAgAC0AUABJAEQAIAAkAGEAcgBnAHMAWwAwAF0AIAAtAEUAcgByAG8AcgBBAGMAdABpAG8AbgAgAFMAdABvAHAAKQAuAE0AbwBkAHUAbABlAHMADQAKAH0ADQAKAEMAYQB0AGMAaAAgAHsADQAKACAAIAAgACAAJABfACAAfAAgAGYAbAAgACoADQAKACAAIAAgACAARQB4AGkAdAAgADEADQAKAH0ADQAKAA0ACgAkAE0AbwBkAHUAbABlAHMAIAB8ACAAZgB0ACAARgBpAGwAZQBOAGEAbQBlAA0ACgA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>f587e362-dc6c-49b4-afde-83246e7bef76</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f587e362-dc6c-49b4-afde-83246e7bef76</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>RY3qAotKz3Da4XYD6/3B+dwdkG4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

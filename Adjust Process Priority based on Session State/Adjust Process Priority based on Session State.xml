@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ef66cab1-da5b-4501-9e0a-44856227f347</SBAId>
+    <RootSBAId>5a8acb7e-3775-4571-bf64-d895406a980e</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637005076292102996</SQN>
+    <Name>Adjust Process Priority based on Session State</Name>
+    <Description>Adjusts the process priority in a users session based on its state.
+Active = Normal
+Idle / Disconnect = Process Priority Floor</Description>
+    <Category />
+    <Version>1.5.8</Version>
+    <DateCreated>2019-07-25T17:43:57.137</DateCreated>
+    <DateModified>2019-08-04T09:22:20.617</DateModified>
+    <DatePublished>2019-07-25T17:43:57.137</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Iou+w3M1/43LB47nrWT3CavOQ4I=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS42/U4J6AAAAixJREFUOE+VU0tvElEUZut/IJkZGapuqhhph9aNjzZulaaIuvFJatVEYtN1bUzrSo0SZWiBulUXBXctrwELdVXc0K6x1BUbSEiZc+94z2UgTIlN/JKT3Jn7ne88r+0onILznEMUPzoEcY9Z2zR2lj7JguwyaYOw2+0nTgpSmJHptHeKrKgRSG+mSDqVIquRFfBP+wDvZEGMINd06wB/sAhZj3uEFPIFMP6B4tYWjI8qhAlpFhGZpacw52q1SiilJt2KZrOpNxqNdq1Wg3FFIZgJdx6SpGGmSPJankd+9+YtZNLpgSxmAgFj6voNfi4VS2Y5rCesYSF2QfDiV7lMTjlkqlxwk3q9bkmlXwBx+6YfsNlMQKqo4TC0Wi06eeUq1megPZt9YsniqEA8GsUs9lCgtbmxAa9eLsJp2Uldw2ep23UeR2d8TyYhsb4OM48CeuDBQy4wPzenf15bg1w2hwLtnkBe0+Dbl69wbWLSePE8eBh6/0HfrexCqVgEWZSMM84hiobCyUQCtFxPQKxEwmovXS4QDB6anxyLCwtI5qU9fTzLufFYrFuCGPJ5vccKYH8mLl0m/c2947/VaWJ3jD8KnQW6f/ee8XppuY3nfpR3dkg2k+Gcn9vbGJ2NUeisNu65Z2SU7P/e5+M8Dn8ODshFzxhbJEnlzojuKo8xEVxXkzsAjIzOLLp1lRH4o/uY/D4fxFaj2Gldy2l6PBoDXjNPW1IHnPvxf8/ZZvsLwgkxgCglyDcAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags />
+      <Credits>Credits to:Trentent Tye
+Original code by: Trentent Tye
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>599</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>8a05acf3-0614-436f-bb3f-47e5243adf55</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8a05acf3-0614-436f-bb3f-47e5243adf55</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>edb88bf7-916d-4efe-9899-207069d2790d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>edb88bf7-916d-4efe-9899-207069d2790d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9edfef87-2739-4c8c-82a8-d419aba0fd58</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9edfef87-2739-4c8c-82a8-d419aba0fd58</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Process Priority Floor</Name>
+                  <DefaultValue>BelowNormal</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>Normal|Idle|High|RealTime|BelowNormal|AboveNormal</ValidationString>
+                  <ValidationError>Must be one of these values:
+Normal,Idle,High,RealTime,BelowNormal,AboveNormal</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>a9d00588-9930-4620-9964-c774519b8655</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a9d00588-9930-4620-9964-c774519b8655</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Excluded Processes</Name>
+                  <DefaultValue>cuagent/controlupconsole/winlogon/csrss/powershell_ise</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2a1e8a73-53d8-4ac9-8937-dfe00ff0db52</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2a1e8a73-53d8-4ac9-8937-dfe00ff0db52</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>oIdleTimeCounter</Name>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>679eeffa-7bc5-4138-809e-87dd75b51ad5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>679eeffa-7bc5-4138-809e-87dd75b51ad5</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>eConnectState</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>B6v2TotKdmVK0Nh3MBA3uY21JdA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>f3e546fc-cf0f-40c1-bafd-66546ca32768</SBAId>
+    <RootSBAId>e8188236-b53c-47f5-8e44-b378182d6db6</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637650736840652513</SQN>
+    <Name>Citrix VDA Registration Check</Name>
+    <Description>Check the status and common issues with Citrix VDA registration</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2021-08-19T15:46:30.217</DateCreated>
+    <DateModified>2021-08-19T15:46:30.217</DateModified>
+    <DatePublished>2021-08-19T15:49:06.77</DatePublished>
+    <LastEditorName>chris.rogers</LastEditorName>
+    <CreatorName>chris.rogers</CreatorName>
+    <Status>4</Status>
+    <CheckSum>zo/OgBwrmNHWpvI0L4dYIB4Q05g=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>chris.rogers</Author>
+      <Tags>Citrix CVAD VDA Register Registration,</Tags>
+      <Credits>Credits to: chris.rogers
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>chris.rogers@controlup.com</ContactEmail>
+      <Notes>Script action to check and eventually remediate Citrix VDA registration.</Notes>
+      <DownloadCount>183</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>DijzZ674hwY4LL5EQxgJXEc/h2U=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

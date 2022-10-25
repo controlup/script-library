@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a0fda3d4-f009-426f-bfaf-79220f665236</SBAId>
+    <RootSBAId>ea7af82d-e34f-49b0-983b-0de5684b0ac7</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636994798950647218</SQN>
+    <Name>Extend a Logical Disk to maximum partition size for that volume</Name>
+    <Description>Leverage PowerShell commands as described in :
+   https://docs.microsoft.com/en-us/powershell/module/storage/resize-partition?view=win10-ps
+ to extend a logical disk to the maximum available size</Description>
+    <Category />
+    <Version>1.0.5</Version>
+    <DateCreated>2019-07-03T15:39:36.227</DateCreated>
+    <DateModified>2019-07-03T16:17:01.85</DateModified>
+    <DatePublished>2019-07-03T15:39:36.227</DatePublished>
+    <LastEditorName>mc</LastEditorName>
+    <CreatorName>mc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>bxuC+fTndsyppKdn6wOa+Mdsxfg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAArdJREFUSEu11d1LU3Ecx/HzBxj0eOVlBMmgXOwihepCTEY0w1omgbisXURuGoGK0Z2jYunUrT24xzaWD3vWMVtH5tqG2uzhRiTaUUQLurL/YH3Pfj9/7Zwd5zT68L4YO+f34sA2RuUr2+bWz9LwtZLtg/KUvcJ3704Y5Z2pPHScg/LuOHQsynvrX8qufIYodXe30+X+uPKFd/lAIYueT6AopVIplUpFItF1mWxkTH8gvdiamY2S/qJkMlnz6JihjC5o+QMhkgBK1tx8A/Tl7KcKLRI1UFhjYyOWilYrqYUaGhpS6QwUm3sHhcIzvHgifPKU0Wi0F6bVaru6VJ33H4BSV1cnkUiq+6prBmvgBTwRHA4Ew3DG5w/6/AFe0z62wteSHfuVAtHtdofDEYbZeG00X7p8RSy+QFHU0WPHT5w8Bevt66/EIqOY9S1odfUbqkPRWVV1BNVyU446feYspFDcKxYxIDQWzTE4QEPhWVQ6s4jSaJ6D2HJLPvD0WXmLjFpYWESNW52AogdfW/tOSqWXoEAoAqh2SBebi0P49B7DqN5g6u3tt1gcCGXWt1GEfvhIBWhkJppjNiD0uWOjZBjtefykvb1jcPAlTadRICYWMgSFdnZ+55j1RDL1dtJHwgx3VDz+ASpFp6aDGs0LlaoHuO0fv6BoLD4x5SPtj7a2ttVfrDeZ7PA6mVyKRmmr1XWn7a5cfnt+PsMwm+/pBBDeiWmPd9JssRnN42N6o93pxgx3GC1NpzOo1T1NV5toOpXNfg2GZ20OF+IcLo/N8Wbc5rRY7ZjhrhwqlV4TnzuPUI93ggQoBCiEGe72RKHhYQMEKEREeLriMMMd+zPlWYIVOMduLPdqeARCCm+c/ygeVJzJYkXpRvWkilAyngghcUg3SsK3Ck0YJStF8YWy2wc93P4Dms//ARlZPXudkZEoAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>mc</Author>
+      <Tags>%FreeSpace&lt;15,FreeSpace,</Tags>
+      <Credits>Credits to: Marcel Calef
+Original code from:  https://docs.microsoft.com/en-us/powershell/module/storage/resize-partition?view=win10-ps</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes />
+      <DownloadCount>132</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>33554688</AllowedEntitiesEx>
+      <AtomicEntityEx>33554432</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANVWTW/TQBCdMxL/wUojNZHyUQqniIJEinoJpWqKOJQenNikFk5i7E3agvjvvHl2nLWdpFRCqiJrrZ3ZmdnnN7OzfisH8lJeiMPno9yLEV9m4kFyMQYyl4kEMoYUQj7FPJEfmBmsODKF/h66qSwwHIkgx1gLOOaI5MA+kF+I6sh3aGL63sLOYLaEJqSvb+FIZwPolhgxbCf0v4D1HTVDRPDhqZjG0E6JRHEnRK5vDxYJVmPsP8Jcvykgop611y1wGOBOoO3i8RBtDKmDiAG955DmwG6gS/fqkqM2cCeYRzmqJEfVhdUcsRaY+5AS8rX6ki5mfs5LewNr7/HlAdbu5ARDUb+SI1omGfaUf7+SsbCUMa+UMUOM1cy52NGFHOI9Iup15nTHNWPniGO47pBLZ2tm3oCxI8aOsm9UpAZrD9DOIPnMkictqzoSIIoZ/3Xmr9JPaAPOvBKeC0Z2WUOGGHqsVM37knHSeoiYS+XVy6phRBx9Mm64GsoX2O2qezvuebarw0x04NFhvJ58I74DeZdjrWPHleeASFOsLa4ErFT9DsV1glGnNIH+GhzcIHICZCFrpCGH2ONQmnn0r4xtWE2fwZRW9IInrAbN8z26/2P4Tnni0h4woy5inpc8CwvmrtpDtvFZyzk5o7ad1UexJ7WtPNre2+PuO8t9VvKYHcklEzNUV7UPVJn2rIrfzXpdPjHaMI+hldzYkYkhdo3YQWNG8izfp+eoyVOS+qdI9uV8lJk7kw8Ze9fMkHbtG5z5nlzyTGi/b1S8urwljtF3N81aeDcfZcPJnm33xLo+Ap7Mzcj1Xdsb9nUEqHet1QZvaK3WTf8ybavywkJN9gvVp5Z6Z1X5aUL327q9nJ3sXGVZ+JczuMqInnPtny7sHigbrhmulvNpR16hrxXw+bQ3Bd2fnLfLwp/M/+m16rPuA2UG96WqnnbnpX+E2p3Xvfn5b72/SJwzTiAMAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>4c79ec29-b6b9-4aa3-b00c-0858af6e578d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4c79ec29-b6b9-4aa3-b00c-0858af6e578d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>DiskName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>33554432</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>6jfFQvl/+zKV1EtKtZ+duvzEK0A=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

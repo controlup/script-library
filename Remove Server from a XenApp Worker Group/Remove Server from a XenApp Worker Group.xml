@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>71f276b6-7cef-44d5-b085-9640c6718b9b</SBAId>
+    <RootSBAId>6f826837-972a-4247-bcd8-2bf5287315ba</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053176919656000</SQN>
+    <Name>Remove Server from a XenApp Worker Group</Name>
+    <Description>Removes the selected XenApp server(s) from a Worker Group</Description>
+    <Category />
+    <Version>2.0.3</Version>
+    <DateCreated>2013-11-21T13:59:23.54</DateCreated>
+    <DateModified>2014-02-20T09:32:21.787</DateModified>
+    <DatePublished>2013-11-21T13:59:23.54</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>1UCN/AZ1SA96t02SvilFJ0rcU3U=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>XenApp,Citrix,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>164</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>272</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a/zGv0bya4x/jde/xu/za7z4Nb78NV7Sb2f0f3ya8n+vfo3811j8GtWvcUk/G/q7/TXm9FtKv+e/Rkn/n9In+a8xo09+b/q5/DWOf40V/Sff1/xW/Wts0V936LNz+r0iaOmvkdH/v0u/17/GW26R/hqf83drenesOL0kWK/o/1/8Gqe/xhv6/6vOO+6NFwRvQZ85rN8olkv9JqWW5x72Q32nv8Y2/X9Bby3p74xGWP4a1/QJRtZyaxnrhD9d6yiH8X3tUcFg2bwHnj4V8WlF/wIHMyPms5vGhVFl9BtaY3Ttr1HQzLnxNdxqRX8VwQhPfo2vGNsf/zWO+Cf+/7vR2GqGXNNopwyrohG8ZMzOlUpL+gYYfUb//4jogJ5X9JuBcsbj3OL/f04tW8IR3PeaabEimEueDUM14FJQq5r+fUfU9rltTN9hXDJvM+bT7QEsMScFcy5mFKM/4c9b7nFNn9/ht/Nf4xfRz9+NPwOVUvoceP9ib/YwfzXTKfzU/HdMuMx4XE1nXO8zFh/yL+F3MX9TmvGhfn+c/j/l3lrCvmbqARowPaffMH7/c8z3jD5tmAMybgf8UsXWcFduKSqc6ag6sq2W3E5gOi6e8lhXDPOKYQN7aAFgIVguN4ylInhOOnYZpuH7jKGCUwUrp6fkm0J7zfjzJb3Xcss1wZ1y64agYpbHUQy+y7hD+n2eAld/xXM6YW4ykljSv1ln9G7mP/o1NnFmlxPfBxtfKr9HFPr+B/d0SrwptNvt8CD+kn9FN6S/xhPmBmiYRmkxZ35K9V9DC3C18BQovgxw6mo+n2cMNwLWivWY8KbQPOP3IIl3GQsjHbA3Rnt0+cXIg+NpwAZvirRP+C0zvjm3n/FMY25lDOjXUBIwSuII6Fr0Cz0qb1wzXEjV2NIsrjd8W7tNWuF4wN75VgWzvNkqgjcy+vSCRvi9X2NHOSNumcK24CKZ601a5/8P2ubnTsvcTp7NrH0dee7KsZNcv+9vE4SGW31kvRJYbMxC5vUEKi145nJ+E5SPjbJkfhd7//8Ao/0Lw2gKAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>15d7c156-95d8-4ea3-8185-5e801b3449fd</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>15d7c156-95d8-4ea3-8185-5e801b3449fd</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Enter Worker Group name:</Name>
+                  <DefaultValue>Default</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>34032930-1ce4-43f3-89fb-361026ecf8bb</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>34032930-1ce4-43f3-89fb-361026ecf8bb</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>MWVD7Y99K2zk3ei0kEEA7jMNAqA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

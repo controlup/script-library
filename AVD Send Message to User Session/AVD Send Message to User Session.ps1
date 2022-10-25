@@ -1,835 +1,458 @@
-﻿<#
+﻿#requires -Version 4.0
+<#
 .SYNOPSIS
-    Send a Message to a WVD 2020 Spring Release User Session.
+    AVD Send Message to user
 .DESCRIPTION
-    Send a Message to a WVD 2020 Spring Release User Session, using the new Az.Desktopvirtualization PowerShell Module and WVD ARM Architecture (2020 Spring Release).
-.EXAMPLE
-    Invoke-WVDSendMessageToUserSession 
+    Sends a message to the user (session) on AVD.
 .CONTEXT
-    Windows Virtual Desktops
-.MODIFICATION_HISTORY
-    Esther Barthel, MSc - 13/06/20 - Original code
-    Esther Barthel, MSc - 13/06/20 - Standardizing script, based on the ControlUp Scripting Standards (version 0.2)
+    Azure Virtual Desktops
+.AUTHOR
+	Ton de Vreede
 .LINK
-    https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/import-clixml?view=powershell-7
+https://docs.microsoft.com/en-us/rest/api/desktopvirtualization/
+https://docs.microsoft.com/en-us/azure/templates/microsoft.desktopvirtualization/applicationgroups?tabs=json
 .COMPONENT
-    Set-AzSPCredentials - The required Azure Service Principal (Subcription level) and tenantID information need to be securely stored in a Credentials File. The Set-AzSPCredentials Script Action will ensure the file is created according to ControlUp standards
-    Az.Desktopvirtualization PowerShell Module - The Az.Desktopvirtualization PowerShell Module must be installed on the machine running this Script Action
+Set-AzSPCredentials - The required Azure Service Principal (Subscription level) and tenantID information need to be securely stored in a Credentials File. The AZ Store Azure Credentials Script Action will ensure the file is created according to ControlUp standards
 .NOTES
-    Version:        0.1
-    Author:         Esther Barthel, MSc
-    Creation Date:  2020-06-13
-    Updated:        2020-06-13
-                    Standardized the function, based on the ControlUp Standards (v0.2)
-    Purpose:        Script Action, created for ControlUp WVD Monitoring
-        
-    Copyright (c) cognition IT. All rights reserved.
+Azure functions created by Guy Leech and Esther Barthel
 #>
+
 [CmdletBinding()]
 Param
 (
-    [Parameter(
-        Position=0, 
-        Mandatory=$true, 
-        HelpMessage='Enter the User of an active WVD Session'
-    )]
-    [string] $User, 
+	[Parameter(Mandatory = $true, HelpMessage = 'SBA parameter auto entry: Session Host NetBIOS Name')]
+	[string]$MachineName,
+	[Parameter(Mandatory = $true, HelpMessage = 'Azure Tenant ID')]
+	[string]$AzTenantId,
+	[Parameter(Mandatory = $true, HelpMessage = 'Azure Subscription')]
+	[string]$AzSubscription,
+	[Parameter(Mandatory = $true, HelpMessage = 'Azure Resource Group')]
+	[string]$AzResourceGroup,
+	[Parameter(Mandatory = $true, HelpMessage = 'Azure VM Id')]
+	[string]$AzVmId,
+	[Parameter(Mandatory = $true, HelpMessage = 'Session ID')]
+	[string]$AzSessionId,
+	[Parameter(Mandatory = $true, HelpMessage = 'Title of the message to send.')]
+	[string]$Title,
+	[Parameter(Mandatory = $true, HelpMessage = 'The message to send to the user.')]
+	[string]$Message
+)
 
-    [Parameter(
-        Position=1, 
-        Mandatory=$true, 
-        HelpMessage='Enter the message body'
-    )]
-    [string] $Message 
-)    
+# Set up some defaults
+$ErrorActionPreference = 'Stop'
+# Configure a larger output width for the ControlUp PowerShell console
+[int]$outputWidth = 400
+# Altering the size of the PS Buffer
+$PSWindow = (Get-Host).UI.RawUI
+$WideDimensions = $PSWindow.BufferSize
+$WideDimensions.Width = $outputWidth
+$PSWindow.BufferSize = $WideDimensions
 
-# dot sourcing WVD Functions
-[string]$mainformXAML = @'
-<Window x:Class="wvdSP_Input_Form.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Esther_s_Input_Form"
-        mc:Ignorable="d"
-        Title="Enter the WVD Service Principal (SP) details" Height="389.336" Width="617.103">
-    <Grid>
-        <TextBox x:Name="textboxTenantId" HorizontalAlignment="Left" Height="31" Margin="176,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398"/>
-        <Label Content="SP Tenant ID" HorizontalAlignment="Left" Height="30" Margin="29,51,0,0" VerticalAlignment="Top" Width="117"/>
-        <TextBox x:Name="textboxAppId" HorizontalAlignment="Left" Height="30" Margin="176,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="398"/>
-        <Label Content="SP App ID" HorizontalAlignment="Left" Height="30" Margin="29,118,0,0" VerticalAlignment="Top" Width="117"/>
-        <PasswordBox x:Name="textboxAppSecret" HorizontalAlignment="Left" Height="31" Margin="176,192,0,0" VerticalAlignment="Top" Width="398"/>
-        <Label Content="SP App Secret" HorizontalAlignment="Left" Height="30" Margin="29,193,0,0" VerticalAlignment="Top" Width="117"/>
-        <Button x:Name="buttonOK" Content="OK" HorizontalAlignment="Left" Height="46" Margin="29,274,0,0" VerticalAlignment="Top" Width="175" IsDefault="True"/>
-        <Button x:Name="buttonCancel" Content="Cancel" HorizontalAlignment="Left" Height="46" Margin="244,274,0,0" VerticalAlignment="Top" Width="175" IsDefault="True"/>
-
-    </Grid>
-</Window>
-'@
-
-Function Invoke-WVDSPCredentialsForm {
-# Created by Guy Leech - @guyrleech 17/05/2020
-    Param
-    (
-        [Parameter(Mandatory=$true)]
-        $inputXaml
-    )
-
-    $form = $null
-    $inputXML = $inputXaml -replace 'mc:Ignorable="d"' , '' -replace 'x:N' ,'N'  -replace '^<Win.*' , '<Window'
-    [xml]$xaml = $inputXML
-
-    if( $xaml )
-    {
-        $reader = New-Object -TypeName Xml.XmlNodeReader -ArgumentList $xaml
-
-        try
-        {
-            $form = [Windows.Markup.XamlReader]::Load( $reader )
-        }
-        catch
-        {
-            Throw "Unable to load Windows.Markup.XamlReader. Double-check syntax and ensure .NET is installed.`n$_"
-        }
-
-        $xaml.SelectNodes( '//*[@Name]' ) | ForEach-Object `
-        {
-            Set-Variable -Name "WPF$($_.Name)" -Value $Form.FindName($_.Name) -Scope Global
-        }
-    }
-    else
-    {
-        Throw "Failed to convert input XAML to WPF XML"
-    }
-
-    $form
-}
-
+#region AzureFunctions
 function Get-AzSPStoredCredentials {
-    <#
+	<#
     .SYNOPSIS
-        Retrieve the Azure Service Principal Stored Credentials.
-    .DESCRIPTION
-        Retrieve the Azure Service Principal Stored Credentials from a stored credentials file.
+        Retrieve the Azure Service Principal Stored Credentials
     .EXAMPLE
         Get-AzSPStoredCredentials
     .CONTEXT
         Azure
-    .MODIFICATION_HISTORY
-        Esther Barthel, MSc - 03/03/20 - Original code
-        Esther Barthel, MSc - 03/03/20 - Standardizing script, based on the ControlUp Scripting Standards (version 0.2)
-    .COMPONENT
-        Import-Clixml - https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/import-clixml?view=powershell-5.1
     .NOTES
         Version:        0.1
         Author:         Esther Barthel, MSc
-        Creation Date:  2020-03-03
-        Updated:        2020-03-03
-                        Standardized the function, based on the ControlUp Standards (v0.2)
-        Updated:        2020-05-08
-                        Created a separate Azure Credentials function to support ARM architecture and Az PowerShell Module scripted actions
-        Purpose:        Script Action, created for ControlUp WVD Monitoring
-        
-        Copyright (c) cognition IT. All rights reserved.
+        Creation Date:  2020-08-03
+        Purpose:        WVD Administration, through REST API calls
     #>
-    [CmdletBinding()]
-    Param()
+	[CmdletBinding()]
+	Param
+	(
+		[Parameter(Mandatory = $true)]
+		[string]$system ,
+		[string]$tenantId
+	)
 
-    #region function settings
-        # Stored Credentials XML file
-        $System = "AZ"
-        $strAzSPCredFolder = "$([environment]::GetFolderPath('CommonApplicationData'))\ControlUp\ScriptSupport"
-        $AzSPCredentials = $null
-    #endregion
+	$strAzSPCredFolder = [System.IO.Path]::Combine( [environment]::GetFolderPath('CommonApplicationData') , 'ControlUp' , 'ScriptSupport' )
+	$AzSPCredentials = $null
 
-    Write-Verbose ""
-    Write-Verbose "----------------------------- "
-    Write-Verbose "| Get Azure SP Credentials: | "
-    Write-Verbose "----------------------------- "
-    Write-Verbose ""
+	Write-Verbose -Message "Get-AzSPStoredCredentials $system"
 
-    If (Test-Path -Path "$($strAzSPCredFolder)\$($env:USERNAME)_$($System)_Cred.xml")
-    {
-        try 
-        {
-            $AzSPCredentials = Import-Clixml -Path "$strAzSPCredFolder\$($env:USERNAME)_$($System)_Cred.xml"
-        }
-        catch 
-        {
-            Write-Error ("The required PSCredential object could not be loaded. " + $_)
-        }
-    }
-    Else
-    {
-        Write-Error "The Azure Service Principal Credentials file stored for this user ($($env:USERNAME)) cannot be found. `nCreate the file with the Set-AzSPCredentials script action (prerequisite)."
-        Exit
-    }
-    return $AzSPCredentials
+	[string]$credentialsFile = $(if ( -Not [string]::IsNullOrEmpty( $tenantId ) ) {
+			[System.IO.Path]::Combine( $strAzSPCredFolder , "$($env:USERNAME)_$($tenantId)_$($System)_Cred.xml" )
+		}
+		else {
+			[System.IO.Path]::Combine( $strAzSPCredFolder , "$($env:USERNAME)_$($System)_Cred.xml" )
+		})
+
+	Write-Verbose -Message "`tCredentials file is $credentialsFile"
+
+	If (Test-Path -Path $credentialsFile) {
+		try {
+			if ( ( $AzSPCredentials = Import-Clixml -Path $credentialsFile ) -and -Not [string]::IsNullOrEmpty( $tenantId ) -and -Not $AzSPCredentials.ContainsKey( 'tenantid' ) ) {
+				$AzSPCredentials.Add(  'tenantID' , $tenantId )
+			}
+		}
+		catch {
+			Write-Error -Message "The required PSCredential object could not be loaded from $credentialsFile : $_"
+		}
+	}
+	Elseif ( $system -eq 'Azure' ) {
+		## try old Azure file name 
+		$azSPCredentials = Get-AzSPStoredCredentials -system 'AZ' -tenantId $AZtenantId 
+	}
+    
+	if ( -not $AzSPCredentials ) {
+		Write-Error -Message "The Azure Service Principal Credentials file stored for this user ($($env:USERNAME)) cannot be found at $credentialsFile.`nCreate the file with the Set-AzSPCredentials script action (prerequisite)."
+	}
+	return $AzSPCredentials
 }
 
-function Set-AzSPStoredCredentials {
-    <#
+function Get-AzBearerToken {
+	<#
     .SYNOPSIS
-        Store the Azure Service Principal Credentials.
-    .DESCRIPTION
-        Store the Azure Service Principal Credentials to an encrypted stored credentials file.
+        Retrieve the Azure Bearer Token for an authentication session
     .EXAMPLE
-        Set-AzSPStoredCredentials
+        Get-AzBearerToken -SPCredentials <PSCredentialObject> -TenantID <string>
     .CONTEXT
         Azure
-    .MODIFICATION_HISTORY
-        Esther Barthel, MSc - 22/03/20 - Original code
-        Esther Barthel, MSc - 22/03/20 - Standardizing script, based on the ControlUp Scripting Standards (version 0.2)
-    .COMPONENT
-        Export-Clixml - https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/export-clixml?view=powershell-5.1
     .NOTES
         Version:        0.1
         Author:         Esther Barthel, MSc
         Creation Date:  2020-03-22
-        Updated:        2020-03-22
-                        Standardized the function, based on the ControlUp Standards (v0.2)
         Updated:        2020-05-08
-                        Created a separate Azure Credentials function to support ARM architecture and Az PowerShell Module scripted actions
-        Purpose:        Script Action, created for ControlUp WVD Monitoring
-        
-        Copyright (c) cognition IT. All rights reserved.
+                        Created a separate Azure Credentials function to support ARM architecture and REST API scripted actions
+        Purpose:        WVD Administration, through REST API calls
     #>
-    [CmdletBinding()]
-    Param(
-    )
+	[CmdletBinding()]
+	Param(
+		[Parameter(Mandatory = $true, HelpMessage = 'Azure Service Principal credentials' )]
+		[ValidateNotNullOrEmpty()]
+		[System.Management.Automation.PSCredential] $SPCredentials,
+		[Parameter(Mandatory = $true, HelpMessage = 'Azure Tenant ID' )]
+		[ValidateNotNullOrEmpty()]
+		[string] $TenantID,
+		[Parameter(Mandatory = $false, HelpMessage = 'Base URL for the scope' )]
+		[ValidateNotNullOrEmpty()]
+		[string] $baseURL = 'https://management.azure.com'
+	)
 
-    #region function settings
-        # Stored Credentials XML file
-        $System = "AZ"
-        $strAzSPCredFolder = "$([environment]::GetFolderPath('CommonApplicationData'))\ControlUp\ScriptSupport"
-        $AzSPCredentials = $null
-    #endregion
+    
+	## https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow
+	[string]$uri = "https://login.microsoftonline.com/$TenantID/oauth2/v2.0/token"
 
-    Write-Verbose ""
-    Write-Verbose "------------------------------- "
-    Write-Verbose "| Store Azure SP Credentials: | "
-    Write-Verbose "------------------------------- "
-    Write-Verbose ""
+	[hashtable]$body = @{
+		grant_type    = 'client_credentials'
+		client_Id     = $SPCredentials.UserName
+		client_Secret = $SPCredentials.GetNetworkCredential().Password
+		scope         = "$baseURL/.default"
+	}
 
-    If (!(Test-Path -Path "$($strAzSPCredFolder)"))
-    {
-        New-Item -ItemType Directory -Path "$($strAzSPCredFolder)"
-        Write-Verbose "* AzSPCredentials: Path $($strAzSPCredFolder) created"
-    }
-    try 
-    {
-        Add-Type -AssemblyName PresentationFramework
-        # Show the Form that will ask for the WVD Service Principal information (tenant ID, App ID, & App Secret)
-        if( $mainForm = Invoke-WVDSPCredentialsForm -inputXaml $mainformXAML )
-        {
-            $WPFbuttonOK.Add_Click( {
-                $_.Handled = $true
-                $mainForm.DialogResult = $true
-                $mainForm.Close()
-            })
-        
-            $WPFbuttonCancel.Add_Click( {
-                $_.Handled = $true
-                $mainForm.DialogResult = $false
-                $mainForm.Close()
-            })
-        
-            $null = $WPFtextboxTenantId.Focus()
-        
-            if( $mainForm.ShowDialog() )
-            {
-                # Retrieve the form input (and check for errors)
-                # tenant ID
-                If ([string]::IsNullOrEmpty($($WPFtextboxTenantId.Text)))
-                {
-                    Write-Error "The provided tenant ID is empty!"
-                    Exit
-                }
-                else 
-                {
-                    $tenantID = $($WPFtextboxTenantId.Text)
-                }
-                # app ID
-                If ([string]::IsNullOrEmpty($($WPFtextboxAppId.Text)))
-                {
-                    Write-Error "The provided app ID is empty!"
-                    Exit
-                }
-                else 
-                {
-                    $appID = $($WPFtextboxAppId.Text)
-                }
-                # app Secret
-                If ([string]::IsNullOrEmpty($($WPFtextboxAppSecret.Password)))
-                {
-                    Write-Error "The provided app Secret is empty!"
-                    Exit
-                }
-                else 
-                {
-                    $appSecret = $($WPFtextboxAppSecret.Password)
-                }
+	[hashtable]$invokeRestMethodParams = @{
+		Uri         = $uri
+		Body        = $body
+		Method      = 'POST'
+		ContentType = 'application/x-www-form-urlencoded'
+	}
 
-                
-                $appSecret = $($WPFtextboxAppSecret.Password)
-        
-                #Write-Output -InputObject "Tenant id is $($tenantID)"
-                #Write-Output -InputObject "App id is $($appID)"
-                #Write-Output -InputObject "App secret is $($appSecret)"
-            }
-            else 
-            {
-                Write-Error "The required tenant ID, app ID and app Secret could not be retrieved from the form."
-                Break
-            }
-        }
-    }
-    catch
-    {
-        Write-Error ("The required information could not be retrieved from the input form. " + $_)
-        Exit        
-    }
-        # Create the SP Credentials, so they are encrypted before being stored in the XML file
-        $secureAppSecret = ConvertTo-SecureString -String $appSecret -AsPlainText -Force
-        $spCreds = New-Object System.Management.Automation.PSCredential($appID, $secureAppSecret)
-
-    try
-    {
-        $hashAzSPCredentials = @{
-            'tenantID' = $tenantID
-            'spCreds' = $spCreds
-        }
-        $AzSPCredentials = Export-Clixml -Path "$strAzSPCredFolder\$($env:USERNAME)_$($System)_Cred.xml" -InputObject $hashAzSPCredentials -Force
-    }
-    catch 
-    {
-        Write-Error ("The required PSCredential object could not be exported. " + $_)
-        Exit
-    }
-    Write-Verbose "* AzSPCredentials: Exported succesfully."
-    return $hashAzSPCredentials
+	Invoke-RestMethod @invokeRestMethodParams | Select-Object -ExpandProperty access_token -ErrorAction SilentlyContinue
 }
 
-function Invoke-CheckInstallAndImportPSModulePrereq() {
-    <#
+
+function Invoke-AzureRestMethod {
+	<#
     .SYNOPSIS
-        Check, Install (if allowed) and Import the given PSModule prerequisite.
-    .DESCRIPTION
-        Check, Install (if allowed) and Import the given PSModule prerequisite.
+    Invoke a REST method on Azure
+
     .EXAMPLE
-        Invoke-CheckInstallAndImportPSModulePrereq -ModuleName Az.DesktopVirtualization
+    Invoke-AzureRestMethod -BearerToken $myBearerToken -uri $Uri -method GET -propertyToReturn 'Value'
+    Returns the content of the 'value' property of the return of the REST call
+
     .CONTEXT
-        Windows Virtual Desktops
-    .MODIFICATION_HISTORY
-        Esther Barthel, MSc - 23/03/20 - Original code
-        Esther Barthel, MSc - 23/03/20 - Standardizing script, based on the ControlUp Scripting Standards (version 0.2)
-    .COMPONENT
-    .NOTES
-        Version:        1.0
-        Author:         Esther Barthel, MSc
-        Creation Date:  2020-03-23
-        Updated:        2020-03-23
-                        Standardized the function, based on the ControlUp Standards (v0.2)
-        Updated:        2020-07-22
-                        Added an extra check to the Invoke-CheckInstallAndImportPSModuleRepreq function for the required NuGet packageprovider. If minimumversion 2.8.5.201 is not found it will install the NuGet PackageProvider
-        Purpose:        Script Action, created for ControlUp WVD Monitoring
+    Azure
+
+    .PARAMETER BearerToken
+    Your Azure bearer token
+
+    .PARAMETER uri
+    The REST call URI
+    
+    .PARAMETER body
+    The REST call body, if required.
+    
+    .PARAMETER propertyToReturn
+    The property of the return FROM THE REST CALL to output.
+    Many Azure REST calls contain the most relevant data in a child property of the main return, the 'property' setting is used to only return the relevant data.
+
+    .PARAMETER contentType
+    The REST call content type. Default is 'application/json'
         
-        Copyright (c) cognition IT. All rights reserved.
-    #>
-    [CmdletBinding()]
-    Param(
-        [Parameter(
-            Position=0, 
-            Mandatory=$true, 
-            HelpMessage='Enter the PowerShell Module name that needs to be installed and imported'
-        )]
-        [ValidateNotNullOrEmpty()]
-        [string] $ModuleName
-    )
-
-    #region Check if the given PowerShell Module is installed (and if not, install it with elevated right)
-        # Check if the Module is loaded
-        If (-not((Get-Module -Name $($ModuleName)).Name))
-        # Module is not loaded
-        {
-            Write-Verbose "* CheckAndInstallPSModulePrereq: PowerShell Module $($ModuleName) is not loaded in current session"
-            # Check if the Module is installed
-            If (-not((Get-Module -Name $($ModuleName) -ListAvailable).Name))
-            # Module is not installed on the system
-            {
-                # Check if session is evelated
-                [bool]$isElevated = (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-                if ($isElevated)
-                {
-                    Write-Host ("The PowerShell Module $($ModuleName) is installed from an elevated session, Scope is set to AllUsers.") -ForegroundColor Yellow
-                    $psScope = "AllUsers"
-                }
-                else
-                {
-                    Write-Warning "The PowerShell Module $($ModuleName) is NOT installed from an elevated session, Scope is set to CurrentUser."
-                    $psScope = "CurrentUser"
-                }
-
-                # Check the version of the installed NuGet Provider and install if the version is lower than 2.8.5.201 or the provider is missing
-                try
-                {
-                    If (!(([string](Get-PackageProvider -Name NuGet -ListAvailable -ErrorAction SilentlyContinue).Version) -ge "2.8.5.201"))
-                    {
-                        Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Scope $psScope -Force -Confirm:$false -WarningAction SilentlyContinue 
-                    }
-                }
-                catch
-                {
-                    Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-                    Exit
-                }
-                Write-Verbose "* CheckAndInstallPSModulePrereq: The prerequired NuGet PackageProvider is installed."
-
-                # Install the Module from the PSGallery
-                try
-                {
-                    # Install the Module from the PSGallery
-                    Write-Verbose "* CheckAndInstallPSModulePrereq: Installing the $($ModuleName) PowerShell Module from the PSGallery."
-                    PowerShellGet\Install-Module -Name $($ModuleName) -Confirm:$false -Force -AllowClobber -Scope $psScope -WarningAction SilentlyContinue
-                }
-                catch
-                {
-                    Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-                    Exit
-                }
-                Write-Verbose "* CheckAndInstallPSModulePrereq: The $($ModuleName) PowerShell Module is installed from the PSGallery."
-            }
-        }
-        # Import the Module
-        try 
-        {
-            Import-Module -Name $($ModuleName) -Force
-        }
-        catch 
-        {
-            Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-            Exit
-        }
-        Write-Verbose "* CheckAndInstallPSModulePrereq: The $($ModuleName) PowerShell Module is imported in the current session."
-    #endregion Check PS Module status
-}
-
-function Invoke-NETFrameworkCheck() {
-    <#
-    .SYNOPSIS
-        Check if the .NET Framework version is 4.7.2 or up.
-    .DESCRIPTION
-        Check if the .NET Framework version is 4.7.2 or up.
-    .EXAMPLE
-        Invoke-NETFrameworkCheck
-    .CONTEXT
-        Windows Virtual Desktops
-    .MODIFICATION_HISTORY
-        Esther Barthel, MSc - 17/05/20 - Original code
-        Esther Barthel, MSc - 17/05/20 - Standardizing script, based on the ControlUp Scripting Standards (version 0.2)
-    .COMPONENT
+    .PARAMETER norest
+    Use this switch to make the REST call with Invoke-WebRequest instead of Invoke-RestMethod
+    
     .NOTES
-        Version:        0.1
-        Author:         Esther Barthel, MSc
-        Creation Date:  2020-05-17
-        Updated:        2020-05-17
-                        Standardized the function, based on the ControlUp Standards (v0.2)
-        Purpose:        Script Action, created for ControlUp WVD Monitoring
-        
-        Copyright (c) cognition IT. All rights reserved.
+        Version:        1.1
+        Author:         Guy Leech
+        Creation Date:  17-06-2022
     #>
-    [CmdletBinding()]
-    Param()
 
-    #region Check if the current .NET Framework is 4.7.2 or higher (Release Value = 461808 or higher) prerequisite for the Az PowerShell Module
-        If ((Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full' -Name Release).Release -ge 461808)
-        {
-            # Required .NET Framework found
-            Write-Verbose ".NET Framework 4.7.2 or up is installed on this machine"
-            return $true
-        }
-        Else
-        {
-            return $false
-        }
-    #endregion Check .NET Framework
+	[CmdletBinding()]
+	Param(
+		[Parameter( Mandatory = $true, HelpMessage = 'A valid Azure bearer token' )]
+		[ValidateNotNullOrEmpty()]
+		[string]$BearerToken ,
+		[string]$uri ,
+		[ValidateSet('GET', 'POST', 'PUT', 'DELETE', 'PATCH')] ## add others as necessary
+		[string]$method = 'GET' ,
+		$body , ## not typed because could be hashtable or pscustomobject
+		[string]$propertyToReturn,
+		[string]$contentType = 'application/json' ,
+		[switch]$norest
+	)
+
+	[hashtable]$header = @{
+		'Authorization' = "Bearer $BearerToken"
+	}
+
+	if ( ! [string]::IsNullOrEmpty( $contentType ) ) {
+		$header.Add( 'Content-Type'  , $contentType )
+	}
+
+	[hashtable]$invokeRestMethodParams = @{
+		Uri     = $uri
+		Method  = $method
+		Headers = $header
+	}
+
+	if ( $PSBoundParameters[ 'body' ] ) {
+		## convertto-json converts certain characters to codes so we convert back as Azure doesn't like them
+		$invokeRestMethodParams.Add( 'Body' , (( $body | ConvertTo-Json -Depth 20 ) -replace '\\u003e' , '>' -replace '\\u003c' , '<' -replace '\\u0027' , '''' -replace '\\u0026' , '&' ))
+	}
+
+	$responseHeaders = $null
+
+	if ( $PSVersionTable.PSVersion -ge [version]'7.0.0.0' ) {
+		$invokeRestMethodParams.Add( 'ResponseHeadersVariable' , 'responseHeaders' )
+	}
+
+	## cope with pagination where get 100 results at a time
+	do {
+		$result = $null
+		if ( $norest ) {
+			$result = Invoke-WebRequest @invokeRestMethodParams
+		}
+		else {
+			$result = Invoke-RestMethod @invokeRestMethodParams
+		}
+
+		if ( -not [String]::IsNullOrEmpty( $propertyToReturn ) ) {
+			$result | Select-Object -ErrorAction SilentlyContinue -ExpandProperty $propertyToReturn
+		}
+		else {
+			$result  ## don't pipe through select as will slow script down for large result sets if processed again after return
+		}
+		## now see if more data to fetch
+		if ( $result ) {
+			if ( $result.PSObject.Properties[ 'nextLink' ] ) {
+				if ( $invokeRestMethodParams.Uri -eq $result.nextLink ) {
+					Write-Warning -Message "Got same uri for nextLink as current $($result.nextLink)"
+					break
+				}
+				else {
+					## nextLink is different
+					$invokeRestMethodParams.Uri = $result.nextLink
+				}
+			}
+			else {
+				$invokeRestMethodParams.Uri = $null ## no more data
+			}
+		}
+	} while ( $result -and $null -ne $invokeRestMethodParams.Uri )
 }
 
-function Get-WVDHostpoolSessionHost () {
-    [CmdletBinding()]
-    Param(
-        [Parameter(
-            Position=0, 
-            Mandatory=$true, 
-            HelpMessage='Enter the Subscription ID'
-        )]
-        [string] $SubscriptionID,
-    
-        [Parameter(
-            Position=1, 
-            Mandatory=$false, 
-            HelpMessage='Enter the Host Pool name'
-        )]
-        [string] $HostPoolName,
+Function New-AVDRestParameters {
+	[CmdletBinding()]
+	Param (
+		[Parameter(Mandatory = $true, HelpMessage = 'The type of parameter set you wish to create.')]
+		[ValidateSet('DeleteMSIXPackage', 'DeleteUserSession', 'DisconnectUserSession', 'ExpandMSIXImage', 'GetApplication', 'GetApplicationGroup', 'GetDesktop', 'GetHostpool', 'GetMSIXPackage', 'GetScalingPlan',
+			'GetSessionHost', 'GetUserSession', 'GetWorkSpace', 'ListApplicationGroupsByResourceGroup', 'ListApplicationGroupsByResourceGroupAndType', 'ListApplicationGroupsBySubscription',
+			'ListApplicationGroupsBySubscriptionAndType', 'ListApplicationsByApplicationGroup', 'ListDesktopsByApplicationGroup', 'ListHostPoolsByResourceGroup', 'ListHostPoolsBySubscription', 'ListMSIXPackagesByHostPool', 'ListScalingPlansByHostPool',
+			'ListScalingPlansByResourceGroup', 'ListScalingPlansBySubscription', 'ListSessionHostsByHostPool', 'ListStartMenuItemsByApplicationGroup', 'ListUserSessionsBySessionHost', 'ListUserSessionsByHostPool', 'ListWorkSpacesByResourceGroup',
+			'ListWorkSpacesBySubscription', 'SendUserMessage', 'SetSessionHostDrainMode', 'SetSessionHostAssignedUser')]
+		[string]$Type,
+		[Parameter(Mandatory = $true, HelpMessage = 'Enable to create an entire comment block with standard fields.')]
+		[string]$Subscription,
+		[Parameter(Mandatory = $false, HelpMessage = 'Azure Resource Group.')]
+		[string]$ResourceGroup,
+		[Parameter(Mandatory = $false, HelpMessage = 'AVD Application Group.')]
+		[string]$ApplicationGroup,
+		[Parameter(Mandatory = $false, HelpMessage = 'AVD Hostpool.')]
+		[string]$HostPool,
+		[Parameter(Mandatory = $false, HelpMessage = 'AVD Session Host.')]
+		[string]$SessionHost,
+		[Parameter(Mandatory = $false, HelpMessage = 'AVD Workspace.')]
+		[string]$WorkSpace,
+		[Parameter(Mandatory = $false, HelpMessage = 'MSIX package full name.')]
+		[string]$MSIXPackage,
+		[Parameter(Mandatory = $false, HelpMessage = 'Machine name (Session Host) FQDN.')]
+		[string]$MachineFQDN,
+		[Parameter(Mandatory = $false, HelpMessage = '(User) Session ID.')]
+		[string]$SessionID,
+		[Parameter(Mandatory = $false, HelpMessage = 'Message body for Send message to user.')]
+		[string]$MessageBody,
+		[Parameter(Mandatory = $false, HelpMessage = 'Message Title for Send message to user.')]
+		[string]$MessageTitle,
+		[Parameter(Mandatory = $false, HelpMessage = 'AVD Application Group.')]
+		[ValidateSet('Desktop', 'RemoteApp')]
+		[string]$ApplicationGroupType,
+		[Parameter(Mandatory = $false, HelpMessage = 'Session Host allow new session ''true'' or ''false'' ')]
+		[ValidateSet('true', 'false')]
+		[string]$AllowNewSession,
+		[Parameter(Mandatory = $false, HelpMessage = 'User to assign to Session Host (myuser@mydomain.com)')]
+		[string]$AssignedUser,
+		[Parameter(HelpMessage = 'Include the required propertyToReturn parameter to return only the subset of relevant values.')]
+		[switch]$UsePropertyToReturn
+	)
 
-    [Parameter(
-        Position=2, 
-        Mandatory=$false, 
-        HelpMessage='Enter the Session Host name'
-    )]
-    [string] $SessionHostName
-        )
+	# Set some defaults
+	[string]$AzBase = "https://management.azure.com"
+	[string]$strProv = 'providers/Microsoft.DesktopVirtualization'
+	[string]$strAPI = '?api-version=2022-02-10-preview'
 
-    #Retrieve the WVD hostPool information for this Subscription
-    [array]$psobjectCollection = Get-AzWvdHostPool -SubscriptionId $($azSubscription.Id.ToString()) | 
-    ForEach-Object {
-        $wvdHostPool = $_
-        If ($wvdHostPool.Name -like "$HostPoolName*")
-        {
-            # Retrieve the SessionHost information for each HostPool
-            Get-AzWvdSessionHost -HostPoolName $wvdHostpool.Name -ResourceGroupName $($wvdHostPool.Id.Split("/")[4]) | 
-            ForEach-Object {
-                $wvdSessionHost = $_
-                If ($wvdSessionHost.Name.Split("/")[1] -like "$SessionHostName*")
-                {
-                    # retrieve both SessionHost and corresponding HostPool information for each SessionHost
-                    $wvdSessionHost | Select @{Name='HostPoolName'; Expression={$wvdHostPool.Name}}, 
-                        @{Name='SessionHostName'; Expression={$_.Name.Split("/")[1]}}, 
-                        AgentVersion, 
-                        AllowNewSession, 
-                        @{Name='DrainMode'; Expression={if($_.AllowNewSession -eq "True"){return "Off"}else{return "On"}}}, 
-                        AsignedUser, 
-                        LastHeartBeat,
-                        LastUpdateTime,
-                        OSVersion,
-                        Session, 
-                        @{Name='ActiveSessions'; Expression={$_.Session}},  
-                        Status,
-                        StatusTimestamp,
-                        SxSStackVersion, 
-                        Type, 
-                        UpdateErrorMessage, 
-                        UpdateState, 
-                        @{Name='HostPoolApplicationGroupReference'; Expression={$wvdHostPool.ApplicationGroupReference}}, 
-                        @{Name='HostPoolCustomRdpProperty'; Expression={$wvdHostPool.CustomRdpProperty}}, 
-                        @{Name='HostPoolDescription'; Expression={$wvdHostPool.Description}}, 
-                        @{Name='HostPoolFriendlyName'; Expression={$wvdHostPool.FriendlyName}}, 
-                        @{Name='HostPoolType'; Expression={$wvdHostPool.HostPoolType}}, 
-                        @{Name='HostPoolLoadBalancerType'; Expression={$wvdHostPool.LoadBalancerType}}, 
-                        @{Name='HostpoolLocation'; Expression={$wvdHostPool.Location}},
-                        @{Name='HostpoolMaxSessionLimit'; Expression={$wvdHostPool.MaxSessionLimit}},
-                        @{Name='HostpoolResourceGroup'; Expression={$_.Id.Split("/")[4]}}, 
-                        @{Name='HostPoolSsoContext'; Expression={$wvdHostPool.SsoContext}}, 
-                        @{Name='HostPoolVMTemplate'; Expression={$wvdHostPool.VMTemplate}}, 
-                        @{Name='HostPoolValidationEnvironment'; Expression={$wvdHostPool.ValidationEnvironment}}
-                } 
-            }
-        }
-    }
-    return $psobjectCollection
+	# AVD Rest calls
+	[hashtable]$hshAVDRestCalls = @{
+		'DeleteMSIXPackage'                           = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/msixPackages/$MSIXPackage$strAPI"; 'Method' = 'DELETE' } 
+		'DeleteUserSession'                           = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/sessionHosts/$SessionHost/userSessions/$SessionID$strAPI"; 'Method' = 'DELETE' }
+		'DisconnectUserSession'                       = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/sessionHosts/$SessionHost/userSessions/$SessionID/disconnect$strAPI"; 'Method' = 'POST' }
+		'ExpandMSIXImage'                             = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/expandMsixImage$strAPI"; 'Method' = 'POST'; 'PropertyToReturn' = 'value' }
+		'GetApplication'                              = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/applicationGroups/$ApplicationGroup/applications/$AZApplicationName$strAPI" }
+		'GetApplicationGroup'                         = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/applicationGroups/$ApplicationGroup$strAPI" }
+		'GetDesktop'                                  = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/applicationGroups/$ApplicationGroup/desktops/$AZDesktopName$strAPI" }
+		'GetHostpool'                                 = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool$strAPI"; 'PropertyToReturn' = 'value' }
+		'GetMSIXPackage'                              = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/msixPackages/$MSIXPackage$strAPI" }
+		'GetScalingPlan'                              = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/scalingPlans/$AzScalingPlan$strAPI" }
+		'GetSessionHost'                              = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/sessionHosts/$MachineFQDN$strAPI" }
+		'GetUserSession'                              = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/sessionHosts/$SessionHost/userSessions/$SessionID$strAPI" }
+		'GetWorkSpace'                                = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/workspaces/$WorkSpace$strAPI" }
+		'ListApplicationsByApplicationGroup'          = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/applicationGroups/$ApplicationGroup/applications$strAPI"; 'PropertyToReturn' = 'value'; 'norest' = $true }
+		'ListApplicationGroupsByResourceGroup'        = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/applicationGroups$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListApplicationGroupsBySubscription'         = @{'Uri' = "$AzBase/subscriptions/$Subscription/$strProv/applicationGroups$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListApplicationGroupsByResourceGroupAndType' = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/applicationGroups$strAPI&$filter=applicationGroupType eq ''$ApplicationGroupType''"; 'PropertyToReturn' = 'value' }
+		'ListApplicationGroupsBySubscriptionAndType'  = @{'Uri' = "$AzBase/subscriptions/$Subscription/$strProv/applicationGroups$strAPI&$filter=applicationGroupType eq ''$ApplicationGroupType''"; 'PropertyToReturn' = 'value' }
+		'ListDesktopsByApplicationGroup'              = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/applicationGroups/$ApplicationGroup/desktops$strAPI" ; 'PropertyToReturn' = 'value' }
+		'ListHostPoolsByResourceGroup'                = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools$strAPI" ; 'PropertyToReturn' = 'value' }
+		'ListHostPoolsBySubscription'                 = @{'Uri' = "$AzBase/subscriptions/$Subscription/$strProv/hostPools$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListMSIXPackagesByHostPool'                  = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/msixPackages$strAPI" ; 'PropertyToReturn' = 'value' }
+		'ListScalingPlansByHostPool'                  = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/scalingPlans$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListScalingPlansByResourceGroup'             = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/scalingPlans$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListScalingPlansBySubscription'              = @{'Uri' = "$AzBase/subscriptions/$Subscription/$strProv/scalingPlans$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListSessionHostsByHostPool'                  = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/sessionHosts$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListStartMenuItemsByApplicationGroup'        = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/applicationGroups/$ApplicationGroup/startMenuItems$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListUserSessionsBySessionHost'               = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/sessionHosts/$SessionHost/userSessions$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListUserSessionsByHostPool'                  = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/userSessions$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListWorkSpacesByResourceGroup'               = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/workspaces$strAPI"; 'PropertyToReturn' = 'value' }
+		'ListWorkSpacesBySubscription'                = @{'Uri' = "$AzBase/subscriptions/$Subscription/$strProv/workspaces?api-version=$strAPI" ; 'PropertyToReturn' = 'value' } 
+		'SetSessionHostDrainMode'                     = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/sessionHosts/$MachineFQDN$strAPI"
+			'Method'                           = 'PATCH'
+			'Body'                             = @{'Properties' = @{'allowNewSession' = $AllowNewSession
+				}
+			}
+		}
+		'SetSessionHostAssignedUser'                  = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/sessionHosts/$MachineFQDN$strAPI"
+			'Method'                              = 'PATCH'
+			'Body'                                = @{'Properties' = @{'assignedUser' = $AssignedUser }
+			}
+		}
+		'SendUserMessage'                             = @{'Uri' = "$AzBase/subscriptions/$Subscription/resourceGroups/$ResourceGroup/$strProv/hostPools/$HostPool/sessionHosts/$SessionHost/userSessions/$SessionID/sendMessage$strAPI"
+			'Method'                   = 'POST'
+			'Body'                     = @{'messageBody' = $MessageBody; 'messageTitle' = $MessageTitle }
+		}
+	}
+
+	# Get the required param set
+	$hshOutput = $hshAVDRestCalls.$Type
+
+	# Test if the URL is valid, there should be only ONE instance of '/ / ' in the Uri
+	If (([regex]::Matches($hshOutput.Uri, "//" )).count -ne 1) {
+		Write-Error -Message "The URI appears to be malformed. Check if you passed all the required parameters, look for double forward slashes in the Uri: $($hshOutput.Uri)"
+	}
+	Else {
+		# Add the method if it is not there
+		If (-not $hshOutput.ContainsKey('Method')) {
+			Write-Verbose -Message "REST parameters did not contain Method, which means it must just be GET, add that."
+			$hshOutput.Add('Method', 'GET')
+		}
+
+		# Remove property subset if this was not specified
+		If (($hshOutput.ContainsKey('PropertyToReturn')) -and (!($usePropertyToReturn))) {
+			Write-Verbose -Message "REST parameters contains a PropertyToReturn value, but UsePropertyToReturn was not specified so it will be removed."
+			$hshOutput.Remove('PropertyToReturn')
+		}
+		Write-Verbose -Message "URI: $($hshOutput.Uri)"
+		# Return the corresponding hashtable
+		$hshOutput
+	}
+}
+#endregion AzureFunctions
+
+# Authenticate to Azure tenant
+If ($azSPCredentials = Get-AzSPStoredCredentials -system 'Azure' -tenantId $AzTenantId ) {
+	# Sign in to Azure with a Service Principal with Contributor Role at Subscription level and retrieve the bearer token
+	Write-Verbose -Message "Authenticating to tenant $($azSPCredentials.tenantID) as $($azSPCredentials.spCreds.Username)"
+	if ( -Not ( $azBearerToken = Get-AzBearerToken -SPCredentials $azSPCredentials.spCreds -TenantID $azSPCredentials.tenantID ) ) {
+		Throw "Failed to get Azure bearer token"
+	}
 }
 
-function Set-WVDSessionHostDrainMode () {
-    [CmdletBinding()]
-    Param(
-        [Parameter(
-            Position=0, 
-            Mandatory=$true, 
-            HelpMessage='Enter the Session Host Name'
-        )]
-        [string] $SessionHostName,
-    
-        [Parameter(
-            Position=1, 
-            Mandatory=$false, 
-            HelpMessage='Enter the Host Pool name'
-        )]
-        [string] $HostPoolName,
-
-        [Parameter(
-            Position=2, 
-            Mandatory=$false, 
-            HelpMessage='Enter the Resource Group name'
-        )]
-        [string] $ResourceGroupName,
-
-        [Parameter(
-            Position=2, 
-            Mandatory=$false, 
-            HelpMessage='Enter the Drain Modee'
-        )]
-        [ValidateSet("ON","OFF")]
-        [string] $DrainMode
-    )
-
-    # Translate Drain Mode to boolean value
-    $boolDrainMode = $false
-    If ($DrainMode -eq "OFF")
-    {
-        $boolDrainMode = $true
-    }
-
-    #Update the WVD Session Host Drain Mode (AllowNewSession parameter)
-    try
-    {
-        Update-AzWvdSessionHost -HostPoolName $HostPoolName -ResourceGroupName $ResourceGroupName -Name $SessionHostName -AllowNewSession:$boolDrainMode | Out-Null
-
-    }
-    catch
-    {
-        Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-        Exit
-    }
+# Get the hostpools by subscription and resource groups
+try {
+	Write-Verbose -Message "Retrieving host pools..."
+	$hshRESTParams = New-AVDRestParameters -type ListHostpoolsByResourceGroup -Subscription $AzSubscription -ResourceGroup $AzResourceGroup -UsePropertyToReturn
+	$objHostPools = Invoke-AzureRestMethod -BearerToken $azBearerToken @hshRESTParams
+}
+catch {
+	[string]$strMessage = ($_.errordetails.message | ConvertFrom-Json).error.message
+	[int]$intCode = ($_.errordetails.message | ConvertFrom-Json).error.code
+	Switch ($intCode) {
+		404 { Throw "The host pools could not be found.`nPlease ensure you are running this script on an AVD SessionHost.`n$strMessage" }
+		default { Throw "There was an unexpected error while trying to retrieve the host pools.`nPlease ensure you are running this script on an AVD SessionHost.`n$strMessage" }
+	}
 }
 
-function Set-WVDHostpoolMaxSessionLimit () {
-    [CmdletBinding()]
-    Param(
-        [Parameter(
-            Position=0, 
-            Mandatory=$true, 
-            HelpMessage='Enter the Hostpool Name'
-        )]
-        [string] $HostpoolName,
-    
-        [Parameter(
-            Position=1, 
-            Mandatory=$true, 
-            HelpMessage='Enter the Resource Group name'
-        )]
-        [string] $ResourceGroupName,
-
-        [Parameter(
-            Position=2, 
-            Mandatory=$false, 
-            HelpMessage='Enter the max session limit'
-        )]
-        [int] $MaxSessionLimit
-    )
-
-    #Update the WVD Hostpool Max Session Limit (AllowNewSession parameter)
-    try
-    {
-        Update-AzWvdHostPool -Name $HostPoolName -ResourceGroupName $ResourceGroupName -MaxSessionLimit $MaxSessionLimit | Out-Null
-    }
-    catch
-    {
-        Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-        Exit
-    }
+# Go through the hostpools to find the one with the SessionHost
+Foreach ($pool in $objHostPools) {
+	# The name has to match
+	$pool.properties.vmTemplate = $pool.properties.vmTemplate | ConvertFrom-Json
+	If ($pool.properties.vmTemplate.namePrefix -eq $MachineName.Substring(0, $MachineName.LastIndexOf('-'))) {
+		Write-Verbose -Message "Pool namePrefix matches machine name, looks for the SessionHost in that pool."
+		# Get the session hosts in pool and see if the VM is there
+		$hshRESTParams = New-AVDRestParameters -type ListSessionHostsByHostPool -Subscription $AzSubscription -ResourceGroup $AzResourceGroup -HostPool $pool.name -UsePropertyToReturn
+		$objSessionHosts = Invoke-AzureRestMethod -BearerToken $azBearerToken @hshRESTParams 
+		
+		# Check the machine we're looking for is actually in there.
+		Foreach ($SessionHost in $objSessionHosts) {
+			If ($SessionHost.properties.virtualMachineId -contains $AzVmId) {
+				# SessionHost found, this is the right pool, output the details
+				Write-Verbose -Message "SessionHost found in $($pool.name), this IS the hostpool we are looking for."
+				# Send message to the user
+				Write-Verbose -Message "Send message to user"
+				$hshRESTParams = New-AVDRestParameters -Type SendUserMessage -Subscription $AzSubscription -ResourceGroup $AzResourceGroup -SessionID $AzSessionId -HostPool $pool.name -SessionHost $SessionHost.name.split('/')[-1] -MessageBody $Message -MessageTitle $Title
+				try {
+					Invoke-AzureRestMethod -BearerToken $azBearerToken @hshRESTParams
+					Write-Output -InputObject "Message:`n`'$Message`'`nsent to user."
+					Exit 0
+				}
+				catch {
+					Write-Output -InputObject "There was a problem sending the message:`n$_"
+					Exit 1
+				}
+			}
+		}
+		Else {
+			Write-Verbose -Message "$MachineName not found in hostpool $($pool.name)"
+		}
+	}
 }
 
-function Set-WVDHostpoolLoadBalancerType () {
-    [CmdletBinding()]
-    Param(
-        [Parameter(
-            Position=0, 
-            Mandatory=$true, 
-            HelpMessage='Enter the Hostpool Name'
-        )]
-        [string] $HostpoolName,
-    
-        [Parameter(
-            Position=1, 
-            Mandatory=$true, 
-            HelpMessage='Enter the Resource Group name'
-        )]
-        [string] $ResourceGroupName,
+# If the script got here, looks like the host pool could not be found.
+Write-Output -InputObject "Pool containing SessionHost $MachineName could not be found."
+Exit 1
 
-        [Parameter(
-            Position=2, 
-            Mandatory=$false, 
-            HelpMessage='Enter the Load Balancer Type'
-        )]
-        [ValidateSet("BreadthFirst","DepthFirst")]
-        [string] $LoadBalancerType
-    )
-
-    #Update the WVD Hostpool LoadBalancerType
-    try
-    {
-        Update-AzWvdHostPool -Name $HostPoolName -ResourceGroupName $ResourceGroupName -LoadBalancerType $LoadBalancerType | Out-Null
-    }
-    catch
-    {
-        Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-        Exit
-    }
-}
-
-# dot sourcing ControlUp Script Action settings
-#region ControlUp Script Standards - version 0.2
-    #Requires -Version 5.1
-
-    # Configure a larger output width for the ControlUp PowerShell console
-    [int]$outputWidth = 400
-    # Altering the size of the PS Buffer
-    $PSWindow = (Get-Host).UI.RawUI
-    $WideDimensions = $PSWindow.BufferSize
-    $WideDimensions.Width = $outputWidth
-    $PSWindow.BufferSize = $WideDimensions
-
-    # Ensure Debug information is shown, without the confirmation question after each Write-Debug
-    If ($PSBoundParameters['Debug']) {$DebugPreference = "Continue"}
-    If ($PSBoundParameters['Verbose']) {$VerbosePreference = "Continue"}
-    $ErrorActionPreference = "Stop"
-
-    # ControlUp Monitor
-    $rootFolderCUMonitor = "C:\Program Files\Smart-X\ControlUpMonitor"
-    $psModuleDLLCUMonitorUser = "ControlUp.PowerShell.User.dll"
-
-    #ControlUp Console
-    $rootFolderCUConsole = "WVD-SpringRelease"
-#endregion
-
-function Load-CUUserPSModule() {
-    [CmdletBinding()]
-    Param(
-        [Parameter(
-            Position=0, 
-            Mandatory=$true, 
-            HelpMessage='Enter the ControlUp Monitor root folder'
-        )]
-        [ValidateNotNullOrEmpty()]
-        [string] $CUMonitorRootFolder, 
-
-        [Parameter(
-            Position=1, 
-            Mandatory=$true, 
-            HelpMessage='Enter the ControlUp Monitor PowerShell Module DLL to be imported'
-        )]
-        [ValidateNotNullOrEmpty()]
-        [string] $PSModuleDLL
-    )
-    
-    # Load the ControlUp User PowerShell Module
-    If (Test-Path $CUMonitorRootFolder)
-    {
-        # Retrieve the latest version of the CU Monitor
-        $cuMonitorPath = (Get-ChildItem -Path $CUMonitorRootFolder -Directory -Depth 1 | Sort Name -Descending)[0].FullName
-        try
-        {
-            # Import PowerShell Module
-            Import-Module "$cuMonitorPath\$PSModuleDLL" -Force
-        }
-        catch
-        {
-            Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-            Exit
-        }
-    }
-    Else
-    {
-        Write-Error "CU Monitor installation folder ($($CUMonitorRootFolder)) not found"
-        Exit
-    }
-}
-
-
-#------------------------#
-# Script Action Workflow #
-#------------------------#
-Write-Host ""
-
-#region Retrieve input parameters
-#HUser = $args[0]
-If ([string]::IsNullOrEmpty($User))
-{
-    $User = ""
-}
-#endregion
-
-## Check if the required PowerShell Modules are installed and can be imported
-Invoke-CheckInstallAndImportPSModulePrereq -ModuleName "Az.Accounts" #-Verbose
-Invoke-CheckInstallAndImportPSModulePrereq -ModuleName "Az.DesktopVirtualization" #-Verbose
-# NO need anymore to import the WVD 2019 Fall Release PowerShell Module
-# Invoke-CheckInstallAndImportPSModulePrereq -ModuleName "Microsoft.RDInfra.RDPowerShell" -Verbose
-
-## Testing Script output
-If ($azSPCredentials = Get-AzSPStoredCredentials)
-{
-    # Sign in to Azure with a Service Principal with Contributor Role at Subscription level
-    try
-    {
-        $azSPSession = Connect-AzAccount -Credential $azSPCredentials.spCreds -Tenant $($azSPCredentials.tenantID).ToString() -ServicePrincipal -WarningAction SilentlyContinue
-    }
-    catch
-    {
-        Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-        Exit
-    }
-
-    # Retrieve the Subscription information for the Service Principal (that is logged on)
-    $azSubscription = Get-AzSubscription
-
-    try 
-    {
-        #Retrieve the WVD hostPool information for this Subscription
-        [array]$psobjectCollection = Get-AzWvdHostPool -SubscriptionId $($azSubscription.Id.ToString()) | 
-        ForEach-Object {
-            $wvdHostPool = $_
-            If ($wvdHostPool.Name -like "*")
-            {
-                # Retrieve the User Session information for each HostPool
-                Get-AzWvdUserSession -HostPoolName $wvdHostpool.Name -ResourceGroupName $($wvdHostPool.Id.Split("/")[4]) | 
-                ForEach-Object {
-                    $wvdUserSession = $_
-                    If ($wvdUserSession.ActiveDirectoryUserName -like "*$User*")
-                    {
-                        # retrieve User Sessions per HostPool and SessionHost
-                        $wvdUserSession | Select @{Name='HostPoolName'; Expression={$_.Name.Split("/")[0]}}, 
-                            @{Name='SessionHostName'; Expression={$_.Name.Split("/")[1]}}, 
-                            @{Name='UserSessionID'; Expression={$_.Name.Split("/")[2]}}, 
-                            ActiveDirectoryUserName, 
-                            ApplicationType,
-                            CreateTime,
-                            Id,
-                            Name,
-                            SessionState, 
-                            Type,
-                            UserPrincipalName, 
-                            @{Name='HostpoolResourceGroup'; Expression={$_.Id.Split("/")[4]}},
-                            @{Name='Message'; Expression={$Message}} 
-
-                        # Send Message to selected user sessions!
-                        #debug: Write-Host "Sending message $Message to user $($wvdUserSession.ActiveDirectoryUserName)" -ForegroundColor Yellow
-                        try 
-                        {
-                            Send-AzWvdUserSessionMessage -HostPoolName $($wvdUserSession.Name.Split("/")[0]) -SessionHostName $($wvdUserSession.Name.Split("/")[1]) -ResourceGroupName $($wvdUserSession.Id.Split("/")[4]) -UserSessionId $($wvdUserSession.Name.Split("/")[2]) -MessageTitle "WVD Admin message" -MessageBody $Message
-                        }
-                        catch
-                        {
-                            Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-                            Break
-                        }
-                    } 
-                }
-            }
-        }
-    }
-    catch
-    {
-        Write-Error ("A [" + $_.Exception.GetType().FullName + "] ERROR occurred. " + $_.Exception.Message)
-        Exit
-    }
-    # Return the SessionHost information (limited details with Select)
-    Write-Host "WVD 2020 Spring Release User Session Message: " -ForegroundColor Yellow
-    if ($psobjectCollection.Count -gt 0)
-    {
-        $psobjectCollection | Sort-Object HostPoolName, SessionHostName | Select @{Name='HostPool'; Expression={$_.HostPoolName}}, @{Name='SessionHost'; Expression={$_.SessionHostName.Split(".")[0]}}, @{Name='SessionID'; Expression={$_.UserSessionID}}, @{Name='User'; Expression={$_.ActiveDirectoryUserName.Split("\")[1]}}, @{Name='State'; Expression={$_.SessionState}}, Message | Format-Table -AutoSize
-#        $psobjectCollection | Sort-Object HostPoolName, SessionHostName | Select *
-    }
-    else 
-    {
-        Write-Warning "No User Session information could be retrieved"
-    }
-}
-else 
-{
-    Write-Output ""
-    Write-Warning "No Azure Credentials could be retrieved from the stored credentials file for this user."
-    Write-Output ""
-}
-
-# Disconnect the Azure Session
-Disconnect-AzAccount | Out-Null

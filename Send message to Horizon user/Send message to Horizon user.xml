@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0982f2b6-1c0a-464f-b00c-0fa5056b315b</SBAId>
+    <RootSBAId>0dd1a4f5-b9c2-406c-bd55-6f2bab8f6e0e</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637309299305581664</SQN>
+    <Name>Send message to Horizon user</Name>
+    <Description>Sends messages to the selected Horizon user/s. This script can be used to send messages to a single user session using the Horizon SOAP API's. It can also be used as an automated action with a fixed message and severity level. For the severity level these are allowed: INFO,WARNING, ERROR
+
+This script requires VMWare PowerCLI to be installed on the machine running the script.
+PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers' Or by using the 'Install VMware PowerCLI' script.
+If you get TLS/SSL errors use this command Set-PowerCLIConfiguration -InvalidCertificateAction ignore
+   or Set-PowerCLIConfiguration -InvalidCertificateAction warn
+To get rid of the CEIP warning use Set-PowerCLIConfiguration -ParticipateInCeip $true 
+   or Set-PowerCLIConfiguration -ParticipateInCeip $false
+Credentials can be set using the 'Create credentials for Horizon View scripts' script.</Description>
+    <Category />
+    <Version>1.2.3</Version>
+    <DateCreated>2020-07-07T10:52:51.263</DateCreated>
+    <DateModified>2020-07-21T09:27:44.78</DateModified>
+    <DatePublished>2020-07-21T11:58:53.46</DatePublished>
+    <LastEditorName>Wouter Kursten</LastEditorName>
+    <CreatorName>Wouter Kursten</CreatorName>
+    <Status>4</Status>
+    <CheckSum>j3MSa3etsaRmJNLRjoknQjH4gWY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Wouter Kursten</Author>
+      <Tags>horizon, vdi, message</Tags>
+      <Credits>Credits to: wouter.kursten
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>72</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>acf065c8-c587-4319-8023-a6cf3e1f8d71</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>acf065c8-c587-4319-8023-a6cf3e1f8d71</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>hzPoolName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>4376a79b-d076-4a4c-9dff-e677e32afb58</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4376a79b-d076-4a4c-9dff-e677e32afb58</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message</Name>
+                  <DefaultValue>This is an example message</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>32668dc0-9d14-4616-bb0a-36b00cf06176</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>32668dc0-9d14-4616-bb0a-36b00cf06176</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HzPrimaryConnectionServer</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>c0648528-c228-497c-8cc8-8792cc1e5646</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c0648528-c228-497c-8cc8-8792cc1e5646</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message severity level</Name>
+                  <DefaultValue>INFO</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>WARNING|ERROR|INFO</ValidationString>
+                  <ValidationError>This requires either WARNING, ERRO or INFO all capitalized.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>970e28bb-ec8a-4f58-ba16-13d36d1b94fe</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>970e28bb-ec8a-4f58-ba16-13d36d1b94fe</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer>The selected machine is required to have VMware PowerCLI Installed and a Horizon Credentials file created for the account that is used. This can be done using the Create credentials for Horizon View and Install PowerCLI SBA's.</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>hKl/93M/3Rn+D3trbRK1ctol4vA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

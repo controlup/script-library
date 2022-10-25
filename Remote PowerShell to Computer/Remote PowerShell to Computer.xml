@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>60806855-7260-44b0-beb8-aa1dace93f88</SBAId>
+    <RootSBAId>3fafc7f0-9270-4fce-ae0a-c7c749da54db</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636070375609772000</SQN>
+    <Name>Remote PowerShell to Computer</Name>
+    <Description>Opens a remote PowerShell session to the selceted computer(s) or to the computer(s) hosting the selected process(es) or user session(s). WinRM and PowerShell remoting already needs to be configured on the target computers. You can do that with ControlUp using the "Enable PSRemoting" SBA.</Description>
+    <Category />
+    <Version>1.11.12</Version>
+    <DateCreated>2015-08-20T14:50:08.657</DateCreated>
+    <DateModified>2016-08-17T13:27:04.447</DateModified>
+    <DatePublished>2015-08-20T14:50:08.657</DatePublished>
+    <LastEditorName>Eugene Kalayev</LastEditorName>
+    <CreatorName>Eugene Kalayev</CreatorName>
+    <Status>4</Status>
+    <CheckSum>obuvTD1VKItqS2ASB0f7HAEWsss=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Eugene Kalayev</Author>
+      <Tags>Remote, PowerShell, PSRemote</Tags>
+      <Credits>Credits to: Eugene Kalayev
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ek@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>664</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>69888</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>JAB0AGEAcgBnAGUAdAAgAD0AIAAkAGEAcgBnAHMAWwAwAF0ADQAKACQAYwBtAGQAcwAgAD0AIAAiAC0ATgBvAGUAeABpAHQAIgAsACIALQBjAG8AbQBtAGEAbgBkACAAZQBuAHQAZQByAC0AcABzAHMAZQBzAHMAaQBvAG4AIAAtAGMAbwBtAHAAdQB0AGUAcgBuAGEAbQBlACAAJAB0AGEAcgBnAGUAdAAiAA0ACgBTAHQAYQByAHQALQBQAHIAbwBjAGUAcwBzACAAcABvAHcAZQByAHMAaABlAGwAbAAuAGUAeABlACAALQBBAHIAZwB1AG0AZQBuAHQATABpAHMAdAAgACQAYwBtAGQAcwA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>4defa4b3-1a9e-4f7f-a013-de03afccd2df</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4defa4b3-1a9e-4f7f-a013-de03afccd2df</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>vQGa8ix3edx28psxH3hyE6Ey7QI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>995f81c2-9e83-4ef2-b381-16088e869546</SBAId>
+    <RootSBAId>39a03be6-9613-4148-89f2-b6085d2d2be2</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637575584291220403</SQN>
+    <Name>Clear Old SCCM Cache</Name>
+    <Description>Clears all content older than 7 days</Description>
+    <Category />
+    <Version>1.1.7</Version>
+    <DateCreated>2018-11-28T08:48:56.677</DateCreated>
+    <DateModified>2021-04-20T12:48:06.677</DateModified>
+    <DatePublished>2021-04-20T12:49:13.817</DatePublished>
+    <LastEditorName>RMonaghan</LastEditorName>
+    <CreatorName>Rory.Monaghan</CreatorName>
+    <Status>4</Status>
+    <CheckSum>W6esKq2Lu8JzJEfxkJWeWRem8pk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>RMonaghan</Author>
+      <Tags />
+      <Credits>Credits to: Rory.Monaghan
+Original: Unknown
+Taken from: Technet</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Rory@rorymon.com</ContactEmail>
+      <Notes />
+      <DownloadCount>55</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAJVV227TQBCd1yLxD1bLQyq17g2pUgWIKg3IommrJhUgISEndlpDEgfbJZTSf+fM2V3HThwJZNnend2dOWdu+0q25Lk8E082xJeefJYLuZQrjAK8ZqX+nOLNJZGJzGQsMWdDySCZSYFZIXcScjTkeoi1HLMQszH+CdZinFZZCkmEWVaem2J0jDfC+IF7Esp0VW31pI2ni9E97EW0FNNWiFf3+ES9gaeK3pcz6fD0NZhdSR/fS3BtYtijzSH1djFWdimwpDKyvAzSW+yILLbEsgiBasb9Bo+upvh+pM4I4zlZ3VTQ57JTYai+/c2R2lvIZ9xtOKoGxeD8owhjzg0i1XELeQINCX0zxdkxPOpjtU+8ufWaeneAc02eMEzHjKPyTfh1nCY8HdIPinZKlDHjrfoLnirsziGtTi36OfNA/TNmLpmsiBh5PfudLGY8Fy+hruebkUXUa1i7qKS1HKxnpssWt29ED8Y2r5p8ofGfcMdP+uQe34GtgGbMVS31XNQa6zMfmyz1y0xwPPPSsyOgyIBDM82zHIa0bHiox3Ngyyw3o0lnPyBNrLwN+13GbCDfqKHg2V82bjk9HjD/Eq5p5prITTGq796xUo/MC0hNLmiMTc0PLJoQSBXhuho9h80L+dDolXdkrrmUWhaaTc4fYcWuro7KrpLKSaM+99xhTwHvnsgenjkfHzxS5m7GHqU5YWQT6vp31D2yfpBFH0uhTePWjKqOprB1UpCNQ7BHVBm0TohyFVFHPqFPd9HnzjFustOGhS/s82/w9ylxleJ6bLvSUzUHD2pR03+71uEXvflmTW/+3+5v8mQLGB3HLTweWIXMPJMNke1zpu4P5AjcjvB48h5o+vgfyj68ti8v8T3EDk/ervHhC2ZPbnubJ6+Z2zHisLtULbs2Gp5sgm+AeyVmj9DaM/XfJO2iQ2U4YWwtPBPYXDYW6yh88Ihhs72yuyXbJfKE1dpaOrsN2eOKNVc5q5o7jOjEdu6cFjRf/tgeNucutbDsj0dY+MpqMLG5Lqswtrdpn50+pu/GPNPi3VFg7rJlGxpOMYtwX5scaGH1GPKnCoqR7QHujl1lGJQMzzAb00q8lmfLYl+3HkCL8fST/XrUmpPNo/VMZrN7FxpSm58txPq61n2jSv+9rHnwrOyxF7bHdsoe63NW7e2LamvzDnV3rbkPA+4tyts7gobNGgd9/wJBZX4H/gkAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>uyO5mQWa0OVrwM8uz1YcLHerkXY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

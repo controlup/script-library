@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6607026b-263a-4415-bb26-f7b0d3b1218b</SBAId>
+    <RootSBAId>74ccae06-8e2f-45c4-84a7-11b89b37f193</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789810143860000</SQN>
+    <Name>Show RDP connection properties</Name>
+    <Description>This SBA will check the event logs and report the negotiated RDP version.</Description>
+    <Category />
+    <Version>1.5.13</Version>
+    <DateCreated>2018-11-22T00:15:04.27</DateCreated>
+    <DateModified>2018-11-27T02:23:26.553</DateModified>
+    <DatePublished>2018-11-22T00:15:04.27</DatePublished>
+    <LastEditorName>mc</LastEditorName>
+    <CreatorName>mc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>A4W/VbB4ab0Om70QRkRPp5/JNpM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAIAAADZrBkAAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAArNJREFUOE+dkd1LU3EYx39IGBSIpoNKTFAiSbor6CaCLvoHughqI5hdBCbRRRS+IHTh5g5zh+giVLLjPHmY07W1dTZfzs7cXL7kzl7OcsrStXAvurRZ0mR5fv2ORzHDm/rwXJyX5/Oc5/y+AP4XopZZTX3kfXs1Gw6JxQenQ6gCU8HAZMD/PsB55+Z4yUGIGuomiFdS6XsJktT395Mmk9FsNtmsZrvdOjryLsBN2Om3koPY1wAYBEUeULIAZBv1asjw0OCFrz2wh4VaU97vm0AjJAexrxUUU6DMAar94FT85v1cLAEjMRhdhvFVOBne9vs8FotJchCSNqvXE9UXqELZACgfB6fDZ6+tWF3C2DS0T0GWgwPOX5zPbRoySg5C1MK8r6+v98p1Y3EFAUoGwUmmqIbDOr9R1p8vh7b6bcIzMsf5xo1Gg+QgdrTQB4OBunSVrDzfU3BCD2SWo+Vs3aOlpxq64aFarqi7JVe2tjbjuE4QhAPaoNFQca6rsrb7SGkXKKUKZJYnLd04jnu93rUd0AW6pShKMkUNRYSOG4A2UIgBoAIAq6lpQ03ftzbEyRAKUAgkZyyBAZ1Ox7IseiJqYqzBqZB/L1m/t6WlEY3n01z6R0IQtrnETIX2yAPbHdbFajSaXS0eX/R4GJdrlBlzjAzTKF+FQoEWaxprqH1elsguV+HHLndWrayn4/G4Uqnc1f4kl8tFo1G5XJ7JZPL5/MUXZ+6+ubG5uVmNH683315cWjxES6VSkUgkzM82NzW63e7HjnuVHYWx1U/ZbHZhee5zcslO0+3t7ajzgOZ0OlDRtKVDi2k7tDOxieAX3/r6WuZrJp1eSSaTKpWKYRjU+feSEuiUSZLEMGx42IF2np+ft9lsKlUbQRD7ARwKeu10OtFK6GcQarUafedA3P8MhL8BFcHrtkhK9UoAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>mc</Author>
+      <Tags>RDP,RDS</Tags>
+      <Credits>Credits to: mc
+       https://dille.name/blog/2014/11/07/displaying-rds-event-log-messages-with-powershell/
+       https://4sysops.com/archives/search-the-event-log-with-the-get-winevent-powershell-cmdlet</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes />
+      <DownloadCount>98</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANVWXU/UQBS9zyb+h2bhAaPdFUOiEtAgEMIDkbgmPBijpdv90O62bguIwn/33DN3ti3UhRgfNJPZnU7v57nnTmdLViSQd7Inx/gvJMEsZCKZzPAcYsZcz/AmlnLxJpc5Vjl259xVvYBjRV7JQ3nAuSr7eK+Sc9mp6R/jOZEhtRM8x/gNZBuzI33IpNwt8X8pu9RQzZmcYb9jfupjxSJK5Nw0A9p2ngMZQLuARCoRLProVGsEOZUuZcwY5pDNkXeJmHJIuCyauGxjJ4LkCDsf5Kl8NGu35TqGbCjvzd5Lxq+e9+U7rEwZVWJ+nPf+LSu7rTW46U9rpRhEkElgqdPA5w3QU2QHtWwLrOZEdsTdzDig2cWQ8XtDytQ1fTXPMUtgeog8K1wPbqDaJq1WXXVUKqJ8Ow8dNruU1vxSSrt3h4hqW9bMYygnjHS/xoMj7MRkQoE5rEkN8HyB3RB+E1QiI2579P2VmbtazBl3zH2V1Rq5aBLUtS89eWudUMUVIcpAPjP223z14wrzhBiprRB2TuWLVVm777jRZZfMxiETkbkqc0SvrlrtDArkkfG0u7RuE6CzBhtV53TZ/WeGZGg+12EvkJ9L8vqzoSzVGKpentB7YafQFCMyHlYxKtO7HE2sT8jskriOWf2S54vW+ht7welWrEshpX0wIxMcP8/or3PDdoLenVDmXxiuuyN2t+9ljbxc4On70Gf6Qh4vzbeZ7fWCIf9vl70GX1fl0286QLmtrAiWnjPX9/T1Nzu6g/+U31eHc9bAwNW6gJ2CqE5Z60vKXLXUZBOjWRXdUVb0uTqg5RyeVbOAjab3AvzIMTJGr315zmj8SXMF9OrynllNPf9tuhvLvmncB8cJezk0ZsWMYbDAyNdmaF0xkCet2O+wbzLeQn7Yd9nPLXZaAC7MeJuoTpBTRLDZks0YtkpIKs49jAF7VL/3XbJ3ilUP2q4Te/IMp/S6bGC1jtHD03PTqm4vLqOQJ31B3vouDM1OSLtVXip1QbaPscpZeVe1MVmewsfdsW8YzzLude1E7i3uChPGUWCnfoMI7expj7OKykuN7IS5YJ51nba4Q/iYAoeUWj27fbj75y9VuHhH2goAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>9266a70d-a83d-422e-8ffd-28ee16614639</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9266a70d-a83d-422e-8ffd-28ee16614639</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sSessionName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>mm5IkyYuOHbPfi9+Y/HCTmgGTGk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

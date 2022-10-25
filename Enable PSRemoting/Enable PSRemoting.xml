@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e63e9f5a-0f91-4422-b104-10de9e4ab84a</SBAId>
+    <RootSBAId>464775ba-a567-418c-aab3-35ac84611c53</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636070371012920000</SQN>
+    <Name>Enable PSRemoting</Name>
+    <Description>Allows the invoke-command via winrm
+Permet le invoke-command via winrm
+</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2014-06-26T13:44:31.04</DateCreated>
+    <DateModified>2014-06-26T13:44:31.04</DateModified>
+    <DatePublished>2014-06-26T13:44:31.04</DatePublished>
+    <LastEditorName>Fabien Burgue</LastEditorName>
+    <CreatorName>Fabien Burgue</CreatorName>
+    <Status>4</Status>
+    <CheckSum>zFGKbznO5O3fk8rMfMX1TYOB/QQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Fabien Burgue</Author>
+      <Tags />
+      <Credits>Credits to: bf1988
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>248</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>RQBuAGEAYgBsAGUALQBQAFMAUgBlAG0AbwB0AGkAbgBnACAALQBGAG8AcgBjAGUA</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>0y/cVxIPk09napIA1nuFQbRctAI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

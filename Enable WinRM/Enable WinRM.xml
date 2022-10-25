@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>5c750d44-39a2-4f05-8270-d05066a20a53</SBAId>
+    <RootSBAId>89666207-954e-4af8-bdbf-f2887dc1165f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635948433863756000</SQN>
+    <Name>Enable WinRM</Name>
+    <Description>Enables WinRM quietly if the conditions are met.</Description>
+    <Category />
+    <Version>2.1.3</Version>
+    <DateCreated>2015-12-08T07:55:45.87</DateCreated>
+    <DateModified>2016-03-02T21:28:02.9</DateModified>
+    <DatePublished>2015-12-08T07:55:45.87</DatePublished>
+    <LastEditorName>ApacheOEM</LastEditorName>
+    <CreatorName>christopher.schram</CreatorName>
+    <Status>4</Status>
+    <CheckSum>GIek37wKnLHlQJRzw64K2ysq55U=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ApacheOEM</Author>
+      <Tags>WinRM, Windows Remote Management</Tags>
+      <Credits>Credits to: christopher.schrameyer
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>rick.lambeth@lfg.com</ContactEmail>
+      <Notes>I just added the -q parameter so it would complete the function of enabling WinRM if conditions met.  Rick Lambeth</Notes>
+      <DownloadCount>301</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>YwA6AFwAdwBpAG4AZABvAHcAcwBcAHMAeQBzAHQAZQBtADMAMgBcAHcAaQBuAHIAbQAgAHEAdQBpAGMAawBjAG8AbgBmAGkAZwAgAC0AcQA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>gam/oGvMTfYTk3xGzTNRcnuf9LU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

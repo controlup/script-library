@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d7c1d7a7-9fa8-48bf-a789-015e203c6d22</SBAId>
+    <RootSBAId>f3f3020c-81c8-4cf8-9d71-af1926f275fa</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637084950350824342</SQN>
+    <Name>Kill Process by Force (PSKill)</Name>
+    <Description>Downloads SysInternals tool, pskill.exe and execute it against a process.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2018-07-12T12:53:23.76</DateCreated>
+    <DateModified>2018-07-12T12:53:23.76</DateModified>
+    <DatePublished>2018-07-12T12:53:23.76</DatePublished>
+    <LastEditorName />
+    <CreatorName>Niron Koren</CreatorName>
+    <Status>4</Status>
+    <CheckSum>/5o0QgA2XRF53myDi2V/HFXj7E4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Niron Koren</Author>
+      <Tags />
+      <Credits />
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>342</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAJVUy0rDQBQ9a8F/CKWLCNa6FlzU+kBQLD5wUV3ENGowaTQZX4j/7rkniW3TWirDTDL3ec69N7nHK8YI4RAj45uHC75neEYHA+R8CxGh4NrDJw55zyXx8IV1rGGIPlKMkFDmaBMzxkjnA3xs4FZWAwT0C2jpV16WJa/sbtHmPSOSOvYudwuPtHFEUmAHXa6E9m/Ub1HyyW3ejvecz4DagpqQcVLamtcTLRKuLdp8cLewqewlgqKBYF88nSTBVD1KLG1qx8y+g0sc4JSMblbIMeEdVUh9+gaqUaA652Syy+iG5ZUWdcWGFTtDNtuHYyI1i43fPE5R6o541ToW3owII/bymucdznm+KI8x9Si/Ug28uQ50cMabY8dj9db7s0KW81tnKGnIvjWxXFJmHN5Vy74yJayBR/9MSEbSjinNGMU0i6rr4V5x0jnErSkctm2+rPZubo6NW81qIMSPS9iZdY/+D8yUagYcTqgr6+cv7M6mWHYZJZT8Wb03xgHlk75N0MbkZdF8HGlSOqpRylXOisVbPG2G74AIcs1Sr/EllywNc8IJ6UteMixnzbxtIoz/WAgTSQ3TV/Wse7jqf6Gpt4pY/EBVLDjZ29WMl/wjfbnR3Mz8t4PLKrS8g7PIVuneN34APxR3gDgFAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>f78a24a3-0820-49a6-9b7a-a4532836a644</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f78a24a3-0820-49a6-9b7a-a4532836a644</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>VuLt2R2DatTtQl6XWdjbBz5ooNs=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

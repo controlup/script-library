@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>41463312-5461-4261-b5be-82c8d75e3d92</SBAId>
+    <RootSBAId>209462f6-cb0e-4ffb-9875-a3dca2425977</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637005076292102996</SQN>
+    <Name>Trim Process Working Sets</Name>
+    <Description>Completely empty or trim process working sets to a specific size in order to make more memory available for other processes/users. The memory is paged oiut and pages of this will be paged back in if the process needs it.
+
+WARNING. If too many processes are trimmed too frequently, performance can suffer due to hard page faults so use with caution</Description>
+    <Category />
+    <Version>1.6.9</Version>
+    <DateCreated>2019-07-25T20:10:22.943</DateCreated>
+    <DateModified>2019-08-04T09:21:51.27</DateModified>
+    <DatePublished>2019-07-25T20:10:22.943</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>gDi/FTpmbkM6yDlUPVUBmDwNSy0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags />
+      <Credits>Credits to: Guy Leech
+Original code by: Guy Leech
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>581</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>63dabad8-8b05-4d8a-953b-b7a664741d21</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>63dabad8-8b05-4d8a-953b-b7a664741d21</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Working Set Size (MB)</Name>
+                  <DefaultValue>0</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Integer values only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>41c719c5-e343-4389-9022-79b4d8f9d670</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>41c719c5-e343-4389-9022-79b4d8f9d670</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Exclude processes</Name>
+                  <DefaultValue>cuagent/winlogon/controlupconsole/powershell_ise</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>64dc22da-18ba-4f8b-9f7d-f50398fedd2c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>64dc22da-18ba-4f8b-9f7d-f50398fedd2c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>v6GZullw8vjMFIBJkyPKCu2rwj8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

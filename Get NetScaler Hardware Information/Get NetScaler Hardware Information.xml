@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e35ec3df-3822-4a40-891e-98142d15a56f</SBAId>
+    <RootSBAId>04f0e0c7-0d9c-4e55-a79d-d4dd569f3ef3</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636977527320349707</SQN>
+    <Name>Get NetScaler Hardware Information</Name>
+    <Description />
+    <Category />
+    <Version>3.1.9</Version>
+    <DateCreated>2018-11-30T17:11:34.043</DateCreated>
+    <DateModified>2019-07-03T10:01:58.207</DateModified>
+    <DatePublished>2018-11-30T17:11:34.043</DatePublished>
+    <LastEditorName>ebarthel</LastEditorName>
+    <CreatorName>mc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>evBdX1Ti1ROOpL8ezthOQ6YvdCU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACgAAAAlCAYAAAAwYKuzAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvQAADr0BR/uQrQAABRhJREFUWEftlmtMm1UYxyfXDTUajfvCJTqDMYtZYmKyGOOiHwSdiZrptxmdMX7ytugHYETUhYljl2RzYwlDIJohZlc2x6Ut5VJWrnIZUBDYuJTrLIy1UFret/37P+8LtIOWDDYYJnuSf/q+7Tmnv3Oey3nWRUVFITIyEhEREYrCw8PXlNZhjdv/F1B2yZBlGbecMnIbzfixyDSjtlWVf0DCmW2TeD3NgKC4QgTGa1UlrK78AtocEr68cJVwWgTF6+6b/AIOTziwMUnjc9JqagGgyy1TLrTcsCI07rLPSaup2wBdVK/VjsLOAZyo6yFgvs9Jq6k5QIlZm1zcjkf25CM0vpCxV8QBvlysRTCTZn1cwYzE88pJAXRT+Z0jCCFYYIIOwVRgnKo5MCZL2B4NPj3dgLJeCzrGJtG5ClIAhWs/ya0niDg1VQE8vUCCCYlTC0vU4ZtLzZh2cTtiR7NaYVMAJSr25BU8t78EvzUNIrd1BB/+2Yjg2dMj4MYfdOi3TYnhHvMGXSHNAcYQ8OtLbbxB3HBRhv6bdPlskmjxTLIeDreYxXn8lJnp0y4XY9elPKu/3HvzAjTiiSQtvshrxe6LJmz9pWIGjjFJwE1egBI30Dwyjl05Rvxe260Aqlu+96YAylRMRoWXS9VTWwAoTkx2wSFJqDZb8HZ6GQ7q25V72yXubmrC6YTRPIrjVT3LVhp1oXUQY3bHYoDeUl08Sbim4XEUdQ2hc3wSB0rbkNfWD9O/VhR0DMNKuGujNmzPquIclqiEZYpJ+sKhMlxsHfAAxp70uHShtHh6nx4W3s+7/qjEjmwjMptGsLekDR/lXMG3eQ34+GwDtO19uD46gbcyq1krOc+7TC1BoinZfNiA86ahpQHaJBl/mfpxtPQf1AyOY/f5OhwtN0HXNYwjZW0YYpZfG5vAm1nVPtZYglhzNx8kIN3sSRK6OIjtTSirdwgVyJtErYFCKqB3kphu3MJX5yrZK/by7paYIsx+/m6ZtCOj5jp2nqql6rAzZxni3O8LW5Vw8QDyBF9NM6LVMoH20UmklHUwJkXRXgg4zVg09lnw2jE9ftKYmCAii2fKD5/Fu/hGFu/LkMSqILkkriPdfoKfnW2Ck4s7OEDTbVGuvgACipgQgFPsdIQJTPHkpMTclbS5GHwvqxLrEwqx9bgB204Y8BRvDk9caBGxtxg25aRWpt75MwVQ/GWKni5lDAoYD5gH8LHvtDjT0k8XiqNXXXqnJlzvZIJ1jNqRXW9GRq0ZpxoHUD80To9JSv30ZwqgsOEpJ7ak6n22+EqyEH7TvmLoeixKCIgl70QiBET2n2kZRHQK1+dmReEPYXxH/6xHenU37DLjbt68Wc0Bik66n21+/OVmfJBdhTfSRbFVYdWuRjxr2HIV4aUj5XiXIbEjuxrvLyLx+zuZVXjlWDkeTSQU54YnaxlC5dhyuFRJwrBEDZ5PLUFseoWP9ao8gO6Z7BPNgigjHTftCGND6n2KAYRU2zA1uwW0+t1i0uEhfoqxz6YakFXfp1yZfw9ZsS2jRhkTqKypjlGfPZoDnG9jdPnL3Ll3TKon6XH9ksTQid5vYOyZWUbcuDpiRUxWzbwxC+UX0MG4OcdKviG+QNmJ7+RZirR4PKkY23+twYGyLnye14wnRaWYDzVvnl9AkdkOFuTTDO4XD5XgYbpbuHyDEKGXr/x58jXGI7+AwtSbgSVCiO/3Q4sCrgV7AHi39gDwbm2NAwL/ARyViRTOr8yPAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>mc</Author>
+      <Tags>NetScaler statistics,Troubleshooting,$Name</Tags>
+      <Credits>Credits to: Marcel Calef
+Original code by: Esther Barthel, MSc - cognition IT
+Taken from: Retrieve NetScaler SSL stats</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ebarthel@virtues.it</ContactEmail>
+      <Notes>Reviewed and Approved by Esther Barthel, MSc</Notes>
+      <DownloadCount>103</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>17179869184</AllowedEntitiesEx>
+      <AtomicEntityEx>17179869184</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>fe74c84a-7801-451b-973e-71ad1d7e28c7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fe74c84a-7801-451b-973e-71ad1d7e28c7</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>ManagementIP</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>tFz/p9+ghZ3VDtwsy1oXEh4QS44=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

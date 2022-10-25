@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6e0562f1-9102-43d1-bc60-63dc17cef58b</SBAId>
+    <RootSBAId>22a19d8e-b47f-49bb-a21a-ef5489bb6832</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636898043976681835</SQN>
+    <Name>Create VM Snapshot</Name>
+    <Description>Creates a snapshot of the selected VMware virtual machine(s). Datetime will be added to the default snapshot name 'ControlUpSnapshot' if this is used. The script requires VMware PowerCLI to be installed on the computer the console runs on.</Description>
+    <Category />
+    <Version>9.18.42</Version>
+    <DateCreated>2016-12-06T16:59:17.663</DateCreated>
+    <DateModified>2019-03-31T20:36:35.427</DateModified>
+    <DatePublished>2016-12-06T16:59:17.663</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>09T23NwAI247bRx1tmp9/p+WWcY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>VMware, snapshot, PowerCLI</Tags>
+      <Credits>Credits to: Ton de Vreede
+Original code by: Ton de Vreede
+Updated by: Gal Goanis
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>85</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>446f9969-12d3-4b93-a5e6-b618a3a97a4a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>446f9969-12d3-4b93-a5e6-b618a3a97a4a</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e8e6f4da-4952-4103-b584-52943b0becf7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e8e6f4da-4952-4103-b584-52943b0becf7</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCenter server</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Vcenter server name cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8fdce6ed-6920-46c5-91d6-e0a417746f3f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8fdce6ed-6920-46c5-91d6-e0a417746f3f</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>4aaa70b8-cc4a-4f3d-a7e9-a8fd5e8d1d43</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4aaa70b8-cc4a-4f3d-a7e9-a8fd5e8d1d43</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Snapshot name</Name>
+                  <DefaultValue>ControlUpSnapshot</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\s*\S*\s*$|"[^\"]*"</ValidationString>
+                  <ValidationError>If you use spaces, put the entire name in double quotes.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6c64924b-a3a3-43f4-83e7-928906ec14e0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6c64924b-a3a3-43f4-83e7-928906ec14e0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Snapshot description</Name>
+                  <DefaultValue>"Created in ControlUp console"</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\s*\S*\s*$|"[^\"]*"</ValidationString>
+                  <ValidationError>If you use spaces, put the entire description in double quotes..</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>xCMUdxDhH0mjTJ74fINU0OG04E8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>1f66ed1f-5a58-4d66-bd56-d8e6d3ba82f4</SBAId>
+    <RootSBAId>e019a7ce-6c48-4cbe-be5f-3197b114a240</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637991112375725700</SQN>
+    <Name>Get Office 365 Details</Name>
+    <Description>Gets the name, version and install path of all found Office 365 installations.</Description>
+    <Category>System Health</Category>
+    <Version>1.0.2</Version>
+    <DateCreated>2022-09-15T13:42:14.943</DateCreated>
+    <DateModified>2022-09-15T13:50:38.76</DateModified>
+    <DatePublished>2022-09-18T14:55:41.427</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>vkkvb2h1rves7MXZPNPSozTvqg8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAECklEQVRYR8WRe2xTVRzHe4E92LNduz7og22sbowJyxhMy9hc2QgiDuTlAmh8xEWJZvxBxIRHCC6gBoEB8tAhbA4VxA3UoGu7vlhLjA8SExMwQHUJOmEQXzTSLX45tztAc2893C2X8Em+SXN/Pb/zyfcocJ8ZscDmSYVYmTQGzyWOwooEDv+2jWzVsE+F+/vRlJqMdSlJWD02ES8nj8ELSaPxNBG5vldxOwM/7KAn2AxLYL8yA3sz07AtPRVb0sZiIxFZQyQakxPwIpE4XMPhr7cV4uxIpBvESBJoU6txKEuFAyol3lNmYl9mOnZnpGFrWgpeJxJraRvrNKNxbZPifxO54KAb78AU8NTV4eNsLT7UZOMDItGalYX3VSq0qDJpG+m329iQmoQmbQKuvKZgRkhcgcFwGCf0RnToDfhEp8cRrQ4fZWejXaNBqzoLB2kb7xIJvo1m0sZbRGLwagh9jRwzQkQCv7QcwEmjBV+MM+MzgxGd+nE4RiSOEgm+jcNEYuhJ+DaU9NQQg/0hXGrgmBEiEug258JhysFXxvE4SSQ+N5hwnG9DZ4iKHNFq6T/FDFwOoXc5x4wQkYDXMgFucx6cRKTLRCSibZhwgrRxN3iBn5dwzAgRCfTkWOEbnw+PJQ8u2saXREIKA7+HcLGOY0aISOB0bgECOQ/ATyT4NvgncRIJKQz0hXB+DseMEJFAoKAMwQnFCBKR2DakEPkthJ/sHDNCxE9QXIXAxHIErVOibfTQNqTAC5ybyTEjRCRwqnQueibbESiyIVgwFafzJkafRAqRX0M4O4NjRohIwF++BP6pj+NUSS1poxKBwmkI5j9Ip2xkEfBWPAvfw8vgn76QtlEdbUMKsgh4qlfCW/k8fDOegq986VAbU2rplI0sAu7a1XDbX4GnqoG08Qx8D9XDP20BnbKRRcD16Hp0z14D96xV8DzyErwzyZPYltMpG1kEnHVb4HpsE7rnrI224aFtSEEWAcfC7XDOfxOueU1wzd1A2niVtNFIp2xkEehaugeORc1wLthK2thMJDbieu9lOmUjj0B9C7qe3A/H4l1wPLGNfpWGLAI8N/4I019D3GjvxLWaevTZF6O3aj4uVMzDj7bZ+Hp6NRwlNnQWl6GtcDJaS0vjXhobIXEFYvmnYhH+LJqFKwWVuGS14WJuGc5aSnDGVASv3orjGgvalAa8k67GzoyMuJfGRshdBf6eVBNX4Hsi4CECnTECzfdCgCeewHfGIrh1VnRozGglArslCITP+OjGO0gSuEWswLdEoFuXjw61GYeUeuwiAkctKXEvPmdPoRvEDEuA579IJCrwDRX4lAgcJAI7iUDspVfb36An2Axb4BbnG1bBRQSOUQH+0pEwYgF5AG4Co2uozuMrBxgAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>Office 365, word, excel, powerpoint, outlook, access</Tags>
+      <Credits>Credits to: Ton de Vreede
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>15</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAK1Wa08TQRS9XzHxP2xSE9qENhgfH1CMWFAakTYUaIwY0ydds33YbsUH/HfPPXdmu9uWCtE0252dnTn33NeZzclEuvJNZhJyNJVAinKO0QTjUEYyxMxTKcm2PJQHvF5KjveS1OWjHEtVahhVcOls4H7vgBHjXpUefqG08RzIE3kuz3Df59sm5iPYMbR9OQBGWU6AVZNT/FeBvoypHGPpE28IjAFGWxh/X2DdxH8H9xD3Ka1F+AUyxkj3B1jX4zqb7+F55vasZp1FUhSzNQV782FPzsD8EPtPOLOBJ2PTIdI5o9zlk+3Q+J3Sc32ukNEAPCKij3HvrrWs/Cdc02F0uuAc00IgV1hlnnYwUo+6XDtkZtrOyizJfAvjOBXdqYvuuhiG3KGrmo6P7TZObcY0IpuWw+y6TDWJFHHfJVY18W88stbMF0VVrEtaNRs/iddPIrDMW+1b5FuYU9uWqZy8Suo5h7d1V60zeKb7R26/7u1hp0XKKvURsjXBb4Rrj9G2XNTIYh5jq51dXJvAj7FmjJG3WOYerbFLlwHNpMVjwkhMWKGakbHLi+az4+Leo/25z4YXk1eEKlQ/ahhfEanOVZa7tqucEWOrfD4x4rF8hm9pi42UvV3qwLbTAfVgjzFR9JAZTMc/lF8cWYf5edWJQN4A29eixVPnG0TpkLFZy7t+L6KfRqyHArJ3hh4pobuaWKdjQzCmXWhIyMwNEx2YOrRlK6UMk7rj/He80lJcbovaau9W2/VI6yynK9brq4+t1bcq1u1qYW+scgapeeOZ1rxKBsHH0OejDJshu7rCChjw1KglmnAo7+VIPsiOXMC/qryFwjVQLyfonAvMq40Jc6r1EWMuHZ8pnsvsCa9V2fPoAnkfLinSNa5GojxFWG3JV6eGgfxmbL9Qb00b9PRSdVX9yqMvL3AV0AlFeYw+KLFjtRO16xtOR3Vd1Z0GujqQm0xOyrTdZEwCXD9gwbQ1XY2+c9M1Y13YZw77tNxid2pH9jnneR8Q1fLxGn4dJRrjV2zKCzwfuPm551pRU/rchHIeJxp5k/ixnkE2C4s8ooRHdt3d2Cx+cdyVUzlzht3OKbvufhFarJRgoVJOqYADvCtkmPuqqGY03Per1YWxmp/8eTAZcjZiTw25dn1vFuiDfW00yCV2HZC2W+Q+e8r2xiY8ME49ngkRu9Br+n2/hAJ34ng8+6LacSffBrRg5LqkTa3IL3hn2PfxeYP6m0a4TmmVV6gaFWdMbjG/HK7duR+5SCxqxurO20q9WdUR6ferqlPfZ705wu72ghpvuBqy/wP63P3nPB8D/39ltOQyOq919c++BrflD00IlxlYDAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Qfo3u/XwGMcIPa0/FXfStK7ejqg=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

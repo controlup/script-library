@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d64e6664-41ed-426b-9c73-ffbdcd597531</SBAId>
+    <RootSBAId>b995bf42-8414-42f7-8b7c-d32c5a2a2eb3</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637168543426647639</SQN>
+    <Name>Disable online services for Windows 10 Search</Name>
+    <Description>This script disconnects Windows 10 search from Bing and Cortana online services, hiding online content from search results.</Description>
+    <Category />
+    <Version>1.4.5</Version>
+    <DateCreated>2020-02-09T14:42:48.28</DateCreated>
+    <DateModified>2020-02-09T13:22:44.237</DateModified>
+    <DatePublished>2020-02-09T14:42:48.28</DatePublished>
+    <LastEditorName>ek</LastEditorName>
+    <CreatorName>ek</CreatorName>
+    <Status>4</Status>
+    <CheckSum>zRx5200chBqGRtOuNuxii3ocr4k=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ek</Author>
+      <Tags>windows 10,search,bing,cortana</Tags>
+      <Credits>Credits to: ek
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ek@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>29</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN1VXWsTQRQ9zwX/wxACUWhKfBWKVJtWEdNia/uSl3S7aZc2ybq7sRbJf/fMmf2YzTZhFaogw+7O3M9z7z2ZdJEixAQJAtzijvtHGOzz6WKOJe65XmAHGS2s5qdO3Y1ex9xn6OMj3yFmlPQR0zKjnUEPH/AJ7/EVbzDGGU5whHNc4gBfMKTkMyJGTLBg/AWm9BpTGxHJNc8PlI7pvaRFwuhz6i/4TSiPqJ8rZoWrp+xDWS/4HFCa5ZaGlhl3sepZ8RwIZSCcrspL+kSqo0+kS+5ivQ06RH1LuanlM0J1Q5+07FfRG4s/pNww90IxQvzILXd5svUadSmS1VIdTqSxfmmJ2+lj1XTF3Fec0KMXN6HvnMt27YZn51XvosFrDFiFq92+3VS/M949/UMPXVryYSqtxWOtI54NXm7gQp/ZwhqLXpV9Nfmqc6qQdlmRw16heZpbrgex+pTlWf8t10Y8z4S3h3d5Fb7VkBI3sZBZ2vOz6E3V82aP9lpktPlCfON3kM/D1OIXaxvzR2KqjT1RtlBstJ2ZqoqZMu1R2gbPvrB01lCs9PtwXFvnR7HO/ks2+JzvsTNOeqTOBpL+HmOazHlbTn7blNvMzseaahpGCNxEm1PcnrGqqoiWlXdY816tcrtM6/zxz83bvdD4ViPGevD4dPoEn05LPnX+Kp86a3xqMx/nc+HNaJDXUK/rnE8s/SERnhD/4YY753mYE6gDE0W71n/h8/GqyvVnzFp5/5i/ALN/jiA6CQAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>dLfzCtNzFOghrVyI915LDlolx8s=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

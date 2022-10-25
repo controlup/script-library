@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>38ef74ef-601b-4f77-a8fd-5bf6f215c898</SBAId>
+    <RootSBAId>0953a953-db3a-4dcb-9f9e-f3160c577ca2</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636976743932909703</SQN>
+    <Name>List local Administrators</Name>
+    <Description>Will return a list of local Administrators on selected PC</Description>
+    <Category />
+    <Version>2.1.4</Version>
+    <DateCreated>2019-02-13T16:07:30.197</DateCreated>
+    <DateModified>2019-07-02T12:16:18.387</DateModified>
+    <DatePublished>2019-02-13T16:07:30.197</DatePublished>
+    <LastEditorName>theartvark</LastEditorName>
+    <CreatorName>ben.bonnette</CreatorName>
+    <Status>4</Status>
+    <CheckSum>v7Lv8XTuP/6bXOqdaHrI0tgT5C4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>theartvark</Author>
+      <Tags />
+      <Credits>Credits to: Ben Bonnette
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>160</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAI1W/U8TQRCdn038H1bEFBJK0EQTqhgLEiQplNAKGiHa9g562l5r78pHlP/dN2/3rnv0w6bZ27vd2fl482anq7IvI/wGGFXpSCoR3mM5wXcoVxg6x9gJxcgORkkakBrIEG9P5Yk8p8RvGeOkviWQKcsNTyZOm5HXsikvKa/jHU7pbNxvEzq/yrHUYbchhxj+bg1aEthUzal06UkPejvSwmzwDKQPmZj2Utht0UO1n1mcWPqIiBuyJ6ewcyJNPOuw7MscwMIy1qxXvjUjbbnHU9HQ+O8pd+1pqnmaqnP9NjijORkDZeMQzDSkkBphX300ON+Cvi61hDOi3ZcvsHOESGt49/fKGE3oNjwf4vkL7xGjSLDex1obc8CIurCTLIzeYETwq+uws163Zvq42Acb6YjRttwcQyrl3oDyqjOmZ8vmxrdbxEh51yQr/PVdRhxCox9Lh8j0kZmYObsnWh3GPqSHCfba9CLx+H/FfPapN+TKLndi5jGdkbvTqarS2sgqySKhfLMo3WBEwKCFlR7XlmfNZsHuLIz2qE29vMOzwqx1c6740XeYl8yv1HHi2uUz8JCoOL19nBxT96hg84jciyAfUWuaY9l12R2wwlTPK9mWLXmDeQvYbHvMUvmAvpzRg9B9lV39Bc4rzZR6YrEL8zvRMj+GTC+vZfttOdvimtWRYT1gPDYqQ6tDZqbjMOk6RrdYYyp/NeeuKeYpy3kJtVwHdlXMJdlw9Wo1LMqJ6kw81oxzfqeuBm02spqbd8dm3Cp6p+trrFJbvbf0RfXcciUmFmNyPkMy0zOGjZT+9qbYmjAf1tI0IhOZyM23TmsxC0NiEMq6Y7vtXO+99+zeXy4TWfb07Dd319ioLmXVfT9m93Gece2jK5Bbw9kGOJxQos/7OkYtR2RfTGmtu0uwvIK9OxdHMEfujLhF+S2QwEJJXsCTOnvAZ95zp/BEe8I+dkpAZF0u4I2PRJOVlfHiegEui/qB38P6jK/t/hVs8n7bZ1eqwrtDeHRAu5+wajx+mynfTe69kXOc1DOPa+IZI0ldFH9mdPey14kPcj+PPC/1jjjwIqgu7Pt/MRo412MXU/116Pnpvkzha4+3gXYHrd0P8K/GjIVE1P7HyrhSkrf4tpm3fWDSU3YYm1bdqnxnH7NnlOPFW2ftv5zceIThBZlh5IFjg93HMrzDOlXcGsRmRAuK8AOf9q621VpE/pwa1G4ZORvQI62D5gxeLUZ7PrPsLab3SSCTfw32vhsx8/qM+P80IA8V2w7RmnSYgJK2o1bkB9YU4RUvyn/z7g9dOAsAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>qIfhXyQASgMvNOVwkFrZbCsr+e4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

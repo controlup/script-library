@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>1e4f9d1e-2ce5-4316-bf3f-d6830062bf88</SBAId>
+    <RootSBAId>53014d76-cbaa-4339-8d04-110b556308d8</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636884080232693969</SQN>
+    <Name>Find Folder Redirection Errors</Name>
+    <Description>This script looks for Folder Redirection errors (Event ID 502) that occurred on the selected managed computer within the last 30 days.</Description>
+    <Category />
+    <Version>2.3.8</Version>
+    <DateCreated>2017-05-21T15:27:05.157</DateCreated>
+    <DateModified>2019-03-17T07:56:16.83</DateModified>
+    <DatePublished>2017-05-21T15:27:05.157</DatePublished>
+    <LastEditorName>ek</LastEditorName>
+    <CreatorName>Carl Webster</CreatorName>
+    <Status>4</Status>
+    <CheckSum>ZZLrZ5DNQXQlUpNhVnYOOrhfbqU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Carl Webster</Author>
+      <Tags>FileRedirection, EventLog,folder redirection,group policy</Tags>
+      <Credits>Credits to: Carl Webster
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ek@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>602</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4352</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1W227TQBCd1yDxD4tbqYnAAYHgoeJWlRQqQYSoSh9KJdLESSM5caldSlT675w5u7bjW1LKC7Js787MzuXMxX4pG3Jf7smuRDKXRC7wDuVQzsWXMXZTCUAfgbYQIz+xu5AYVJU2eI7x3JUBqCFWR+Cfgp9Qbgsrg+d77BLo25Mv0gNdbaiWr/IUXIPVkJbOIWWk7eQN5NWXEXUZnA2wnmIdQD7JfFjW2GEsZ+Am0LYtj3ENnXdXBd+6oEcyA3+E9xU0hXgPsItraD6szRFrBN7ERTOBhYgo5V769K7qpU9u6qUvv4jqABoU5xe4n0Oz+r4hr/nW+1jeQSahvSl8DeRENuUAO40oybhGXhG3doZ0zvHpTQw7IWgLYDNlng3oVqYDLHawG/HUArJtnHomT8DprPCjx7oo+3A3D9SK1p7W2DV3xl2bhfxaK6mNHutRdX0Ef0JbIVeK7YzWLcYhbA5pLa2a7wUr6eXDRiSXsDXkaU8+8aTaj1ntaveIEdgaiVnX6+vUW2EzcJ23wHMBb63lPO5VZwf0yVqur42mk6fgjqk/cDgX89l0rodqMaiOZe4NbovvEPkt57AFxLS/Va8vH4hlUorRyA/gHhAFRVezGWT5NS6vHvW2cKXzSmX1nKXf8L2PuNqI6I1DSOPSCPuQDDmnfNDSqJenR9nzfc63tjygvmIl+qxqg+7YIV1r+4Q9U9aSXhsOb1tbCZAKOP1svCGr2lanvg09N8yn1V6n83iJf1LbLUVaMWvppMm77RAyQeNpI79xH0AidNVtshP9rOesTMQ6rOP7oM0Rtc14awXiy978n3hX8copVazrptpn9s1ZpuEtIu8UpJu6Z7NSlV32xSU7Q3G53Rc0KGR47DSM3NpOlmI2ynYuM45Xqak9N2MGbjbkPhtmYn0X5qjNMpTnrpfr5aro3u5crt9q6GL+B/AphpaJmzLlU/Xfrb/xaQY7MfyyfycXrj7bjmO/NQH+GSLONU++4fKA06MGiS1wu3h2UC/rdHRqvV49z6t9ZojTWYOuOurU9Xk9Lvl8TvPVXBXreuphZY6l3GZv79a5TbziPCxOv7v0ea673IdpJyt6EbvS4H8i9yTv7W3XqavjSrGwGPSQh9j5fH0rz/ucq/82hTznwR+eMtRZqgwAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>ripE5ZvtshHCvyA7Hqp4+J486Sc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

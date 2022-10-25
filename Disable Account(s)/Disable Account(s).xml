@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>18e5e17c-fae6-4709-b06c-b21ed86d720e</SBAId>
+    <RootSBAId>f1e666cb-7858-41fa-973e-a0c1d2c56ec1</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635907765971082000</SQN>
+    <Name>Disable Account(s)</Name>
+    <Description>Disables the Active Directory account of the selected user(s)</Description>
+    <Category />
+    <Version>2.0.2</Version>
+    <DateCreated>2013-11-24T12:42:22.72</DateCreated>
+    <DateModified>2014-02-05T13:38:25.707</DateModified>
+    <DatePublished>2013-11-24T12:42:22.72</DatePublished>
+    <LastEditorName>ControlUp Support</LastEditorName>
+    <CreatorName>ControlUp Support</CreatorName>
+    <Status>4</Status>
+    <CheckSum>U90mgAqAeiIywPcjIwlIxjqdXBA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ControlUp Support</Author>
+      <Tags />
+      <Credits>Credits to: ControlUp Support
+Original code by: ControlUp Support
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>support@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>8</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>1052672</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>SQBmACAAKAAgACgARwBlAHQALQBNAG8AZAB1AGwAZQAgABMgTgBhAG0AZQAgAEEAYwB0AGkAdgBlAEQAaQByAGUAYwB0AG8AcgB5ACAALQBFAHIAcgBvAHIAQQBjAHQAaQBvAG4AIABTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACkAIAATIGUAcQAgACQAbgB1AGwAbAApAA0ACgB7AA0ACgAgACAAIAAgAEkAbQBwAG8AcgB0AC0ATQBvAGQAdQBsAGUAIABBAGMAdABpAHYAZQBEAGkAcgBlAGMAdABvAHIAeQANAAoAfQANAAoADQAKAEQAaQBzAGEAYgBsAGUALQBBAEQAQQBjAGMAbwB1AG4AdAAgAC0ASQBkAGUAbgB0AGkAdAB5ACAAJABhAHIAZwBzAFsAMABdAA0ACgA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>4b6062ee-478d-4463-8451-c86f200db073</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4b6062ee-478d-4463-8451-c86f200db073</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>QxLOarGpZUNJQEUUKcU3shJarBQ=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

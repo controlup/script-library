@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7c7c358e-688a-4019-b9fe-65dc8b477fdc</SBAId>
+    <RootSBAId>46faf8ee-71ad-4984-9273-a8bd2d18d6b8</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635792916556205136</SQN>
+    <Name>List User's Printers</Name>
+    <Description>This script will display all of the printers in a user session, and note the default printer.</Description>
+    <Category />
+    <Version>1.3.4</Version>
+    <DateCreated>2015-10-01T13:04:35.65</DateCreated>
+    <DateModified>2015-10-01T13:12:09.253</DateModified>
+    <DatePublished>2015-10-01T13:04:35.65</DatePublished>
+    <LastEditorName>MattStut</LastEditorName>
+    <CreatorName>MattStut</CreatorName>
+    <Status>4</Status>
+    <CheckSum>fzXg9q7UcAon/TQT9y0WKaVf2yU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>MattStut</Author>
+      <Tags>Printers,</Tags>
+      <Credits>Credits to: MattStut
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>1995</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>VwByAGkAdABlAC0ASABvAHMAdAAgACIATABpAHMAdAAgAGEAbABsACAAUAByAGkAbgB0AGUAcgBzACIADQAKACQAUgBlAGQAaQByAGUAYwB0AGUAZABGAG8AbABkAGUAcgBzACAAPQAgAEcAZQB0AC0AVwBtAGkATwBiAGoAZQBjAHQAIAAtAEMAbABhAHMAcwAgAFcAaQBuADMAMgBfAFAAcgBpAG4AdABlAHIAIAB8ACAAcwBlAGwAZQBjAHQAIAAtAFAAcgBvAHAAZQByAHQAeQAgAE4AYQBtAGUALABTAGgAYQByAGUAbgBhAG0AZQANAAoAaQBmACAAKAAkAFIAZQBkAGkAcgBlAGMAdABlAGQARgBvAGwAZABlAHIAcwAgAC0AZQBxACAAJABuAHUAbABsACkAIAB7AA0ACgAgACAAIAAgAFcAcgBpAHQAZQAtAEgAbwBzAHQAIAAiAE4AbwAgAFAAcgBpAG4AdABlAHIAcwAiAA0ACgB9ACAAZQBsAHMAZQAgAHsADQAKACAAIAAgACAAJABSAGUAZABpAHIAZQBjAHQAZQBkAEYAbwBsAGQAZQByAHMAIAB8ACAARgBvAHIAbQBhAHQALQBUAGEAYgBsAGUAIAAtAEEAdQB0AG8AcwBpAHoAZQANAAoAIAAgACAAIABXAHIAaQB0AGUALQBIAG8AcwB0ACAAIgAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtACIADQAKACAAIAAgACAAVwByAGkAdABlAC0ASABvAHMAdAAgACIARABlAGYAYQB1AGwAdAAgAFAAcgBpAG4AdABlAHIAIABpAHMAOgAiAA0ACgAgACAAIAAgACgARwBlAHQALQBXAG0AaQBPAGIAagBlAGMAdAAgAC0AQwBsAGEAcwBzACAAVwBpAG4AMwAyAF8AUAByAGkAbgB0AGUAcgAgAC0ARgBpAGwAdABlAHIAIAAiAEQAZQBmAGEAdQBsAHQAIAA9ACAAJAB0AHIAdQBlACIAKQAuAE4AYQBtAGUADQAKAH0ADQAKAA==</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>nJcfy6JOUcijvSSFJ3rmmxaqitA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

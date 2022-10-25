@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d22cd9b1-1a3d-4eb3-9656-144bb8e67876</SBAId>
+    <RootSBAId>9facc7c6-5582-4f1d-a7c5-7707b258100f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637381932767478468</SQN>
+    <Name>Show or disable unused Citrix Delivery Groups</Name>
+    <Description>Show how recently (in number of days) delivery groups have had sessions launched from them, by checking the last used property for each machine in a delivery group.
+Specify the minimum number of days last launched to show only delivery groups which have not had sessions launched within that number of days and optionally disable them. Specify 0 days to show all delivery groups.
+
+Run on a Delivery Controller or where the CVAD PowerShell snapins are available, e.g. Studio is installed.</Description>
+    <Category />
+    <Version>2.6.19</Version>
+    <DateCreated>2020-10-02T13:03:47.31</DateCreated>
+    <DateModified>2020-10-09T12:53:38.297</DateModified>
+    <DatePublished>2020-10-13T13:39:05.87</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>QvqHhDUhVwseNT6J2lvGDikEmGo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>citrix, xenapp, xendesktop, cvad, vdi, delivery groups</Tags>
+      <Credits>Credits to: guy.leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>48</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>cd5f9f20-58f3-4d8c-806f-2e11ec104fb5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>cd5f9f20-58f3-4d8c-806f-2e11ec104fb5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Disable delivery groups</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[Tt]rue|[Ff]alse$</ValidationString>
+                  <ValidationError>true or false only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>215a075b-b35d-4273-95a0-cbabbb1edf55</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>215a075b-b35d-4273-95a0-cbabbb1edf55</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Days since last used</Name>
+                  <DefaultValue>30</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(\d*)?(\.\d+)?</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>82c3832d-4654-47af-80df-9027580219c9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>82c3832d-4654-47af-80df-9027580219c9</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>6o08n4uIv83yaCZdfrCECEsfty4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

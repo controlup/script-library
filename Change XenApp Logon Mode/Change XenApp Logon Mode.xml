@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>63946404-8c36-4ec0-9d50-b40d0fd10863</SBAId>
+    <RootSBAId>5cabd72e-aab0-45f2-88ce-257caf4618d7</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636462629119052000</SQN>
+    <Name>Change XenApp Logon Mode</Name>
+    <Description>Changes the XenApp Logon Mode for the selected server. Please enter one of the following states: AllowLogOns, ProhibitNewLogOnsUntilRestart, ProhibitNewLogOns, ProhibitLogOns</Description>
+    <Category />
+    <Version>4.1.7</Version>
+    <DateCreated>2013-11-21T14:20:27.05</DateCreated>
+    <DateModified>2017-11-14T13:25:35.727</DateModified>
+    <DatePublished>2013-11-21T14:20:27.05</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>7aYkoWI5I/gy7jfoAS/mEb7Ut3M=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwAAADsABataJCQAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xOKPRgvIAAAl9SURBVFhH1Zd5UFRXFsYbZMaKk8yYSZnJomJQycQplxH3wGhcgYRlCIRVtpZNFhcUgwurIDbKLtAoWCI73QgNNCiydsuqSIiWaKkgRgYUERSUpmm+uffabhF1JjX/zKk61TT93vvdc+453z2P878yOzu7T+bOnWu2ZMmSoHnz5vG0tLRCyaejqanplwBUlJf9dhsYGNC8ffv2spKSEsvk5GRuWFgI85iYmABra+smb29vWW5uLurq6nDhwgU0NjaiqKgIQUFBCgMDg9q1a9eu+U0LuXHnxnRxkfjwyZMnb8XFxuHw4VgEBETD1zccbm4+cHJyglQqZdA3OV1UYGCgQkdHJ97f3//3yke/3bq6uqYIhUKvo3z+g3BeDCwt92PBwr2YuzAIK3Vj8J1pGLZt34Hz58+PC6VOfzt37hyqq6tx+vRpJCYmYtWqVaf5fP4kJWZ8a25unpKVnSmJiU2AsVkYvpofBFvXXEQknMOxExfAT66FnZ3TW+Hl5eUkQ25jLi4u7VwudyAnJwfZ2dk4dOgQtLW1kwlm/O24du3azMzMzH+F8hLw1wVBMONmIjRSCr8DZdgTWAbfgDOw2hgEkp1xwc98k5MneDw+0tLSB0kW/OlWpaamIikpCZs2bVIYGhp+o0S+sPb29hmCXEFXyIEkaGrx4OpTCk/fEnC9RCQDp2DtdAoWXAGMTZzGhT7zhoYG2HO3YvYiHsLCjyOHFKeDg0MfhZOiRVhYGFasWFFJkK9m4ZRQKI6IPgGNhYfg5V+OTdtLYOKQj/Xm2dAxTsOiDalYsDoZNrZvXgCt/pqaGlKsh6H3vQ/+tjQQjg5u8PHxYXAej0c7A8bGxiOksD9Votm+x508mYU52tEwcy9BYnojtgaUYvMeMbbuLYPb9iJYkgyYcTPg6ur+RrhEIsGZM2dQWFiIhIQEbN68GQcPHkRsbCyDBwcHw8/PD6QusG7dOlMG7x3q/ZzcILd1T8Yc/XSssxXhQMIFOPtWwtC5BPsOlMPSuQCOXgVw8S4iref2RnhZWRmDU00gEeLo0aMMHh4e/hxO3dPTE+rq6vZsARUVVc7pWQJo6KRggWkhvlgtRKrwJ4yMjmB4eBgBPClZVCG0LU5hieEpfGvMfQXe1NT0X8Gp08zMnz//6QIKi4urfwzOhYa+ANPWFWCSFmmXxAtkAaMYGRlBcnoLhh7LMDY2xjw+Pp7t8zM4FaJncIFAwODHjh1jcNp2v4ZTt7KywtatW3U4ra2tHxYWiuRrbTIx2+Q0PlheCLWFAuzlNeCJbIQsQIYTuT/j4eBjBqPF5e7hzlrqGfzs2bNMdik8LS2NwePi4hh8//79r8Gpr1+/vpsI0u84V65cWVEsFkNTPwdTDcsxYbkYqouKsCWkDkNPZJDTDAgv4U5PP+1f1mIvR/4uOJHe1+AkcixdupTH0k8y4CEqLsfnuiJM+bYaKsvPQnV5Gez21qH/4RDkozIcz2tDR3c/YkhKqZy+DKcKt2/fvv8YTq8lIqQgv01mCyAP4wkLK6FuVIE/G9RB5R8SqK6UwnxXM3ruD0FGMpBdegNtnX2kDgaJBNux/adSm5eXx77TRZETEkeOHGFbFBISMi589+7d0NPXp5I8wODUWlpaeAViCab9swoffX8RnLVN4KxpxCqvZnhHNWNzQBO8I1pw8WoPEZBAVuEULhKJWCpdXV3fCadREyWElo4JhHlicjjV3FfiWQaMKqtrMdWkCh/bXIaKfis4uq1Q0W2B2oaLmKD7E77ZcRm79vKQkpLC4HTPd+3axR5K5ZV2BYXb2NjA3t6eqhxNM3MjYxMsXL0JGkbH8aVVFWqkteR4rn+xgI6OjhW19bX4u3011F2uQ9XoGjgGL/tVLLWIQ1RUFCoqKlBcXMwioiAKNTIyYlGHhobC3Nycte2TJ0/w8OEAHj0agKS5G+obr0DD5SaWO1ehukaCy5cvv1jAgwcPJjfU14/Y+TdA0/MGJv7QCY4J9Vvsc7JeLvb5BTC4mHQLBdHIKdzC0gq3Ojrg7OzMlI0cvWTowXO9GFXIIGm5i2ncW5jl3g63kEZWuDdv3hQo8U+NHJfC43nnoc5tw2RuN1Qs7oFjfhfvG1fB3cv7OTwyMpK1ItX2nTt3IkNYykByuRykp9l88LLJx+Qou9iHLzy6MN3xCnKKmtlg0t3dbalEPzWi44ZV1TVY6NqEmTvuYaLdACaZtcLG0YPByRzIioxGSEYrdsjQAswrkdJwGWxUMQqFYoQ40Q4i4UPDMvxybxA5tfcw58cufO15kRSfhI5nw52dne8p0U9tcHBwQWVl5Y2IFCmmu7Vjmucd6Jm5snRROO1vd3d3lmZrUmgmZpZYs8EAGXkVTK7vPxpBy40BSFt7IW7qQ4y4B+6Jv8AiqgeGh++S2rqGxEwp8kUFIDNHrBL7qrW1tW0vKhHDyLcGq4xdUFpayuBUcr28vFjKyeSLD2yboeYuhzV/ECfK7yFU0IPNyT2wjO/F8uA+fOTRBzWXIXLNCCbvGMYsn3uwCGxkbUuiH+zt7f1KiXzVSBZVqiqrym022rJDhS4gIyMD27Ztw5YtW1jaaevN2C6Fqr8cE4NkmORPQH4yqPqNEh8hLodKgAJqQWP4MHQYmrx+6OxpgDC/AIWkdcne71HixreVK1dmZGVlMTjVdjrF0NRTOG1DKjqTfc6CE694zVWPPPX3+HJ8mjKMmYn38XVIA9KzToHMmDT1ZTRIJeo1UyEzWhitZAqnEuvr68vObAdHLn6wsoGumTVmOQVhQq4cEwQKqBBXzVWQ72NQEyowKW8Uf8kfxuz8IUxPbIdp1FmkpKYx+PXr1ysJ/E9K1utGWmsqKTAFbZH8/HwmNB4eHuw81zOzgXZCHaZndkCzpB8zqx5jRvUwPquR4TPyOb2GRFsxiFml/VBP78DSOAmCj+YgiZ+EgoICkLepagJ/X4ka38g73HdUTukNdGCkex4dHc2mV6p4MXExOHDkBMxjRVgWVwNNfjNJ8xV8knwVs/ktBFoFi+g8hCQeR0R0BFKOpdAR7VFPT4/b29L+3DQ0NEzoMUqBNHJ6lNJ+Jy8QP9fX1+tdunRJkC8SDdKooiMjEB5xCJFR0awuIsjf9H/xRCfSM7PQ1ND06FZnZxgBT1A+/t1G3mCnLFu2TEIyUaCpqZlE3nKDFi9e7ESK7mPlJRyieH8gLeRI9jOWDCRSop5t1MmA0kaGmjKS6oT+/v615Jo/Km/5fzAO599B7LczC5GtYAAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>XenApp,Citrix,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>220</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN1WUY/SQBCeZxP/QwM8aOLh3buaILkoiceRA+MZ48MCRZqUgrScEnP/3W++3W23FYiXezAxzbZ0ujvzfbPfzPJK2hLJU3kiXRnLZxnKtYzwa4Ch1shdfVmKkUy+SSw53gu8x3je4p5JTza4Ivkga8xYwxLJFZ5zzlng1zZYk+OeYsxgiTHHWrZyx7vFMoLPG4wruZQJxk3Nu/ddIQwjT/FF0d5J4iKvgaEe30eL5AxjRW473FNce1iUVcEZFuGU1p1bexzjOPA9hL9VDeXEIcjclyayGd5XyOTOxbZcEuZdUSrrBCsSh0qxG85ek0OBL7OARY5vujNpucLy6MtHomrLGz51dMBgi0sz1uPeJMzniDlYuFxk+KJIX2O0wFYjb/DLexmQzzOOd5hZAKPqaUzOG3JR3MMyA33YCvhO5CdyGuqpi2/Ky+7OnLo7O4JSM59QVbpvyr5Pe8GIO9ifc3Us3/Hs0KZZimBX3L9qap/Au+apbvVXD1jm5JU3eD2ES+j5nmt1/2ZQwrG4bSpEoxVAv2X21NueNWbIP7TrfqtecirAcJ7iixxar7q4zKitjSqrL8pZmauJea2OZuS6oc8f9L1k7IgoLMrsBBffIWwVXNDn2kUw9KpKtaiqvmMcBxvV0J5hXeEUP6NGc1wL7nL3IIJPxK51FmpKVT10vgyqJSW+gqhS3E0tA373B3i2TqqzqcaHIAor8wuy9PXRkS6hT5u/i4YO9e2+rGbdpbdUhHG9z3JPmPOkdhKsqMCMWtyxT1SYmv031I1XpPqync/q0+bccJ1W40ui8BWygM13kKZmfE1Uus6dPm3FT7nK81u6Wkldh7QcTJBJ9ZFChxtkfUHksVuxdwrcO43pONw7xq4X3mK3wjPCnlvXwZmme3vI2kGcLaw5NHDuNHDotKnPVLXYPT3VYf6HzvLvOsrf1e35I+q2Wa9VhYax38NDzlmt8p+Gns4xa6WK5P9lpMyk/wf2J8uUurZn+2/i6hAZKAoAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>46ab3b83-b710-4ca9-a8e8-cda3e25a7cd7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>46ab3b83-b710-4ca9-a8e8-cda3e25a7cd7</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Choose a logon mode:</Name>
+                  <DefaultValue>AllowLogOns</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)(AllowLogOns|ProhibitNewLogOnsUntilRestart|ProhibitNewLogOns|ProhibitLogOns)</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>31a2ccaf-ed0c-48b9-a7e8-022a217e08d9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>31a2ccaf-ed0c-48b9-a7e8-022a217e08d9</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>4mHoexKF7URH7EIcorQMv5fDnbQ=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

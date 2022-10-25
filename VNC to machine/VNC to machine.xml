@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>365e4877-f310-4c6a-b6a8-3ba36295806f</SBAId>
+    <RootSBAId>86d12270-bc68-420c-bb7c-a16e68caaf9f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637247740340265896</SQN>
+    <Name>VNC to machine</Name>
+    <Description>Use the IP address or hostname of a machine to VNC to it.
+Requires the other device to have VNC server installed as well as the VNC viewer in the console
+Validated with RealVNC and TightVNC_2.8.        TightVNC_1.3 fails and goes to listen mode</Description>
+    <Category />
+    <Version>1.11.30</Version>
+    <DateCreated>2020-04-24T00:07:06.233</DateCreated>
+    <DateModified>2020-05-10T02:43:13.04</DateModified>
+    <DatePublished>2020-05-10T02:45:14.963</DatePublished>
+    <LastEditorName>marcel.calef</LastEditorName>
+    <CreatorName>marcel.calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>VVQOGcVMOMfp5rlnr0jlwvO069Q=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABK5JREFUWEe9l/tTWlcQx/kTnWYy7ah1NNW2k7FjrG/xxUMjGBTBR0QJvkVRjEY0iFK1NTW1GB/R2IxWozE+kknFaqrgzLdnT4frBa4daNUfPjN3uHvZ7zm7e3aPDICsd8ABuaIcGfmKaydTrkR1XRM8LxaZa8hkUkY3gVypwej4JLiATLkKZQ+MUGv1yCpQSX4gJqewFDpjA2oaLChUV0jaREKBSvuPgNziMkz8+AyznnkmxCBpLEZTVYuV1dfY2z+AVl8vaRMpXACt2uWewqH3CObWLklDMS0dPfAe/YnfN98gp6hU0iZShBywtHfj5OQTxid/4jsiNhJDDkfdk/D5fDBZ2iVtokEQUFFdz7d0c2sbJWW6MMMARSzmL1dWuQBleaWkTQDz7dgwQm0EAZSVi8uv4Pf7UWuy8HIRGwbQ6uuwu7ePuYUlZBeqJW0CRCWAMnvYOc4FUEJeVg2UI8fHJzDUm8Pe5ZXc5ztE5LJQRSWAaGzuYMl1hK3tHRSwHRG/I6hcqXYPD728ZAO/f3anG1mqGdS07KCp+z0arQdYfLkCZ1oGcxoXuYD7OiPP7EOvF/raxiBDgpJzfeMN1tY3WA1fCEzOdMI6dAK704/OwWMO5Yi3vQPOe8EixP9HBAmgmE7PzPKP7YPDYXlAAs/OzjA1PSPEn4QYm7fR4ziFXDOHxDQHktJHMOL6Aac2Gz40t6Az4U5kAohAOc4vLaOQnVTid+o+HWyLj5FpLkZMQQJi5AnQVNbCNnKG4gfzuJXcg5jELg7lw5regPP+fri+z4pcAFXD3sF7HmfxqZjPmlXrcys6PTak6NO5c0JneMhXnyqfEJwTtHvPCoq5gF8V6sgFEDO/eHgY2rvtQhgaHrXz1TdMWBBb+k2QAOvQJ9zNc4cJmMqVw2+3Y05dFp0AlyELPk8ffrPrYcmJx6PsOLinptG//ATaJ0bcKky6XgHdihR8nGzFx6k2/mwtScbG5hbsTEC6SS44vzYBLXkJWB8w4nTWBndNDhwVabw0u+ft+FyZEiSgvLIGpq59fJ3tChJA/zPGku+DpYXnQlQCzFmxeG5RsDDYsWStYM9KVn4+VDsfBjknqBxj7z7mh1GogLa4RPQlf4uO+KToBQxqvsPxjBV7Y2bsMvz+c6TW5YQJIHux4wBKTRV+ZitfNxixWVOHZa0O7sxctHX1oqmlU/B1qYDm3C/xbrQJ/jk7zl/04+27XXyhCt7+ywR8leFkJ+oWfCz+VIZBnJ/DOTYhVNelAohpUxGvBmLo6VhQ9l8m4HayjZ+Mp+zE3G0yY6GsHLMKlYDDOYYa1m0Dvv5VQGt+Apz6DLiqs3iHC3UuJSA+dRBWx1/wzC+iJylFiH3UORAK/R6JgKR7w+gZPuVjW6jzmxHAGlHviA+tXbb/LuD/QHPCH6yPrL5eQwWbmGnQoeGGZokLLrrslQugDkrjPbXt7bc7/AjvYzcvW/+QQFWtSbC/cgG0OhpwZ+cWeCXQiEeNTcxTNisIZSjejquEbkw0N1p7BzA04uLlF4CGXrIh3zK6KIZ+fFPUmpoho1sqDSFSBtcJhYmGX349p0mXLopShlcNbTutnJwDkP0N3dlXNnCH+KMAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>marcel.calef</Author>
+      <Tags>VNC</Tags>
+      <Credits>Author: marcel.calef
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel.calef@controlup.com</ContactEmail>
+      <Notes>Works with Any machine in ControlUp as long as it had VNC installed. The script will allow to choose the path to the VNC Viewer and the port and use a msg for failures or messages post inititation</Notes>
+      <DownloadCount>40</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>4bbeb223-30f6-40ec-a5a7-67b0ee38ae4e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4bbeb223-30f6-40ec-a5a7-67b0ee38ae4e</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sIPAddresses</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>00c4c062-53d3-475f-bbbb-4f3e8beede54</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>00c4c062-53d3-475f-bbbb-4f3e8beede54</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VNC port</Name>
+                  <DefaultValue>5900</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^59[0-9]{2}$</ValidationString>
+                  <ValidationError>The script source will enforce the typical VNC TCP ports, 5900 to 5999. YOu will need to change the script validation to use a different port</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>227356aa-c85c-4daf-b65d-5ec90ef030a7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>227356aa-c85c-4daf-b65d-5ec90ef030a7</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>4cc0d5e8-d677-42cd-95dd-db57c36231dc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4cc0d5e8-d677-42cd-95dd-db57c36231dc</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VNC Path</Name>
+                  <DefaultValue>C:\Program Files\RealVNC</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Path to the folder of VNC viewer. The script will look for a *viewer.exe file in this folder</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d4cc6e29-0b80-4512-bbf0-6593dce8c994</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d4cc6e29-0b80-4512-bbf0-6593dce8c994</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AwsPrivateIP</Name>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>L7vhfwiyndy8mQ48gdXt+/R/biM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

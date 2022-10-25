@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>9315321b-6b80-42d7-828d-8e2bd5902236</SBAId>
+    <RootSBAId>83ef8ec7-2133-404e-9f1f-875da503cbde</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637211707683799720</SQN>
+    <Name>Cap Memory of Process</Name>
+    <Description>Set the maximum working set size for a process such that it cannot consume more than that amount of memory. Gives the ability to set a memory limit on a process, such as one with a known memory leak, so that it cannot consume more than the maximum memory specified via the parameter. Additional memory allocations will be allowed by the OS paging out some of the existing working set, generally the least recently used.</Description>
+    <Category />
+    <Version>1.1.2</Version>
+    <DateCreated>2019-06-10T13:51:30.797</DateCreated>
+    <DateModified>2019-12-12T19:12:48.867</DateModified>
+    <DatePublished>2019-06-10T13:51:30.797</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>EgFPwOoa+a7Zp3iPcrOedRVrmv0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>memory, working set</Tags>
+      <Credits>Credits to: guy.leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guy.leech@secureplatformsolutions.com</ContactEmail>
+      <Notes />
+      <DownloadCount>90</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>80c0b4dd-cba2-4f23-8c1a-31d07342c82e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>80c0b4dd-cba2-4f23-8c1a-31d07342c82e</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>65536</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5447b917-708c-44f3-8adc-299fa4a7283d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5447b917-708c-44f3-8adc-299fa4a7283d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Maximum memory (MB)</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d*$</ValidationString>
+                  <ValidationError>Must be a positive integer</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>U1anEr5gbsKvc8RgAd9s8yy2Yj0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

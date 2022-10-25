@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>702805c2-ae82-4713-817a-fe25db6ae017</SBAId>
+    <RootSBAId>b04da1e4-7125-4bc2-b576-692e03539a7c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636934166174089016</SQN>
+    <Name>Migrate VM storage</Name>
+    <Description>This script will migrate the ALL the VM (local) disks to the specified datastore. If all the disks are already on the target datastore the script will exit.</Description>
+    <Category />
+    <Version>1.2.6</Version>
+    <DateCreated>2019-02-10T14:10:04.453</DateCreated>
+    <DateModified>2019-05-13T18:44:31.57</DateModified>
+    <DatePublished>2019-02-10T14:10:04.453</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>B11U0VbfUGFoI7F85J/rOd8kei4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>vmware</Tags>
+      <Credits>Credits to: theartvark</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>25</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>1800</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>f75819ba-b66e-466a-a3af-94ea0fff07da</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f75819ba-b66e-466a-a3af-94ea0fff07da</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>4e785ccf-3e85-49da-9ea5-94e08f00c1b0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4e785ccf-3e85-49da-9ea5-94e08f00c1b0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCenter FQDN</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Vcenter server name cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d85378bd-0219-4bf0-8579-97c5fd323b66</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d85378bd-0219-4bf0-8579-97c5fd323b66</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>63d5d057-0873-4e5d-adaa-b4fbb1cd388d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>63d5d057-0873-4e5d-adaa-b4fbb1cd388d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Target Datastore</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>[^()]</ValidationString>
+                  <ValidationError>Please enter a target datastore name</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>NYPae4u8RY6SrebkgGCmIVFkL7Q=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

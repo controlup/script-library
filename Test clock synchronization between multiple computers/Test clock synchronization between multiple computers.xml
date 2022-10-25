@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c59bed56-9146-4b0c-84cc-0719ab4c28e4</SBAId>
+    <RootSBAId>51d3c4bc-1bd5-4fb9-85d2-a381df2c0062</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636896347619838541</SQN>
+    <Name>Test clock synchronization between multiple computers</Name>
+    <Description>This action is intended for detecting computers with misaligned system time. It is designed to be executed against a group of computers, comparing the difference between the current time and last midnight, by means of the built-in ControlUp SBA output comparison feature. If the clocks on all selected computers are in sync, you should get one output group.In a typical production-scale environment, a handful of computers may produce a non-standard output, which indicates a clock slip that probably causes authentication errors and other issues.
+This script accounts for different time zones, so computers that are in sync but in different time zones should produce the same output.</Description>
+    <Category />
+    <Version>2.5.7</Version>
+    <DateCreated>2019-03-12T17:17:31.92</DateCreated>
+    <DateModified>2019-03-17T08:22:48.583</DateModified>
+    <DatePublished>2019-03-12T17:17:31.92</DatePublished>
+    <LastEditorName>ek</LastEditorName>
+    <CreatorName>ek</CreatorName>
+    <Status>4</Status>
+    <CheckSum>nitBuacZoeFUA5vJhZT5It9KGss=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ek</Author>
+      <Tags>local time,time sync,NTP,Kerberos,authentication</Tags>
+      <Credits>Credits to: ek
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ek@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>94</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>JABuAG8AdwAgAD0AIAAkACgARwBlAHQALQBEAGEAdABlACkALgBUAG8AVQBuAGkAdgBlAHIAcwBhAGwAVABpAG0AZQAoACkADQAKACQAYgBlAGcAaQBuAHQAbwBkAGEAeQAgAD0AIAAkACgARwBlAHQALQBEAGEAdABlACAALQBIAG8AdQByACAAMAAgAC0ATQBpAG4AdQB0AGUAIAAwACAALQBTAGUAYwBvAG4AZAAgADAAKQANAAoAJAB0AGkAbQBlAHMAaQBuAGMAZQBtAGkAZABuAGkAZwBoAHQAIAA9ACAATgBlAHcALQBUAGkAbQBlAFMAcABhAG4AIAAtAFMAdABhAHIAdAAgACQAYgBlAGcAaQBuAHQAbwBkAGEAeQAgAC0ARQBuAGQAIAAkAG4AbwB3AA0ACgBbAGkAbgB0AF0AJAA1AG0AaQBuAHAAZQByAGkAbwBkAHMAIAA9ACAAJAB0AGkAbQBlAHMAaQBuAGMAZQBtAGkAZABuAGkAZwBoAHQALgBUAG8AdABhAGwATQBpAG4AdQB0AGUAcwAgAC8AIAA1AA0ACgBXAHIAaQB0AGUALQBPAHUAdABwAHUAdAAgACIAJAA1AG0AaQBuAHAAZQByAGkAbwBkAHMAIABmAGkAdgBlAC0AbQBpAG4AdQB0AGUAIABwAGUAcgBpAG8AZABzACAAZQBsAGEAcABzAGUAZAAgAHMAaQBuAGMAZQAgAG0AaQBkAG4AaQBnAGgAdAAuACIADQAKAFcAcgBpAHQAZQAtAE8AdQB0AHAAdQB0ACAAIgBQAGwAZQBhAHMAZQAgAGUAeABhAG0AaQBuAGUAIAB0AGgAZQAgAGcAcgBvAHUAcABzACAAbwBmACAAbwB1AHQAcAB1AHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAHQAaABpAHMAIABzAGMAcgBpAHAAdAAtAGIAYQBzAGUAZAAgAGEAYwB0AGkAbwBuACIADQAKAFcAcgBpAHQAZQAtAE8AdQB0AHAAdQB0ACAAIgBBAGwAbAAgAGMAbwBtAHAAdQB0AGUAcgBzACAAaQBuACAAcwB5AG4AYwAgACgAKwAvAC0AIAA1ACAAbQBpAG4AKQAgAHMAaABvAHUAbABkACAAYQBwAHAAZQBhAHIAIABpAG4AIAB0AGgAZQAgAHMAYQBtAGUAIABvAHUAdABwAHUAdAAgAGcAcgBvAHUAcAAiAA==</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>4TH5jyNki3GCnDb1uhcMSUlXgXo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

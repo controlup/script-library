@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c20e266a-3895-4422-bbe0-f4cf80cd83ff</SBAId>
+    <RootSBAId>a3650ccc-d4d0-4fc3-b5ff-8566f1110c87</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637388772905686718</SQN>
+    <Name>Shadow Session</Name>
+    <Description>Shadows Citrix, VMware, RDSH and WVD sessions</Description>
+    <Category />
+    <Version>1.3.13</Version>
+    <DateCreated>2020-10-15T09:34:12.81</DateCreated>
+    <DateModified>2020-10-20T21:42:23.047</DateModified>
+    <DatePublished>2020-10-21T11:36:09.823</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>LoriuntdxcgpRBnOHw8rMmvnfoQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAg1JREFUOE9jMMcAVpaWtrY2IGRjbWEBFYQAGxsbhAYrSwsHB7sAf9/YmOiM9NTsrIzkpITQ0GAPd1eQTrAakAYgB4icHO19fbyASstKi5ctWbR61YptWzevWL60q7M9IyMtODjQ1dXZwd4WqIzBy8sDiIBCqSlJDfW1QHWhoSFg40AAqHnSxP6C/NzoqAhfX++AAD8GICs6OgLohrq6GqDBZaUlULUwcGD/XqA9QD0J8bGxsdEMYOdmVldVTJo4ASgHVYUEJvb3LZg/t6mpAagnLzebAehooGqgGYsXLdy8aQNUFRIICPA/f/Y00GFAB9dUVTC0tjZ1dLRNmzJpw/q1S5csgqpCAqmpKefOnp43d1ZvT1d3VzsDUOvUKZMWL1qwY/tWoElQVUhg2ZLFQKcCvTdz+tQZ06cyAJUCDQYaf3D/3pcvns2bMxuqEAx8fX2+f/18+tQJoGuBobxs6SKG7ds2796148ihA9euXn739vX///8d7O0hkQNETx8//PL54+1bN44fOwxUtmf3DgagM4BK79+98x6k+h8w4D3c3T08oCghPg5oxKcP7x49uAdUduXSBYbnTx9//PAOqBQosWfXjgB/P2AEIZCPN9D1QKn///4Atb15/ZIByAJygd4IDg4CxjEutHH9WpC2//8ZgBgYcLGxMQRRdHQUVENKUmJaSjJBlJqS/OvHVwC4Lmduww+cXgAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>shadow, citrix, vdi, horizon, rdp</Tags>
+      <Credits>Credits to: trententtye00
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>239</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>306b1180-f0f5-40e6-b43f-c8d5ac5853eb</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>306b1180-f0f5-40e6-b43f-c8d5ac5853eb</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Prompt for Alternative Credentials?</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False</ValidationString>
+                  <ValidationError>Please enter True to be able to specify other credentials or False to use your credentials</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>feb74f61-e900-4f78-b60c-03cd9c12cc54</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>feb74f61-e900-4f78-b60c-03cd9c12cc54</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>20ec509f-05ea-4c7f-8838-c371b9a4e9a0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>20ec509f-05ea-4c7f-8838-c371b9a4e9a0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Allow User Consent?</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False</ValidationString>
+                  <ValidationError>Please enter True to ask the user to consent or False to just connect to the users session</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ee7adede-412a-4d4b-bd86-14da706fa1d0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ee7adede-412a-4d4b-bd86-14da706fa1d0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Remote Control Session?</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False</ValidationString>
+                  <ValidationError>Please enter True or False</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2a84c1e6-910b-45e9-93d7-ab0b54e3b8d0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2a84c1e6-910b-45e9-93d7-ab0b54e3b8d0</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sServerName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>GKnRsPnn5Rv7ZnlWn1VqnFVwcd8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>2e379c46-370e-4e5a-a38f-63f8143c0790</SBAId>
+    <RootSBAId>e83e525d-7231-4d60-81d0-718031b60ed6</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637007646478917915</SQN>
+    <Name>Restart VM</Name>
+    <Description>This script will gracefully restart the selected vSphere VM Guest OS using VMWare Client Tools.
+VMware PowerCLI needs to be installed on the machine running the script. </Description>
+    <Category />
+    <Version>3.5.19</Version>
+    <DateCreated>2019-01-15T14:40:06.437</DateCreated>
+    <DateModified>2019-08-07T08:49:04.8</DateModified>
+    <DatePublished>2019-01-15T14:40:06.437</DatePublished>
+    <LastEditorName>oleg.alter</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>aIirfgjTQ+NBKma3ki+V8WGgGrI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>oleg.alter</Author>
+      <Tags>vmware</Tags>
+      <Credits>Credits to: theartvark</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>oleg.alter@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>173</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>6732b0f3-e199-4b40-8ae9-d3943a8de4d1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6732b0f3-e199-4b40-8ae9-d3943a8de4d1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmToolsState</Name>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8674e581-9afd-40fc-afdb-e073fbed97e8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8674e581-9afd-40fc-afdb-e073fbed97e8</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorUrl</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Vcenter server name cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>2</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>29fdcb33-68db-4cb5-8948-7fd16dca38f7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>29fdcb33-68db-4cb5-8948-7fd16dca38f7</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3b2fe4a8-ee29-4957-8030-894913183233</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3b2fe4a8-ee29-4957-8030-894913183233</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>7Gb9f8XCWepQXHI77lN+wvjEYMk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

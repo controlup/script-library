@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e37c630d-c939-48be-ba38-47026e23974c</SBAId>
+    <RootSBAId>deb36d3b-bc51-420b-8faf-8939b41892fa</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636896347317825167</SQN>
+    <Name>Record screen video</Name>
+    <Description>This script creates a video of the entire user display area and saves it in a location of choice. This script requires ffmpeg.exe to be downloaded and placed in an accessible location.</Description>
+    <Category />
+    <Version>1.3.4</Version>
+    <DateCreated>2019-03-13T00:23:23.687</DateCreated>
+    <DateModified>2019-03-27T22:53:18.57</DateModified>
+    <DatePublished>2019-03-13T00:23:23.687</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>8cvxrkl3KRFWdkGKdRRzE/FXI2U=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>screenshot, session recording, citrix, vdi, rds</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>168</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>69888</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>3600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>aa44f746-6056-48a3-957f-6cfe4062f198</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>aa44f746-6056-48a3-957f-6cfe4062f198</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>FFMPEG location</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Please enter a path where ffmpeg.exe can be found (without trailing backslash)</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8b5951db-05c4-4d6b-85d9-07df22f5aa23</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8b5951db-05c4-4d6b-85d9-07df22f5aa23</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>FPS</Name>
+                  <DefaultValue>5</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])$</ValidationString>
+                  <ValidationError>Please enter the desired framerate. 5 FPS is suggested as the minimum.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>820dde5d-952a-48c3-8631-4a875f1cfcac</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>820dde5d-952a-48c3-8631-4a875f1cfcac</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Scale down</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please choose True or False. If a video is scaled it will be half the resolution of the desktop dimensions, almost halving CPU use and file size.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>69d86611-01e4-4a37-9daf-02736a2dc830</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>69d86611-01e4-4a37-9daf-02736a2dc830</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Video save path</Name>
+                  <DefaultValue>%TEMP%</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Please enter a path to save the video (without trailing backslash).</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>18122547-3a50-4164-b13d-f6352c1cfe6f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>18122547-3a50-4164-b13d-f6352c1cfe6f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Duration (sec)</Name>
+                  <DefaultValue>15</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([1-9]|[1-9][0-9]|[1-9][0-9][0-9])$</ValidationString>
+                  <ValidationError>Please choose how the long the video will be, in seconds.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3ffba998-22fa-401f-83d4-299d4442427a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3ffba998-22fa-401f-83d4-299d4442427a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Hardware encoding</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please choose True or False. If True mpeg encoding will by done by an NVidia GPU. If hardware decoding cannot be used, ffpmeg wil exit with an error.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>WVRiHE2PxUIPVL6HgJw5bBHJT6Q=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ce3b4a23-372a-484e-9151-775edaef96e1</SBAId>
+    <RootSBAId>321632f8-95d6-4704-8db1-ebfe1c705d43</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636212962601752000</SQN>
+    <Name>Remote Windows Computer Management</Name>
+    <Description>Opens the Computer Management MMC snap-in for the targeted computers</Description>
+    <Category />
+    <Version>1.1.1</Version>
+    <DateCreated>2015-07-21T10:46:20.48</DateCreated>
+    <DateModified>2015-07-21T10:46:20.48</DateModified>
+    <DatePublished>2015-07-21T10:46:20.48</DatePublished>
+    <LastEditorName>Frank Recker</LastEditorName>
+    <CreatorName>Frank Recker</CreatorName>
+    <Status>4</Status>
+    <CheckSum>m51eM/Zr5KK8+4H54g2dkLFYH7k=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Frank Recker</Author>
+      <Tags />
+      <Credits>Credits to: Frank Recker
+Original code by: Frank Recker
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>frank.recker@benteler.com</ContactEmail>
+      <Notes />
+      <DownloadCount>248</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>QAAgAHMAdABhAHIAdAAgACUAdwBpAG4AZABpAHIAJQBcAHMAeQBzAHQAZQBtADMAMgBcAGMAbwBtAHAAbQBnAG0AdAAuAG0AcwBjACAALwBDAG8AbQBwAHUAdABlAHIAPQAlADEA</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>d8be2465-54d4-457c-bb59-1b0a483fa5d4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d8be2465-54d4-457c-bb59-1b0a483fa5d4</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>ljiKzZHE/tbaVtds3AWNUNkWZhY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

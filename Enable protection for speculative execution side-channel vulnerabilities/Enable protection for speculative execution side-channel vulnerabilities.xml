@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e278023d-bcc4-41b7-a1e2-f040e45dd887</SBAId>
+    <RootSBAId>f2bc662c-1395-4bf1-a35c-73fbff916fed</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636512716350970000</SQN>
+    <Name>Enable protection for speculative execution side-channel vulnerabilities</Name>
+    <Description>Adds the required registry keys to enable the mitigations on the target computer.
+Requires the relevant Microsoft patch installed on the target computer.
+For more inforrmation: https://support.microsoft.com/en-us/help/4072698</Description>
+    <Category />
+    <Version>2.2.15</Version>
+    <DateCreated>2018-01-04T11:31:01.237</DateCreated>
+    <DateModified>2018-01-11T12:31:44.063</DateModified>
+    <DatePublished>2018-01-04T11:31:01.237</DatePublished>
+    <LastEditorName>Rotem Agmon</LastEditorName>
+    <CreatorName>Rotem Agmon</CreatorName>
+    <Status>4</Status>
+    <CheckSum>SfoPwKQsKcRjbLGqUlYjNVaTm0g=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rotem Agmon</Author>
+      <Tags>security, powershell, Intel, vulnerabilities, Meltdown, Spectre</Tags>
+      <Credits>Credits to: Rotem Agmon
+Original code by: Rotem Agmon
+Registry key taken from: https://support.microsoft.com/en-us/help/4072698</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>rotem.agmon@controlup.com</ContactEmail>
+      <Notes>Added third regsitry key</Notes>
+      <DownloadCount>61</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO2RQU/CQBCF39nE/0C49KTBePOmjUSiBYKkhKQJIYLYCC1hWxV/vd9Oe5By5mBiNtvpzOy+ee/tVrk+tdROTm/ENeuS+MVu6UIh/Q1rrkwLKm090yno9Pgu6Qy5m2trGIX2dmvI+QK8lkbUV0pBL+jvdcMK9KBH3WuqmZ40YMYtcaaIGNLrqU83YdKUPeY/IgtVgrADLwPL88oMM4dxxSlpVBOrO1Zq9RY4XsccRp5tQu4V5MbssLup5wSmp091Y450+XptpTGp5hbgZ9xyaPkw5B2VRe1gzPk1533Wwb9zneHWv+unc90jOr0fuX/9J9wfoHasCfWRVSKQXmyeY7+a4xPTvjAdjol9bjTfKq4VVq+QkKfGtjRHUn0b36rb9Dsy/JjsEKVrrxaivNSdubyEhT/tkVa/EN2R+4GucLlDbOsHkbuRgXYEAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>dmbGKwhZbw54BH2aS9QlWcCWgB4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c0b8d9f1-36e5-430c-86fe-343b3af5c0ba</SBAId>
+    <RootSBAId>112327ed-6b48-4c58-8081-df421bdaaa9b</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636976743932909703</SQN>
+    <Name>Get attached USB devices</Name>
+    <Description>Gets the user's USB devices</Description>
+    <Category />
+    <Version>2.3.7</Version>
+    <DateCreated>2017-06-21T09:12:10.017</DateCreated>
+    <DateModified>2019-07-02T12:16:23.09</DateModified>
+    <DatePublished>2017-06-21T09:12:10.017</DatePublished>
+    <LastEditorName>theartvark</LastEditorName>
+    <CreatorName>sebastien.le-gonid</CreatorName>
+    <Status>4</Status>
+    <CheckSum>nU/167pSWXpUM8dFxCdgBTn1zSQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>sebastien.le-gonid</Author>
+      <Tags />
+      <Credits>Credits to: Sebastien Le Gonidec
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes>maybe?</Notes>
+      <DownloadCount>127</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAK1V7W7TQBDc30i8g9VWAqQ4LUVCIgKkfgGFtqlIoSCEwEnc1iiOo9gBQum7MzN3SS5pWiGELNvnu/PO7O7s3prt2RBXgXvLOlZZhnHfjvGd2hluvvtYSS2yZ7jvWQu7ChtgdNfu2FNb1TvyVx3rH+3ImrDRsn3c4epL2KmsxKiyC9lMMKrw7Oi7i5l3+Gcb7y6+v4MPsUtZmcfZBfeW7dhboBzbCZ5N4P4ftMhGeGbw/BzjUzuE9ch+YIaWZvZOteeRbdoXb2lH8asU0x4uRnA3sB3h2QODEldtaqkvBhnmBlodi0OCuwSTHFcCO2N8F8jKDJ/oZ8peLt9c9upLorVnH5DhQ0TqAONw7QS2MuGV4DbEeABL5JmIV1tIjIeLGLMfAZXYt0WQHBNZyuXRxBK/evh/JF1NOE9iTV+4JxObQv5lWBlJicS7LwXS8kg4XE9hkWt9/EHEpr2xB/A6Qt5CX4hciv9yr4iYw/9EaP+iG5efUrPMPRGdzx3Fua999bkMzGeKtXMibYfz29KMwy7kS2o/MZdLMann3tXoTOrLMXqtHY7ZNmZHylmCeKY3MpgomPYra/y1QiqtnMv2JFcTJg1FrNSKi06p+iJSiH0oHzLltBMoOvIMKuljLHub9gQdacMeW4zxhj3Ed4Qx+Ra+osjrvdik/ovrWxh3PUOymMUwnXbDSOpltHpemzXPnDs7AbPE10Gp/6qpkp2iCh8VzjotOI3lygX7yfhaXFnzbV8Dy6I0r5cDaPwIeg9nL6TXAf5u2Doup9I28Atwof5yRZi+ltJshTnHbB3/Feh1jEUpvbOPrSuvFeLHmmn7t/M1xm7ai31fK2ApC7IXBz2PmY/1X3wDzqR3rdrzYByhz6fSWIq/WVuL+bieiVmVLuvKTh+s6kxdgTiV77KXS86RGN2eXjbh/bcp5r+cAL9xvxDH1PeFeMHqJe5PHu+zrcF2XTYGOiu6enLflbfWCuKwaOvI94AaqosRGiHbidZcTx1i5Vhn/k5wMoWM9/FVW+i6DtXF+SbE0FN3PsWozUQ6dLW4BWuskxaQfvmedKWnq/6OTtv5bJyqUtifYnsl/RJzRV0qvaUzU92jhXPCda7hgrK6Ojn20P86ivms1kPFNOwr5pibFc/7D1AniQNOCQAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Cs91P1xyBZOfDzYGmoTOYJIkH5E=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

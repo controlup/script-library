@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>b88ed226-ba42-496c-9529-f6f9c974ee37</SBAId>
+    <RootSBAId>ba0da834-65ad-41e8-9345-5cd9d89b0ee5</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638009022277247740</SQN>
+    <Name>AVD RDP Shortpath for public networks validation</Name>
+    <Description>This script will test the connected virtual network of the machine, and validate if required outbound communication to use RDP Shortpath for public networks is open.</Description>
+    <Category>Network Analysis</Category>
+    <Version>1.1.3</Version>
+    <DateCreated>2022-10-05T19:21:18.587</DateCreated>
+    <DateModified>2022-10-06T15:43:54.727</DateModified>
+    <DatePublished>2022-10-06T15:25:58.703</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>8wqGKtuo/9aKOEDzeqQ937gP9ls=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABCRJREFUSEudk3tMW2UYh48jwlwWt5iMMHEGcBv3i1xKgdKyQrkVZltYwyYtMMExGmOMl2RBzSC7JERjMmZiVDSOOdlch2Pihs4ZUEDBsiWlpfQChbanBcr1L//Qvb7f6QmhtDC2N3mSr9/3+z1fzmlLbTadpdxtBmVejrFKdMZYLbppqhYNIgNkjZwZU+bxLxembmPjW5+fJZkBOoWw1qDMnTBW54O5tggsJ0rAcvKwB1yb64oBLwHMmPUKYZ1azNnaRSNHBft0lcIBQ1UemFE0oZJsCsmQrK7yUP9IhWAfq/E/w3J+jPZYDj1+vAAmGg4/FoaafMCufUieHc3qvKdPlhlyv4I/RYKWenwdT8AYdtEx/bssM5jVrs5Tw0d4XaMKIVheL94SU00qWLKawX6x2WufONB1k/V6pk+aUaiRZ4OpthC/0EdjbUa5i4bl5WWYt1m9zohDI+cBOvNZPUX1S7l3tZU5YDoueiTWpgZYoB2wuLgIbicNxuY3fDLEhc4eRn5VlBgyIOX+O16dC6aazZk8fRLcDjvMz8/DrH0aDB/W+80RF3F+m5cYTPWUpJT9WcYFY9UhH0wnisHWehp/70LmM60ZhLm5OYbJby745NcyKONCjzhFSvWIkxuHyjLAqBD44P67H1ZWVsDVfRWMyhwYe08JjgkzzMzMgGvKCpb36/z2CMSJ7lPUT0VJHw2VpcP4q9nr4IPtXjcsLS0xOG9/D+OKHNC/owC7xQQulwuc1gkwn6rx082Gv9DZXZjUQnXlJ54flKSB4WiWD/pKAUzdvQULCwsM9B01lvmge1cJNryEpmmwPRj22yVOdJ+lrufGqXpLk8FQkeEX/TEeTP36I7jdbgZ71xVmn1xiHhmG0Q/qfTqE3pJkQHcD9QUvknunIAHG5On+qcgEOz7F7Owsg7njy9UzvZzrnV3dTwfi/DwrkkOF7ggK+iE31jUiSQF9eZoXJDx9q4N53wST+hLojqBgXW49GnR1CmPppOd2BjH/hfbsyJZfCuJBL8NL1mC9/jU4nU4G4412GC1DwbqMP4gLnecZOZm3YkKfvyaIWhgqSQSd5OVVTLc7weFwwPiNyzCKxbVnG0Ec6HKrovaGsHrPtHIiXlMLIuFBaQLoXsGLEG05B7Rn3watNHl1bzPuY1ctiHp4IS2ihtV6TcBn6RGtav5BGBHHwWhp/GOhwQ7pouMT4vIofSfwYmrYx99l7X/YJ4oCrTh2S/Ri9krW/v9aU8NaQrY/Hci6NpyApvjQ8rb08MlrWS/Bb7n4RIV4WVG0Fxrcuyc8CCTTxgm3NmOHdD2KLUzS7h27zyWEqj5NefGPNk7YP+3ccOjI9EDWX+EeOTuX8ILqwM6gXWztiSYwbtczwW8eCOY1RofIGmP2ysg65tnte8iZJ7LRUNT/VC9a3ATir+YAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>Azure,Avd,Shortpath</Tags>
+      <Credits>Credits to: Ton de Vreede
+Original code by: Microsoft
+Taken from: https://github.com/Azure/RDS-Templates/tree/master/AVD-TestShortpath</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>2</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>+Y2Uw50Xp+WNdhLOSmVoxPEudJ4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

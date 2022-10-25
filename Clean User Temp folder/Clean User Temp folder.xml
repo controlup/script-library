@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ce1ac051-59aa-4faa-86ca-1eb223d75801</SBAId>
+    <RootSBAId>b7df92bb-68d6-46c4-94e4-9aef0346511a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636977533412851597</SQN>
+    <Name>Clean User Temp folder</Name>
+    <Description>Deletes all files and folders in user TEMP folder.</Description>
+    <Category />
+    <Version>2.2.14</Version>
+    <DateCreated>2017-08-23T21:20:10.337</DateCreated>
+    <DateModified>2019-07-02T12:16:27.48</DateModified>
+    <DatePublished>2017-08-23T21:20:10.337</DatePublished>
+    <LastEditorName>theartvark</LastEditorName>
+    <CreatorName>Andy Gresbach</CreatorName>
+    <Status>4</Status>
+    <CheckSum>fv1ww7VZ24WHjixhKdVvpaiul5g=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Andy Gresbach</Author>
+      <Tags>$User</Tags>
+      <Credits>Credits to: Andy Gresbach
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>385</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVYbU/jRhCez5X6H3KQU0AiEfRDpaK20vWAK9LBIUKvrVrUmtiB6Jw4sg1cdOp/78wz++a13aOoleXY3pfZZ2aemZ3NkI6p5Kvg+xXNqKYFv6/ogr8zmvMtzxX3ZDSg7/ge0ZRHFbTmty/pC/qWtvEcmGvC/b/SOb1jGVM65TvsPWI5Od813xV/J/yV83PO6+aubUUp2gpuS4FB2hfcPqB7fpeWAV0x9jNepTlygvWaiI545JRe0yXjueB5p4zuvDHmiu6gYcWalrzSmhEOIPFzaBVVbeZbdCP0dSMcwMI5bTqQHtMv7AeZ85bfw75xgPJpq6z4mfFXBXwF/95g9gzYE/SnpnXG3ypVNBLd77ilcr0FLdEnckRSzr0l3XJbjPEV32sw6pZ/E57nZeXglFo24WfSsl+fLjVk1EBvkVYOq2q3hH/m3LsKmBzia9paOHoFZoTtU6drU4vKrLBBj+ivMdHPhT5dbhhhDf8UeOb8nNEHN3PJ2Kyvq9Yaj3jPnTdDjqbgqI7KMGoP73c8Z8a/XoPQ30mHx/7JopOGvU6hwwKrroOsURo8KqmEDNVQxzYjzUaEos0wNmlEu+XQDPaqnLZqi4TliFcW0MwirSKs4fsPkKdSCreeMn0JtMKtTQtpxX03PEK0qMw64osNuC+ZS97eQP+K2xNYPo7015gnPvvIv4fc8pPTVLlddfD3jFtSbp9Heg6MVWvk8Q3kfUXf0D59zc99OuB3m0F0fArPvwfKzHyNgatEbrBskhyuVklNblhhHRmjlptDe5mhDAuttQerppgrozO316g/xVo5ZN6Sz/uVi8C5QadW/NDy5TZ97yx7ErF0wC3N2QP61JBwgRymfN9p9Njrt2CMRljJI88M0sTZW3fGIX8LzzPWu0uaX7eAdz1Smb1Pu3Tdg6KCZLXTNa9zZhiSIAN3r/Zvsc8RS9Uz0R/0oh9yFvyIXLl2c/oQV8huyiTR8x3qjKoxercVS9uk2VLzSpytbG574O/U5NCYV3HmnpnsUSCz2vzg2VuhraQwb6pH9gIeJyxfRtVmb5h3RIBKmvF1bzJmnF3nYOeLTjtKzNrVXgT22m1xPbTVz+BSHWhaI+NqHp532idkYJdcL3NMP4IhNXzfZKrgPYH2GWxWwFcpsmFurDIyuVMQjRpr/dXpebVQEnkotuoAz7Xxh9YNoa8kD9taoqsSVF5KfvP18lse94B9Vvgf4jo2kfR/esHXEbrDWtyhDXR8hhzQHZvWVxPef07516MK9VygVtxp+VN4Fvsk1PEIManV0ibCliIrJahmqk4JlvtdzO9n+HN12+qMrxDlIf3JbV1otkxWijG0GRta59hxztsl7+WU55adddARHX5Ftb+vDZ9z1opPNf1nLq1fLDPHPadKqa51beG51Hu2DpKZ9wZl5VYu0eIrXtFg6bKLfD2CWfac0tSteWaQbFJTX9Ucn4F0/Q1WURS2Svc5ujb7Z5OHQ7aR1PDroMZbmT1Adso3WHXMvXfAmqKCzlCFbPHsHd4Hp9CpNmeBY54vu1cJeUsj75r5eAg2rI0Xu8e9hwYL7EZqmR22xEvnyZf8tcvX77y6eO4SlrgHD5qnO5u5E1PpSWQuHHZlTL/2/RF7iRkFeD8OrDFGBaNZd+jaJ6j0hA/nprZpo/b7zMx8PZePfRE2CyreT5GV4qw9bu2CI3O6s/xOTCzaekI9tWzw1FfJGgs2NuPI9RH9uf8o+qN5ZGzWzodD+iPKM0/T9+Q/R6n10wPG3ph6IY7rCYXn+adYyueMR+efMPJt3ddGmXKPyrDneo/vnHU4wUkqQVWi1glP2ZJHSvg8gR3EB38D6NR1mpwTAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>P3pxYSp1JBTLGgOAb1pjAFtsSxI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

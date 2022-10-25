@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>fb58cbf7-0382-4fbb-8554-22f9ad7eb92d</SBAId>
+    <RootSBAId>66d66f14-2b31-4e14-beb6-2d79d728e380</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637164047624882375</SQN>
+    <Name>Show Horizon Admins</Name>
+    <Description>This script retreives the administrative users and groups in a Horizon View environment.
+You can this script to make sure administrators have the right permissions in Horizon View?
+This action should be executed against a Horizon endpoint machine (one which has the HZ Primary Connection Server column populated in ControlUp Console). The script uses the target machine to determine the connection server address, and is executed on the machine running ControlUp Console.</Description>
+    <Category />
+    <Version>3.5.9</Version>
+    <DateCreated>2020-01-11T23:00:05.253</DateCreated>
+    <DateModified>2020-02-04T09:11:06.813</DateModified>
+    <DatePublished>2020-01-11T23:00:05.253</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>JqLsNnexGV4heQXObGOIzE2uHZU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>vmware,horizon,security</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>36</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4352</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>6d25accc-6e4a-4d87-be75-cff147951fd9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6d25accc-6e4a-4d87-be75-cff147951fd9</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HzPrimaryConnectionServer</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>zFVJR31cvj3LXaUxWWuyPreBWAk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

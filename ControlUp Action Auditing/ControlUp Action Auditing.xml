@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c2264123-f909-437c-8531-8c231367e863</SBAId>
+    <RootSBAId>3008059c-f51d-4f66-a349-420d212a6e6d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636234568489776000</SQN>
+    <Name>ControlUp Action Auditing</Name>
+    <Description>Audit ControlUp Actions against a computer object</Description>
+    <Category />
+    <Version>3.6.18</Version>
+    <DateCreated>2017-01-26T15:54:20.677</DateCreated>
+    <DateModified>2017-02-23T15:20:07.823</DateModified>
+    <DatePublished>2017-01-26T15:54:20.677</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>DCu2oetut+WmrGcZvggjbjlgjwQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAcRJREFUOE9j+I8KVixfnpqc7O3unhAXt2DePKgoEkBoOHTwIBMDCDjY2WVmZPh6eYF5DMuWLoWqAAOoht27dgHl/Hx8IFw4qCwvB4rPnDEDyodrAIqGBgVB2I9rC36/ewNhA0FPVxdQ9vPnzxAuSMPUKVOAQhD+v9+/TnMy/L5/58nnH7///IUISktIlJWUQNggdV4eHhDjZ524/v/PnwtiDP+fP2SIatl36ylYzf/ujg4tdXUIG6RBX0ensab68be/DOFN//78uigO1PCIIWPCsUcf/89l/v/11tr1mwV4eREaHO3ts1JTXv/5z5DU9f/v74sgG8AaHn/5387w/8ulGbMWKMjKIjTUVlcL8/IAvckQ0vD354+zjAz/H91hiGrbf+/D/3qggnsWFrbxsbEIDe/evQN6urezEyKEBo4cPQ6UvXTxIoQL0gAENVVVQNEZ06ZBuHBw4MAhoHhEWBiUD9cABMWFhUA5RTm5ro6ONatXA8Pa2sICGPdRERFQFWCA0AAEN2/eDA4I4GRjA+pkY2Y2MjAQFRIyNjCASoMBigZMoCAjw8PJCbQTyieoAWgn0DYggPIJagCCObNnQ1lA8P8/ABsmN93XaLLEAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>auditing</Tags>
+      <Credits>Credits to: Trentent Tye, David Falkus
+Original code by: David Falkus
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye2@albertahealthservices.ca</ContactEmail>
+      <Notes />
+      <DownloadCount>185</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>3c256a9d-8c32-44d0-b12f-9c17fd5c44a5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3c256a9d-8c32-44d0-b12f-9c17fd5c44a5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>How far back to scan (in hours)?</Name>
+                  <DefaultValue>24</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d*$</ValidationString>
+                  <ValidationError>Whole numbers only, please. If it equals 0 or there is no entry, all events are retrieved.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>5V5pPy498l106euIw0vqp/p6eqo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

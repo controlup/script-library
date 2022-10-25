@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>38499e83-a77e-44c4-bbbe-33c45b8011dd</SBAId>
+    <RootSBAId>337a55eb-b9d4-4178-998c-4acc21b10d29</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636922083265117636</SQN>
+    <Name>Get datastore files</Name>
+    <Description>This script gets the files in a selected VMware vSphere Datastore, filtered by the last time they were modified and size. This is useful for researching disk space usage, specifically when you're intereseted in finding out which files consume significant storage space.</Description>
+    <Category />
+    <Version>1.16.49</Version>
+    <DateCreated>2019-01-16T16:57:07.687</DateCreated>
+    <DateModified>2019-04-28T15:53:40.123</DateModified>
+    <DatePublished>2019-01-16T16:57:07.687</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>8GEVBpGgHYDG+g6c6QnYAFfZYvo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>vsphere, datastore, disk space, storage, vmware</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>61</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>2097152</AllowedEntitiesEx>
+      <AtomicEntityEx>2097152</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>10800</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>2ae24542-4325-4ca3-895b-9593b7e29151</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2ae24542-4325-4ca3-895b-9593b7e29151</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Minimum size GB</Name>
+                  <DefaultValue>1</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[0-9]*$</ValidationString>
+                  <ValidationError>Please enter a number (0 for no filtering on file size).</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>de2bab22-f05c-4d06-8c70-84a8202fbfa1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>de2bab22-f05c-4d06-8c70-84a8202fbfa1</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Days not changed</Name>
+                  <DefaultValue>7</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[0-9]*$</ValidationString>
+                  <ValidationError>Please enter a number (0 for no filtering on last modified time).</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>dd59dbfe-7cd7-4d52-ae1b-19300882f4c4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>dd59dbfe-7cd7-4d52-ae1b-19300882f4c4</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCenter FQDN</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Please enter the FQDN of your Vcenter server</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bcd7adff-dee1-4ac0-87d8-2577573dafa5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bcd7adff-dee1-4ac0-87d8-2577573dafa5</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>DatastoreName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>r/lpMPF67i7Bkg0x7er1UY4Hj/o=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>86fc05d0-6e54-4a7f-84ac-018b30aa1486</SBAId>
+    <RootSBAId>1bac32ce-263b-44e7-af99-e916ec622600</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636860089117868000</SQN>
+    <Name>Show host NIC details</Name>
+    <Description>This script will retreive the physical network adapters of the hypervisor machine and output their details</Description>
+    <Category />
+    <Version>1.1.10</Version>
+    <DateCreated>2018-11-25T04:05:44.797</DateCreated>
+    <DateModified>2019-02-10T14:42:14.367</DateModified>
+    <DatePublished>2018-11-25T04:05:44.797</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>wTzj6z7ODpZ/60zn/SHzBoAeq28=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>vmware, host, nic</Tags>
+      <Credits>Credits to: theartvark</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>190</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>2</AllowedEntitiesEx>
+      <AtomicEntityEx>2</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>e67acf77-2479-4770-b879-8c280dcb2b66</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e67acf77-2479-4770-b879-8c280dcb2b66</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCenter hostname</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>20939a06-bfe5-4ff6-8f0c-2f5eba9e0cc5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>20939a06-bfe5-4ff6-8f0c-2f5eba9e0cc5</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f4062601-0eb6-4f6b-bbf3-17464224e9c4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f4062601-0eb6-4f6b-bbf3-17464224e9c4</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>Name</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>TENp5fEFon67UJj/TQH8VsyvnE0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

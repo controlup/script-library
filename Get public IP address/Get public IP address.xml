@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7614c6a6-e699-441e-a583-7ad020307185</SBAId>
+    <RootSBAId>64cceed1-3038-4623-a6bb-53ef77250fe9</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637418150674506927</SQN>
+    <Name>Get public IP address</Name>
+    <Description>The script uses a webrequest to ifconfig.me to detect the public IP the machine is using.
+The output will include the public IP only, or 0.0.0.0 if the web request fails.</Description>
+    <Category />
+    <Version>1.1.2</Version>
+    <DateCreated>2020-11-23T17:47:31.22</DateCreated>
+    <DateModified>2020-11-24T11:36:09.11</DateModified>
+    <DatePublished>2020-11-24T11:36:02.75</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>mtkecAuyKcmBOhNHGgHKY660ZFU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>network, internet, connectivity</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>76</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAHVUXY/TMBDcZyT+g0WRChININ4QIB0Hgr7Qqte7isckTS8RaRJi9w6E+O/Mjp006RVZttfOfszOrjORVjL5KQcpKFkxMpMbSC3kQmqpcPNGInklj+WRvJMJ90iu5Lt8k4UsIc0x9fYL7Bx9OMkhG2ngOZESnlKc5tA28LkbaOwlxrccGhXO6sX7/ySf4fVSVrRaY10gnn5bB0sLuxZ2DXwZxLEBf4x5Dznpc9N7x5g17TLadwjuGV0xnMd7HqnBbkNcvbkF5iP6C7kGzq/AvAqYPZNbWt4QWcbTC5wTeLY8m6CXYt9jHHAqgOD3g3wT3vmsW0har5z854w4kQ89nqfgssWoMS/gxYXKLoljRw8ZzinRvcecgntlq4GkHhw0NN4fnkwYE8xrIuhy8Lw1kNueF8Ndc4qD7hxnx6gVERvg+wWrkgh9Pjm1DTXuwl1C1ipme+AeY932NWoHdalY6x372lc/Zc56cwvrFrau73Dfk3PgiEYZPiPWO3z/Ad8z2bCvVid9NQMLWhkjT4DDYTTyVl5iFPA7jBuhphnvG+h6S+XkY8/ecsTdc1hc0t4xczdCp6wVROBf51+uKTPz/fywXpuzL2MHmwL8aw9GOK8HfKZk2bPvX0HFXtCvilrRWfqoWSXHN2Lp54pViPuKHF9hg7UEAkevNaWG6/HFxUCzDf8lyyyjwez8dvG6yqfMQ1ksidN3X9a/AM3Ex7HsgBKj0/Iv/jSuz2xPXsf9sWHdHXtjMcpheoJ2+p/KvQ6V+we1w+hMigUAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>O6EnngXvbXCjrT2UiS6Sg80+gB4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

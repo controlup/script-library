@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>fa35aca9-85c7-47c8-8f6e-207beec2e1dc</SBAId>
+    <RootSBAId>f96c8a6b-9622-4bd0-a549-b33517dcbd46</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638009019251491381</SQN>
+    <Name>Backup DNS zone</Name>
+    <Description>Backup the specified DNS zone(s) to file using dnscmd.exe. The backup is stored in a subfolder created in system32\dns
+The default 'Zone name or regex' setting of * will backup all Zones on the DNS server.
+A REGEX like ^backmeup$ will only backup a zone named 'backmeup'
+</Description>
+    <Category>System Health</Category>
+    <Version>1.2.14</Version>
+    <DateCreated>2019-09-27T16:13:43.67</DateCreated>
+    <DateModified>2022-10-06T15:10:22.29</DateModified>
+    <DatePublished>2022-10-06T15:11:14.817</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>c2jpTgNrmdG/wRy0Y5tDQQzlQNY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAA4FJREFUSEvtk0lME1EYx3szRk8masJVY7xo1BjUGC/GqNGDS9S4HFyjxpPGfYmKKJUy0xW7DN3ozLQZalsrdAOqKEREKLalIK24AZaWWttSwRaX8RleDIehMyZ60l9eXt77f9+bX2bj0X+Zf03Q159yPH37sm8Y7jnAVTA8nN+rqtptKd9kqFtbGt5xrTYSfg9rBeEkSMazxZbjN5Kno+NDl/2pzXX5Xbq2AwJseCgLO6aGk0B6z8EzzMUTwkTmy8UP9FobfapVfax/kdjqpr/DnqlgF3z5nF16RDBtH7m6omO3M7eynV6B0DvtN9ckeAtv7c9lxmDfFLALvuayqw4oZ61uLTr5YAHqWM7vKd73acEZzQzBxiWHkPFRlqfE6REZ8AhvtmK6Z8Oysa1bAvzis41LTkTmHw2p8G6a/gabpoCTYCSdWb/VxTu4jfd88ZzcmqLQ9nnnnfsvdY9k/tBLBmRT+T2HXTPPreNpFxYJLxwuqU8nMrBWEK6CCXyBkPq+2R94B/cc4CrI53PpdCo3NvotP57/PJpJp0ACawXhKsAJo1imFMlUfERWUiZEJXKCNMFaQbgKjEaKsnurzY1itfWGmCQsHpOJgrWCcBUYcFNnoHtgcKh/IPo+GgdrkMBaQbgKSCMVDIWi0ejg4CCYwRoksFYQFkFHh89itTmcToUCEyCSW7fR24jkJh8tKxcqlJjb47Ha7oEe2M0Ei0Ct1TsbHhtt9RhhLxXp3d5mASppaHpidz2WVNVcrVBbaxs0Oj3sZoJFUI0T1aY64m49bvZUU26cciBCKZhJS4Ohxg0SUDXgJOxmgkVQpdV/TCbhhqY/JBLXS8vBDPc0nUomQQ/cMMEiMBAkTtZQZtvEIIw1iKiSNJl/JQaCwsnfvwONVo+IZAJUJrmDIWKlQqUF11VgujsqnUyhQSRK+USi0slVOlSqKOWjAlSq0TDcCrPg57v1PsWtXszouoritZ4WASp2eltN95ukWvt1IW5zN1egktr6FourpVxOlYgIc13Tbwgwta7d1xXpext++ebVm4HWtk7wgT7zBUECBkjaO7tAAnKYvO7veB7CqrTw/CSYBTK5qrc3HIvFwD8Vi8eDwdCVa2U9L3phEouBNUhAHovFJ5LecERWqYTnJ8Es8AeCDx+1/BqPmp+0PfOBuUACht8fhOcnwSz4g/wXsEDTPwCkt/Otzq1LfgAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>DNS, Windows</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>c3de4748-2cf0-4eeb-8cce-0c27a7766774</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c3de4748-2cf0-4eeb-8cce-0c27a7766774</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Zone name or regex expression</Name>
+                  <DefaultValue>.*</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?!\s*$).+</ValidationString>
+                  <ValidationError>Please enter a valid zone name or regex expression.
+The default 'Zone name or regex' setting of * will backup all Zones on the DNS server.
+A REGEX like ^backmeup$ will only backup a zone named 'backmeup'</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d7a946d3-77d0-420c-9959-8577f99e7176</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d7a946d3-77d0-420c-9959-8577f99e7176</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Overwrite</Name>
+                  <DefaultValue>No</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([yY]es|[Nn]o)$</ValidationString>
+                  <ValidationError>Yes ort No</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Hr9GnpPUUwLRNtwfvBogevqnTO4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

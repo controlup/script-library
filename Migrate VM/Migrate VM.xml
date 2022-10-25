@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>97b28bad-c60f-4b60-9290-03b13aa6900c</SBAId>
+    <RootSBAId>a6021847-40c7-4503-a673-549128d1f748</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636934146157643419</SQN>
+    <Name>Migrate VM</Name>
+    <Description>This script will migrate a vSphere VM to the selected host.</Description>
+    <Category />
+    <Version>1.2.11</Version>
+    <DateCreated>2019-01-15T14:42:26.86</DateCreated>
+    <DateModified>2019-05-13T18:43:33.583</DateModified>
+    <DatePublished>2019-01-15T14:42:26.86</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>ldHOlF/0NeUEY3p6G78pmNcB9Hg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>vmware</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>46</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>70fe8eef-cb65-4d0c-9187-fbb9c1c1fe36</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>70fe8eef-cb65-4d0c-9187-fbb9c1c1fe36</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Target host FQDN</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Target VMWare host name cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>60e4fb46-a8ce-4bed-85b0-8599d24c8040</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>60e4fb46-a8ce-4bed-85b0-8599d24c8040</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>508db05e-7ac3-4d72-acd1-7d9fb5877ab6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>508db05e-7ac3-4d72-acd1-7d9fb5877ab6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCenter FQDN</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Vcenter server name cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e2403753-c096-4971-9691-b3f0458e31af</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e2403753-c096-4971-9691-b3f0458e31af</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>jePewyRSWKUKyB4JOkvW7PCx1sI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

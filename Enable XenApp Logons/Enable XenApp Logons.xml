@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>f40ab3e0-6a98-403b-a47c-a3a63bee7626</SBAId>
+    <RootSBAId>f46a75b1-20d8-40f3-bf80-d6358f0d070a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053177657380000</SQN>
+    <Name>Enable XenApp Logons</Name>
+    <Description>Enable XenApp Logon to the selected server</Description>
+    <Category />
+    <Version>2.0.2</Version>
+    <DateCreated>2013-11-24T10:06:38.887</DateCreated>
+    <DateModified>2014-02-19T13:20:15.217</DateModified>
+    <DatePublished>2013-11-24T10:06:38.887</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>aMd+UTzOfvCG1PJMK+k6MuBFzco=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>XenApp,Citrix,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>517</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>272</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a6S/xm/8ayS/xvjXeP1r/D6/xotf48tf4yX9dkb/x6ep/nf6ayx/jezXmPwa5a+R01+/N/27/DWOf40V/Zf+Gs9/jerXuKD/L+n3ln7i3zm3a+hfvDGlT/JfY6af1L/GJf871n5fEqRX9P8vqJc39P9X1O6MWqOP9tco6P/XHi5vFDbwWfBv1a9x3unT9JASxjlBWBJ+KcMzYwAu2/T/7NdYM84L+g19TelnSf9dM6Q1j7Ckz+WNCX9+8mt8xfj8+K9xxD/x/9+N8K7pv4r+f8zjLZgiL+nvnPDL+eeSvgGOn9H/PyIKo+cV/WagnPFItvj/n1PLlnDEbLxmzFc8EuD9wo79hOlT07/viJL+vIzpO4wLI1sS9g2/GccypR4KpgsojtGf8Oct97imz+/w2/mv8Yvo5+/Gn4FKKX0OvH9xwCtvCDroFH5q/jsmXGY8rqYzrvcZiw/5l/C7mL8p8cBQv+DzKffWEvY1Uw/QgOk5/Ybx+59jvmf0acMckHE74JcqtobfcktR4T1H1ZFtteR2AtPx6ZTHumKYVwwb2Gf0f2AhWC43jKViGTH8v8swjfRlDBWcKljlPP/um0J7zfjzJb3Xcss1wZ1y64agYpbHUQy+y7hDqn2eAld/FWgK0Qcl/Zt1Ru9m/qNfYxNndjnxfbDxpfJ7RKHvf3BPp8SbQrvdDg/iL/lXdEP6azxhboCGaZQWc+anVP81tABXC0+B4ssAp65u83nGcCNgrViPCW8KzTN+D5J4l7Ew0nFOnxnt0eUXIw+OpwEbvCnSPuG3zPjm3H5m9amMAf0aSgJGSRyxIqqjX+hReeOa4UKqxpZmcb3hW55t0grHpDWchhfb8yX3vB1843Tk70a/1dSqIR7YIR6QmdqkM/7/oCt+7nTE7aRx5wOksSuFTu78vr9NEBpu9ZHyCWBhLF1P4NxiuNXjljs0OrHQ/w91EUzvLAkAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7529ae59-20c1-4f58-a89e-292f15877247</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7529ae59-20c1-4f58-a89e-292f15877247</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>iIpEx+jJ17lcOKDtVJE5N16waek=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>393cc153-9da2-4193-b912-0375b2217094</SBAId>
+    <RootSBAId>20db6544-e67b-4a1c-934c-117f193b489f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636977533907521255</SQN>
+    <Name>Get User AD Group Membership</Name>
+    <Description>Gets a Users AD group membership</Description>
+    <Category />
+    <Version>1.3.8</Version>
+    <DateCreated>2019-04-11T12:47:37.723</DateCreated>
+    <DateModified>2019-04-11T19:00:06.267</DateModified>
+    <DatePublished>2019-04-11T12:47:37.723</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName />
+    <Status>4</Status>
+    <CheckSum>8dTXQR/8WQvz0cx0ZlhJ5re+4yc=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>$User</Tags>
+      <Credits>Credits to: Anonymous
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>458</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>1052928</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN1WTW/TQBCdMxL/YZXmUCRS2jsglVKVHBqiEoQQ4rB118SSYxs7KUTQ/86bt+uv4EagHpCQtfF6vDPzZubNOM/lQIw8lkdyJO/ko8zkrcyxm2Kp1ITrQpyspcJuLUvsDfZOUqwIEic3kGwoK+UQ9yd4PuW7RG55/jV2ZTifY7eF7AvuOfQKaHgMc2hdYV3KuSywrnDqfbA7Eysr7Fpci4AlC28MrMUdjDUiQ59Grim9BRIn33r+DfVXPFFCa4kzBeOdYFmcUQsr7DSiCPcU15Z5UP0CT0nIwzXlZ8CtSA/kJe+6xoiopM+yyU4O9HNmJqZvh+eIOF9gjVAH9VxgV1uZMsZDLl+XCfKVw/eGFVHMsyYj3SoM1WByDyYDzwntZZBprGeU6/sMnhxrPMH9K+5jyjQnBnJF+aPHn0Xw1pfW1xRYCyL4PZb9+LvW7ph1rVCE+t3nS/mu9StwbkNrWt+M6GLsNOauXCt6A2nFGlueS6BrmIeWa67Jou+NNpNPm1MZz3mbbR9F0EmIx4CVCd+ob0MUHmW2JxbNVsv9E9rMgwdLq8pFj8o1PWxDDN6rpTyD3jpwOiILK1wxa3E0iOADsesE6PJIeTsLtiz6wVfS92CKX9vLQLfeo72M3GXg3yDq9t4nZOnzgz2dy/eQv5MdHurTXdOvWqVXZIQNE8nHnjDnSW+qrsjAjFzccBK0mPqzrc+bmpFqq+C08vz0ObfU0355RhR1h8SQ1XNilzN1T7S8rgI/fZf7WVrHtwy9koYZ6GOwnUyqjRQ8LJD1mMhd0NgGBm4Dx3QNz4t62p1iEsxpQzOkOdB5fNFM88uBWa7VnrJTfF3XtD+GZonvQAVOHJMTP6X/bTO9787+GfM/zJZ/N1P+rHOPH9C5ux3b9mjX9xtYqHhq1PzD0C+wY7e0niL+IyjIlPo/0FCUKZk9kl97q2nJbAkAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>85ce9e53-f745-41f1-af1c-f3156358d1a5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>85ce9e53-f745-41f1-af1c-f3156358d1a5</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>ADDN</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>hyHUdd3/R5dxExc5RfxfuzWMHLU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

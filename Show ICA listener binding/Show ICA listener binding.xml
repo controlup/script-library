@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a029b37d-867d-43f6-85a7-f021baae51e1</SBAId>
+    <RootSBAId>727b5f57-6515-4489-85ae-f65f2247efc2</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636813435969716000</SQN>
+    <Name>Show ICA listener binding</Name>
+    <Description>Checks the computer registry and displays current ICA Listener binding information - if ICA is enabled, displays the adapters to which ICA is bound</Description>
+    <Category />
+    <Version>2.0.3</Version>
+    <DateCreated>2016-05-03T16:05:12.317</DateCreated>
+    <DateModified>2018-11-05T07:41:58.097</DateModified>
+    <DatePublished>2016-05-03T16:05:12.317</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>2Av4UJgNLmlZDHyeAb4exmf8PmE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAAB8AAAAgCAIAAABl4DQWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsAAAA7AAWrWiQkAAAUoSURBVEhLpZY/aNtaFIc9duzo1fAWwxsq6PACb2mgQwMdaujQQIYSPBSRwRgPRngxwoMRGYzxEEQGw80QuB4M6hBQF8PNUFAGgzoElCGDhgwaOnjs+44kp/nzcNr3zOEiJOs7v/O7596ryo/f+enPkTcK2j31iy9VnvyfOg0KIqM6MdFF8n/p6tS4Q+UONEQ9E+Lq+48isuzHf6Gjkdcgjo8C6PEyXRNX2fc8MtCMq9+gw4Lon4QQk+ts9X1VQNWJGo88d+A6PdcbusE8TNNVerNiLOhqqt3BuN3xNnhb8Q41csqqc436lArc2gun+odT+1OCC8IdePG3JLmB7re7nn+swy+YFrtDn0f/mqPCX6VeKVwCtNN1rL+98dS4E9MehEU4h6b6wvGG4/gyRbtZmOwmS9MsuUziZUxl7ZbrT/WDHCVdSr5Z6ZkW9CsPXKOpt94q67Vf+8uvv/K3PgTcJ4GW6fGhp9cp6OTq50g1D4yCrpAsKq4zMeSlK2J7gd0NSFDk2D0Inr9U9XeaHPgAHU+gi/z7I3Vgmjf0iyKEjmrQaupjMdxwkWALVqhZbC5ScofnKdxGK7Q+hnZnzCvQQZeBpfk1EknG3EgRLXdNpxlShFO4t9NUdAUJeMZUY/3Op4CwB8Y/S6DvttAudLNMdw+jxoAw+yOjzyKziPQ8VCcBo33wk57hOJ7w8tZ7FV9l0EGTUp8lVFaUSb9bn4zdVzhDcfZRzD9pIemi49gZargFmqVzl74SW1669b2w9lbhBtAct+L92zaAXm9G7kg5A52jhUtQE/LHEwWUOdfzwFu497RDp/x60zx/E5KDInhtPEuib/foWx3jjnL0dYlWX8QfUiKZvgzOTLBQ/rn/iN4KKLy6F1feJc/fR3LxxpicjkvhRQZ0t6MaQwNaGuFmFXwVtCdoU6DJIfLvO5Ox7vd7ut6Jq83k2V5a+ZBV9lakUYtULbKdYVLvJQhnNUGHW9DX6FCga+3hUttLu9EPy55JrjL2LHYVnLG6afUge3awyiO1hml1kNYnqXUY0cggaJICTZCpsJsWChcR2hnV54j73iyxJ5H0e0HnGf2AfIi1YVYdZbWjrD5NrZPUGhm7KwvdnMcP6GqWew03T+DPpUGdaeyexjt9U9LZwQn6ye75Vt/UJ7E1TSQm0bbsWS6PQIdCN4V23GcypNPnJVpUD4x7mhDOsXlIN19jamdZoXS34+53ZPul9ryFDbtpu694v0AT0WWmFyl3ABVRoLFlfxi2j3Jn2PYQDrqM8ziffQn2/QIqB8tIM40sHKCgaSd6BjpNSdD1REHnYrulMaekr9HkSHBATr6Bdvo+4U8Dlni0TDAhupYuhC7cR2gkE7TZdido9IKyZ9Au9DVUDoe+dAKPnf6Y04o/oBp0uMzMZcaIZARKv94RLne+pPQiYbfkPBHtnMso5QIoFt89AdjqUA1a5hD0txLtzRN/7UaRgHwEXdjoavb99VrtK47/DWcjk1a0B3QCvaC5oO2spq6vg2u8Bs0Wz25c0jd/zxSqg7voWYneOtC4F32NCIgE59Ttpv9LdDqECRTVF7nqHM3NB2isKA4pghbgbLKL02ODdihMlHiyRkdXspU/RqOatSrQA5cNg4+R8uTbQKcFi44m8Bo0kwaaFS+GXIgbbI23UP/44fxt0m411Xgu8gncJ9nWJ2V3PbjssRzfhdLH0FvFT3yl1vd8Zxq1J4Z+2G6V0vCUL4vx0dNfwk9/A9c++NbH8gtic4M9fvoPcAHYy3nxc0kAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>citrix,ica,hdx,xenapp,xendesktop</Tags>
+      <Credits>Credits to: Trentent Tye
+Original code by: Trentent Tye
+</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>67</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVVa2vbUAzV58H+g/ECXchSknaPrqOwzM26sjQMlq2MeR/ycB4ksbPEbhdG/vuOjq9d20mgdBRz37rS0bmSXJKmLPEFaA3pSygTzH35grUnQzQdfZx4YskZmi1fIRXIArOn8oStRKmRTNGv5VIc6EqkP8lnacmVnIqLmz/QOrB5hZUjEW2r/hCrgKNimUHKw9wt7Lq4q4jmQOlLFzsWJZdyw96Va54owm7qywr7MaYq7jvwLUbewY01NPxFKwFjQ75TZwRdiv25XBBFFbdDzOZkRT1XWyHv7vK8LIfQ1oXlhgwwLnh7CekN7TrE1pexsX2NswllqmArAN6QzHUgoawnfC5oXbnvkw0Lt1bofe5a9HxFz2f4PNi26L+FvbGR1ZtzaIpSTAH7HsYIsgNKB+gV/5pj1odD4HqH3ab8IebEJ20TxIuyVuTSgl+e/MZYAzfqs0pb5ruv9y16EDJaYuSxR0XkpxgbZMCiZCi39HG65UvChw/cE7xhxLdUPbdENM4xV2Q/jqENuZhBwtvyLB8bLb7PFPZHmVz6v+xIYn/C/FwxPzS+L9HcgkW7gO0DTwcpr9YDYz5vRWM/0Zy31ybKvLX3sFdO4yeRfUb9C/jZNXXnQr4Bz3nuZSJyrnEwZAR5tDkjQq0Nc+xktQ4ZBR51jk2c+sQUZ84uTsomQ62cpjufkvtnuVV1C7+N13Ch10vfSte2vOCZvVd/lmcHGec/UlVt5/LEhc8vwfaxvIbOt/JGjuBTE+sjeYVZHZ+DdRV8fcSsjllNTtBqkOhBVx2zY/QnyA+X/lVyDFUMJzEOzdK7P4+9h4s4ftrmZR8arTGLGqXtHTGyP1or5o2LKLK3N4UobvAdukQR12XFlFSdiC+g8TZiZVIrB+DtgNIB+whshtTR53ndRLvW8Lg2eayMu/41N5n62yPDXZMzlqnc98VUR3vsil1k/OeO/0iZuaUs/Eqrr/b/AAzVIoXECAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor />
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>K/ZhqmoqGast22A9D3eUF/tUt6o=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

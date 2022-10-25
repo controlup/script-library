@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>359143cb-7746-4212-a425-89bd465c38da</SBAId>
+    <RootSBAId>e7c31fba-4c27-4242-8a6a-56e76a7cca52</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637465664599483894</SQN>
+    <Name>Update VMware Tools</Name>
+    <Description>The script uses PowerCLI Update-Tools with the -NoReboot flag to update VMware Client tools. The update command -NoReboot flag should prevent the target guest machine rebooting. However, the VM might still reboot after updating VMware Tools, depending on the currently installed VMware Tools version, the VMware Tools version to which you want to upgrade, and the vCenter Center/ESX versions.
+ControlUp Console may disconnect from the target VM's agent while updating the tools due to the NIC drivers updating.</Description>
+    <Category />
+    <Version>1.3.9</Version>
+    <DateCreated>2021-01-11T15:48:49.513</DateCreated>
+    <DateModified>2021-01-18T11:29:00.623</DateModified>
+    <DatePublished>2021-01-18T11:28:59.97</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>jipDa31wm6/GHn0XrleIBMFBXnY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>vmware, vsphere, virtualization</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>87</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>420</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>56e64d00-b929-4a24-8831-489751f8a68c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>56e64d00-b929-4a24-8831-489751f8a68c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Ignore VCenter certificate error?</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)^false$|^true$</ValidationString>
+                  <ValidationError>Set True or False on wether the script should continue if the VCenter certificate is invalid.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>046c1ed4-55f0-4d98-b885-063cebb7ef30</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>046c1ed4-55f0-4d98-b885-063cebb7ef30</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8fb90f1b-3059-4f67-bbd2-80be0bc4675c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8fb90f1b-3059-4f67-bbd2-80be0bc4675c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>2</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ed30a356-9c14-4871-9bad-ef8b3db924b5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ed30a356-9c14-4871-9bad-ef8b3db924b5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCenter FQDN</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Please enter the fully qualified domain name of your VCenter server.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>kh6fE6bOSJx2lroMBDiE6MA1bQM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

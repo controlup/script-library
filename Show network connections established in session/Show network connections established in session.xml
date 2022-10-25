@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>fc4116b2-8da4-4d06-b1bd-30077c29d848</SBAId>
+    <RootSBAId>da76f8ca-23e0-4331-89ca-cd0b4b9bb8a5</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636784078571598000</SQN>
+    <Name>Show network connections established in session</Name>
+    <Description>Shows established network connections for all processes in a selected user session sorted on the most connections by processing netstat -ano output.
+Arguments:
+  Show Top - Show the top n connections (default 1000)
+  Resolve IP to Name - Show DNS names rather than IP addresses (default false)
+  Resolve IP via RIPE - Use internet registrar API to resolve non-DNS resolvable names (default false)</Description>
+    <Category />
+    <Version>1.5.7</Version>
+    <DateCreated>2018-08-21T21:52:51.42</DateCreated>
+    <DateModified>2018-11-20T18:07:29.807</DateModified>
+    <DatePublished>2018-08-21T21:52:51.42</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>0Rf3GwtIvVkyd5Te5p1CGBaipas=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Network connections,netstat</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>275</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>5e51733f-edab-4608-b795-77585e291076</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5e51733f-edab-4608-b795-77585e291076</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Show Top</Name>
+                  <DefaultValue>1000</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Must be numeric</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>704ddb44-cbdc-4ef0-9f3e-4c480b5725b7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>704ddb44-cbdc-4ef0-9f3e-4c480b5725b7</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>4b67ebed-a3ce-46c4-8317-b28769c8070e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4b67ebed-a3ce-46c4-8317-b28769c8070e</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Resolve IP via RIPE</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(true|false)$</ValidationString>
+                  <ValidationError>Can only be true or false</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1ecc1a05-7e25-4e98-8916-55b10bda6e1d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1ecc1a05-7e25-4e98-8916-55b10bda6e1d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Resolve IP to names</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(true|false)$</ValidationString>
+                  <ValidationError>Can only be true or false</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>dOaEdCLi28aTaUlDDMjR10GzGNA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

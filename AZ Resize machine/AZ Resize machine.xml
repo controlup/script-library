@@ -1,6 +1,137 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>0cf50fab-438d-443c-97a6-fd3ef7a9cb18</SBAId><RootSBAId>626f0752-accb-4e2f-a9b9-9d20356ffe94</RootSBAId><StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId><SQN>637824251597521025</SQN><Name>AZ Resize machine</Name><Description>Change the size of the Azure VM. Specify the name, or partial name, of a VM size such as B2s but note that the name of the new size must be unique.
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0b2cda97-e6a3-43e6-a864-35427f631dba</SBAId>
+    <RootSBAId>626f0752-accb-4e2f-a9b9-9d20356ffe94</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637831160578662656</SQN>
+    <Name>AZ Resize machine</Name>
+    <Description>Change the size of the Azure VM. Specify the name, or partial name, of a VM size such as B2s but note that the name of the new size must be unique.
 IF THE TARGET MACHINE IS ON THIS SCRIPT CAN TRIGGER A RESTART!
 
-Note that costs of this VM once updated could be very different.</Description><Category /><Version>1.3.12</Version><DateCreated>2021-11-09T16:20:57.743</DateCreated><DateModified>2022-03-03T11:24:29.33</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Ton de Vreede</LastEditorName><CreatorName>Guy Leech</CreatorName><Status>4</Status><CheckSum>TzopzDuFQqWi/VML4A7eQOxYuCA=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><Icon><IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAA3BJREFUWEfN1ntIU1EcB/DzRxC9/igI6o+C+sci/Kc/CoKioqiIQswSpCz6JynsJdVYVPRwIWU+EEtnm2kT84GPzJoMKp2zRBoqVmY1W9vcdrf5aBrItm9neW/O49VuxloHPty7e875/b7cu11GIj6KX49AqR+OiPI338vJkQf9SCyMDMWzbyBiE//K1SdD/0GAg2oPDqr7ecFzAft58rWk0gEcLvrdvqnrXKmjAeLvu/GnDj/04PpzL2q++lD0bhQnqwaRoBZfO52LtYMgsUoXJuIY43NxBS7abACaD6N40Q80DY555vDjzqsRJNJgk2uM72fnZNUDIHvynJDikMaN7LYRvAxpzKqz+SDTDiFGKV6DlVLVD7Iz14EdlHDckWtnjM1d0HuhsfigcwdEmzcOADXOAM6ZfNhdyE3aP34cr32q0gOyNacPUpw3DCPfEUCB1Y9qu3/CI9B6Asig1xMtAcRYgW1qp2gN1olyF8jGbBukSGn2ooDDT/n2AFRmH55yfjyw+nDc7EcsbRxjo+hxs8ohWoN1rIwDWZ9pgRRn9N9+BQgqdgGlXABn7UBcsLGABtig7BOtwTpa6gRZm26GFKcaxwIU0sY1HuA5febVrgDy6bXbTiCJBtnHB1iXZxOtwUossYNE3/oCKU43DeGRG9DRxsKzr6Z3QLgj96hrNMghGmDtXatoDVbCwz6QVWkmhIriCefC9bgyB+ro711ozgYQnDSOIDrTPKFOqNDaB4psICsVnyHVmvReXDYMoYHe+tAA9J2Cq/TltL3MKbpvKrGFVpBlNz7iT6y4+QlbVRakG70oo3fk1hcf9j91I+pOr+j66exRW0CWXOvBTCxXfET8Yw7RuWYsvS6+5nd23f8KsuhKNyJlu9IMsuDye0TKlrxekNkX3yJSNgUDrE7v4WbJuySbI+/wLpC/AWu+3OgTWz+VuZfecklVNo7/byx9pKWlJcvlcshkMlYPvyS8IyMjI1mhUCA1NZX1bwJkZWUlU2Dl5OSYu7u7F/PLwjcaGhpaVCoVWCUlJejo6Ejml4Vv1NfXo6KiYpLKykrU1taGL0BLS8s8g8FQrNVqMRWdTudpb2/fazKZ5vHb/n50dnZGGY1GDQ2gpwHQ3Nw8rdbW1iB9V1eXhu5dyJeZ+aDN0dbWNiN0b/i/E383CPkB62+xnfc6/yUAAAAASUVORK5CYII=</IconData><IconType>2</IconType></Icon><ShareDescriptor><Author>Guy Leech</Author><Tags>Azure,resize,machine</Tags><Credits>Credits to: Guy Leech
+Note that costs of this VM once updated could be very different.</Description>
+    <Category />
+    <Version>2.3.13</Version>
+    <DateCreated>2021-11-09T16:20:57.743</DateCreated>
+    <DateModified>2022-03-17T12:07:56.48</DateModified>
+    <DatePublished>2022-03-17T12:08:45.89</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>TzopzDuFQqWi/VML4A7eQOxYuCA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwAAADsABataJCQAAA3BJREFUWEfN1ntIU1EcB/DzRxC9/igI6o+C+sci/Kc/CoKioqiIQswSpCz6JynsJdVYVPRwIWU+EEtnm2kT84GPzJoMKp2zRBoqVmY1W9vcdrf5aBrItm9neW/O49VuxloHPty7e875/b7cu11GIj6KX49AqR+OiPI338vJkQf9SCyMDMWzbyBiE//K1SdD/0GAg2oPDqr7ecFzAft58rWk0gEcLvrdvqnrXKmjAeLvu/GnDj/04PpzL2q++lD0bhQnqwaRoBZfO52LtYMgsUoXJuIY43NxBS7abACaD6N40Q80DY555vDjzqsRJNJgk2uM72fnZNUDIHvynJDikMaN7LYRvAxpzKqz+SDTDiFGKV6DlVLVD7Iz14EdlHDckWtnjM1d0HuhsfigcwdEmzcOADXOAM6ZfNhdyE3aP34cr32q0gOyNacPUpw3DCPfEUCB1Y9qu3/CI9B6Asig1xMtAcRYgW1qp2gN1olyF8jGbBukSGn2ooDDT/n2AFRmH55yfjyw+nDc7EcsbRxjo+hxs8ohWoN1rIwDWZ9pgRRn9N9+BQgqdgGlXABn7UBcsLGABtig7BOtwTpa6gRZm26GFKcaxwIU0sY1HuA5febVrgDy6bXbTiCJBtnHB1iXZxOtwUossYNE3/oCKU43DeGRG9DRxsKzr6Z3QLgj96hrNMghGmDtXatoDVbCwz6QVWkmhIriCefC9bgyB+ro711ozgYQnDSOIDrTPKFOqNDaB4psICsVnyHVmvReXDYMoYHe+tAA9J2Cq/TltL3MKbpvKrGFVpBlNz7iT6y4+QlbVRakG70oo3fk1hcf9j91I+pOr+j66exRW0CWXOvBTCxXfET8Yw7RuWYsvS6+5nd23f8KsuhKNyJlu9IMsuDye0TKlrxekNkX3yJSNgUDrE7v4WbJuySbI+/wLpC/AWu+3OgTWz+VuZfecklVNo7/byx9pKWlJcvlcshkMlYPvyS8IyMjI1mhUCA1NZX1bwJkZWUlU2Dl5OSYu7u7F/PLwjcaGhpaVCoVWCUlJejo6Ejml4Vv1NfXo6KiYpLKykrU1taGL0BLS8s8g8FQrNVqMRWdTudpb2/fazKZ5vHb/n50dnZGGY1GDQ2gpwHQ3Nw8rdbW1iB9V1eXhu5dyJeZ+aDN0dbWNiN0b/i/E383CPkB62+xnfc6/yUAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton.de.Vreede</Author>
+      <Tags>Azure,resize,machine</Tags>
+      <Credits>Credits to: Guy Leech
 Original code by:
-Taken from:</Credits><AllowExposeEmail>false</AllowExposeEmail><ContactEmail /><DownloadCount>2</DownloadCount></ShareDescriptor><ExecutionDescriptor><AllowedEntitiesEx>256</AllowedEntitiesEx><AtomicEntityEx>256</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>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</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>1</AltCredentialsType><Timeout>120</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>1</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>1</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>b84b79c4-b3d7-4f78-b769-e54932cb6038</string></key><value><SBAArgumentDescriptor><ArgumentId>b84b79c4-b3d7-4f78-b769-e54932cb6038</ArgumentId><ArgumentType>2</ArgumentType><ArgumentNumber>1</ArgumentNumber><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>256</EntityType></SBAArgumentDescriptor></value></item><item><key><string>7deac5f4-c978-4a9e-bb90-1a63d117d728</string></key><value><SBAArgumentDescriptor><ArgumentId>7deac5f4-c978-4a9e-bb90-1a63d117d728</ArgumentId><ArgumentType>1</ArgumentType><Name>New VM size</Name><DefaultValue /><ArgumentNumber>3</ArgumentNumber><ValidationString>^[a-zA-Z_0-9]+$</ValidationString><ValidationError>Cannot be blank</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>f4678c4b-16e6-4c5a-9b31-f8c8459c8db0</string></key><value><SBAArgumentDescriptor><ArgumentId>f4678c4b-16e6-4c5a-9b31-f8c8459c8db0</ArgumentId><ArgumentType>1</ArgumentType><Name>Confirm Action</Name><DefaultValue>No</DefaultValue><ArgumentNumber>2</ArgumentNumber><ValidationString>^([yY]es|[nN]o)$</ValidationString><ValidationError>Yes or no only accepted</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>480312df-7841-4f9f-8d46-333a92adef08</string></key><value><SBAArgumentDescriptor><ArgumentId>480312df-7841-4f9f-8d46-333a92adef08</ArgumentId><ArgumentType>2</ArgumentType><Name>AzureID</Name><ArgumentNumber>0</ArgumentNumber><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>256</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog></ExecutionDescriptor><ImportValidationString>1tNxTN25Q8f/wonqN6tgnmKpB7M=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>16</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b84b79c4-b3d7-4f78-b769-e54932cb6038</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b84b79c4-b3d7-4f78-b769-e54932cb6038</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureTenantID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7deac5f4-c978-4a9e-bb90-1a63d117d728</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7deac5f4-c978-4a9e-bb90-1a63d117d728</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>New VM size</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[a-zA-Z_0-9]+$</ValidationString>
+                  <ValidationError>Cannot be blank</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f4678c4b-16e6-4c5a-9b31-f8c8459c8db0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f4678c4b-16e6-4c5a-9b31-f8c8459c8db0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Confirm Action</Name>
+                  <DefaultValue>No</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([yY]es|[nN]o)$</ValidationString>
+                  <ValidationError>Yes or no only accepted</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>480312df-7841-4f9f-8d46-333a92adef08</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>480312df-7841-4f9f-8d46-333a92adef08</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>oxZNGZ+bpLsE/02WS/9hQZWswvg=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

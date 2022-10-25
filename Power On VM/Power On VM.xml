@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>49deb98a-bd09-4592-a3de-05432eea5eb3</SBAId>
+    <RootSBAId>5f323571-0a37-4b8e-bd31-f398b0122963</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636934146677896749</SQN>
+    <Name>Power On VM</Name>
+    <Description>This script will power on a selected vSphere VM</Description>
+    <Category />
+    <Version>1.2.14</Version>
+    <DateCreated>2019-01-15T14:32:57.613</DateCreated>
+    <DateModified>2019-05-01T13:43:47.903</DateModified>
+    <DatePublished>2019-01-15T14:32:57.613</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>i0sm1Jh8Q9BGSdHJMZleLbHj2w4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>vmware</Tags>
+      <Credits>Credits to: theartvark</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>120</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>1ca12378-416e-4b9a-b5eb-bc40f8475971</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1ca12378-416e-4b9a-b5eb-bc40f8475971</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1a32b530-48b1-4893-81d2-ed67163507ef</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1a32b530-48b1-4893-81d2-ed67163507ef</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>c62e000f-c453-438f-8511-8e8c11ab9c90</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c62e000f-c453-438f-8511-8e8c11ab9c90</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Your VCenter server FQDN</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Vcenter server name cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Z29dRkbbhx9uJjUhPJzzS9QO2Gg=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

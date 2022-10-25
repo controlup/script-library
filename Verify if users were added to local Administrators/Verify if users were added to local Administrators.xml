@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d6db5d5c-2366-488c-80e2-baa9869857b0</SBAId>
+    <RootSBAId>ed26308d-e559-4d8f-86a8-f67ec22fd8e1</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637283439423274880</SQN>
+    <Name>Verify if users were added to local Administrators</Name>
+    <Description>This script will scan the Security log for evidence of recent changes to the local Administrators group and report whether the required audit policy is configured on the machine.</Description>
+    <Category />
+    <Version>1.7.8</Version>
+    <DateCreated>2020-06-10T22:14:25.587</DateCreated>
+    <DateModified>2020-06-10T22:34:07.673</DateModified>
+    <DatePublished>2020-06-21T13:36:23.137</DatePublished>
+    <LastEditorName>Marcel Calef</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>9f5Xj4fLBb19nhj592po3fC2cvI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags>administrators,security,auditing</Tags>
+      <Credits>Credits to: marcel.calef
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>40</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAMVWa2/TQBDcz0j8B8tBSoqahkILatqUlr5UqY9AikCCqnLzBicpdkKpSv87s3Nn++KE8pAQshzbd3t7M7uze9mQgjyUB+LJkpzIthzLnlTxlVzb0sLVlzHukQzlAm8j/B7htymBhHhXmwHmhxLDyxV+l+kz8bsjb+B1Vw7lLPXdg58xbatSwRVLG/4mEnGvG6yK8Qww9hkz3/Ds4WsoXXwt4WuEHSvyBSvatDToYowty4qsySqea/jqYfxaykRdlg5RtvB2zZky/EX0O4YfHQ9TXmX8JrzKQKrIvuIOYdnlronXAPeEDCJyM7znX3neXXiMuFuX6weMYcLvJSxr8kye4858KPY+I+LJgdTlFE9dEeFSXFeMRQtvaqvx7OVW7YFJm6w9ZGX3XsTJdYIVGiOPrD160Jh0kC2Pe7QtjgEQTBjRiIwDIilCJxOrJU8auXwrkwhrJ1jrQYWak4AxGVikRYxrLlSTTe6jewxpvT1j7fEZyCXz1SLDgmymunyEGETcMaK/REF1xrBD7OqhSVY13D4suhgZccZPPRUwt0P2qlWPEcni4XLWvITMgfLt0JNHbyZ7LfLrOqvbTp5W5AVU8JQ7xDP8Mn8N7Ngk7hiX4dpM8dWJwTAqYX2C7sqOVxjFMd9izF6yGsbUvPq/gW79v8iej/HvRNm32hwTrZ/D68tCGlmNZEk+WFsTm3PsX4VmY+hxAsQh1B8hl6o5RVKaw3bB+kyUfIv7ncXeRuWdUklGs3mdTudMs29Gle0VVRJypkn1dKiRSaq46QqKMDME+tmZeXmI/1kejMcs5tUpLRVlPYdQ+6/6d0fvHP0XbA2okg1GZWRyHaZ9wPTqyHYL7SAx7SPbkxL9BrkTJ07tX8lbZP4Ip8ghsv/ROXf6ViMBLSOr+wTZbJS0y3dz9aV9MKsyd31yBprajJn3JtXZt2dF6LDKKv/n6BRT0ncfIboDeNifipbW55btMhvyOo3dkfW2OTOjDFpY58sTZrnO/XocyUfAT9frTMjZ8W+ueYyKbOA7JtYBvkrOeaKsamkUF1Cv52JOxIB176U+sjW73DXAWPa2hQwHVG0NijyjTkxnagBPC2Pn1IrxmaxT2wYqehn3Km7FoG8ruIrEYlhXpnhvpqNZNOeNTcfeB0b3DHAzkeBKeulsPzcKHVv7W6jA/Nu4oGKawKb/KEwFGDUc0FcZnUst3BO8PKWd91STN1dXd1M1vMOomeq7vacj+sjFKIfe1OvE8iyljGc72bU9/3/VMyN2zQXstu70HLfT3B8jPV32WV8D8iqn+dII1Z3dTQ84w6zqy+1bLVlkFS2id5reaLrn/LOrgrXahed78h2LBjv4J6u3am4u3520hlyL7P9O1sHNzDEr8JKs3PHsFHD/p9wXv6U/Yvw/+fwAm7OQO7IMAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>eO78QEbzpnQy0xd91tUHHTCfkNo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

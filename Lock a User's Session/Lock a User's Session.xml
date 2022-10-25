@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>27562bc3-d870-4d0a-bd58-d787ec3784af</SBAId>
+    <RootSBAId>a7b1578e-2107-4f8e-b9c4-b044e47aaea8</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636202561725972000</SQN>
+    <Name>Lock a User's Session</Name>
+    <Description>Run this SBA against one or more user sessions to lock that session. Taken from Stephen Owen's blog, https://foxdeploy.com/2016/12/15/locking-your-workstation-with-powershell/</Description>
+    <Category />
+    <Version>1.1.6</Version>
+    <DateCreated>2016-12-18T16:35:06.31</DateCreated>
+    <DateModified>2016-12-18T16:54:02.26</DateModified>
+    <DatePublished>2016-12-18T16:35:06.31</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Stephen Owen</CreatorName>
+    <Status>4</Status>
+    <CheckSum>c43IdweRcFqsJuo44zohPp26oVA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Stephen Owen</Author>
+      <Tags>PowerShell,</Tags>
+      <Credits>Credits to: Stephen Owen
+Original code by: Stephen Owen
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>145</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVW227TQBCdZyT+YUmKlIiSUBA8NEIUBaRWorQilQKqIkhitzUktmWnLVXpv3Pm7Dq+NE7DA7Js72UuZ45nZt0UI9eSSCALXL6EmE/kBs8B57FcuNUjyOnosTySJuZncikzXCrrSSRTzOeUUD0Pq2OMDPTVciyp7EoX1xlkf2Nfbc8wvpEOdCPoduWlvJAdeYPRDsb6fI3njNZ/AWMo5/IcGhF8JRhdY5RgJ4UH9RZgHnJd47nAKMaK4k4go5Eo4i5jyOLY52pMGRtVCG+ZrZRrEfcm2Asg6zkkhj58vKdYHUM2pdUtvKfkNIbELmQttivIHuJWrQhW1PZb3HvSkrb0qFv1b+QLNM4xS8mrRv25xl5LTimVOHwjIPEY8Tbs3N+bF3QHWD93SJVbH4gUzy2fxl3/EtkzxnYqx7Ddh031rl/5CDz+hKzGOELst5D6QJSWjQxzjzlYRZXJrMeuundEflfD6nvoeWu4TPlNVjFQH3Of7xzj5lz9wf0Ut3LRKPnLrlPH0QEij5mPCyD8AektvLfkO6rISrS52ga3q+zEYGICqQDYTKFudOajLm2OhcSf2V2VG72S9caSb1Naz1g+Qc3GZGavJj7Nj6yqBpC22T6v+HlIuoNquWQHCpghHfAVupgiIBhwdMV4fWittr6Oo7zSzZrcMZWsqV6bZNEqfctxAyzmuW0Kz+aSc1OqkJR92Oe3y6U37yz6hZVzlXqFztxxNdrgzgQyEev3k+vUQ9eXB6W+rBXV+E+eD/FW3SHzwmPXb7mvf8y+pwwMuafdMOCOka+l2bfSLKQ1j1jK63pmaE3o2ZbFpNyfYCUg2/lZobP754SejiHjSypc5PJzjFrutFPdMetSmcxPXStrfeqOzzPPcpoyx1PH/jZ9FtEsllVpbYeQWxC7zxoLefKOmY2evHP98OHOWczHPqRmrKXyiVnMTntmJkSr/xSKwZ4d9T5G6Ki7G+RbdtIf4Aww7GhFP21W6tD9/yh3+9BMiaCxtG7/ZrIsNBVeDa1NXUdJC/9FT2DjDvsfMUsZdb2vk2V96v/Y2GWI9iLtXNqNbD6U/4VyPuvQKYK/zd3VgOQJAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>yDPjL2JzY16mApX8wl68hXjbYTA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

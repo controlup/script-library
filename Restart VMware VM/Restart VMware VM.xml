@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a971235d-2533-407c-af4f-c64a7b974393</SBAId>
+    <RootSBAId>ed84e10a-b481-4d18-b9c3-fbbb7fbd4f6c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636797061288452000</SQN>
+    <Name>Restart VMware VM</Name>
+    <Description>Gracefully restart a VMware VM using PowerCLI through the vCenter.
+</Description>
+    <Category />
+    <Version>4.4.12</Version>
+    <DateCreated>2014-01-07T08:53:07.037</DateCreated>
+    <DateModified>2018-12-06T15:05:51.153</DateModified>
+    <DatePublished>2014-01-07T08:53:07.037</DatePublished>
+    <LastEditorName>gal.goanis</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>bY+MpjYhduOGBAyjZC4BGfMi4MU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>VMware,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes>Updated Check PowerCli function (Support in PC10 and up)</Notes>
+      <DownloadCount>130</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>797968</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>bcc77a29-4aeb-4f6e-888a-d1f20c37dca6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bcc77a29-4aeb-4f6e-888a-d1f20c37dca6</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>114d1716-cca2-4dcc-8f21-161f8caa06b9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>114d1716-cca2-4dcc-8f21-161f8caa06b9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>vCenter user name:</Name>
+                  <DefaultValue>domain\user</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d20c9bcb-a8fc-497c-85e8-022e77b22ba0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d20c9bcb-a8fc-497c-85e8-022e77b22ba0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>vCenter user password:</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>91f17786-96d8-4532-a21f-c444b2aec316</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>91f17786-96d8-4532-a21f-c444b2aec316</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>vCenter server</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>83u7lzhW19JKSv8uE6hLRGZPZRI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

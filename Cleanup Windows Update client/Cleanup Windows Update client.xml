@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0f7ae699-f9fb-403c-b8a1-47f9b4f8c0cf</SBAId>
+    <RootSBAId>e293f91a-3ae3-4ba4-8d32-de8828d6f95c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636227610037966000</SQN>
+    <Name>Cleanup Windows Update client</Name>
+    <Description>Full Windows Updates client cleanup.  The script clears the BITS queued jobs, clears the software distriobution folder and clears SUSClient ID. It then restarts BITS and the Windows Update client and rechecks for updates.</Description>
+    <Category />
+    <Version>2.2.4</Version>
+    <DateCreated>2016-09-17T17:07:50.21</DateCreated>
+    <DateModified>2017-02-15T12:59:07.607</DateModified>
+    <DatePublished>2016-09-17T17:07:50.21</DatePublished>
+    <LastEditorName>Ken McEvoy</LastEditorName>
+    <CreatorName>Ken McEvoy</CreatorName>
+    <Status>4</Status>
+    <CheckSum>g7L/OXdA/OiraYRJdbM6y8gKjcs=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ken McEvoy</Author>
+      <Tags>WSUS, Windows Update</Tags>
+      <Credits>Credits to: Ken McEvoy
+Original code by: Jason Fitzpatrick
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ken.mcevoy@leaseplanis.com</ContactEmail>
+      <Notes />
+      <DownloadCount>400</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANWU20rDQBCG/2vBdwiCXnjR6htYW0Xx0GI8IBSkJ9tgmmoSDfj0fjNJta15AGVJdvef0z+zu3OkiUaaaaGA75mxrS0loDlIxn+hV1aF3jXgy5Ck+gDZYwQ1mkNFrDP3E4GMwBP8RpoibbKK3c9MY/BS7wYvCdId7aqlS8adQp2Ah+rx7+pU56AnyPtovDJiPI7glDMv3LrjuwEaVy5LwTPPKge7dqYF+1Qv7DusCuxi5gFcLK++3jSHZ6oDNcDM3w6ef6MNrGLWf5P9YS37w1r2Zhv7yWRVDgXxE/AIG2McViwKbFO0O0jsvFPmIWe5zKGvfTzve8wmUc276du5l1Esh4lHOdMF9XjUE3Xpqu11eyLzFuszqnWN1CJb7W71AH7jSF1tHiq+VpGMfRtOqUdOkN97bbJvjuvad5xFWZNJxdvuds91pvDoVHf2/+bSIoa9wXf3YPdmjo7ZhfzH/z6/0LtJ219U6eV8LavVDmX3N9/oUXXyzW5nektsRKTc/RvrzK0H/gpm/jojfa6966bXM/c+m4NYLubvp+8ew/iWPJob+QZrGQceeZljsBI98PcY+CnPvbeU8Roe5wsKEufc4gUAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>0Qdl8hno/K50918aGT99l3Qu3CE=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

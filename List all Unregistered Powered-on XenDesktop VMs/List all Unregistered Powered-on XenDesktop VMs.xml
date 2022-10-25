@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>2a199a26-5450-4135-8c07-7a259961aaea</SBAId>
+    <RootSBAId>0781289b-2278-4453-bbfa-e83442286c87</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053171227216000</SQN>
+    <Name>List all Unregistered Powered-on XenDesktop VMs</Name>
+    <Description>This script will list all the VMs in a specific XenDesktop site that are powered on in the hypervisor and not registered to any DDC.  It must be run on a XenDesktop broker. The script prompts for and requires at least a XenDesktop read-only admin account.</Description>
+    <Category />
+    <Version>1.2.8</Version>
+    <DateCreated>2016-04-24T12:44:29.237</DateCreated>
+    <DateModified>2016-05-01T14:57:59.637</DateModified>
+    <DatePublished>2016-04-24T12:44:29.237</DatePublished>
+    <LastEditorName>Matan Nataf</LastEditorName>
+    <CreatorName>Matan Nataf</CreatorName>
+    <Status>4</Status>
+    <CheckSum>6yd4AdJ0CUpZI+Sl9AF+UGbQ5g0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Matan Nataf</Author>
+      <Tags>XenDesktop, DDC, Broker</Tags>
+      <Credits>Credits to: Matan Nataf
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>matann@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>273</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a6T032/8ayS/xvjXeP1r/D6/xotf48tf4yX9dkb/x6ep99+bX2P+axS/RkO/Nb/G9Neo6ffVr9HSX9WvsaafK/4X32b0/5Jbyrfn/FlJ/6X0yfzXyOnnT/4aX3Dbc4JT/RoLfev3pu+Wv8ZT+rf5Nd5S24qgoreCfs9/jZG+nzHcjN4EpDW9sc2/X2ifOf814zZL/rkiSFfe5xV9PtZRP/01TmmsJ7/GKxrzSxrjGVHgxa3HfkW/ycjciIfGWlCvMs6G3s4JTkHjL+jnTSOPjTs2JtOH6Xn+a1xzT/WvccnYVfTbiGEIXZb0CWDGqQcspO01/XxK/50o1XzKnDGEBc2DjH7CPdc8Lwar4bmd8Py/5V7Hv4bQGe+HVF4pl+Av4RqMxI0DGP8i6rHg34QH8V5Jf2V2VoZwqLnVjLgI2JY8Wvy9sDM2pf8qHlFr+eblr3FMPHNMc3tKWJ/S72mPNilxEmi44lnLCGKuFG4snFPCClBe/hrP6fc+hPTX+Jzf2qYW/ox/Sdgc8/i/on9jMyh8N6bem19jV3v7klq/IUj4ty/h+O/418DM57/GO6Wg4WpwOvjKcVecA/vcDrwumfJfh8838Sg4Rsb1nPjwxa/xe0VH9JraijS0vwb01KNf4y79d8X/jYmngXfLHFYSXVb0GWZ7wbB+/Nc44p/4/+9G81Nzu5qoNKV3Cn73JWNzrlgt6Rv09hn9/yPqW8b4kYVyxvpwi//vZvY1/bekMa+Ubts0GuGXlDAsGL+C5mT8azwJJObY8un41/gWvxfHEVQoWB4wVvC4GTfeXdPnd/htyFFKI8VnosXuMNa/OKDsG4IOKQk/dRw0Y2nqj+p9RvIz9P8v2aaAFoKN39svYXjglSlzZRyX73Jv4JjtX+Pb1Jvw8kcsMxlpn5IpLJqupH8z5mQfzzQYAzhONJ5YA8OdK4YNPg5hTjtUHisndPE8pZ4KhrTbGSX+kn+FB418gb8M//iU7MrWNmkmJzk1U0x4AryJv4DtkA5JeR6NnPtvQP90edpgB14K52NoHkKdJhp4EzYC/1GHis+Y309ZU4MXgMklexXCd8N4mf+k/ZhaCQy8l1sZjM0I5qwkmKDF7cZ63PELQv1pxm7m1+i/OB0a4qYp/4fZboj+IiHXv8bvqrQRPP8fCsLsquIJAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>UYygDNgvwGRXsjsEHTTrqZ5qL2I=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

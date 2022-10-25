@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>84d7da9d-a4b1-4827-bb5a-8dca7043dd88</SBAId>
+    <RootSBAId>ce895b0f-4813-44ab-90e1-c77272f07548</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637418154892821804</SQN>
+    <Name>Configure ControlUp Monitor Service Resilience</Name>
+    <Description>This script changes the following settings in order to improve the resilience of ControlUp Monitor to service failures:
+ - Sets the ServicesPipeTimeout registry value to 90000
+ - Sets the service recovery options to restart the service on first and second failure</Description>
+    <Category />
+    <Version>1.3.11</Version>
+    <DateCreated>2020-11-16T08:01:27.94</DateCreated>
+    <DateModified>2020-11-23T16:28:13.75</DateModified>
+    <DatePublished>2020-11-24T11:42:40.583</DatePublished>
+    <LastEditorName>Joel Stocker</LastEditorName>
+    <CreatorName>Joel Stocker</CreatorName>
+    <Status>4</Status>
+    <CheckSum>uMTjHN2cY4CKttuW+p1LcqQsID4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Joel Stocker</Author>
+      <Tags>controlup, monitor, service</Tags>
+      <Credits>Credits to: joel.stocker
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>joel.stocker@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>59</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANVWa2vTUBh+Pwv+h5gFuuFibRXFQT/ImDrcdLihyDpGl6VbpG1KcrqLc//d531ykiZpM4ZMQQ65nHPe23ne21mRfYllJokEEsqGOHIuBmMqKWZtjFAuQGHwDeSZXMm1/MRqirkRn98EFBH5ffwrXYwVXb/GSgxZBvuxTEDtYxbLJXdT6AplhNGWx/JIPKxcgHsiAxljx5EeHhcrM9klfwRJMThdSz8GZQApEfbCGp+HWSJnkHkoz+WIHPpEMpRV7D/Bo9/39iTbPONY9sClNquFBidwsLcHWQZ6HPkgH2UH1mxIH8h9x3MgW5j3ZZMoJrTDYBbzq7JGoFId/dpqn7I/FVbvV7BMoTWiHQf4KoX6yYBOubaoS7F4C+ocX5URQXJmwwjW5xoVoRm1rPFRJG74duyo4+IR00v5CvtGlrdnrfy/8PIrZ3iDaMhGbmmKcQBrE1CU8cmRqeKUj2+gj4hB2RuZb65o0bTkF1feQVPmm1PMNY4dUOn5B5Ti8P9MWrDG4ZlDrl4UtrsVO245uy3iegiaSS0WMk9VcfpSy9Dq6Q6pLSIqq7All1HnagGjowrnlPmmvimvri7F7hDSDfGb4MRHXNkr+EPikYB3F/MJ8BrYvL9GBHrkVDzWyOnVzpfHx/o/1Kzv++rzWLNyL3WKKpcwhg1tMZg3yYuYEZkkYyM9l+LIqyK61zFbYV5rLIwZexHrdUDNp/j/E4u7D2Jx90EtLmvIrAptTZlxJ2Rmqr6XRe7PNTVrqNYBr+h2+p7XuAyNPoaLv6cLlMtl5FUr48+70Cbx2WavNIzBgFVAd0a2Vs0rYAtVSM/wAnge1/KgZbli0E5ZCXV3zluN3l+iFe2c/1rRPsuJ/CAuWkFvQH2M7j/n9mmnIhAQg6YsvK2dflCpUL2FtQ7wc3EfcPEtx3d5tRqNy+i7jfQ7xNAs5cr3yhYPmf2hvWdoPat7MI+iRc+uNXQOjbz6LSu7X52z5xogPaYU7SkpniHXAvqyzY7pw6Mp/jVDTli9tEa1QRPIa0R5FzHeQa97xjNN0ZGWWeLZHjm1nbLHbNB7XgiO8I6YH9puNiM6SreIzDxetKeWvZAu8bxTytzenZn8N08yZJad3etEncZ+fL/O6yxQlLOzfhf2K/nqNN5+fwN94nZd0gsAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>615b22b4-f4ae-414e-a5a2-c85e00bb88a2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>615b22b4-f4ae-414e-a5a2-c85e00bb88a2</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>3mU+X/etqRKeIuWmjhNUOo/krxM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

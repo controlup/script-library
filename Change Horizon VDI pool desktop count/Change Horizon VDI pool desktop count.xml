@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a450e1b4-33dc-4c18-abac-16d8abeaa900</SBAId>
+    <RootSBAId>b24d9654-caf3-40e5-bc6c-96853fed9f62</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637895924185374377</SQN>
+    <Name>Change Horizon VDI pool desktop count</Name>
+    <Description>Changes the amount VDI desktops in a desktop pool. Use UP_FRONT or ON_DEMAND for the Provisioningtype depending if you want to provision all desktops up front. If UP_FRONT is used minNumberOfMachines and numberOfSpareMachines will be ignored.
+
+This action should be executed against a Horizon endpoint machine (one which has the HZ Primary Connection Server column populated in ControlUp Console). The script uses the target machine to determine the connection server address, and is executed on the machine running ControlUp Console.
+
+This script requires VMWare PowerCLI  to be installed on the machine running the script.
+    PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers'
+</Description>
+    <Category />
+    <Version>3.7.12</Version>
+    <DateCreated>2020-01-09T09:25:40.31</DateCreated>
+    <DateModified>2022-03-26T10:06:32.317</DateModified>
+    <DatePublished>2022-03-26T10:06:39.983</DatePublished>
+    <LastEditorName>wouter.kursten</LastEditorName>
+    <CreatorName>Wouter Kursten</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Ynh6VZEwM5T3EDMBhzqP2TeKLi0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>wouter.kursten</Author>
+      <Tags>vdi,horizon,vmware</Tags>
+      <Credits>Credits to: w.kursten
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>35</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO0da09byXU+V9r/4BAkGwk7r26kpqVt1kmaqBtCY0JUZaPI2Ca4xdjxA4eu9r/3PObcedyZe+eCcSCLEGBfz+O85zxmxj+oP6i/qLvqB/hf0z8t1VH/VrvqjdqDV6/g1/60rY5VV52qz2qgZvB+Du8H8L+rRmqsFvDJHN6N1RH8fUZt/gtPxmpCrYfwObatqZfwbArv/wf/T3NtazD3GH5OaG4XumfqOcDUVm8Btj21D3/fALR2m32AaUjzzVSPZpkQVL01w96C13n499RTgP2peg147MPvWxrxwBtFxjgl6AbOGLv6mcAqeMTgqNGTGmA4UX3oO9fjlcO1B3iO1RlRc0jYDol+c3UOY7lQvYM2CAVy4xNx6TWMtguvZP5JbjSk5wlB2M/Re0E4HFEf5kxDLaEftx8CFKfEB5xzRHDtQp+ROoQnU4DiCObvEs/xM+Y4cr8P/0+9lh2Yq0tj+X3S6DSCXl9L57fHeU09htAe+7gQCV/zNGEZFH5PojoShjGFRi6MQ+L4+mCsxpcqcCIcS3oyIAlg6Vst9KjFbRoZYezBKCzlHZr3jP6+UP8CjXDtlTxDaR8TzF2yVvmRZtZIIVj7AdhrRIkT6v9Z270xYJDHCW3+PlnXFGuKlPwClB7SK/z8AKjxXvOLrQ9TvK1+BistVuCQPh0SNnOt/zZPBP6Rw3Gcb0H0YAtk2tlQtRzI8xD0yAIUwYCjTmk1+Ayv7DE6NB9bn0bkOXPGWLcfCSvk1TFZrGPNOZd2fbVFMJ0XYInSMCKasAWrAz429E2gPfJ/QZi4vGgFKNEEqUPIetS6CZJ8QjKypBZjgEb0pwkY9kg/sCW3e6clcQZwoMWfZvAvCHsXdh9Whm4ZlZR6IVfbmmYDWhWGNOYsx1uEbx6FZ4/GmGQQ+LImeuiv9AfwegCwuvDNIhC7Ngq5M4SRhwTpPJMR1q45zXSunuj2D9RDdU//fajuw6s/ES9qwFWUzrnmzj/h9ZT6D2i0JtmToX7mS6QNUdWfh+oxwHJfPdIQPYSfVIieAu79TMsnlj0ztDYW2Uh53mNgXuZtF8rNLsxtPz2GeeZk158AzPdIivukD2cwxzLTDtateySDh/B/ri0n0v8BfP4Ifu/DO7tX01pRetB2mMHkwtUG7XgN8oZe0XP43Xc+L7aYMtpd9dfs9Qf4bARYnJB8/0T06GuqNMCOfKRWezQmeon4ruHM+cH6dKC51ghKBsKDdDeyugO/99V2sPVrzbVuJss7ahNeo0UbRPq8JMs5gb64gsygL/rmO6BPVX3cujO+0MHgfEB2Ypj5v7vQa07eEFoktGDPYb4JebaNQP8ZYcJ0/ghPNhN89u2cPFyW9g/WQvu8P2KvQr5PUnO8km/Dh1Sva/UcebgWjsTisFoWiVWle4ewbagNWMv3IF57AR7sG7JPGwDdRiCK20jiRlnEuHoOPFoLB+y8RzwuNvz42yU4sq9hZE680B7OIJEDNqTr58Yf18KNlOjZ9enysZ0b+7Wu3HINyV9lHqXlC1bPnR8rcecok7xwrzwsLMNm7cY56zS/7dfVK/N7P4sJyyP9PN857kStOFMcGftawZ7pkPpX8UNrWWQ8II+sR3ToU+bvfZarkmjTZKzMbLGRRUPtGeYZLr7NXrf0pmSSVi+9j2+o9O4GpHRmRZ/h3JQvx9+3TFXL/G1lsrUJc0wJ3yn4Kcb74wj/SFP1VOc5mKMdbfPr2ShHlHWxfVrMgXQBs6YTo9k5FqTgrw5GWEmpQdw2Io5OKTPg5zpGzghuVl+yb0+c5xg/i/3z80b+eG6O7UTjwC2NtHVJPuWp5MW5BWrEuZdxaRJW2MLNJswyac7nlyTnuCS9bVEmbEZxdj6m83HgTE6dZFPk3NCU4W44M/h5t8fUZ55JeodisonO+LGGnQCemHezM0Qzoh5nK5pU/7J7ymiLjHpYkTimjM4x0W9B9B/p/E5P57vOLV4wtU0W7H1EMrYcDtgZAHk2yewXwiFPQ5bpg9XW2N281WT9KPPKiu0dj7GRSWxc+uOyipau7WXzmEMnWnqmNBaOM6eMGz8/I8outBQ1MtkWqd6CkfM+tKGSafmR/OixlrpTxbnGmWcPfY7cJU1lStpWwM/NSlQ90JbN18lebuZtohaPXCSdolVDnVnr0nrB1BCZl3bNzEYOwRetEZew5SlZcV6h0KPhnCVnqX1sbSxtfGw+b2czFtPEwFqGqQ3FkV79ZOYGcC5PP/H9w1xFK/BrUCYEkvCn8sOrF+v0TgmeTcu/sHWjFYQ7NOtvwaecU2YaFEObhlMMt7j0xTArmiWMS3Wc5GdJsTBauCZZuanWtI2CFbTICtcyv8zoBUrcQscFrDF+H55z5qw5aNP2qEVXcZ28RxD1IAI1K6FdgzPV6lAWuaPYf7Nrg36Ey7I+yuTcXndDFT2xS31aJUQf0Wam0H5AEXlYZov57T7ld78V+Gb/IPiagN877csxL0OVIV9y3FXzuq2WMxiXKycjZWddwxUvsxuCV0njlzAni1c7N3O0CZQ0c+fXOXl3N6O/XYE1PAhDi5J3qP6j5bUog7Wp3yNvhZ8vKKve1/ETU2wTePKB5jgjXUbJEEn/CB70Ew2l3XePuHcMPeuZbmC/p8CXCUUydmXuGb3uQtst+PlF55jnNBdWQCfwrGPpT4d2rIjdd3XGXRHaNNdXeHZCElSM8S+E66bG9QnJPO432NW7D7YgauMWNgfxqYzW0nOV6ZWbRW961c+yHPvN0jRT43BjkXjFN4S/W/toEaf3VI082b6aagg4lj/P6Wk1/axe57hO9N6jPXtlliFvwySqOs562TpaTMHYnOzd558XWz3x7DlqcSth8tReeYtlxR692CPLa+WBp3dN7301WamRRQpxppxK7spd7q+V+WfsaUkkgrugOJd1SJ7TKEd3U3WxqX8ZHX5CeH+Kej0hL6fcY3lG/lYvx8nv175ehgeuTSjWcTeGOqBM0VMvD8OWwoVI4GnptfmEej/QY+AnbywYpE2qHb6MJeEdr67/tzprEpPE1dgUtiX49Ii8shHok52JvwrbUcV69APYiw3J030VdmSVVkTinvjOk29tI4ptQ9U9PdX9I+kpM63DD7q1h6u1h5+VG1360iH7mt18B+czeA90ujXE2Tle5QqWHdMy9ENdOXK9VLZus0i2w+fCSxinBd7WgsY8zyjDY7vvkKJfIi1ZpnaJG02HH34uscqMMbq0g3Rx6bAkK3ZsfY6+4pHiKv1cyzJr+5Iq8MZXNlhehIbPnHlY4pB2PP/pJWgVGjlGI/GL51p+pb6agqGBtWW1fG6NuJ+Nx3VLVxM6VDEdER7nmZbWo7C+oGyR7NLFHCZGWVNdk3J3w7haxtWXniUH59QDKcNVup7OjXS1Rvq16zL8Xdguyjl7lOdEU8mUNbUnMKHPmFt/B5tQpxVA6s6yatSpat8voLbkhlrao0BbiBG+GeHPxDFTkaork7myVyrZK7oRyY0i5/YIOo6Hbf+kS1RZ6GitTJ/c6pZp/Zbw5FrajGBsFNigVvSTT44lbSSuDC3yhXivuNRvhbrbjpRsUf1u6kAbo9hb4upY7/cRepXpYxznmCX9RDp5or0IPhuxCsy3CjGb0w57O9NfThWuwDXUnQLeb5VUWYo8cK7X1rPVkSsXMa/MeMDsvxVXGIoqC2GtGeh4Q7BuFGLdyp0Ds3W9n+m6se+I/xfCm3fHvoO/P5Nflk5BPjMxob9MQ3PSCmMX3m8k2h33H2PeM1KZd1JI5co+/1p8+tWnx83gz4zwMGeahEcH4K++BeoylzAvzjU0zKKvlmcvslppW/GJu2Lfv4h3QydGSuES73HE/7ie8ekbzt8tiCb26UC2PVOC2q468Q6AQdba7NCYWja178kn7isolpGpY7fi3K4uQ2W14dXN/C0yFgz9lHTlzMp3lkWVMcm6irwER2xNgOnM8ht598hNyFm+ojPqq8hJhPxTd6RXgIWfrcD5r1/F5jZjITC63lhxRiHV93se9f18ifHff9J5wEZAirauxF6tylrFYkx/x8lV2KiOMrnT65ItvbVO6VQoP3GV38EuO7FSzrLZVFr9STkz+kVPzF0HSWRZMTvn0nzS8I0axZIqJwOqnZS6LI3KToxcnjr2qY9VUyr9BMV1pJZ/sms9spV+juk66N+tZ1bsmWHE3EiwqHZuIG/TY/mAtH3TkmmX+zdMPcTOufh1naXiHcYcdxeNn7KK5ytKvubYn+/QvEvKbti5dveOjOPSeVKowrkRocKxlnaWS/uuAXM+zaWSX23qBndusl2QfLl5XgShTyMbtp0SCnJWGvf8rS7rXezZh+jbDmb3+NYdruGNvYxSnHZhHl2Ufi2dIXBtB0q6K09CgZdW3wbl/7j/AfTkHDLrM3tmkkOeRfvxvl+20acVR+Azkq+TvJBGsr9SzM3vm5Yx67xP68sg4mmXy7/s4j6PWhh3l6BbPYvtTy/jjW8J7DsWV1sDC8tDmC6XPSO0in2aYo3KsgC9zM8rjvvlJ73a4L6TfPHt6n67ut+u7reru1mR0uLARnLE+Hte3W89pdXRMj2j06iU//k90zTF+wxndG/9z1v/E3+q+p+mKnWR/FRYFl3q2dRijh6qseK9ERvkOfA5c3NnFXoK6fbC3LiRsvrJLSkj+i83d7g0ZUrcSV5Ra+S/Igx3Klq6qpXOKlSR8/npt8+z3ObvIFjq843ubTRl9zixvJa1ungVFa0a29Xys+i428n2NLH/9322Wyjk3oEidCq+4Tp0D5R749Qykzr3bolm8AYT3M2MmFfP0dete2wQm+pn++07nFPuaGfJSDmbO8tVOnZU1dsfms6peNyTHaODTQV3xbzs+VK/esEUWH91hX2MtHN8Ozlsqp9XbVY8h7z6c8u+BNk85p3UslfFjqpj+1Swpxu77ySdyXN3nZhTcCl3SKdSsVaJv4hJkdeAVtinD98vGMq84Mp2qMZ6V2wKVq4F/Un35DwZjshetL0PlTmDuZI8F/DpTm4/FPr8Q51vK+e52YskOxd5ntCeRpfrMl9Hf3o1HPOliHcF5enAUJdFOUytEG5ItdTorlUax7UqRGytUqjLpDbu65bfiDnKYhO5R1H8nQX5h3KP2MyB2viAcsMZ71yQO/541Tc7qd0d+IiH3DNQFhsIDVAOTrX1KMeqmcG36cyd0lMiEPf+6Xjk4frR5TEO5ytTsMCTZswVOclguBXnVNm4Lcu7rUYb5qXc0h3mrbErVbxz2yt3/fD3Gsf4eQ73vIh7fm+cWdfPmeXrqpr2P04taTZ23GTqRYYEuqLv3pETHWHr0rLONKaeoYnLWJtgPVF9SzIQxgHJAvbY9vC4Xqdq/DtGirgv8aHMKneIYh2n7kSXsdut89+nZn/T0tcIzPnbtPO3s4qdk/pO1xu9eGeX/f0Sofu87T1z+TuRXZlbdWbFjFwlL9DUspCa4zbZjSr5kGpzVM+EpGtXjHP5/Xqu5sjdriMl38BlJMj9JrCL7A2sJllpJ95Ssybhal0881j2vXNXs7Ot2Jcqn4utagpUvAKZ28plvbm67210z89hNGHu/zen4/ieNrmLLZU2Nf0dHecZHiEPIC26457plqJsDQmfc/iWEQm2S8WuisUsl7pyyYxxPH/O09bo/tq4a9b51FVd5IHtUXjPy7r13s5pX53G31QNtne+dAOrncRJqZTLe2wmBqxiP83qeGtlLmdlGLY07lXxAKtws+o3bFxvq3hzNMb1C0O37138xr/V3Cp5FVr7f8cl4p5YfgAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>55a474b7-0e2c-4a3a-b906-424225a10cb8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>55a474b7-0e2c-4a3a-b906-424225a10cb8</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HzPrimaryConnectionServer</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>03bc908f-c177-4c51-9a57-d8157b274760</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>03bc908f-c177-4c51-9a57-d8157b274760</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>hzPoolName</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ece63dbb-36bc-4d7e-869e-3fa3787e2d69</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ece63dbb-36bc-4d7e-869e-3fa3787e2d69</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Maximum Number of Machines</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>589c65c0-cbd3-4fbb-9340-92a67821e3da</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>589c65c0-cbd3-4fbb-9340-92a67821e3da</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Provisioning Type</Name>
+                  <DefaultValue>UP_FRONT</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>UP_FRONT|ON_DEMAND</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9d3e2d01-1baa-4f9b-8459-2d08b3bc4d21</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9d3e2d01-1baa-4f9b-8459-2d08b3bc4d21</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Minimum Number of Machines (ignored if provisioning type = UP_FRONT)</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>0a7eadee-8fbf-4b2a-9aa6-33efeaa405aa</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0a7eadee-8fbf-4b2a-9aa6-33efeaa405aa</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Minimum amount of powered on machines (ignored if provisioning type = UP_FRONT)</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>56c0babd-35e1-47e1-8a63-32471e16d4a5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>56c0babd-35e1-47e1-8a63-32471e16d4a5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Change Provisioning Type</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>HDtM27VEx9OrjwfoPmGFaR6h6no=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

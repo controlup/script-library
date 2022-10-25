@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a0363eaa-f7e6-4908-8cab-f61831edf920</SBAId>
+    <RootSBAId>9a96f2c7-cec9-4698-a6b2-2d56b082f90f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636976743933065701</SQN>
+    <Name>Rebuild Windows Search Index</Name>
+    <Description>Deletes the Windows Search Index file in order to rebuild it.</Description>
+    <Category />
+    <Version>2.1.6</Version>
+    <DateCreated>2017-03-13T18:13:28.433</DateCreated>
+    <DateModified>2019-07-02T12:16:32.31</DateModified>
+    <DatePublished>2017-03-13T18:13:28.433</DatePublished>
+    <LastEditorName>theartvark</LastEditorName>
+    <CreatorName>Tas Smith</CreatorName>
+    <Status>4</Status>
+    <CheckSum>/9Tlh8uarza1Cm71TJoPyPd0dSA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Tas Smith</Author>
+      <Tags />
+      <Credits>Credits to: Tas Smith
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>73</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>8UjUyrgA+XeKqnoyxeypy1gfL54=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

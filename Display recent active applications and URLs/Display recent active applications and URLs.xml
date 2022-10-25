@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>46bbe01c-bd39-49c7-b712-8ccc60d86682</SBAId>
+    <RootSBAId>9809a69f-7981-4128-95a1-5ac0b8eb284c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637327246509875518</SQN>
+    <Name>Display recent active applications and URLs</Name>
+    <Description>The script will parse the records from the last X minutes (enter '0' to get all records from the past year). For all records with matching SessionID, UserName and MachineName the Active Application, Active Application Title and Active URL (if the active application is a browser) are displayed.</Description>
+    <Category />
+    <Version>1.7.10</Version>
+    <DateCreated>2020-07-08T16:24:20.11</DateCreated>
+    <DateModified>2020-08-05T16:18:09.13</DateModified>
+    <DatePublished>2020-08-11T06:08:39.317</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>FT5Z05tC0Ns7LkU0YF5eR9sPBog=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>url, active application title</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>294</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>78980716-6cbe-4365-9888-e8db1cd2af72</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>78980716-6cbe-4365-9888-e8db1cd2af72</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f2fbf1d5-0bec-4829-be40-626beb210b01</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f2fbf1d5-0bec-4829-be40-626beb210b01</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1a24edba-d46c-4032-94e8-4302f41ef89a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1a24edba-d46c-4032-94e8-4302f41ef89a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Display records from last X minutes (0 = one year back)</Name>
+                  <DefaultValue>60</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[0-9]+$</ValidationString>
+                  <ValidationError>Please enter whole numbers only.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>67f7939c-fbf2-4724-9387-dcba2ea82d82</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>67f7939c-fbf2-4724-9387-dcba2ea82d82</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sServerName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6cdfccb8-7e4f-40f9-b6dc-c4a8aada9df7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6cdfccb8-7e4f-40f9-b6dc-c4a8aada9df7</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Session Export path</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?!\s*$).+</ValidationString>
+                  <ValidationError>This field cannot be empty. Please enter the path you have configured the ControlUp Monitor to Export Session files to.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>pcLchUiJR37E2GrdFO9p6XDc7DQ=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

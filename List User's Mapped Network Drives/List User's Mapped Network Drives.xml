@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a8fd121a-737e-4b69-a3cb-07763990649c</SBAId>
+    <RootSBAId>82a72453-6a64-4795-9b05-29be0d8da4c3</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635802312326635711</SQN>
+    <Name>List User's Mapped Network Drives</Name>
+    <Description>When run against a user session, it will report the drive letter and UNC path of the user's mapped drives.</Description>
+    <Category />
+    <Version>1.2.4</Version>
+    <DateCreated>2015-07-13T15:23:32.303</DateCreated>
+    <DateModified>2015-07-13T19:58:45.507</DateModified>
+    <DatePublished>2015-07-13T15:23:32.303</DatePublished>
+    <LastEditorName>josh_edwin</LastEditorName>
+    <CreatorName>josh_edwin</CreatorName>
+    <Status>4</Status>
+    <CheckSum>LV1RrlnMco6bM8156gBLfOlz6j8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>josh_edwin</Author>
+      <Tags>Mapped Drives, file system</Tags>
+      <Credits>Credits to: josh_edwin@beaerospace.com
+
+https://msdn.microsoft.com/en-us/library/aa394194(v=vs.85).aspx</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>josh_edwin@beaerospace.com</ContactEmail>
+      <Notes>When run against a user session, will report drive letter and UNC path of the user's mapped drives. </Notes>
+      <DownloadCount>1260</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>JABkAHIAaQB2AGUAcwAgAD0AIABHAGUAdAAtAFcAbQBpAE8AYgBqAGUAYwB0ACAALQBDAGwAYQBzAHMAIABXAGkAbgAzADIAXwBNAGEAcABwAGUAZABMAG8AZwBpAGMAYQBsAEQAaQBzAGsAIAB8ACAAcwBlAGwAZQBjAHQAIABAAHsATgBhAG0AZQA9ACIARAByAGkAdgBlACIAOwBFAHgAcAByAGUAcwBzAGkAbwBuAD0AewAkAF8ALgBOAGEAbQBlAH0AfQAsACAAQAB7AE4AYQBtAGUAPQAiAFUATgBDACAAUwBoAGEAcgBlACIAOwBFAHgAcAByAGUAcwBzAGkAbwBuAD0AewAkAF8ALgBQAHIAbwB2AGkAZABlAHIATgBhAG0AZQB9AH0ADQAKAA0ACgBpAGYAIAAoACQAZAByAGkAdgBlAHMAIAAtAG4AZQAgACQAbgB1AGwAbAApACAAewBXAHIAaQB0AGUALQBPAHUAdABwAHUAdAAgACQAZAByAGkAdgBlAHMAIAB8ACAAZgB0ACAALQBBAHUAdABvAFMAaQB6AGUAfQANAAoAaQBmACAAKAAkAGQAcgBpAHYAZQBzACAALQBlAHEAIAAkAG4AdQBsAGwAKQAgAHsAVwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAiAE4AbwAgAG0AYQBwAHAAZQBkACAAZAByAGkAdgBlAHMAIABwAHIAZQBzAGUAbgB0ACAAaQBuACAAdABoAGkAcwAgAHUAcwBlAHIAJwBzACAAcwBlAHMAcwBpAG8AbgAuACIAfQA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>OA3tdodWKgLR/T14TSFMLzm7+eE=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>433628e1-e166-4b55-b6b0-5357a25f9e4c</SBAId>
+    <RootSBAId>c61e0d58-ab49-41bb-a3dc-6e65abdccdc6</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637283314961437704</SQN>
+    <Name>Shadow session using RDP</Name>
+    <Description>Leverage MSTSC.exe  for Shadow and remote control of sessions.
+
+For troubleshooting see: 
+https://support.controlup.com/hc/en-us/articles/360000602929-Shadow-RDS-Session-without-prompt
+
+Note for Win10:   Make sure you are allowing "Remote Desktop -Shadow (TCP-In)" in the Firewall</Description>
+    <Category />
+    <Version>1.7.20</Version>
+    <DateCreated>2019-11-09T01:59:14.157</DateCreated>
+    <DateModified>2020-06-11T18:15:35.043</DateModified>
+    <DatePublished>2020-06-11T18:17:19.95</DatePublished>
+    <LastEditorName>Marcel Calef</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>v4i+ISotziWHiAFbkvTVHaPDWbQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAAB0AAAAbCAYAAACAyoQSAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAwpJREFUSEvFll9IU3EUx+eDD+FDPlT0ZL36FvQgQYRP1YsIPZRQe4uiEVhgYD5URFBhWTgwYjT7o+RkdBdaTkrXVrpEyaZbqHOpEKwFOrzGpvt3+p2z/W7b7u/OTYkOfHa3c+79frhnFzYdABRFMpmEpYUF+B6Yg5/BH7Cy/AtWV8Pwe02GSCQCGxsbkEjEAc9LpVLsEnEOImxq8bZ/EA4eegQnGmxwsWkAHnQ4wCqNgevTBExNTRN+v18hFArmwHNUwYUwmSTYsfMxodv9UeF00xoJ339eFYLC6SkPi0jnqIIL0dzSnRbusaXZ7yVq9VFYZDciYsKfJAYHB1hEOkcVrEV4ZRm0pPsOy+D2pP6N9NyFF3Dk+CuVFHlqS8Ao26CIL9OBrUlnfN9IiujYZUSW+PJtWSi0OGKKlD/VQoEIlCqyfPba4Zg+AJ1WWQhKPR5P6VIuyC/er66dhFvGUA53TRECpUjRUh6KaBXOdlU74OyVeQXDtRCBUqdzqDhptiwbUWEfpUcbxgmU3rnXCe3tHQqbSrUEWv36+nrqH6jth6arJhga/gDhcBjW19eJmflZsNleE7FYTC1ERMG8RDODwUD9upNMOOSAeDyemQD4FrzQaNXDyNcJknq97GlnfRWlSrFn6TYTeIfZnHlSBw/fPCcp0tXVJRYWkvJVZhd+vnnjOhiNRlqndVKCRukUeGa80PyyheDS1tbW0qV8lbz4+Xa7XZEiKEWGR0dI2j/8jmi736aWpnPwIC6clZeXQ01NjSL0+XwESheXlohLz84TKJ2dnSNcLhf0Wnq3JuVIkkS9iooKpdfX1wfOMTcJx9k6A4GAQk+PhY4qIcID8kurj4X/HvjcbDaTHKUcFDqdTvbvIiGWIjwgf5XFFJ6HTyk+NPgd4krxDlFIY3zhlJWV5YRHo1Hls2iVWlVZWcnnSnY2f99kgoJB9su7SeWvUlQ4w4OI9As7yLLM3pZemXBVFZTiUOvCYoqvMp+qqiocq4QIFjturzIZOcGF+D9St9tNF22HQqtUA7o/YkANTw2YnWYAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags>rdp,shadow,rds</Tags>
+      <Credits>Author: Marcel Calef
+Original code taken from:
+https://support.controlup.com/hc/en-us/articles/360000602929-Shadow-RDS-Session-without-prompt</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel.calef@controlup.com</ContactEmail>
+      <Notes>Leverage MSTSC.exe  for Shadow and remote control of sessions.
+
+REQUIREMENTS
+Allow shadow via GPO
+    Policies -&gt; ADM Templates -&gt; Windows components -&gt; Remote Desktop Services -&gt; Remote Session Host -&gt; Connections
+        'Set rules for remote control of Remote Desktop Services user sessions'
+or via Registry:
+    HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services\Shadow [DWORD]
+        0=not allowed, 1=control with consent, 2= control w/o consent, 3=view with consent, 4=view only w/o consent
+
+ see: 
+https://support.controlup.com/hc/en-us/articles/360000602929-Shadow-RDS-Session-without-prompt
+
+Note for Win10:   Make sure you are allowing "Remote Desktop -Shadow (TCP-In)" in the Firewall
+</Notes>
+      <DownloadCount>155</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAJVW227aQBCd11TqP1hRUBMpQCBppEaiKgJyUUNDY6q0Kn1IgRAawMhrQPmbfmrPnLXBFy6qLNuzs7NzPTP2J2lITa7lThzcl7jeyhu5B7cJzl8piCs/5Av2WqRccm+lL3PcvjzKAG8H0q60cddAP4mHHQerZ+z3sFpg9SgT0A52+jIGL+C5LqgJaB/vEdZp61X5Br3q3z05ejehy8fJPk/UsBqBfgJdlhMpyQfJ41nC8wR0WmNDvkNrE/HcgrY6TczTgvwGHYBbwj3DnsbZgp0J+GN6Xcz4PcE7bUnpr/D/JuQ2kEfNUVxuD76McNkcmUTG5jLEypErWL9LnYpy0aL9IfwZwjMDXl4+4lmVOiXbzPYUMo/M+EriAScmoS0TVkIlNa4+Y1vJ3idqVqeeF6w8yGudNUNzetHfeMrlnoGUWnBQUw+rYCldI19td8G1UmZD1NH9jloDompGFJgY/rYjzSNi/jeyCA8O36t4DHxJ+mp9iGqodgagDT14lYsNkV3LZ+CyKR3Y1n5so05VynUyte5ATlc+M6nxBOCl66qY6xAHPiIdEsWjNbF1Uv36E9l4YN/V5deOOpxIhR0QsM8jPPeh65h9VMlkfwG7AexFdTEh5o7ZxZU19Vqg67y18qeQnzMnix2azxKSujtCLTbpXsW8l4pfJRQvz5AKgBSDehZxGeBjyh7ywS+kYtC9QthnRZzt4qmW8kRVkVMtYD0skouI7By5tZdSZcyzMudbvFZ51sglN47J/DIXHiwEWE/piXb5tuguccpnjmwtHTnEiZV3M04TP8ydxVsJ3h0hCxYROqFfmCHNiE/qlV44PNlP4ETPD8DZ39GN+RRCD4HqGroijwk7gfV98IacLRqzakhHEo8zTjuoSxt9dsXv2wH01YGXA6yCcG5WoL0aTib98u2HGvR2oaWdmXCqoyI5ZCYuE4+wFtZixpVP6XJCWmPthZMxQpFKnSakkqjV/bPE/iW+QnXMAau/gOf7pe9RBtTSH+IwWNYjyqKurZcOa7HasXiahhMx/g9gQux1KWmIjOxXM/onKHJ61BJxtGJYVVTZeepxhgUZL8eM5gaxqrYbzr07Rp9bm8UcslFZ49H2zKdt5FK5t1onzNHhxvrsivYIZxr4Crj8P9msx4Hkujr2kJsBvTtn9Z6WldLZ1+Ncjio5TWQ5+nJ22TW90NKQ3WO/xWMixEDC4bxb9eMF7GU7IEe5OXcjHOa2VGVdTm0kav0fNY8Hz64KAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>08867cad-528e-4bb6-ad1c-bd99916b7bdd</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>08867cad-528e-4bb6-ad1c-bd99916b7bdd</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>User Consent required</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^no$|^yes$</ValidationString>
+                  <ValidationError>simply yes or no. The script will look for 'no' and fill in the correct parameter</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>94f9281e-09b1-41b9-be8d-f0fc9c6c73e2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>94f9281e-09b1-41b9-be8d-f0fc9c6c73e2</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Control parameter</Name>
+                  <DefaultValue>/control</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^/control$|^no$</ValidationString>
+                  <ValidationError>type /control or type no if view only desired</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ceea3350-0508-4664-bbcf-a7c03ecf8eab</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ceea3350-0508-4664-bbcf-a7c03ecf8eab</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sPrimaryDnsDomain</Name>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e7cbf371-6b2a-4b16-8a37-c31c6b0c55c3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e7cbf371-6b2a-4b16-8a37-c31c6b0c55c3</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ce54dfa9-eeab-41ba-ae40-f5067ddf49ca</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ce54dfa9-eeab-41ba-ae40-f5067ddf49ca</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sServerName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>a4582b89-f3f4-4623-a11a-5d0ff70b9338</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a4582b89-f3f4-4623-a11a-5d0ff70b9338</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>prompt for credentails</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^/prompt$|^$</ValidationString>
+                  <ValidationError>If you would like to be prompted for the credentials to use for shadow type:  /prompt   otherwise leave empty</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>PlnWSkYiz9aod9k5cIsIqtSW+4A=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

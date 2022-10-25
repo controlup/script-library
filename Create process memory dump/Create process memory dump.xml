@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>fb595168-b5f1-423a-ae03-6804480cb57d</SBAId>
+    <RootSBAId>ed3064b4-1ea0-4966-899a-230f662592fc</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637271353711563364</SQN>
+    <Name>Create process memory dump</Name>
+    <Description>Creates a full process memory dump of the chosen process to a file in the folder specified.
+If the chosen process is werfault.exe then its parent process will be dumped instead
+Arguments:
+  Dump Folder - the folder in which to create the dump file in the format &lt;processname&gt;.&lt;pid&gt;.dmp
+</Description>
+    <Category />
+    <Version>2.4.7</Version>
+    <DateCreated>2018-12-01T11:35:42.687</DateCreated>
+    <DateModified>2020-06-04T20:07:18.34</DateModified>
+    <DatePublished>2020-06-07T14:00:08.963</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>iat2rXOcVFXd577R1qIA6rUcue4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>process, memory dump, debugging</Tags>
+      <Credits>Credits to: @guyrleech, 
+Pierre-Alexandre Braeken http://sysadminconcombre.blogspot.com/2015/09/powershell-dbghelp-reflexion-to-write.html</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>260</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>851aba4e-56b7-415d-84d1-67dec5c4af17</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>851aba4e-56b7-415d-84d1-67dec5c4af17</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>65536</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>eb4a3731-24cf-422a-a868-70227bc8912b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>eb4a3731-24cf-422a-a868-70227bc8912b</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Dump Folder</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^.+$</ValidationString>
+                  <ValidationError>Must specify a folder for the dump file</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>2RdEtQxRa0PO0ryV0A0qNGeYu3g=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

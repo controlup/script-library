@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6bb104de-4bc4-4ed4-b00b-f8f6d7fa6577</SBAId>
+    <RootSBAId>e074c40b-d2d9-42c2-99e8-de59cd023df6</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637006917556111987</SQN>
+    <Name>Reset VM</Name>
+    <Description>This script resets the power state for the selected vSphere VM.
+VMware PowerCLI needs to be installed on the machine running the script.</Description>
+    <Category />
+    <Version>2.2.13</Version>
+    <DateCreated>2019-01-15T14:37:41.387</DateCreated>
+    <DateModified>2019-07-24T13:59:18.94</DateModified>
+    <DatePublished>2019-01-15T14:37:41.387</DatePublished>
+    <LastEditorName>theartvark</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>WTxukqeZir+UBzvwpfdmFWIEtnI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>theartvark</Author>
+      <Tags>vmware</Tags>
+      <Credits>Credits to: theartvark</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>68</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>a7dca924-4929-43b5-bdba-cb345bc09176</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a7dca924-4929-43b5-bdba-cb345bc09176</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorUrl</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Vcenter server name cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>2</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d0fb992f-3478-45ac-bbea-5a05f39e7757</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d0fb992f-3478-45ac-bbea-5a05f39e7757</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ec3f744f-713e-41da-816c-02ecc956ca7e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ec3f744f-713e-41da-816c-02ecc956ca7e</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>XE8f13cjpcIqGcftdISysV7OnWk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>167e9d00-a340-4ff7-86b4-ad64e64f18f4</SBAId>
+    <RootSBAId>a2a2ad48-88c7-4309-baeb-cbeb56bdf86e</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789806392060000</SQN>
+    <Name>Show AD user and manager details</Name>
+    <Description>This script displays a user's Name, Company, Title, Office, Office Phone Number, Mobile Phone Number and E-Mail Address if they exist in AD, as well as those same details for their Manager. 
+
+Requires the ActiveDirectory PowerShell module loaded on machine this is be exected from. 
+
+Created by Rory Monaghan. </Description>
+    <Category />
+    <Version>1.1.7</Version>
+    <DateCreated>2018-11-26T11:34:50.73</DateCreated>
+    <DateModified>2018-11-27T17:20:37.857</DateModified>
+    <DatePublished>2018-11-26T11:34:50.73</DatePublished>
+    <LastEditorName>Rory.Monaghan</LastEditorName>
+    <CreatorName>Rory.Monaghan</CreatorName>
+    <Status>4</Status>
+    <CheckSum>T21j5zJvhaHLB5ZSvh8zkq2uFMc=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rory.Monaghan</Author>
+      <Tags>Active Directory,User Details</Tags>
+      <Credits>Credits to: Rory.Monaghan
+Original code by: Rory Monaghan</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Rory.Monaghan@honorhealth.com</ContactEmail>
+      <Notes>Requires the ActiveDirectory module loaded on machine running ControlUp Console</Notes>
+      <DownloadCount>195</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN1WTW8aMRCdc6T8B4twKNUuSq9VqYQARRxKoiaoh7aHBZaPalnoAklRmv/eN8/eZZev0OYSVSuDPR573sw8j/1BLuRczvBVpSktuZWGfJa23Mgdfq+lgxnjvvNc32B+LBNZoLeQviToz2WJ0YDSuUQSyJrzAdoKvRBaOu5AMsXIQ78hM/TnkMTQ9rjvBPtEbv5ahvgmsLA7NkA5xvqY/Q5sTKVHK6r5CTM9aEZHNYs+KYoB/lviY33A1UbqkA2gGwL9gnsH9OMBkogadrykjQVtLJyPGo8QM3Yv1RpCJ3HaIaQJsarlQEbEVGVc1F4ArZCIeoiOQWZ07dp5Z1eMuVbXnNGbKnytQ7MOnRai2ULfSNfF/1A2b5GDEFGdMLqhy1tM7/tAMZF7etMk4pCyFEuaW8OI/3CzBjsmkNxjxcB5oT6rbEXclhkNerKkPALOOW0m0FgxgjpnGXohH9nTVs6s1tAPqL+Qr3Ip3xEByz/l0RspyTe0CubeYU7XPpCtGlnfZUzRbnbc2GhhlNDPNAqK9YYRGFJX8Vku1tBKiKPGZY5euksbmgY4tF2RCz6zN4A9y00/OxHFaO+LtX8Ak2bQcj3m6VlncZ3gdwV5hatD+UlfY1pX7laI8rHAhztn7XGLJfZr88Qqgl1fjuPP7/bE3CvD++TCfltfcrnaeK6R7pL/PWdXLRj0Z5ClTFP5NIeudDR+2/H6GzR5plievdRSS37RksFuxajp6Clj1/5MleF3vqIMmQnleeyYVgMbR46NASOUnuFD8nKu7/MMzFgzEnpiK0bRagUncVdy5dgRZ6w/hjxibX0NuG+xT3IS5gDZ7r8CxPYOsmi05irn8vjzPqSVSe+6bs56m7XbsnVJpp2C7i3ab9akkCfP3ge7mfdcVONs3MTvnPV8mVV/r/Am2H4xTN3d6vFcRlyf3vXFN0H+RbB5D3iFN0U+JvvviRLu09DVPz3BI9m+v417Fz1/Cp/nu5H3tPmvuTrGzP81f7ZCHrtdTqvjly+o49v1e1Ox/wCdktGOcgsAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>590bedc6-b30a-4933-832a-c542826a0102</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>590bedc6-b30a-4933-832a-c542826a0102</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>ozsivYO8aqWi+pzUQUYd9mEiC4g=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

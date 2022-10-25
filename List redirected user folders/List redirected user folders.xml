@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>4284b59c-57ea-4d9a-809a-3ea02f856615</SBAId>
+    <RootSBAId>8ea0cf23-e5b6-47a4-93d7-540f7d5abf96</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636201748163664000</SQN>
+    <Name>List redirected user folders</Name>
+    <Description>For the selected user session/s, enumerates all user shell folders redirected to a non-default location outside the user profile.</Description>
+    <Category />
+    <Version>4.1.8</Version>
+    <DateCreated>2014-06-23T13:18:36.533</DateCreated>
+    <DateModified>2016-06-15T16:42:39.623</DateModified>
+    <DatePublished>2014-06-23T13:18:36.533</DatePublished>
+    <LastEditorName>Christopher Cable</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>wtTtk6/LCi8HwCJLX0c0OclepBM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Christopher Cable</Author>
+      <Tags>Folder Redirection, User Shell Folders, PowerShell, Folder Enumeration,</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes>Modified script to show the entire path of the redirected user folders. The original script would truncate the path.</Notes>
+      <DownloadCount>966</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAK1Wa08TURCdzyb+h5uFBGrcojHGBMVoSBEiQmMFPlhilm1L0ba7bF82wH/3zLl33zXhA7nZch9zZ87MnJnLgcxlIqHM5EYizIx8kT5WvnzH32vsTrFKZCVfsV5JG/NIYswT3unj/DPu9eRcAhlBm+48l2dyx1+D8UE2srmOHzKkXiODmnW7P8dvHzoNJNVSH7MZJAznikctL7ifVHAa7OdIjCxpbUTZSMaYz2hvgluqdciTtnTwG6/xroi8JX+hewwJ1bf7RNEyuB9jrViMbMkhbu/LGfR3IRdBLuBt60ML9xdYJYzYGHsTnG6VcJ4yQtf0UlEe0ucY8x2MJUcTHoeUi7N4fAGiFRA1caKx2pErWI1wUtR+DumAeoclvep7gJt/cGNBnwe8vSzou3U+pxmfYu+1vMF4K6/wvcPYgXSAM42K3lZNU+ZphOEDjY156DLbq+RtVZAJ8I1cXnzIDPCrjAmoqcodH9j7jIC9patUynfYVS6NxoZ85Nyu29CakB/bmcTPwq4i0vvb8o3+9ZjXiBr3ZJMY1EJDLgv3p47vmp9LSKVMSSUaBQSKYc5Y+XIMzaFjjkY6lei4yFTPlYXtjIV1OynTj+jFGDtNfPclvcrQkFKnYM5vt1LNWjmx87pdyVa17lYlvQeMUIvMGtY035WYqeMEZ8uaXIyoRBVMdRyfoM+jRWWV7nvMzC95X7Ojw2Pd91iNVq+uqpH1ILmHb7sWwzqCYg6aXJ847hjiaGBX/z5g5DlXHesz/pCxYyPLYd71bJ9NsgwMsi6TZv9lpYNq7aqNOOugU+IP2RNGWGuWLONDx3ftcFeUCZxFw6o2lNO/17Cdd+QoQ5Yj9REDRRQyMmnM0vox2esxo6+bLrKpP3l33WNN2Yrug5OX6F27YFfqVR9Z2mRPXWD/DKxuIcdtfKfgxRFi3CpUnMb02PUPQ/9HfNVy/kwdnnU8OSjJWWxP9Z7kLPJK70mHUZkh/jb2XfSiG74DEStEz7pywWz02H2nWO9Dc0J5fWvOHWLLsq6r7REzoSdd2Ep51cn6tqn467HKDWylb3y9tpXpzUfVmPo8wWxW4on3XyZ4rjJucGKY88dkyMfslpU4QUTUq0atB12wW8+cP3O+j3P646GWoxo/8ipI1iCw0omrhOJ/R9qbbIUbRtjWSxnL47y6z6zY2OUvppEXzsY/lSr07SgKAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>PEKBNfPeWzzEw23r6/MMDMgYQzo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

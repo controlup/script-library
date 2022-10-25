@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>b212b33a-0c0d-489f-b48a-d4681cd3ff3c</SBAId>
+    <RootSBAId>70942e53-5cc2-4844-be1e-cb3f368bca07</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637070247817492233</SQN>
+    <Name>Disable or Enable SSH on an VMware ESXi host</Name>
+    <Description>Using PowerCLI, Connect to vCenter and start or stop the SSH service on a host.
+Notet that , the computer running this script must have PowerCLI, and vCenter credentails are required during script execution. </Description>
+    <Category />
+    <Version>1.2.25</Version>
+    <DateCreated>2019-10-04T14:29:03.103</DateCreated>
+    <DateModified>2019-10-04T21:25:19.843</DateModified>
+    <DatePublished>2019-10-04T14:29:03.103</DatePublished>
+    <LastEditorName>mc</LastEditorName>
+    <CreatorName>mc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>XJnpEr78JWrBm5xA5u60QPtny0U=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAYCAIAAAAUMWhjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAmRJREFUSEtjIBX8JxEwrO/jXt/DQDzqJAVMnDiR4d95gX9nGIhHIaSA+Pj4UQvwAypYMGPGjLUwABVCAlSwYPPmzZDkeO/ePagQEqCmBU+ePIEKIQEUC65sVN4ww6ynxn5So93KyRafj3LBDQWiM2s0VkyyaCmznzt3bn9/P9QAJAvevHkD5HZ0dCxZsqSnpwcii7CgscQemlNhQFJSfPtcY4jpCZE2UFFYTr5w4UJiYiLQCLgF3759u3jxIoQNBLt27UJY8GyPKESzkYHGtjnGXm4mEC4nJyfQ9PXTzSBcMxPtKc22+/fvhxhx7NgxZAswQXl5OdSCyxuUIUYwMjICvbKw1/rwUl2I24FoVgfU+dzc3B2V9pMmTaqsrAT5HwzgFvz796+lpQVYNkC4QADkIoLIx8MUYgocyMpKbZppCpR6vldESxPqAiCAaD5z5gzQgcgWnDt3DmLlp0+fICJdXV0okbygxzolxkZbSwVqEthDP0+wAKX+nmYAxnx4oKWioixEMxAAowHZgpMnT0Is+P37N0Skt7cXasHiPquuavuiDHtgZEKMU1NVhNhxerXG9Fbbtgr7nGQ7YOgBZZubmyH6v3z5gmzB+fPnIRZAuECAsGB+tzXEODSgqqIANDEr0Q7KBwOo7v//9+3bh2zBtWvXcFoANGVmu42mBiKggcDF0ejNAWjolWbZCwkJQsSBOoEpEmguxDi4Bbdu3YKIQLhAgGIBBL3aL3R7m9yjXRK/TzLBBeEImJpvbFbIyMiAGEQMQLeAGATVShwYtYAgAFnQksPdks1BPHKxUyceuTlqAQAfD1o3pbl2IgAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>mc</Author>
+      <Tags>$HypervisorPlatform="VMware",$SSHenabled</Tags>
+      <Credits>CREDITS: https://vmguru.com/2016/01/powershell-friday-enabling-ssh-with-powercli/
+AUTHOR:  Marcel Calef  2019-10-04</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes />
+      <DownloadCount>66</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>2</AllowedEntitiesEx>
+      <AtomicEntityEx>2</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1Va2saURCdz4X+h0WFpOBqtaXQJ4REEmmtovYBpRSzvrZRY92tVkz/e8+ce/epIS39EpbdvXvv3DPnzMydfSVFcXA9lAd861WR93IiLWnIi3juTHwJZCCXMpMRvq9lhWdDFqm5Hq4Lri3wHPD5ETgbjFe0aMDiM5AcmcIqkJB+075vuz7A2gfiBOMO9m6At5JTeSdNKWPulF4XmPWA6uC+xnON+RFmQ1obTkO81bNyCmMlAXcsuXOaURNw7xrePavcqEs0VP5KQd/ietg1h6efMasVxso90qcMNNrq28OqD+uQdiP5AVufo+BAJBKFeeUe9wzt3AAYMyJsOJphdEl2HelKGznrgG8DWc/npwLcLleasOixQqZADMExwFcV1xr6JuCpuipWb1Xq8lhq8gwjfVdhH3EPGBll4cqYeodguMXXKK4vExsXtmrtknfIUYLj0a6a43uC2ukjk23wNvXcYu49+tTKGbB+x1wzLJ8Dt4aRi/tpDq8PxHOr3FwloG/BI6qTgDXVAeoAHMf8mstrKWROQ4G4RXkTx7hk1Z0xu77NmIOd6kN3TTD/BZy+2hNbgvW+5/0dNeww9hpHU3t5mzpRX3J2iR1lvut8Z6upTKZDubIYCWYF80tmIZRjOUIujuRR6gwU2W26QJmD6ZoVF523fBUltVy13owC00Ois7ev9YnVaqKr+Z2yK1xhNZ3JJjN+fGsMXXYTZy9rqmeH+xMrVSPiptgUeM4PnV4zN7S5nRBd1Y2tv7s6ZWB7zwxsCzZTI/lFDo78jjXrne2GLrCbwDMKTT/I5zTKj8Yr3Sl8no5DnWIJO9PJQtpHvs/xZXy2cC4M955ke2h2VaOWz6sqvGGUp9yrUW7D8/e4w++w5xsq7i1mtsTU7mgy0AO6azt4AbGJtM2YhZD9UPvTyqqM/ggh2UVK/LhCDp/LxGPP/j0Kttp39zQKN2QXsb2LnamiMRXPcSpLGJtqGNl6+7cImT9udILub4QSrv8foT8VqcnRYAkAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>e8e16cb0-7d2b-4cd2-92e7-5a4f7dce23bd</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e8e16cb0-7d2b-4cd2-92e7-5a4f7dce23bd</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>Name</Name>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6ad8f559-abc9-4842-851e-462d6bf4bd82</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6ad8f559-abc9-4842-851e-462d6bf4bd82</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorUrl</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>c4c38947-3468-4f67-baca-a6fc030b176c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c4c38947-3468-4f67-baca-a6fc030b176c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>80b4fea1-d291-4088-a079-bb723d4a4786</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>80b4fea1-d291-4088-a079-bb723d4a4786</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Start or Stop SSH service</Name>
+                  <DefaultValue>Stop</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>Stop|Start</ValidationString>
+                  <ValidationError>Please enter Start or Stop</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>a00nTIXSlc7FPMDcyMZ+mVZR1Uk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

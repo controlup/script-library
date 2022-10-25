@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6c4487e3-da42-480a-84db-84980ffadd31</SBAId>
+    <RootSBAId>3d7e9c2a-ff08-4730-b832-75031ea61e58</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636639031938358000</SQN>
+    <Name>Get Ivanti Environment Manager Logon Time</Name>
+    <Description>Displays how long Environment Manager held up the logon process. It will display the entire time as well as how long the Pre-Desktop trigger took to fire. This action requires the 9662 (Trigger Action Times) enabled in the EM policy for the "AppSense" event log. You may need to adjust the "Offset" at the beginning of the script according to your time zone.</Description>
+    <Category />
+    <Version>1.2.8</Version>
+    <DateCreated>2018-05-24T17:21:33.74</DateCreated>
+    <DateModified>2018-06-05T23:29:37.29</DateModified>
+    <DatePublished>2018-05-24T17:21:33.74</DatePublished>
+    <LastEditorName />
+    <CreatorName>Landon Winburn</CreatorName>
+    <Status>4</Status>
+    <CheckSum>haqmvmw2R2AcA372KWdA+cy+XEY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAlFJREFUWEftV7tKA1EQXQKChZ2tRWpLqxT5AiFCav0Df8bGD7AWBEGRiOILCxUfaCNWBkFQRMQHGtBd94x74uzde/duXDGNA4fZzL1zzuTsKwnqB/WoulPtC6Ad4CBYDfoC0f4fQA9QWav8GTIDsGjF8g+zBVrHOoCeEGieNAUTJxM9gX3kMbmRuwPoos5DG0NR2QCHjRtIOWDbhMxYuVsRtO5aKbC+dLuUymEYSp8WNLmdDujNiE7Y+aotxsD5tQHryMke9CBMbq3RkwO60URtvyaCFy8X0eD6oNQYtj7WCjuAsBFBTB6n8bfGEIjZq1lZY+g+U6e0A8Obw/LNMcTo7qjsm7uek4EYZp/mLu0AarBdx+nTqdSfP57lM/vMDPTkAPekEF9sOA2wHd8c4ojDx0PJCC1IsFbYAdgMu/EZgsTA+sD3/mQYLY5bUXOaOl4HIMDgfZ0XvPV0pIY0NLwO4Cn28P6QUBULDMph0VvqSZh6wGjYajZojgRaw+vAyPZI9/H6E6AXHJpbazgdEMSTz7RnxMoyAQ7tgh4k1wFc0byops+no/Gj8ahx3PACr2LsRQ8CHOAir9ZwOxBPTIKt+62vF8xCDDN7jtGLAJfNhYwDGu23tjRfvl5G8zfzcj7NV7EL2Ise9CLApbkzA5gLU2dT0vibAU7qUMvpwNjeWDR5Npn5mWWi6E81cIGTwtRxOtAFzttvQHMmyHXABe7T+221POh9uQ5oYoJret1W8/UwZxxwZR4Tvppr3cxOB2yZx7Z1Ww3Zty7a/f17Xo8+AZjnxf2kUIP0AAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Landon Winburn</Author>
+      <Tags />
+      <Credits>Credits to: Landon Winburn
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>landon.winburn@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>164</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>2</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>0a39748b-0626-4bd8-b440-241c19196d01</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0a39748b-0626-4bd8-b440-241c19196d01</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>1d0GaHoZfcTQc62ogNbCT8mLKeo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

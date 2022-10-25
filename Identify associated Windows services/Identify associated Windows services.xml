@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>fc549a65-dc77-463f-a41c-f0f7b25028ed</SBAId>
+    <RootSBAId>53392a9c-85a9-486f-97f2-e5cd123b3cc9</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635478525509134145</SQN>
+    <Name>Identify associated Windows services</Name>
+    <Description>Finds and displays the details of all Windows services associated with the selected process.</Description>
+    <Category />
+    <Version>1.2.2</Version>
+    <DateCreated>2014-09-18T15:43:24.62</DateCreated>
+    <DateModified>2014-09-18T16:05:42.65</DateModified>
+    <DatePublished>2014-09-18T15:43:24.62</DatePublished>
+    <LastEditorName>ControlUp Support</LastEditorName>
+    <CreatorName>ControlUp Support</CreatorName>
+    <Status>4</Status>
+    <CheckSum>hvXIhlINmiajzO6rk785VC+tOgE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ControlUp Support</Author>
+      <Tags />
+      <Credits>Credits to: ek
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>support@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>1147</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/In63X2P6a1S/xuLXWP0a61+j/TXyX6P+NdJf4zP6/0e/xpj+/xv/Gsmv8bv9Gme/xlK/f0nfV/RG/ms09N/ZrzHT1r/br5HRNxf02fd+jZ1f4/v8XvFrnNM3W73v0l9jm97/RfzWkqCW9N8d+usX81up/vddeqdgjLZ/jW9Tnw39Dqze/Bpz+ryh3xvCA21W/E3+a7yj33L6rOVvW2qX08+XhOVT+pnxpxm/V1C/F9Rrzp8AtzVRIKdPWztqg8cpwS24h13+/JdwXyVBwdshzi3Buu59av773Sz1vvw1Jr/GTyuuQr/P6a+WRvpdwqPofL/9a5xQf8AfI/guY3/v19j7NX7/zmxIy3AuX9B7C8Y0Ns/bv8Yzglbavz+KzO9nN8z/RwznlD7HN/WvccxYF/T7kr55Tb9X9K5PD1BwSni19O+cqfVLgu8d38TpdRvuuQ0XgSqYxVIh58zNqw5Nr5RzlvQp3j2nn2v6C21ljK3HkdfcQ0507vLRED/5VBniK8dBNeO15jlDj+CdYUr9DP3/Gc/KKY3CUDsG2fXQHb9I9++/8S3z39fj4tfMfZf0yZTH/rPFxVs8jnHk2zvMxaDW7/5r3ESh7n8vCM4V4RCO9iWNqjt+6XfFWLasJ35P6iuOazgLMZwP3wvLH/Z/4Zya+ftMZ8D8/f/2MbSspRze7pP/d2P+lPXRiuXtukf9+Lf/7x6RUB5y8wXJwaw3J/43oTW56b94619COiH2ubNNXU38PlbJ/Pfh1knsjrFNol3xfaF8ineuuI85f79kvSPad0Ytr9Ru+dLaDNqu29iob3psN43J+Hmwy6B6xd/Bv7tpnHfp70e/xh9An/wB1Co+YvNff75hLc5Vsx+zNaqIF4tf4weMTVz/jQZkb+RpFvO7z9HxuQi9B/FN/x+ooeJEzgsAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7e524501-c8f6-4380-9fb6-452cb56cefe2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7e524501-c8f6-4380-9fb6-452cb56cefe2</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>X7+tLbhH/QBovc9lxVgbT7UrMI0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

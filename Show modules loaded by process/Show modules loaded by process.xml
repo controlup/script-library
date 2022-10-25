@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>b5366bf1-234d-45bd-b626-246bff2d5b9f</SBAId>
+    <RootSBAId>d3f954c3-c8f0-4dd4-af56-a5ec40fd56c1</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636784084016778000</SQN>
+    <Name>Show modules loaded by process</Name>
+    <Description>Show details for all modules in use by the chosen process including version, timestamps, size and signing information, grouped by the containing folder.</Description>
+    <Category />
+    <Version>1.2.9</Version>
+    <DateCreated>2018-11-09T18:33:47.64</DateCreated>
+    <DateModified>2018-11-20T18:29:17.03</DateModified>
+    <DatePublished>2018-11-09T18:33:47.64</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>rVLc+By7+bgSAlFSTdpi8Ckr8bo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Modules,DLL</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>1119</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>fa373789-654c-4b8c-a888-a65439cfb7dc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fa373789-654c-4b8c-a888-a65439cfb7dc</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>X0qwWE1PK1bRobbVszGiwymenKc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

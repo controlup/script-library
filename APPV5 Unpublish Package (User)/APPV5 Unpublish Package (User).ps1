@@ -41,6 +41,12 @@ Function Get-AppVClient{
     http://virtualengine.co.uk
     #>
 
+    ## TTYE - check if this is the built-in AppV
+if ([boolean](Get-Command -Name Get-AppvStatus -ErrorAction SilentlyContinue)) {
+    if ((Get-AppvStatus).AppVClientEnabled -eq $true) {
+        return $true
+    }
+}
 
 $Installed = Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | where Displayname -match 'Microsoft Application Virtualization' | Select-Object Displayname
 

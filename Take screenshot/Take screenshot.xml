@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>417e4558-aac8-448d-b35f-a28468f03af3</SBAId>
+    <RootSBAId>e64a6845-3d7f-4983-8a67-604d5129e6ca</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636896347230311041</SQN>
+    <Name>Take screenshot</Name>
+    <Description>This script gets the dimensions of the users working display area and take a screenshot. The screenshot can be saved as a BMP, JPG or PNG in a location of choice.</Description>
+    <Category />
+    <Version>1.3.4</Version>
+    <DateCreated>2019-02-25T11:39:17.407</DateCreated>
+    <DateModified>2019-03-27T22:55:20.29</DateModified>
+    <DatePublished>2019-02-25T11:39:17.407</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>uvcT1x4ARdbtZpPrgL1KbrObVgs=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>screenshot, user experience, vdi, rds</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>283</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>69888</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>9566fd08-428c-4438-81c4-12031b40e422</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9566fd08-428c-4438-81c4-12031b40e422</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>BMP, JPG or PNG</Name>
+                  <DefaultValue>JPG</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(bmp|jpg|png)$</ValidationString>
+                  <ValidationError>Please choose to save the screenshot as either BMP, JPG or PNG</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d0f7d8fe-7684-48a1-8e62-5eb4419eb9f3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d0f7d8fe-7684-48a1-8e62-5eb4419eb9f3</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Screenshot save path</Name>
+                  <DefaultValue>%TEMP%</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Please enter a path to save the screenshot (without trailing backslash).</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>0NZQDeOws6It2b7etQNIb7sa77s=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

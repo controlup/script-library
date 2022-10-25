@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>66b607f2-e7f6-4b52-9935-5224b2f0dbff</SBAId>
+    <RootSBAId>852e7499-3ac3-4f45-a0e6-157b269844b8</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637307462748070962</SQN>
+    <Name>Check Windows license activation</Name>
+    <Description>Check the windows licenses activation using the slmgr.vbs script and parse significant info
+Verbose=No will read the Status line and include the Notification if not properly licensed 
+</Description>
+    <Category />
+    <Version>2.8.14</Version>
+    <DateCreated>2020-05-11T08:22:23.99</DateCreated>
+    <DateModified>2020-07-17T14:03:32.01</DateModified>
+    <DatePublished>2020-07-17T14:04:35.04</DatePublished>
+    <LastEditorName>Marcel Calef</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>rbA9v+3VJUi9vT93/49Q/0+4I9o=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags>license, activation</Tags>
+      <Credits>Author: Marcel Calef
+Credit:    https://superuser.com/users/942348/zer0byt3 for how to display in the output instead of a popup</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel.calef@controlup.com</ContactEmail>
+      <Notes>update with removing a parameter that is not showing up</Notes>
+      <DownloadCount>63</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAOVV22rbQBCd1xT6D0LU0AaUNHZrWoOh4LYUkl6oQ0sgL4ol28Ky5EqyXZd+fM+clZyV4rQJfTGEZaXd2Zmzc9uZN/JOBvJBPouD+R7jsTyS3gMZla0OxlA2kkgqC8klwjTU71gnEoC+Bs2RGPuRhKDl+DriY1eAtsJK/ylOHNCmOB3JrHbDW9AK8EVAqfAdeL/idXA6Jer6r7fmt967pO6JTCysHNJzUDI5AvcVpXNIZ+BcgEux9C4HOx/UvJSKIJPgO+bdyqO8ij7GbbZdu8c34GS4LyViXz5hZSyLMRychUANLE2H9E5BK4zNSeljo5/uR6AvsQstOUUuLE2v/aE0h1EtaF/G+KpeMaLd9GtQs2pADQNwFJadU+wK5khPjjFyaGMQl8RQL49wyxxnFSXH+rW8kLZ08H2F3S/Sn8M7G6B1gKs+zYivMVfb1FsBM3EBPX3qG9Gqyu4UN6guy21kcqwqr6a03afdKbkWd4ja/YbeuQL6rJFpdib2+B7qGaee06jEmJM7ZdNNvxd8AzNIr+jNMdHWlv9/QIuQnCYfNA4dOYHfO/JSuvh2QblixuiL9cibMu5eiTIvs8+redsjn4czjy9QLfOBFFNyDp6Yty5KSpXLeSPDUr6qUH5aOfaRdk1LCZv/HCcTq3KY8QR122SgyXz1udYykwtzvDxXDht17BC0CvkA1T/aWr7ZorfhJ50eZpffk1K7jG8mpgU+LdRM88p8iKiFv33jMTMyt2x5CENt1TlEfz0XhzEaygVmX1r0pBk2z6pWMc8wV/SfSrS3iKamuaDdxt/CaZ9xv2DOueB/StkDq9u3LJ1ajdOjG9z9PRpGt3/VFK06Pbls9NLL2tvowK+XOzvkMSRi7Bz5zepsMFQu4+kA2C46jw/JkOtr6ikoGzGdXatHwqjUeb6wFwWoFCNqb2TqPHY/tOlnja7l1jTa3Qvd0mvPyv99M0lxXWZslUmmKn3d0y6+H/nxf5H6A9xYvxWcCwAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>30</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>aad8ec0e-7c33-4737-9502-026dffc8c0d1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>aad8ec0e-7c33-4737-9502-026dffc8c0d1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sOSCaption</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>0d8a7b1e-1ec1-4d6c-a1c2-db585cea7290</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0d8a7b1e-1ec1-4d6c-a1c2-db585cea7290</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Verbose (Yes or No)</Name>
+                  <DefaultValue>Yes</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^Yes$|^No$</ValidationString>
+                  <ValidationError>Yes or No (case sensitive)</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>qGnB+2g57F2NL59XLKatWDc/PzY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

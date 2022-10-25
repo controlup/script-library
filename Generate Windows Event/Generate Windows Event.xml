@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ca32d72c-9022-4259-b53e-3390fcccece0</SBAId>
+    <RootSBAId>6256adc3-1c35-439e-b625-e9df40d5fe97</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637534028213104750</SQN>
+    <Name>Generate Windows Event</Name>
+    <Description>This script action can be used to generate an eventlog entry for testing of Event based triggers.</Description>
+    <Category />
+    <Version>1.0.10</Version>
+    <DateCreated>2021-03-31T11:30:15.46</DateCreated>
+    <DateModified>2021-03-31T11:54:40.367</DateModified>
+    <DatePublished>2021-04-02T07:45:27.04</DatePublished>
+    <LastEditorName>wouter.kursten</LastEditorName>
+    <CreatorName>wouter.kursten</CreatorName>
+    <Status>4</Status>
+    <CheckSum>haj8DgiU7yVKTacYSyTk4FlIMPg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAIAAABLixI0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDAAACwwBP0AiyAAAAvNJREFUSEudlEtPE1EUx1n6BfgCutPExIUrTVwQNZGoC3YkrjS4MGJiYuLGmPhYGEKMqIABKq30/aQvSilSipSH5dVCW7UgLTjt0Hn2E/hv76XOTBtQf5m0c++c8+u5595OS+W/kHE18G+upoo6f+WisbIsMYw0OCz5AnSs5igXqtgs5ia2F3bK+9cHls+8jHHprHD6nNh1j2araeKqTu/vyI4eOT7+ZEl3Qn/NlIlc6I23Pp4ubx3pqragli4pr8xypeuU/OHBsS4E12lRKepXNlHpPivrHj1PGFpNHfZvM5ffLp58Gi1nvgvnL4rdD2m2muYuQRBKhZ8yX+ZEocgfCJLI8mKRE2VJkln2126eZqupugj1G5Av7M1EY7R/DbjH/TROTQv5UooAcSVW1mwO9yejRRTF+MKSwzVuMtuPcZF1KSkU9l6/6e97N4jMhcVlvcHcPziC+6nIZ4vVqTeYaJwa2i8lGBZLpVA4kk5nUZfd6cHk+kbS4fS4PT4YXR4fidRA10g5POLQIRNpjTBMcSI0RcI0qF0KQpORXG6bChSYLQ6O42hQDbIs7DDtVyNr60mn27uyukYdlQrH8Va7K53ObCRTNOgQGHBp6yLe3d38sM6A/OjsnNPlxcahR9jHfAHsDY3oJZShhtalYTY27/EGUBR24Edum2EYq82F3URFeIr5ZGrzo95YKpVIfB2VC7819yWOo4SKcKasNudkeBr3z168is3NoyKcNRw6zAiCOGow8jxPM2uoXCx7gBOAUA36MXMmk6WDQ5hi0eXxIossV7tGry8IHY1VcPvu/ch0lA4UYL310rQudJdGqem8dcfrD9KBglRq62tiFYkQiaJUfRcSEXC5vSRIw82OTovNSQcKWJYNToSRiG0FqvcqceFZMBQmMwC/ebW9Qzc6Rsc1/IEQPsvlsj8YIiLsVRMXWokDRWYAjmjblRvvB4bouAY6hc+6CyK88o534Q94qa29p7ePjmv8cQVC6BREHMf/BgrXb7NnCJrBAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>wouter.kursten</Author>
+      <Tags />
+      <Credits>Credits to: wouter.kursten
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>73</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1X227bRhCd5wL9B8EOUBsQhdhuX4y0gOHaTdDaMWwlTWHkgZYolahFqSRl1Qny7z17ZrkXkqrbPLQFIZFczp6ZOXPZ3V0pJZPfZS05nyoZSCJv8VTiOZelFBg5kpE8ly/lC3khu7yP5EZ+kUt5LVd4eoXfwF0/YHZBhFRqi5nitwFeIVNgbjiWyQMlayIq6vdyBqxTuQbmlYzx/xpaDOobzFGsDZBzIicBxj1w5/ha4z6QCb1R/U9pN3N+payZl9LjO85bU+fUoao3OsPYMMelTI0CH05p8xievMP/ILgugD6Brpz8+BljOQFrN5GsXs9ac4Yc87br+ziyxuO+ZGTGsOca0Qpxj+QA7D3HPZFD3A/xbiL/M/xc088S7z/iuaTHGVlJ8DtnpigLcZ4YnbvyndO/C4lLWL8gl0uZWaazFvtx5Hx0dUSZvaXGkizM5T181lmFw/+WTKSQmUP2Fj69d1bU8iirJ6yY4Zvx+ZS+GF1L6HiDeSqfM2vi/DiDVMl5QzBndBfWwoFFO8doDpw18/EE9ym96/fpzNkzdha3/ToI/BpbP/y8V6ggxc75HqOar13Ewx7EBTO9gtTcRaIbG8+kji62+HXRQmtbcBRYcMMMLMG0ZvsU9xlk12CxpiYTh53eOJ0Q34zubLEkRO/a8bW1w/zOIVdArnZdcGyrP4EenXFKNM2fj5zV1NcLx6baO+ugTcjcRH7jd9+BGkYnzKCSMjV72CLQpnmslq8ZLTNukAzOAxFMjmrdrjBWdXqZ6qnYK3PI1Kg1w2EVfO3TkNKqNuqMkVgEczVCFeOTuYq44GhOK0pGuJHXjl1ZfsKaWzL6U1d3nq0C35Sde1xhPha0KLUZsCaLa2v5huOKXLCvTpi/nh21VdFKi9isYyt6ekevFtbumv85mG/qP7bE4C1os8Z/FGWLz5MNu8W97TS6/qjWME6NlTPbXYaUKWh/TvY21Fi5Na1ysc7YM0vaEUY6xi+Zab6b3XFV0BWx7eGGfOhYN1+6nmruLJk7ueWxHf1ZFAFlvwKuj0ScfWnkyzOsdx4ttuBM/mAtraj3+Mm67h894pfryOavnHftzDeRfwyy9c5VeH/2NX68JAu5fLAa3uI5A98DsvvAldh8adgekpd7a1UWdRlfUSNYGjJyw+qY2B59bO0c0NsV4x5KxyvaMXvxuDeHzEo3Dbyes07UdoM9x6z+DvNULxkFmfR/53onqs7+avNVnyE7czdWk6HM7TLUjykRDlp19c9z2K98fbl8tdW3R2L4daDN7SToUI2/79y1jc+mc/VHPM7YZpfZvF/RlpQZsxd9aa7bQCaz+9s97q1NXFK7Gpm80T2BrhmZ7NsdQRfP76+63A7/JRvau5swhuGMfber8Qwahn1M2+vn5+wsQvyc+5O9IMdGrYwsbKfusrcv7d1Uc8UnP18V/00HivneiSz+xLdPjvfPqc9veuvysrXj2RYpXRUHiFjKbp39jY7VH/lmvTC/vz57J/ITn/ypr3tOS7AC6779MTjl9J99kujsMm3J6Wkm6ZwuuueNpLXvj88BfwJLZTK3BBEAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b3b46ebb-5cd1-478b-b668-63e20dd70363</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b3b46ebb-5cd1-478b-b668-63e20dd70363</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>LogName</Name>
+                  <DefaultValue>Application</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>Application|System</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>86781f23-aee8-403b-8560-23ad923aa286</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>86781f23-aee8-403b-8560-23ad923aa286</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>EntryType</Name>
+                  <DefaultValue>Warning</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>Error|Warning|FailureAudit</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>69ff41ab-71bf-4547-8bf4-2a4f8e9a84c9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>69ff41ab-71bf-4547-8bf4-2a4f8e9a84c9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>EventID</Name>
+                  <DefaultValue>42</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>57357fe9-1db9-47ae-8a25-8b91805dab1e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>57357fe9-1db9-47ae-8a25-8b91805dab1e</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message</Name>
+                  <DefaultValue>This is a ControlUp Test message</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>31ddf7e6-d5b7-4bce-9780-55216f5f397c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>31ddf7e6-d5b7-4bce-9780-55216f5f397c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Source</Name>
+                  <DefaultValue>ControlUp Agent</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>jrImASTuC/apfx3mfR++3LTvDhM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>57fb7ef6-d36f-4b5f-a1a3-6b44039d8419</SBAId>
+    <RootSBAId>a39681f5-a7e2-4f15-8625-b44c43f901f6</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636784073244042000</SQN>
+    <Name>Show top network destinations by traffic volume (process)</Name>
+    <Description>Capture and analyse network traffic sent for the specified process in a specified time period, showing the IP addresses and DNS names of the remote systems, the port used and the amount of data sent in the capture period.
+Arguments:
+  Capture Time - the number of seconds to run a network capture for (default 15 seconds)
+  Show top - show only the top n destinations (default is 10)
+
+Credits: based on "Capture Network IO for process" SBA by Andrew Morgan</Description>
+    <Category />
+    <Version>1.6.8</Version>
+    <DateCreated>2018-09-26T15:57:19.183</DateCreated>
+    <DateModified>2018-11-20T18:05:31.24</DateModified>
+    <DatePublished>2018-09-26T15:57:19.183</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Blj3TmCIBoYIVfBvzM583gBx1c8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Network traffic,Bandwidth</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>195</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>f45a40f5-3d8b-4711-a084-3af0efd964ad</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f45a40f5-3d8b-4711-a084-3af0efd964ad</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Capture Time (s)</Name>
+                  <DefaultValue>15</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Must be a positive whole integer</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5b727639-a083-4e41-a70e-47868cba8185</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5b727639-a083-4e41-a70e-47868cba8185</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d15991dc-5223-4dbd-a051-dbaa269f5443</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d15991dc-5223-4dbd-a051-dbaa269f5443</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Show Top</Name>
+                  <DefaultValue>10</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Must be a positive whole integer</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>e5jhOUhseI2CO56dp2w863fUsYw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

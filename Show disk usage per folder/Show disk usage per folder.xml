@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>fc0045ca-abe3-497f-baf7-dcc3fbe4b078</SBAId>
+    <RootSBAId>8fbff151-8c2e-4eff-93b8-4a5b0bc83d7a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789285056752000</SQN>
+    <Name>Show disk usage per folder</Name>
+    <Description>Show folders consuming the largest amounts of disk space. Helps you to find which folders are impacting on free disk space on a given drive/folder.
+Arguments:
+  Folder - the starting drive/folder (default is c:\)
+  Depth - how many folder levels to descend (default is 10)
+  Show Top - show the top n folders consuming the most disk space (default is 10)
+  Last Written Within - only include files last modified within the last n days. Specify a large value such as 3000 if you are not interested in just recently modified files (default is  30)</Description>
+    <Category />
+    <Version>1.4.16</Version>
+    <DateCreated>2018-07-20T20:23:51.627</DateCreated>
+    <DateModified>2018-11-26T13:04:29.077</DateModified>
+    <DatePublished>2018-07-20T20:23:51.627</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>0IMeBXZA9a/64WCzW4BjhJe5ptc=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Disk space,Free space</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>363</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>1200</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>fec01e27-283f-402f-b782-d3d0d95db626</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fec01e27-283f-402f-b782-d3d0d95db626</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Last Written Within (days)</Name>
+                  <DefaultValue>30</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9e53a61e-22f1-4885-ab3d-f701fe1bed50</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9e53a61e-22f1-4885-ab3d-f701fe1bed50</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Folder</Name>
+                  <DefaultValue>C:\</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b28f4a1e-6fd6-413c-8476-964a707a1b61</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b28f4a1e-6fd6-413c-8476-964a707a1b61</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Show top</Name>
+                  <DefaultValue>10</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>643c0f8d-243c-4e64-b4fb-eac8c76ee9d5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>643c0f8d-243c-4e64-b4fb-eac8c76ee9d5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Depth</Name>
+                  <DefaultValue>2</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>V7t7WehcmHKnl7pY8cGB+tGpCCY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>dbf31f44-8588-4393-a1a3-22fb6758b0f6</SBAId>
+    <RootSBAId>b924e627-698c-426f-a0d3-600f44e20ecf</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637466590952139461</SQN>
+    <Name>Delete IIS Log Files</Name>
+    <Description>The script finds the location of IIS log files and deletes the files older than X amount of days and/or over Y size. By default, the script runs in report-only mode which displays the total size of files by location. In order to enable log file deletion, change the "Report on log files only..." argument to "false".
+</Description>
+    <Category />
+    <Version>1.2.5</Version>
+    <DateCreated>2021-01-18T11:48:30.637</DateCreated>
+    <DateModified>2021-01-19T13:10:48.993</DateModified>
+    <DatePublished>2021-01-19T13:12:02.67</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>A/zeLZSYO8nr4sgdkxr9N5Up6Bg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>iis, logs, disk space</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>64</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>fbe96f29-dd06-40ee-9038-ed617b4eb971</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fbe96f29-dd06-40ee-9038-ed617b4eb971</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Minimum size of the file(s) to be deleted, in megabytes. 0 = any size.</Name>
+                  <DefaultValue>1</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Please enter the minimum size of the file(s) to be deleted in megabytes. 0 = any size.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3c5f48be-1e5f-4d82-8b0b-eaba70d9cb76</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3c5f48be-1e5f-4d82-8b0b-eaba70d9cb76</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Minimum days since last modification of the file(s) to be deleted, in days. 0 = all modification dates.</Name>
+                  <DefaultValue>7</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Please enter the minimum file age in days. 0 = all modification dates.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9c0a4dc2-be3e-4b90-a077-802ccc3db308</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9c0a4dc2-be3e-4b90-a077-802ccc3db308</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Report on log files only, do not delete</Name>
+                  <DefaultValue>true</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please enter true or false.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>+mCYjzdh8a5I7aPU29pop/fcXxo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>b0e1bd48-07a7-42cc-8bcb-8f681197e4a1</SBAId>
+    <RootSBAId>e62b1c56-e2f2-4365-b1dd-e5505b137bec</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636807216483326000</SQN>
+    <Name>Open web-based VMware Remote Console</Name>
+    <Description>This script will launch a remote console session in your default browser for a vSphere/ESXi VM. This is mainly useful for vSphere 5.x users.
+This script requires PowerCLI v5.0 or greater, Adobe Flash, and the vmware-vmrc browser plugin in order to function.</Description>
+    <Category />
+    <Version>5.10.13</Version>
+    <DateCreated>2015-03-23T15:49:55.62</DateCreated>
+    <DateModified>2018-12-18T09:06:49.543</DateModified>
+    <DatePublished>2015-03-23T15:49:55.62</DatePublished>
+    <LastEditorName>gal.goanis</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>JF0qpy+6c4YP9dMuz8zwQJN0/9I=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>VMware, remote console</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes>Fixed missing arguments</Notes>
+      <DownloadCount>174</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO1aa2/cxhWdryqQ/8CuA1huzN1IloNWSNoGK7sWKskLyYpSVP2w3qWkjfbB7sO20uq/99wzM5wHyV3aMtA0KAhpyeHMnft+Db9Vj9QX6jcqMVdbnam/qRP1WvVwd4g//6293qgbNVIL3C3UQM1xn6slnsaqr1ZqirEblfF9H39z3E/UDDMyPA1wN8W7GWZnhCAzF4Ah4wl+5f8dnlZYmagh3l8R7ph7vMXoTL3nOnl/hae52ekd8M25t+zZUS/w/CMgJuoHdQzaQkoP+L6rTkFnDzQdguqTDfQK3H8ClxHvZKRHbGTHrjoCDMHiOaB/jTuN2TXn9kn/XD3FyPegagZKhP6X5NoCOzwlFVO8SzD3hm8F7/cYnRvejbFzhjlLwymBKfAFuuZgB/T4/K6iJ5ZBjt8V4KSG+yO+XQLqmDMEo23QNSlwSfk0B6QUYzL/mdrF/Qf1e/UNqM9wl6knhTyFE0MjsSWeRG5aUyzebcOXPnVJ73lFWU9qqLjAyjE50uecI/NreXgALRrzSUtQIOWkelrShR72PsXfMXTiDf5ODe9PCDOr1Qrh3tTMESqvItkllG2ibjFL9GRKDb6jlnSNJIUrzfDpPgifeMcE0DJyOjM6N6MuyFttVZqbwmP5dbKyljA2Wu1W+7Q3penc2HIVTeeFnQvkvtF77VlWHJvR//wcYDHG/2ujeXokpP3j8OpBbsO1HM8p5QXmaT13Xqma9wlwL9Pcxt4/Eo8edPlF5Y5tdUk9t15W+NwNrLlNHd+h/nfhhXa4+yCQ/MDYgtjGHZ4F12vjF9z4JX6HeNZ87Kk/Gxq/Jo0h5uL5TtRfK3G+wb5LQN2Hb+pgvVxt4CQ+dAlKtIbdAQPh1ZISszh24FWEhh3c7eCuQ4m/h6eRWSnWCF2Z8YDWL6VBzEkjf5cysoyxh2A2wd3H07Iw1AyNDk6Is5V/bqLDokTHLunYLagp4z+mfi9xJ9bbjJIF7rTGpZGsU8SiFDulxHPOqCp8ToGjjVs6qnRI7yP1R/7K37cmN/iSPv8au/wdkP4BLnxXeDffH/nzdrx5XW9eYvT+ndHEIbnTp45ZXsWwdiNYzif4qy8Lm5rW4PQsgOOsO7TdeNVeseoVdDQ32I8ogzntQntB6zFjLj6iBK+L/OaMOr4CJOcd/CzKrvsSHmBOic3hE5zv7RHelclxppS2xq8F2GIVOe7c7mL9fULvI/KMqZfyZsTYsO3Rqvm/MtlFSr1MoD8Sxf8VWMMF4WmNfIU1C65oGU+0JNZjcFhonFAuOnNz+Z/AHqyJHY/p428qOe77Vh0LtN5MvOxJ4GmJ3jLS9Uh5nzKPcYj3lwwkJw254ZvOpKqxcXvOGdf74KXV51bAtRfIiUbcb4fj90bOfp6hJRlbnJ3XXTNvJ5jnbCSet1s5T8e48uxnxWyn/eVZe2aW1riMHPG1vs4WXkY54KKYGb+R7G7GeJRWZNzb0FFZFWqp1fC/0OJSaqevJS31O8wY8Smljx2yysjw5kkAScPdAs09s+c7jxNb2ONlAefYg6P38PPmdsnvyl5tyEJGbBXUJpY/UcN8PO6Dp8PCgmOsUlYpIqMpMRnThjUNIY/sVU2Z490hbWBC7zMzerCkvr9CpDwC1fvwwAvGrGVB7SXGR/Rts+LdJfP2KX23VHGX2HdFT6ejVsiJS2joNKpHLsHTRP2bFm5rPYkFYpM5vfGdlwOn5OWS2VICvxJrz2Py/yBYHeKg+bb1ifzeKrRnq1aDHs7nC4xcoPLaYx12Qh38tfH/vlJzHyaVGNqmCFf2PToCTZmhVVfOM1OHhNEqZ/1iK7EwPg1NrTg2Ps9FmRC+i1llvHJWbLeMR5nya+mwp6BrqjivdVm677tsLrtg/pLTPy2ZBWfk+rjQ2U4Jo04UDePLRseqOfcVXnCrQuaik6/J15S50Jz8uqaGnVG7ZIdtYNKm33XRVUNcp0uai5K1x740tGubi23y+ut48cbkEs5v+D5E8JwU3I8jTurlCA6rdbvdBzt1PWuN96+D0MRy3ni+wlbwicmzdF4qumk1XsutSr8XHNHa78fsNn2B6w9Yi8yJg/iSt4ZDOtsbmFx1RO+QlbK1dVecydVztj56Z6zbsgY614JfbzXUOt+2JasYgUff0yJmxg/bDKNL/clqqLZYucjURMtkvLpqkbpnxLXCc6n2uxH/n6iHeew6m2kiz3X29H8b+iXZ0DrL2gLM5jb1/BdgU3LGcsZcKTddtma21NpoTa3/mj1JD3+4gbZNlvQQ+/m1287ntZskspz1VeI63mqq3wWZuz2BKGenspdwfFHwQ3eHVsxv/exScuhyhiwz9LnX0OOplZY9l9D4NcWpeSfn3uvfrOt7rOtwxL0QsVZ9HZtd7bNd4bya34uxfbrQT7U+omtXd5o7YwVyx3FfIjJT9looW9vUnbs+9exgZqQjOFd10hYVUs5Zvd4a2fgQ4hrq4X04+avvMdkZZ4XnDt9r/yvdpGtW0y4qJKzqp+zCSuY/5EnQnO+vSJ/W1dDDHwLO1ESThNXMwNRWuoPsn5in3u7Sgd6HhlxxN81Fvyo6MXHA0mO9fKgpujf4Gjb5k7Idim7QM00x45CYzL3YGj7HHUuZ4fqScZ8yLXXi4zm2R5nCqmaspDRvLqjzU+OzPzbrdBrgR53mlmNjyntz0qvPm7MicsfdZhdZfI9VPpuNO9Y3XC+24L6NyEy3faSyYu+H2sD63n41FbGk27xaXp857OjYDrLTsrgDGvu839LvVUGyGd1j89WF9JOa+77QcyVqDzA+qDiGlyPSU+V3dEK/OaAc7Fod1+aMA7EUdNdr0MCy1ll4M7lWZZ+hDws5Kz2Tt/zSZWyszvJZzi//AG4/w/UN+R1z+5Fadzrj4oo9oVnwfsQ1VZFZJPtcnfIse2YiyMicF8ffTnyq/h6X9Fe4pXdOOK5PeoegN5Si5ac+EY1hae+b01bTivN6vxvbRNJaoi5fK3P+mviUvzk4x3UInQs9vR21Nnmg/O+tYl1sM5bpDqQ+ezynjkiOJrw8p53ITHsmU4edVNmn3Csx+5e/ngkx9VeEXXPN+bAn4UvhCb+t+EBOTAsNP6C/7+Odgyx+qM+voaq/sYmp0RFLMlmb3Z8D0lHNOU21/9I1mu+/Yqk6HoS6c0TduVW2Uo27uC2MfsV18lWA485XnL0PK97jiUEH7xeeH0yDL806xbde7q4Nny0r/sSR77ydnD7ZXX5Q/pcex+xL3xDzDG/dSieF+q5ZucLfzNMd/Cb8nsLlHetXPP8flcKKedA+n2b8cudTuO8wK0t1s2TquLa5+rBVuchjRY66b+aqa7hy1mTjn/XvfmSuq7A/fxSui8bVnPt8EWvbfHmUNopbZ/R+c5MLSLY6MJVFvY6HOUV1zWvrV5nxHwLLuuVgLAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>90</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b7d52b62-25ac-4f72-932f-60f22a0ab207</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b7d52b62-25ac-4f72-932f-60f22a0ab207</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7e8a3745-677d-4cc5-87b8-4d7b83b59728</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7e8a3745-677d-4cc5-87b8-4d7b83b59728</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCName</Name>
+                  <DefaultValue>vcenter.company.com</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>aa90c490-23bd-47f3-8ece-136160037c04</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>aa90c490-23bd-47f3-8ece-136160037c04</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>be0bda1a-2075-4906-8c2c-8d7e20e20b4c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>be0bda1a-2075-4906-8c2c-8d7e20e20b4c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCUserPwd</Name>
+                  <DefaultValue>password</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>0dbc8e29-3d94-431f-a202-6904ab4f9578</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0dbc8e29-3d94-431f-a202-6904ab4f9578</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VCUser</Name>
+                  <DefaultValue>domain\username</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>BMo/SiLYTVeJ9arj3Meimu/74os=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>1ca46793-0446-4278-9f17-bf75ad580e02</SBAId>
+    <RootSBAId>a93ff88f-ca47-49a8-b61f-fe675404a6fc</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636214510251544000</SQN>
+    <Name>Citrix Version Details</Name>
+    <Description>Gets detailed information on Citrix subcomponents</Description>
+    <Category />
+    <Version>1.8.24</Version>
+    <DateCreated>2016-04-29T08:45:05.477</DateCreated>
+    <DateModified>2017-01-31T11:30:56.253</DateModified>
+    <DatePublished>2016-04-29T08:45:05.477</DatePublished>
+    <LastEditorName>Andreas Moe</LastEditorName>
+    <CreatorName>Andreas Moe</CreatorName>
+    <Status>4</Status>
+    <CheckSum>GQrSRPgIgImaJWPbNwCqVbrU/n0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Andreas Moe</Author>
+      <Tags>Citrix,</Tags>
+      <Credits>Credits to: Andreas Moe
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes>Gets all Citrix listings from registry uninstall section to list detailed information about citrix sub versions (HDX,Group policy etc)</Notes>
+      <DownloadCount>349</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAMVV2W7TQBS9z0j8gxXyQIUcsagvSEhEXSBCKREp7Usk5Kw1TRzjBQNt/p1zj8fLpG6USEjIsjNz59zl3GXyTBy5lBvxJcYqlplMJMFuLQH2oUSQ/MQbQKqIBNgZfz0Zy5LrOVBrWWG1wD6hfoC1oiJJsZ4AneBsClluubATAbvAOqF3H4iZPJUn0obvGPI1vnr2rrTultIKl9HjFPLMYG39DqLw8Y0QR8Z1rhvAYka/fxhNpVm32AHTFCznwEQluslCh6wqRmrvjbzE04zOyFhzkWNf17D7RVHEbFs+jF19dyi74725vQK740e5NcXwOLfcivbmQm7x/W2wLXi7RVeu5K2MZCif5RzdfS1d+SJnkPRhY8JujfHOEd0Ip3XPIzlBliPa1p6/KrOtfTuSr/gqPuYELPGM4DWPp8v9EPpj+cSoNKYPpmtPOGVLeOpxFlbkZnO4x3sOTxGi9RCp5u6utFDoDcggZGQJ9dryDTkcwPeAk3YjG2MtY80iZvPO4EJGuOTM56cOrK+omfts4dfn9PryC7sNGfaQMUeeNzJ1aGMmP0zFUiKO6FV1HfNc06bycOVjOd0tZKfy58C73ichc17dPZ7hEUCuWnYdtm+X/EYrLKX0GYF9y4rnDP58Wsv7eGPV8pSZ91i32PTYe2TgiKjtSmlm7Jz4jKYpXw8zUzztRq8XnAEXHT2W7+aWdljxumQfe/fM5BSP1lz7aVz2QL+2v0SUIfN9wXzPGvrOxZlHK1rDU+Y8hBePp8VZi8gr1ikl1s5TZ0uz0Pu/bOzJP5SDrb0vk65h0v+HTHr8Tw34rzzHW9jcxUX7qrqvdtejeVJemLvbllcTtmvKNBNDzlbyoON3d5lqzolzIdWZX9PTXyEgyVnmCAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor />
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Ac508scImIwoH3P7smc2ORkK62g=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

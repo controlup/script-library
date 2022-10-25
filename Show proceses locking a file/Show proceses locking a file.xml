@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>72dbc69e-47d1-4da3-b557-dd9f00b6694e</SBAId>
+    <RootSBAId>93c301ee-d2da-4872-969f-c45db62c94d3</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636899822376548803</SQN>
+    <Name>Show proceses locking a file</Name>
+    <Description>For any file on the target computer for which the user provides the full path, displays a list of processes with open handles to the file. This is useful for determining which process is locking the file, preventing its deletion or editing in another program.
+The action makes use of Sysinternals handle.exe, which is downloaded, extracted into a temporary location and deleted after completion.</Description>
+    <Category />
+    <Version>1.3.3</Version>
+    <DateCreated>2018-12-11T16:18:39.35</DateCreated>
+    <DateModified>2019-04-03T18:36:18.733</DateModified>
+    <DatePublished>2018-12-11T16:18:39.35</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>bY7AJ3h4QNanaIpjKGbQ3eRx0Fw=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>troubleshooting, handle, disk</Tags>
+      <Credits>Credits to: guy.leech</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>143</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAL1Za28bVRCdz0j8hyWNSJzWpgFUQdSGpmlCC00b1W4jlAS6tteJqV+y1wkt8N85c+befXnjR6DIsnd9fedx53FmZv1Q7sjn8pkE7vVGJhLhWpcPuHsuA4nxfYxrKD2sBHKJu4G08S2SGt5/cH8sQ7x67i6QjnS5K5BrUAwdndKHeLfIM8a97rLdPfIZygjXAXXK6vVYLmQKncbcF4HDJVa/lvuyLd9x5x3ZTahOISnGXuV+Ieeynkh4CZl9SnqE9zq+jbFjAor72FdOO8KuGPIa0O5Z5vSexwCa9fAy6qazhFK2cXeN33u4hvgW4V3GoeOsGzkeXdpdOQzBO4YG+nmC9TY1MbpvofP95MxdcNnMnakm+6RXXoFUsRbRZnofOu9kLbANiYFUyO3PnPUX2yDPJUvr9foCb702QKUWrsqx4xnk7ufJqsoB5IyxPpY9xEAM7kNGUN35V8/aQ5zscz2mJaekrSRn85rlz+hfDUge02+BrCEfNPKbTn4xtstzIaS934H65rPor2s5+X/zm31GmWhYzRM/YVW1y1tU7XIlO8zlPjgEslHQveXsNWbsTrHHn2cjJ/+EmaF8qvKWWazxbpixJk8L8W45NA8zlrFTABp95e11ilyOQFOD71WPK0hTXDl2FojliHxCxv0YUbmDV53YMXWn+IDdemLVpOXw69En5F2ltcaUYAhrHqnl5M3j0cCaIqRJbDBOtpHTWctskts1pL2CvN/JMU4wvSjxBNcm8qUHiZY/FawWPXno8mvTxU5MVJpAh6/wUtor+nZCGd2ZumER1sfesljYANd7C6K7sjKqfCokSWV4bwTyAp8hdLotzhyyFvZYIXxmFKtHPo+Wz58ynEnr/YDopvH1Hic7TCrxcpbMY9Oy9U5xZjpDrXFzgb0eNXTvj4zSKnw0pfzI+UKjSfnXHY1qp1ljmvtTfOpYuCkiZ8+yekRY7e7R7wNiQEC00WuRu1471L/PU3r9O+TX/9dRMu9silmxs/+E1hzQqhuoDyGRoc38vo0FrEvssuK2KCPi6bPyOg5Rl6kjXVKs4yzzT1EhGnmrK216lmVtVSbBvuupys+me6Y5zK46Lcyv1vVuyK+gf4n8OCLtmBV4CE5KsU97jPiZxsK9W/pgeat6a02SU2rkNpE1wUp6mkenSX9a7qtVLVmZ022Vd/1aT5TbiCfxiJKfH06JOBesYlaRDzJUFgV+8hgklBU3r9yRgLYMuH/EHjpy3XoT2vvMvql/uiYeGuZ1SdVxVUT9YdUhGzdDJ0v32cQSJJ4NqJtKmZBzlEEbw10/yfk5LZ1LgmSauKAvm+53zcoeTxC5TPVoZBz7zvI2GV4y/6zTtqlrzKqktBPU167DlbKZKyR+h4g1pRyTRn+PKVcpHtMbX8qiShBCosocMYqUR5hkYZN7Lep0bYrPv/A+ZAwfkPZyput6V9LFm++n7JvHmchoZTC/6XrqM3nIbChOIX5SDgqW2i1EusmqI0/yvewDzI9pLI2IbTu4+wbrDzBTB4j1Bj730CM0YKdX8lqe4+4XaPQSp22gc9S1n8n9AHdv8fs+7srR8DfaLBuPa8CxTfkB5zsunKAmW8iSM9zfTTSzb36/ru1irY0122m/vCnYdJfRUZWPmJSr8j200L0PSVvFu4aI2cL1bIl9d4kiy6Hoovg9SuwQuUm9x/xU1KjMqS7mTZ399dnHDqPPd2zaCb+GtlX2oAExVu124uZVxfQJvofUSPOvya7mjHncJBb34P8a9qp2Wbl+Ip3vT/NBNqd2+WRFLbrHvsysaN7cSnQ3356B3jgcMu8uGAuniJIz0Jy7mKjkIsFzsJhZhNoWV+sreNGjt0XoKKk1UYIsvkN97iar/M4PUuyk854/Fa3nXk+t0efyX3Wk6aQ8olWmrHGKwMMMQp3jd5XTdrWkjZXHN9jDv/Ial0V02bmW4xgAVa4dynrum5KdBFpulv7/rGo4X2cWpJ3ZAbBz5GJ91uvpKYqxNnv2F8xJ5XrEucZ6mch1zmZftUGaffPjssKIVrt5qz1Nuuf5tLVEl/RJTwPXfjJZpVOG+qRChFp8wjzCp6cqR8nTG2gWx5DHjUVxmd23iOtxMsMso7Pfu4irr1RZD6f+nSej2Dek8W09uPZc790MtrVS77DlpgSLnttpsUw0ZCvEfE8Vd5qEsk6+kvTyWiH32P1FSUefdrE6S3x0PWwns36M/A7kCc7VwUspldc617MV1COSz6xnnGrsqdkbVIEaanCIfXpvHOy5fYQctDwaUIeh67Xt7EUptZwmdafzYn61mX8JbvoPofx05XI9p3mSvfXXiBH5+S3fkWf/l6jkorFLTjF93nJYZl6a/QdnLZE42/EbWg+Ja1YpiuicrQ73SrGmiPjFvr6M65b4utDiU/T2DMrqrvzMkU4QhqpV4G2ar/7J1zAXA/n/exY/dSv7T+c1u5Uhn9um3csq/8WY1i2nk+XhP8j7XTZQHAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>a9922d55-6ac1-425d-85e1-c2664eeef846</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a9922d55-6ac1-425d-85e1-c2664eeef846</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>File Name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^.+$</ValidationString>
+                  <ValidationError>Must specify full or partial file name to search for</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>249d2f52-abab-48dd-8972-a6fe6d290b32</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>249d2f52-abab-48dd-8972-a6fe6d290b32</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Path to handle.exe</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>wAxTEy21p5f5Xhb1phF+ceUUtII=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

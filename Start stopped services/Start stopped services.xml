@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>74044a61-f90b-4481-805a-41862e449542</SBAId>
+    <RootSBAId>27811842-5507-480d-ac9f-dddc5c49de0c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636902241133545487</SQN>
+    <Name>Start stopped services</Name>
+    <Description>Finds services set as automatic start which are not running and starts them.</Description>
+    <Category />
+    <Version>1.1.4</Version>
+    <DateCreated>2019-03-18T14:46:54.753</DateCreated>
+    <DateModified>2019-03-18T17:19:06.397</DateModified>
+    <DatePublished>2019-03-18T14:46:54.753</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>u6JE2AxETrtKE0zlCpZ6zLalgl8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>services,watchdog,restart</Tags>
+      <Credits>Credits to: guy.leech</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>151</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVY227bRhCd5wL9B8U2IAu1BLfoSy8u6rROGyBNgiiNH4Sg1YVO2EiiKlJRXFf/3jNnd8kluSLltMVCFLWc287lzFDfyrF8Kp9Ix64f5K1EMpV3uL+RRNb4HstSbvm9kQx7C9xlEoOqIynuxqDKeB/h7j2fRPjVkS2k6a+35F5jdyld0q4ha4kV4/PG6phV5GW0ZUH7fBu/B8cGFq1ljueRlf+FnMvn8hUpj+W7nGtEHZm8lhPYridY8XqN/Rl1dOQCny/Bf55zHWPnEvIznslZaSxSK2P5i3cJvFTsP5chrg8h/wZLOVXWCfevKWUGjq3VeCo/gSaTvvyMXT15TwbyqzzG9QW8sOW9kWCsjeRHfC/oR7Uh4beRVtcyKFkytDa3yxvUfLPPc+HThfU6SU2anfdP8DSSCaS8gXTNGyNLqae5rC5lz7mb4fsW2ZvwXm3ZYL/rZYFm1RrXW2ZCykxeYUWwZljL3Avm2SmuLkZlmo78jc8146529eUZ7P2D2ai5e8ez/gZfDJnRGexRuX1Q/Glt9y3o8pmrAp9Ta+ElrF5Ra8F/WatGlbHDp5efOobf9AwPKLPtzH1b74dQD+jrDb3tNN6VqvRInoKiU5Fz1oojZ0EkubHaZpCrWna8Roh6anO6rH1Eia5yR4i5ibov9yk0LmrxbveTRn5I3Sba1dj35Uo+gNtEU/M3oSw9neKo0+v85mw+Juo8AXVSwt+6N7T2xtS1pRytpxXrYEZMWpZoDPLqt3qrHpMCfRekfedhr8E6V3UF/hUobRDQtyCyWZFa7Hxvubes1jnlrG1H2Y/6ev4Ye6mVlXinTfI+smQHmJEvqWRAgftrSkxgiaHVaJ+XqB/R11ewQrtJex50KP2QbCnHuJylbjVLGRANy94NZ2X5FNW8/D2oO2yRWw5Bmmqnjx2Du2N6Jc0RbF+m388Gty5x+hm0/cJoTmiPan8MnaYzlc/bFsGypAJjFbe079crt++dqIuoJJa2QGqD469YaxvSnTDbNxal2s5YzdXPsJr4dsGnu730PvWuNln5NROxXyaswFDF+LRF/arNz4ggdY4j5ucm73Gn9+wy/YB/elJHs+Y5NMVVZc5ryFPvS2Pi1a18bbvOYfXqqrF5OniQV0koj0wMq52mw6kphdY5JxmXjWfoXXfw0gWzssAKtcRg5TfYuQCNmyzK9pbxRSO4hO60pLmtq3X32NbFSXaVPHhBre6sbroecB0dgMv/HxJXJ6YyDuuk60dyUPFDTE2jRnR4LfVJq4r2oXwII2gzcvqVeZXXs5vEl6yC+cESit5Z2FWfi5vxuEr7HHJSrJeIrqKkyTNn6SU5YzvRtE37Zd5XtDDGdUIu3+qC6tDeF/Lif9HTzMw3JeKYfuamvm2OHopMVVTzkUtze0J/d/hOtWCkYitzzup0tZFyvp5wb8ZsjVF7y4NsbfbHCGhvcrt4i9lPNyCaTIk7RYQ/nnfArFvSRyHJzbG6X8zcumZ+ZcR3Py+0z41trrrJtOmfEp3MjvJ+WMWCEKb2yNFBX/L76H28Zd5qH7L6ogDFKXT0KljctsozQ9vk4lZ4gjnsqf/+9+9iGpphPnb2Cu02WdpsoZ9lxb8immVD2Biz37kOuj+PqpkzJmoorlTf3KbIs3Dcd4Hp0f3a19OnnKdWrIVM3Fug+WepOmPe2KrZEPXS0pv+P+80dFWoFAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>xLTJ99GEuw9Q7o8BKwBRV8AHj6g=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ce363f26-6cfe-46a3-83e9-eb871e9e6e29</SBAId>
+    <RootSBAId>bc7990e7-0487-46de-9c18-a94702bacb3e</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637424299322361456</SQN>
+    <Name>Report slow logon to ServiceNow ITSM</Name>
+    <Description>This Script Action uses the ServiceNow API to create an incident in ServiceNow IT Service Management. The script as presented is for a specific use case: it creates an incident containing the user's full name, the user's logon duration and the machine name.
+
+This Script Action can also be used as an example/template for your own ServiceNow integration needs. See the script for more details on how to modify.</Description>
+    <Category />
+    <Version>1.2.15</Version>
+    <DateCreated>2020-10-21T08:01:41.377</DateCreated>
+    <DateModified>2020-12-01T12:34:37.517</DateModified>
+    <DatePublished>2020-12-01T12:34:43.143</DatePublished>
+    <LastEditorName>Joel Stocker</LastEditorName>
+    <CreatorName>Joel Stocker</CreatorName>
+    <Status>4</Status>
+    <CheckSum>s50SMnuz8nrRbI8PJY6eFvBZqMw=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAA5lJREFUWEfNV1lME1EU7acxGhdcwCBraSlCgdaWQimolRCgghVscUkUYkRIjKgsYgzGjQ93QUOiJhoEIlEgoNKAAZQQE8Q18UM/TPzWD+FPvo7v3jJNW2uMCx1vcua9++a+d8685c6MAn429HQMZQcPwZhfAHVmFuIt2dBkrfsjUF8ag8aiMWlsf/MI+Do9jaQNViyJT0CMKeOvySVIImhMGps4iEsyFjAlGpat0XJQoEH+JYiDuIjTIyBRqAoGuQTiIk4WQOtCUxMocC5BnMStKBebI5hPL4E4iVthzLfxJgkUNJdwnw4bFP9qt/8upNOhkINcAnErAt0IJv4/AXEZmYhNN/P6RBlNAU+IymxBnMnMJfk0lZGGNMR6xVI/6i/5cSKWYqiU2gg+ApSC3FJkR06xA2EpOlTU1qFwVxkWKFV8n4hWa/XQFeQjt6IMazfZEK7VISF7PY6caeLY6LR0hr18D6oajiJcZ2ChhrwC1J48Bauj1EeEj4DliVqMP5/gDOVt795/wCK1BhGCfP/1c7g00YcLz3q4rLnTDEVI2GwksEgVj/kxylkPSN2YK9o0cI2Osq+xZHlmLqCAgeFhDuwfHILZVojugQH2K2vq4Wg8jPPj3TjS1Yqig1Wo7bjK/vamBtQ0nuA4a4kDeTt2cp3sensH5kXHcn3i5SssVvtm3R8EuEZGOJhSZYRYs5CERPY77vWgtrsVpwfbERovXlwGE8ISknGs9yYuTz7Awkj3U7fd7UJXXz/XP3/5gq9T09ixr4p9Z0UlL483508FRIsNRFO1QrSR9boG0dB/QyzBWd4HFB+epMO+ljNofvHQndtHn3As2eSbt6huPM71bzMzXM6LivFwSfilgJVJyex33u/Bgc4rODt2H0pxAiJTDFCmmXF6qAMXn/UiRKlBUVk5x5JV1NXzKZDs2q3bWJXqFu6NAJvwOXeIEVNFAkK1KewPPB6BsdSOlleP0DTcicLqSpx0taHl9SOuK40ZvNkkWyqWbmGcGh8/fWJ/TfYGPuLefAQfAUpx/nOc21CyZy9Us+8IaqO1szqcCE/WI73EzlMfa0wXS6GDqdiOaH0a96c8kGXfAutWp+cB9Ll52Ly7nHOAN5cEHwEEygWURKR3BJXkUzv5qgzfROLvUxyJ9twXIrwTlD9+EBBsyC9Ammo5QNzyf5DI/kkm+0ep7J/llKVk/TGhi+y/ZmSy/px6G61L8H7Pge8pHqPWEDAvSQAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Joel Stocker</Author>
+      <Tags>vdi, rds, user experience, logon duration, servicenow</Tags>
+      <Credits>Credits to: joel.stocker
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>joel.stocker@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>61</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>cc0fe8a9-11bd-4264-8a88-3ef565853c2e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>cc0fe8a9-11bd-4264-8a88-3ef565853c2e</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>UserFullName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>fef231b0-9e26-4a90-a707-226600e74527</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fef231b0-9e26-4a90-a707-226600e74527</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>028d09a3-7470-491d-89ff-f1b8068fdc17</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>028d09a3-7470-491d-89ff-f1b8068fdc17</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>ServiceNow Password</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bb6ea03d-bccd-4452-9090-a8c1511f1695</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bb6ea03d-bccd-4452-9090-a8c1511f1695</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>ServiceNow Instance</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>73ca888e-0a1e-43a5-ac33-6a6bd9735a0c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>73ca888e-0a1e-43a5-ac33-6a6bd9735a0c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>ServiceNow Username</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>0e5556f3-ff3d-4575-a68e-f6a40e0b1aac</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0e5556f3-ff3d-4575-a68e-f6a40e0b1aac</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>LogonDuration</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>gaVIoh0LqBJqRQHjrmW2NTKBres=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

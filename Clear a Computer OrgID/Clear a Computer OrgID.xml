@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7d0503db-f7af-4ad6-9972-6747df050a41</SBAId>
+    <RootSBAId>a54c0686-c1b8-4cf6-8ad8-2e546077e21d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637005010604575866</SQN>
+    <Name>Clear a Computer OrgID</Name>
+    <Description>When a Computer was previously managed by another organization
+it will not accept connections form another (new) organization.
+To resolve this, the script will stop a running agent 
+and clear the registry settings locking a running agent to an Organization. 
+This script will also clear any previous ControlUp Agent customizations
+The script will restart the ControlUp Service at the end
+Documentation:
+https://support.controlup.com/hc/en-us/articles/207234285-Computer-already-belongs-to-another-ControlUp-organization
+Limitation: Target computers need to be resolved by hostname and the user executing the script must be a local admin in that computer
+Due to multiple remote actions, this script might take up to 2 minutes to execute</Description>
+    <Category />
+    <Version>2.6.15</Version>
+    <DateCreated>2019-06-05T14:06:29.587</DateCreated>
+    <DateModified>2019-07-31T17:02:01.893</DateModified>
+    <DatePublished>2019-06-05T14:06:29.587</DatePublished>
+    <LastEditorName>Marcel Calef</LastEditorName>
+    <CreatorName>christian.zorn</CreatorName>
+    <Status>4</Status>
+    <CheckSum>YVy0HxYn7MVDJRZT9d+BY9qIZE4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>christian.zorn</Author>
+      <Tags />
+      <Credits>Credits to: christian.zorn
+Original code by:
+Reviewed by: Marcel Calef and Guy Leech</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel@controlup.com</ContactEmail>
+      <Notes>Docmentation from ControlUp:
+https://support.controlup.com/hc/en-us/articles/207234285-Computer-already-belongs-to-another-ControlUp-organization</Notes>
+      <DownloadCount>44</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVXa2/bNhTl1w3YfzCCpWiKye7WFhsCZFjWpu2wJG5jt2uBAIViK7FQS3YleV2G/fide0iK1MOy06QQJFNXJO+5577o39SReqpeqqHq4X6O6zv1rTqD9ASSnvpLzVSkUoxC3E/VQiVqqVaqgDSD5DPkOX6XeIvU3yrGjBUkc3UNaYKvKe4rfJvi/YJSkS2ww8zsscDzitJY/YvfgrukNST2ivFd9MbQMcdI7yW7TnBFQCJvE+6Q4n1S7ic4L6ktaUFxn7M/q70ORP0GpjHkPdqeYzQHAxHeZdcYkh/MWGQ5kGSQLmv4c7wvINUMZ2Avpd4UCHqGu5Rr2vgQjFPaO8e8kJZYjYLqijgKjK+pK8K4MLsLH3PonqiPnr5uDAXtDRkRw7UsNbGODSPreQjxzLm7b4vsft0SXzoWU1omvL8hg4ce0gnnFYzYKr68FV2Xj7R/C2IqPIbbMIwYT4J0wjlhZUVEf9X1P6MXVkCq0Tus+2uyYEY/LoFqXw1w5Vi9xLUgwr6Jf4tMvmlZgrkzjAbUFJCjgbErNsyL5Cf1UP2M5yP1GM9f1BPMrWd/QJ9l9NUUXgqQ3xEjSkdXQPaDWqYFLawFW9eAY8gT1gCfI/FgyB2iMvt9pDnrRGSqkI7hizJHXOa6GjWDTDwu1SsxfkzNau3JFbMpo0//YZ1ZlZm1LusTE5NWe1hmYGhyYErrUta51OwTttrUjOGQrO/z7XvEoeZINB6oHczMyHiGsayVewTpuMbegdpVP5Yz/kBH6MEju5U5u5Ad4JIvUjll5jdeJzlhrudeBZGVLr6lwl56LNVtc3VmYmYLF7+qe4hFrWsMZCfQOET8iAVPSgzv8EUk2oa9hq1H6hR14ndE0hHyTjM4xJcjjl/AqlPo81eM8DzE1/HGFb5PPsGayNRda2c1SnUv6mFFBOsXtF2/Nau2X1Fy41kZB4yUS68PRozZC2ay7ZY2dv0aJl8sZonSnjrH1fSzb0fmIa13l/+AIqYeLemhishzx/AnfPXVA74N1StcwuYO/XoKLx5jdA9XWzxVGWrvaz5Dscl4zUi9n+loalqam5grqCdhzrp8XtT46/PSSLv5m9yYuR0v5j7gfk+2hL1niO6RF79d/N2ewSl/bTRNS45cjGl+rD6fh6LGgz2Tia1XGxjxmT4gjsicJaelru3z+T1rvF631+KxOlLfy10o9U66Qu5S3xk0nxHJW9zH3O0Uo9f4fUis1h/PoSEuWW1GV3ZDf62Lab9mbl/PHGOufsrt8I/MqXVZZsim85jLl03c69Ow9FO33vWiu2K6TcuX8Cp3vRsNvJ7k89avsXjYUWumPEtFJgK6Tpw+/m3O/M4TenZdV5tnzoH4T/B8gtGI3bvgfz/ZQSSJidwA/fe8BeV5BeUA67/co6+4r65JSQX9trHYZOkjJNdb+7vqT7/rn/FfSmSyeFNnr/9XsJ1cn1QjU+0cS92Vzp3KdP7eRSe1/+/XdQJf7veCrhy/TR+ooqhWKMvTpvr2NXmylWVZYclJt+XIVahNHahaoZtV2v63u+sqbTtVs07fNLOb7G/qjrev2pq1/wHj7kNN/hIAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>37947f47-20cf-4ae0-a1a9-b32d5cd3c316</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>37947f47-20cf-4ae0-a1a9-b32d5cd3c316</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>WyxiOrWh/cokssgasQifqcMqS5M=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

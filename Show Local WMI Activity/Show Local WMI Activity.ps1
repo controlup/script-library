@@ -9,21 +9,26 @@
     
 .PARAMETER summary
     Produce a summary of activity to highlight highest consumers otherwise show individual WMI activities
-	
+
 .EXAMPLE
    & '.\Trace WMI activity.ps1' -seconds 120
+
    Trace WMI activity for 2 minutes and output a summary sorted by the processes consuming the most amount of time in WMI calls
    
 .EXAMPLE
    & '.\Trace WMI activity.ps1' -seconds 60 -summary no
+
    Trace WMI activity for 2 minutes and output every operation
+
 .NOTES
     https://docs.microsoft.com/en-us/windows/win32/wmisdk/tracing-wmi-activity
     
     THE SCRIPT IS PROVIDED IN AN 'AS IS' CONDITION, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
     AND NONINFRINGEMENT. IN NO EVENT SHALL CONTROLUP, ANY AUTHORS OR ANY COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SCRIPT OR THE USE OR OTHER DEALINGS IN THE SCRIPT
+
     Modification History:
+
     2022/06/02  @guyrleech  Initial release
     2022/06/02  @guyrleech  Added -summary parameter
     2022/06/08  @guyrleech  Added service information and exit 0 when no events so not an error
@@ -31,6 +36,9 @@
     2022/06/20  @guyrleech  Added summary outputs by WMI operation
     2022/06/23  @guyrleech  Changed summary by WMI operation
     2022/06/23  @guyrleech  Added number of different processes count to second summary
+    2022/07/04  @guyrleech  Added functionality for detecting remote calls
+    2022/07/05  @guyrleech  Made summaries cope with same pid on different machines
+    2022/07/06  @guyrleech  Change display of local machine to "  local"
 #>
 
 [CmdletBinding()]
@@ -148,6 +156,7 @@ try
        8 ClientProcessCreationTime 132974156514040271 
        9 NamespaceName \\.\root\cimv2 
        10 IsLocal true 
+
     event 11 - pre-Windows 10
         0 CorrelationId {00000000-0000-0000-0000-000000000000} 
         1 GroupOperationId 640958 
@@ -157,6 +166,7 @@ try
         5 User GUYRLEECH\admingle 
         6 ClientProcessId 472 
         7 NamespaceName \\.\root\cimv2
+
     event 12
         GroupOperationId 3631871 
         Operation Provider::CreateInstanceEnum - CIMWin32 : Win32_Thread 
@@ -164,6 +174,7 @@ try
         ProviderName CIMWin32 
         ProviderGuid {d63a5850-8f16-11cf-9f47-00aa00bf345c} 
         Path %systemroot%\system32\wbem\cimwin32.dll 
+
     event 13 (stop)
        OperationId 
        ResultCode 0x0 
@@ -189,6 +200,8 @@ try
     [int]$namespaceIndex = -1
     [int]$machineIndexId = -1
 
+    $os = Get-CimInstance -ClassName win32_operatingsystem
+
     ##Write-Verbose -Message "Got $($correlatedByOperation.Count) different WMI operations"
 
     [array]$results = @(ForEach( $eventGroup in $correlatedByOperationId )
@@ -206,7 +219,7 @@ try
                     $namespaceIndex = 9
                     $clientProcessIdIndex = 7
                     $processStartTimeIndex = 8
-                    $machineIndexId = 5
+                    $machineIndexId = 4
                 }
                 elseif( $firstEvent.Properties.Count -eq 8 )
                 {
@@ -225,6 +238,7 @@ try
             {
                 try
                 {
+                    [bool]$isLocal = $(if( $firstEvent.Properties.Count -ge 11) { $firstEvent.Properties[ 10 ].Value -ieq 'true'} else { $true } )
                     [int]$processPid = -1 
                     if( $firstEvent.Properties.Count -lt ($clientProcessIdIndex + 1) -or `
                         -Not ( ($processPid = [int32]$firstEvent.Properties[ $clientProcessIdIndex ].Value ) -ne $pid -and ( $process = $processesAfter[ $processPid ] ) ) -and $lastEvent.Properties.Count -ge ($clientProcessIdIndex + 1)  )
@@ -236,82 +250,92 @@ try
                         ## skip self
                         continue
                     }
-                    ## if process has exited we can't get start time but it is stored in event properties so get it from there
-                    $processStartTime = $process | Select-Object -ExpandProperty StartTime -ErrorAction SilentlyContinue
-                    if( -Not $processStartTime -and $processStartTimeIndex -ge 0 -and $firstEvent.Properties.Count -ge ($processStartTimeIndex + 1) )
+                    if( $isLocal ) ## chances of us being able to remote to remote system to get process details is small plus we can't get before snapshots
                     {
-                        $processStartTime = [datetime]::FromFileTime( $firstEvent.Properties[ $processStartTimeIndex ].Value )
-                    }
-                    if( -Not $process )
-                    {
-                        ## see if we an find a process started auditing event (4688) to get the information (e.g. process started and died during window or started before and exited during window
-                        ## if process start time outside of our run window then look for that event specifically otherwise cache everything in that window
-                        ## will have to work backwards through events to cater for pid re-use unless we have an exact start time
-                        ## add events outside of the window to our list so that if there is a subsequent instance of this pid, it is already cached
-                        ## 
-                        if( -Not $gotProcessAuditingEvents )
+                        ## if process has exited we can't get start time but it is stored in event properties so get it from there
+                        $processStartTime = $process | Select-Object -ExpandProperty StartTime -ErrorAction SilentlyContinue
+                        if( -Not $processStartTime -and $processStartTimeIndex -ge 0 -and $firstEvent.Properties.Count -ge ($processStartTimeIndex + 1) )
                         {
-                            ## if we have a process start time then search from this and next time we come in here see if we have already searched and if not change search to be from the new process start time until the previous start search time
-                            if( $processStartTime )
-                            {                        
-                                if( $securityEventFilter[ 'StartTime' ] )
-                                {
-                                    ## if $processStartTime after current start time then no point getting any more events
-                                    if( $processStartTime -lt $securityEventFilter[ 'StartTime' ] )
+                            $processStartTime = [datetime]::FromFileTime( $firstEvent.Properties[ $processStartTimeIndex ].Value )
+                        }
+                        if( -Not $process )
+                        {
+                            ## see if we an find a process started auditing event (4688) to get the information (e.g. process started and died during window or started before and exited during window
+                            ## if process start time outside of our run window then look for that event specifically otherwise cache everything in that window
+                            ## will have to work backwards through events to cater for pid re-use unless we have an exact start time
+                            ## add events outside of the window to our list so that if there is a subsequent instance of this pid, it is already cached
+                            ## 
+                            if( -Not $gotProcessAuditingEvents )
+                            {
+                                ## if we have a process start time then search from this and next time we come in here see if we have already searched and if not change search to be from the new process start time until the previous start search time
+                                if( $processStartTime )
+                                {                        
+                                    if( $securityEventFilter[ 'StartTime' ] )
                                     {
-                                        $securityEventFilter[ 'EndTime' ] = $securityEventFilter[ 'StartTime' ]
+                                        ## if $processStartTime after current start time then no point getting any more events
+                                        if( $processStartTime -lt $securityEventFilter[ 'StartTime' ] )
+                                        {
+                                            $securityEventFilter[ 'EndTime' ] = $securityEventFilter[ 'StartTime' ]
+                                            $securityEventFilter[ 'StartTime' ] = $processStartTime.AddSeconds( -1 )
+                                        }
+                                    }
+                                    else ## no existing starttime
+                                    {
                                         $securityEventFilter[ 'StartTime' ] = $processStartTime.AddSeconds( -1 )
                                     }
                                 }
-                                else ## no existing starttime
+                                else ## no process start time so do we get all 4688 events which could be a lot ?
                                 {
-                                    $securityEventFilter[ 'StartTime' ] = $processStartTime.AddSeconds( -1 )
+                                    $securityEventFilter[ 'StartTime' ] = $startTime.AddSeconds( -60 )
                                 }
-                            }
-                            else ## no process start time so do we get all 4688 events which could be a lot ?
-                            {
-                                $securityEventFilter[ 'StartTime' ] = $startTime.AddSeconds( -60 )
-                            }
-                            $processCreationEvents = @( Get-WinEvent -FilterHashtable $securityEventFilter -ErrorAction SilentlyContinue )
-                            if( $processCreationEvents.Count -gt 0 )
-                            {
-                                Write-Verbose -Message "Got $($processCreationEvents.Count) process creation events (earliest $(Get-Date -Date $processCreationEvents[-1].TimeCreated -Format G))" 
-                            }
-                            else
-                            {
-                                if( -Not $warnedForAuditing )
+
+                                if( $os -and $securityEventFilter[ 'StartTime' ] -lt $os.LastBootUpTime )
                                 {
-                                    Write-Warning -Message "Could not find any process auditing events"
-                                    $warnedForAuditing
+                                   ## have seen instances where the process start time property converts to a date in 1601 which means we would search entire event log which could be large & thus slow if persistent
+                                   $securityEventFilter[ 'StartTime' ] = $os.LastBootUpTime
                                 }
-                                Write-Verbose -Message "Got no process creation events"
-                            }
-                            $gotProcessAuditingEvents = $true
-                        }
-                    
-                        if( $gotProcessAuditingEvents )
-                        {
-                            [Int64]$processStartTimeFileTime = 0
-                            if( $processStartTime )
-                            {
-                                ## process start times will not match exactly so see if "close" (filetime is 100ns granularity)
-                                $processStartTimeFileTime = $processStartTime.ToFileTime()
-                            }
-                            if( $cachedProcess = $processCreationEvents.Where( { $_.Properties[4].value -eq $processPid -and ( $processStartTimeFileTime -eq 0 -or [math]::Abs( $_.TimeCreated.ToFileTime() - $processStartTimeFileTime ) -lt 10000 ) } , 1))
-                            {
-                                $process = [pscustomobject]@{
-                                    'Name' = Split-Path -Path $cachedProcess.Properties[5].value -Leaf
-                                    'Path' = $cachedProcess.Properties[5].value
-                                    'SessionId' = $null
-                                    'Company' = Get-ItemProperty -Path $cachedProcess.Properties[5].value | Select-Object -ExpandProperty VersionInfo -ErrorAction SilentlyContinue | Select-Object -ExpandProperty CompanyName
+                                $processCreationEvents = @( Get-WinEvent -FilterHashtable $securityEventFilter -ErrorAction SilentlyContinue )
+                                if( $processCreationEvents.Count -gt 0 )
+                                {
+                                    Write-Verbose -Message "Got $($processCreationEvents.Count) process creation events (earliest $(Get-Date -Date $processCreationEvents[-1].TimeCreated -Format G))" 
+                                }
+                                else
+                                {
+                                    if( -Not $warnedForAuditing )
+                                    {
+                                        Write-Warning -Message "Could not find any process auditing events"
+                                        $warnedForAuditing
                                     }
-                                if( -not $processStartTime )
+                                    Write-Verbose -Message "Got no process creation events"
+                                }
+                                $gotProcessAuditingEvents = $true
+                            }
+                    
+                            if( $gotProcessAuditingEvents )
+                            {
+                                [Int64]$processStartTimeFileTime = 0
+                                if( $processStartTime )
                                 {
-                                    $processStartTime = $cachedProcess.TimeCreated
+                                    ## process start times will not match exactly so see if "close" (filetime is 100ns granularity)
+                                    $processStartTimeFileTime = $processStartTime.ToFileTime()
+                                }
+                                if( $cachedProcess = $processCreationEvents.Where( { $_.Properties[4].value -eq $processPid -and ( $processStartTimeFileTime -eq 0 -or [math]::Abs( $_.TimeCreated.ToFileTime() - $processStartTimeFileTime ) -lt 10000 ) } , 1))
+                                {
+                                    $process = [pscustomobject]@{
+                                        'Name' = Split-Path -Path $cachedProcess.Properties[5].value -Leaf
+                                        'Path' = $cachedProcess.Properties[5].value
+                                        'SessionId' = $null
+                                        'Company' = Get-ItemProperty -Path $cachedProcess.Properties[5].value | Select-Object -ExpandProperty VersionInfo -ErrorAction SilentlyContinue | Select-Object -ExpandProperty CompanyName
+                                        }
+                                    if( -not $processStartTime )
+                                    {
+                                        $processStartTime = $cachedProcess.TimeCreated
+                                    }
                                 }
                             }
                         }
                     }
+                    ## else process is remote so we can't get start time as start time is not something I know how to decode when remote as not a DMTF datetime or seconds since 1/1/1970
                 }
                 catch
                 {
@@ -326,17 +350,17 @@ try
                         ## strip off Start IWbemServices::CreateInstanceEnum - root\cimv2 : 
                         Operation = $operation -replace '^Start IWbemServices::ExecQuery [^:]+:\s*'
                         User = $(if( $firstEvent.Properties.Count -ge ($userIndex + 1)) { $firstEvent.Properties[ $userIndex ].Value } )
-                        ## Machine = $(if( $firstEvent.Properties.Count -ge ($machineIndexId + 1 )) { $firstEvent.Properties[ $machineIndexId ].Value } )
+                        Machine = $(if( $firstEvent.Properties.Count -ge ($machineIndexId + 1 )) { if( $machine = $firstEvent.Properties[ $machineIndexId ].Value ) { if( $machine -ieq $env:COMPUTERNAME ) { '  local' } else { $machine } } } )
                         Process = $process | Select-Object -ExpandProperty Name -ErrorAction SilentlyContinue
                         ProcessPath = $process | Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
                         Company = $process | Select-Object -ExpandProperty Company -ErrorAction SilentlyContinue
                         Pid = $processPid
                         SessionId = $process | Select-Object -ExpandProperty SessionId -ErrorAction SilentlyContinue
-                        Service = $(if( ( $service = $servicesAfter[ [uint32]$processPid ] ) -or ( $service = $servicesBefore[ [uint32]$processPid ] ) ) { $service })
+                        Service = $(if( $isLocal -and ( $service = $servicesAfter[ [uint32]$processPid ] ) -or ( $service = $servicesBefore[ [uint32]$processPid ] ) ) { $service })
                         ## ProcessStartTime = $processStartTime
                         ResultCode = $(if( $lastEvent.Id = 13 ) { $lastEvent.Properties[ 1 ].Value })
                         NameSpace = $(if( $firstEvent.Properties.Count -ge ($namespaceIndex + 1)) { $firstEvent.Properties[ $namespaceIndex ].Value } )
-                        ## Local = $(if( $firstEvent.Properties.Count -ge 11) { $firstEvent.Properties[ 10 ].Value } )
+                        Local = $isLocal
                     }
                 }
                 catch
@@ -353,6 +377,7 @@ try
         {  
             try
             {
+                [bool]$isLocal = $(if( $firstEvent -and $firstEvent.Properties.Count -ge 11) { $firstEvent.Properties[ 10 ].Value -ieq 'true'} else { $true } )
                 [pscustomobject]@{
                         Start = $(if( $starttime = $firstEvent | Select-Object -ExpandProperty TimeCreated ) { Get-Date -Format $timeFormat -Date $endTime } )
                         End = $(if( $endtime = $lastEvent | Select-Object -ExpandProperty TimeCreated ) { Get-Date -Format $timeFormat -Date $endTime } )
@@ -360,7 +385,7 @@ try
                         ## strip off Start IWbemServices::CreateInstanceEnum - root\cimv2 : 
                         Operation = $operation -replace '^Start IWbemServices::ExecQuery [^:]+:\s*'
                         User = $(if( $firstEvent -and $firstEvent.Properties.Count -ge ($userIndex + 1)) { $firstEvent.Properties[ $userIndex ].Value } )
-                        ## Machine = $(if( $firstEvent.Properties.Count -ge ($machineIndexId + 1 )) { $firstEvent.Properties[ $machineIndexId ].Value } )
+                        Machine = $(if( $firstEvent.Properties.Count -ge ($machineIndexId + 1 )) { $firstEvent.Properties[ $machineIndexId ].Value } )
                         Process = $process | Select-Object -ExpandProperty Name
                         ProcessPath = $process | Select-Object -ExpandProperty Path
                         Pid = $processPid
@@ -369,7 +394,7 @@ try
                         ## ProcessStartTime = $processStartTime
                         ResultCode = $null
                         NameSpace = $(if( $firstEvent -and $firstEvent.Properties.Count -ge ($namespaceIndex + 1)) { $firstEvent.Properties[ $namespaceIndex ].Value } )
-                        ## Local = $(if( $firstEvent.Properties.Count -ge 11) { $firstEvent.Properties[ 10 ].Value } )
+                        Local = $isLocal
                 }
             }
             catch
@@ -382,7 +407,7 @@ try
     {
         if( $summary -ieq 'yes' -or $summary -imatch 'true$' -or $summary -ieq 'both' )
         {
-            [array]$groupedByProcess = @( $results | Group-Object -Property Pid )
+            [array]$groupedByProcess = @( $results | Group-Object -Property Pid,Machine )
             [array]$groupedByOperation = @( $results.Where( { $null -ne $_.'Duration (ms)' -and $_.'Duration (ms)' -gt 0 } ) | Group-Object -Property Operation,ResultCode )
             [array]$summaryData = @( ForEach( $item in $groupedByProcess )
             {
@@ -443,7 +468,7 @@ try
             "Summary for each process, sorted by the highest total time spent in WMI calls"
             "-----------------------------------------------------------------------------"
 
-            $summaryData | Sort-Object -Property 'Total Duration (s)' -Descending | Select-Object Process,@{n='Pid';e={$_.Name}},@{n='Total Operations';e={$_.Count}},'Different Operations',*Duration*,ProcessPath,Service,Company <#-ExcludeProperty Name,Group,Values,Count#> | Format-Table -AutoSize -Property *
+            $summaryData | Sort-Object -Property 'Total Duration (s)' -Descending | Select-Object Process,@{n='Pid';e={($_.Name -split ',')[0]}},@{n='Total Operations';e={$_.Count}},'Different Operations',*Duration*,ProcessPath,@{n='Machine';e={($_.Name -split ',')[-1].Trim()}},Service,Company <#-ExcludeProperty Name,Group,Values,Count#> | Format-Table -AutoSize -Property *
 
             ## Find the longest duration for each unique WMI call, split by result code so we can tell if bad result codes cause longer queries
           
@@ -467,11 +492,13 @@ try
                     $totalDuration += $instance.'Duration (ms)'
                     try
                     {
-                        $differentProcesses.Add( $instance.pid , $true )
+                        ## need to cater for same process id on different machines
+                        $differentProcesses.Add( "$($instance.pid)-$($instance.Machine)" , $true )
                     }
                     catch
                     {
                         ## already got it
+                        $null
                     }
                 }
                 Add-Member -InputObject $Operation -NotePropertyMembers @{

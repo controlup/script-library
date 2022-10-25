@@ -1,2 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>d54aa085-4717-49c6-94a7-1bc204e96a92</SBAId><RootSBAId>bcbde30f-1ee9-460d-803d-9fe54c28f522</RootSBAId><SQN>0</SQN><Name>List installed PowerShell modules</Name><Description>Gets the PowerShell modules installed/available to the account running the script; with type, version and description. If specified extra details will be displayed.
-</Description><Version>0.2.7</Version><DateCreated>2021-12-25T21:53:06.9484604</DateCreated><DateModified>2021-12-27T15:08:13.9847259</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Ton.de.Vreede</LastEditorName><CreatorName>Ton.de.Vreede</CreatorName><Status>2</Status><CheckSum>WcTg0LPmI2pWW9OgPnKXMA5RIIw=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><ExecutionDescriptor><AllowedEntitiesEx>256</AllowedEntitiesEx><AtomicEntityEx>256</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>H4sIAAAAAAAEANVYbW8aRxCez5X6H1CdFmzZKFE/Ja0rYZs2qHFsGWK3ciMVc4dNBQflcG3a5r/3mWd373aPxUFFqVQhjmV3duaZ94EduZBUfpd7Gckcq1xqciB/YDXHeiRTybDztTTluXwun8m3ssPPmn01pSs/y1s5k3OsOnj7pz+Az4I8++DZB78xnjd4ptg7B/cHSurKHT7HeNVkgt0EeMZEo9xCeSfSBv0xcHfAoYfnGeTHpS7IdzNJcYwL0JR8+jLAa4o7GfZq4KerDHcyufXoclDNsTvDzjf4/oC1ninFErup7GNdtXIfzwSfCfGUHMx5EycdGZK7chhgf4h3yjupPIJyDh7m/sJqklvpRuMbokvwXXmonkveb0bs3JafpCWnsN0brP2zr/Cug+IXnCgntYRaIKfUMS2XBFbP11q9CRy5vAA/jbsTD7nhMSTHnLgPgKa8+xYnE+7vyZ/Y0+jdC3CeYXcB/vdFDNbI3fl2Smv210TDAzBPreSskDWgLwzGjHT1Qnq94muf43aer3rnv/TAglGe/gvLtoDuzYq8T2WjGmqB6phR/iq+cWEpg87l6qrfHbYwp/pBTuW4MSBVn9+PwWUCiYpySfw9rG95phYdRHNM62aP9czfVz1GVkqpZ416jsG9Rm+qZ/Mn9ND9Pu/1GZ2fqr6p5U/Xyr6j1NTWHuOdWKTe07vq8Zq1t1a3IXdSi6aKzq+qBleX5zOuj5mV7vY7ZvLcs0YGysWG1fAyiMVXxb57vSj6o9tpMfbUS/MIvfrYRHVCLJfElPKbctmR7/h5DS0m2B0zho5oucR6oyG78p5U59RJK1QjwHDtneh91aEBX5lM6tP3c8bTId7PikzX6H3NajEDtXo0ZyynlrKOKuHb7Knu0wS1w1niuqTvRxZFCr/pnQZoHYY6UdS9+h/jk5Pe2OM9NKhWr/2t7FHK/rhFym40ZZSVHaOMUtOHE8SookiYKaYWreauZuUtUW6id6wv6o3dIpJ3xM1F8Yrh18chZ0Fd600zczQgRSe8I5t/ScSW6u3jSn/8ESdLejaGUXXbBfe/Av2egfJGflupKoeFDuEkoH2rtH/cGkrjemVrpQ6q9A98totpY3tMm8hzvumRn+njZirJGImr3Sm19WtYeCL0UkbqMRHoZL8O+6rdrxhT6suDoMMrpw74mm9n5KXzp558AQtPIzgnzKcBO1nYO7KPeiqmYxOSfKxtVJwRETzfwHtq4W4l+steNsIEV04t5W+GLp5HkO/6kMvLl5D55Qq9avxos1wRa38uuYexpLyvArpDes9F0mtOngv4qInO1cHzAtwfuA45XbGKpqzIE/Y616VcdK5KawZadaMIn+LbtKemqh2yIhl/36EavcLrovBbIyr/lLY6B/2SfAestD6NQxXK2hOdml7aurbennENnT2e0q3a+TVywly44cSnmM0kM2RMjOyM6s/B2+bWuprzt43msaU8qNxzmaRdy7/b86brcKLRnZPoXO2kaVdbL8lQfU8qEwkHnH9LO1Rt2gKqJOg6ZZ+s/n41FXEu/v8UScDRVb9rIF2SXwocrhuZXxILG5s6eWkXmxKb1tlGZHKI9aX/uy/1JPyd4nP3J9Z91j+T0f5vmZCD8jUe1vxrczJdFJm0b6v0zMaOWtXcndiJK7dy1J86czzy+69Rm7uX/ls1Y3UcFfNal9VmDn1T9Nwpq4mvs5vcOjZb39EuRpcx1qH9alvEvOv4vgYfKt3e71z/AJAYHEx+EwAA</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>0</AltCredentialsType><Timeout>60</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>1</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>0</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>484611e8-0898-45c4-b219-87e2ec5a48b7</string></key><value><SBAArgumentDescriptor><ArgumentId>484611e8-0898-45c4-b219-87e2ec5a48b7</ArgumentId><ArgumentType>1</ArgumentType><Name>Module name, wildcards allowed. Leave empty for ALL modules.</Name><DefaultValue /><ArgumentNumber>1</ArgumentNumber><ValidationString /><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>602fb52b-061f-44cd-b2bd-a7489a6a8e68</string></key><value><SBAArgumentDescriptor><ArgumentId>602fb52b-061f-44cd-b2bd-a7489a6a8e68</ArgumentId><ArgumentType>1</ArgumentType><Name>Get extra details?</Name><DefaultValue>false</DefaultValue><ArgumentNumber>0</ArgumentNumber><ValidationString>(?i)(true|false)$</ValidationString><ValidationError>Enter 'false' for simple table of modules, 'true' to include a list with details.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog><DefaultSharedCredGuid /></ExecutionDescriptor><ImportValidationString>ZVCbH3jBcvreg8IR2SpWQLltFjw=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>b3d86558-ac94-481b-a639-23456294e6f4</SBAId>
+    <RootSBAId>bcbde30f-1ee9-460d-803d-9fe54c28f522</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637762960529648220</SQN>
+    <Name>List installed PowerShell modules</Name>
+    <Description>Gets the PowerShell modules installed/available to the account running the script; with type, version and description. If specified extra details will be displayed.
+</Description>
+    <Category />
+    <Version>1.1.7</Version>
+    <DateCreated>2021-12-25T21:53:06.95</DateCreated>
+    <DateModified>2021-12-27T13:08:13.983</DateModified>
+    <DatePublished>2021-12-27T13:09:18.563</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Ton.de.Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>WcTg0LPmI2pWW9OgPnKXMA5RIIw=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton.de.Vreede</Author>
+      <Tags />
+      <Credits>Credits to: Ton.de.Vreede
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>23</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANVYbW8aRxCez5X6H1CdFmzZKFE/Ja0rYZs2qHFsGWK3ciMVc4dNBQflcG3a5r/3mWd373aPxUFFqVQhjmV3duaZ94EduZBUfpd7Gckcq1xqciB/YDXHeiRTybDztTTluXwun8m3ssPPmn01pSs/y1s5k3OsOnj7pz+Az4I8++DZB78xnjd4ptg7B/cHSurKHT7HeNVkgt0EeMZEo9xCeSfSBv0xcHfAoYfnGeTHpS7IdzNJcYwL0JR8+jLAa4o7GfZq4KerDHcyufXoclDNsTvDzjf4/oC1ninFErup7GNdtXIfzwSfCfGUHMx5EycdGZK7chhgf4h3yjupPIJyDh7m/sJqklvpRuMbokvwXXmonkveb0bs3JafpCWnsN0brP2zr/Cug+IXnCgntYRaIKfUMS2XBFbP11q9CRy5vAA/jbsTD7nhMSTHnLgPgKa8+xYnE+7vyZ/Y0+jdC3CeYXcB/vdFDNbI3fl2Smv210TDAzBPreSskDWgLwzGjHT1Qnq94muf43aer3rnv/TAglGe/gvLtoDuzYq8T2WjGmqB6phR/iq+cWEpg87l6qrfHbYwp/pBTuW4MSBVn9+PwWUCiYpySfw9rG95phYdRHNM62aP9czfVz1GVkqpZ416jsG9Rm+qZ/Mn9ND9Pu/1GZ2fqr6p5U/Xyr6j1NTWHuOdWKTe07vq8Zq1t1a3IXdSi6aKzq+qBleX5zOuj5mV7vY7ZvLcs0YGysWG1fAyiMVXxb57vSj6o9tpMfbUS/MIvfrYRHVCLJfElPKbctmR7/h5DS0m2B0zho5oucR6oyG78p5U59RJK1QjwHDtneh91aEBX5lM6tP3c8bTId7PikzX6H3NajEDtXo0ZyynlrKOKuHb7Knu0wS1w1niuqTvRxZFCr/pnQZoHYY6UdS9+h/jk5Pe2OM9NKhWr/2t7FHK/rhFym40ZZSVHaOMUtOHE8SookiYKaYWreauZuUtUW6id6wv6o3dIpJ3xM1F8Yrh18chZ0Fd600zczQgRSe8I5t/ScSW6u3jSn/8ESdLejaGUXXbBfe/Av2egfJGflupKoeFDuEkoH2rtH/cGkrjemVrpQ6q9A98totpY3tMm8hzvumRn+njZirJGImr3Sm19WtYeCL0UkbqMRHoZL8O+6rdrxhT6suDoMMrpw74mm9n5KXzp558AQtPIzgnzKcBO1nYO7KPeiqmYxOSfKxtVJwRETzfwHtq4W4l+steNsIEV04t5W+GLp5HkO/6kMvLl5D55Qq9avxos1wRa38uuYexpLyvArpDes9F0mtOngv4qInO1cHzAtwfuA45XbGKpqzIE/Y616VcdK5KawZadaMIn+LbtKemqh2yIhl/36EavcLrovBbIyr/lLY6B/2SfAestD6NQxXK2hOdml7aurbennENnT2e0q3a+TVywly44cSnmM0kM2RMjOyM6s/B2+bWuprzt43msaU8qNxzmaRdy7/b86brcKLRnZPoXO2kaVdbL8lQfU8qEwkHnH9LO1Rt2gKqJOg6ZZ+s/n41FXEu/v8UScDRVb9rIF2SXwocrhuZXxILG5s6eWkXmxKb1tlGZHKI9aX/uy/1JPyd4nP3J9Z91j+T0f5vmZCD8jUe1vxrczJdFJm0b6v0zMaOWtXcndiJK7dy1J86czzy+69Rm7uX/ls1Y3UcFfNal9VmDn1T9Nwpq4mvs5vcOjZb39EuRpcx1qH9alvEvOv4vgYfKt3e71z/AJAYHEx+EwAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>484611e8-0898-45c4-b219-87e2ec5a48b7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>484611e8-0898-45c4-b219-87e2ec5a48b7</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Module name, wildcards allowed. Leave empty for ALL modules.</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>602fb52b-061f-44cd-b2bd-a7489a6a8e68</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>602fb52b-061f-44cd-b2bd-a7489a6a8e68</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Get extra details?</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>(?i)(true|false)$</ValidationString>
+                  <ValidationError>Enter 'false' for simple table of modules, 'true' to include a list with details.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>eGGIHvNkSneCVxzBTLtMlBWQf6E=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>2c57ce02-abe2-4746-b4e5-eedc797ea9bc</SBAId>
+    <RootSBAId>c8f9d533-5ed5-42af-8eee-adf16100a4b2</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637188185588633123</SQN>
+    <Name>IGEL - Reboot a Session's Client device via the UMS</Name>
+    <Description>Instruct the IGEL UMS to reboot a client device using the IGEL IMI Rest API.
+Note: Given that the common practice for the UMS server is to use the self signed Certificate, 
+          this script will ignore SSL errors</Description>
+    <Category />
+    <Version>1.1.4</Version>
+    <DateCreated>2020-02-25T12:06:15.16</DateCreated>
+    <DateModified>2020-03-01T16:01:36.697</DateModified>
+    <DatePublished>2020-02-25T12:06:15.16</DatePublished>
+    <LastEditorName>marcel.calef</LastEditorName>
+    <CreatorName>marcel.calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>yMA+GJiDolAjCstlPARo70LPxFg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>marcel.calef</Author>
+      <Tags />
+      <Credits>Credits to: marcel.calef
+Original code by: Trentent Tye
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel.calef@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>35</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>fd813f5c-761e-4f05-b960-bdf8f1e4899c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fd813f5c-761e-4f05-b960-bdf8f1e4899c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>IGEL UMS Server</Name>
+                  <DefaultValue>igelrmserver</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>17779af7-b4df-44e4-beac-4a2d8fc562cb</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>17779af7-b4df-44e4-beac-4a2d8fc562cb</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Debug</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-verbose|.*</ValidationString>
+                  <ValidationError>Enter -verbose for verbose output or leave blank</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7c82e3db-3487-430d-a98d-84a982d4c032</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7c82e3db-3487-430d-a98d-84a982d4c032</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sClientName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>236aadde-baab-4694-b4a8-735dc031783a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>236aadde-baab-4694-b4a8-735dc031783a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Command</Name>
+                  <DefaultValue>Reboot</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)^Reboot$</ValidationString>
+                  <ValidationError>Reboot</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>f7o3GYbXvtf7An28g7py1F1ZzRs=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

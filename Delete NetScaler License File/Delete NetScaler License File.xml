@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6ae2aa92-4014-4628-908a-cf56c79ef32b</SBAId>
+    <RootSBAId>08ccc65e-79ad-447f-8bb2-049d04bd6d2f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636612786286920000</SQN>
+    <Name>Delete NetScaler License File</Name>
+    <Description>Delete local NetScaler License File from the appliance, using the Invoke-RestMethod cmdlet for the REST API calls.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2018-05-07T08:18:10.153</DateCreated>
+    <DateModified>2018-05-07T08:18:10.153</DateModified>
+    <DatePublished>2018-05-07T08:18:10.153</DatePublished>
+    <LastEditorName>Niron Koren</LastEditorName>
+    <CreatorName>Esther Barthel</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Pyv5ick8YSg8qIXYV7MhQSCXeA0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Esther Barthel</Author>
+      <Tags>NetScaler</Tags>
+      <Credits>Credits to: Esther Barthel
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>nironk@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>36</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>17179869184</AllowedEntitiesEx>
+      <AtomicEntityEx>17179869184</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>52f73065-cca9-44e1-90b2-8e27f6ca64e5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>52f73065-cca9-44e1-90b2-8e27f6ca64e5</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>ManagementIP</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>211a4f0c-3038-4123-a0d5-638a37c3e699</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>211a4f0c-3038-4123-a0d5-638a37c3e699</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>NetScaler Username</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bd32ca12-12af-4101-a357-e26c9b63dd66</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bd32ca12-12af-4101-a357-e26c9b63dd66</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>NetScaler Password</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6ebca4fb-e05b-46ef-b722-2b0683df5288</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6ebca4fb-e05b-46ef-b722-2b0683df5288</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>License File</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>saPfI/R1gYuqZF3hbV8Xf+LnrT0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

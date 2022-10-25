@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c9dbf293-2146-4c15-a863-63c1f955409e</SBAId>
+    <RootSBAId>1bdf371c-695d-44dc-8fbc-78062a219436</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637434637335020523</SQN>
+    <Name>Show open files on SMB shares</Name>
+    <Description>This script runs Get-SmbOpenFile, which retrieves basic information about the files that are open on behalf of the clients of the Server Message Block (SMB) server.</Description>
+    <Category />
+    <Version>1.2.4</Version>
+    <DateCreated>2020-12-08T12:38:04.44</DateCreated>
+    <DateModified>2020-12-09T11:06:24.817</DateModified>
+    <DatePublished>2020-12-09T11:06:27.567</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>HTub8miFJTJMZgX/yhfrm8LNbxM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>SMB, file shares, storage</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>84</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAMVWa0/TYBQ+n038D41bMkjoEE2MIWrCuLkPOkInxBBixlZw2rVj7TYR+e8+53nfrpd1QPCDWfr2vZ3bc55zuppMxJdrmcqQs1gcceUEswnmQ4kkxM5racpLeS7P5J3U+G6KJ1/ls3TkCLM2Ht315Dsk5tRyCenAakyw38PoSB97Q+yGWOmJ7s+wdiA35r5jbXrySVp4x7xjfGvSirG/J/u4syvHsH4kXYwd+KNnXUgMqT2GvQnmY9qeIMqQ+4fQliBOT0ZyATlj+cB6vIEbc+roY3RoO6Een76qhgv4FPOGgzFEtBFujBhliloPtyLYTCwC/kpUTHzLGFxgpXcCyOneZU5TGcniqccMzjg6QFItxtB0xdMWZCNo+In5mkV6nXhlUnmsNc9d4p3i61tcMuYMFjnzFhlzgEiEkyljdmxWNLZAbhj3DI8iolgFFgON/JSoDhZseiub8goc3MKociHtBcRPvd2g95FFoCr7c9oJMAtxL+NDajHC2cDiVbY+K9RDysMWOWAiTzMeMkrV02P+NMo9Zim0Xin3VFtAG1fYy3DekS9A9yPQPrZIG70DInNCTH2u9LQmHxayZ6iEEU4CcrVl/TcW1pDb88XNmmWHIqB+TMhcU4khNRgpvVtHztMbO0Az5fYRPbmkvMbWp3/v8TSgOyGPGwWLXTIweRBbvd8mk9cQ0z52ZuSXno0s289lG78OLBX7VHOpb7mWU2clK+fw7g3ub+GtvL+lXcf+Tska5ZULK1q/Y1vFLnwL7aqD7P7AnT5PGrmuMyt5YSqzHPfQ9oCIrA24b9YZM6u53CSeq2qwWHGmw+Ur8uk1mNbfJqqxqgabNucpjvvyizg6kNL9uwIj2vBsTGYlD8ahMtqBb5ZyldfiovvkY3fRt3pkzTIOmT99+m86/b/z4IXNjMF6zg7hsBeMyWKD8Ih5yDw3FZfv3uWs5dHYxrou32Dr8Wgf2opPLWRfmvSLdAtP123XqUK6vvSdjG3N3/81LWbLVHYd51PbjV3M/RX6l2vzfm/+4DnIfYldxJKx2kUPm7LCPMj8Lvl2V1j5kIkpVW3/6T0i5Uaa2ZAVn/9f8Lh/Qo0K7824+58Y7YOBKjWtYPQqjrRtbvq5r9dj+f0Xy9zO2rwKAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>exONVX+DlWmtBfD5ric5bfe1aE0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

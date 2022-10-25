@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>48b6b1de-b32c-49f8-b287-badab73dae23</SBAId>
+    <RootSBAId>b44a09d8-f40b-4cd3-b25c-ab28bd04546e</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637316211271728612</SQN>
+    <Name>Enable requirements for Logon Duration Analysis</Name>
+    <Description>This script is designed to enhance the login measurements in a computer using auditpol, wevutil and reg commands and complete the requisites for the Analyze Logon Duration Script.
+It will additionally increase the size of the Group Policy and Print Service Event logs to retain the information for a couple of hours after login.
+Important note: This script modifies the audit policies on a computer and should be used with caution. If in doubt consult with your IT Security team.</Description>
+    <Category />
+    <Version>2.1.5</Version>
+    <DateCreated>2019-05-01T02:29:47.98</DateCreated>
+    <DateModified>2020-07-19T09:20:56.627</DateModified>
+    <DatePublished>2020-07-19T13:22:03.557</DatePublished>
+    <LastEditorName>Marcel Calef</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>j1tWkxQIzlE4+46Gyoh8UpMCcrA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAAtRJREFUSEvN1FtIU3EcB/CThNGLaGUPivkgUhhGLz30IIGUlKQJGb701kOFEWJJQvRQhl2mBGoQ6pzb2a25OWbTbV52cVOPl51tuolED2IX0O4RZlSevv//X809ZYSbXz5P2znfL4zx46RNTpwGDDTTYTGaHyJTRHhyDKYgNAqTIQFCwREiMKxQtAGritMAa1Qq29fjVUrQ6TRgNhvBYjF3Wy1gt1uhv68HQoEhu+0ZsKq/D3CciUvyESnPofy+BM4wYRiWtD5C4SbqzT8gKA6xVVa1BQYSkvXcHgeRFYSyK0sw+0aCmVnpxWti7i0hRH5BUPR1dZmBVcVqQEPjXA37w/C8ErJy9YmpHcClD0J2/gJYPcswMCbZRwl3gOhw/YSA6DV3GoE1x2qA9Ta3yM+UlEIkLIJarYK8AmNyhhK4FBMkHQiArPkT6K3f2jq/g657GRo0SxAQB41GA7DmlQErzZ+BqQkwGPRw5JgmM0cBCbt42JHuhgtVs1DX/OF242eQtS7C1doFEP1urUYNrDlWA3oa+ZfK0vmdwAZMRgNk7G/JPNgK23e3QEJqFxSWOaCm6oasohgeVpyGB9fOgddpUvM8sObYDni93kYadsvYweG4Wi5RRnD3KDlcPl8OxobjNmUJ9ChOgb5mHzTdPKtSKYE1x2pAR7M2QO4wMUoEo65xMOCDuspiGJAfFf0e8E+4QX1rLzy6XshOAGuO1QD7icbHx2U0gjAEPp8TPJ5+54AD+nptYLVaQFZRBBjQ6jSg1vDE6oCchjWvDDylEQSBDYzQPKFhDyAhGrssDXrriYg213Q3DRQ3iPbqFdrqbcDeiu1AX3TWBrQ0MzTv3QXwcfAkSHMX5/vzYVp3aL14DKhpHkeHfYhvXS7Hmkk+B/yKbHhly/M2pUHHnSjxGNh4FsdK4KtQBNLLS+9cJ2DGcHi9/xpgL28Ee37rDfxrNnlAkn4Dxau58BzH9PoAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags>Logon Duration,auditpol</Tags>
+      <Credits>Credits to: Marcel Calef
+Original code by: Trentent Tye
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel.calef@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>415</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAL1W2W7TQBS9z0j8g5XnlBREJZS3kJYSQaCiAYQUCbmOk1jyEuy4xf16zj0zEy+hURBqZXmZmbuce+6SDGUonnySkUzlgt8XkoovNxJLiFWO5y8pJeJXgjuVrRQ4WUqGPU8+4r3CneL7HJI5tLeQNzsjWoulgk6E+7k8gxf1o9dM1tz1cAfQjGQDXc/uLeBNtVawEWLl4SzDUzGsYTWFTsjdNd8xkUT0q0h9aJd7uM25jzuAfAKPJU5CxlLSXworKlHCZ4SzDeRi6WOvjf4OWrfUjnDuEdHCcrba2U/sftGQcJ6V420rhprvgr7DFtdOqmb1nuvDObhucPuiE8OEfN8xAhPDwkZttH3uV5a3gPiU1yZmRWpwZEBa719COgOaDb6vyGEEC1WDhyviSonhmjm4pUzIOry1WXOZLfYyYOohJ4u+zazzrivDW9Jiw3HpKqC0eXDo19zLbb6Wu9qoq2ufw4Q1khOFQZxirZrDA1WeQEa5XuI2eXbY69rzbPUpK04qO1DBjtnCxhFzdUOrJfO2sPlWX2rBtxWcMbIuwxNyYphd0OINUQWUL+hh27JYWf5Ud2bzGnBHJSpGqTWUNHisfY7lCzJ/Tl2HwV2XsFKx2kPaXLMnZ8x/SquG+xmkwlYkV/JV3kJvAjTvad/D+gfPpsCSs+Zi+vdZDUtq1xbaU3Hc6mxFFHFGaWeWu/7ROaIW3DwwveVJDxg+QGcqc+D5LO+A+Ds0NfI5diNWSQZ2M9bfHKcRPWXgucB6TD5d3N+Y+8LmcN7oNVMx6kXn75aTcN7A2AOaAfrMdGJGFgpcY9vnri4m7P2YeiFOE7xdzD9b3CxoUZ+n8ltecnWYy0MzwPTcynLZt33lOt5EbxD2W3PoDN6nyLD6NFN625jTBZ/7PJ90eD5pYGsjGyBrG+7UHPm0OgA3BaI8k1fyGvcbXKe49ETnwxCeVNJM0AF56O6FB/l6eKo+JlvH8VVjayJ7mK2n4Ktd2TodQv4mRJSqfxf+PnMr2h11/guo14Ksmi+digGthfwdzqE3RHcd57u3sxLsZIfMl4viX+Lr9u7TRNb1+n8xNf/PjB4BfW3/OJx/AKTOMhEmCwAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>WNtrx0W+FukjjSKtQTRBRrClqMw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

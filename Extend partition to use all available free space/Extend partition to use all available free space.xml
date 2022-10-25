@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>319c67ff-2a23-4178-a4da-2efe68a699ff</SBAId>
+    <RootSBAId>5ca9a46a-0336-4131-8653-4a96a34c8208</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637211702693402236</SQN>
+    <Name>Extend partition to use all available free space</Name>
+    <Description>This script uses standard PowerShell commands to expand the disk of Windows machine. For safety, this script only works if the following conditions are met:
+    - At least 100Mb of free space available (this needs to be directly AFTER the chosen partition)
+    - The Disk State must be Healthy
+    - You must specify a drive letter of the disk to be expanded</Description>
+    <Category />
+    <Version>1.2.7</Version>
+    <DateCreated>2020-03-17T12:46:05.02</DateCreated>
+    <DateModified>2020-03-19T01:03:18.577</DateModified>
+    <DatePublished>2020-03-30T11:41:55.927</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>MQBw9k8vGw4v2IApGNF5yewgWeY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>disk space, free space, partition</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>81</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>7200</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>d676834d-1096-45ed-8022-1de84edf4369</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d676834d-1096-45ed-8022-1de84edf4369</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Partition drive letter</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[a-zA-Z]{1}$</ValidationString>
+                  <ValidationError>Please enter a single drive letter only (C, D etc).</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>cKhk6phDzaWAYssMoaThf12+Lt8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

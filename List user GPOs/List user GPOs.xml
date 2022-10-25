@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>b246f012-42a6-402a-93c4-b46a01913d5a</SBAId>
+    <RootSBAId>df906954-9c35-4378-885c-8738f13d2df5</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636056374768896000</SQN>
+    <Name>List user GPOs</Name>
+    <Description>This SBA runs under the session context of a selected user and shows, 
+every "User Group Policy" applied based on the records inside the "Operational" log under "Microsoft-Windows-GroupPolicy".
+
+By default the log size is configured to 4MB,
+That means that this SBA can look back this much.
+Consider increasing the log size to view older entries.</Description>
+    <Category />
+    <Version>2.2.7</Version>
+    <DateCreated>2014-07-07T12:21:32.65</DateCreated>
+    <DateModified>2015-02-12T09:09:59.457</DateModified>
+    <DatePublished>2014-07-07T12:21:32.65</DatePublished>
+    <LastEditorName>Niron Koren</LastEditorName>
+    <CreatorName>Niron Koren</CreatorName>
+    <Status>4</Status>
+    <CheckSum>SS1zmJ1hC1/LAd6HWgUC3D7rjOM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Niron Koren</Author>
+      <Tags>Group Policy, gpresult, rsop, gpo, logon</Tags>
+      <Credits>Credits to: Niron Koren
+Ideas from: http://labratcentral.wordpress.com/2013/02/19/use-powershell-to-generate-and-parse-a-group-policy-object-report/</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>nironk@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>2317</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a/zGv0bya4x/jde/xu/za7z4Nb78NV7Sb2f0f3yadv778tdY/xrtr7Hifxv6e03/5r9GTb9l9Onq1yh/jYL+ntHfF/RpRd+v6PcV/YZvpvxto/09/TVOqZeTX+MV9fby13hD/35J/cd6ffNrzOlN9NcQjJp+X1H/+GtOkK8+ABO0bjxIS/q9oH8b+ndGLVLqZ84/T3+NS/q5pL+fU8sLHcPLX+OY8D/+Nb6g79/Q/19Ry8fUS0Z9Zr/GgsaDf/Nf4yg6rhcECT1mPJrWjhJYFtyX9HL6a/ze3MdL6vs0CukxUdKnzEuGOad+f9+AZmP6t/k1dqnFF7/GNc1ARdhl3Nfvy598pVSUfs8Iw5f02ZsBbnhJ74NSLf0fI8mItimP/YLovVB6pfTduY4PlHyqlN6m0eRMVbwlVBV6GKqlv8ZWB0eD3x3F8EvGbhOOz5mmDov34Q7p4znT4feKQn9N7YDnnHqAXDz6Ne7Sf1f835jgVEyBmuGiD/lswbB+XLnC/P93o7mtuW1Nsz21VH1Jf+eEe84/l/QNevyM/v8R9d9SmxX95nD6cf2ZUdtKqQ65uKJPrn8NzEPF/9beX43CcbMUSlrB8zJlacG3QkvAFXwbGllKdFowDWt6J+ORp9QOf0OG0d9dkndw5pR6EZnNaAZyettRwUgy+Glhx/q7KV81v8b3fo2dX+P7tj1G+5TpAxxFpmVM+KSk32X0Ex6tk2Jgi/n/+NfYJ3g7JBMfK81mtnXGo8aIbsPlVyy/MrKPaZz+3H9FUD5mWPj70mqXiVIUfQrvG57Jf413Kv+/26/xE9QPRgGcZN6/RVRwY3nKNM3oM/fb72ml6DPqGTwE+oCzVzyC14F++pgo6ka/ZeHg3f6MfEzy9/3gDeDzmvBrGPMF/bXl4XdG8D4LKC3vfxTwv+HIX2w/8Tn6c4IlNgfYYwYMp+a2H3y7YMynPBdLmiHXTvhZ+KGgVmaWffr6vX6P5xh6/Jpw/d288aAfzIPgtP1rfJf78nlrmynuZrr2dNoXzCU1cxXkyEGY/RpizbYJstFK0LGik64Z7jOPq39vq+fBE/44PgpG8rtZfQJ8WvpeeF/kyh+XyNY42n5MWK15PID9S/jfqaW2mTfT53cttbd/jW/zWEGXj1gu1jQC9C/6KVXZxSfQcCXPqNEf4eyKHjIz+vUpeZcsx4ppBfx9uS5/DdghaLM/gD57oz1hDs+pxZppb1pBSxa/xg+4xRZx9xe/xhPibJHkkuer4Z6NTgz9FPxsGALai96aMz4GPjSj0wzgWFiBq18D9gZjqvktaNCKMX7JtDM6WuS99j4xdOtjb6yAjy36LXnkMWzHHR47JX1V8Fu7Hn8YDQ3rXv0abxlfYxFiuvj+r3GP3t9jXXnF8MBZBu8+d3zc41SBhfeNbhLbVjP+qeIY+nigLGCKXphwH6J5FzpqsVL/b5T622leR1ejedNf42d+DUipeAeQ0i9p5D9Nv4Gev5jG/vsP6AHgk/8av+jXGNIr4cw//TXgf8HjyhhLN5sfE01C6gr1RC4B7WOGEtck3bkZd6Dhzf8HVoSU5NwMAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>3bf1e6ee-31c5-4e7e-ba35-ca09658245c2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3bf1e6ee-31c5-4e7e-ba35-ca09658245c2</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>IwPoeJKJOEy7ZYIMbKdwELg9gnk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

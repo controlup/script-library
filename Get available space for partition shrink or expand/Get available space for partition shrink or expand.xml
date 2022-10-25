@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>4afadb0e-8643-4119-a16d-c0d67b68ab61</SBAId>
+    <RootSBAId>9bc87df2-9330-4585-ad35-92ac2f4ca829</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637212553836951391</SQN>
+    <Name>Get available space for partition shrink or expand</Name>
+    <Description>This script checks all Basic partitions WITH DRIVE LETTERS to see if there is space availbale for shrinking and/or expansion. The following is also checked:
+    - OS Version, this must be Windows 8/Server 2012 as a minimum to use the ControlUp partition expansion script
+    - The Disk Status</Description>
+    <Category />
+    <Version>2.3.10</Version>
+    <DateCreated>2020-03-19T00:55:13.017</DateCreated>
+    <DateModified>2020-03-30T13:26:27.25</DateModified>
+    <DatePublished>2020-03-30T13:27:12.887</DatePublished>
+    <LastEditorName>theartvark</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>OPbeD2qQHI+HbH9tlyb1BEluBDY=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>theartvark</Author>
+      <Tags>disk space, disk usage, partition</Tags>
+      <Credits />
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>53</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>1800</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>w/MSferbPEtYt0l9rs4NITIbss0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,4 +1,181 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>189b58a6-b1e0-422c-bf0c-c02d531137fa</SBAId><RootSBAId>3621146e-3722-45ea-96ec-0ff104ff2c40</RootSBAId><SQN>0</SQN><Name>Send Teams message on session condition</Name><Description>Sends a message to Teams using an Incoming Webhook, with an option to include a clickable button with a URI link.Customize the Message input to use this as an Automated Action for alerts on session metrics.
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0eea4b47-e6d1-4899-aa58-0f4cfb767c7c</SBAId>
+    <RootSBAId>3621146e-3722-45ea-96ec-0ff104ff2c40</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637769889650214915</SQN>
+    <Name>Send Teams message on session condition</Name>
+    <Description>Sends a message to Teams using an Incoming Webhook, with an option to include a clickable button with a URI link.Customize the Message input to use this as an Automated Action for alerts on session metrics.
 If you want to include a clickable button with your message, ButtonText and ButtonURI must be provided. If either of these is missing the script will return an error.
 Useful for Triggered scripts, fill the Title and message with data from the console as required.
-This script requires a webhook to be configured in your Teams site. See the link on how to do this: https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook</Description><Version>0.2.19</Version><DateCreated>2021-12-25T14:06:45.8389018</DateCreated><DateModified>2022-01-04T11:20:08.586432+02:00</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Ton.de.Vreede</LastEditorName><CreatorName>Ton.de.Vreede</CreatorName><Status>1</Status><CheckSum>/k17LJirAlZdjzlZZcphLGgvMxE=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><Icon><IconData>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9+w2f/wBVeAf8FF/2kde/Zs+CFne+Gtlvq+u6kumRX0sSyLYDypZWdVYFGkIiwoYEcsxB24P4n/Bfwz4d+MfxQg0nxb4q1zQLnxBfQWlpeWukDV3uru5uFjzNvuISo3PuL5YnnjNVP2qvhz4V+CHxH1Twr4b8V6t4q1Hw/qeoaRrD3+grpcNvc2s/kDydtzMZkZll5IjICrwd3y/suWeHNChmdOniK3tLe84unLlaX96/La/46HkVMfKVNuKt8z9MP2B/25viD4m/aE0fwn4m1mfxNpPidpoVNxFH51jKkMkwkjdFBKnyyrI2QAdw27SG9D0v/gtT8NNU/ayX4XppfiMW0utf8I5D4i2RNZSX5m8hQED+Z9naXEYmx1IYqIv3o+aP2FP2m/g9+zZ4V0HX9H8F+P8AWtYfSoo7e81vU7OaWyRkG8RiKONAW6FypfaSAQGYHy8/tFfs2+E/2z3+I9x8NvijHeWXiD+130qHWbKTSIL5Z/NN3HEVWclZf3yxGcR7sLtCAKO/MOF8NjsZWxH1GpGHs/d5ORXqa625u1l52baMoYqUIKPOm763vsfGvgH4saf8O/ip4Z1y6dZovD+t2WpTQRyKJZEt7mOVkXJADEIQM45IzVb9oT4v2vxd+OvjnxfYRT21j4s8R6lrltDMVMkMV1dyzoj7SV3BZADgkZBwa/plu/hj4av7qWafw9oc00ztJJJJYRM0jE5LElckk8k1+bv/AAUP/wCCM1jr/wAYNa8f+DfBNrrdh4lmN7qOn2UaC4sblgPNdIiMyJIw3nZuYPI/y7AMdeSeIuCx2OSq0lSk42TlP3d07fDZPtf07BVy+cIaO6v2Pkv4Ktu+DvhY+ulQH6/IK8h8eWcuo/E/VLaCNpZ7jUXiijQZaR2faqgdySQPxr7n/Z9/4J2fEP4karp+kL4Y1Twd4ftdkE9/q1o9r9jhXj93FJiSV8A7QF2k43MoOa+0vhJ/wSU+Cfwa+LkPjbT/AA9f6jrlnd/b7H+1NRlvILG4yWEyRMdpdWO5WcMUYKy7WAI+gzXj7LMoXsW/aVOXaFmk+ik76fi/LY5qeAq1ddlfqf/Z</IconData><IconType>2</IconType></Icon><ExecutionDescriptor><AllowedEntitiesEx>4352</AllowedEntitiesEx><AtomicEntityEx>256</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>H4sIAAAAAAAEAO1aaW8b1xV9X10g/2EcG6UEiJTVJvkQJEVkhU7cyBIjUU4C12i5jERG3MoZSlZb//fce+6785Z5pOTUSt2iIETNzNvucu46fGSWJjd/NyszxlVhMtM0L+lqSddjMzczevJH0zJPzEfmd+YL8wj/H9CTU/OTOTLHpkNXz+lPnp/S2pkZ0qoe/U2xZ0HXF3SVmZJ2zEyXrns0xqdd0ymlGdn5AzOh+4G5pLs+XfOafbovK1r6RGuJfWY4Uan52rTp7ANzQrR06ITnRNlRRFNxZ6pW4H5G47yCz31O3wOaN62e/0Dz+0T5nD6XZgf7jGh2SVdjzJ7QPkMr1XfnrmWpP6P1uTmnkQnNOKexJahd0qoLcMCaY4kXtBc/XdAOBSg6p7sJ1jFtOdaxvOXsntVULA+nkyH46WGnJbh3Ow1AZUHfuhvzGeJpaLlQLbXNj8TxC9LQIV3L09/TqgaN/cXDjq+L9dTNwanIrgcuQ/ktaNUe7c2YDrV1BjnxuSPM55mfm136TM2Nd/ou0XoTrZX9OpDHGxrNCHtzwtqc9hFd8bgv5wZ2yUCrPJM9XkSc6byQ44aVU5coGFc2I1pd0KkFEJfC9RiY8mUpT1SDE1o9gIYVf6LTcyBrVeEqXHUdSCO24DKBrzptPir+O/X/PvUb46lRQ5TMeepxxzS+geYbtJb91cju/DAx+wx+0edXuL3Gp2X1XoIG9loL+2z6gaNvZwP+dmo08ROW2oLGe8CMO1v9qp7jI0nigawPn5eVFhTrur4Hv75K4DKz2vi/DWy2gT5mlOBBn7fo2RUi3n/SImJaN1OqOcgYuQMjb1khcUDfC9AcZhyZt1MG7C293TSadiiWniCeton7Nl3HWYnoWC3Yz7pCHy7SiC19AVp7kGGJ01meK2vzfehT6LyiFcNEvE9R6FAjs9qQs+weRxC1yhv6v7J5zzqr+G2of5E40+dA7T+2WMVTju8PkTOHaJn1nGhU+jKcmN+C0zwhh2fme4pmR/BU/Jyz84zmrYjivp07x0m6Yh3yW1j9jL5/otz+zGTgoU3/uQrpAsVciRyZbzDGHJ3QyI80P6MR5vIlvnfsfRdS/xbVC18dr4m9D++kgbHVnESCHvzMEp7gNsmnvNh6ZLmYE8eszbFAI+n7QpyMxGe6GMkzzhNIzFAz+Iit++V3k5nvvVISm4Dzy/9RiSliQpkdwhK+s/dxhB8i9ypo3hQV6RKZHNthWcW5XdhzE2fuJuaVXoYgGVVp5TtFHPUjTEH7iF00rSec0fjA2gjvwDOvaZSf7NLcIeaOo6q7Ge3rcyxeoF11Ipwu/Lo4rlC1No8jovQE+p7vTuelaWwUiGE5fBZndHnNv/nadfgU1IkslIYhvkvLTSvpna8h3bJaE/Yf1ncfQrS7rNJxVc+g0zmX5r+pHOv22JRZfnJLQT0uFLamEMsbgyaNQyrZUM+uTlnCBpmfmdF+Dp+wBPpaHl7yNRwM7Cp+NqlyPpHrFax4DO7Ve0m/qD5SeJGUv3+2VuAi9AOKUfGqjKz212aq4u8aiVmyC2fjx/T0AhyOzT+8qohHuY4ZQdKsg0aFvhR3SuddKNsx2jEaQ1uMcrHGGWKvy5h61tJCbISyUD5jP+fbwxDo70Hazp4UU84HONt13mUfmBjhFOYx/pzC8le0ivF2SP8v4P35VNWq31Ot77FH5/2hQqLYo9juSyAlt3dN+jsx3A/sVf5TZDms/InDdoaOJFMxsdayU0lWsqqyijAlbEcs6s/E0TGyNpHfCLoaQRv9qroWXU6rnLZva/rLip5xhSX1XI/Mnyq5vjIHtHqI/UqyO9US07Blts1rzOpUkXTLyueV90yj6xawGmZemfmS/h6Ds5Wl+VvoaFGrS78Ecm+vkRoVXUyHs1XBleSNR+jVTmBXbdqN/dGNxxGv9OX9mmhM1W07987v+6q97ksqrlb8bWVxH1Xcfcko5Ob+5fSh1YX3JVdXD/9amZ6DluJOUt0i2sK6YJueb67/tAeZ6ljevXJpbJRCKtv7sOShucfmDu59yMPVndtVTHtMNGr09d/tdWAn50be1s3Q+VNeT7HfwmZXEiWlbigt1gegegzUqiWUiLVzZByuR64VT24zZMWIvOGUnKRA536J3Q/pyY2V6GntJMlKdP8BsgB5i3iInske3gxn3ql1XE6DHLJlI/8R5rZw5hK1AEukQ2vH0LGgqGffb76mjOnzGn2dmhxYnuHem+Z36dmC5sjuXWBzz2ZhqoUD6EuzxnoeVHjI69P/IeSm1dAJ6tGuSfUDCiuJ+p6MsxGePa12ZM6+Mv+0uGzQdWmp5yzffQRRoU0d4Oxhlb3zahfJ2KIbwWqXW2fIogvoL4cmW+D1At2BNzYSKs4K74TSruDT58gLpWcvJzyjzxP7cWsKeP8pqL3x+FIrCUfdqtyzsyLg5asqZ3zgSe8B1vXsqiuLDpdrhCf7Wcim9Uxf34TvP2R9qmcsewg3l6h+ron6UJc+DRqfdfVbeyWe522AWYnQU8hcax2pXz+xEfsCspS4rLnu0kbZHmjlqkB/01D3pgUyVY6pQ6O18Mqu4ur3adDPYq937XltoeWztefqqTIyDqrCHFcr4mBk/ZL2nPy3eeLvpAZJ8yB+SCS1hWh/CmtbwXLrcY3rlwM7znQ0DXeRMvMp4pIii3sIS9u9+Zgi2MxIl9HPY1LyVw+iVZPLo+IOjdTMK09D2jsMea6vLWk1z5C6fWV9V9ybcbma6rIDNKvnF08gNZ7mgKzRq8Rqvz+yMn5N8W65TPxuNf02VXEv/QSVlOLGRf6xl8Gn8RLLbgf49KUgXm9lEdrHGSOT6liltK058wQZgaBac9IW4cZZdNvmS/8+Tj8LcMpeomtyq3mx0nQvy0kytNBYk35e5Hcot8xD0J3qqjXtzq+IpxvQwnJo2fHXRHELPbN9dGWkh8RzpDr2+YktL9XLy9ZQEfqX9R299Xbg+o83tmP1JkDt0uYE3GMbw/d8bOl2flt0sh95rEbN7/qxTmNgnC207D5bNGMBvhTtzNd+sANj24+ScZxM5xoSkY/xbGb10YhWzSwu42i6/m2Xriyt1eSwF42jIZUpSmX1vMoBhMqhkW4ZR6syolJWrCz9KQr9d0v6eRvcb3t3bmR7Q3wOc8pUZljv0mVeLijeyvXoWKuyoz/OPnluUSy/1OE8TTv/Xxv55cHIaD0hI9M75aUpv1PPUc8quaZzmvW/VZAMVjquw2SG2yHeObN2eaDKp36enBZn1P+CJnwZc9+1SXItrLU1Ayl9Wp10EHSBup5tCG09ul/Yty1+N/1nu3MjgYnY8v1uh74VdP7Xz10eBr0K5/FTb7J9n7lJl74HcXuLt/BPi9H9g6218upXxH0gTzrXcaW/iYK4Eg4zgNt+wcsr1e86fsP3QKwreY/B6GOKT2xE9LHHiN5MpXAvmh4AKels8Bm8/6TKcOfWn6d/g+tXHXX+OB61vd8P6VuFv9H3Y/PXIIdQKbp4r1KU95/iF8NsOJSUImovwI+v62N4zIXNRJuQq9wdEwL0LZdE5vW/aiusRbn4yDxKPvckkRWtk3TXqx40e+nZLlABjnNP9vFbxPUUtjCaRuAUfRQ/F+Z8Oq+itr4hWQUakF8juneA8bvKPVPPZJeYn6Py1By962nUrdaVoT5dhvkLJ+7cx/4vAAA=</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>1</AltCredentialsType><Timeout>60</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>1</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>1</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>493c3d2d-2afe-4c8d-943e-766df1983848</string></key><value><SBAArgumentDescriptor><ArgumentId>493c3d2d-2afe-4c8d-943e-766df1983848</ArgumentId><ArgumentType>1</ArgumentType><Name>Message Title</Name><DefaultValue>My title</DefaultValue><ArgumentNumber>1</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter a Title for your message.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>ebcb5ad7-3c87-4d04-a75f-fcd7dd1b16ee</string></key><value><SBAArgumentDescriptor><ArgumentId>ebcb5ad7-3c87-4d04-a75f-fcd7dd1b16ee</ArgumentId><ArgumentType>1</ArgumentType><Name>Optional button URI</Name><DefaultValue /><ArgumentNumber>5</ArgumentNumber><ValidationString /><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>8ec9323c-4d6d-41e7-b83e-61aa5a4bc099</string></key><value><SBAArgumentDescriptor><ArgumentId>8ec9323c-4d6d-41e7-b83e-61aa5a4bc099</ArgumentId><ArgumentType>1</ArgumentType><Name>Optional button name</Name><DefaultValue /><ArgumentNumber>4</ArgumentNumber><ValidationString /><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>0ec0328a-d0d0-41a2-9d27-d2432855ca56</string></key><value><SBAArgumentDescriptor><ArgumentId>0ec0328a-d0d0-41a2-9d27-d2432855ca56</ArgumentId><ArgumentType>1</ArgumentType><Name>Message content</Name><DefaultValue>My message</DefaultValue><ArgumentNumber>2</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter the message content.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>bb7fdb72-6a7d-40c3-b585-ae78420716e3</string></key><value><SBAArgumentDescriptor><ArgumentId>bb7fdb72-6a7d-40c3-b585-ae78420716e3</ArgumentId><ArgumentType>1</ArgumentType><Name>Proxy serrver if used, else set DoNotUse.</Name><DefaultValue>DoNotUse</DefaultValue><ArgumentNumber>3</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Proxy server FQDN or IP if used, set DoNotUse if there is no proxy server.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>8f15a418-9cd2-4d83-8fe7-8987b48f9169</string></key><value><SBAArgumentDescriptor><ArgumentId>8f15a418-9cd2-4d83-8fe7-8987b48f9169</ArgumentId><ArgumentType>1</ArgumentType><Name>Your Teams Webhook URI</Name><DefaultValue /><ArgumentNumber>0</ArgumentNumber><ValidationString>\S+</ValidationString><ValidationError>Please enter your Slack webhook URI.</ValidationError><MaskTypedCharacters>true</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog></ExecutionDescriptor><ImportValidationString>lr0PPhQdfNHJCyWjaf0RT2JJ3xg=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+This script requires a webhook to be configured in your Teams site. See the link on how to do this: https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/add-incoming-webhook</Description>
+    <Category />
+    <Version>1.2.19</Version>
+    <DateCreated>2021-12-25T14:06:45.84</DateCreated>
+    <DateModified>2022-01-04T09:20:08.587</DateModified>
+    <DatePublished>2022-01-04T09:23:18.077</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Ton.de.Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>/k17LJirAlZdjzlZZcphLGgvMxE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcICQsJCAgKCAcHCg0KCgsMDAwMBwkODw0MDgsMDAz/2wBDAQICAgMDAwYDAwYMCAcIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9+w2f/wBVeAf8FF/2kde/Zs+CFne+Gtlvq+u6kumRX0sSyLYDypZWdVYFGkIiwoYEcsxB24P4n/Bfwz4d+MfxQg0nxb4q1zQLnxBfQWlpeWukDV3uru5uFjzNvuISo3PuL5YnnjNVP2qvhz4V+CHxH1Twr4b8V6t4q1Hw/qeoaRrD3+grpcNvc2s/kDydtzMZkZll5IjICrwd3y/suWeHNChmdOniK3tLe84unLlaX96/La/46HkVMfKVNuKt8z9MP2B/25viD4m/aE0fwn4m1mfxNpPidpoVNxFH51jKkMkwkjdFBKnyyrI2QAdw27SG9D0v/gtT8NNU/ayX4XppfiMW0utf8I5D4i2RNZSX5m8hQED+Z9naXEYmx1IYqIv3o+aP2FP2m/g9+zZ4V0HX9H8F+P8AWtYfSoo7e81vU7OaWyRkG8RiKONAW6FypfaSAQGYHy8/tFfs2+E/2z3+I9x8NvijHeWXiD+130qHWbKTSIL5Z/NN3HEVWclZf3yxGcR7sLtCAKO/MOF8NjsZWxH1GpGHs/d5ORXqa625u1l52baMoYqUIKPOm763vsfGvgH4saf8O/ip4Z1y6dZovD+t2WpTQRyKJZEt7mOVkXJADEIQM45IzVb9oT4v2vxd+OvjnxfYRT21j4s8R6lrltDMVMkMV1dyzoj7SV3BZADgkZBwa/plu/hj4av7qWafw9oc00ztJJJJYRM0jE5LElckk8k1+bv/AAUP/wCCM1jr/wAYNa8f+DfBNrrdh4lmN7qOn2UaC4sblgPNdIiMyJIw3nZuYPI/y7AMdeSeIuCx2OSq0lSk42TlP3d07fDZPtf07BVy+cIaO6v2Pkv4Ktu+DvhY+ulQH6/IK8h8eWcuo/E/VLaCNpZ7jUXiijQZaR2faqgdySQPxr7n/Z9/4J2fEP4karp+kL4Y1Twd4ftdkE9/q1o9r9jhXj93FJiSV8A7QF2k43MoOa+0vhJ/wSU+Cfwa+LkPjbT/AA9f6jrlnd/b7H+1NRlvILG4yWEyRMdpdWO5WcMUYKy7WAI+gzXj7LMoXsW/aVOXaFmk+ik76fi/LY5qeAq1ddlfqf/Z</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton.de.Vreede</Author>
+      <Tags>message, notification, Teams, trigger</Tags>
+      <Credits>Credits to: Ton.de.Vreede
+Original code by: Samuel Legrand
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>53</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4352</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>493c3d2d-2afe-4c8d-943e-766df1983848</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>493c3d2d-2afe-4c8d-943e-766df1983848</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message Title</Name>
+                  <DefaultValue>My title</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter a Title for your message.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ebcb5ad7-3c87-4d04-a75f-fcd7dd1b16ee</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ebcb5ad7-3c87-4d04-a75f-fcd7dd1b16ee</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Optional button URI</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8ec9323c-4d6d-41e7-b83e-61aa5a4bc099</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8ec9323c-4d6d-41e7-b83e-61aa5a4bc099</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Optional button name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>0ec0328a-d0d0-41a2-9d27-d2432855ca56</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0ec0328a-d0d0-41a2-9d27-d2432855ca56</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message content</Name>
+                  <DefaultValue>My message</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter the message content.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bb7fdb72-6a7d-40c3-b585-ae78420716e3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bb7fdb72-6a7d-40c3-b585-ae78420716e3</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Proxy serrver if used, else set DoNotUse.</Name>
+                  <DefaultValue>DoNotUse</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Proxy server FQDN or IP if used, set DoNotUse if there is no proxy server.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8f15a418-9cd2-4d83-8fe7-8987b48f9169</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8f15a418-9cd2-4d83-8fe7-8987b48f9169</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Your Teams Webhook URI</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Please enter your Slack webhook URI.</ValidationError>
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>uYWqfKficase6CYm0w3rKPEEH4Y=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

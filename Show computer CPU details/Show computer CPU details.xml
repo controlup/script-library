@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>1a424d76-4d8a-48ca-a561-7bfdfbe21972</SBAId>
+    <RootSBAId>6d6e6aec-0661-44ed-90d0-f17f80d0f90d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636807339477574000</SQN>
+    <Name>Show computer CPU details</Name>
+    <Description>This script returns the details of the target machine CPU(s) as reported by the OS via WMI, including properties like max clock speed, revision, and status.
+Use the Verbose option for extra details.</Description>
+    <Category />
+    <Version>1.4.7</Version>
+    <DateCreated>2018-12-02T10:32:30.153</DateCreated>
+    <DateModified>2018-12-17T14:06:10.8</DateModified>
+    <DatePublished>2018-12-02T10:32:30.153</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>7qoOTf1VaYMKywhsUTT+IBwtqp8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ek</Author>
+      <Tags>cpu,hardware</Tags>
+      <Credits>Credits to: Ton de Vreede</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>treartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>234</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>02e75cf2-69e1-4e45-b18c-ca6f318880b8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>02e75cf2-69e1-4e45-b18c-ca6f318880b8</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Verbose report</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please enter True or False.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>00jGLb3wu781g9kgC1KdRUQlnu8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

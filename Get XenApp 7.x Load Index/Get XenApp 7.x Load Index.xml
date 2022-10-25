@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6ee51d00-67b0-4693-aae0-6659a3512410</SBAId>
+    <RootSBAId>3a5f6491-001d-40bc-a568-683f7dc2cd04</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636860074583504000</SQN>
+    <Name>Get XenApp 7.x Load Index</Name>
+    <Description>Get 'Load Index' summary of any Multi-Session XenDesktop/XenApp server at your site.
+You will be prompted to specify a XenDesktop Broker\DDC and user who have
+permissions to the site.</Description>
+    <Category />
+    <Version>2.4.17</Version>
+    <DateCreated>2015-08-03T14:55:14.79</DateCreated>
+    <DateModified>2019-02-17T13:36:28.693</DateModified>
+    <DatePublished>2015-08-03T14:55:14.79</DatePublished>
+    <LastEditorName>ek</LastEditorName>
+    <CreatorName>Niron Koren</CreatorName>
+    <Status>4</Status>
+    <CheckSum>4echibzPPRFB4OsVCuyYR7p5cPM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ek</Author>
+      <Tags />
+      <Credits>Credits to: Niron Koren
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ek@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>200</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>797968</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1XaW/TQBCdz0j8h5D2Q0AktAKEhACptFxSgdKUS6USOQwNTWxjJ5QA/e+8ebPOOo4NQW1RZW283mPmzZtjN/dkRS7LJWlJW97LC3kpO+g9Q9PRGp8nEsgY722JpCN99J5JiHcg39H/hNEE7w5airFEvvG3JgOsqmHnIb51boB+AE2mb0c2ZBftuTySPbRdylWpIdbp2mkOw56TEkLPiL0ImvPS85qnmJ3gfYzVIbGPMVKTz86SbFe5RSa5SZsm3DlCTzH18B7imVLjRGI8Q4wHlNHl+Ka8dhYqm2pZnssa7AzkK/YOgDSAlBqYiIBUkbeJSzXU5CYkrHHnijzgW9uA2BpyBc380qTH2mQmdpw3oTvjaZNcJvj9DokP0YvkiNpaYL+PVbqnJdfkKp6a/JxDqzunC6PZo/v7RJAWECyvNS/3BE2/e+S7BzaqNK+g9ahvDC4TWqq+njIiO5A+nBtX//QxmtJjHa4bMBbmo1QRJi6iNaZ69HuENddnq0KuM5k+/nq0NqbMY8o+dFmR0E+KJvyDLRHjL4u+dcqMnIYOpWpkGSqLGz8zcFo7HA+xb+witIdHV6eQOoHlrVIEb4lds7OJePUM1KFRvdrFzmCWRcNZ1njrve/rjD8vZSPHodoQufwOgSf4JzSrua99MHRwak2PEJ3G3XohDvXrZJZ16iGtARqRKi/I5dehY9246To+irXhEzGOZl6cjzqroaOZ9ze5Nmb1sYr2WF7JFrSa/1Yr0dwnTx3s+QwU+6ggBzMrynN5FRU4L8tkZLUln7nFdc3CiEdRR15/qERZn9OfVbQijpar1noOxOg1SuuTt2IbNXyDsWDZfb/Ettas4vt6r9lR5fvqOqTnUcK6rdbuUUMq/pTzcREyLkYF7rJzrE+U5Txpxdmhlq7LwWkuu7WyvGMd2qINR4zAeEFXq8B3MeZ9lBuHL6Hpi6t8xuILfB3D2/MzTVhtnvF+j1mz/Koqqb/Enx3PMTpi3iQupvx3pkExROTV+Ig5OyYf+bNu0bs6/4an9oQrlomIjA/LysCttxjdZB1P3C2lTJ9ldjEeFyPXx/3fZTbdDcRw1LFjB1Wk/td8+D+sG5oi08tYdpX3zgn0pu62ECLrG3ILM4s5mX3pDUlPwdMwaPZGrIgXhcc8prNk8865s7nF6nd0YZjM8Jwli7fPncW2u6nZDeaicKl3wNRJmkeYurveWTG8XsGx/eZvhU8hM6XV9Yr/cCp/RH41mz5iprnEU3e2R+7MG7pT4k/n2GN3d+vwvrTNyMtOPuO055iw07RRIqnsFLoBPtbcY6yoJ8b8ZzOQH+4fqd117dZYfSu0u8lPSLoLb6+BUbPUds2j/A1+a6A4EhAAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>1735387f-b3dc-464c-aedd-1f4e770b99ca</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1735387f-b3dc-464c-aedd-1f4e770b99ca</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>tex7Edl17dwSpdyte/1+pmnQhlo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

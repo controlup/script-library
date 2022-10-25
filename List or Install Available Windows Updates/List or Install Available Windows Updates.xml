@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>3efc9509-f06b-4908-beac-81a54bdf1f44</SBAId>
+    <RootSBAId>f1f115ed-990c-4e48-bc58-e7f6c72102bc</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637522135923688449</SQN>
+    <Name>List or Install Available Windows Updates</Name>
+    <Description>Lists any Windows Updates available to be installed - or optionally install available Windows Update</Description>
+    <Category />
+    <Version>1.9.9</Version>
+    <DateCreated>2020-06-23T00:50:20.407</DateCreated>
+    <DateModified>2021-03-24T19:46:16.927</DateModified>
+    <DatePublished>2021-03-24T19:47:10.76</DatePublished>
+    <LastEditorName>trentent.tye</LastEditorName>
+    <CreatorName>trententtye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>OyGaXdLWCsNYmzLxqF283kzX3TM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAAp9JREFUOE910c1P02AcB3CIB736B3j17k1P/A1GLxIvaohIgqIoGEFAYzggKmIUQgwQIRBGUGfoNraxdXNjroy98bZR1nYr67Z2W9lkq/jC1w6MIaF8k+fS/r6f5+nTKgD7qxIvJ0dfejKFwaUsNbkijY8ExY4BKnVlJiScI0Lxk/tD//K/dxiwbeTKAaEMkv0OA13A+LKM11QWjx1pjIRyBRcnNyrKwawm4GG3BbWPeBGIbf/BqvQDS+oDii+oKwcvL8IfDbVDSZ3SBFyx/FpKUQFxB5tT7xEJ+eDfyoFKiDBF0tCtpWFwGQH7DYcmoPML7nX5NxgngdLMJawH+jBBvcDQNxMIegfDgSye2JMS7NfimsA4lSBWBBFNcwzGfGl46U+Y8j2Fkd6AmS1hNCCh20TtgrxuOQJAXjlNugiWSuRxVb+JzvkI9qLNkJ210NNF2BJl6II8SN1dEWnHmaOAo/6d2zr8y86XYIsrsNIZRBeeI0xNISjuwsLtwOhxot2wvlA57VHAcjk/7Y3MVL7VwCiYZUoIMDRK2TVgbxd0rowBbwYtJs6sDZC1Mb+tj3EuzmF18QMKq0PYEx34KVHgpAzGlvPodQu4Z+R02kBk8MI2WReRv95ElmpD1D8K85IbA+pl9iyI6CJTeObYQrMxNqwJVHJ7OnzxlSeDfp+MXk8W3a4UOtXio/kUWi2CerEc7hs3+o8HdOGaDiuvFtP7O1aKD8wpNBm2cMcQR5tZ/b2LfFBRlLOagD7InZz08dYeMoFWM49mUxKNRAK3ZhnU6xm0EDHofQyKxWKDJlCJqldtxpPnLWG2f8TDCl3qrg2fGdR9jOEhsYkvPvqNOlN9LHA45XL5RITla4xB9u2gk01OeFmdJEnVlXcHPVT9BbDz0QXoEcCUAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>trentent.tye</Author>
+      <Tags>Windows Update</Tags>
+      <Credits>Credits to: trententtye00
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes>Lists available Windows Updates or Installs any available Windows Update</Notes>
+      <DownloadCount>207</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>724b0715-361a-4385-b2ee-a7c4e8c96c14</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>724b0715-361a-4385-b2ee-a7c4e8c96c14</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>'-list' or '-update'</Name>
+                  <DefaultValue>-list</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-list|-update</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>KAJbnqE6GC8ZEYNJsHEsYBmRF7w=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

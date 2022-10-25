@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>17b65a95-64b4-4d4e-8df4-bc41dbd32cc7</SBAId>
+    <RootSBAId>68d5b520-2bd2-4489-9321-4cd140f1eeea</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636981693784932021</SQN>
+    <Name>Add User to a Group</Name>
+    <Description>Add User(s) to a group. 
+Make sure to configure the script's security context to run on a computer that has the ActiveDirectory Powershell module installed. 
+See https://www.microsoft.com/en-us/download/details.aspx?id=45520 under Install Instructions.</Description>
+    <Category />
+    <Version>3.1.5</Version>
+    <DateCreated>2019-02-21T10:44:48.433</DateCreated>
+    <DateModified>2019-07-08T07:53:50.463</DateModified>
+    <DatePublished>2019-02-21T10:44:48.433</DatePublished>
+    <LastEditorName>dennis.geerlings</LastEditorName>
+    <CreatorName />
+    <Status>4</Status>
+    <CheckSum>Y9hxvg430kEBpIPpsYU3HssrUs8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>dennis.geerlings</Author>
+      <Tags>$User</Tags>
+      <Credits>Credits to: Anonymous
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>dennis.geerlings@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>57</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>1052928</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN1WwW7TQBDdMxL/YKU5JBIJ7R2QoK1KDglRCUIIOLiu3VhyHGPHQIT677x5O2uvQxJR9YCErPWux7Mzb3bejP3CnJjAPDVPzNi8N5/MzLwzc6wmGCIN9HptbnFVWG3M0sSYK9wzjAiSGO8CU1NWmgHmITXXuIcm537RS8137r3AqtS9a6y2kN1hXsNGgbXIfEmlCOewc40xNZdmgXENrQ/qdQZPK6xa1AtFmusbsZt4ETi8DukNpSEjtRFZudP3EY6oWVNjhZXEFmHOcG15OqJX4ClVWzeUnwPv4ViuGg8Pj8ZHJ5Gk0LzDegXpLZ6SBsmIUslL7SHe4F6ohuwVzyfmFWcZfWAs6aNssrmG3pyZTHiSMZ4jonmJ0QOH5HwKrJyVCTEPOK6guQGaKRHWZJOgmzUR+qzZx5nRAUwBPKe0l0Mm8Z1TvmFkNeRD7o7NN8x9yuQcAsgF5a8O9xfqrSt11wRYCyL4M5bj+H1r9+SG8ChCPg/5kloVlhXQq2nN1pegS7CSmH255FJyX5GJIfVS7LUZbrkTN6do67o9yWeNVk69XOvC9YAIe1LiCcwP2l7Sd0AUFmV+JJY1a81x+Yw2Xc2FtCoVY1HFTf8JNQbrNaQ8x76NVl5EFla4EuZivBfBR2KX7uXzSHg7U1shKslm0naCDPewcwJ+vntHGbnLwIcg8mvvM07p66M9XZqfen5nOzyUp/umXiVLb8iIUPuljT3lmaedL8KKDMzJxZqdoMXU7VVd3jhGiq2CPdXy030/ZJ/Uy3OicBWSQOb6xC5nXE20vK6Un7bKbad38S21VjKv+1m/7iTFRgYeFjj1hMhj3bFVBm6VYzL29wv7BR1hvvD6/BSWVsRTMqcT1oPN3oZW+rBeopNXXub9XdWOzil0xlrxYmMAXn7BGOp+m99j3eZ/6DL/rrv8XQ2fPqKGd2u3rVbf91tYqKjVa/4d1vzCl/q/Yj1F/IMpyH73J7cvyowct1/y3+iss2M2CgAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>8240ea01-6a19-4a61-8a88-95524d619713</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8240ea01-6a19-4a61-8a88-95524d619713</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Enter AD Group Name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b028ded8-21f5-4f71-b704-64c6e5f84d92</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b028ded8-21f5-4f71-b704-64c6e5f84d92</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <DefaultValue>N/A</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>jdfxrFrlujwqogHZvpv+le6//84=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

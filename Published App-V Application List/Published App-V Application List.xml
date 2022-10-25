@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>67103dc7-56ce-4018-a50d-061c7c64defa</SBAId>
+    <RootSBAId>57045d1c-9eae-4b2b-bea8-91134c74576e</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635747938744319692</SQN>
+    <Name>Published App-V Application List</Name>
+    <Description>Checks which App-V packages are published to client device</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2015-04-10T13:32:50.953</DateCreated>
+    <DateModified>2015-04-10T13:32:50.953</DateModified>
+    <DatePublished>2015-04-10T13:32:50.953</DatePublished>
+    <LastEditorName>at-nick</LastEditorName>
+    <CreatorName>at-nick</CreatorName>
+    <Status>4</Status>
+    <CheckSum>ONe5AbU4Lbq+9jzQBk/uf3C+haw=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>at-nick</Author>
+      <Tags>App-V</Tags>
+      <Credits>Credits to: Nicholas Cecere
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>nicholas.cecere@ufl.edu</ContactEmail>
+      <Notes>Provides Application name and version from AppV package</Notes>
+      <DownloadCount>128</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ip79GutfY/lrTH+N9tcofo2Kfkt/jc9/jZz+2v41jn+NFf33k7/Gc/qmoU9+418j+TV+Mf+b6n+/26/x8tfI6N239O8FvdXQZ5/1IFz+Gie/RkkwcoLe6mf4e0pvmV5vgvoz9P+GWtb0RkqQX9JvFcHJ+ZNr+uwFtV7Q3/j2Kb815R5n1MOS4AiM1/RZSf+fMhzzzohGCUiNh80v4X/x/9/t1zil72ru/dijFHDIf41zfjNnGqJ3jP8j6qdl/D6yUM6oZfprbPH/DX2+oDYzon/Jb257Y4hRDi3imGBcBUNBu5LoccKftzz2NX1+h9/Of41fxPRdcp8l/X4nMqvmvx+n/6+ZJkK/lnq9/jXu6rxNf405fYbf0X+j40WrOY8A9K/p3RVjPqVvFzzvGHnOOKb0LWiypL9zogP+n/4aV/Rpy7A/otG+47/8T3NLgY94TOmv8bHXbpf+AoXxvXCM0LNSvPDpkmmz/Wv8gP+uGKZ5H3gCkzuDFMF4Z/zzktoW+ntKI6qUTqAFRi5/VTxGhzW4ecIcmDF1gZ2h2Tm9VfP7AgV0znkEMv9X9AneX/J40GZNcMB3Df13zrM6jmL+hucuHZjp7n9nPFcibV0ujXFmDOYvof+feJxyu56/y5TDqLd/jW9Tv0KLjwh/mT1gUDANQPMV03TCmC1+DZmDzJN4Q9eX9PkVv9/wJ8L7C29c418Do24tdEPhFeMAGZjo+MHnwie+fI1V0m8an8+pcaqFumeTLv5/ALlrYKa6BQAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>YNmBoAHyA4Dbn8cLDKjEptfzpOc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

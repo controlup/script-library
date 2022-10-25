@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0af2e354-3baa-4a03-8b28-11d7c336ca2f</SBAId>
+    <RootSBAId>01aa6697-89a7-4a4e-a146-f8253089c464</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637327249364914310</SQN>
+    <Name>Find user account lock out events</Name>
+    <Description>Retrieve event id 7470 instances from the security event logs to gives details of the user account, the time and location of the lock out. Can filter a specified number of days back and/or a specific user name</Description>
+    <Category />
+    <Version>1.5.10</Version>
+    <DateCreated>2020-07-24T19:16:31.873</DateCreated>
+    <DateModified>2020-08-04T15:35:18.323</DateModified>
+    <DatePublished>2020-08-11T06:41:08.33</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>V086Eglgu/7XQHHfI4pNpVMajhc=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>domain, lockout, password</Tags>
+      <Credits>Credits to: guy.leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>103</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>797968</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAK1Ya08bRxS9nyvlP7hgCVtlXSAPQtpUUIckSC2gOBRVCFUGD9iJsV17DU2I/3vPPTOzO7teYxPQaL3zvI9zH3PXT+QH+VWW5QneJdf+kD7aZ/Qu8B7i3ZRztL6MpScxxl30z7lD53TGyDUeXR1xtsdTXbQSZgzeBidi/LYw08KOK6x3uO+c+2Nw6vOEQW9EiUKptuUSvL5gTXcotTZmN+SZ/CxrsonfDbz10VPL8ltC4UTq4NbiuVh+J9cWfy+lIlU5TXbqcwi5hniuOKpkZDih5GM5I61TKWPchEwj2QGtPna8xrOOZzV3bkT9LE89NyYqQ4yVk+HuaiJDWf7i6hlo6r5D9A2sYfjuQXfjeJUhYQcrFfYPpQH9rJ1agSaGyCuqJ9i3Qlul1Fcwd4qniueWdBbhPqHVu9xhz62Ae4fIqDW7wKXuLKt6jx2nidOzLG8wc4b5y0fXr5VQntZtHteH67ULekNGzg59vsPdj62jSbg0Ay7T+t5HmmLdY5wYZHS0UdUhBurNNgsM+HuM+RbebafdM0TkmjuRjwLVaoTWxDhFQzHVPOA5LWN2B2Orvz1dIgfD7NKRr+z1oU86rziWgOQYs1ZPpeVxTrE+dvmgLzdOgoq8I9qRvGcExNC6Jkeyh98PkPWGfYtxhHGPOa0CelZ3Ax/rULcepevz7bXL86xlZGw4baqkrxLfZjLJ3TxqU+jPsk2W5mIyeYp3SaB0J4GPaH6Miabdq1ZXRNWrY1Cwq3nc/bzivgMaLc5onq0Q8+m8Ww28Rf1lD9Jc8xYz7oa54o1jbXXDeNa7acg4Uy/qU76Su5MGLu7sfdTlbWbPehktXrvJvRdSVSw0T5SoqZWh6XxVvbfLmStGbptzxuHVZLSqbopU9lZ9zVuwcqcMkbylFDZW3oPSCBxUijPHdZtxrXf8pey7zGJpa6zrvTpmlMWQQWP+F6LZSqJ5kxFt5xuJJT86+3ofKbLxhPIV56PS3Bwb2jjNllmE0mjMrtRIzVcvRXF17HQ2oJG9/ZTqn7k8tQSUfYa2+Xs2v6pkq6OlqcomX3/5dkicBpRGcTDUMfWQV1OUfPvIXZf0kiNXaaS2/gSqbRfrOp5H4U1QraVU3sGHGqh1XgCdOnprrHvm0Wowd6i1I+yP5DmeDfbW4VkbpLeO9hIrW5h9ivYCHvcS9J/idwujiFXeFtomuT5n/WfpaD1YLEWDddsnV4d6VIrkUe73oRFi8gGoaP6qU97yQnRm4Xskf5PeLlodsbwILRvXGjk2ZtfkP8hhgE/2tK+P0wo1m3kugixikujfLoy6b4yfttsbyUEgj60i8jf/K7Q9zO27m/4Aa7vQe8CsY3nkK2R/39ovkrL8gygbFETICXQ+xdo1s/fYRbCRf2dQnTgNGpJ+peR1iHKx+IVebTNenVo33bfNKvNrD2itJP5RSritIGsarN06+YsifFr+CVpIt05/sTf699BfL6DvMehz5/fr77Or96s0U097VJit86tFGdvTvC2MgyIOqtNb6nRFCSPmIn8TRriBxqxufYUT0p1kRr4qXkSOoqo2e2P0WLPM+4q2lUiXd3hMyvmqx4+XCiXx2P/4qBFYLeRVjMVsTH5yqKT/MYyTaJnmXKzfpMBe9je0Vr5+LrbO/kIWuQhseF/rpFXxQ+2S12DWt0Iae/q/Soun4ky1qLrfVUseBOd0nK8a8/Xiw+o7rbOauK92M5ivT/nconHnfWyV9gw1MYGWHVf/5zUJ93Spt+61XjBkBraVX/6bpZTpz8K+NjN/RpmMpfap5vw/6/dh5XoQfOspJf0KsqNsPs9jlfrn/1+f+8kQFAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b2be4b8a-1c1f-4547-9b2c-02fd85694f1f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b2be4b8a-1c1f-4547-9b2c-02fd85694f1f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Days ago to search from</Name>
+                  <DefaultValue>1</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d*(\.\d+)?$</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>39746ddf-43d8-46e4-a36a-a96dd6ba5c21</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>39746ddf-43d8-46e4-a36a-a96dd6ba5c21</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>username to search</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>5SYJuiSRg1M4JVDru3AXu8rEnIU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

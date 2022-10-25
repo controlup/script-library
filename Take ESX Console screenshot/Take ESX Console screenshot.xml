@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>2c3a0555-588e-4509-ae8e-8150bbd96951</SBAId>
+    <RootSBAId>72a06b7f-b7ae-4c86-9ca1-dcac8e93d81b</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637327248218187714</SQN>
+    <Name>Take ESX Console screenshot</Name>
+    <Description>This script uses CreateScreenshot_Task of an ESXi virtual machine through vCenter. The screenshot is the moved from the datastore folder of the VM to a location of choice.
+    Screenshots are placed in the virtual machine configuration folder by default. The script moves the screenshot to the desired target folder. For these steps to succeed the account running the script needs the following priviliges:
+    1. Virtual Machine - Interaction - Create screenshot
+    2. Datastore - Browse Datastore
+    3. Datastore - Low level file operations</Description>
+    <Category />
+    <Version>1.4.7</Version>
+    <DateCreated>2020-02-26T14:15:55.593</DateCreated>
+    <DateModified>2020-08-05T13:28:45.387</DateModified>
+    <DatePublished>2020-08-11T06:38:40.49</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>vTN9EQvq8FBWybCZcukzK7zEPTI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>esx, vmware, screenshot, vsphere</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>23</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>a9a7d327-37d2-413a-804b-ab9792f27e24</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a9a7d327-37d2-413a-804b-ab9792f27e24</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Vcenter name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Name of the ESX Vcenter (FQDN preferred)</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>62d22cb8-9c62-410b-8c17-24b06ffdaf20</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>62d22cb8-9c62-410b-8c17-24b06ffdaf20</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>165fad37-0ca4-4141-b706-28a43d151814</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>165fad37-0ca4-4141-b706-28a43d151814</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Screenshot path</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Please enter a path to save the screenshot (without trailing backslash). Environment variables such as %TEMP% may be used.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8cf436b8-1621-47b5-a028-5d51c714d598</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8cf436b8-1621-47b5-a028-5d51c714d598</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>318bbe1e-d038-4458-b062-db68f89c75c4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>318bbe1e-d038-4458-b062-db68f89c75c4</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Ignore certificate errors</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please set to True or False. If True certificate errors when connecting to Horizon will be ignored.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>+6L4rbqgMjIUEjjERa0IYXG2A6I=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

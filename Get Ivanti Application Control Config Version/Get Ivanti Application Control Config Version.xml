@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>41c3031b-6dd1-4985-8f3c-1a3a0e02ede0</SBAId>
+    <RootSBAId>da282675-32ea-49f0-8a1e-0de952bc9f63</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636619129483696000</SQN>
+    <Name>Get Ivanti Application Control Config Version</Name>
+    <Description>Displays the currently installed Ivanti Application Control configuration.
+Requires AC 10.1 FR1 or higher.</Description>
+    <Category />
+    <Version>1.2.5</Version>
+    <DateCreated>2018-03-26T16:57:12.28</DateCreated>
+    <DateModified>2018-05-13T15:54:01.327</DateModified>
+    <DatePublished>2018-03-26T16:57:12.28</DatePublished>
+    <LastEditorName />
+    <CreatorName>Landon Winburn</CreatorName>
+    <Status>4</Status>
+    <CheckSum>0o0D8zClHGekarBmhdQMHpAGn64=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwgAADsIBFShKgAAAAlpJREFUWEfFV0tKA0EQzWEEEbNQQSGLIIKiIAqCohdwERdZCgEV8RbiQRSix1BwEVDI0nxNEJM4bb9ySqt7epxOMsaCZ1VXT1W9ftNJMNMuFFVz7+BfgNkZBPX8imosr07cYzYR4GRSQdreIDBJOAkksU3bAxEFfIvT8rEKEHL59MA9xYzfCeii5saWaqysjQfdD765vqnqizmDRISAMVwXBN2uIguCZCQYehEJMRxxa3dfZfDH2NAEwHpYC9qvqnt6roJqVXXPL9Tg6Zk8HwQ9+XXwrFgFEPucTBoT4MHwnZOzCAE5K14BEAiNGgz6X4TgGXIdR1bkh1MgfAVBv0eXUea/GyWtdQ1qiaA26o9nxCwvBWi4vsG1hSXVK98Ratl5Qq9cNte3twTEfOvZJDGelagAjPI6h6aDx0f1Uamo2nSWCOHCAYhrs3M/+yBgHYT7yFleCnCOBtw/EF6mZuin9P36hoAYOd7Hs5E+Yymg5QRRnBBobe+o9uHRcATQJ8zxLH8FNIFO6US9XV4ROsclGgK5SfJwIL8SOoiuMfqMqwC8HIB7wCfG6Q2COsa9QA0b9RlZAZ2jOxC+AsT2pcRBWBHqmZYClNPN7I+ZsQ4JyY8palDLRv2HVSCNLyL0gMk8z/JSgBuMYrKWCchZbgXAXP4cp2DoxT/HcpZbAUC/PxSQpOGeATsv1449Gm7Jj9ipAG8SUBQHe9/jee7Nc5wKuOK/APpHFPAhYD87qge8FJA5ey8Jrh4ydt6BuCKG65kkb8eMke+APcDX2zlSgP89x2JSwDygXSiqT29X9ES1YpKeAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Landon Winburn</Author>
+      <Tags />
+      <Credits>Credits to: Landon Winburn
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>landon.winburn@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>40</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>cwB0AHIAQwBvAG0AcAB1AHQAZQByACAAPQAgACIALgAiAA0ACgBTAGUAdAAgAG8AYgBqAFcATQBJAFMAZQByAHYAaQBjAGUAIAA9ACAARwBlAHQATwBiAGoAZQBjAHQAKAAiAHcAaQBuAG0AZwBtAHQAcwA6AHsAaQBtAHAAZQByAHMAbwBuAGEAdABpAG8AbgBMAGUAdgBlAGwAPQBpAG0AcABlAHIAcwBvAG4AYQB0AGUAfQAhAFwAXAAiACAAJgAgAHMAdAByAEMAbwBtAHAAdQB0AGUAcgAgACYAIAAiAFwAcgBvAG8AdABcAGMAaQBtAHYAMgAiACkADQAKAFMAZQB0ACAAYwBvAGwAUwBvAGYAdAB3AGEAcgBlACAAPQAgAG8AYgBqAFcATQBJAFMAZQByAHYAaQBjAGUALgBFAHgAZQBjAFEAdQBlAHIAeQAgACgAIgBTAGUAbABlAGMAdAAgACoAIABmAHIAbwBtACAAVwBpAG4AMwAyAF8AUAByAG8AZAB1AGMAdAAgAFcASABFAFIARQAgAE4AYQBtAGUAIABMAEkASwBFACAAJwBJAHYAYQBuAHQAaQAgAEEAcABwAGwAaQBjAGEAdABpAG8AbgAgAEMAbwBuAHQAcgBvAGwAIABDAG8AbgBmAGkAZwB1AHIAYQB0AGkAbwBuACUAJwAiACkADQAKAEYAbwByACAARQBhAGMAaAAgAG8AYgBqAFMAbwBmAHQAdwBhAHIAZQAgAGkAbgAgAGMAbwBsAFMAbwBmAHQAdwBhAHIAZQANAAoAIAAgAEMAbwBuAGYAaQBnACAAPQAgAFIAZQBwAGwAYQBjAGUAKABvAGIAagBTAG8AZgB0AHcAYQByAGUALgBDAGEAcAB0AGkAbwBuACwAIAAiAEkAdgBhAG4AdABpACAAQQBwAHAAbABpAGMAYQB0AGkAbwBuACAAQwBvAG4AdAByAG8AbAAgAEMAbwBuAGYAaQBnAHUAcgBhAHQAaQBvAG4AIAAiACwAIAAiACIAKQANAAoAIAAgAFcAcwBjAHIAaQBwAHQALgBFAGMAaABvACAAQwBvAG4AZgBpAGcADQAKAE4AZQB4AHQA</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>2</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>lZkIFCyrFJUKR4SiyOfh8CCGHMo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

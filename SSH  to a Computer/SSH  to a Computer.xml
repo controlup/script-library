@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>82d702b9-18d7-41dc-90c5-5e8675378261</SBAId>
+    <RootSBAId>735de726-5765-4c7f-a7d3-d8ecf149b27d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636990505592717135</SQN>
+    <Name>SSH  to a Computer</Name>
+    <Description>Location of putty.exe,  Computer IP and Username must be provided.  Password is optional and a better  recommendation is use a authorized key saved in putty's default settings (https://www.ssh.com/ssh/putty/putty-manuals/0.68/Chapter8.html)
+You can download from https://www.putty.org
+</Description>
+    <Category />
+    <Version>2.8.37</Version>
+    <DateCreated>2019-04-22T16:22:20.397</DateCreated>
+    <DateModified>2019-07-18T12:28:09.29</DateModified>
+    <DatePublished>2019-04-22T16:22:20.397</DatePublished>
+    <LastEditorName>mc</LastEditorName>
+    <CreatorName>mc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>QAwQOV6KG45YfUvTvevGOrmne2g=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAIAAAAmKNuZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAvRJREFUSEutlV1IWnEUwE8rmQ4XPjWVwRgMhEFMYoPqZbYHbU9CSB9gOPFlLDGth5BLpBJhpDVaNHopCiKKGsuHWQS6h1Ez0N4WGJFFEbfFnG4mOvHuXK99mF4cuR/n4X/xnh/3HM+5F6h/4PT0tL29/TELNTU1oVCIubO47uzsrKenx+/3H+URCASmpqaMRmNXVxdzc3FdOBxubm7W6z9JJO+uxeDgR7vdfhNdU9M8wE+AVCZOAI7wQBDfStFFASgAv1L5kMPh4pkgtkvUvVSrH2k0UF6+XLruAUlCXx9UVKwCpG+uk8vlOt2LkxNwu29Lpe+lUooJhyOrwzHa2tpKpVLFdWaz0eGAYBCsVmhtbV29wtzcXH9/f0NDg9lsbmlpQW8RnUqlCgTKsAiTCTgcuFcIlG5ubg4MDHC53BxdOp3G0hg2Nr4IhVzGhZFMQjwOsRgcH0N9PY8kyV/nRKPRmZkZi8VyXTc9PY1PzqBSPZufBybW12kjxsTEHfxpbGzMarX2ZZidnV1ZWUGXRqPBf+xSp9frXS7X93P29vaWMggEHJ+Pdul0oNW+Qhf2q62tDZuFEAQxOjqKl06nM4klZGUUJZFIDg/DYrEzN56EQmXLyyAW46zBXRYMBkMikUBJju7g4AeAKzNTGPGqKu32Nvj9t2Sy51gXpuEoYH8LwkgK6nCTKKHwtcVCD61AYFlYWMDuoO4ijQ02nXxpCYRCA4CPz0+UrrvP4z0FSOKZz/9zQx1JRhSKrwoFdTWUykud2+3e2dnJJhQiq5ucnKysrMS9+5DH4uLiyMhIY2Njd3f3+Pg4Dsfu7i6TlQ+tw3e0yWQSiUS4MQIW8P2OqzI8PCyTyXw+H5OcD62rq6vDqYnFYr/ZwS+G1+vFkovramtrg8Hg51zW1tZw+t9k6O3txa7hkuMzqtXq/f19JjkfWlddXY3NfpsLLk1nZ6c2Q0dHx9DQkM1mwzouvoEFoXUej4fH4+H7oCiRSIRJY4PW/Tco6i+RhXnPRN2cpQAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>mc</Author>
+      <Tags>$OperatingSystem,$Name,$OperatingSystem=*Linux*,$IPAddresses=.*</Tags>
+      <Credits>Credits to: Marcel Calef
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>71</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>QABFAEMASABPACAATwBGAEYADQAKAGMAZAAgACUAMQANAAoADQAKAHMAZQB0ACAAYQByAGcAQwA9ADAADQAKAGYAbwByACAAJQAlAHgAIABpAG4AIAAoACUAKgApACAAZABvACAAUwBlAHQAIAAvAEEAIABhAHIAZwBDACsAPQAxAA0ACgANAAoADQAKAEkARgAgAFsAJQBhAHIAZwBDACUAXQAgAEUAUQBVACAAWwAzAF0AIAAgACgADQAKACAAIAAgACAAIAAgACAARQBDAEgATwAgAFAAYQBzAHMAdwBvAHIAZAAgAG4AbwB0ACAAcAByAG8AdgBpAGQAZQBkACAALQAgAHIAZQBjAG8AbQBtAGUAbgBkAGUAZAAgAHQAbwAgAHUAcwBlACAAYQBuACAAYQB1AHQAaABvAHIAaQB6AGUAZAAgAGsAZQB5ACAAaQBuACAAdABoAGUAIABkAGUAZgBhAHUAbAB0ACAAcwBlAHQAdABpAG4AZwBzACAAZgBvAHIAIABQAHUAdAB0AHkADQAKACAAIAAgACAAIAAgACAAcwB0AGEAcgB0ACAAcAB1AHQAdAB5AC4AZQB4AGUAIAAlADIAQAAlADMADQAKACAAIAAgACAAIAAgACAAZQB4AGkAdAANAAoAIAAgACAAIAAgACAAIAApAA0ACgANAAoAIAAgACAAIAAgACAAIABFAEMASABPACAANAB0AGgAIABwAGEAcgBhAG0AZQB0AGUAcgAgAGQAZQB0AGUAYwB0AGUAZAAsACAAdQBzAGkAbgBnACAAcABhAHMAcwB3AG8AcgBkACAAYQBzACAAJQAzACAAYQBuAGQAIABJAFAAIABhAHMAIAAlADQADQAKACAAIAAgACAAIAAgACAAcwB0AGEAcgB0ACAAcAB1AHQAdAB5AC4AZQB4AGUAIAAlADIAQAAlADQAIAAgAC0AcAB3ACAAJQAzAA0ACgBlAHgAaQB0AA0ACgANAAoADQAKAA0ACgANAAoA</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>10</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>50f06cd1-54f5-4ec6-8cc5-85a2b2c081fb</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>50f06cd1-54f5-4ec6-8cc5-85a2b2c081fb</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>password</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d87c548d-71dc-448b-8104-6d36be160296</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d87c548d-71dc-448b-8104-6d36be160296</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sIPAddresses</Name>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>38c6931a-5b56-4c63-849f-2f39e4008498</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>38c6931a-5b56-4c63-849f-2f39e4008498</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Username</Name>
+                  <DefaultValue>localuser</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>You must provide a username</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3b0063f6-66a6-44b8-964a-20094a3b55dc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3b0063f6-66a6-44b8-964a-20094a3b55dc</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>PuTTY directory</Name>
+                  <DefaultValue>"%PROGRAMFILES%\PuTTY\"</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)((".+\")|putty\.exe|ssh)</ValidationString>
+                  <ValidationError>ssh, putty.exe or the complete path to putte.exe (inside quotation marks)</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>SPSSPaj2hQ9gf6tH6U9zJs/BDe4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6e85cf3a-69c4-4eeb-a3d6-1ced79a079cc</SBAId>
+    <RootSBAId>6d2ae434-0b02-4af4-882c-d11dfdd9f4d7</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637247108915500183</SQN>
+    <Name>Repair machine-domain trust relationship</Name>
+    <Description>There are many situations for which a machine (server OS or workstation) will lose domain trust. 
+If the ControlUp agent is installed on the machine, this script will execute locally and repair the domain trust. Domain credentials with permission to reset the computer account must be provided.
+</Description>
+    <Category />
+    <Version>1.2.7</Version>
+    <DateCreated>2020-05-06T00:05:14.343</DateCreated>
+    <DateModified>2020-05-07T02:42:52.153</DateModified>
+    <DatePublished>2020-05-07T02:48:41.173</DatePublished>
+    <LastEditorName>marcel.calef</LastEditorName>
+    <CreatorName>marcel.calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>m/zTwXCY7VcqETWacBD/Bu3d+LI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvwAADr8BOAVTJAAABXJJREFUWEe9VwtMU1cYZnNzr7hHtgy3uQGlUMBhgTrAKlIQBtM5kFiiA18goGz4wtcmpsTAFhOd0Swmxk1m1C2Kss1N6W1LK4KoQAQENh7tfQC3qDyiZMuyTfh2bncnLa2KDvySL7n3nPP/5zvn/P9/7nW7G27+vPWlZak1hYmL6ix5ecd8xGY3wO0xkynyie762Of69YoXeiqVk0DehXZxyP8DTpyYUHzoUsTuXVxjXHIn5NE8lqZV6s8c3jCZ1gVF0pRvIa31LmEonwaGknSylKyVoaQ/sjrZFx364Hi+VvGs6OrBwZFVF+1v2L05v38gPacTSSta4B5gQni8FXt2FLZZSr1/Yykv3I1E0CBDeRs4ve8sQPO46HZ0WJ56Qamae6MmY/11ZOXy8Ao6i7S1LJTzLmOKvBqxie0wHpnvcuKRJEIGWH1gHqCeILq/P7atLVGHRPfdfs3PiAVLW/D+h43wD9Mje7MV0lADYSuWLK9AfUmY3WSeds+OJCJuM3q/TzQat9HtBE6oJ6SlXPzMfxaHybJSZG60Yvqc85j13iWsIDsxOUCLaSortuR+83vLmWk5rDFi3rXLi2fwxog4jvLJZLQe1U5CtJK/aN2UOHGK+6PnK+Wk2ISOKi9FI/zCjFi1yQpJcCmS08iOpDbB3d+IsDjr0Pp1xQUajeMZM6bIF1lKUshqPf+2F0GCtYk//QCBuSVLK1fE9d9yl51DTFIdUldbbPGQtbELctV5vCmvQ0wi++f2Tw87raz2gOJJmvI5xGi9hoZ3wQtcWXiyOGR0KN615nsh/V711WFxFo05C2ohjzAhe4sVHsE6+M6gkZRylTn6Za6HaHIHfIXiLZIJA/a7wOkk+0jX6OoEmtQT6dKpxwq27YNMyWBKoA4ZJCtCVOWITqjBko8ZEg+ULR6WrywvPbI353nR9A44w9vfOggoC+aE4iV23xsdx8OfobXSEu6sN3JWn4JHSAOmzixHJhEhVWihJvEwl2SIu58Joe92Y2WW7nOTSePgnNVJNPYCGF3AkHA8Yve98Z8AwbD6eASiPmgjK65EVOIVpKwyw1N+lojpxPTYi+Q46hCV0PHHjryvF4rmNpD03O4owO/hBAh5Xn5wPgk+/vYrUgqLMiyIU9chcKYRqzfxWJjehdD4HsyO/06v0Sx7WnQxlgIISRSvyT7Z7BNG442pFDLXdyExpRmb829iVS5HjqcMPtP239j6UeLLoosxFiDwtLRIEXerXvLOVajTGWzfOYDk9GaExVAIidJibsyenXtzpE+JLlwIkN1fAFem9Cbpc95WQu2MbQ5IXlcdjR6cnWCFasE1RCZUIVilQ+R8HYoPZA+R/kEHUpLhOjDsQ7iouhiTXCVOOQzhLmf10oKRRiN5al8CXpcVkRj4AeuyNbhUowVrvQK6bLrL8a5IKmO107cDmjQTO85FVLgysCdZBaqOBcFwMBw0eW4zxYDhfwVrPimcs0sbJxoC8dACXLG1KhOdvVYwDQXk3dup34ljLYDRStBSvwd8Hw/LxSUuxzhwrAUIZCgZWtsN4LtbQBuVLsfc4XgIEGg2RoLttoC1nCHx4OtyjI3jJUBga2UG+N4boOt2uOy3cTwFCPzlahG6+/phqbjL9+N4C6B1AWinK9HJN4IxBDuPGW8BAs3GKBIPZlIffiIB6u/Y/ygECGy7kIbOnh7QZgMs9pnxqAQIbLdcQF9vL5pbSMmmJP+2P1IBFUlo5K2wXu8hZZukqdDuSoDwScWVKY6OdDAWbDsXC/PlDcIlZHsnd0afkwABjME/kdF6Do50MJYULjNOH7RTnNIRws+kxSAPZXQ+2zjKK3/s6Z3P6f1j+NpMu58UN7d/AHKU1IQGQggVAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>marcel.calef</Author>
+      <Tags>Citrix,PVS,machine account,domain</Tags>
+      <Credits>Published by: marcel.calef
+Credits and Original code taken from: https://thinkpowershell.com/fix-trust-relationship-workstation-primary-domain-failed/</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel.calef@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>208</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVX70/bSBCdz5Xuf7BSpIIOh7YqX9rjJC5QgQokIrlrK1pVwTbgAyeW7ZSiqv9737xd22vXgZYKWbY33tnZN29+bf6Sx/KHPBJP+jKW93IkQxlhtI/bc65jiSSVqcSS4VeB50JyvD2MIrnCTIG5uczw9QKjFDOnmCnkGs8I3z3IeJLgGVBihq/6bSYhNV7wdwgdCffRFSWyHdkFngFQ7APdBM8hkJpZvSZcnVmN5p1Q9w1GObQVwOti9OQMI7XlmmgUUzfCVUir7s98ethZmSnX6vuSTNTa1zgTg5UrjK7wLe+wreawX1mq1z6Q1XwMqFFl59D0L3mdyjkZVfZj2hLTJsWge0ZkdG53uajYqK1atzNmdY6ZjD4rGsgj+YI7AMqCOtSSwO5x4/gua8VGlydda2tbdxoyATWF1raYO+UWUUH/pPRBQty5ZVt1zy2KnBFXYwioP7UWZMQc8OvC8pdUcXzKFSmZ/gzdIbG4aMto3JV3si2HiMQDjN0scZnwGwz4DQZSvJ9B3ucXRXYEuYQIeg1WPlQSvYb8CPPKgYnAkOsC+l7jf0LfFY5UyPWlBQPmz4SWTBoWHDbipJY/huwOYnPi8LHsusDOBW18KRu4CqvvEt/mrAcZq0TESOpbL20g7mOgdpnyl1YXf0nu+fRgTP4yRGnbC2ccmRzZqOw7BB878kn2WPcm+HWMWni3pc/lKW8f96Z9qpdKJjPYFjGXBozmiLltJEy0TxmZIffS+7H8zfcJViT4fsCI/ofoQz7PUZHW5COlRtxDI0frlIv3xJmLbPSvEpPqmTJnlJ8tWbF8a1XYI9oUchHjxlSaLXnSytQyCt3cnEJvYufVA+eMgxxrFe2J/EcGYrt7hPib430EXRoFQ6zZZa4WQGUsNHbkxGcs/wi07YxZf1C765zyqO0La0Xayr7fs7HrWm53O/Nd69eqOBrTeh9voyXA+xArQtYYH0hNFpY19MAi1l11/QqQZqyFGWpdUOXXiFF7ZrvtjPHtgSmtP2Oym2JkNJg9Tm3/u21lYLucWqse6VV2mJwo+6DpwUVV88e2P6nGscNX3ZvcLPN4shl0dBntlqfyP7UVNv9yR3fbF2bO3fHHerz1A+oJfvm3YF7uY/XYNn6PWAtVvqzwOvOaUoGt1yesvF29VJGX3w2+I4yvoWHoWK+s3tDiCLHat7ljMiKx+vpAs6APEqf29m/hd7Uzc72f4rKO6reUUWSKecEusyDmHhkxPWPQ6vou4wNUJbVnZuuy8a7mZ3kGMOfCqNXNX1ZRXXenobyxPN5vb38JV66XSstjdo7Vjv19VpxLIn4CJKamaUX6egdf9Rm+zPy6sunu6p8Z80wRR/acPm8x05NXYs6KMTV8a+TtMU9a7TOi6fhJlaULnmuN7k2OYkZILuVJe2EZupL6dNfUWZ5lFzzh6doz+tV4LbaeevpLbL62Z1DlU+dKvEafz97gyQty3XVayCkR0bpnnRK/7iH3BLPe8E3TK127rTRktnlOi2xHeuhI9hv/IbvQ1V65DeV94735D7Y8PUY8Gb+qfLrFCPy2hL1Y/sTVNWdWuP7evLNimdyYVfX/ftxrZTY9wfj84Tz4HVY2t5csEAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>0ec0f676-2945-4e9f-9721-273bbfa64cca</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0ec0f676-2945-4e9f-9721-273bbfa64cca</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Domain User</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+\\.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>cec0eb96-0444-4276-817f-5fd55868d430</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>cec0eb96-0444-4276-817f-5fd55868d430</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Password</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>tZ4NAk9sX552sRctsPg65I6QUGk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

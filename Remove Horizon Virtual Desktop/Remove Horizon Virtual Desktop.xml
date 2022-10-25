@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>3c4b07e6-115a-45b4-861b-83eb27028f72</SBAId>
+    <RootSBAId>4bbc7a4d-4d03-4969-8886-422288e7c905</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637186530366471410</SQN>
+    <Name>Remove Horizon Virtual Desktop</Name>
+    <Description>This script deletes a machine from an Horizon desktop pool. If it is a manual pool the machine will only be removed from the pool but not deleted. If it is an automated pool the user can be forcefully logged off (otherwise the script will fail, Horizon 7.7 or newer required) and the machine will be deleted.
+
+
+This action should be executed against a Horizon endpoint machine (one which has the HZ Primary Connection Server column populated in ControlUp Console). The script uses the target machine to determine the connection server address, and is executed on the machine running ControlUp Console.
+
+This script requires VMWare PowerCLI  to be installed on the machine running the script.
+    PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers'</Description>
+    <Category />
+    <Version>1.3.4</Version>
+    <DateCreated>2020-02-20T12:27:59.947</DateCreated>
+    <DateModified>2020-02-25T20:21:09.64</DateModified>
+    <DatePublished>2020-02-20T12:27:59.947</DatePublished>
+    <LastEditorName>Wouter Kursten</LastEditorName>
+    <CreatorName>Wouter Kursten</CreatorName>
+    <Status>4</Status>
+    <CheckSum>9MuAiSw/iAVDMz33calD4RDL/pU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Wouter Kursten</Author>
+      <Tags>horizon,view,vdi</Tags>
+      <Credits>Credits to: w.kursten
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>28</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>ab8c872f-cabb-4af4-b091-57b6272120ee</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ab8c872f-cabb-4af4-b091-57b6272120ee</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Force logoff? (Automated pools only and Horizon 7.7 or newer)</Name>
+                  <DefaultValue>Yes</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>Yes|No</ValidationString>
+                  <ValidationError>Please use Yes or No.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>35745f6d-c428-4dd2-bbe6-36f99ab7b18d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>35745f6d-c428-4dd2-bbe6-36f99ab7b18d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>hzPoolName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>25c3b1d1-e9fe-4170-90d9-ddad5caf99f2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>25c3b1d1-e9fe-4170-90d9-ddad5caf99f2</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Delete machine from disk?</Name>
+                  <DefaultValue>Yes</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>Yes|No</ValidationString>
+                  <ValidationError>Pleas use Yes or No.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>50d55795-0196-47f6-abfc-1cbda576304d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>50d55795-0196-47f6-abfc-1cbda576304d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HzPrimaryConnectionServer</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>430d04ab-5792-4c8e-83a3-9ea55e25c5c6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>430d04ab-5792-4c8e-83a3-9ea55e25c5c6</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>SoyElp50tJxKddQ2yNd5CtNI7Vc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>f0e4226c-68b0-49d0-8a88-3b1ea217ea47</SBAId>
+    <RootSBAId>83bfb88b-4409-42b2-a9ec-3bd842a46299</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637156521624565642</SQN>
+    <Name>Reset WEM - Registry Settings</Name>
+    <Description>Reset registry key where WEM registry settings are stored.</Description>
+    <Category />
+    <Version>1.2.25</Version>
+    <DateCreated>2017-07-11T10:54:55.263</DateCreated>
+    <DateModified>2019-05-20T18:44:19.72</DateModified>
+    <DatePublished>2017-07-11T10:54:55.263</DatePublished>
+    <LastEditorName>timriegler</LastEditorName>
+    <CreatorName>timriegler</CreatorName>
+    <Status>4</Status>
+    <CheckSum>p4kGWm0M8LlPk0WMKJ78EXh+khs=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>timriegler</Author>
+      <Tags>WEM, Citrix,</Tags>
+      <Credits>Credits to: Tim Riegler
+Original code by: Tim Riegler
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>timriegler@cherryhealth.com</ContactEmail>
+      <Notes>Resets the WEM registry cache for the selected user(s).</Notes>
+      <DownloadCount>46</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAI1VXYvaQBS9z4X+h3QtuC1o6au0BesKlWJX/FoWfIkaNRiNTXStLPvfe+6ZmSRGt5Rhksl83HPOvXduvkhFPHkrb6QuA3mUX3IvPYw66Drr2daXQDYSyxPenrQw2speErwjGcnO7lhKKCnnT5hJMbNHC7F3iS+PIw8zK1qZiY9uxucrEewu0QKZ4yvm2oH2EqnSUlJCMwrupA3eLXDpQMUQz3soKuoYWoTy+XM2MUb6naKFxPfBKeK+KXbMMLfBO+W5GBYS8NvBljKuW5yQ6wP5Lk28j/hWGwY796XT/ADu3RKPBW0bD0RWpVOyf1VJ2e/Kp1lA0BMLPlPYcP519nz6XaPrySf0MbzaZISc339Da8jRnOdi64UNPBAROyjxy9GUyyP2Hs60bIB6InaEXXGWAbkVF31lu0Az3Kb01TrToNx96q7bjOiBex+9C+1D9H6WqT3sVOtFHm7OqXrdx3mUDI7emyGzr2ivxZO+zQvle2JuhFCsPELajahMz1XkG9/a35d4evIVvSo/5CfsjqQhE6CpN/bILZ9IE0RLI7OHv5o22wa8owfmg3opvbprlPm3jT1PXNfdmywXusDY2uxIYKOZ5ckEivSurJkhbfnDG6LqnY8mF9VhzFgfmBUT+QhdTneFJ1e0sWbeLQqRCOlL9V4AHGMvZeS39PAc83kO+lZdCqSp1GAvAHZqs2NoY/l8FrMO8W6xGtB6rRCBW2rWuRnvdwS8nFE5Yh/QytZdewC2OVlDRGMieXKD2Abk1C6oe4fvu0yXudW5frViZoy6OtvNVdRKqZLXoNaxL+os5lgLvkuYXRrrMaPvqqJGTk/2Ga0DV4KryP+Depnx/7L8Iua/9cJni2dmPPV8UfE1l49n/p1jxtRvc3OL+VTP/O+8XfanW/Xkc4GD69djW73yh3RsTHUMLHaPkfY54ypfXr2b4L6x/8uWvdExT7iqVa7v7u4c+TfRW7rjzSxX+/w/YGr9ynJvgLtGJ2BlaGS1/kCNCauC1om/ll72pUwIAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>tP1VlcxICB2QJ+sFRpiKj08C45Y=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>5503abfc-69d9-44b5-a4f3-0e145ca6cb64</SBAId>
+    <RootSBAId>c4f1bb71-f860-480a-b864-2488af2ec470</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789288784996000</SQN>
+    <Name>Show PVS target device boot times</Name>
+    <Description>Retrieve PVS boot times for a given period from event logs and show them with overall statistics such as fastest, slowest and average boot times. Can help find performance issues. Ensure that each PVS server's stream service has event logging enabled
+Arguments:
+  Last - report on events created in the last x hours/days/weeks, e.g. 7d for last 7 days or 4w for 4 weeks (default is 7 days)</Description>
+    <Category />
+    <Version>1.5.7</Version>
+    <DateCreated>2018-10-17T16:58:48</DateCreated>
+    <DateModified>2018-11-26T14:24:55.103</DateModified>
+    <DatePublished>2018-10-17T16:58:48</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>SctoUuKHGzUpDJdGdlziekTM700=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Citrix,PVS,Boot time</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>155</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>ee896ed9-6bee-4c64-97ef-00d7a80ffbc9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ee896ed9-6bee-4c64-97ef-00d7a80ffbc9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Last</Name>
+                  <DefaultValue>7d</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+[smhdwy]$</ValidationString>
+                  <ValidationError>Specify a number followed by s for seconds, m for minutes, h for hours
+d for days, w for weeks or y for years.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>JuYoc8bTGpSWov8CBWFhO0sgxo8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

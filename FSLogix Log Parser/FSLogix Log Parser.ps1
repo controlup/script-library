@@ -21,6 +21,7 @@
 
     .MODIFICATION_HISTORY
         Created TTYE : 2019-11-19
+        Edit: Ton de Vreede 2022-9-15 - small bugfix for error handling
 
 
     AUTHOR: Trentent Tye
@@ -32,8 +33,7 @@ Param (
 )
 
 
-Set-StrictMode -Version Latest
-###$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Stop"
 ###$VerbosePreference = "continue"
 
 [int]$outputWidth = 800

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>4446acfb-95d4-4f7b-8d9f-17da2e1c882a</SBAId>
+    <RootSBAId>d261ac4d-c1ee-40cd-a056-00c78be20142</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637412213468827350</SQN>
+    <Name>Manage this machine in Windows Admin Center</Name>
+    <Description>Opens Windows Admin Center to the server manager for the selected machine</Description>
+    <Category />
+    <Version>1.2.11</Version>
+    <DateCreated>2020-09-11T10:02:36.823</DateCreated>
+    <DateModified>2020-09-12T03:29:35.59</DateModified>
+    <DatePublished>2020-09-12T03:30:10.367</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>dsNIY9w+EGHMlwCnE7t2pthn3sE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAbhJREFUOE/Fkz1Iw0AUx+vipIuoo5OKODiJoIuzu4OL6ODm4iiIFKqL2AqioIMfiAj1C8XBRdBBOyi1IFbb2NjYJhW0adPSr1ia/L07TY0YKk6+40cS7r3f3UtytuqJQHzALWrDe8/4Tgydi+GXqvF7TwVk24Bb0nRo0C0GJ6sgSZXw2+hqNHn/NoGxI+kTEUpexVOqaFVk5kvgFdPY8sllsm/Fvwms4r8FOla9ilWRmZ8Cep9508AnVNQ5OFxJWYQSecZTSkXfesRaEFaKuJQK2PApaJji0DQTQquLBxfPoN0ZQLsrgKkTCY7TOJurJznfBI6zOPlxBNTYg9i/S6Oka/CEk+RaYvuiaGQ8yhmIqTwKpRJanHyuLDiPZLF2raB5lsdFJIdD/yvq7H5s38jYMdG/KWBkV0BUyaF7WUBZsOJNYmj3GY3TD0w2fhxBzWQAowdRjB6KZboWePQu8/BJaUMQYwJjdC8JZAd5snUdrjMRGmnFCDp/GkriKppmzz1U0DbHhwd3YjBomObgIQIatOCj/68wFqLBBORN0lNl/jRMYJRWgrVACmSC30zH/KNK7b9Raw/iHZe+FdTC6qikAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>windows, admn center</Tags>
+      <Credits>Credits to: trententtye00
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes>support for both server OS and desktop OS. Changed title to more accurately reflect script capabilities</Notes>
+      <DownloadCount>26</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1Wa08TQRS9XzXxP2wqkTaBFkz8ILEmtYCYQFvbVSRItJQFKn1lu4U0hv/uuWdmt7vtthQUYjazOztz58655z5mHHH4vJOX8kKe2z9H8tKQI6lIVWrofUKLz4ZPVQbiSU+G6Adyib6DvicdtBZGPDmzI75c8+1IG/KOHPJ7Jn254eoS+l07V6bOgPJ57ptEti07wFOWOnDVxMW7CqT/D74apOtoB8DpotUtw4cYK7M3xGqf2i7kPZ407LvyGZZW0OvLOd5jfEdEuCy2pGW6xzM8y2EtQ3sX7I2sroo08e8tjX4ib9DH2Z9wHWBWJYyXJtwrT/fhtQ9tV8TVRGvjv7c0UhcSI2I7px4HOhwwm6azAKY9jF0R+YAR1qAFPj3WRGQNZ3Q1EjZXbS4lbduRb7SsJvvop+HMs32PYlqjQFk1bOUxOpRNyKxHcRbOnAJLYD2gqMYY66DXIl5dMd/be6gCNTxfgfq1bGCHt5DfYM/slc79ChgI2bgrM5eP5xtrs+H1nDaMuMbsmh5li2yY9YTWPJcVJg13ifpceGpf3qDfsswZ209ZWRx8fWuNQdAlyoAzXiKXNZ6UqRFWBvSxg3q2A2SbzAe1rUf/qVUj7DQg42HtmjASenvWojLro8sYc1OtKpO/Id4d66+khgNo2AauXbQy9glr7g9woWeDi786WE7X7UNnM0Ls4jkCFke20NQf2tQf6pXNmE/i2kryBev2uM+WzdowMnpkxwWrBvtLm+najrF/F/vuYy6QDzbSTEXISk5OKFUDPp8x72A0vu9xbM6zcZgFH03qabIOaEYVEfGBrSRrwKlnzAByWi2GkLtAryirsHsSzWG0Tlf6cHz5vPho+b3BdxzVo7AOxLNhlTYfIxc0O9vWBg+7a4xVGIcdsOwDqcZ1AH2GJ+UiXk9PYLHZYe3JGWtQewnZ12Im9Yg9/cRp/CPrH/LMMjav0j4uh/OqdPz0mj2lnpqtZTlMt0b5y0V532YMZOdK69mlNl0xRjLRLSADHY78TnhjBdkZP/UNa0XOhOyr/C1GvOgGsLyO5El5G9mwAslT+UXPaDS0GNG+XVdhvq9Dk8qY+6x6cUxLPXhEb8pt1slWFDGhl9sYUzzzZOL7LcKST4zUIWXOqsdFaGqC9hZj28XKTlQ9ivR0Vl6h9WOYyjauL6Ksms7SHFak1ZyezVDNw+yC7M7JT8zm8GTuwWaDOw0YTQZ7A5pPabnHWDW6pnc1fIfRtYgbrSZVvD3mrdF2xpvAHtYNE1XVaEvfS+/mvsXqM8eM54yuS6srZCt+vk/ydDY/pjOxwQxW/et2v5atdMrNJe+4egvewj29EJ1OheiOFmI2ddRUx649R41Uj1y0oioxTFldmMtRgdj7zOUCvtdRJGseZO6oEQ+1Ln66d2OW+Qtsiq/5W3v+AJQuv8JCEAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>60789291-7147-4af5-a651-f215c1a2112f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>60789291-7147-4af5-a651-f215c1a2112f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>FQDN of your Windows Admin Center</Name>
+                  <DefaultValue>wac.bottheory.local</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>87527fb3-dbbb-47a3-b857-80818676c18c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>87527fb3-dbbb-47a3-b857-80818676c18c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>19d60e0a-481f-4cca-9dd2-6448839524c1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>19d60e0a-481f-4cca-9dd2-6448839524c1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>IsWorkstation</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>mvmaxWuhh/3eUdDSWJy62LDenNQ=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

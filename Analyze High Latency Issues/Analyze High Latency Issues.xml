@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>94a18507-ec42-4099-909e-364c155bf285</SBAId>
+    <RootSBAId>b17b513b-8546-409c-9f66-c626eec1d66f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637948684464170626</SQN>
+    <Name>Analyze High Latency Issues</Name>
+    <Description>This script runs on the the target VDI\XenApp computer. It will initiate a trace route command from the VDI\XenApp machine to the client device. This will help identify which hop between the two devices has the highest latency.
+TRACERT.EXE runs for a maximum of 5 minutes, after which the script times out.</Description>
+    <Category />
+    <Version>2.5.13</Version>
+    <DateCreated>2016-06-19T15:35:37.693</DateCreated>
+    <DateModified>2022-07-26T14:45:19.453</DateModified>
+    <DatePublished>2022-07-26T14:45:18.093</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Matan Nataf</CreatorName>
+    <Status>4</Status>
+    <CheckSum>K0SEYoFIcP/N33+rTN0d+RmHUBQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>network, latency, troubleshooting, VDI, XenApp</Tags>
+      <Credits>Credits to: Matan Nataf
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>2085</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAJ1Wf2/TQAz1v0PiO0RsEp20hG0IIU2ANMYQE6Ot1sJAbBIhbddC25Q03fghvjvPz3dJ2oUNoSjJ5c5nP9vPvqxLJn35JgsZcRRIKJd4ZzLHTCpTzDyUSLblrtzh/UTWMRdwHElHPkhTWtLG6Ai3zgYrV1eG1DyXBHpHMpMcX335jjuB5RzvOWZyJ9eFVIwVRZHDhkkGmEllgisGqh6+B1jXmXLnnHsM/5m8kxfApKtpRSaRMTD0oUNRHAF5VCBMiWbGZyBXkBvjCuQzV72GfAnfdVwZ/VlgZ473ltOku0sdY0jnRJHIDyCwaL6QQ8TwQE6Iq4tnC9H995hmsDplLC1zJWL/jiFzgbFKW3zO5D1x7EPHrPBm5vKSAZVGaTkeI8irRyPnRYB3NS4BM7Nwa7fnrR5Jnd8TWhgSQf+W3PYwusS3IbriroRZGC3x7aCyy/hg2WgDyQnuN8hKF/cJZDsVhjWBZYLR3/JjVpYzZLH3GRoj9zZSHDNmx3Ra7G9CfZ3HhvoQUVTMbTnGuA7bPvbEtP0T+49XmDiDlR1I7aDmo5WnWWjJW/jX5vPmir+tUqr1tlwnsWNafb1YReaQ73NOu0nsouR1912WVHoIS7Mir8eIVlNe1yLvUKPuyIlsTx7guuIVgSkp4638HcN/1Wk+mWbthF3WsH6v4dLIhfIY9y5Gu7g0OladPcf9jDZ7jkm6K8T8Cb4H9Eo5nlGiuv6cEfA8GTq/x6yMC8Z2wPiNyKfQxbqcr2Zmy/XOvKgozdF37l2wUh9xTnX7fq1Y1uVZcS58RHQmRKB6nlO259A0ZFPOKdUuOK5fDefRx8q8534DHDafYhcBzeRT3BtEv4CU4n6F9xiZeENUc0hfMK4qeb9gotZH2S3KPuX5Ve1XKhVhr8es+I7YDXq4MmfnHDhWO4dKb/K5ARZk1JphX8I8aNbb3D+gh8bmEmuHlmcY+ZiOmKtGjaWoBpHyqkPvPAdCnu2qe5tnuL/Vt0B+Oe9OuSMnS1pLJ2AIK1P31ULNfeGJnTu0ZtX/JVh36vGdcG7qpJW5W2Invp0aii5yfq4hUjYfuA7zu/B/nRVpp1bODqkRTZxlPUlSsn+Vrcbx65zVs6zMS1DUhMV55Pgfy9fijyQlY8b054K5SF1fqdO/6XrMBpEmK38ylufSn5BsqPoTykuesX3Wg3XC+8j9Hs7GU1dRKTrRHN8d1MOcdif4Q9vFTJen1QFPqq47CQ6xX/Xu89xfsL6UQ8fMU85qWuVWQGSx49SQtaZzTdhuQu5qCYv6m7vqLBkVM5p1Hh6xO9dHKHKrIeatb/kMPQRrtyvsSBgf6/jeqq+f/7P6/7VwTz5hpT76y/+5vlZ0Lim6fq+GS2XntghEsPK3avkDMvX1C8QLAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>330</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>c5ab2a42-e021-405e-b060-95c9857da806</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c5ab2a42-e021-405e-b060-95c9857da806</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>oClientIP</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>dO0ig2KM05HVCh4+4Lij/3Egpsg=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

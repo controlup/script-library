@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c1df0b4f-bd9c-4b92-8a3d-0837055c15c4</SBAId>
+    <RootSBAId>168a1ce5-4efd-4814-a499-a2e7cd106fcc</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638015227503535739</SQN>
+    <Name>AZ New VM from this one</Name>
+    <Description>Create a number of Azure VMs using the selected machine as a template in terms of machine, disk sizes/types and network interfaces.
+If the machine name contains # characters, these will be replaced, with leading zeroes, by the next available machine name
+It does not clone or copy any disks other than any gallery image the original was built from.
+If domain details are provided, it will attempt to join the given domain when creation is complete.
+Multiple tags can be added in a comma separated list of the form Tag name=Tag text</Description>
+    <Category>Cloud Management</Category>
+    <Version>1.4.23</Version>
+    <DateCreated>2022-06-27T15:46:24.953</DateCreated>
+    <DateModified>2022-10-07T11:46:07.767</DateModified>
+    <DatePublished>2022-10-16T13:03:03.907</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>1UISHMqp11tpZXVtvqzTBPpuQ5A=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Azure, VM, clone</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>3</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>1200</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>cd2247bc-044d-4fff-aad0-106fd17422cc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>cd2247bc-044d-4fff-aad0-106fd17422cc</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Password for new local admin</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^.{8,}</ValidationString>
+                  <ValidationError>Must obey password complexity rules</ValidationError>
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>97aba1d1-eac6-4442-8415-e6ce0f7093b6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>97aba1d1-eac6-4442-8415-e6ce0f7093b6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>New VM Name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[A-Za-z0-9_###-]</ValidationString>
+                  <ValidationError>Name cannot be blank</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>38bdf749-b4a5-4edf-8a12-9d6057b6b3ff</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>38bdf749-b4a5-4edf-8a12-9d6057b6b3ff</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2e3f36ab-ae97-454c-978e-bf1ce1934a06</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2e3f36ab-ae97-454c-978e-bf1ce1934a06</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Maximum seconds to wait for completion</Name>
+                  <DefaultValue>0</DefaultValue>
+                  <ArgumentNumber>14</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^-?\d+$</ValidationString>
+                  <ValidationError>Integer values only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bb162cb7-e173-4b65-98ee-7840fa1186ca</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bb162cb7-e173-4b65-98ee-7840fa1186ca</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Count</Name>
+                  <DefaultValue>1</DefaultValue>
+                  <ArgumentNumber>9</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Must be a positive integer</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d26ed2aa-c760-4d58-ba1f-a0340794af8d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d26ed2aa-c760-4d58-ba1f-a0340794af8d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Domain joiner account password</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>13</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9426749e-cca7-466d-826f-a7a1640218c6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9426749e-cca7-466d-826f-a7a1640218c6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Start numbering at</Name>
+                  <DefaultValue>1</DefaultValue>
+                  <ArgumentNumber>10</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Positive integer only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8bffd661-b1fd-4d78-971f-13c1852ebcfc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8bffd661-b1fd-4d78-971f-13c1852ebcfc</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Existing domain joiner account</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>12</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>55a36942-902b-4f65-a8f7-03230722321e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>55a36942-902b-4f65-a8f7-03230722321e</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>FQDN of Domain to Join</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>11</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d1408d63-899e-468a-a024-acd6ccdd5b8d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d1408d63-899e-468a-a024-acd6ccdd5b8d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureTenantID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b3fb54ac-c7c6-402e-b0e7-b8f8731158f2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b3fb54ac-c7c6-402e-b0e7-b8f8731158f2</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>New local admin user name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\w+</ValidationString>
+                  <ValidationError>Cannot be blank</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e769130e-09eb-43b3-9c6c-69280354a4b8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e769130e-09eb-43b3-9c6c-69280354a4b8</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Join Azure AD Domain</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>7</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>yes or no</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f0eb3359-5559-4e58-b504-81d80e6cd674</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f0eb3359-5559-4e58-b504-81d80e6cd674</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Tags</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>8</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>af13640c-83b4-4ba6-a76a-fd6edaf6756a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>af13640c-83b4-4ba6-a76a-fd6edaf6756a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Delete on Fail</Name>
+                  <DefaultValue>yes</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>yes or no</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>65dafea9-7b97-41c8-8250-bed56f91d012</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>65dafea9-7b97-41c8-8250-bed56f91d012</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Validate Domain Join Parameters</Name>
+                  <DefaultValue>yes</DefaultValue>
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>yes or no</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>PYlpYMeaGk3wlPXTz1G7MQPZn2c=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

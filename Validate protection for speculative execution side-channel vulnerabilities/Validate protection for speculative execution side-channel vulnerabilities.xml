@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>033a431d-58d5-439f-a2bc-e09b6a7132a1</SBAId>
+    <RootSBAId>62d38f80-6768-43ff-82d5-0741a623246b</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636512716194502000</SQN>
+    <Name>Validate protection for speculative execution side-channel vulnerabilities</Name>
+    <Description>This SBA confirms whether protection against these vulnerabilities have been enabled on the target computer.
+For more infomation: https://support.microsoft.com/en-us/help/4072698/</Description>
+    <Category />
+    <Version>2.2.6</Version>
+    <DateCreated>2018-01-04T11:55:40.317</DateCreated>
+    <DateModified>2018-01-11T12:37:05.807</DateModified>
+    <DatePublished>2018-01-04T11:55:40.317</DatePublished>
+    <LastEditorName>Rotem Agmon</LastEditorName>
+    <CreatorName>Rotem Agmon</CreatorName>
+    <Status>4</Status>
+    <CheckSum>oOWrD7R3RihKmlBKDStdRDyKWV0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rotem Agmon</Author>
+      <Tags>security, powershell, Intel, vulnerabilities, Meltdown, Spectre</Tags>
+      <Credits>Credits to: Rotem Agmon
+Original code by: Microsoft
+Taken from:  https://support.microsoft.com/en-us/help/4072698/</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>rotem.agmon@controlup.com</ContactEmail>
+      <Notes>Updated script from Microsoft</Notes>
+      <DownloadCount>100</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>9xPG/6epaROmz+5xXv4VkdwLqBc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

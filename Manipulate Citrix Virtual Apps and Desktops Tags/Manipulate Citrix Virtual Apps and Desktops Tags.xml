@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>abaaaf86-cb2e-4780-8e06-adfa68cb44ef</SBAId>
+    <RootSBAId>9fe959f1-acd5-45cf-8597-6defdf9c7b3b</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637948684278386216</SQN>
+    <Name>Manipulate Citrix Virtual Apps and Desktops Tags</Name>
+    <Description>Assign or unassign a tag to one or more Citrix machines, optionally creating the tag if it does not already exist.
+Can also be used to show current tag assignments for specified machines and delete a tag entirely after removing it from all machines where it is in use.
+Maintenance mode can be enabled/disabled too where the use case is where the tag is used to give details of why the machine has been put in maintenance mode, who by, when, etc
+Script must be run on a Citrix delivery controller or a machine where the Citrix PowerShell cmdlets are installed. In the latter case, a delivery controller name must be given in the arguments</Description>
+    <Category />
+    <Version>1.1.21</Version>
+    <DateCreated>2021-07-27T14:21:59.977</DateCreated>
+    <DateModified>2022-07-27T14:28:04.273</DateModified>
+    <DatePublished>2022-07-27T15:31:14.603</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Cch25BrbNFw/d0yreFpSumjiEWw=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags />
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>29</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>5d6ce3a4-6a67-46ca-bd2c-9f891645fab0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5d6ce3a4-6a67-46ca-bd2c-9f891645fab0</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6e2db2fa-0ce1-4551-abb8-5ff9e837ca68</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6e2db2fa-0ce1-4551-abb8-5ff9e837ca68</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Tag Name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Cannot be blank</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ca49db8f-2cac-47b4-8bd9-ad3b9617d386</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ca49db8f-2cac-47b4-8bd9-ad3b9617d386</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Operation</Name>
+                  <DefaultValue>list</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(set|unset|list|delete)$</ValidationString>
+                  <ValidationError>Must be one of 'set','unset','list','delete'</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>47886fd1-7adf-40ef-a477-ed2b50fa5633</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>47886fd1-7adf-40ef-a477-ed2b50fa5633</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Enable Maintenance Mode</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>Yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>4c1fa6b3-c13a-49a5-ad1b-81ceaafaf583</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4c1fa6b3-c13a-49a5-ad1b-81ceaafaf583</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Disable Maintenance Mode</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>Yes or no only
+</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ffca5fd6-9de4-4027-a913-49c713b19de0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ffca5fd6-9de4-4027-a913-49c713b19de0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Create Tag</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b67128c3-79e7-4b9f-911f-6e68d9913389</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b67128c3-79e7-4b9f-911f-6e68d9913389</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Delivery Controller</Name>
+                  <DefaultValue>localhost</DefaultValue>
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError>Cannot be blank</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9d499c7a-cbe7-49ce-8620-ad31a65af7a3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9d499c7a-cbe7-49ce-8620-ad31a65af7a3</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>New Tag Description</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>7</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer>Delivery Controller or machine with CVAD PowerShell cmdlets</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>f3EOQpYXIvWIWtWhxNUCQjq1VVE=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

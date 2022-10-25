@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d03c1a8b-6bec-4fca-98a6-708163450f95</SBAId>
+    <RootSBAId>8e2c677c-da0c-4b41-87fe-371cff53157d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636285572832304000</SQN>
+    <Name>ICA Session RoundTripTime</Name>
+    <Description>The script runs for 20 seconds and measures (once every 2 seconds) the ICA RTT and network latency of the relevant session.
+The output shows the session info (username, device name/IP, session name/ID) and 10 reads (once every 2 seconds) of the session's ICA RTT and network latency in seconds.</Description>
+    <Category />
+    <Version>2.2.39</Version>
+    <DateCreated>2017-03-20T22:06:29.517</DateCreated>
+    <DateModified>2017-04-23T15:13:22.25</DateModified>
+    <DatePublished>2017-03-20T22:06:29.517</DatePublished>
+    <LastEditorName>Gadi Feldman</LastEditorName>
+    <CreatorName>Gadi Feldman</CreatorName>
+    <Status>4</Status>
+    <CheckSum>3DINMVS4S0sTAUmAiOfd+GbMOCc=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Gadi Feldman</Author>
+      <Tags>ICA, Citrix, network latency</Tags>
+      <Credits>Credits to: Gadi Feldman
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>gadi.feldman@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>1034</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANVYa2/bNhS9nwfsPwhOgCVorLbegGJPLHCyrVhqG66LdtgGw7HVRKtfs+SlQ5v/vnMPSZuUZbnOUmCDQEu6JC/PPfdByt/IgUS4PpVPJJbn8ou0pC0dPD1FU2nkXc9lKAtJZS453nKZ4TeTa9xv8DSQKX6fSlNOKU/QMoyeQf4ZntZ9C8iWkI6oxWjUp1QmmGU0ad8Ubzl0zzDmDd7H6MkhmwLH38BrUJ/JOZA1pQv9Henhtw0rith7wJkQl2/DgjgU22uuEklDHln0QyIfsdchUnwDSJYYm7DniKOG1J3IX2gLYFM9RS3HtNGgcEx0gav3wRZHkL/2tCiGMVfV+fkG6/FWFpT/HBws7Szjw8zTHWqKcJ+SI7V4yd4FJAMycgLpiDhSy4TreUifnJTo80eckRvHwWN6YEGmR3fgOOSoKg73ZT8l8nBFF4UdaOyiPUM09tC6NquK7KdEEEbhNWPK2DPH88Jyk9PSTL4qyUTfKmUwkrrnXyOpYkIjXvNw4o1osienfCwvmJVGllGS0BcJrL1Ci+QJPfu5fMF7A5473oG0ZS0L0U5X0o+N2Hi+jpWb8NgBEJ940qb8SGnD2hHDj6/o045c4Llom14xI7hJ72s0xcCQQW8ktY3VGpCp/Ama0d8G5h769Hez3m7y9//Lw/vLP5dpF5jfkp+3spUwo3LWN82dh7hueMUWoYuXJUYY2YTaDuQ73rUdFpD3vSj9Fu2QeXqF/l/B0++lc0wWFkc/tqNT8nNUuVIdsaccDGFRBPa60NjBXfl9FzDwkvVE2arLT9CTsbLUbI4tqM3Unimjp+iDEdcZ0G9Tcbu5WW9zX4kgHdu9UDUPuYPM7FvVSSC2se9wJ/KWuFV2G/BSh5dntOIIeamRUYeVE/S35VL+YLzl5MhVlYzVc2j3xhln/wYUqT1lvMVbAq8nrCG+vI/sNvI+5GPIEsaJqSVTu9bxDt6vPd6b3GPH4FWjPmf1Sm2cnyPfz+HZNeumNuU2Pwbc0VPG/6WtYsYrr4jrFHbOYYt5O6Plb3gem7Mqx7BonVW651zZKIhs1jpvZFv9YXxxjtWNT0OrD601A/T3oUn9YSL9e3jruDDW729B2w24Cn2oJ05fEs4v5se6BqrG/0ZsRPIe7cbLtndA3ge/L4k3o5/zkn0wkT9LrXRV4Nbqzuxpz6xWVvt9dM9o7TXXTlbVf/uIlqenw/O0VkVzQtR1XH+5ZxXfKaJtxIqlXF3aeHtRwFnlz3jDqn1XqzEb1vufQ13bse5uXv4tEvXA3VHo7P0RhBGasBr0INuF4z79X9s4wVT75O6eL66ju2/ZGir3tf9gv/x0J05RUR7J15yVMjtN9f1yJXuAa3MXWCPNiWpeqIr7V71NjR+v2g2Dapesql139Z3eW32lb6ty5V8k5bVNe8urWis4AV4E5z+tTGtE7n+Dnv3XYBt37j8Fn7szq1cRGu9PKNHs+FCvVkWiw1QLMNyH5vDUVgs0xHdgZ5+1Q99EBe8UsVR5shxN2YnigT09F5GWacgYRwmjtEGJP+p266mtHfwXcliyQtXoMtTvV1XFxJV+AbqT3Pqc+w+/vxu9fBMAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>695a36f7-8d77-438e-91d7-31d9a722d74b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>695a36f7-8d77-438e-91d7-31d9a722d74b</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>fe28fdca-2c0a-4b02-a667-79217b343eb1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fe28fdca-2c0a-4b02-a667-79217b343eb1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sSessionName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>eCSYs7HJUVzTGfywxH1ATBOCyaA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

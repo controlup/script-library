@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>dca99e54-8d0a-430e-91c4-cb1ec5bbc76e</SBAId>
+    <RootSBAId>2543bc1c-631b-475e-94be-07a407b997fb</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636813439469108000</SQN>
+    <Name>Connect to Hyper-V VM Console</Name>
+    <Description>Connects to the console of the Hyper-V virtual machine using the Hyper-V Virtual Machine Connection Tool (vmconnect.exe)</Description>
+    <Category />
+    <Version>1.1.5</Version>
+    <DateCreated>2017-06-13T20:18:20.293</DateCreated>
+    <DateModified>2018-11-26T20:33:13.113</DateModified>
+    <DatePublished>2017-06-13T20:18:20.293</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>zA9ivbGxwgMNvg9BcbMwaLN6wWI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMC4xNkRpr/UAAAjTSURBVFhHtZd5UJT3GcdpZ5JOJjOdTtu/mulMmiiJRzxRQREQUBQIcsilCALCci4u9yVoFYQKeKCAMlql4MWyoiKnKCDs4nIKyMLKuSzLObZOJ4ljI98+v5d3mcUkU5Mmz8x33l129vf9PN/393v2Re9/lUYzYzA+MXV8TD3ZrR6fbNFMTh9+8eLFKv7jn7/m5uY+mJiZMSfDs6qxCdXomAbDo2r0DY5icEQN9p5JrZkaJLAsgjEB8Cv+6z+taIHfTU3NetKiEjL9SmuiVXl1LRwEUTicdgqS+9Xo7h/C8+ExDI2MobdPibaOp0f4pX5apZ/MbL8lLoW8tYPr9vsAtmVUw/r+17A6Uwu7mNOIOpqOv18Xo7ZBhpq6xmvK2dnf8sv9+AoMCpEFFAYhMjUGqSdOovDaLTRK5RgYVhHAOO6VV2F7VjXsawHHh4ADXXdXvcbOvGZYxZxDaFIa8q4UvX4s76hoUwwEjM7M/Ilf+t2KA8gORuTxWCQmHlnQ8ZR0PKp/jJy8fOw8VQ2XR4BbHbirI4Mg2dQAO6vmYHGpG6YxF+ATl4qsnHxU1UtlHYqhKMWQ+jPe5ofrgI+v7IC3H0JDRUhISF4Ecbv0LrLOZGMXAbjyAOy6h5JgiXz5ALAmiB1VgEUlYFoBbL06DKP4ArhFnUBK5lncqX6o6FAMpPYMqjbylovLz18g8z0ogLOLO0y3WcLOzgE+Pv6Ijo6DhAGczuYScCZj1j0TA2C3wo4AuBSqAUsC2EYAJuXAlvuA4T1gQ9EUDJLFsBWdQGJqBm7dKde0PlNmd/WPWiqVyt9wAP6CIJlIFIVDhyIhFIbD08sHu6xtscnQCMUltxcAmCmDYHLS7gUCsCWAXQSgTcGMpUAQRmXAJoJYfxdYeRtYUvgSnx8th0loOiKOpEFcVvUvDiAwKFgWE5OAyMhYhIVFcGIgISFhEEtKOQArAmCmWi1sRh7AmgCsCODtFAzI/LMS4JNikhj4lLSEtPyvlUg/kwMOQJtAeHg0oqLiEBEZQ6+jECoULQDsoFPADJmx1pztAXYLvuQBdhLAdpI5QWym7lewrslsKRNB6PNiQCuP6QAIAoNl0THxHIA2gbCwcDAoXQB7MmPGWrHuGYA2AbYPWPxrSudNmD5nkgDLeC3ntfr49yTAOme3ISIihtsPugmwOcAMWdec6DV7z04BA2Cds7jfNmIpMLE98AWvVQS4NkUHgJ0CIXXNTMMOzSfAXusmYJlZzXXLTLWyI2PWNdtoWpO3jZhW82LJrL0zr/WpOgD7PQ/IzC2tYGO7G+7uHhAIgrhNqJuA+bFiutdzHAQTi5zdZ62J1oiZ6Bqt48VOAhNLaQOTLoDnAW+ZqZkFthibwtDIGBs2GmLzZmMCsuMA/lF4HZGxCXDyF8EiNg9bLzzFGsl/3s2ItJESYmJJMbH5sOmEDoCvn79s3nwLDDYYYu06A6xatQYrv1hFc6AUxWLJgq4UFCIh6ShcDgphGJoFg1NSbJC8+kEjNguYWFpMW5joeBql6QCczDpd6bTHBcbGJgvmy1esxLJly7lBpAvAJC65/ebu3bJ2sViS7OzhFWxp715hHJT6alN6DYyKXy4yMiZt5WXCRPPBlM2IdB0Aeh74tbSlY2Puhfy0+ISkvj3OLli/3gD6+voLACWS269L79yrq6iqEsrl8j9zX9SpgoKCD108vNx27Ha6buaf9HLzsVKY3JjizMx4sQFlzstEF+Dt6uzt1b9SVBSfeDipvryyuqaystK7p6fn9/zHi6qzc+LDrr5he3lPf05b7/NGmvNNTzq6n16/JcEhmq62QQnYmlSEbYUjsKyYw3YaUjvYuP4bD0Ddv6/RaLwmJiZs6HFs/sfhHYqlIO/uL23u6nsl7VRAV+3PlPSk9BwVtfV4JGtFvfQJMugX1UOUBNPYfFhe7oV5evk8gFqtvkDmoCtmZma+It2cnp52l03LloqGooWxA/EBuarcj3jfhXL1EnwsEIZLj6ZnfVtUcg9N7c8WQTzp6qe/9aBO/hRN9L6hrQfyrj40t7RDFB1XaPGlY0vm+Ysv9EZHR7+dnJzE+Pg4pqamQOZQT48jdSoDQeMi+I2EwHcg8E3oYHhL5HBc7HlN/jL2EMr2Tc50ztrE/iO5+0p95uxT3RGekoT8wpuol3cugmEqeyRFStZ55OZfQktLixnfh55eW1vbXG9vL/r7+7kUWBrF6hKEjIVDOBGFsKkYCKeiEawJh/9oKHwHAxGgDFUKBoNV+5SecOvbB+deVzh0OcCm1RrmNy1glrwL/skRyDh3EclpmRDQg050XAIKi679s7Gx8XJra+t7vL2enlQq3UdqoXv6prOzEwwmofswDj4TQNAfjMChMISoCEYzDxNGMIFqEbyHArBf6QN3hQccu5ywvdkSRjUmWFdqjpVFVtDPt8HSdDuYnfH9urm5Oaerq2s7beT3edvvlkql+qijoyOY4nkQ1BQ85yZzh0eLJ7w6feDbI4B/H8EMChE8KoJwnH4zeJiQiQgEjAnh3hqINVed8ck5O3x81h5/OeuA1XkeKldxgitv8e7l1+B3yrbKhn717OHUsAeuUnfsa9kPrw4f+HT7E0wQAgYIZkSEUILxV0TD9LIAmQ+vIu5+NsLKMhVHH14y5Zf78UUb7L3IxkiP/bUeEscqh3/bVFrTE/BuONU7wbXJDXvlHvBs9yYYP/gpgmB6wwcF0rso76hHZWcDno30s838DZ2ostnZWR/Sd07RO5dUJf0gURZr513rdWVPtZOGwdg9sINjnSNcmlzhKT+AjXleEDeW486TGpS310E5OrhwooaGhsD2lkwmS+CX/P8qqvGQwd4qtxRKpsemwnrO/oE9VuW6IaPkIi6X34CkoQIDgwMYGxvjjrZCoeBgaH895Zf4+Sq5LXnJ3mrXyB03PKUrst3m9hfEjz9ubmqkYzZHhswU3d3doFkDOgk3+a/9MtX7Uv0HunD/JVPnfyRjX5ox96i+qaioGKLT9Sn7bHHp6f0Xf0NLN/JmE7oAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>Hyper-V</Tags>
+      <Credits>Credits to: Trentent Tye</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes>Connects to the Console session of a Hyper-V VM</Notes>
+      <DownloadCount>108</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAHVTXWsaQRQ9z4H+hyH6kD7ssrbQQGgLIZFUSI1EEwilD4MaI9VdWcda/33PvXtNZnXDMjsz9/Pce+58RQsfcAJnX4ohntDHHQY89bhi7SXXGnMsscICU72NUVKyQuAt4AVeT1vKFvwcCuqmyE0rPo/4yf+Ympz+hUUq1MZz/cBOfUoktHX0KmgXiM1hxNuct8PMnvc1NkQ2Ve2OPhv19fir8b3hyXkbq9WaspKWzrItNbLUVyGLKw+UOUz0H14xeEYKZi/W9U5eo8v+XeGefRwQeY9d7ddsRozwxxAH9qxQLILKayVBcYn2mXtBmWM8yRb0vsAD7R3O2LOqR7l5CracePfd7pv8Y6SZaYZ1xExzb0rjsNRa92iLiNu4Jn/EbWq1NjO3Ve5kF1nQmvMao3PeZwecTt5lrZmr9IifS/ZuxL7dkZ8LxVdq5mB/kex4jn1u6TWkvEtue9zF7xMydHDOWc3whf8OPtd8Hml9r28pIwtOfTrEk9Ws5NzC91eULdwoOxV7gwYOxKrN2ZaZ+MZV2SfmkUST0FYuZ/T5xcy/VXul07RiP6sZ6zdaZ7R+Q7SgZsO4Y/a0/oqruQnRbB3KK07qcyFRh9R4rSqxKvfzJxmWNu37OCn3f4oyMZTVixe+bpVnyXXaWPGN1nZmPUvJx4Sv4VRR/AcKMsGrBgUAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>35039b3f-9fb5-4fa1-bc91-3662731616b2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>35039b3f-9fb5-4fa1-bc91-3662731616b2</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HostName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>25dea94f-561c-4303-b30f-2652c20ee18e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>25dea94f-561c-4303-b30f-2652c20ee18e</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>j7/qytvvvCkEqxVfBhgSXuUom10=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

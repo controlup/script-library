@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>64984941-983f-4df5-bfb5-aa0f1f07ce21</SBAId>
+    <RootSBAId>f6fc006f-69cf-478e-8a0c-c2305013fd94</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637049607675306102</SQN>
+    <Name>MS Patch check for Citrix</Name>
+    <Description>This script will check the target computer to see if Citrix's list of recommended Microsoft patches are installed for Windows Server 2012/2012 R2. This helps with Best Practice baselining.</Description>
+    <Category />
+    <Version>3.2.6</Version>
+    <DateCreated>2015-10-13T17:21:10.767</DateCreated>
+    <DateModified>2019-09-24T19:53:08.35</DateModified>
+    <DatePublished>2015-10-13T17:21:10.767</DatePublished>
+    <LastEditorName>ebarthel</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>/Ar6AUNbEa5nnipYuxoJcB86pmU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>ebarthel</Author>
+      <Tags>Citrix, patching</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Christian Edwards and Niklas Akerlund
+Taken from:
+Reviewed by: Esther Barthel, MSc</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ebarthel@virtues.it</ContactEmail>
+      <Notes>Reviewed by Esther Barthel, MSc, including a code update.</Notes>
+      <DownloadCount>218</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>daae721d-59a9-4755-a9dc-89775f5c912f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>daae721d-59a9-4755-a9dc-89775f5c912f</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>34353c5a-7277-4d49-9ff6-9cede952c4b0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>34353c5a-7277-4d49-9ff6-9cede952c4b0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Only display 'Not Installed' patches?</Name>
+                  <DefaultValue>yes</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(yes|y|no|n)$</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>juKkrw6zGj74WvTGSBbonbGh/+I=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

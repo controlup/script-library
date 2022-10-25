@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>110f387a-908b-4116-9a95-30ae87fea092</SBAId>
+    <RootSBAId>1081dfea-8c38-4e93-9351-9a9aa068e992</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637266050795024301</SQN>
+    <Name>Show Chrome and Edge extensions</Name>
+    <Description>Search all local user profiles for Chrome &amp; Edge Chrome extensions in the default location for the default Chrome profile and produce a list of them with the name of the extension and the count of the number of instances</Description>
+    <Category />
+    <Version>1.1.6</Version>
+    <DateCreated>2020-05-21T12:59:17.863</DateCreated>
+    <DateModified>2020-06-01T01:42:22.543</DateModified>
+    <DatePublished>2020-06-01T10:40:59.047</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>lm1NMkyu1k8jMOfrjzCBv3zCtAE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>chrome,edge,browser,extensions</Tags>
+      <Credits>Credits to: guy.leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>103</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>QmGAFDSLyGc4iByZGX+I7yfBv8U=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>33e46265-0ad0-42bf-a1f6-c4d820c64bc1</SBAId>
+    <RootSBAId>d3c38c5d-786e-4b95-aca0-66600bf7daaa</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637140807932040800</SQN>
+    <Name>Disable or Enable Citrix Published Applications</Name>
+    <Description>Enable or Disable by name, or name pattern, with the option to message any users currently running the apps and/or terminate them after a specified grace period.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2019-11-04T20:31:20.247</DateCreated>
+    <DateModified>2019-11-04T20:31:20.247</DateModified>
+    <DatePublished>2019-11-04T20:31:20.247</DatePublished>
+    <LastEditorName>Guy.leech</LastEditorName>
+    <CreatorName>Guy.leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>l6x9HHYl8B/EnV+IYUSOiwjPdI8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy.leech</Author>
+      <Tags />
+      <Credits>Credits to: Guy.leech
+Original code by: Guy Leech
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>52</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>cb4cefe9-d911-4114-a04b-554376a20a2c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>cb4cefe9-d911-4114-a04b-554376a20a2c</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Published Application Name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>db4e3bc2-aa25-4274-9b3a-4c91f6873468</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>db4e3bc2-aa25-4274-9b3a-4c91f6873468</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Operation</Name>
+                  <DefaultValue>Enable</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^Enable|Disable$</ValidationString>
+                  <ValidationError>Enable or Disable</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>0da863e9-bdb5-4c25-abf1-f318596d2e01</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0da863e9-bdb5-4c25-abf1-f318596d2e01</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Terminate</Name>
+                  <DefaultValue>No</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^Yes|No$</ValidationString>
+                  <ValidationError>Yes or No</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1833330c-4fbf-4342-add4-106568d14670</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1833330c-4fbf-4342-add4-106568d14670</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Grace Period (Seconds)</Name>
+                  <DefaultValue>60</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d*$</ValidationString>
+                  <ValidationError>Positive integers only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f13bb024-490b-4a63-a48f-2f2a71abaee4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f13bb024-490b-4a63-a48f-2f2a71abaee4</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message Text</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>c8f30332-a9af-49ec-8404-0a9d46b27f0a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c8f30332-a9af-49ec-8404-0a9d46b27f0a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message Title</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>LqmHS736hKQKoohSGNxKzS5cqzc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>66e28a4e-ca0c-484c-bd1c-6564bf2c5cc4</SBAId>
+    <RootSBAId>97fa5191-2879-4ce0-a766-b1345a1ea67c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637186740811942078</SQN>
+    <Name>Logoff Horizon User</Name>
+    <Description>This script finds a user session based on username and machine. This user is then logged off, even if the session is locked.</Description>
+    <Category />
+    <Version>1.25.42</Version>
+    <DateCreated>2020-01-26T13:36:00.55</DateCreated>
+    <DateModified>2020-02-25T18:06:07.217</DateModified>
+    <DatePublished>2020-01-26T13:36:00.55</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>4dn8+jhRxcJp80zKpuTN6c/7Ye0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>horizon,view,logoff,vdi</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>82</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4352</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>c046d107-41b0-4ca7-b0d6-7ac6d3e5c734</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c046d107-41b0-4ca7-b0d6-7ac6d3e5c734</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Ignore certificate error</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please set to True or False. If True certificate errors when connecting to Horizon will be ignored.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2263f578-5f6d-4c27-84df-a83def68158c</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2263f578-5f6d-4c27-84df-a83def68158c</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sServerName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d9d57cc9-f291-4b7f-9b7a-42d6ce2031f6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d9d57cc9-f291-4b7f-9b7a-42d6ce2031f6</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5b36ea00-77f4-49d8-8b25-234d159ca669</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5b36ea00-77f4-49d8-8b25-234d159ca669</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Primary Connection Server FQDN</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?!\s*$).+</ValidationString>
+                  <ValidationError>Please enter the name of the Connection Server this machine uses.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>l67lU4tOToiaYvcNs1PQuX0Q6DM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

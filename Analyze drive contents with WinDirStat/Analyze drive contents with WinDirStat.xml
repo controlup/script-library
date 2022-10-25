@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>1d97b7e5-332a-4a06-9f34-875eb7104adf</SBAId>
+    <RootSBAId>3d9db578-976c-4eb5-9d0b-2ada2dee6d49</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636896328317715416</SQN>
+    <Name>Analyze drive contents with WinDirStat</Name>
+    <Description>Run WinDirStat (https://windirstat.net/) to analyze the usage of a drive.
+If executed for a Logical drive that will be used.
+If executed on a computer or session will be run for ALL Drives on that computer</Description>
+    <Category />
+    <Version>1.10.35</Version>
+    <DateCreated>2019-03-13T16:08:13.637</DateCreated>
+    <DateModified>2019-03-29T14:06:38.107</DateModified>
+    <DatePublished>2019-03-13T16:08:13.637</DatePublished>
+    <LastEditorName>mc</LastEditorName>
+    <CreatorName>mc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>gGYGcxC0+a3waSPsM0oj/Bm+zeI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>mc</Author>
+      <Tags>free space, disk</Tags>
+      <Credits>Credits to: Kevin from Wisconsin
+Original code by: Marcel Calef
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Marcel.Calef@ControlUp.com</ContactEmail>
+      <Notes>This script will run WinDirStat on the ControlUp Console computer and automatically look at a selected Logical Disk or all disks if selecting a Computer or Session
+</Notes>
+      <DownloadCount>390</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>33558784</AllowedEntitiesEx>
+      <AtomicEntityEx>33554432</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVUTW/TQBCda5H4D1aFEZXalHJAKFIRVQMUKVDURIJDLiZ2U0t2HNkJaTnw23nz9sOO4wR6QCt71zPjmTczb+edvJdLuZJrCfB8wHoqT+QG0s+QmHUhc4kkkwf5JQm+Y0mllJ88T6WAdomzvitI1tAu5Q6nbzjNZUDrEWQRnm3vN7KCVbd1IC/gaYm1gO++nGKtaWcwVNauB0mC/VSO8M8SmALIN1ErJt1X+CuSGc+F3NJScyrhUXPqdWD8RLtE7vFM4UHzjSG5hYfSehjiPIOPKaM2PZrYJh9Fn1H/w6NRX4+JWrBeka1+jtoYXUmdvtVnhZVa23bU0tbc4b8A+iH2gcdc+Tg19nY0RazPCKjHtIwgnbETly3bcwnlbMO6jvUF/+XY1eaV9+pqcUWvMaPH7P2s0c1mdSJkl1G6IOK7jQ6tyIucGu2SyqY8a57KriY65/er9XQuh8ipLxNISna6JOoANyZl1IpsvZc38hosnHTyuVvas9EOfe6p73xKjgeoTBtRyHhqHbSWu9G9vVpFXpAH8U7/kdXW/DF8DXjH6+oOGlwPOzobeja1eaH2+3gTMocDrI/APCZuw15jmVuMxuqIVcssxsBXSP+v8+7hOZO38tyybVvrVvesMZUKoCl8FUwdoz292h/x3/A01wBR14iaYY/sNCpZk+CRM7Mr+ndMn7H/dnex7kHMfibgUMZp6urvGHzAd39Pr9xNq+fkkHjqebHNo778lpdyDLyOF5tcb9bNRJ77idHdFV0nnART6BaMvmJOqplg/Y2fatGdQyjPLCpXv5H1VU/T3N+xCogKxo7Zwcjep5KMTvBd2fnvZl8FHxpXUR9ztq/o2fFSO3WCKl5bFLsq8L/zN0zoZszu/g2s/R8fKj8coggAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>9b1f7549-5559-4140-9741-42a0f27d6099</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9b1f7549-5559-4140-9741-42a0f27d6099</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>Computer</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6663ab5d-57e6-49c9-8bd1-bb2446bacb33</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6663ab5d-57e6-49c9-8bd1-bb2446bacb33</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>DiskName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>qWAx1gmZM6JtH+uXU+UlFfzT5P0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

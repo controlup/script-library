@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>aa3d8150-a2c5-4c36-8668-58580e2d2d9c</SBAId>
+    <RootSBAId>a6670544-fec3-48b6-a456-4ba073719e4f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636237183419848000</SQN>
+    <Name>Reset Receiver Client</Name>
+    <Description>Resets Citrix Receiver in VDA session.  Requires cleanup.exe and selfservice.exe.  It can take a little over a minute to run.
+* Resetting will delete all apps, desktops, accounts, and configurations, and return Receiver to default settings. It will also close all active sessions. Only reset Citrix Receiver to resolve serious problems.</Description>
+    <Category />
+    <Version>2.2.6</Version>
+    <DateCreated>2016-08-11T12:25:50.193</DateCreated>
+    <DateModified>2017-02-26T15:03:55.617</DateModified>
+    <DatePublished>2016-08-11T12:25:50.193</DatePublished>
+    <LastEditorName>David Ott</LastEditorName>
+    <CreatorName>David Ott</CreatorName>
+    <Status>4</Status>
+    <CheckSum>mEKP8+RJHYeMQRkzuIQCSUJ8jcE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>David Ott</Author>
+      <Tags>Citrix, Receiver</Tags>
+      <Credits>Credits to: David Ott
+Original code by: David Ott
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>dlott@ifgcompanies.com</ContactEmail>
+      <Notes />
+      <DownloadCount>153</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAO1WTW/TQBCdMxL/wZhItBKOlAtCCJAQaqESh4iAeqmEUsdJLNLU2A5tVfrfefNm13Zqp4RSKg7I8seuZ9/MvJndmZfyuLoeygMZSSy5pJJJKYEs5BTXVynwPcVXjneM2UTGspQVpPr4PscdcGaCd4HRAtL6zuU7sGJ81XIp5AKgzzma4DnF2hXWqMaPGKt8ipUJ9al8gX9jSCy4IsW8SpW06ALYAa4D4HjcC9qTU8MxpHTWPFg5K1NqO8NbUdXzjPrMyxOuD5yepjU6o56V8pTrxw7Js2MjtUzn1PYU8nNKe4bMRmUhg5x5VThvlI0cX0uMm351/Q+IHeD7lKOY86p1Bj9VdkL/LypNGgsdma2GpL5a5EusUnZPW/zUOo5drI+ZBd5T70efSHVGveZYb/NiRz6Rv1IiGQLF4vJE3soLOcKM2jPDc0yr9qk9oY87yJ7n8kx2Ib2L8SVRA3f1rmVlIK9wv2OcIqDPiTSBFSXmTn5b5xGklRHdGedYGwDVMlV5LsjED9yHjKzl3SWs+gJGlkROuCaRb3iHG/ZQKFcOx/aQ5biu28P/zOWPWWzZWjKaU+6eRaVpnZnu/fivM3TzKXKXTCnSHuYKZ9Pfzqv/uXQfrNxn/vgzLnVnXDtrvF09ztiJGrlTeDOr7VXtk++QjCnPkbwHYkE/QpyzVl9zYqxczdR6YAwor2V1jhdS10t/0q9Xy5tqduZO8j70bmPb0LFjUY2JGqPLMA1jV8v+rMvw3qx3D8ZA1ojrgv3Dut2aA1b/Btci3ANOVp0DI+LmrpopZkwui86TI5I3kNHKfMLqX8oH1m/jJGrIf3Ze6ZrC7RCVDzkzJHMFI5wDTe06dH1Ilx1mcR//Jx2Z6v8mzmftISYu+5Z8h2Ah7Mi8s0Z0543otju4umfSuK3w19vn91M7Bt6ywVZcb95BN3Ne918Re90ZO6jNPNeZ/Su+B/DowDF+xV3XXWFux+KU+i2fH22VvdcjPrjTmI+q7nS/0Z0OHbuJ27HdkQ9vzZHH1z0+cznStmK/wdU2TP0EjImPkBINAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>xnRAdnaDfzlDFItguH5JlqDRG7w=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>876ce041-fd42-4321-9ac3-f64748eed970</SBAId>
+    <RootSBAId>0a0684df-5f03-4f6e-a620-71e731e9d7c0</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637895919918270161</SQN>
+    <Name>Find hardware device problems</Name>
+    <Description>This script gets all the computer devices and checks the status.</Description>
+    <Category />
+    <Version>1.1.5</Version>
+    <DateCreated>2022-05-23T20:00:52.48</DateCreated>
+    <DateModified>2022-05-31T10:25:16.697</DateModified>
+    <DatePublished>2022-05-31T10:24:50.143</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Joel Stocker</CreatorName>
+    <Status>4</Status>
+    <CheckSum>7CaZECZjYMM4CpBEHn8dvOdZ46w=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwwAADsMBx2+oZAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAL1SURBVFhHzZY/SHpRFMctjAzTIsFE0i0bKgoCxdoDCTddXUStPWgMGhtsjAhamhtFaBLBtSFoCNpCMAeXxFLRV+d47+ne+/74hH5/PvDF8+/ec3y+97wO7R/z/w4wMzOjORwO1NLSknZ0dKR9fn6y7GTs7u7SXnd3dyw6wvIK8EWistksy9pjbm4O12UyGdrj9vaWZccMMBgMaJGoZDLJKqzhzYGDgwNpD47lAMDHx4e0kOvp6YlVGONyubAO2NvbQ3t7e1tLpVIUB8gqFArM0vP+/k6NudLpNMvqEZvz339lZQV9n89HOYAsCMKNZkYwGMQaUUbMzs5SLh6Po82bT01Nod/pdNAHpAFA+XyeRX64vLykvCgVsbn6zXlz9UnSDQAS7/Tr62spJ4pzcXEhxWKxGNqhUAh9njN6jGkXr9dLhaBEIoH3hRgTBd8IgMvJYzs7O9r+/j7adpoDNECxWKRiu+I0m00pHo1GMc79breLvhE/u3wjbmJXDw8PuDYSiVAMBvD7/WhbNQekAQB+I9kVMD8/j7bH45Fy/X4f81boBgBubm7o5WElYHFxUfJbrRbauVwO/XEYDmDG/f291GxhYUHyj4+P8bPRaOCnHSYaADg9PcVPtTn/zdfX19G3y8QDAG63W2q+vLxMPigQCGDcDhMPIJ4TALW5qOFwiDVWTDSA2nxra0tqaKR6vY61ZtgeQGze6/VY9HsDoZmZHh8fWbUeWwOIzdUXC3/sxunq6oqtkBk7gNPppE3M3movLy9SMzPBYUTFcIBqtaqdnZ3RkQo07pVaLpelZmZaW1tjK0boBnh9fdUtGtecAy8ide3q6irLatrGxgbGzs/PWcRggOnpaWmDk5MTlrEHPwtwqahxqQKaiYtBZjePFeFwmNarqHGy2u02JblqtRrLTg4/mMIfG0f9LwHIEi89nOF/A74fXBHxvFCpVFiFMMDh4SEmn5+fWeR32NzcpMagUqnEMiN+rsUf5u3tjVkyf20AYzTtC+X1Ba0r2uLqAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Joel Stocker</Author>
+      <Tags />
+      <Credits>Credits to: Joel Stocker
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>52</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>69888</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>sR1oAbmvsVvjXVr0siXegQvrcYI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

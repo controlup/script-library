@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>26292ff2-240e-4d51-9518-0de1ddd851b9</SBAId>
+    <RootSBAId>77da3db5-6147-4339-92ec-3dc647289ab8</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636898043872787167</SQN>
+    <Name>Get VM Snapshots</Name>
+    <Description>This script retrieves the snapshots from the selected VMware virtual machine(s). The script requires VMware PowerCLI to be installed on the computer the console runs on.</Description>
+    <Category />
+    <Version>9.13.33</Version>
+    <DateCreated>2016-12-21T12:58:50.733</DateCreated>
+    <DateModified>2019-03-31T20:34:55.017</DateModified>
+    <DatePublished>2016-12-21T12:58:50.733</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>QBhwi1RBFIDW3VCp7bhZQ+6+WAo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>VMware, snapshot, PowerCLI</Tags>
+      <Credits>Credits to: Ton de Vreede
+Original code by: Ton de Vreede
+Updated by: Gal Goanis
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>121</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>8f9b8fbc-ee75-4121-ab1d-b10314799e92</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8f9b8fbc-ee75-4121-ab1d-b10314799e92</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3f777865-fb73-41cd-b89b-fc2da4e100c1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3f777865-fb73-41cd-b89b-fc2da4e100c1</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6fce0a52-19d2-4897-a6a4-d6abb4ad755f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6fce0a52-19d2-4897-a6a4-d6abb4ad755f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>vCenter server</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>1xVxRvIo7x+jQMBWX/YaEva2od4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

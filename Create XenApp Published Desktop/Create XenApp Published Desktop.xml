@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>2372528c-8e06-4582-9aa8-292d7734f50a</SBAId>
+    <RootSBAId>c8d50b0f-c031-4595-94f7-df59f4d45749</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635399814246563210</SQN>
+    <Name>Create XenApp Published Desktop</Name>
+    <Description>This will create a new XenApp published desktop. Please specify which domain account or group will have access to the desktop.
+</Description>
+    <Category />
+    <Version>1.0.2</Version>
+    <DateCreated>2014-04-10T07:17:00.253</DateCreated>
+    <DateModified>2014-04-10T07:21:02.663</DateModified>
+    <DatePublished>2014-04-10T07:17:00.253</DatePublished>
+    <LastEditorName>Andreas Roback</LastEditorName>
+    <CreatorName>Andreas Roback</CreatorName>
+    <Status>4</Status>
+    <CheckSum>3QOvx2vTDAvEfIeEfTJUKHMuBtU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Andreas Roback</Author>
+      <Tags />
+      <Credits>Credits to: _ansv7528
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>andreas.roback@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>151</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>QQBkAGQALQBQAHMAUwBuAGEAcABpAG4AIABDAGkAdAByAGkAeAAuAFgAZQBuAEEAcABwAC4AQwBvAG0AbQBhAG4AZABzAA0ACgANAAoAJABhAHAAcABuAGEAbQBlACAAPQAgACQAYQByAGcAcwBbADAAXQArACIAIABEAGUAcwBrAHQAbwBwACIADQAKACQAYQBjAGMAbwB1AG4AdAAgAD0AIAAkAGEAcgBnAHMAWwAxAF0ADQAKAA0ACgBOAGUAdwAtAFgAQQBBAHAAcABsAGkAYwBhAHQAaQBvAG4AIAAtAEEAcABwAGwAaQBjAGEAdABpAG8AbgBUAHkAcABlACAAUwBlAHIAdgBlAHIARABlAHMAawB0AG8AcAAgAC0ARABpAHMAcABsAGEAeQBOAGEAbQBlACAAJABhAHAAcABuAGEAbQBlACAALQBGAG8AbABkAGUAcgBQAGEAdABoACAAIgBBAHAAcABsAGkAYwBhAHQAaQBvAG4AcwAiACAALQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4AIAAiAEEAZABtAGkAbgAgAEQAZQBzAGsAdABvAHAAIABmAG8AcgAgAFIAZQBtAG8AdABlACAAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AGkAbwBuACIAIAAtAFcAaQBuAGQAbwB3AFQAeQBwAGUAIAAiADkAOQAlACIAIAAtAEMAbwBsAG8AcgBEAGUAcAB0AGgAIABDAG8AbABvAHIAcwAzADIAQgBpAHQAIAAtAEEAYwBjAG8AdQBuAHQAcwAgACQAYQBjAGMAbwB1AG4AdAAgACAALQBTAGUAcgB2AGUAcgBuAGEAbQBlAHMAIAAkAGEAcgBnAHMAWwAwAF0A</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7e2f79ba-22da-472d-97a2-ace9d87583a6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7e2f79ba-22da-472d-97a2-ace9d87583a6</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3a2028be-2289-46ab-9970-ae06a3b63a70</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3a2028be-2289-46ab-9970-ae06a3b63a70</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Domain Account/Group to assign to the desktop</Name>
+                  <DefaultValue>domain\account</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>f//XlpaGssZ4CD3WYTHzR3kaT5E=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

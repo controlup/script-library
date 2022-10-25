@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>8a4c0a64-0008-47ce-b186-2539e7c5dd0e</SBAId>
+    <RootSBAId>895c8b92-5648-4536-a2bd-b66b95097063</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637513076923525325</SQN>
+    <Name>Check Citrix Teams Optimization Readiness</Name>
+    <Description>Citrix HDX Optimization can improve the user experience for Teams video/audio use.
+The optimization will also significantly reduce the resource consumption on the VDA.
+
+Please report any issues and feedback </Description>
+    <Category />
+    <Version>2.9.24</Version>
+    <DateCreated>2021-01-04T19:56:05.697</DateCreated>
+    <DateModified>2021-03-05T17:37:23.047</DateModified>
+    <DatePublished>2021-03-05T17:38:01.043</DatePublished>
+    <LastEditorName>Marcel Calef</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>RsbmoMM6NSkC87sVEBAmJ0lv2RA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags>hdx, citrix, vdi, microsoft, teams</Tags>
+      <Credits>Author: Marcel Calef
+Built form Citrix and Microsoft Teams Knowledge base articles and field testing
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>marcel.calef@controlup.com</ContactEmail>
+      <Notes>2021-03-05 update to support Citrix Workspace App 21.mm.x.y  (or any 2*.mm.x.y)</Notes>
+      <DownloadCount>413</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>6a13b664-80a1-4724-848b-e6f7985a6cf8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6a13b664-80a1-4724-848b-e6f7985a6cf8</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>xdProtocol</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>33f68892-40a1-4b05-ab88-760e44f5a4a3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>33f68892-40a1-4b05-ab88-760e44f5a4a3</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>c448e56e-b49e-45bb-8ded-7c329a138dfa</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c448e56e-b49e-45bb-8ded-7c329a138dfa</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>xdPersisUserChange</Name>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>601ef9ee-257d-486a-ac35-4cda768f7806</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>601ef9ee-257d-486a-ac35-4cda768f7806</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>XDeskVDAversion</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>28ee6033-9975-44b0-b15a-447ad848061b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>28ee6033-9975-44b0-b15a-447ad848061b</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>citrixReceiverVersion</Name>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>1b18fsX4YGO3/o8d1nNVaVrIvfI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

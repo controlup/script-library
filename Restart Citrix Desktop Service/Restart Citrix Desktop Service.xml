@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>4ae1c37a-70a3-48aa-b2a5-fd9fa6367787</SBAId>
+    <RootSBAId>f8c88770-b720-4342-8e04-0c94bc83c34f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637516869112249541</SQN>
+    <Name>Restart Citrix Desktop Service</Name>
+    <Description>This is a simple script that restarts the BrokerAgent service on a Citrix VDA. This is useful when VDAs become unregistered. It forces them to try to re-register to a Delivery Controller. In some instances a reboot of the VDA may be required, for everything else there's this SBA!</Description>
+    <Category />
+    <Version>1.1.8</Version>
+    <DateCreated>2019-10-23T02:12:24.223</DateCreated>
+    <DateModified>2021-03-18T16:19:08.093</DateModified>
+    <DatePublished>2021-03-18T16:20:25.903</DatePublished>
+    <LastEditorName>RMonaghan</LastEditorName>
+    <CreatorName>Rory Monaghan</CreatorName>
+    <Status>4</Status>
+    <CheckSum>axTfopUp2zw8jdawohfuvCrSiS0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwAAADsABataJCQAAA4VJREFUWEfVV0tIW0EUjfkr5h90ISpKBXVla4KiO0GSQuOiIa2gJa7UisVFtRvBjZjqwiB2J2KLbloEQbS405WIibix2HbT2EJ/EGgWaSOa9va8aRKNGc3HJ8UDh3NnXmbmzr3zi+TaoqurS6HT6cxGo9E0MDAgj1VfHYqKirRKpdItl8tfyWSyQF5e3m9Uk0DYx1Kp9D2+vVCr1c7S0lI1ayQGTCaTXqFQPMUgIRTZgOkIZ76hzVBJScnlHMFsbmPgLzC5A6WjEJX8/Hwr7OyhUqkGIYkw50pMIIK+7sPOHMj1Ewi3wxwZhRP3oOmBsDsgl575WSISvwoKCm7BPh/YVib88DtMbieXJdbEm8rKSiVsPrCNvBBuY7GI9D6CpsJsNguz/wmT21AsIgqfampqUg8u7NuHEG4jsYl1ZoMmA6fbawi3gcCJiQmyWCzcb9kSqX4GPcHGxoYEoQnC5DaAc7S1tUVOp5P7PVuiPz/0BFVVVUZI4gdwhjweDwUCAdre3qampiZaXV2lvr4+2tnZSbC7u5up3++nmZkZwi5iZYfDQT6fjxobG2l2dpbGx8epo6ODDAZD3IEf0BPguLwBSTjQ3t5OkUiEenp6aGxsjGpra+ng4IB6e3upra2Njo6OaHh4mKxWKwno7+9narPZmNbX19Pk5CQFg0EKhUJUVlZGuKDYxGJj/EHUpdB/wAGR5MDo6Cibwek6wYHOzk6WDsG5lpYWws5hA+7v79Pe3h7h8mFlwYGGhgZmr62tJfUTY7IDZ1PQ2tpK0WiUpqenaXl5mex2+4UObG5u0vr6OhUWFrKyEPrd3V1aWlqicDhMLpfr9OCpKeAtQmGwlZUVlsPy8nKampqi5uZmFsa5uTmWFo1GQwsLC1RXV0fz8/NsrSwuLpLb7Wa/0Wq1LPder/d0+AUHfNBkoPLCbZgJhTwfHh6y6PC+x5myDQWIcRChY7Zw9Xo993uc3IModhSHYXIbiUWk4mN1dTX/DflfLyMBeOEar/o6rqioOP86FoD83IFcyYMEB95N2OmB59MQhNtRjhSeZC5o5kCDx5AoyOswY2Lm2T9K40A67OjgM0xu5+mInL9F2C2wcwfWpQ67wwNHsvlj8hXnyiDuBhXK4qC4uFiDLfQAJ+ZL8AMcSqQH9jHq3sHR54jaXdx+4g18HnA1K3DWmxAhw8jIiCxWfd0gkfwFSqQx0qj8r3YAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rory Monaghan</Author>
+      <Tags>Citrix Desktop Service, Force VDA Registration, CVAD, XenApp, XenDesktop</Tags>
+      <Credits>Credits to: Rory.Monaghan</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>RMonaghan@honorhealth.com</ContactEmail>
+      <Notes />
+      <DownloadCount>198</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAMVWa4vTQBS9X1fwP8SusC603e+LCnUfUpS6tIvgxzZ9Yh6aTLcW8b975swjTZq0WxBkSDOZO3PvuWfO3OlbOZeX8kICOZOujOSbDOSLPKDXx2Ms5fYoS1lJjl4uoWTo/xCFL4XxMXuZzGBT+Mrwm1vbDO8PGEnlO/qZ9GSBd8IVOUee4CvkvBTjAdYHcoMxxSi/8PVVbrGuS1xnaLv4urDdAfONDIH9ATj7yGRwJAfzOyaGlcTIJSKC/5fbPro1fczxjvC1YbzEr9AzJhgJ4TlmhDWsGueC6xXjz2RK33Vs9IlzjvUZMRZZxeyl/M1k67+0v85eDGfVud1iJILtiZYts03JiGYpIssZEfWZS+7Rr/BtGE48mrGNOcGslGhT4C24N0wE8DBmrAlH9YqfYGNl82835G8yDzDHoVXcgQTZBcwjpz8TTfu68ByZHRph93vyyuvS+C2rU5+rRyq0SZH7ugs5GkJVuWdXYzE87TJQVdkMmjI7k1uW51yjvU7hx/CakM22t2zwjqiyOZhcsbeA3zG9GgVG4OewkgovY3KXljI5LQ/Db0ZNJ35PzH4Z9NXszAp9Xt3JMKdF77L2YnQwQV9V1iRWW9VoVW60AhTmZPYk1zERk+Ec1oXVTmq1bdSmT9aWiHary2EWHL6QsTNbYSIqvoy54OQ5+gh41qY+znH/7ZLnQrF1TJR5K2pnE7am6v4ZGQ3kU22Me6uImG9XRRzTmtuVrbsZdVxUq+taf64tMUchs2u5QtuwdVlpi0q2hr1rq6/29XzUI3KxtWgNnjVPSj2qMhpFZpWtvQ7BFVHpGhYTpUN0Lu99/3WF8QFQmNr7Dk+r4SZr+fVGWW/kI89BB3mUtdXsv4P6l1mEPdiKfRlRJYXi3G2hmVlj/BJzfu/x65CcjuWS/3YUtbGm6ju8LQLU9mFJ6xcNsV0bllR9Ghv3/s6tev+D587fPM3RNzx7ivfxEt5ynqzWgaj/rjJ2dzRR4HYjxzI4HblDUeBt7UT7C+G1aO/KCgAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>+nPhICKDgJcMGhiWuBiP5Cf09a4=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

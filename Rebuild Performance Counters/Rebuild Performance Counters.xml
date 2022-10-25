@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>99e52405-4013-452f-be83-0338589d50ba</SBAId>
+    <RootSBAId>6335d70e-3e41-4586-b264-3dada9ee869c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636219824814808000</SQN>
+    <Name>Rebuild Performance Counters</Name>
+    <Description />
+    <Category />
+    <Version>1.2.3</Version>
+    <DateCreated>2016-07-18T06:56:42.797</DateCreated>
+    <DateModified>2016-07-19T10:39:55.327</DateModified>
+    <DatePublished>2016-07-18T06:56:42.797</DatePublished>
+    <LastEditorName>Gerald Waite</LastEditorName>
+    <CreatorName>Gerald Waite</CreatorName>
+    <Status>4</Status>
+    <CheckSum>w8YnR+dHkCOTsLnS4vFR1x74Bl0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Gerald Waite</Author>
+      <Tags>Perfmon</Tags>
+      <Credits>Credits to: Gerald Waite
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>gerald.waite@mckesson.com</ContactEmail>
+      <Notes />
+      <DownloadCount>590</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>bABvAGQAYwB0AHIALgBlAHgAZQAgAC8AUgA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>cGFgr2dFf1zMmwhswMkKsZRgyGE=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

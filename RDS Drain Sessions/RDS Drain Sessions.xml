@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>36eceee8-8aa8-4880-9bbc-f90d876dad62</SBAId>
+    <RootSBAId>72e0a99c-7966-41fb-91a4-401aad816ced</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635948510355392000</SQN>
+    <Name>RDS Drain Sessions</Name>
+    <Description>Puts RDS hosts into maintenance mode using the chglogon command. The script will disable all new user connections to the server until it is rebooted (existing active connections are not affected).</Description>
+    <Category />
+    <Version>1.0.5</Version>
+    <DateCreated>2016-03-07T13:46:33.267</DateCreated>
+    <DateModified>2016-03-07T13:53:56.837</DateModified>
+    <DatePublished>2016-03-07T13:46:33.267</DatePublished>
+    <LastEditorName>david.crook</LastEditorName>
+    <CreatorName>david.crook</CreatorName>
+    <Status>4</Status>
+    <CheckSum>VnoqNbJdjuvP63P9lJL3GTxkvo0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>david.crook</Author>
+      <Tags>RDS, Maintenance,</Tags>
+      <Credits>Credits to: david.crook
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>david@fultura.net</ContactEmail>
+      <Notes>Quick script that will put remote desktop servers into maintenance mode using the chglogon command.
+The script will disable all new user connections to the server until it is rebooted, existing active connections are not affected. 
+</Notes>
+      <DownloadCount>219</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>YwBoAGcAbABvAGcAbwBuACAALwBkAHIAYQBpAG4AdQBuAHQAaQBsAHIAZQBzAHQAYQByAHQADQAKAEAAZQB4AGkAdAA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>cxm98PX072uj7woi/8r7T1YSIlY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c22f63ce-41a5-4693-adc7-62f2a93e2f59</SBAId>
+    <RootSBAId>9632cae2-792f-4e87-8bd3-910d5dff0dea</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637211702693402236</SQN>
+    <Name>Redirect URLs to 127.0.0.1 in HOSTS file</Name>
+    <Description>This script can be used as a quick way to block access to a URL. The provided URLs (comma separated) are placed in a 'ControlUp' section of the HOSTS file, where they are directed to 127.0.0.1. As a result DNS lookup of these URLs always point to home, essentially preventing access to a website unless you know the IP number.
+After this the command IPCONFIG /FLUSHDNS is run to clear the DNS cache.</Description>
+    <Category />
+    <Version>1.4.19</Version>
+    <DateCreated>2020-03-30T00:06:26.7</DateCreated>
+    <DateModified>2020-03-30T15:50:39.883</DateModified>
+    <DatePublished>2020-03-30T13:00:32.047</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>D6FwnTG46LcxErGp5MmiHF8FWfk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>ip blocking, hosts</Tags>
+      <Credits>Credits to: theartvark
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>28</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>49a67a7e-8aec-4d0b-8377-c1b9a433f594</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>49a67a7e-8aec-4d0b-8377-c1b9a433f594</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>URLs to redirect (comma separated)</Name>
+                  <DefaultValue>youtube.com,netflix.com</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>uQaw+6Pv4gDmZya+9/jYeXo1dYM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,15 +1,14 @@
 ﻿# Name: AVD Get Hostpool Session Hosts
 
-Description: This Script Based Action allows you to retrieve all Session hosts in a specific Hostpool.
-README: https://support.controlup.com/hc/en-us/articles/360011378518
+Description: Gets the AVD Sessions hosts in the same pool as the target machine/session.
 
-Version: 1.3.3
+Version: 2.4.8
 
 Creator: Esther Barthel, MSc
 
 Date Created: 07/10/2020 21:10:21
 
-Date Modified: 07/22/2020 21:18:28
+Date Modified: 08/31/2022 12:42:33
 
 Scripting Language: ps1
 

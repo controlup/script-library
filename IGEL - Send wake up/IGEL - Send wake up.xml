@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c44449b6-363d-4dac-bdbc-79a534c3db78</SBAId>
+    <RootSBAId>8809a8ee-bfb6-4cb3-b320-6a39cc160831</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637351601089575668</SQN>
+    <Name>IGEL - Send wake up</Name>
+    <Description>Instruct the IGEL UMS to send a wakeup command to the target device using the IGEL IMI Rest API. 
+Note: Given that the common practice for the UMS server is to use the self signed Certificate, 
+          this script will ignore SSL errors.</Description>
+    <Category />
+    <Version>4.9.14</Version>
+    <DateCreated>2019-12-12T17:07:38.883</DateCreated>
+    <DateModified>2020-09-08T11:07:50.93</DateModified>
+    <DatePublished>2020-09-08T11:07:58.263</DatePublished>
+    <LastEditorName>yoni.avital_test</LastEditorName>
+    <CreatorName>trentent.tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>+QjsJq41SQMCkVmKGGU7PawMjds=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDAAACwwBP0AiyAAAAsZJREFUOE9lU1tI03EU3kNPQY9CD0EP0YVCVMxeutFDhS8WUhQUBdEFrB60IOxGajcTtVBETU3RMs2clxQ1b3k3tznndM5tTqebu+rSOVGsr985W5PRgd/D/3/O9/3O+c73k1C4DN9h+pmNOVkepnvToG9/ArOiAJwUQbmpH0niJMM0mAW7ti6Qk1hGSjHV9Rwb6yv4vbEGl6EFA/lReBO3O1B06dR2GDqfcc0fUbNg7MBkyz1fXvn5DMbrbzJJ8vVdqEsNg7E3FXaNFNaxSj6zQzlQS68iO2EfOrIiOdeQFu4jUEuvQPbhGLLi90LxMRo2TbW4LQn6tocYLDgEZXkMjN0vYJ+owZwYS/oqDBXJoahMCfURNKZHIOHiTvTnRTFYJ4B0w9L8sJg5BdShvv0RRirPsQbm4SIUPz6A9Lt7fATj9TcY6Jpq5cKZ/gyseaw866p7Gm5TLxOSkCTuzMBbWJQlGKu9FtBIQqLQT9WX87CNV8FjVwsSG1YXjeL7K7pzDkLTEMfgOfl7Ph6HZpPAYx/D/OgnjFTEYskiF+0r4RVgGmOo6DBux+4QGtRi0dTjW7c8H+7Zvk0CAtPpEjfVpYajMzsSZ4+GIOZICLZt3YKJxjtYtqmgKItm8bTNCZhXlW0S0NpoBNKDbiFDTbbch671Ae+f2l1xajm3bFWykchwfrjoQLAZu1/C0PGUk94FAxd6HBOBUX6ZZVj3OuEytgmhM4OcKkRsx2j1ZczKcllpp74JKy4dZCUnRBeJTLbudTGRWVHILiRx/XBf0Fy0a4uqVPj9HbdLotIboG3QGE59M+ug+XYrGPwvZMXH0ZQRIUSKF22mw6lrhENbz6tVlJ1GnzAb1TjEfz8kOMh1ZBp6TOTQwsT9qHkdhubMCKiqLnDrpJG89OT/BPRYrOpysYFcFsr/OyhoO6tuE78R0kkikUj+AtfwkaM0rgwAAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>yoni.avital_test</Author>
+      <Tags>igel</Tags>
+      <Credits>Credits to: trentent.tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>yavital@smart-x.com</ContactEmail>
+      <Notes />
+      <DownloadCount>31</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7b8b229a-27ee-40b9-ab8e-7452e08446fe</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7b8b229a-27ee-40b9-ab8e-7452e08446fe</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>IGEL UMS Server</Name>
+                  <DefaultValue>igelrmserver</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ec65c78b-6525-4559-bd2b-a5ff244c9372</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ec65c78b-6525-4559-bd2b-a5ff244c9372</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Command</Name>
+                  <DefaultValue>Wakeup</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)^Reboot$|^Wakeup$|^Shutdown$|^Update$|^Details$|^Profile$|^Asset$</ValidationString>
+                  <ValidationError>Valid Commands:   Reboot   Wakeup   Shutdown   Update   Details   Profile   Asset</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e8c945a9-bb4a-443d-a3c5-ff8b5b6fc8dd</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e8c945a9-bb4a-443d-a3c5-ff8b5b6fc8dd</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Debug</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-verbose|.*</ValidationString>
+                  <ValidationError>Enter -verbose for verbose output or leave blank</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3f047165-fa4a-4324-aed0-b152e517b3e0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3f047165-fa4a-4324-aed0-b152e517b3e0</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Lw2ouxHU7uw3b+f9nY+4oyipuy0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

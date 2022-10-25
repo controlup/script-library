@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7dda8a0b-5da0-451a-b855-d27b912b100b</SBAId>
+    <RootSBAId>88ecef5a-12f6-4666-813e-351aea87d8fc</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053173897468000</SQN>
+    <Name>PowerShell example 1</Name>
+    <Description>Here are some tips and ideas for structure for writing PowerShell scripts in ControlUp!</Description>
+    <Category />
+    <Version>3.0.5</Version>
+    <DateCreated>2013-12-31T10:20:42.453</DateCreated>
+    <DateModified>2014-02-23T15:05:35.077</DateModified>
+    <DatePublished>2013-12-31T10:20:42.453</DatePublished>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
+    <Status>4</Status>
+    <CheckSum>0B5VCp8/n3HYnbxpuNROWgZAlNs=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Zeev Eisenberg</Author>
+      <Tags>Example,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>287</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>890e2d92-54be-48ca-bf67-7acae4688a0a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>890e2d92-54be-48ca-bf67-7acae4688a0a</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>yDlk6TCHMLFHPo3VhmiBJMmtWrc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

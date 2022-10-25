@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0c4701b7-2c6b-4aa7-9361-2133443be2f9</SBAId>
+    <RootSBAId>bd5fb858-da71-44c5-a0a8-87e0c116c9e9</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636807348054454000</SQN>
+    <Name>Show NIC hardware details</Name>
+    <Description>This script reports on the hardware and drivers of the network interface cards (model, driver version, etc., no IP or other configuration information)</Description>
+    <Category />
+    <Version>1.3.4</Version>
+    <DateCreated>2018-12-02T11:14:33.58</DateCreated>
+    <DateModified>2018-12-17T13:57:22.987</DateModified>
+    <DatePublished>2018-12-02T11:14:33.58</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>JzhnFkWnySty/CBMxUQFvLXEzL4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>nic,network</Tags>
+      <Credits>Credits to: Ton de Vreede</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>155</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>e5fe8477-ae8b-479a-9911-d3ae0c22e8a8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e5fe8477-ae8b-479a-9911-d3ae0c22e8a8</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Verbose</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please enter True or False.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>1AL2/Odnryh/254hdmxJqXGxvr0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

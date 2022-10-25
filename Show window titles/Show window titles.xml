@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>8ece8d2d-6cf2-457e-8e2b-55a3dbb727eb</SBAId>
+    <RootSBAId>3f77fe8d-bd06-4633-b7f0-1dd305122000</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636829778884836000</SQN>
+    <Name>Show window titles</Name>
+    <Description>Displays the titles of all visible windows running in the user session</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2019-01-13T11:53:32.173</DateCreated>
+    <DateModified>2019-01-13T11:53:32.173</DateModified>
+    <DatePublished>2019-01-13T11:53:32.173</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>BvAR/PkYk6jBpaO2SV3qDP863Ow=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>citrix,vdi,rds</Tags>
+      <Credits>Credits to: @guyrleech</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>423</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAIVV207bQBCd50r9B5dEAqTEAtSXSrSCturlAYoaSh4QqmhxYCvipPYGRGn/nTNn185usk1k2V7P7pyZOXPxvnTkuTyTzF8DuZGJ3GM1FCOlXPkviy8rt1JIja8RpBXeUzwn8pPSms8c0iOZYWWxqrAq8b6klgV2gfeMZ1VfsUvauQ72a49nsF/ylNupcNpwN+Nq7p2unU9j2LKtpqHdkgjqxR1ugygu5Qdj0cjD6A/gx0wegKO7BSK7gXRPdmRXXvFkR960WgY2t7D/AncXmBW01V7fsxPLc3kHufKhvmwT4TGyfgprlY9oM2BxSv7qFQwZMLHIsu7cIhanX+EeQ27J4ybt/msjOSeDVi7gr+orb4PIxmdaeB1FdA5eLhivszxHSeFq7Ba+6HNIjy3ZVcyXQNpptTqQHMJ35+tydRj54yMcBfITeJzJW+CPcKmmYnUpj2tZLW7JR7LRl0+QKs/byNA3xJnLV8Rzz7VDcN4W8h5v5bBsWalbThat5JEnA+/zerx8iZv/MZeOLm23QVpleZ4zza/WywPzttzjDu2Atd+weBKdyuQvJ4jr2gL7X9Bxv9hRWtGPrPeufIe/qTrrQ/abJ1ZVo9ZdyZVDOmJ3lxEfp+3cylDvTd+F3ZuOMMROTbl1vZxGVVY+BHOqD/+aWaQ2D5njSZC3htkpmbTsZ42+t8D4se/v3hoWerBvuDojYsNoDzYtM295euyr1c2IAhq1l8RxDtmhljkeUn8+zzfg1ST5l3Dz29V4PMmX/zMznwfDSZeefKvqZCOI4wkWlr6u7gYAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>905f9a01-ff82-4c98-8620-b467bc82012f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>905f9a01-ff82-4c98-8620-b467bc82012f</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iSessionID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>6wMENyd0P9mDhOctaQjkuiWzbqw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

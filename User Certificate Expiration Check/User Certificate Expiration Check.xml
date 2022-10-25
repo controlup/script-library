@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>3c3763c3-bb4c-4e5c-b0c9-493cede561e7</SBAId>
+    <RootSBAId>d033f167-5ec5-439d-b2a8-0befbfd6d3b3</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635670370009796161</SQN>
+    <Name>User Certificate Expiration Check</Name>
+    <Description>Checks for X.509 certificates in the CurrentUser store that will expire in a certain number of days.</Description>
+    <Category />
+    <Version>1.2.3</Version>
+    <DateCreated>2015-02-18T12:10:07.423</DateCreated>
+    <DateModified>2015-02-18T20:16:18.247</DateModified>
+    <DatePublished>2015-02-18T12:10:07.423</DatePublished>
+    <LastEditorName>Prakash Banuka</LastEditorName>
+    <CreatorName>Prakash Banuka</CreatorName>
+    <Status>4</Status>
+    <CheckSum>j1+9qAlOtJ/qx6tsMf7rS2p+3SE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Prakash Banuka</Author>
+      <Tags>certificates</Tags>
+      <Credits>Credits to: Prakash Banuka
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>prakash.b@axiomio.com</ContactEmail>
+      <Notes />
+      <DownloadCount>170</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>JAB0AGgAcgBlAHMAaABvAGwAZAAgAD0AIAAkAGEAcgBnAHMAWwAwAF0ADQAKAA0ACgAjAFMAZQB0ACAAZABlAGEAZABsAGkAbgBlACAAZABhAHQAZQANAAoAJABkAGUAYQBkAGwAaQBuAGUAIAA9ACAAKABHAGUAdAAtAEQAYQB0AGUAKQAuAEEAZABkAEQAYQB5AHMAKAAkAHQAaAByAGUAcwBoAG8AbABkACkADQAKAA0ACgAkAEMAZQByAHQAcwAgAD0AIABHAGUAdAAtAEMAaABpAGwAZABJAHQAZQBtACAAQwBlAHIAdAA6AFwAQwB1AHIAcgBlAG4AdABVAHMAZQByAFwATQB5ACAAfAAgAHcAaABlAHIAZQAgAHsAJABfAC4AbgBvAHQAYQBmAHQAZQByACAALQBsAHQAIAAkAGQAZQBhAGQAbABpAG4AZQB9ACAAfAANAAoAIAAgACAAIABzAGUAbABlAGMAdAAgAGkAcwBzAHUAZQByACwAIABzAHUAYgBqAGUAYwB0ACwAbgBvAHQAYQBmAHQAZQByACwAIABAAHsATABhAGIAZQBsAD0AIgBFAHgAcABpAHIAZQBzACAASQBuACAAKABEAGEAeQBzACkAIgA7AEUAeABwAHIAZQBzAHMAaQBvAG4APQB7ACgAJABfAC4ATgBvAHQAQQBmAHQAZQByACAALQAgACgARwBlAHQALQBEAGEAdABlACkAKQAuAEQAYQB5AHMAfQB9AA0ACgANAAoASQBmACAAKAAkAEMAZQByAHQAcwApACAAewAkAEMAZQByAHQAcwB9ACAARQBsAHMAZQAgAHsAIABXAHIAaQB0AGUALQBIAG8AcwB0ACAAIgBUAGgAZQByAGUAIABhAHIAZQAgAG4AbwAgAGMAZQByAHQAaQBmAGkAYwBhAHQAZQBzACAAZQB4AHAAaQByAGkAbgBnACAAaQBuACAAJAB0AGgAcgBlAHMAaABvAGwAZAAgAGQAYQB5AHMALgAiACAAfQANAAoA</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>39e468e5-52a1-44d7-ad71-9754715eee02</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>39e468e5-52a1-44d7-ad71-9754715eee02</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Expiration Threshold</Name>
+                  <DefaultValue>90</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([0-9]|[1-9][0-9]|[1-9][0-9][0-9]|1000)$</ValidationString>
+                  <ValidationError>The certificates listed will expire in this many days. '0' means today. The upper limit is 1000.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>giqvSNQaaU8B8JocJyEad+8Afes=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

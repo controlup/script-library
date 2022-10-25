@@ -1,3 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>c4d80b0c-0636-4cf7-9c2a-c0f1804cde7e</SBAId><RootSBAId>eb448eed-3c1e-41c0-a7c2-879eaa34821f</RootSBAId><StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId><SQN>637824251597521025</SQN><Name>AZ Get console screenshot</Name><Description>Displays the console of the selected machine or stores the console image into a folder defined in the script action arguments</Description><Category /><Version>1.10.28</Version><DateCreated>2021-09-17T13:07:01.397</DateCreated><DateModified>2022-02-23T13:20:22.8</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Trentent Tye</LastEditorName><CreatorName>Guy Leech</CreatorName><Status>4</Status><CheckSum>X9sCRx5SZV7pH+l6orZwfpqae0Q=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><Icon><IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvwAADr8BOAVTJAAAAv9JREFUWEftlt1OE0EUx/cZfAgufAafwYRLwYhBiQnhQo2S0NCksREaeqEJUYqCSqHSboNl7bYFodsKa4GAsU1TIi5tLQT5hkaElq8cZ9ZlWTbTwraUeMFJfslk/2fO+e/OzmSoycmpMj8XqHaznguj74Or2s9x1cLsbBnFfwkJHq8PkKAZdqgNWJ+DqOXC1c+A7X0v9NodwHEBgSIlnRV2+AWwAzaiRgK9OVi7e+Bdl1UEm5ANNLFjcJudLilV7mm45Y6BnvbLJmQDRnYcbrAzZ6L+809ojyzJtIUX4UEgScwloXMGCzdQgXDOrIE6GGEdKj3kOWqKMoCb4GbquDRwYQYqUBP806V+Z2F7/1BkfmsXXqJnpHwSRRlQEphLi5C0fBRloG44Dk/G5qBpfB7CK39E8BhT548T56gp2MCjYBKm13ZgPbMPm9l92No7EMHjNCK6ug0Pz3AeFGzAEl6Cle09aBxNwX0ucYLH6HBaRtrb6DJxrhLNBm56foiftx/96fF0RhzXDM7KepXvn441nFOLlinfjtBs4Cla32Q6Cxvo02cPDsWxO74h6/T3VfEZ1nCOsJmBRj51ooYSzQbaI4vSbj+OqaUtWcdjdeA5yhpKLg1oNvBsagF20Im3i9b4iKHUpqzjw0ipYZ5//XWihhLNBu4MCGCUDh/50EF/+pGOt6FSw9xV7BI1RANmlodaNgK17gjc+xiGGuZbyTA4Ph0bYD1e0YCL9QHt9kFPHwOvunuhvYR0WG1ic3w/pEZGRkUDGAfthC5rt+yu1KDb8RsqkUxem5iY6AwEg50Dg4N5QXf5IbvdDq87OnLicrkypLlq0Is3UFojkUhcMRqNozqdDnLhdDqjUnppAjVh1E1VXJdSzz+8Xm9DS0vLLqGpDE3TC+hLXZWmFBbRaLQ8FAoxPM8zqCmDw2QyMc3NzXmbYwwGA7S2tgo2m43hOE6sgWvFYrFyqfzpgQrVqwsXg16vB7PZXC+VPz3Q21Yi+PMCLRtvsVgqpfL/U1DUXxhTZER1PRr/AAAAAElFTkSuQmCC</IconData><IconType>2</IconType></Icon><ShareDescriptor><Author>Guy Leech</Author><Tags>Azure,console,screenshot</Tags><Credits>Credits to: Guy Leech
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>98f46258-59a1-4e0f-85d4-0e3ab44cd026</SBAId>
+    <RootSBAId>eb448eed-3c1e-41c0-a7c2-879eaa34821f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637831160578662656</SQN>
+    <Name>AZ Get console screenshot</Name>
+    <Description>Displays the console of the selected machine or stores the console image into a folder defined in the script action arguments</Description>
+    <Category />
+    <Version>2.10.29</Version>
+    <DateCreated>2021-09-17T13:07:01.397</DateCreated>
+    <DateModified>2022-03-17T12:06:43.507</DateModified>
+    <DatePublished>2022-03-17T12:09:15.703</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>X9sCRx5SZV7pH+l6orZwfpqae0Q=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAAv9JREFUWEftlt1OE0EUx/cZfAgufAafwYRLwYhBiQnhQo2S0NCksREaeqEJUYqCSqHSboNl7bYFodsKa4GAsU1TIi5tLQT5hkaElq8cZ9ZlWTbTwraUeMFJfslk/2fO+e/OzmSoycmpMj8XqHaznguj74Or2s9x1cLsbBnFfwkJHq8PkKAZdqgNWJ+DqOXC1c+A7X0v9NodwHEBgSIlnRV2+AWwAzaiRgK9OVi7e+Bdl1UEm5ANNLFjcJudLilV7mm45Y6BnvbLJmQDRnYcbrAzZ6L+809ojyzJtIUX4UEgScwloXMGCzdQgXDOrIE6GGEdKj3kOWqKMoCb4GbquDRwYQYqUBP806V+Z2F7/1BkfmsXXqJnpHwSRRlQEphLi5C0fBRloG44Dk/G5qBpfB7CK39E8BhT548T56gp2MCjYBKm13ZgPbMPm9l92No7EMHjNCK6ug0Pz3AeFGzAEl6Cle09aBxNwX0ucYLH6HBaRtrb6DJxrhLNBm56foiftx/96fF0RhzXDM7KepXvn441nFOLlinfjtBs4Cla32Q6Cxvo02cPDsWxO74h6/T3VfEZ1nCOsJmBRj51ooYSzQbaI4vSbj+OqaUtWcdjdeA5yhpKLg1oNvBsagF20Im3i9b4iKHUpqzjw0ipYZ5//XWihhLNBu4MCGCUDh/50EF/+pGOt6FSw9xV7BI1RANmlodaNgK17gjc+xiGGuZbyTA4Ph0bYD1e0YCL9QHt9kFPHwOvunuhvYR0WG1ic3w/pEZGRkUDGAfthC5rt+yu1KDb8RsqkUxem5iY6AwEg50Dg4N5QXf5IbvdDq87OnLicrkypLlq0Is3UFojkUhcMRqNozqdDnLhdDqjUnppAjVh1E1VXJdSzz+8Xm9DS0vLLqGpDE3TC+hLXZWmFBbRaLQ8FAoxPM8zqCmDw2QyMc3NzXmbYwwGA7S2tgo2m43hOE6sgWvFYrFyqfzpgQrVqwsXg16vB7PZXC+VPz3Q21Yi+PMCLRtvsVgqpfL/U1DUXxhTZER1PRr/AAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton.de.Vreede</Author>
+      <Tags>Azure,console,screenshot</Tags>
+      <Credits>Credits to: Guy Leech
 Original code by:
-Taken from:</Credits><AllowExposeEmail>false</AllowExposeEmail><ContactEmail /><DownloadCount>2</DownloadCount></ShareDescriptor><ExecutionDescriptor><AllowedEntitiesEx>256</AllowedEntitiesEx><AtomicEntityEx>256</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>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</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>1</AltCredentialsType><Timeout>30</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>2</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>1</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>ed136823-ad6e-4a41-ac4c-bc1295c72c2d</string></key><value><SBAArgumentDescriptor><ArgumentId>ed136823-ad6e-4a41-ac4c-bc1295c72c2d</ArgumentId><ArgumentType>2</ArgumentType><Name>AzureID</Name><ArgumentNumber>0</ArgumentNumber><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>256</EntityType></SBAArgumentDescriptor></value></item><item><key><string>7d68c981-d79b-4a9a-a6ed-60b3210dceb2</string></key><value><SBAArgumentDescriptor><ArgumentId>7d68c981-d79b-4a9a-a6ed-60b3210dceb2</ArgumentId><ArgumentType>2</ArgumentType><ArgumentNumber>1</ArgumentNumber><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>ae5b5ee1-1f1c-485d-a084-ef9a7e3decad</string></key><value><SBAArgumentDescriptor><ArgumentId>ae5b5ee1-1f1c-485d-a084-ef9a7e3decad</ArgumentId><ArgumentType>1</ArgumentType><Name>Screenshot File Name</Name><DefaultValue /><ArgumentNumber>3</ArgumentNumber><ValidationString /><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item><item><key><string>fcb91ff2-59b5-413e-8f6e-b9759fe39454</string></key><value><SBAArgumentDescriptor><ArgumentId>fcb91ff2-59b5-413e-8f6e-b9759fe39454</ArgumentId><ArgumentType>1</ArgumentType><Name>Screenshot Folder</Name><DefaultValue /><ArgumentNumber>2</ArgumentNumber><ValidationString /><ValidationError /><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog></ExecutionDescriptor><ImportValidationString>YcepSgGz3VUqtVnTJzydtFCksjc=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>14</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>30</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>ed136823-ad6e-4a41-ac4c-bc1295c72c2d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ed136823-ad6e-4a41-ac4c-bc1295c72c2d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7d68c981-d79b-4a9a-a6ed-60b3210dceb2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7d68c981-d79b-4a9a-a6ed-60b3210dceb2</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureTenantID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ae5b5ee1-1f1c-485d-a084-ef9a7e3decad</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ae5b5ee1-1f1c-485d-a084-ef9a7e3decad</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Screenshot File Name</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>fcb91ff2-59b5-413e-8f6e-b9759fe39454</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fcb91ff2-59b5-413e-8f6e-b9759fe39454</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Screenshot Folder</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>1i2dXtZrvT1lzKihkPm8NrNpCqE=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

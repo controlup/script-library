@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>5d89df8d-77b4-4a68-9ed3-4a739b51813e</SBAId>
+    <RootSBAId>c0ff41aa-ae46-4e6d-9d0a-f609fbde3708</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053181999952000</SQN>
+    <Name>Citrix Auditlog</Name>
+    <Description>Run the Auditlog command on XenApp servers to display logon / logoff activity. Provide the "before" and "after" dates in the mm/dd/yy format.</Description>
+    <Category />
+    <Version>3.7.13</Version>
+    <DateCreated>2014-01-15T12:22:14.727</DateCreated>
+    <DateModified>2014-04-16T12:38:57.637</DateModified>
+    <DatePublished>2014-01-15T12:22:14.727</DatePublished>
+    <LastEditorName>Eugene Kalayev</LastEditorName>
+    <CreatorName>Eugene Kalayev</CreatorName>
+    <Status>4</Status>
+    <CheckSum>0TlAdgjGe4gUfqe3x914eclOUy0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Eugene Kalayev</Author>
+      <Tags />
+      <Credits>Credits to: Eugene Kalayev
+Original code by: Citrix, ControlUp Team
+Thanks to Gary Penrose for the idea</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>ek@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>972</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>QABpAGYAIABlAHgAaQBzAHQAIAAiACUAUAByAG8AZwByAGEAbQBGAGkAbABlAHMAKAB4ADgANgApACUAXABDAGkAdAByAGkAeABcAHMAeQBzAHQAZQBtADMAMgBcAGEAdQBkAGkAdABsAG8AZwAuAGUAeABlACIAIAAoAA0ACgAJAGMAZAAgACIAJQBQAHIAbwBnAHIAYQBtAEYAaQBsAGUAcwAoAHgAOAA2ACkAJQBcAEMAaQB0AHIAaQB4AFwAcwB5AHMAdABlAG0AMwAyACIAIAAmACYAIABhAHUAZABpAHQAbABvAGcALgBlAHgAZQAgAC8AYgBlAGYAbwByAGUAOgAlADEAIAAvAGEAZgB0AGUAcgA6ACUAMgAgAC8AdABpAG0AZQANAAoACQApACAAZQBsAHMAZQAgAEkAZgAgAGUAeABpAHMAdAAgACIAJQBQAHIAbwBnAHIAYQBtAEYAaQBsAGUAcwAlAFwAQwBpAHQAcgBpAHgAXABzAHkAcwB0AGUAbQAzADIAXABhAHUAZABpAHQAbABvAGcALgBlAHgAZQAiACAAKAANAAoACQBjAGQAIAAiACUAUAByAG8AZwByAGEAbQBGAGkAbABlAHMAJQBcAEMAaQB0AHIAaQB4AFwAcwB5AHMAdABlAG0AMwAyACIAIAAmACYAIABhAHUAZABpAHQAbABvAGcALgBlAHgAZQAgAC8AYgBlAGYAbwByAGUAOgAlADEAIAAvAGEAZgB0AGUAcgA6ACUAMgAgAC8AdABpAG0AZQANAAoACQApACAAZQBsAHMAZQAgACgAZQBjAGgAbwAgAFQAaABpAHMAIABpAHMAIABuAG8AdAAgAGEAIABDAGkAdAByAGkAeAAgAFgAZQBuAEEAcABwACAAcwBlAHIAdgBlAHIALgAgADEAPgAmADIAIAAmACYAIABFAHgAaQB0ACAALwBCACAAMQAgACkADQAKAA==</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>1</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>8eab222d-85f4-49a8-9a0f-7720f310f1a3</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8eab222d-85f4-49a8-9a0f-7720f310f1a3</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>/after:</Name>
+                  <DefaultValue>mm/dd/yy</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^((0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/([0-9][0-9]))$</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5c437e55-1310-4318-807e-d19c071e24b6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5c437e55-1310-4318-807e-d19c071e24b6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>/before:</Name>
+                  <DefaultValue>mm/dd/yy</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^((0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/([0-9][0-9]))$</ValidationString>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>R/xAnsujL3h75GBOsOKr8+IZ9rU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

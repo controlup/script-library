@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6063b3cb-7c53-4a3f-b4fc-633836e4ee76</SBAId>
+    <RootSBAId>02681b91-2931-4a67-8ec3-70c2bf278c44</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636675103465324000</SQN>
+    <Name>Retrieve NetScaler LB Persistent Session information</Name>
+    <Description>Retrieve NetScaler LB Persistent Session information, using the Invoke-RestMethod cmdlet for the REST API calls.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2018-07-18T11:09:43.72</DateCreated>
+    <DateModified>2018-07-18T11:09:43.72</DateModified>
+    <DatePublished>2018-07-18T11:09:43.72</DatePublished>
+    <LastEditorName>Niron Koren</LastEditorName>
+    <CreatorName>Esther Barthel, MSc</CreatorName>
+    <Status>4</Status>
+    <CheckSum>OD/ssQz2dTvBMuncpOnU+LGqxkM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Esther Barthel, MSc</Author>
+      <Tags>NetScaler, Load Balancer</Tags>
+      <Credits />
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>nironk@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>78</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>17179869184</AllowedEntitiesEx>
+      <AtomicEntityEx>17179869184</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>040f9403-384a-4ac8-9580-7c94566528da</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>040f9403-384a-4ac8-9580-7c94566528da</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>ManagementIP</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d3d349cf-6573-40ec-9667-c7b4b29a4ab7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d3d349cf-6573-40ec-9667-c7b4b29a4ab7</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>NS Username</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>89028008-d159-4e55-b029-24539894a625</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>89028008-d159-4e55-b029-24539894a625</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>NS Password</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>true</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Z4oa3XFpQSBj4Xa4NeZprBlAxeI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

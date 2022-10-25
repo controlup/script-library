@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>79940048-d475-469a-b835-496e6a8ff29c</SBAId>
+    <RootSBAId>42b61290-7f9c-48ed-8fae-f9aadf28205f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637104663634466152</SQN>
+    <Name>WMI Clean Up</Name>
+    <Description>Checks, fixes and repairs WMI</Description>
+    <Category />
+    <Version>2.3.5</Version>
+    <DateCreated>2017-08-29T12:20:55.573</DateCreated>
+    <DateModified>2019-11-06T15:59:28.197</DateModified>
+    <DatePublished>2017-08-29T12:20:55.573</DatePublished>
+    <LastEditorName>Michael Albert</LastEditorName>
+    <CreatorName>Michael Albert</CreatorName>
+    <Status>4</Status>
+    <CheckSum>O0iyM7LwdZcxzYLaePzRR/mBYyg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Michael Albert</Author>
+      <Tags>WMI</Tags>
+      <Credits>Credits to: christopher.pino
+Original code by: christopher.pino
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>Michael Albert</ContactEmail>
+      <Notes />
+      <DownloadCount>191</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN1Ya08bRxS9X6nU/7CYBJkUnCZpq4oKqYFCgxSCBSlUCvng2A7e1K/uruOgyv+9Z86d2Z19GUzTKqoszM7ex9w5994zM96QjS/487V8lX4HciAD6UtX/pBYtjF+L6F8wpsYzx0ZSw//I4ynGIV4Mu8v5USOUw/PZSYJvEwg3cX4BHpdjDuwGlI+lHd4jqAVQDbGHBP5WUZWbwifCWMYQG8I2bW0Uj03i3ocQ2Zi2y2s4iV99SGP8W2i+FXaePtRnuY0v+RPOSMBEYiIYY94jZmNECgMgFlMmwfQOYbcrD6RPWi8kXN6mFE3kRvg2ebzGG9D5nKId5d804P9HL4yH2rzFjjuAsc+Rgf0FVl5U7bSmct+A8bwCrpz2ZFT5PQDozHZv09cZY1mYc0aTQi0mrJeE1UL+maNYzmDfAjL5j1x2od+iPdJzpuileUpZFVH8JDYHG7h8xcjXYNHnbEPhC6hE9HCVHcgDcRgPHZYywH9dGz3xIgrYmRmNKePQa4+yvOeefWyjvEh+jsseWvYyPqp9AnfLCrrso0ZX8sLD/cmfTfR103m5xAVcAFEnOYWcDzHTEN6b2K+n/BnMAmAQRexjrnOkD1sUOjC+groHMPTL6ijS9hf4e/G8sVInqG7jcY7jjJvjrc+f0wP8T+bP4LGBM8P7xDXXXOv3BrIEeuqR94MIJ2k7BmwLoxdl7mfMtcDrLVls5jl7JxVMC1x9in8DBFxwOwFdoUJ693UXo+aznqHfRKBTZVlDTpHrC4ddfEZsXJMfRjpIdnCaDxn54fE0sQT0r/B1cx/YDE288/oa5V557QbAbkRLNzaHIL7lHaIdt9y5YZlx8R2+TVGb/F5AD21K1rtsXoamGECpExNjBBZy662gT2zYftI6yUuyGZ2T+rC57RkmV9BUWY6uoNcdCrsVDaFb4NPlXRKiZk7kypT3g+B21by+aNdhq2uRPdH0w3aC6bLY7uOtu0L1zVFFvA79sx28jfwXNXLc6+Xt1fycknm+kG+K3jxGUEZ9DXRTlDjWeT+c3llmYc14DeDfACLl4ihSw3XdWVLZ5XHT9Hbt3iF1rauLvzZV1mD+slbr3HXzp8yVG/PnkB2EIGinPfo+/T9+Sz7Ar5j8meD+2EfVR/arEU5D42cj03KquNqgYlmZMtXiGVEPnpsfTvWMt+Zv4X33Oept1/AQNkrvyNMUqZ2Z8FidfoeNAtVPbAD/T+5nn9a//mYb9vPjizjB7nacvuZWdOMu/V6AftFJXLZU9vuEMVqV/misA+eMRfFvJ/wpNDhnaLHXTE7q8be2eZNDpEWEBxzT4o448jWhZ4AT6F7Qf+xjahVGpt5P9hsurx8bxnNoau14J87A/kdq85uZU/lW3yeUT/g5//AhrqS1RilnhXvy4ur8Yc7cSyvJ7++M1bN2+QtMu4zZ++Q58GMBR8RiWPeVYZYZY9dpnv1I1SZnlh0F9Xxe+i5nXOtlv81rvy9rbgXLIu6itnLPu/G62W7Ij/nz2VBzWxltnY+qvl5Obs4Xa1V//nf4ouQjOnzxZOKjqnjjLzWJn9DUNY1iJieDtJunGHd15Bsy298inim67Pqp+yD0N4sb2owKO9tVXH57LVKVBqH/haleT5nHRmNYjz6XYxH7z8Jb7NRRWQXtrc7/D3M38td1D9yXzbja9s9ibfXL2eOmNEGlXg6hti03H07q8a13HxVe7fY4kklSmOJajL738QR88750XJJXSyL9F6ov4SUb4blu+DfKu5WOoYVAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>185</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>iQ1NXUmt6DU/b5JaLc+sV9S8f8U=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

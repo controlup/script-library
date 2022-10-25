@@ -20,9 +20,12 @@
     Updated:        2022-01-18  Added code to re-auth in case mstsc run time exceeds auth duration. Change oauth to use v2 url
                     2022-02-16  Added code to check VM has finished provisioning and is running and that any existing public IP address is not empty
                     2022-02-22  Added check for empty/malformed AZid and moved subscription parsing higher up before REST calls are made
-                    2022-03-03  Fix to destinationn prefix checking which marked as accessible when it wasn't.
+                    2022-03-03  Fix to destination prefix checking which marked as accessible when it wasn't.
                                 Fix problem with not calculating rule priority correctly
                     2022-03-07  Added wait for public IP address to appear on VM's network interface
+                    2022-09-26  Added -force to continue on possible non-fatal errors
+                    2022-09-29  Added retries when getting external IP address
+                    2022-09-30  Added setting of TLS12 & TLS13
 #>
 
 [CmdletBinding()]
@@ -31,7 +34,8 @@ Param
 (
     [string]$AZid ,## passed by CU as the URL to the VM minus the FQDN
     [string]$AZtenantId ,
-    [int]$rdpPort = 3389
+    [int]$rdpPort = 3389 ,
+    [boolean]$force
     ## TODO do we have an option to not delete the IP address and rule or leave open for a given amount of time and then remove?
 )
 
@@ -55,6 +59,7 @@ if( ( $PSWindow = (Get-Host).UI.RawUI ) -and ( $WideDimensions = $PSWindow.Buffe
 [int]$highestPriorityRuleAllowed = 100
 [int]$rulePriorityGap = 5
 [int]$newRulePriority = 2500
+[int]$provisioningWaitTimeSeconds = 180
 
 Write-Verbose -Message "AZid is $AZid"
 
@@ -390,6 +395,8 @@ Function Wait-ProvisioningComplete
 
 #endregion OtherFunctions
 
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12 -bor [System.Net.SecurityProtocolType]::Tls13
+
 [datetime]$authTime = [datetime]::Now
 
 If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenantId $AZtenantId )
@@ -450,16 +457,29 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
     if( $null -eq ( [array]$virtualMachineStatuses = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri $instanceViewURI -property 'statuses' ) ) `
         -or $virtualMachineStatuses.Count -eq 0 )
     {
-        Throw "Failed to get VM instance view via $instanceViewURI : $_"
+        if( $force )
+        {
+            Write-Warning -Message "Failed to get VM instance view via $instanceViewURI : $_"
+        }
+        else
+        {
+            Throw "Failed to get VM instance view via $instanceViewURI : $_"
+        }
     }
-    
-    if( ( $line = ( $virtualMachineStatuses.code -match 'ProvisioningState/' )) -and ( $status = ($line -split '/' , 2 )[-1] ) )
+    elseif( ( $line = ( $virtualMachineStatuses.code -match 'ProvisioningState/' )) -and ( $status = ($line -split '/' , 2 )[-1] ) )
     {
         ## check not performing an operation already
         Write-Verbose -Message "Current VM provisioning state is $status"
         if( $status -ine 'succeeded' )
         {
-            Throw "VM $vmName has not finished a provisioning operation, it is $status"
+            if( $force )
+            {
+                Write-Warning -Message "VM $vmName has not finished a provisioning operation, it is $status"
+            }
+            else
+            {
+                Throw "VM $vmName has not finished a provisioning operation, it is $status"
+            }
         }
     }
     else
@@ -586,7 +606,7 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
             Throw "Error when trying to create public IP address $publicIPAddressName"
         }
         
-        if( -Not ( Wait-ProvisioningComplete -BearerToken $azBearerToken -uri $publicIPAddressURI ))
+        if( -Not ( Wait-ProvisioningComplete -BearerToken $azBearerToken -uri $publicIPAddressURI -waitForSeconds $provisioningWaitTimeSeconds ))
         {
             Write-Warning "Error when trying to wait for public IP address $publicIPAddressName to be ready"
         }
@@ -612,7 +632,7 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
     $publicIPAddress = $null
 
     ## need to wait until we have the public IP address now that it is assigned to a NIC, or was already there. The pip will appear on the Public IP Address object
-    if( $provisioningState = Wait-ProvisioningComplete -bearerToken $azBearerToken -uri $publicIPAddressURI )
+    if( $provisioningState = Wait-ProvisioningComplete -bearerToken $azBearerToken -uri $publicIPAddressURI -waitForSeconds $provisioningWaitTimeSeconds )
     {
         $ipconfiguration = $null
         [datetime]$finishTime = [datetime]::Now.AddSeconds( 120 )
@@ -634,7 +654,7 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
             }
             else
             {
-                Start-Sleep -Milliseconds 3000
+                Start-Sleep -Milliseconds 5000
             }
         } while( [datetime]::Now -lt $finishTime )
 
@@ -661,7 +681,27 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
     [string]$networkSecurityGroupURI = $null
     [string]$networkSecurityGroupId = $null
 
-    $externalIPAddress = Invoke-WebRequest -URI http://ipinfo.io/ip | Select-Object -ExpandProperty content
+    [string]$ipURL = 'https://ipinfo.io/ip'
+    [datetime]$retryEnd = [datetime]::Now.AddSeconds( 15 )
+    $externalIPAddress = $null
+
+    while( -Not $externalIPAddress )
+    {
+        try
+        {
+            $externalIPAddress = Invoke-WebRequest -URI $ipURL | Select-Object -ExpandProperty Content -ErrorAction SilentlyContinue
+        }
+        catch
+        {
+            Write-Verbose -Message "$(Get-Date -Format G): sleeping before retry to $ipURL until $(Get-Date -Date $retryEnd -Format G) : $_"
+            Start-Sleep -Milliseconds 1666
+        }
+    }
+
+    if( -Not $externalIPAddress )
+    {
+        Throw "Unable to get external IP address from $ipURL so unable to create a network security group rule ofr just this IP"
+    }
 
     Write-Verbose -Message "External IP address is $externalIPAddress"
 
@@ -885,7 +925,7 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
                 Write-Warning "Error when trying to create new rule in network security group"
             }
 
-            if( -Not ( Wait-ProvisioningComplete -bearerToken $azBearerToken -uri $networkSecurityGroupURI ))
+            if( -Not ( Wait-ProvisioningComplete -bearerToken $azBearerToken -uri $networkSecurityGroupURI -waitForSeconds $provisioningWaitTimeSeconds ))
             {
                 Write-Warning -Message "Timed out waiting for network security group update to finish"
             }
@@ -1007,7 +1047,7 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
                     [string]$networkInterfaceName = Split-Path -Path ($networkInterfaceURI -replace '\?.*$') -Leaf
                     [datetime]$start = [datetime]::Now
                     ## this can be slow
-                    if( ( $stateOfNetworkInterface = Wait-ProvisioningComplete -BearerToken $azBearerToken -uri $networkInterfaceURI -sleepMilliseconds 5000 -waitForSeconds 120 ) )
+                    if( ( $stateOfNetworkInterface = Wait-ProvisioningComplete -BearerToken $azBearerToken -uri $networkInterfaceURI -sleepMilliseconds 5000 -waitForSeconds $provisioningWaitTimeSeconds ) )
                     {
                         if( -Not ($stateOfNetworkInterface.ipConfigurations | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty ipAddress -ErrorAction SilentlyContinue))
                         {

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>587bc144-2120-4d42-ac73-03ed45c2ab11</SBAId>
+    <RootSBAId>bc0a93aa-17bf-4499-bd2b-3f0d5ec9927b</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>635646097858346902</SQN>
+    <Name>Get PVS Write Cache Size</Name>
+    <Description>A Script to obtain the Pool Non Paged Bytes which ultimately is an indication of the amount of Cache in Ram used by Citrix Provisioning Services. 
+This script will output the amount of PVS Ram Cache in use. This is done by enumarating the amount of Pool nonPaged Bytes in use, which is a measure of the RamCache. Action should be taken if this figure is close to the amount allocated within PVS. The script also supports examining the PVS configuration of disk cache only.</Description>
+    <Category />
+    <Version>2.12.18</Version>
+    <DateCreated>2015-03-29T14:22:27.703</DateCreated>
+    <DateModified>2015-04-14T12:01:55.303</DateModified>
+    <DatePublished>2015-03-29T14:22:27.703</DatePublished>
+    <LastEditorName>Matthew Nichols</LastEditorName>
+    <CreatorName>Matthew Nichols</CreatorName>
+    <Status>4</Status>
+    <CheckSum>KfvPlVEFuLWab8fEClf9qs0PIZ0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Matthew Nichols</Author>
+      <Tags>Citrix, PVS, Cache in Ram, WriteCache,</Tags>
+      <Credits>Credits to: Matthew Nichols
+Original code by: Matthew Nichols
+Taken from: Mattnics.com</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>matthew@thenicholsclan.com</ContactEmail>
+      <Notes />
+      <DownloadCount>1184</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>90</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>9bd46af9-cd80-4e92-90da-f8845b9e23c6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9bd46af9-cd80-4e92-90da-f8845b9e23c6</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Fbj7UsmQ6Li5xCCgyQvjEYo3dO8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7fa456b9-7ced-45d0-b064-648c614f67cd</SBAId>
+    <RootSBAId>36ea880f-c67c-43b1-95af-bbc25b7f0f83</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636053170772788000</SQN>
+    <Name>Analyze HDX Bandwidth</Name>
+    <Description>This script measures the bandwidth of a given active HDX session, and breaks down the bandwidth consumption into the most useable ICA virtual channels. The output shows the bandwidth usage in kbps (kilobits per second) of each virtual channel and the total session. This version shows only the session output (download), and not the upload.</Description>
+    <Category />
+    <Version>1.2.27</Version>
+    <DateCreated>2016-06-26T12:59:50.85</DateCreated>
+    <DateModified>2016-06-27T11:19:35.613</DateModified>
+    <DatePublished>2016-06-26T12:59:50.85</DatePublished>
+    <LastEditorName>Matan Nataf</LastEditorName>
+    <CreatorName>Matan Nataf</CreatorName>
+    <Status>4</Status>
+    <CheckSum>dEEIpX7doAYCdUZyIzIfFs19g+0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Matan Nataf</Author>
+      <Tags>HDX, Citrix, network, virtual channels, bandwidth</Tags>
+      <Credits>Credits to: Matan Nataf
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>matann@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>1476</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>18b7b2cd-876d-4ddc-b4e3-cee3efecef19</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>18b7b2cd-876d-4ddc-b4e3-cee3efecef19</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sSessionName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6a6b5aa5-8726-4c3b-90e3-ace1639f553b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6a6b5aa5-8726-4c3b-90e3-ace1639f553b</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2df2ca21-a8b0-4470-b9b1-dab804564bc7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2df2ca21-a8b0-4470-b9b1-dab804564bc7</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sServerName</Name>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>5Sb5vhWdMY21OuHRuNrVtOy2MQA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

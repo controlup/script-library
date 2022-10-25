@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>66fbd889-91e6-4c25-b452-31c26647ad9d</SBAId>
+    <RootSBAId>5b4bbe6d-42de-4e0e-8fcb-a26c07948b3f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637328121066196547</SQN>
+    <Name>IGEL - Shadow terminal</Name>
+    <Description>Starts a VNC connection to the selected IGEL device 
+
+Updated to remove certificate requirements.</Description>
+    <Category />
+    <Version>2.7.22</Version>
+    <DateCreated>2019-12-16T16:20:14.85</DateCreated>
+    <DateModified>2020-08-11T14:15:07.53</DateModified>
+    <DatePublished>2020-08-11T14:17:53.897</DatePublished>
+    <LastEditorName>trentent.tye</LastEditorName>
+    <CreatorName>trentent.tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>jT7uVrU/xnwwvAQesbuHlMPPoic=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAjZJREFUOE99Ul1IU2EYfs85c+dsjA0hjS5GZH8UpHTTTT9mSC3TUW51U9KMCOqimFKQdBlBdJEzKeqiHFERItnmVkkuo81yCCuykmZtslSYQabgKKqn92zHSqs98PB83/u9z/u+38dH+XC1SbB131g0VVtGcFpp0raC4LBS5k/VUv+N3sv0aexpEU7XGbFzGaFyFc1qZla11L9x/3zBvpH2BZgZMuDCUQVb2LCNC8xXLX0uetrJMhZT2qYjerzyE9w1nLyUUMtk/a5pdq9Z5sJ7VnclPaAg81yGp5FQzd2q+L42NsxXzfIb4etUGL1FE1/6jXjmLcSOUoJdHXc1obVJxKUGEbvX5K6gxjVbDhcbqSR6U+7/+lpBMqjDoQoB21dy8mLCrjIBoWtmpPuK4N5r+BXXrETNp8jS0aKLfo4YMRHWw+PmDtx1awmPqk7A4x7YTDjulLBnnZSNVy3XCrQ0SMWeY0J4+oURHyMWhNpEOLhDJSfZl/xfs4945jBZO5t1D1MhGVNPDIjdVeBcyx9Fe7h8Wq0W8LeawumehfgRMyPuU3DSIWQfx8GHNdwpn9q5EH3oldisIBEswLkjBNcGwn5mfTlzE7OC97x28f3Vs4PlerjWc2xjjjR4W8JMn4xvgyakgsQfR+RJJMQ7CO98hOEAIc58yx9qqJOQDBSzSnjZJeCRTwQ99ppOvOkyYOSByAVEjN4TMO43Y5QNSWaCze+5cII53i0gdUfGZEjEMBcfCOjxE5iTW61B5ykQAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>trentent.tye</Author>
+      <Tags>igel</Tags>
+      <Credits>Credits to: trentent.tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>64</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>739d43b8-9a76-4005-a85c-7f66382f1458</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>739d43b8-9a76-4005-a85c-7f66382f1458</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>36db6ab1-c6ca-4714-ade6-06fa48b4fe6a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>36db6ab1-c6ca-4714-ade6-06fa48b4fe6a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Path to vnc executable</Name>
+                  <DefaultValue>"C:\Program Files\vnviewer.exe"</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>d353b785-510b-4486-9fb3-bda95341c282</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d353b785-510b-4486-9fb3-bda95341c282</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>IGEL UMS server (FQDN)</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>O/RFL5q9kGuieGl92zo+aEjAm9w=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

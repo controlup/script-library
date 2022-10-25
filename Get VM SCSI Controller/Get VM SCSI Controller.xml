@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>01840685-7456-4f59-bf26-2f086ab0d952</SBAId>
+    <RootSBAId>565940ce-59fe-41f7-944f-4b0b9730402f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636976743933065701</SQN>
+    <Name>Get VM SCSI Controller</Name>
+    <Description>Retreives the SCSI Controller used by the VM</Description>
+    <Category />
+    <Version>2.5.9</Version>
+    <DateCreated>2018-09-21T15:30:47.51</DateCreated>
+    <DateModified>2019-07-02T12:16:39.81</DateModified>
+    <DatePublished>2018-09-21T15:30:47.51</DatePublished>
+    <LastEditorName>theartvark</LastEditorName>
+    <CreatorName>fpacheco</CreatorName>
+    <Status>4</Status>
+    <CheckSum>YhOI9t/88LeP6LCKDXkH/8s1BTI=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>fpacheco</Author>
+      <Tags />
+      <Credits>Credits to: fpacheco
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>12</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN1aWW8TVxS+z5X6HwyJZCPFJgEVqRGtmppQIhESYRdaIdROxuNkmvFSj50UVfz3nuWeueuM7TS8IMv2LHc5y3fWmV11rBbwmcH3SKVqqXI4nqpzOM/UGL74P4U7mWqpH+DbVgMYNVNzOPpWfaOeqx36b+lPD+7/rt6oM1hjoE7ga999C+ssac1c3cBvCdeW6opWH6g+zWjBP9KwJLoK+CAVLbWC0ZkawdGF+mTNe6dOaQ+XihfAGa74FlY8V0P4PQOq7DG/EC2ltxKf4c4rdQlHeDUlGSw1HQkcj6pZUzjC35Wa0P2ExtmrplFu3sBInLEHxz8TbwMYn8C9HEZfAiUz2CWz9vsV/nNY5w3tdUHrhHwfq99Ak6fA82s4tu+9JC0jPUhXqq71TobSkjSLPFxalI9h3CXsybwxPlrwOybajPxlH5ceRMKQdGFf7xMGRsRPi3ZtwXpzWE+om3njZ1oD/8Dvob4ygRkrrRd7NMsuJ8pTh+orOBIuP9E6T9T3al89g/99dQDHLdWF71CPH2lcILWZPuuSLuZwxroeEe0r2Gla7VSSXhO4N9IjSqI3I7SIxbVI46jdQutiT+snoTPG0YhwmsCIgs7Heu6MeGcJ9OD8iO6jJJHaCRzdVNThjLTS9xCwMYD/A5j3hGjDHZbVfdlhqeWFI1JC5pz0lVT4lrtXRE2hrTPTVI9hJF5dErVTjWW03YnWNO6YWTuWpPsV7bWEkb0GZPUBWYhztOtj+A4DT/M3rJSTNEqN01uyMNzxHHa8JV30QRonFYViC32txxlZ7KGz9hVJaw53D9Vj+KTaVnsg8Um1R4+uT+A+7nMB/4g7XO8xSB5l/xS++3Bmz+rCukJZSrjAnXfUj5Wt7xKCF+oVyGdO425IDyjBc5iBqGR5ThT77F1a+xLGfID9PjqroFTEF4WjD4LRfccX+uOf6PH4PSEP0bHus0RWNB/tiHX/VD2C338dCb/XCEB5vII5Jc146EUGtELE0krfv7C81pSQJPbJHsb2823CxFVEhjH8syYnlu/H9W5p3DVZ3znhJCEE+zT4+yew55x4mBOf7EfqqDF7Lsh20DsnZDk9kIgttWPwjuxRD+j650oXL0nqJr5jNGCPdkGWeB1o4Jy0lhCGOs4d+XywxmQaER2QLNObVF5WUIL0ryjixVYz+6K2c4tSnL0PGPlYQwUjk33XR9jnlOy91FEsvtu2tKMnK0i3d6H+oJb6XdIZ5hfzak4dxSXgDVdGv4l8nhF+Smf0oyAj2FHo7wXH4wAHjEPE20j7yXGAjNzxjKnjGcVvmqhW0rVFtfal9sASExnNCayPozgDy8lX+JGRV0p1RECa3HggHuZBVI7oYWS3B5a8Qm9jy8p4HpO5Zdpjcc4TysdGYGzduDfzkYr0co6WkczYU47I5xVaKm3IWjkXmer8W/b4HNX8ic7SXA35UuWMYa710SJabV1llV8xmaKdDzAuMVc21cRrGIf5R6HEGxkvVWgv+eW0gLFgFfG8tgxKXYmgD4jbpuiqB5HmBH4NVTafnMN0An0iznyd2Dy+IJucU8T+5NHm5nyxFUx0DZFfj/C78vYwal82lYfqT7gWo+ah9ko+DSFibemYWGbkUtRiymDLjYDuXk3xcEi6W5KFbpJXfS3RcvNcMowzm8YYU3EaXy8WGc95pK5YUabEfsmv/cPKJB4dtsuXJSttO/VCu8GmwkyqG3h2zFxXhGP2YkUDFy1aSXodiSNJ/OW5rmz8+mZPcS1VOFnwlRV7TPYvc0xkYpqmcI5nC9LntPKsTIk9E/NQ5DqWkfiWF6LjNfxjpdylNd/rNbmGXxEHZSD75zq6TWolEKvwJs6aKCMTuRLiQPpeOfgRlJJ77qISazOWa0fnTjnZ94XOizjyJIC2GWVXpp9SUF/CjZwGnSgHHDuhvgD3qEIPavoqh8G9rrbHTHFkN3XwKJCC0Mm1U6F1IdhjSc4JjwaRpZKcIiFMJ0GlLlScOLYeauSGzsqqayIyviDs4uiWegZrf6fsDsrMWdXnJyXa2lZFmFs4EY3ZO7hU4I4tHUWYmgFcxZot1zSKFaJPWNE8tgzuvhxR16dL/U97pqxm+pgd2P2KsMAIXJEuJrpjlVLNwdYuemHJFxQBbWvxpWDwYncORDNzJ1rJ1Xi8MGPvL2q9Ix5w3EuK7BOQVU7oL6qOkF931Uc0g0GMZ9IXnNE6U7KeTSok5sL2KF3HB5muQKZ7V75dpMHOe8pU7U2oEDRL/DS9vo7l8Xmc76NutT2Kty5JjqnufiJlYay2ubT5sTG0V+3YLBND6zpObSrGus6RnTFKh/KTyjOu1fqILJSsy4GnxEeh0dbEZ9fqkbmRL0Z3fbbrX+XuNMugmdrNeKrjrR59dZw17RLnZXue5BOvj9sNMcz1fWFcCXWCCOUxOEOsZVxV2RLX/GgitaIdAcJ+H/rsa10Zr/Qe62jsROIORzrpgOT0BCqreinyRG6h7VoiClO11JFBorRwdaNt1GQmdn8TzzkiLVSY68Xq/Z7Xeaj71NVim6Hpc2MWGdZv3BmWjmvX61QPdN7PXH4ttZvLo9hxfZ02bPQhO4EUJTf0u/6lJc3YSqEuTjwNdL3zOl5wJNuQYPLI0fqAkG1qKnk+kJP/s3tqqScZF1/9tT5rsypvqO0VzyQyY2XBnVC2P8SZ+3zAWNs6addLKv4Mgn2F6DLsgTU/W0AeY32fXfXHltbJva70q7dRXzv/p2dS0N6xdwkMbnisqSLNE64mDLW9+64/b840TOfSf8Y11rn8ZlTE1q5DybbeA0f0lby7gH2dQ6eWqPcD63OX+/UDowjH5im8yHOdR+gEEuhRvoKW8Ohe7ZjfmXE7Ne9IxksYi/I9Ve6TfVeK8w3s+G4V57YdT/u5d90Tt/ulZJc0/9e9eYiFyjRnWfAuldsJ89/QabZwW8dufRB/ZyC0xnV8fgmb62xhda7kxN5uHByH76jEuO/R04272hdnXNIbZ+0lTqw2Hdu84ibWFY910XGHbZ9qbPs8QLhwOwo2CpsqILvWwpXcTrDg1+8Ed6PdgJb6CTDQJm80gSzR7aXNKKPp665D2+oC3S3rNTWUzSOuF0c/+4htapT4Gzc21Wyn4XuQhoJTve/2Xjtu6fWWLTSdWe+k+e9Vmvc7Y29E4gpxvyTUD2Ae5mLxt0PFX9ncG2ur9zGb+BbTiVj3jqr/rh6/78TvxUnPgXvS4oPkTdgR1dXrPInrO+4rD9s+O69Hwn9+hxDDUiwAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>23c0637b-83b4-4a57-b355-31729cc85be6</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>23c0637b-83b4-4a57-b355-31729cc85be6</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>vCenter server</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2ec8b959-9dab-43a9-81fe-90425ff303ef</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2ec8b959-9dab-43a9-81fe-90425ff303ef</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>vmName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8f69b895-00cf-450f-8042-7d9fcf6c564d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8f69b895-00cf-450f-8042-7d9fcf6c564d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>HypervisorType</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>5o1qJl4xlGQxY4e+QTEjzmYnrgo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

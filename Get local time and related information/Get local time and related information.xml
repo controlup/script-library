@@ -1,1 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>f8475c7b-ffaf-4c28-8a77-ae4200dd9602</SBAId><RootSBAId>abc29be1-a569-4284-93a0-534872460428</RootSBAId><SQN>0</SQN><Name>Get local time and related information</Name><Description>Gets the local time, timezone details and the settings used by the Win32Time service for synchronization from the machine.</Description><Version>0.1.1</Version><DateCreated>2021-12-22T18:37:52.8934381</DateCreated><DateModified>2021-12-22T18:37:52.8934381</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Ton.de.Vreede</LastEditorName><CreatorName>Ton.de.Vreede</CreatorName><Status>2</Status><CheckSum>RQlapR2g3MlvcS6i25ZlOz41DLE=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><ExecutionDescriptor><AllowedEntitiesEx>69888</AllowedEntitiesEx><AtomicEntityEx>256</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>H4sIAAAAAAAEAN1XbU/TUBQ+n038Dw2YbES2qOgXoiYGUBcRjCMSBaNzK27aDVw7dCL/3ec85972tgVCRGJimrb33p57znPebxfltcTyTWYykilGqUTSkmOMphiP5FAmWFmRttyRm3JDHsoi35G72tKVt7Il2/IKow7u8Os6OKRyJIn0ZE7eCTj2MUswzvB1DEnLwfgnJcZY6eE9wDvFzgn26CgGnVJO5DNmbcoqo1mXDWBYg1YdINrBcxvoQppn5JJS5pCSLo9pwL09rCfk4DF6TlWEEeyqa0rzCXoUlLukWZF7wGhSbPcUth8Bjc4PIHcaWGCImSIZAVGPUsw7B1wfB9zH+K70I+I+y07qsR3aKlx/U/L7ar7ur7t5HPiVJ9BQpSrSOn0EGYZxQFxvGGMxZ8plUR7n2BZz31w9MpTfHmjUSnHO4b3cwloG3Q/lO3Y9yiW2EDdGazuPwKNP32W07CG89wVf+5grF5t7z3VrXg85d8h3jGhULx3Rwhlj4bm8kE15Cbvtg8ec0pRyH/E7A5XaaoK1NWqecX/ipO3zXURLipXdUjztQ2IPFD3OMudZze6JW4tgiQyIPCd9LtNnc+I0W3h+75z9O3hqZKodMnhlM8ge1XuvpEv7gv2ruIrdYRzsAsmIHAr/h9lWjYiR42mIU9rKvKEobV7FYWibNS3aQKhSbuNeIMWCm9Upy/Vty9lVa6KuqQZNacgS7z1kznvaY0okXVaSqaMxOi91iTIjvL1VOtDP0BYRrEhTRu6c0j4jDzPw7TEqVHuvcxOclPtJKXfPt8xt2qbBaOiXYjFh5I6Y01XJUUl2lPNtUOpprkvh3Raq0IwxOOP+FqPDZttBzkUVvbWqdAMvq4+e41qFvDGeKa4FZ70/k3a2ZcIYXWOt7cvXIDLVSkeshcrFKl/DZWxRnYuIDmvazNUaq+wWYWrtRsn/zX9QVzL2G8M3gyRfV8u1pIjnJWaAnxlVTEvcd1FejsM/8VAj901YBdK8F1xk0WovPl+/ckcO43iDJ4D42nSx/nwZbarZ5eOzLL3oldYNtGMPLqyX3XyH1QKT00X+qX56urB6dHEvbOfdpO73BvPZy2nwe3SO/AXwqWZP9bw0ADc7wU4wCrUOT05KaToMmaMWBXbOOmR+WNy3WYNPa4h3kHFXx3o2Mn9i9BXUpIV4D5irCeugp/K89dnEbAmZ/xHfbl3KP/UzQLV/RS5rf+F+yuoWu/NlqxLJJ5D3obZ/Oeh/p663nWXXB+go3Wu1bf2kPHA5ZR1NT8wxz0xT7p+XbO/3/K8+eEKt/l4+2r+P/Scl7u9q6LrdsfuL6gF7cq7Xwr+cMTUcstdqpR+T8//unauemsq+87w25Ad5RZD4G7P4do4CEAAA</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>0</AltCredentialsType><Timeout>60</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>1</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>0</ExecutionContext><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog><DefaultSharedCredGuid /></ExecutionDescriptor><ImportValidationString>CFPxR5MM8Qa8qBgUtBgFa9iMrdo=</ImportValidationString><IsVersionAudited>true</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>77d8be4c-6a91-4c03-9412-404cbabefddb</SBAId>
+    <RootSBAId>abc29be1-a569-4284-93a0-534872460428</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637762957202416236</SQN>
+    <Name>Get local time and related information</Name>
+    <Description>Gets the local time, timezone details and the settings used by the Win32Time service for synchronization from the machine.</Description>
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2021-12-22T16:37:52.893</DateCreated>
+    <DateModified>2021-12-22T16:37:52.893</DateModified>
+    <DatePublished>2021-12-25T18:19:26.627</DatePublished>
+    <LastEditorName>Ton.de.Vreede</LastEditorName>
+    <CreatorName>Ton.de.Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>RQlapR2g3MlvcS6i25ZlOz41DLE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton.de.Vreede</Author>
+      <Tags />
+      <Credits>Credits to: Ton.de.Vreede
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>30</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>69888</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAN1XbU/TUBQ+n038Dw2YbES2qOgXoiYGUBcRjCMSBaNzK27aDVw7dCL/3ec85972tgVCRGJimrb33p57znPebxfltcTyTWYykilGqUTSkmOMphiP5FAmWFmRttyRm3JDHsoi35G72tKVt7Il2/IKow7u8Os6OKRyJIn0ZE7eCTj2MUswzvB1DEnLwfgnJcZY6eE9wDvFzgn26CgGnVJO5DNmbcoqo1mXDWBYg1YdINrBcxvoQppn5JJS5pCSLo9pwL09rCfk4DF6TlWEEeyqa0rzCXoUlLukWZF7wGhSbPcUth8Bjc4PIHcaWGCImSIZAVGPUsw7B1wfB9zH+K70I+I+y07qsR3aKlx/U/L7ar7ur7t5HPiVJ9BQpSrSOn0EGYZxQFxvGGMxZ8plUR7n2BZz31w9MpTfHmjUSnHO4b3cwloG3Q/lO3Y9yiW2EDdGazuPwKNP32W07CG89wVf+5grF5t7z3VrXg85d8h3jGhULx3Rwhlj4bm8kE15Cbvtg8ec0pRyH/E7A5XaaoK1NWqecX/ipO3zXURLipXdUjztQ2IPFD3OMudZze6JW4tgiQyIPCd9LtNnc+I0W3h+75z9O3hqZKodMnhlM8ge1XuvpEv7gv2ruIrdYRzsAsmIHAr/h9lWjYiR42mIU9rKvKEobV7FYWibNS3aQKhSbuNeIMWCm9Upy/Vty9lVa6KuqQZNacgS7z1kznvaY0okXVaSqaMxOi91iTIjvL1VOtDP0BYRrEhTRu6c0j4jDzPw7TEqVHuvcxOclPtJKXfPt8xt2qbBaOiXYjFh5I6Y01XJUUl2lPNtUOpprkvh3Raq0IwxOOP+FqPDZttBzkUVvbWqdAMvq4+e41qFvDGeKa4FZ70/k3a2ZcIYXWOt7cvXIDLVSkeshcrFKl/DZWxRnYuIDmvazNUaq+wWYWrtRsn/zX9QVzL2G8M3gyRfV8u1pIjnJWaAnxlVTEvcd1FejsM/8VAj901YBdK8F1xk0WovPl+/ckcO43iDJ4D42nSx/nwZbarZ5eOzLL3oldYNtGMPLqyX3XyH1QKT00X+qX56urB6dHEvbOfdpO73BvPZy2nwe3SO/AXwqWZP9bw0ADc7wU4wCrUOT05KaToMmaMWBXbOOmR+WNy3WYNPa4h3kHFXx3o2Mn9i9BXUpIV4D5irCeugp/K89dnEbAmZ/xHfbl3KP/UzQLV/RS5rf+F+yuoWu/NlqxLJJ5D3obZ/Oeh/p663nWXXB+go3Wu1bf2kPHA5ZR1NT8wxz0xT7p+XbO/3/K8+eEKt/l4+2r+P/Scl7u9q6LrdsfuL6gF7cq7Xwr+cMTUcstdqpR+T8//unauemsq+87w25Ad5RZD4G7P4do4CEAAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>t3hzWrwfc4NYdH4bNYh5LKfx/yY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

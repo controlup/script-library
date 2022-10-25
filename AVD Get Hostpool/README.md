@@ -1,15 +1,15 @@
 ﻿# Name: AVD Get Hostpool
 
-Description: Script Action to retrieve the AVD Hostpools configured for the Suibscription associated with the Service Principal
-README: https://support.controlup.com/hc/en-us/articles/360011378518
+Description: Gets the details of the AVD Hostpool the target machine/session is in.
+Requires credentials created with scrip AZ Store Azure Credentials
 
-Version: 1.10.14
+Version: 2.11.17
 
 Creator: Esther Barthel, MSc
 
 Date Created: 05/18/2020 12:32:15
 
-Date Modified: 07/22/2020 22:54:45
+Date Modified: 08/31/2022 12:42:59
 
 Scripting Language: ps1
 

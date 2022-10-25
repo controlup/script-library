@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ee0974d3-d0ee-45ba-94d1-10895070852e</SBAId>
+    <RootSBAId>dc17acd0-6d20-4081-9a60-9e36df66f6eb</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636784059526026000</SQN>
+    <Name>Sample and display CPU core usage</Name>
+    <Description>Show the average usage for each CPU over a specified period of time.
+Can help to spot overloaded or over specified vCPU allocations for computers although the SBA should be run a number of times, particularly when under peak usage/load.
+Arguments:
+  Capture Period - the number of seconds to monitor CPU usage for</Description>
+    <Category />
+    <Version>1.5.10</Version>
+    <DateCreated>2018-09-29T19:25:10.817</DateCreated>
+    <DateModified>2018-11-21T14:02:46.283</DateModified>
+    <DatePublished>2018-09-29T19:25:10.817</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>mZfYtKCYp+oV3RtnmHIhAMs/vQg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>CPU,Core usage,vCPU,</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)
+</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>509</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1X227TQBCdZyT+wfSiNIiEtk9VRRGoSgHRAiIUHkIEaeKmBSeOYrslLfl3zpxdX2OHtOIBWa43uzszZ87Mzmyfybo8lAfi2OeVuBLi60pP+nKB0aF8kFOpSYBxhL89GWLVEV+u8J1i1MM74fgSswPOjPkNoMGXa4w8agyo28NcD+suXrWdtf8C2iOZQZdKuBbDrmzLjuwt7D6hvUs5x9uHzpAIxlh5jZFa86FpJvsLkqrxKXTu8O9e4v1HOeboJexfQ+OMfg+obYLH45wDzdfQ7dCLPlZHmPfIg0fmXMoF3DOhtw4kLiGn/tyQLd/uUvwOULtWTjlW1Ip3XZ4n2DvYOYaGrmxwz4jWXMQny/0B3g1qGGJXB352MxouGIULaOnJGaVVm4neIb6RtLkWEtkBI3Ircys94IpLnkdWVrmf2sjq/m279wx4fFjQPUOMQjkq7FRZZS2Apmr9XpI3qXZ9TaY2gNoH6jHlNBsXZ2ryFRwp3zG/mhVb8ljqWNnEjsVVRz5ZDDXqbGf4fpPovrJR3+GeE/z6ldsZ0MvqWP3Ge0R7LXveGvIezP1gLqjP3+nrbS53NV+28H1E7Yvc1nO787Lxsxi3DfkmzcRrkwWKuly6KqIhfkc2nvHuee5XMaKr2DV78nEt8rwql3/jRU+onnZT92KM5Sekk2DTnAg4P2YevSM6rZPdUjtxDLP2VHcxesvRpqjHkPWYiwclWpuoZwM8WzkuffnJGvyZWRwRbbn1eemsmzm7d8Vbzucizmpen+DtQHbGdRezxiuPGdFPeoHROsWjlfvY9oUu6toqbKzGiPk1T2rTGiya7hh3yzibIuLyiCLbr9JuuqxeBPTMZ3cNYCW2l2ZTVSVvJD25mvv0fMVe56PYYVcxPGplnvLkad5lu8UyHE1btVvM15FlKLT1uP7PTnHKh0b3LWRn5GDMWNQwG7J+aaRr9zxzHfgWAFNk7xkjvCnOLtbViwF91LzqspMu0xg/teTOla2QqRc9sp3eBlbTWZWRpxUZuZnYT5nMng2N1Im91UX0sRipxoJNlWmzbqR7WuiZE5udpg+b3AnpbVFDnb3CZ05NycAQ+NZwL2ji3caoPJbFZx1PDfhVg3Yezca7cNLhjU+rbBe3y33cG83ZMbXr/owVEd2dsaIGPVVaK3cr87yKG73N/F/c5BHdh5u8htW5Ke+AxS5QL9xaihXSIPaJJ2U0rXmGtwYyPL6dm1MUscK0gfzG9ltjOduB87XlC09HSB5brNrmVrsGSz3Gz2U3CPkfypRVWSVcnjfzH9wsg9GweJ6gNN3YsTf2nu1FBtUfJLk5CFQOAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b1d1876c-7d66-49fa-8675-aa21eb377433</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b1d1876c-7d66-49fa-8675-aa21eb377433</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Capture Period (s)</Name>
+                  <DefaultValue>60</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Must be a positive integer</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Jneq0eGhCWEeeUhCMSTrvoDAXJk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>2c3d952e-97e3-4851-a682-582bb09e0ce2</SBAId>
+    <RootSBAId>6e1771cf-bcc3-4295-b8e4-04d0749e38db</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637271353639348010</SQN>
+    <Name>Get WMI provider details</Name>
+    <Description>Queries the WMI Event Log to show details for a WMI provider running within a WMIPRVSE process</Description>
+    <Category />
+    <Version>2.2.5</Version>
+    <DateCreated>2019-05-24T19:44:06.25</DateCreated>
+    <DateModified>2020-06-07T15:18:13.83</DateModified>
+    <DatePublished>2020-06-07T13:59:40.71</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Matt Reba</CreatorName>
+    <Status>4</Status>
+    <CheckSum>7IEuGnfKeSvd4JyjUSB8DEbCw3I=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>wmi, wmiprvse</Tags>
+      <Credits>Credits to: matt.reba
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>88</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAMVYa28bRRS9n5H4D8aJZLvUphEgoCII6qQ0UtJadWiLKgtt7E1YWD+0a6eJqvx3zj0zszvrncRuWkCrWc/jzr3nPmfWP8qOfC6fSU+G8rs8lxcyQO8ITWe1DeVPmcs7acgSvRi/r+UEFA1ZSIaVS0lkgvkMM1OMJ7KSlHRt9FM8HfTHmM3wxDIDn1SuMZeCOuLeCUYJV+aenHfgl1DKpeSY6aFdccVIHqOf41FKxZhzbQBsB+SXkzIijZERcc7xn0OiQaJUGdoU80vq4rTvgdehnMov4HrsWeUYu+fyN/mdo5d5fFNwWhLbEqMY6I3WijMhVYM2a8i38j3adwEeF6Aw+3yNZh7FCcZj2iFHO8d8F55Rmgn9lXOsnuoC/RjrCX21hMZfwc8L6hlxXi0RAXcVrfrnwrPEAHxeop3QIofo1300qHjG7T21mJ0mivc+fjbxkVrbl1b7vy3Tx67ntMkbvN38YA19SX8C+gPIf4rWB4ZT/CqHP+QZc+8Uo5fIx8fFnp8hbwV8GXMrBleNoq9lD4j35BHfPxTUO/JT0X8LCVNmosb2E2sHfV8gQzsy8vC6LNBRm++Gfd56qy5H2tAjIreInsmAb1920c+ANZaH0CaG3AXojA0iyIxB06zZxuTD/eKiWWhRojXVZAQ0myO0U1hgF16J5QzoL0gXA09sq9aYkvfRdqF5gpU2+1ovn4DjipaoWykHmoa0WOcM5xbGIzSti++51mecLYlaLacUN4y51FY1QzcERerV0PC+jtXlFeWf2cr4qfW5rHD/r3Q65CmiseYyV6k/tW5hKes6fhiasO6aN4uKjiZnc2aRyVKN4rL6HLP2GO1a/0qta3n5YHJxPVtV9q+0Wre21oWsCa1zd+YpZdh+jY0x4fA5z35BeWGsxqrvK/VBz6PM3mqaqLvzwFlzXsRJec4sbJ3apFuT0m5qOMMYe0BgolBtMuNvqyahtZUu69pPoYO5h5wFa+pDW28TW4VzmzObkHZqOvoxWo0QE4+H3mrXRnGpdyjCuzgfNQ5Mbr5hvprbU1MeIEeGiIycq1OMSv56x9gv7laasZH142/UOcO6coqQAQ/Qqjqa3Zs8PAIGRagn4JUnW+23F/C7b5uQF0OUPfg2oX36rCTmVjmh3JScbvPSkNpleDsOTqqTV5UejiXfY6FsKONmPXcSm0E6O7UR5aLhwOrRqPS31fspZU85pxHWYWSvOKp/FZj7fl5Yw30FLLfEZKy72MK6IWTNio1vKiN3Emz2ye7aV9V+zVrG+6aSa42MeY59gxjt4Q6gFX3FnTt4jI/9bF//ilsUWVa9VfsRvORNbLkF3gNaOGIe5wX6GVfT4P762TcV//ZoeDSLr9BB7SvUVTEfRzMoq8y6qo07Qeqwf+7mFdLfRd2RrV1V/10zmspa116rdD3k5Yz6ZjwVp9YrI3wtPMbaFT2omRqme8XYTfA+I8L8Fgt05GNO6NtsuJ0t/Viq+v5L6/22PaVut3XP3n9zi/kITStXz54qhj7n7UnrvNPNaF6tXfeT0ycH441r7+Rs2LtzXljz43Wprpt/XKq1c5t6dxeCshYbGR9S+9afm+BqePY1/aMIu7ivaqVf2HrfpR3M6AWi+S+JGaP1uKnXYfP2q/DmG2K84Tzc9nboKmv9H4VqZTdz/j3rH2aHk4KuEwAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>010a634f-2df9-4917-9922-8072fe2576ef</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>010a634f-2df9-4917-9922-8072fe2576ef</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>iPID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>65536</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>72OpDFF2GspXMJlWDDWTyvq3iwk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

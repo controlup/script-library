@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>12c6946e-f8a7-4a07-86f3-d0fb7023d682</SBAId>
+    <RootSBAId>629ec469-8603-4694-94d0-57526b2fd399</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637000918143461886</SQN>
+    <Name>Restart computer with CU Agent</Name>
+    <Description />
+    <Category />
+    <Version>1.0.1</Version>
+    <DateCreated>2019-07-30T13:55:31.367</DateCreated>
+    <DateModified>2019-07-30T13:55:31.367</DateModified>
+    <DatePublished>2019-07-30T13:55:31.367</DatePublished>
+    <LastEditorName>oleg.alter</LastEditorName>
+    <CreatorName>oleg.alter</CreatorName>
+    <Status>4</Status>
+    <CheckSum>NPaDwmrXRAjXQCgKbYKfSmGXVVo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>oleg.alter</Author>
+      <Tags />
+      <Credits>Credits to: oleg.alter
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>oleg.alter@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>426</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>cwBoAHUAdABkAG8AdwBuACAALwByACAALwBjACAAIgBDAG8AbgB0AHIAbwBsAFUAcAAgAHMAYwByAGkAcAB0AC0AYQBjAHQAaQBvAG4AIgAgAC8AdAAgADAAMAA=</ScriptData>
+      <IsCompressed>false</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>h6jFD1OpIv8XSqMIFqO3+SjHLxw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d121f5bd-afac-41cd-883e-02bdcf4ba7f1</SBAId>
+    <RootSBAId>75ff89b9-b455-45e4-9cd5-6086d444d8ed</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636789287291140000</SQN>
+    <Name>Cancel scheduled reboot</Name>
+    <Description>Cancel a reboot scheduled via the Schedule Reboot action by finding and deleting the scheduled task created by the Schedule Reboot action</Description>
+    <Category />
+    <Version>1.5.13</Version>
+    <DateCreated>2018-09-29T11:05:41.617</DateCreated>
+    <DateModified>2018-11-26T13:38:39.077</DateModified>
+    <DatePublished>2018-09-29T11:05:41.617</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>d35s5mdik6F5zvhw+0sdgUvUDfU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF4SURBVEhL7ZOhTsRAEIbrSFCnSUgunMAgLsEiKpHnMScg2OMNKpF9BPAIHmElipwEQ+pQJPcGy/81O83ctoQCIRjEl+7uzHwzabdFjPFHvB7sRc9g0hCTq1CK6OF8lPDo9qQWwVGPFr5dFlVGmSTREb4ijBnVv/CPhS8XO+vn890niUJiKcHQtZkLxB1JGKCZ7T88Hs6a4vj0rBJt8CfIUYp28btCraeiFjdi6YtSfJ7iULrzvlBPZBsC7llnMs58vG2q56CQdZskJmLN3gmZ2uLIkTZDQusKJM0zQS8uuoYeExKgw4pDQdF9WlsMrtMZcZPdia7WhP6jLIQlM+HEYilOfiOQ+vfLa9h0C1/0HeSgeWDBl2WaxVDiWFTPxCvbBMiTxoJIMNTUDux+rfLkz0i1TFex9wHr0vs7PkK5JlvbWZ7A74SUK7P1dXMUZwC7Pl3uUCLXhmuBuP2fhd1DYjS1OOutxlsyjxIRMSlTUGwwEaJpvy4W7/Saimu3LbDHAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Reboot,Schedule</Tags>
+      <Credits>Credits to: guy.leech (@guyrleech)</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>73</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAL1VTW/TQBCdMxL/YUkipUEYtXBBiK8CaU+ARKg4lIoa2wkGJzGxzYeg/503b22vHTsNJ2Q5O97dmXnz5u1mKBuJ5JsUEtPKxIgn32FtYMeylhVm7stNuSGPZMjRlM8J1lcSwvLLMYRfgjfHa/D7mWMmAa0QWRKOuuZj/mu5y8ev2z/r2f8W4yegWXPnTJ7LMcaAmH3mC4mtie+ZLBDhF/ZolIhRjdyTQzmSB9w5lCe11znw5NirNS3kQkY1xtcYl0T2GO94C0tfdXPEWcPHyAsymPM7kTNJiVrnMs5EiOcQ2KgJs89hFeT1Xc2V5tcVH3sy+FqvmBnUJ5Kf+MqZNawRH9YZTtkbr4dhl8OrbVd3HxeeTFGV1rVBLwLsqNQyg6VRFVUC/isOFGdB3z9Uj3pOEU+xePIG1X9hl5TVS+L93ernEI8BOquSl2XfDThVFCk1myOfQSbVcQSkaTmjbBv5wf0LstBUT4VcLVud62ClSqfYkOckoFbS2ruJtKultlKPmd92c8UeJC3/GPkPuPpR7qLSvnzagSUjWl2P5QP2quKamUx5tg6wdlsmiDjG16SVrc1y9ezGPJA7nbNX5Rkh00he1bgU+TnO2wVyDlp5rlpfWqnVxRlq08gLdjFnV/cp1ipszjtsKQ87Z6TL69N/ZOE9WVcUqtACVspfZWEGK8CjNWaIXFDt7Vsw3Hv/XSKSZU17vX32JuV6txfXsRn11L6/Pneetbrml6vIKvr/1OS00X+vHV2rp933p57MomTnqr4bK23c2uk96bmTdvN3Ar+4wc2at4r7x9zHYUAFV/OWse1bWGcHW3VMS676ePsL4uuLfO4HAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>kb3KlZZz6/J5He/a6bc/gT/xKr0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

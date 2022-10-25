@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6ea2c13a-ada4-47fa-bbdb-5cf1a6c42db9</SBAId>
+    <RootSBAId>2d2f9ea0-4c26-484c-a054-44603b34ce72</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>636807354608482000</SQN>
+    <Name>Show computer HDD details</Name>
+    <Description>Shows the details of the hard disk drives in the computer.</Description>
+    <Category />
+    <Version>1.1.2</Version>
+    <DateCreated>2018-12-17T14:24:34.33</DateCreated>
+    <DateModified>2018-12-17T14:34:35.777</DateModified>
+    <DatePublished>2018-12-17T14:24:34.33</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>4</Status>
+    <CheckSum>PFlv5VSjBUWgGIi3u8Sn0SFDWpo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Ton de Vreede</Author>
+      <Tags>hard disk,hdd</Tags>
+      <Credits>Credits to: Ton de Vreede</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Notes />
+      <DownloadCount>172</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>a5a9fb65-47c9-4f9b-87bc-8605fddde3d9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a5a9fb65-47c9-4f9b-87bc-8605fddde3d9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Verbose</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)(true|false)$</ValidationString>
+                  <ValidationError>Please enter True or False.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>NsZo5Wba0bbBcCyRDjXGg1bEETY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

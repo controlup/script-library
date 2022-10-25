@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7274d00f-bbf3-472d-a501-461abbaf7e17</SBAId>
+    <RootSBAId>622856e2-a64f-4dc1-8329-1ce5f923f228</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>637328121066196547</SQN>
+    <Name>IGEL - Get Machine Details</Name>
+    <Description>Gets details about the device using the IGEL IMI Rest API.
+Note: Given that the common practice for the UMS server is to use the self signed Certificate, 
+          this script will ignore SSL errors.</Description>
+    <Category />
+    <Version>3.12.18</Version>
+    <DateCreated>2019-12-12T17:07:38.883</DateCreated>
+    <DateModified>2020-08-11T14:15:31.987</DateModified>
+    <DatePublished>2020-08-11T14:17:03.963</DatePublished>
+    <LastEditorName>trentent.tye</LastEditorName>
+    <CreatorName>trentent.tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>du44bdqhkI9SAbOP8qCfIcuDFNo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDAAACwwBP0AiyAAAAlJJREFUOE+Fk91L01EYxw90HQRddNcf0E0SSYOFiJCQNwpeGAgDQwcDRRNCehnJ6EVEk2YsRpGRRJJGZqhpmSkq+UK6RaKYTlOn1ViartSsT+f57eIIv4se+HLO8/2e8z1vz1ESNTU1lJadY7YzhcjbHBaGi1meqGQlpDFWTHQgh8XuFOZbDxLtTceatDcKCwuZjUPkOyyuw8oGxBKwtgWJHdjehT9/sSI4lsSLaYxRQUEBRUVFRDqOsNR3ii+jLmLhUgvSF060mZYDfH6dbhkFhneNgcvlIhgManr2v/j4UFm7qR/aNgb5+fkEAgHYneDH6HHW3yg2+xS/BpKt5MKLHm5Q7Ogj1fUnjEFeXh5+vx+2eol1KT0wrFfbEzq3eK2/v6uo7lnjwVDMGOTm5lJbWwsbzay26y2O2CG86CN3dKvj2stvxiA7O5uqqiqI32bpueL3OzuEF32oXhH/CZVty8YgKysLn88Hq5eItCi2Bu0QXvS+m4qvm3Dx6bwxyMzMxOv16iI4y0yTItFvh/Ci91QrzjfNUNfxyRhkZGRQUVGhX+k0k436xnvtEF70ruvJOyhrnDQGaWlplJeXw9Qx65nWeuwQXvR2nz6OrtjihrAxcDqdlJSUwIfD1jPFX9khvOhtV5RV9p5748bA4XDg8XhgfD/Tj/cRuq+YeqQHPkm2kgsv+rPLCrf+DFebQ8YgNTUVt9sNY3qV0CGYPgHzZyBammwlF17rLRcUc3NzRKNRYyB/If3kUbpvKAb9ye1KzQukL5xorV5F5y2HmaiU+gejnnsakCVMIQAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>trentent.tye</Author>
+      <Tags>igel</Tags>
+      <Credits>Credits to: trentent.tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>71</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>1</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>3f047165-fa4a-4324-aed0-b152e517b3e0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3f047165-fa4a-4324-aed0-b152e517b3e0</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>ec65c78b-6525-4559-bd2b-a5ff244c9372</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>ec65c78b-6525-4559-bd2b-a5ff244c9372</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Command</Name>
+                  <DefaultValue>Details</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(?i)^Reboot$|^Wakeup$|^Shutdown$|^Update$|^Details$|^Profile$|^Asset$</ValidationString>
+                  <ValidationError>Valid Commands: Reboot   Wakeup   Shutdown   Update   Details   Profile   Asset</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>23183ec4-e77c-42b7-9264-2af974f56856</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>23183ec4-e77c-42b7-9264-2af974f56856</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Debug</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-verbose|.*</ValidationString>
+                  <ValidationError>Enter -verbose for verbose output or leave blank</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7b8b229a-27ee-40b9-ab8e-7452e08446fe</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7b8b229a-27ee-40b9-ab8e-7452e08446fe</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>IGEL UMS Server</Name>
+                  <DefaultValue>igelrmserver</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.+</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>Owl+LJlmrRVVBmuO94maFojS7fU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
