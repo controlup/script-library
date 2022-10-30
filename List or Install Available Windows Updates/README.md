@@ -2,13 +2,13 @@
 
 Description: Lists any Windows Updates available to be installed - or optionally install available Windows Update
 
-Version: 1.9.9
+Version: 3.11.19
 
-Creator: trententtye
+Creator: Trentent Tye
 
 Date Created: 06/23/2020 00:50:20
 
-Date Modified: 03/24/2021 19:46:16
+Date Modified: 10/30/2022 09:59:49
 
 Scripting Language: ps1
 
