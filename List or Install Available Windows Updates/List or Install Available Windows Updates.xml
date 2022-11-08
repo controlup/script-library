@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>3efc9509-f06b-4908-beac-81a54bdf1f44</SBAId>
+    <SBAId>c2aafc50-7df8-4fc0-971d-1285bd8cae7d</SBAId>
     <RootSBAId>f1f115ed-990c-4e48-bc58-e7f6c72102bc</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637522135923688449</SQN>
+    <SQN>638027314204556217</SQN>
     <Name>List or Install Available Windows Updates</Name>
     <Description>Lists any Windows Updates available to be installed - or optionally install available Windows Update</Description>
-    <Category />
-    <Version>1.9.9</Version>
+    <Category>System Health</Category>
+    <Version>3.11.19</Version>
     <DateCreated>2020-06-23T00:50:20.407</DateCreated>
-    <DateModified>2021-03-24T19:46:16.927</DateModified>
-    <DatePublished>2021-03-24T19:47:10.76</DatePublished>
-    <LastEditorName>trentent.tye</LastEditorName>
-    <CreatorName>trententtye</CreatorName>
+    <DateModified>2022-10-30T09:59:49.653</DateModified>
+    <DatePublished>2022-10-30T12:36:47.893</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
     <Status>4</Status>
-    <CheckSum>OyGaXdLWCsNYmzLxqF283kzX3TM=</CheckSum>
+    <CheckSum>A0QJPaxXN0PythJCKUJLpUOS8q8=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
     <Icon>
-      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAAp9JREFUOE910c1P02AcB3CIB736B3j17k1P/A1GLxIvaohIgqIoGEFAYzggKmIUQgwQIRBGUGfoNraxdXNjroy98bZR1nYr67Z2W9lkq/jC1w6MIaF8k+fS/r6f5+nTKgD7qxIvJ0dfejKFwaUsNbkijY8ExY4BKnVlJiScI0Lxk/tD//K/dxiwbeTKAaEMkv0OA13A+LKM11QWjx1pjIRyBRcnNyrKwawm4GG3BbWPeBGIbf/BqvQDS+oDii+oKwcvL8IfDbVDSZ3SBFyx/FpKUQFxB5tT7xEJ+eDfyoFKiDBF0tCtpWFwGQH7DYcmoPML7nX5NxgngdLMJawH+jBBvcDQNxMIegfDgSye2JMS7NfimsA4lSBWBBFNcwzGfGl46U+Y8j2Fkd6AmS1hNCCh20TtgrxuOQJAXjlNugiWSuRxVb+JzvkI9qLNkJ210NNF2BJl6II8SN1dEWnHmaOAo/6d2zr8y86XYIsrsNIZRBeeI0xNISjuwsLtwOhxot2wvlA57VHAcjk/7Y3MVL7VwCiYZUoIMDRK2TVgbxd0rowBbwYtJs6sDZC1Mb+tj3EuzmF18QMKq0PYEx34KVHgpAzGlvPodQu4Z+R02kBk8MI2WReRv95ElmpD1D8K85IbA+pl9iyI6CJTeObYQrMxNqwJVHJ7OnzxlSeDfp+MXk8W3a4UOtXio/kUWi2CerEc7hs3+o8HdOGaDiuvFtP7O1aKD8wpNBm2cMcQR5tZ/b2LfFBRlLOagD7InZz08dYeMoFWM49mUxKNRAK3ZhnU6xm0EDHofQyKxWKDJlCJqldtxpPnLWG2f8TDCl3qrg2fGdR9jOEhsYkvPvqNOlN9LHA45XL5RITla4xB9u2gk01OeFmdJEnVlXcHPVT9BbDz0QXoEcCUAAAAAElFTkSuQmCC</IconData>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAAp9JREFUOE910c1P02AcB3CIB736B3j17k1P/A1GLxIvaohIgqIoGEFAYzggKmIUQgwQIRBGUGfoNraxdXNjroy98bZR1nYr67Z2W9lkq/jC1w6MIaF8k+fS/r6f5+nTKgD7qxIvJ0dfejKFwaUsNbkijY8ExY4BKnVlJiScI0Lxk/tD//K/dxiwbeTKAaEMkv0OA13A+LKM11QWjx1pjIRyBRcnNyrKwawm4GG3BbWPeBGIbf/BqvQDS+oDii+oKwcvL8IfDbVDSZ3SBFyx/FpKUQFxB5tT7xEJ+eDfyoFKiDBF0tCtpWFwGQH7DYcmoPML7nX5NxgngdLMJawH+jBBvcDQNxMIegfDgSye2JMS7NfimsA4lSBWBBFNcwzGfGl46U+Y8j2Fkd6AmS1hNCCh20TtgrxuOQJAXjlNugiWSuRxVb+JzvkI9qLNkJ210NNF2BJl6II8SN1dEWnHmaOAo/6d2zr8y86XYIsrsNIZRBeeI0xNISjuwsLtwOhxot2wvlA57VHAcjk/7Y3MVL7VwCiYZUoIMDRK2TVgbxd0rowBbwYtJs6sDZC1Mb+tj3EuzmF18QMKq0PYEx34KVHgpAzGlvPodQu4Z+R02kBk8MI2WReRv95ElmpD1D8K85IbA+pl9iyI6CJTeObYQrMxNqwJVHJ7OnzxlSeDfp+MXk8W3a4UOtXio/kUWi2CerEc7hs3+o8HdOGaDiuvFtP7O1aKD8wpNBm2cMcQR5tZ/b2LfFBRlLOagD7InZz08dYeMoFWM49mUxKNRAK3ZhnU6xm0EDHofQyKxWKDJlCJqldtxpPnLWG2f8TDCl3qrg2fGdR9jOEhsYkvPvqNOlN9LHA45XL5RITla4xB9u2gk01OeFmdJEnVlXcHPVT9BbDz0QXoEcCUAAAAAElFTkSuQmCC</IconData>
       <IconType>2</IconType>
     </Icon>
     <ShareDescriptor>
-      <Author>trentent.tye</Author>
-      <Tags>Windows Update</Tags>
-      <Credits>Credits to: trententtye00
+      <Author>Trentent Tye</Author>
+      <Tags>Windows, update</Tags>
+      <Credits>Credits to: Trentent Tye
 Original code by:
 Taken from:</Credits>
-      <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
-      <Notes>Lists available Windows Updates or Installs any available Windows Update</Notes>
-      <DownloadCount>207</DownloadCount>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>229</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
       <AtomicEntityEx>256</AtomicEntityEx>
       <AllowedEntities>0</AllowedEntities>
       <AtomicEntity>0</AtomicEntity>
-      <ScriptData>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</ScriptData>
+      <ScriptData>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</ScriptData>
       <IsCompressed>true</IsCompressed>
       <Interactive>false</Interactive>
       <AltCredentialsType>0</AltCredentialsType>
@@ -63,6 +63,44 @@ Taken from:</Credits>
                   <ArgumentNumber>0</ArgumentNumber>
                   <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString>-list|-update</ValidationString>
+                  <ValidationError>Please enter -list to list the available updates, -update to install available updates.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3de911e6-1a53-400f-a814-a24960ab859f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3de911e6-1a53-400f-a814-a24960ab859f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>-AllUpdates or -PatchesOnly</Name>
+                  <DefaultValue>-PatchesOnly</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>-AllUpdates|-PatchesOnly</ValidationString>
+                  <ValidationError>Please enter -AllUpdates to apply to ALL the available updates, -PatchesOnly top apply to only patches.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>cb3f15ee-31ff-4143-8da0-0089f09e77ff</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>cb3f15ee-31ff-4143-8da0-0089f09e77ff</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Save Output To</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
                   <ValidationError />
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>0</EntityType>
@@ -77,7 +115,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>KAJbnqE6GC8ZEYNJsHEsYBmRF7w=</ImportValidationString>
+    <ImportValidationString>cTzI62aAKIZuSIyNzqD8nr96ojw=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>
