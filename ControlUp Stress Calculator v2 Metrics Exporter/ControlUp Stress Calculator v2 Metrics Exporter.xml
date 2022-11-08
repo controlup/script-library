@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7bd6d547-1182-460a-934f-331d7ff4522b</SBAId>
+    <RootSBAId>1015d6b3-605c-44e7-852f-ff2f5635c131</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638021321658807492</SQN>
+    <Name>ControlUp Stress Calculator v2 Metrics Exporter</Name>
+    <Description>Exports Metrics to be used by the ControlUp Stress Calculator v2 by using the ControlUp Monitor Powershell Module. Uses True or False as string for the benefit of using the script as a ControlUp Script Action. See this link for Documentation:</Description>
+    <Category />
+    <Version>1.5.31</Version>
+    <DateCreated>2022-07-04T09:53:52.97</DateCreated>
+    <DateModified>2022-07-07T17:50:30.227</DateModified>
+    <DatePublished>2022-07-07T17:50:50.707</DatePublished>
+    <LastEditorName>wouter.kursten</LastEditorName>
+    <CreatorName>wouter.kursten</CreatorName>
+    <Status>4</Status>
+    <CheckSum>RDlCNQ6J36tdKddvnYEgbLstgDw=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALDAAACwwBP0AiyAAAAhFJREFUOE99kltrE0EUx/cL+OiX0Gc/hg++iQ+iUOijr8UnQRChpS0Kgg9Kab01WZNoUnOrSTVlm1uTImIuUgvdpqbE7M5m9jYzuzOe3a4lefFwmD3D/n/zn3N2pcl/w4CcjVnAtGybCCaCcBgWwlte0nt9ndJIPgNgjIRgP783tMG13N07zw+vxIdCkpCcMISI5AAEC0I6pDHRiScuS/LumvTk0vzL46shoG3KMwAyDD1MBDeCiySWESUvDjNHJ7w48kUyPv51ZHE/kp8DUQJAvR2loaojY6RBF/X9BhO8VK25bKqHKQfDcd3Hi6v57dL667dLK09NbD58tPi59IVNA9EzNOE+LxRL7YNvPzpdaCtX2P49PNtvtV3XudBMORiGz/3Uh0w41ChSHzOEUNu2Qa3rMJ0QgICpuo7DBc/mitl8sbxTUfaq2VxBqdb7/T6l1MQ4FP4D4IMNz4YbrzbfxRLt1kGt3lxZfdbp9WJyIl+EthvEdWEqEYAnE8rY2sab8BZcVVXLNNOZT7AZj//AClaD01M4FCEUAI5tH58MvlZ2A2sT+77X6Xbn5u+BFGPsOA6jLP4+BbMKAHBhlMrJNJwNvpZlcc6bzdat23MAwBYCipic9DwvAKBdkMIBgXW+QAiBolyuXL9xEwpKyFa2AIUsJ8FZ0/To51P2ahcrRHort3D/wXkdvVKquo7GY+0v+HOgP4dHdH8AAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>wouter.kursten</Author>
+      <Tags />
+      <Credits>Credits to: wouter.kursten
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>2</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>5</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>5fd93b69-8a8b-49b8-bf7d-84436f942184</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5fd93b69-8a8b-49b8-bf7d-84436f942184</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Maximum File Age</Name>
+                  <DefaultValue>7</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>[0-9]</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7bb468b1-0f6d-443b-a5c3-97a2d6120e05</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7bb468b1-0f6d-443b-a5c3-97a2d6120e05</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Session Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>32a1b53a-a440-40d9-8bb2-2fcffc73e202</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>32a1b53a-a440-40d9-8bb2-2fcffc73e202</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Computer Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9ab3bc6f-3dd8-4fd3-ae68-f38c736a6394</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9ab3bc6f-3dd8-4fd3-ae68-f38c736a6394</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Folder Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1db89d27-0f97-408f-8b3c-f92615500b42</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1db89d27-0f97-408f-8b3c-f92615500b42</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Host Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f5619d61-9b14-4a45-aeca-e4c33ed98a02</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f5619d61-9b14-4a45-aeca-e4c33ed98a02</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Datastore Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>874f0a93-a6e1-47d1-b8af-6d5abc6429d8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>874f0a93-a6e1-47d1-b8af-6d5abc6429d8</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Netscaler Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>7</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>29119cce-f791-4b06-a0a9-18d316800eb8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>29119cce-f791-4b06-a0a9-18d316800eb8</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>VirtualDisk Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>8</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>fa646cec-fe7b-437c-885c-62cecdd77fe5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>fa646cec-fe7b-437c-885c-62cecdd77fe5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>LogicalDisk Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>9</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>be5ef90d-9726-41f7-b91d-6a18aceadfbc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>be5ef90d-9726-41f7-b91d-6a18aceadfbc</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>GateWay Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>10</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>17c143c2-210e-4978-a276-4ebb1391084a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>17c143c2-210e-4978-a276-4ebb1391084a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>LoadBalancer Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>11</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>92b5e85c-bc59-4b01-82ca-0037dafdd60d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>92b5e85c-bc59-4b01-82ca-0037dafdd60d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Load Balancer Service Group Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>12</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>a6b4c652-50d9-48bf-8247-8b25d32f1f48</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a6b4c652-50d9-48bf-8247-8b25d32f1f48</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Load Balancer Service Data</Name>
+                  <DefaultValue>True</DefaultValue>
+                  <ArgumentNumber>13</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|true|false</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e61b6d76-a1a7-4147-aeae-e3be36e08d74</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e61b6d76-a1a7-4147-aeae-e3be36e08d74</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Export Location</Name>
+                  <DefaultValue>\\cufs\Files\monitor_Exports_PSModule</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>SjH/qVEosGdujVQRUFM4tLYXZHk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

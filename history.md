@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 08-11-2022
+=======
+30-10-2022
+>>>>>>> f8b742bdd46bf2e1788df0f17d77a08a8e7bcbe2
 ==========
 ## Added:
 ### _ControlUp Stress Calculator v2 Metrics Exporter_
