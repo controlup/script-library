@@ -60,7 +60,7 @@ function Get-FSLogixProfileEvents {
 
 
     Write-Verbose "Username: `"$($Username)`""
-    Write-Verbose "StartTime: `"$($Start)`""
+    Write-Verbose "User Session StartTime: `"$($Start)`""
 
     #FSLogix Log path is here: C:\ProgramData\FSLogix\Logs\Profile
     #at the time of this testing version 2.9.7205.27375 of FSLogix provided all the necessary information
@@ -85,9 +85,17 @@ function Get-FSLogixProfileEvents {
         break
     }
     Write-Verbose "Found Profile Log file: $($profileLog.FullName)"
-
-
     $FSLogixLog = Get-Content "$($profileLog.fullname)"
+
+    $CurrentTimezone = ((Get-TimeZone).baseUtcOffset)
+    Write-Verbose "Current Timezone Offset: $($CurrentTimezone.TotalHours)"
+
+    Write-Verbose "Searching for FSLogix Timezone offsets"
+    [timespan]$UTCOffset = (($FSLogixLog -match "UTC")[0]).Replace("UTC","")
+    Write-Verbose "FSLogix Timezone Offset: $($UTCOffset.TotalHours)"
+    $TimeZoneOffset = $CurrentTimezone.Subtract($UTCOffset)
+
+    Write-Verbose "Timezone Offset for log file processing: $($TimeZoneOffset.TotalHours)"
     $FSLogixLogObject = New-Object System.Collections.ArrayList
 
     #Create powershell object out of the FSLogix Log.
@@ -96,7 +104,7 @@ function Get-FSLogixProfileEvents {
             if ( $_.Matches.count -eq 4) { #ignore all lines that don't conform to the grid table
                 $MMddyyyy = $(($start).ToString("MM/dd/yyyy"))
                 $time = $($_.Matches[0].Value -replace ("\[","") -replace ("\]",""))
-                $FSLogixTime = [datetime]"$MMddyyyy $time"
+                $FSLogixTime = ([datetime]"$MMddyyyy $time").AddMinutes($TimeZoneOffset.TotalMinutes) ## Adding by TotalMinutes for those tricky 30 min timezone offsets
                 if ($FSLogixTime -ge $start) {
                     $obj = [PSCustomObject]@{
                         Time = $FSLogixTime

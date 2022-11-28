@@ -1,3 +1,8 @@
+28-11-2022
+==========
+## Added:
+### _Find FSlogix mounts from share_
+<BR><BR>
 <<<<<<< HEAD
 08-11-2022
 =======
@@ -99,6 +104,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 

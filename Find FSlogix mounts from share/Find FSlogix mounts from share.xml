@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>b1302df0-c28d-40de-a2c7-6e3fa4d45523</SBAId>
+    <RootSBAId>1216bbe8-60cb-45c6-97cd-e7da39e18a33</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638051755177495835</SQN>
+    <Name>Find FSlogix mounts from share</Name>
+    <Description>Searches the given list of shares, or pulls them from the registry if * specified and the script is running on a machine with FSlogix installed, for .metadata files and extracts the name of the machine where the corresponding vhd/vhdx file is mounted along with other useful data about the disk.
+
+The last boot time of the machine where the disk is mounted can be retrieved where if this is empty/missing it likely means that the user running the script does not have WMI/CIM permissions or that machine is not powered on.
+
+Both profile and Office disks will be reported on.</Description>
+    <Category>Miscellaneous</Category>
+    <Version>1.0.11</Version>
+    <DateCreated>2022-10-06T10:48:22.583</DateCreated>
+    <DateModified>2022-11-16T15:00:40.21</DateModified>
+    <DatePublished>2022-11-27T19:41:45.323</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>sUoTEyVfFvzvkMIeN35Fp4FVlAg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags />
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>0361c557-eb18-402e-a994-77a85b53530f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0361c557-eb18-402e-a994-77a85b53530f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>FSlogix share(s)</Name>
+                  <DefaultValue>*</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>db8715b3-bbd6-4132-b38a-4e2dfd4f05a8</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>db8715b3-bbd6-4132-b38a-4e2dfd4f05a8</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Get Boot Time</Name>
+                  <DefaultValue>yes</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>yes or no</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>3lNx5guv+zKYaARBeZyckrbg0nY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
