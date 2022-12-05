@@ -2,16 +2,20 @@
 
 <#
 .SYNOPSIS
+
 Show FSLogix currently mounted volume details & cross reference to FSLogix session information in the registry
 
 .DESCRIPTION
+
 Gets Windows disks, volumes and partitions information and correlates with HKEY_LOCAL_MACHINE\SOFTWARE\FSLogix\Profiles\Sessions to show disk sizes, capacities and free space
 Cross references to file share to check space and vhd size
 
 .PARAMETER label
+
 Only include partitions whose label matches this regular expression. They are typically labelled "Profile-%username%"
 
 .PARAMETER searchWindowMinutes
+
 How many minutes after logon to search the event logs for FSlogix events for a specific session
 
 .NOTES
@@ -21,6 +25,15 @@ How many minutes after logon to search the event logs for FSlogix events for a s
 
     2022/08/18   GRL   Initial public release
     2022/08/26   GRL   Only add share info if available, added summary before details
+    2022/08/31   GRL   Added more reason codes. Added extra event id for getting mount start time as not present on 2019. Added workaround for WTS API returning empty username. Warn if events not found as event log wrapped
+    2022/10/05   GRL   Fix for error if outputting $null date. Fix for lsa session types
+    2022/10/12   GRL   Deal gracefully with FSlogix event log absence
+    2022/10/26   GRL   Added bloat calculation
+    2022/10/27   GRL   Changed bloat calculation
+    2022/11/17   GRL   Minor bug fixes
+    2022/11/21   GRL   Rework around events used to mark mount start and stop
+    2022/11/22   GRL   Fixed bugs for oldest event reporting and share info not reported when cached.
+                       Added + - markers for properties specific to Profile or Office disks
 #>
 
 [CmdletBinding()]
@@ -29,12 +42,9 @@ Param
 (
     [string]$label ,
     [decimal]$searchWindowMinutes = 10
-    ##[switch]$noUsedSpace 
 )
 
-## TODO disconnects
-## TODO AVD
-## TODO .metadata (separate script)
+## TODO
 
 $DebugPreference = $(if( $PSBoundParameters[ 'debug' ] ) { 'Continue' } else { 'SilentlyContinue' })
 $VerbosePreference = $(if( $PSBoundParameters[ 'verbose' ] ) { 'Continue' } else { 'SilentlyContinue' })
@@ -55,6 +65,11 @@ $ErrorActionPreference = $(if( $PSBoundParameters[ 'ErrorAction' ] ) { $ErrorAct
     3	= 'A local profile for the user already exists'
     1	= 'The user is not a member of the FSLogix Include group, and should therefore not receive a FSLogix Profile'
     0	= 'The FSLogix Profile has been attached and is working'
+    5	= 'Reason initialized to empty state'
+    6	= 'Component is not enabled in product key (legacy)'
+    7	= 'Profile is a Windows temporary profile'
+    8	= 'Session is not an Azure Virtual Desktop Session'
+    9	= 'Profile load failed'
 }
 
 [hashtable]$fslogixErrorCodes = @{
@@ -136,6 +151,13 @@ else
             Write-Warning -Message "`"$($driver.displayname)`" driver is not running, it is $($driver.State)"
         }
     }
+}
+
+[string]$fslogixEventLog = 'Microsoft-FSLogix-Apps/Operational'
+if( -Not ( Get-WinEvent -ListLog $fslogixEventLog -ErrorAction SilentlyContinue ) )
+{
+    Write-Warning -Message "Event log $fslogixEventLog not found"
+    $fslogixEventLog = $null
 }
 
 # TODO check fslogix enabled
@@ -346,28 +368,31 @@ else
                     $earliestSession = $loginTime
                 }
 
-                if( $secType -ieq 'RemoteInteractive' )
+                ## interactive logons for single session OS like W10
+                if( ( $secType -ieq 'RemoteInteractive' -or  $secType -ieq 'Interactive' ) -and $data.Session -gt 0 )
                 {
-                    $authPackage = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.AuthenticationPackage.buffer) #get the authentication package
-                    $session = $data.Session # get the session number
-                   
-                    $logonServer = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.LogonServer.buffer) #get the logon server
-                    $DnsDomainName = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.DnsDomainName.buffer) #get the DNS Domain Name
-                    $upn = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.upn.buffer) #get the User Principal Name
+                    [string]$logonServer = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.LogonServer.buffer) #get the logon server
+                    if( -Not [string]::IsNullOrEmpty( $logonServer ) )
+                    {
+                        [string]$authPackage = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.AuthenticationPackage.buffer) #get the authentication package
+                        [int]$session = $data.Session # get the session number
+                        [string]$DnsDomainName = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.DnsDomainName.buffer) #get the DNS Domain Name
+                        [string]$upn = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.upn.buffer) #get the User Principal Name
 
-                    [pscustomobject]@{
-                        'Sid' = $sid
-                        'Username' = $thisUser
-                        'Domain' = $thisDomain
-                        'Session' = $session
-                        'LoginId' = [uint64]( $loginID = [Int64]("0x{0:x8}{1:x8}" -f $data.LoginID.HighPart , $data.LoginID.LowPart) )
-                        'LogonServer' = $logonServer
-                        'DnsDomainName' = $DnsDomainName
-                        'UPN' = $upn
-                        'AuthPackage' = $authPackage
-                        'SecurityType' = $secType
-                        'Type' = $data.LogonType
-                        'LoginTime' = [datetime]$loginTime
+                        [pscustomobject]@{
+                            'Sid' = $sid
+                            'Username' = $thisUser
+                            'Domain' = $thisDomain
+                            'Session' = $session
+                            'LoginId' = [uint64]( $loginID = [Int64]("0x{0:x8}{1:x8}" -f $data.LoginID.HighPart , $data.LoginID.LowPart) )
+                            'LogonServer' = $logonServer
+                            'DnsDomainName' = $DnsDomainName
+                            'UPN' = $upn
+                            'AuthPackage' = $authPackage
+                            'SecurityType' = $secType
+                            'Type' = $data.LogonType
+                            'LoginTime' = [datetime]$loginTime
+                        }
                     }
                 }
             }
@@ -789,6 +814,35 @@ if( $WTSsessions -and $WTSsessions.Count -eq 0 )
 
 #endregion WTSAPI
 
+Function Get-OldestEventLogRecordTimes
+{
+    Param
+    (
+        [Parameter(Mandatory=$true)]
+        [string[]]$eventLogs
+    )
+
+    [string]$oldestEventString = $null
+
+    ForEach( $eventLog in $eventLogs )
+    {
+        if( $oldestEvent = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = $eventLog } | Select-Object -First 1 -ExpandProperty TimeCreated  )
+        {
+            ## do not cache as could be for different users and thus different time frames (could cache with key based on user and event log name)
+            if( [string]::IsNullOrEmpty( $oldestEventString ) )
+            {
+                $oldestEventString = "$(Get-Date -Date $oldestevent -Format G) ($eventLog)"
+            }
+            else
+            {
+                $oldestEventString = "$oldestEventString & $(Get-Date -Date $oldestEvent -Format G) ($eventLog)"
+            }
+        }
+    }
+
+    $oldestEventString ## return
+}
+
 ## "feature" in PS ISE means we have to translate paths
 ## see https://twitter.com/matbg/status/155777500454004736
 [string]$pathFixup = '^$' ## won't match any non-empty string
@@ -802,8 +856,13 @@ if( $host -and $host.Name -match '\bISE\b' )
 [hashtable]$uniqueNetworkVHDs = @{}
 [hashtable]$uniqueShares = @{}
 [hashtable]$uniqueShareHosts = @{}
+[hashtable]$eventsOfInterestForUser= @{}
+[hashtable]$volumeGUIDtoHardDisk = @{}
 [long]$VHDsizeTotalMB = 0
 [int]$vhdxMeasured = 0
+[string]$vhdmpEventLog = 'Microsoft-Windows-VHDMP-Operational'
+[string]$kernelIOEventLog = 'Microsoft-Windows-Kernel-IO/Operational'
+[string]$emptyGUID = [guid]::Empty.ToString()
 
 [array]$results = @( ForEach( $partition in $partitions )
 {
@@ -815,6 +874,8 @@ if( $host -and $host.Name -match '\bISE\b' )
     {
         Write-Warning "Unable to find fixed volume with GUID $($partition.Guid)"
     }
+    ## Get minimum size partition can be so we can determine bloat - suggestion from @jimmoyle
+    ##$partitionSizes = Get-PartitionSupportedSize -InputObject $partition
     if( -Not $PSBoundParameters[ 'label' ] -or ($volume -and $volume.FileSystemLabel -match $label ))
     {
         [string]$uniqueId = ($partition.UniqueId -split '[{}]')[-1]
@@ -824,17 +885,17 @@ if( $host -and $host.Name -match '\bISE\b' )
             Write-Warning "Unable to find disk with unique id $uniqueId"
         }
         $result = [pscustomobject][ordered]@{
-            'Label' = $volume | Select-Object -ExpandProperty FileSystemLabel
-            'Operational Status' = $volume | Select-Object -ExpandProperty OperationalStatus
-            'Health Status' = $volume | Select-Object -ExpandProperty HealthStatus
-            'Provisioning Type' = $disk | Select-Object -ExpandProperty ProvisioningType
+            ' Label' = $volume | Select-Object -ExpandProperty FileSystemLabel
+            ' Operational Status' = $volume | Select-Object -ExpandProperty OperationalStatus
+            ' Health Status' = $volume | Select-Object -ExpandProperty HealthStatus
+            ' Provisioning Type' = $disk | Select-Object -ExpandProperty ProvisioningType
             ##'Disk Size (GB)' = [math]::Round( ( $disk | Select-Object -ExpandProperty Size ) / 1GB , 2 )
             ##'Volume Size (GB)' = [math]::Round( ( $volume | Select-Object -ExpandProperty Size ) / 1GB , 2 )
-            'Volume Capacity (GB)' = [math]::Round(  ( $volume | Select-Object -ExpandProperty SizeRemaining ) / 1GB , 2 )
+            ' Volume Free Capacity (GB)' = [math]::Round(  ( $volume | Select-Object -ExpandProperty SizeRemaining ) / 1GB , 2 )
             ## avoid divide by zero
-            'Volume Free Capacity %' = $(if( $volume -and $volume.PSObject.Properties[ 'size' ] -and $volume.size -gt 0 ) { [math]::Round( ( $volume | Select-Object -ExpandProperty SizeRemaining ) / $volume.Size * 100 , 2 ) })
+            ' Volume Free Capacity %' = $(if( $volume -and $volume.PSObject.Properties[ 'size' ] -and $volume.size -gt 0 ) { [math]::Round( ( $volume | Select-Object -ExpandProperty SizeRemaining ) / $volume.Size * 100 , 2 ) })
         }
-        <#  ## Commennted out because get too many folders when ODFC so need a better way of showing data usage
+        <#  ## Commented out because get too many folders when ODFC so need a better way of showing data usage
         Write-Verbose -Message "Partition is `"$($partition.AccessPaths)`""
         ## \\?\Volume{451ca07e-00c3-40bb-a5f9-75a559033bb8}\ 
         [array]$paths = Get-ChildItem -LiteralPath (($partition | Select-Object -ExpandProperty AccessPaths) -replace $pathFixup , '\\.\') | . { Process `
@@ -854,7 +915,6 @@ if( $host -and $host.Name -match '\bISE\b' )
         [bool]$officeDisk = $false
         [bool]$gotShareInfo = $false
 
-
         $fslogixRegValue = Get-ItemProperty -Path "HKLM:\SOFTWARE\FSLogix\Profiles\Sessions\*" -ErrorAction SilentlyContinue | Where-Object { $_.Volume -eq $volume.Path }
         [string]$userSID = $null
         if( -Not ($profileDisk = ($null -ne $fslogixRegValue )))
@@ -867,11 +927,11 @@ if( $host -and $host.Name -match '\bISE\b' )
         if( $fslogixRegValue )
         {
             Add-Member -Force -InputObject $result -NotePropertyMembers @{
-                'Username' = ([System.Security.Principal.SecurityIdentifier]( $userSID = $fslogixRegValue.PSChildName )).Translate([System.Security.Principal.NTAccount]).Value
-                'Profile Path' = $(if( $fslogixRegValue.PSObject.Properties[ 'UserProfilePath' ] ) { $fslogixRegValue.UserProfilePath } else {  $fslogixRegValue | Select-Object -ErrorAction SilentlyContinue -ExpandProperty ProfilePath } )
-                'Local Profile Path' = $fslogixRegValue | Select-Object -ErrorAction SilentlyContinue -ExpandProperty LocalProfilePath
-                'Session Id' = $fslogixRegValue | Select-Object -ErrorAction SilentlyContinue -ExpandProperty WindowsSessionID
-                'Last Profile Load Time (s)' = ( $fslogixRegValue | Select-Object -ErrorAction SilentlyContinue -ExpandProperty LastProfileLoadTimeMS ) / 1000
+                ' Username' = ([System.Security.Principal.SecurityIdentifier]( $userSID = $fslogixRegValue.PSChildName )).Translate([System.Security.Principal.NTAccount]).Value
+                ' Profile Path' = $(if( $fslogixRegValue.PSObject.Properties[ 'UserProfilePath' ] ) { $fslogixRegValue.UserProfilePath } else {  $fslogixRegValue | Select-Object -ErrorAction SilentlyContinue -ExpandProperty ProfilePath } )
+                '+Local Profile Path' = $fslogixRegValue | Select-Object -ErrorAction SilentlyContinue -ExpandProperty LocalProfilePath
+                ' Session Id' = $fslogixRegValue | Select-Object -ErrorAction SilentlyContinue -ExpandProperty WindowsSessionID
+                '+Last Profile Load Time (s)' = ( $fslogixRegValue | Select-Object -ErrorAction SilentlyContinue -ExpandProperty LastProfileLoadTimeMS ) / 1000
             }
         }
         else
@@ -889,9 +949,10 @@ if( $host -and $host.Name -match '\bISE\b' )
         $shareFreeSpaceGB = $null
         [string]$shareName = $null
         [string]$sourceFolder = $null
+        [string]$location = $disk | Select-Object -ExpandProperty Location
 
         ## Get Start of mount for this user and disk
-        if( $logon = $lsaSessions | Where-Object { $_.username -eq $result.Username.Split( '\' )[-1] -and $_.domain -eq $result.Username.Split( '\' )[0 ] } | Sort-Object -Descending -Property LoginTime | Select-Object -First 1 )
+        if( $logon = $lsaSessions | Where-Object { $_.username -eq $result.' Username'.Split( '\' )[-1] -and $_.domain -eq $result.' Username'.Split( '\' )[0 ] } | Sort-Object -Descending -Property LoginTime | Select-Object -First 1 )
         {
             [string]$volumeGUID = $null
             ## \\?\Volume{451ca07e-00c3-40bb-a5f9-75a559033bb8}\
@@ -899,13 +960,64 @@ if( $host -and $host.Name -match '\bISE\b' )
             {
                 $volumeGUID = $Matches[ 1 ]
             }
-            ## \\?\UNC\grl-nas02\Software\FSLogix\S-1-5-21-1721611859-3364803896-2099701507-1109_billybob\Profile_billybob.VHDX
-            $mountStartTime = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = 'Microsoft-Windows-VHDMP-Operational' ; Id = 22 ; Starttime = $logon.LoginTime ; EndTime = $logon.LoginTime.AddMinutes( $searchWindowMinutes )}    | Where-Object { $_.Properties[0].value -match $userSID }   | Select-Object -first 1 -ExpandProperty TimeCreated
-            $mountEndTime   = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = 'Microsoft-Windows-Kernel-IO/Operational' ; Id = 2 ; Starttime = $logon.LoginTime ; EndTime = $logon.LoginTime.AddMinutes( $searchWindowMinutes )} | Where-Object { $_.Properties[0].value -ieq $volumeGUID  } | Select-Object -first 1 -ExpandProperty TimeCreated
-            $profileLoadEnd = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = 'Microsoft-FSLogix-Apps/Operational' ; Id = 25 ; Starttime = $logon.LoginTime ; EndTime = $logon.LoginTime.AddMinutes( $searchWindowMinutes )} | Where-Object { $_.Properties[4].value -ieq $userSID }
+            ## Window 10 doesn't seem to write to the Microsoft-Windows-Kernel-IO/Operational log & Server 2019 writes very little to the Microsoft-Windows-VHDMP-Operational log
+            ## 1 is  "The VHD \\grl-nas02\Software\FSLogix\S-1-5-21-1721611859-3364803896-2099701507-1109_billybob\Profile_billybob.VHDX has come online (surfaced) as disk number 2"
+            ## 22 is "Starting to create the handle for the file backing virtual disk '\\?\UNC\grl-nas02\Software\FSLogix\S-1-5-21-1721611859-3364803896-2099701507-1109_billybob\Profile_billybob.VHDX'."
+            ## 2 is "The volume has been successfully mounted"
+            [array]$eventsOfInterest = @()
+            [string]$plainVolumeGUID = $volumeGUID -replace '[\{\}]'
+            if( -not ( $eventsOfInterest = @( $eventsOfInterestForUser[ $result.' Username' ] ) ))
+            {
+                $eventsOfInterest = @(
+                    Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = $vhdmpEventLog ; Id = 1,22 ; Starttime = $logon.LoginTime ; EndTime = $logon.LoginTime.AddMinutes( $searchWindowMinutes )} | Select-Object -Property *,@{n='StartEvent';e={$_.Id -eq 22 }}
+                    ##Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = 'Microsoft-Windows-NTFS/Operational' ; Id = 4 ; Starttime = $logon.LoginTime ; EndTime = $logon.LoginTime.AddMinutes( $searchWindowMinutes )} | Where-Object { $_.Properties[3].value.ToString() -imatch $plainVolumeGUID  }
+                    Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = $kernelIOEventLog ; Id = 1, 2 ; Starttime = $logon.LoginTime ; EndTime = $logon.LoginTime.AddMinutes( $searchWindowMinutes )} | Where-Object { $_.Properties[0].value -notmatch $emptyGUID  }  | Select-Object -Property *,@{n='StartEvent';e={$_.Id -eq 1 }}
+                )
+                ## cache as may need for profile and Office disks
+                Write-Verbose -Message "Got $($eventsOfInterest.Count) events of interest for $($result.' Username'), logon $logon"
+                if( $eventsOfInterest -and $eventsOfInterest.Count -gt 0 )
+                {
+                    $eventsOfInterestForUser.Add( $result.' Username' , $eventsOfInterest )
+                }
+            }
+            if( $null -ne $eventsOfInterest -and $eventsOfInterest.Count -ge 2 )
+            {
+                if( -not ( $mountStartTime = $eventsOfInterest | Where-Object { $_.Id -in @( 22 , 1 ) -and $_.TimeCreated -ge $logon.LoginTime -and $_.TimeCreated -le $logon.LoginTime.AddMinutes( $searchWindowMinutes ) -and $_.Properties[0].value -match "($userSID|$plainVolumeGUID)" -and $_.StartEvent } | Select-Object -First 1 -ExpandProperty TimeCreated ) )
+                {
+                    [string]$oldestEventString = Get-OldestEventLogRecordTimes -eventLogs @( $vhdmpEventLog , $kernelIOEventLog )
+                    Write-Warning -Message "Failed to get mount start time from event logs for $location, logon for $($result.' username') was $(Get-Date -Date $logon.LoginTime -Format G)$(if( $oldestEvent ){ ", oldest events are $oldestEventString" })"
+                }
+                if( -not ( $mountEndTime = $eventsOfInterest | Where-Object { $_.Id -in @( 1 , 2) -and ( ( $mountStartTime -and $_.TimeCreated -gt $mountStartTime ) -or ( -Not $mountStartTime -and $_.TimeCreated -ge $logon.LoginTime )) -and $_.TimeCreated -le $logon.LoginTime.AddMinutes( $searchWindowMinutes ) -and -Not $_.StartEvent -and ( $_.Properties[0].value -ieq $location -or  $_.Properties[0].value -ieq $volumeGUID )} | Select-Object -First 1 -ExpandProperty TimeCreated ) )
+                {
+                    [string]$oldestEventString = Get-OldestEventLogRecordTimes -eventLogs @( $vhdmpEventLog , $kernelIOEventLog )
+                    Write-Warning -Message "Failed to get mount end time from event logs for $location, logon for $($result.' username') was $(Get-Date -Date $logon.LoginTime -Format G)$(if( $oldestEvent ){ ", oldest events are $oldestEventString" })"
+                }
+                <#
+                if( -Not ( $mountEndTime   = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = 'Microsoft-Windows-Kernel-IO/Operational' ; Id = 2 ; Starttime = $logon.LoginTime ; EndTime = $logon.LoginTime.AddMinutes( $searchWindowMinutes )} | Where-Object { $_.Properties[0].value -ieq $volumeGUID  } | Select-Object -first 1 -ExpandProperty TimeCreated ) `
+                    -and ( $oldestEvent = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = 'Microsoft-Windows-Kernel-IO/Operational' } | Select-Object -First 1 ) `
+                        -and $oldestEvent.TimeCreated -gt $logon.LoginTime )
+                {
+                    Write-Warning -Message "Failed to get mount end time from Microsoft-Windows-Kernel-IO/Operational event log - oldest event is $(Get-Date -Date $oldestevent.TimeCreated -Format G) , logon for $($result.username) was $(Get-Date -Date $logon.LoginTime -Format G)"
+                }
+                #>
+            }
+            else
+            {
+                Write-Warning -Message "No events of interest in event log $vhdmpEventLog for $($result.' Username') from $(Get-Date -Date $logon.LoginTime -Format G)"
+            }
+
+            if( $fslogixEventLog )
+            {
+                if( -Not ( $profileLoadEnd = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = $fslogixEventLog ; Id = 25 ; Starttime = $logon.LoginTime ; EndTime = $logon.LoginTime.AddMinutes( $searchWindowMinutes )} | Where-Object { $_.Properties[4].value -ieq $userSID } ) `
+                       -and ( $oldestEvent = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = $fslogixEventLog } | Select-Object -First 1 ) `
+                        -and $oldestEvent.TimeCreated -gt $logon.LoginTime )
+                {
+                    Write-Warning -Message "Failed to get profile load end time from $fslogixEventLog event log - oldest event is $(Get-Date -Date $oldestevent.TimeCreated -Format G) , logon for $($result.' username') was $(Get-Date -Date $logon.LoginTime -Format G)"
+                }
+            }
+            ## else no event log but have already warned about this
         }
 
-        [string]$location = $disk | Select-Object -ExpandProperty Location
         if( -Not [string]::IsNullOrEmpty( $location ) )
         {
             ## account running the script may not have permissions for share/file
@@ -1005,31 +1117,34 @@ if( $host -and $host.Name -match '\bISE\b' )
                 {
                     $shareCapacityGB = $cachedShare.Size
                     $shareFreeSpaceGB = $cachedShare.FreeSpace
+                    $gotShareInfo = $true
                 }
             }
         }
 
         Add-Member -Force -InputObject $result -NotePropertyMembers @{
-            'OfficeDisk' = $officeDisk
-            'Source Folder' = $sourceFolder
-            'Paths' = ($partition | Select-Object -ExpandProperty AccessPaths) -join ' , '
-            'VHD' = $location
-            'VHD Actual Size (MB)' = $vhdxSize
-            'VHD Access Mode' = $(if( $officeDisk -and $fslogixRegValue -and $fslogixRegValue.PSobject.Properties[ 'VhdAccessMode' ] ) { $vhdAccessModes[ $fslogixRegValue.VhdAccessMode ] } )
+            'OfficeDisk' = $officeDisk ## internal only, never displayed 
+            ' Source Folder' = $sourceFolder
+            ' Paths' = ($partition | Select-Object -ExpandProperty AccessPaths) -join ' , '
+            ' VHD' = $location
+            ' VHD Actual Size (MB)' = $vhdxSize
+            '-VHD Access Mode' = $(if( $officeDisk -and $fslogixRegValue -and $fslogixRegValue.PSobject.Properties[ 'VhdAccessMode' ] ) { $vhdAccessModes[ $fslogixRegValue.VhdAccessMode ] } )
             ##'Physical Sector Size' = $disk | Select-Object -ExpandProperty PhysicalSectorSize
-            'Logon Time' = $logon | Select-Object -ExpandProperty LoginTime
-            'Mount Start Time' =  $mountStartTime
-            'Mount End Time' =  $mountEndTime
-            'Mount Duration (s)' = $(if( $mountStartTime -and $mountEndTime ) { [math]::Round( ($mountEndTime - $mountStartTime).TotalSeconds , 2 ) } )
-            'Profile Load Time (s)' = $(if( -Not $officeDisk -and $mountStartTime -and $profileLoadEnd ) { [math]::Round( ($profileLoadEnd.TimeCreated - $mountStartTime).TotalSeconds , 2 ) } )
-            'Profile Status' = $(if( $profileDisk ) { ( $profileLoadEnd | Select-Object -ExpandProperty Message ) -replace '^Profile load:\s*' -replace '\s*Username:\s*\S.*$' })
+            ##'VHD Bloat %' = $( if( $partitionSizes -and ( [int]$bloat = ( $vhdxProperties.Length - $partitionSizes.SizeMin ) / $partition.Size * 100 ) -lt 0 ) { 0 } else { $bloat } )
+            ' VHD Bloat %' = $( if( $vhdxProperties -and ( [int]$bloat = ( $vhdxProperties.Length - ($volume.Size - $volume.SizeRemaining)) / $volume.Size * 100 ) -lt 0 ) { $null } else { $bloat } )
+            ' Logon Time' = $logon | Select-Object -ExpandProperty LoginTime
+            ' Mount Start Time' =  $mountStartTime
+            ' Mount End Time' =  $mountEndTime
+            ' Mount Duration (s)' = $(if( $mountStartTime -and $mountEndTime ) { [math]::Round( ($mountEndTime - $mountStartTime).TotalSeconds , 2 ) } )
+            '+Profile Load Time (s)' = $(if( -Not $officeDisk -and $mountStartTime -and $profileLoadEnd ) { [math]::Round( ($profileLoadEnd.TimeCreated - $mountStartTime).TotalSeconds , 2 ) } )
+            '+Profile Status' = $(if( $profileDisk ) { ( $profileLoadEnd | Select-Object -ExpandProperty Message ) -replace '^Profile load:\s*' -replace '\s*Username:\s*\S.*$' })
         }
 
         if( $gotShareInfo )
         {
             Add-Member -Force -InputObject $result -NotePropertyMembers @{
-                'Share Capacity (GB)' = $shareCapacityGB
-                'Share Free Space %' = $(if( $shareCapacityGB -gt 0 ) { [int](($shareFreeSpaceGB / $shareCapacityGB ) * 100) } )
+                ' Share Capacity (GB)' = $shareCapacityGB
+                ' Share Free Space %' = $(if( $shareCapacityGB -gt 0 ) { [int](($shareFreeSpaceGB / $shareCapacityGB ) * 100) } )
             }
         }
 
@@ -1045,8 +1160,8 @@ if( $null -ne $results -and $results.Count -gt 0 )
 {
     [datetime]$lastBootTime = Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object -ExpandProperty LastBootupTime
 
-    $profileLoadTimeStatistics = $results | Where-Object officeDisk  -eq $false | Measure-Object -Property 'Profile Load Time (s)' -Sum -Average -Maximum -Minimum
-    $diskMountTimeStatistics = $results | Measure-Object -Property 'Mount Duration (s)' -Sum -Average -Maximum -Minimum
+    $profileLoadTimeStatistics = $results | Where-Object officeDisk -eq $false | Measure-Object -Property '+Profile Load Time (s)' -Sum -Average -Maximum -Minimum
+    $diskMountTimeStatistics = $results | Measure-Object -Property ' Mount Duration (s)' -Sum -Average -Maximum -Minimum
 
     Write-Output -InputObject "Results for $($WTSsessions.count) user sessions with $($uniqueNetworkVHDs.Count) network mounted disks from $($uniqueShares.Count) shares on $($uniqueShareHosts.Count) hosts in total"
     if( $vhdxMeasured -gt 0 )
@@ -1054,11 +1169,13 @@ if( $null -ne $results -and $results.Count -gt 0 )
         Write-Output -InputObject "Network VHD disks are consuming $([math]::Round( $VHDsizeTotalMB / 1024 , 1 ))GB, average size is $([Math]::Round( $VHDsizeTotalMB / 1024 / $vhdxMeasured , 1 ))GB"
     }
     Write-Output -InputObject "Last boot time was $(Get-Date -Date $lastBootTime -Format G), up $([math]::Round( ([datetime]::Now - $lastbootTime).TotalHours , 1 )) hours"
-    Write-Output -InputObject "Slowest profile load time was $($profileLoadTimeStatistics.Maximum)s, average $($profileLoadTimeStatistics.Average)s"
-    Write-Output -InputObject "Slowest VHD mount time was $($diskMountTimeStatistics.Maximum)s, average $($diskMountTimeStatistics.Average)s"
+    Write-Output -InputObject "Slowest profile load time was $($profileLoadTimeStatistics.Maximum)s, average $([math]::round( $profileLoadTimeStatistics.Average , 3 ))s"
+    Write-Output -InputObject "Slowest VHD mount time was $($diskMountTimeStatistics.Maximum)s, average $([math]::round( $diskMountTimeStatistics.Average , 3))s"
+    Write-Output -InputObject "+ denotes a result relevant to profile disks only & - denotes a result relevant to Office disks only"
 
-    $sortedPropertyNames = $results[0].psobject.Properties | Select-Object -ExpandProperty Name | Sort-Object
-
+    ## property names have leading punctuation so we sort on those with the punctation removed
+   [string[]]$sortedPropertyNames = @( $results[0].psobject.Properties | Sort-Object -Property @{ expression = { $_.Name -replace '[^a-z]+' , '' }}  | Select-Object -ExpandProperty Name )
+  
     $results | Select-Object -Property $sortedPropertyNames -ExcludeProperty OfficeDisk
 }
 else
@@ -1069,11 +1186,17 @@ else
 ## Check that each current user session has a result and if not go looking for errors
 ForEach( $WTSsession in $WTSsessions )
 {
-    if( -Not $results -or $results.Count -eq 0 -or -Not $results.Where( { $_.'Session Id' -eq $WTSsession.SessionId } ) )
+    if( -Not $results -or $results.Count -eq 0 -or -Not $results.Where( { $_.' Session Id' -eq $WTSsession.SessionId } ) )
     {
         Write-Verbose -Message "No FSlogix result for session $($WTSsession.SessionId) for $($WTSsession.Username)"
         $logonTime = $WTSsession.LogonTime
         [string]$username = $WTSsession.username -replace '@.*$' ## can be truncated since only 20 characters
+        if( [string]::IsNullOrEmpty( $username ) )
+        {
+            ## seems sometimes to be blank so neeed another method to get username
+            ## >guy.leech             rdp-tcp#9           6  Active          .  8/31/2022 1:59 PM
+            $username = (((quser.exe $WTSsession.SessionId | Select-Object -Last 1) -split '\s\s+')[0] -replace '^\>').Trim()
+        }
         [string]$userSid = (New-Object -TypeName System.Security.Principal.NTAccount( "$($WTSsession.DomainName)\$Username" )).Translate([System.Security.Principal.SecurityIdentifier]).value
         if( $lsaSession = $lsaSessions | Where-Object {  $_.Session -eq $WTSsession.SessionId -and $_.Domain -ieq $WTSsession.DomainName -and $_.Username -ieq $username } )
         {
@@ -1092,17 +1215,22 @@ ForEach( $WTSsession in $WTSsessions )
         }
 
         ## look for profile event to see why it didn't load the profile
-        if( $profileLoadEnd = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = 'Microsoft-FSLogix-Apps/Operational' ; Id = 25 ; Starttime = $logontime ; EndTime = $logonTime.AddMinutes( $searchWindowMinutes )} | Where-Object { $_.Properties[4].value -ieq $userSID } )
+        if( $fslogixEventLog )
         {
-            [int32]$status = $profileLoadEnd.Properties[0].value
-            [int32]$reason = $profileLoadEnd.Properties[1].value
-            [int32]$error  = $profileLoadEnd.Properties[2].value
-            Write-Output -InputObject "FSlogix profile for $($profileLoadEnd.Properties[3].value) failed at $(Get-Date -Format G -Date $profileLoadEnd.TimeCreated)"
-            Write-Output -InputObject "`tFSlogix error $status ($($fslogixErrorCodes[ $status ])), reason $reason ($($fslogixReasonCodes[ $reason ])), windows error $error"
+            if( $profileLoadEnd = Get-WinEvent -Oldest -ErrorAction SilentlyContinue -FilterHashtable @{ LogName = $fslogixEventLog ; Id = 25 ; Starttime = $logontime ; EndTime = $logonTime.AddMinutes( $searchWindowMinutes )} | Where-Object { $_.Properties[4].value -ieq $userSID } )
+            {
+                [int32]$status = $profileLoadEnd.Properties[0].value
+                [int32]$reason = $profileLoadEnd.Properties[1].value
+                [int32]$error  = $profileLoadEnd.Properties[2].value
+                Write-Output -InputObject "FSlogix profile for $($profileLoadEnd.Properties[3].value) failed at $(Get-Date -Format G -Date $profileLoadEnd.TimeCreated)"
+                Write-Output -InputObject "`tFSlogix error $status ($($fslogixErrorCodes[ $status ])), reason $reason ($($fslogixReasonCodes[ $reason ])), windows error $error"
+            }
+            else
+            {
+                Write-Warning -Message "Unable to find FSlogix profile load event in event log $fslogixEventLog for $($WTSsession.DomainName)\$Username, session id $($WTSsession.SessionId)$(if( $lsasession) { ", logged in at $(Get-Date -Format G -Date $lsasession.LoginTime)" })"
+            }
         }
-        else
-        {
-            Write-Warning -Message "Unable to find FSlogix profile load event in event log for $($WTSsession.DomainName)\$Username, session id $($WTSsession.SessionId), logged in at $(Get-Date -Format G -Date $lsasession.LoginTime)"
-        }
+        ## else no event log which has already been reported
     }
 }
+
