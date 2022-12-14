@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>58523f5c-4e03-4bc8-973f-9732dd849c54</SBAId>
+    <SBAId>80b28d08-0aa2-499b-a575-d673806e12c0</SBAId>
     <RootSBAId>a29b9d7b-b443-4767-9404-30445b5be271</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637093144677962200</SQN>
+    <SQN>638066406950299064</SQN>
     <Name>Schedule reboot</Name>
     <Description>Schedule a reboot for a number of minutes/hours in the future by creating a scheduled task which runs once only. By default the reboot will not occur if there are logged on users or disconnected sessions in existence at the scheduled reboot time. This script will not message users, log them off or prevent further logons from occurring.
 Arguments:
   Minutes:hours - the number of hours/minutes in the future at which to schedule the reboot, e.g. 2:30 for 2 hours and 30 minutes in the future (default is 30 minutes)
   Force - if set to true then the reboot will occur even if there are connected or disconnected user sessions at the time of the reboot (default is false)
-  Reason for Reboot - optional text which be placed in the event log</Description>
-    <Category />
-    <Version>2.5.10</Version>
+  Reason for Reboot - optional text which be placed in the event log.</Description>
+    <Category>Power Management</Category>
+    <Version>3.5.11</Version>
     <DateCreated>2018-09-29T11:04:54.847</DateCreated>
-    <DateModified>2018-12-13T14:22:50.287</DateModified>
-    <DatePublished>2018-09-29T11:04:54.847</DatePublished>
-    <LastEditorName>gal.goanis</LastEditorName>
+    <DateModified>2022-12-14T15:17:00.623</DateModified>
+    <DatePublished>2022-12-14T15:32:50.497</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
     <CreatorName>Guy Leech</CreatorName>
     <Status>4</Status>
     <CheckSum>BFRiuvhY5R2SFryygMRsw+P1qyo=</CheckSum>
@@ -32,8 +32,8 @@ Arguments:
       <Credits>Credits to: guy.leech (@guyrleech)</Credits>
       <AllowExposeEmail>false</AllowExposeEmail>
       <ContactEmail />
-      <Notes>Fixed Argument HH:MM</Notes>
-      <DownloadCount>138</DownloadCount>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -117,7 +117,7 @@ Arguments:
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>kBT+oAG6Gr3dpG/c5eOf0W6eTNQ=</ImportValidationString>
+    <ImportValidationString>etTjhpZq4PpisH2mg49kOWFDt8c=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

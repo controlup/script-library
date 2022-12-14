@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d99f6b3b-046d-40d8-94ea-3b27932469a9</SBAId>
+    <RootSBAId>11e14a2c-268b-47c2-854d-fe198eba60ab</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638066403490900766</SQN>
+    <Name>Deploy log4net for ControlUp processes</Name>
+    <Description>ControlUp binaries generate minimum logging to prevent disk exhaustion. 
+ To enable DEBUG logs, deploying the log4net in the same directory as a ControlUp process initiates the capture.
+ This script will initiate the logging process and allow to place the log file in a custom location.
+ If log duration different than zero, the log capture with stop at the end of the period.</Description>
+    <Category>Miscellaneous</Category>
+    <Version>1.10.49</Version>
+    <DateCreated>2020-10-01T17:05:27.35</DateCreated>
+    <DateModified>2022-12-13T19:48:39.75</DateModified>
+    <DatePublished>2022-12-14T15:34:34.987</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Marcel Calef</CreatorName>
+    <Status>4</Status>
+    <CheckSum>pD80Uth6HRqH6r62Emqqk3SgTa8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAAkBQTFRF/////NXW825z/efo/v7++sHD7iox/NzdzMvMn52d+Pf3UU5PIx8gvLu77PT66fL58vf7S0hJtrW1NYvGFHi9GHq+c6/YM4nFEXa8cq7X/Pz84uHh2NfX2djY7+/vbaLHqqiogmhqeSMmf29wj4yMv76+/f39sK+vPDg5JSIjZ2Rl5ubmIFeAJyMlWFVW9PT0t7a2Ozg5NH+1GGSZJCAhg4GBSEVGQT0+YF1eRFVKG0UsIkEuJSgmLUpgIkJZaWZnlHV2kyUploOFbWprJiIjNDAx7u7upKKjldeyCKFKC5xKbmxsJS84JDA9Rltrrays3Nzc+vr64+TkJS44Hyo1U3WP5+fn2L6yJyMk+dnL/u/o7u/v6enp0GIu72cm+bmb7e7uICs1UnWO2WIqvlgourm6JDI+RlxuMyYjLCMigWRZs7GycJyDEnc9G3VBHVg1KCUmJzZEIEBXIyAhfXp7r4qLqiYqs52etbS0qKan8mgmjkYkM2iPF1+RT0xNurm572Ujcj4mKycon56eIUhkjImK9PPz8mYjyV4qlHJkhIKCVW9gF1gyGlo1GnE/6+zsYYysgH5+ZFFRYSEkZVhZZmNkX1xd/f7+7e3tJSEi+/v7NDExFHS3G0JgQ1lr3t3d6ejo+K2J+KyI/NnJxunVecyd/v/+kL/gfrTafbLYKiksSEVFv6mq7IqO8omN8+PkyMfHVFBRODQ1fXt8fHp78O/vSUVGU09Q8vLy9fX1k5GSVVJTPzw9Pjs8X11dqKamvMhKrwAAAAlwSFlzAAAOvAAADrwBlbxySQAAAbNJREFUOE9jwA4YmYCAGcpBByxAzMoGBOxgLgcnF5hGADQF3Dy8YBoG+Pj5+QWQFQjyCIFpGBAWERURw6dAXEJCQhJTgZS0DBDIykEUyCsoKgGBsoqqGlSBugYPGGhqaQMV6OhCeECgpw9WYADlAoGhkYSxCZQNAqZgBWY8POYWllZW1jY8PLYSdjw89g6OQODk7MLjClLgxsPjzsDg4enp6eXN4yPhy+MHc6Q/Dw9IQQCPSyBEgWcQT7BECE8oTEEYREE4T0RkFERBNKqCGIiCWJ6IuPjBoyABqCCRJwlNQTIPTwpUQSpQQRpPOpqCuAyezKzsnNzcvPwCnkKJIp7iktIyICivqIQoqKqGBjwI1EjUQlkQwFDHU1/V0Ajl8TQ1A2OzBcoBA4b61raq9vaOzq7unp7evn5wepgwcdJkIJgydRpQARAAFbRDHTkdNUWBHIlXwQyTmfgVzHKZTY6COXPnzYcqWMADVrBw0aJFixmWLAWCZQzLV6xcxbN6zdp169at37CRZxNIATrYDPS+CQgA6S1QMRSwdRs4iEBg+w6oGCrYuWv3nr1795rv2z+LAQA4Bp4w+SXeIgAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Marcel Calef</Author>
+      <Tags />
+      <Credits>Credits to: Marcel Calef
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>380</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>48b5ba2d-7120-4717-bc2f-11bd266e1fe2</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>48b5ba2d-7120-4717-bc2f-11bd266e1fe2</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Log duration [sec]</Name>
+                  <DefaultValue>30</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[0-9]{1,2}$|^[1-3][0-9]{2}$</ValidationString>
+                  <ValidationError>5 to 360 or 0 to log until manually stopped</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2ab6617a-60f2-4aeb-8273-edd38abec945</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2ab6617a-60f2-4aeb-8273-edd38abec945</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>logPath</Name>
+                  <DefaultValue>c:\temp\</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[a-z|A-Z0-9:\-_\\\. ]+\\$</ValidationString>
+                  <ValidationError>Path for the log including a trailing \. A network share to which the SYSTEM account can write is recommended. The filename will be autogenerated</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f933dce4-1023-4806-8a46-92d3fe7d6891</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f933dce4-1023-4806-8a46-92d3fe7d6891</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>65536</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6013b9cc-3706-4b9e-82d7-d324ca3908b9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6013b9cc-3706-4b9e-82d7-d324ca3908b9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Log level</Name>
+                  <DefaultValue>DEBUG</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(DEBUG|ERROR|FATAL|ALL|VERBOSE|INFO|OFF)$</ValidationString>
+                  <ValidationError>Specify one of:
+DEBUG ERROR FATAL ALL VERBOSE INFO OFF</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b3dfd7a9-1680-4ef3-87e2-b88210f6aa43</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b3dfd7a9-1680-4ef3-87e2-b88210f6aa43</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Final Log Level</Name>
+                  <DefaultValue>OFF</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(DEBUG|ERROR|FATAL|ALL|VERBOSE|INFO|OFF)$</ValidationString>
+                  <ValidationError>Specify one of:
+DEBUG ERROR FATAL ALL VERBOSE INFO OFF</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>wciVqXxV6b3zWYMsSM0XRR0P48k=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

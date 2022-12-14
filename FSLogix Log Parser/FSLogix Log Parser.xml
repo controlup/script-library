@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>8e1e4400-13bf-4ed6-8b49-38eb4727c9b9</SBAId>
+    <SBAId>8940e9a6-60c1-4138-9799-fcfbe3867dd2</SBAId>
     <RootSBAId>1648e9b6-e968-467f-a5a6-68e4125d6e45</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>638051762695456036</SQN>
-    <Name>FSLogix Log Parser</Name>
+    <SQN>638066403994642820</SQN>
+    <Name>FSLogix log parser</Name>
     <Description>Parses the Profile log for FSLogix event for a specific user and displays the results.</Description>
-    <Category>Miscellaneous</Category>
-    <Version>3.3.9</Version>
+    <Category>User Environment</Category>
+    <Version>4.3.10</Version>
     <DateCreated>2019-12-03T11:13:26.233</DateCreated>
-    <DateModified>2022-11-22T18:32:50.283</DateModified>
-    <DatePublished>2022-11-22T18:35:45.6</DatePublished>
+    <DateModified>2022-12-14T15:18:57.467</DateModified>
+    <DatePublished>2022-12-14T15:32:18.263</DatePublished>
     <LastEditorName>Trentent Tye</LastEditorName>
     <CreatorName>Trentent Tye</CreatorName>
     <Status>4</Status>
@@ -19,7 +19,7 @@
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
     <Icon>
-      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvQAADr0BR/uQrQAAA1lJREFUOE9lk11M22UYxf93JtPEmBmdyVAzl2lcsmRjyGJidmGC06Bz3i3xypDsyjkTjVHGnEzcEHRlOMDGAgNUYJgNHKsF7KBA6QdsLW1JO9ry1UJb+kUp/WT8fNuxRONJnuRN/uc87/99znmkf0NpXqb4oprPOk2oLCvsON3LU2f6MC9EeO+qlsPfqRm2B9im/xdbW1uRM7/eo1A0+NvqYz64QdlvJj7ttrC2kaHbsEThpTtUK+3kuNuyh1j2LC0iMCCEVcr7xJNZwhtpvuyfpULlZj21iSeS5Fy/A70rlKPiXVpazIsrr6ksJ342YvPGKKzWcPiyjk6TnyuGFV5TWCkS1Ta9ikzroahOz1GZlrlgnKM1ozT2qC3SB/JJ9par0M2FeezzAXZVadHMR+l2RClodfHiNRdDC+vctId45pKOp8vvMBuI8/jpPk79bkVqVDv5Y8pLLJWly+RDeT9EIvuAUCxBf0MXSnmPmEGa9fQmfzrC9M8ESWY26dAt0q5bQJL95UA94yckBlUxNE+N3kcylSF54VtSJSUk3zpGSlZHOJGhasLH92NeEqLB9UkPbaNzSK+cH+TDZiM3pv3s+dHIfsUMGpuX4At7CD73vKgCQgcO0idsfbXZzstXTQw7w7zdqKNENop0SHhb1n6XW7YA+69McbDVjta+QvClfYRy4l27CRcVc9vm41CbgwNNZsbcUU78YuTdhgmkn4Zm0ThWhVVZKtULXDb4yGY3SdXUsvZOKbHS46QVivwMqsXzase9ZB9s0XvPS8eEmEGNCEabOETEG1sMXm7YRDNB9sczdClu0dOhIprdIiyy0WVdFYP2Exff5SNu5Bo30knFXfaeVaF1hdkhbNx5YZwhZ4R2W5jdzU4KRCnnYnQK8c6LEzxZrsbuW+eJT/r4+LoNqWfSYznVYcYlvH3jhzGKZXq6pwM0GX0cabHxeqtNiIM06Zc5Um/gzXod3kiC9xv0jNoDlnwaRTLzUR6fDSJTu9hIZ1kTv/zNoJvakcW87+F4mtpBJ+alaI6aw8MoP0JuQT5qEamsGKBXeOz0xzkuN3CyZYqVaJLGYTf7vh6kstf2/2V6hBGxqqX145y/aSV3fvaL2xR8pcQibi1rneRY3Vh+mbbpApL0D/JR2EiVs5fkAAAAAElFTkSuQmCC</IconData>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAA1lJREFUOE9lk11M22UYxf93JtPEmBmdyVAzl2lcsmRjyGJidmGC06Bz3i3xypDsyjkTjVHGnEzcEHRlOMDGAgNUYJgNHKsF7KBA6QdsLW1JO9ry1UJb+kUp/WT8fNuxRONJnuRN/uc87/99znmkf0NpXqb4oprPOk2oLCvsON3LU2f6MC9EeO+qlsPfqRm2B9im/xdbW1uRM7/eo1A0+NvqYz64QdlvJj7ttrC2kaHbsEThpTtUK+3kuNuyh1j2LC0iMCCEVcr7xJNZwhtpvuyfpULlZj21iSeS5Fy/A70rlKPiXVpazIsrr6ksJ342YvPGKKzWcPiyjk6TnyuGFV5TWCkS1Ta9ikzroahOz1GZlrlgnKM1ozT2qC3SB/JJ9par0M2FeezzAXZVadHMR+l2RClodfHiNRdDC+vctId45pKOp8vvMBuI8/jpPk79bkVqVDv5Y8pLLJWly+RDeT9EIvuAUCxBf0MXSnmPmEGa9fQmfzrC9M8ESWY26dAt0q5bQJL95UA94yckBlUxNE+N3kcylSF54VtSJSUk3zpGSlZHOJGhasLH92NeEqLB9UkPbaNzSK+cH+TDZiM3pv3s+dHIfsUMGpuX4At7CD73vKgCQgcO0idsfbXZzstXTQw7w7zdqKNENop0SHhb1n6XW7YA+69McbDVjta+QvClfYRy4l27CRcVc9vm41CbgwNNZsbcUU78YuTdhgmkn4Zm0ThWhVVZKtULXDb4yGY3SdXUsvZOKbHS46QVivwMqsXzase9ZB9s0XvPS8eEmEGNCEabOETEG1sMXm7YRDNB9sczdClu0dOhIprdIiyy0WVdFYP2Exff5SNu5Bo30knFXfaeVaF1hdkhbNx5YZwhZ4R2W5jdzU4KRCnnYnQK8c6LEzxZrsbuW+eJT/r4+LoNqWfSYznVYcYlvH3jhzGKZXq6pwM0GX0cabHxeqtNiIM06Zc5Um/gzXod3kiC9xv0jNoDlnwaRTLzUR6fDSJTu9hIZ1kTv/zNoJvakcW87+F4mtpBJ+alaI6aw8MoP0JuQT5qEamsGKBXeOz0xzkuN3CyZYqVaJLGYTf7vh6kstf2/2V6hBGxqqX145y/aSV3fvaL2xR8pcQibi1rneRY3Vh+mbbpApL0D/JR2EiVs5fkAAAAAElFTkSuQmCC</IconData>
       <IconType>2</IconType>
     </Icon>
     <ShareDescriptor>
@@ -28,10 +28,10 @@
       <Credits>Credits to: Trentent Tye
 Original code by:
 Taken from:</Credits>
-      <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
-      <Notes>Added a fix for users who logon with a timezone that does not match the target server.</Notes>
-      <DownloadCount>0</DownloadCount>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>1</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>4096</AllowedEntitiesEx>
@@ -90,7 +90,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>sPn3x9r9eNAGuSpIdNJa3AjmYr0=</ImportValidationString>
+    <ImportValidationString>1/rml2W1eoXPnkxoJQAocCedJ+4=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

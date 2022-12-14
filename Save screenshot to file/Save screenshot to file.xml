@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>417e4558-aac8-448d-b35f-a28468f03af3</SBAId>
+    <SBAId>d6f0073b-0668-4c3f-b674-c0b58468b3c7</SBAId>
     <RootSBAId>e64a6845-3d7f-4983-8a67-604d5129e6ca</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>636896347230311041</SQN>
-    <Name>Take screenshot</Name>
+    <SQN>638066411588636010</SQN>
+    <Name>Save screenshot to file</Name>
     <Description>This script gets the dimensions of the users working display area and take a screenshot. The screenshot can be saved as a BMP, JPG or PNG in a location of choice.</Description>
-    <Category />
-    <Version>1.3.4</Version>
+    <Category>Session Management</Category>
+    <Version>2.3.5</Version>
     <DateCreated>2019-02-25T11:39:17.407</DateCreated>
-    <DateModified>2019-03-27T22:55:20.29</DateModified>
-    <DatePublished>2019-02-25T11:39:17.407</DatePublished>
+    <DateModified>2022-12-14T15:07:24.31</DateModified>
+    <DatePublished>2022-12-14T15:34:11.207</DatePublished>
     <LastEditorName>Ton de Vreede</LastEditorName>
     <CreatorName>Ton de Vreede</CreatorName>
     <Status>4</Status>
@@ -28,10 +28,10 @@
       <Credits>Credits to: theartvark
 Original code by:
 Taken from:</Credits>
-      <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
       <Notes />
-      <DownloadCount>283</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>69888</AllowedEntitiesEx>
@@ -96,7 +96,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>0NZQDeOws6It2b7etQNIb7sa77s=</ImportValidationString>
+    <ImportValidationString>iN1u2SRAlsSuDmsir9yN1nFkFU8=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

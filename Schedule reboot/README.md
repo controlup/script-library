@@ -4,15 +4,15 @@ Description: Schedule a reboot for a number of minutes/hours in the future by cr
 Arguments:
   Minutes:hours - the number of hours/minutes in the future at which to schedule the reboot, e.g. 2:30 for 2 hours and 30 minutes in the future (default is 30 minutes)
   Force - if set to true then the reboot will occur even if there are connected or disconnected user sessions at the time of the reboot (default is false)
-  Reason for Reboot - optional text which be placed in the event log
+  Reason for Reboot - optional text which be placed in the event log.
 
-Version: 2.5.10
+Version: 3.5.11
 
 Creator: Guy Leech
 
 Date Created: 09/29/2018 11:04:54
 
-Date Modified: 12/13/2018 14:22:50
+Date Modified: 12/14/2022 15:17:00
 
 Scripting Language: ps1
 

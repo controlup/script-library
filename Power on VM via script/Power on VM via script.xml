@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>49deb98a-bd09-4592-a3de-05432eea5eb3</SBAId>
+    <SBAId>87907e0f-865c-472b-be86-322a35598814</SBAId>
     <RootSBAId>5f323571-0a37-4b8e-bd31-f398b0122963</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>636934146677896749</SQN>
-    <Name>Power On VM</Name>
+    <SQN>638066409933090787</SQN>
+    <Name>Power on VM via script</Name>
     <Description>This script will power on a selected vSphere VM</Description>
-    <Category />
-    <Version>1.2.14</Version>
+    <Category>Power Management</Category>
+    <Version>2.2.15</Version>
     <DateCreated>2019-01-15T14:32:57.613</DateCreated>
-    <DateModified>2019-05-01T13:43:47.903</DateModified>
-    <DatePublished>2019-01-15T14:32:57.613</DatePublished>
+    <DateModified>2022-12-14T15:12:44.39</DateModified>
+    <DatePublished>2022-12-14T15:33:48.14</DatePublished>
     <LastEditorName>Ton de Vreede</LastEditorName>
     <CreatorName>Ton de Vreede</CreatorName>
     <Status>4</Status>
@@ -25,11 +25,11 @@
     <ShareDescriptor>
       <Author>Ton de Vreede</Author>
       <Tags>vmware</Tags>
-      <Credits>Credits to: theartvark</Credits>
-      <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>theartvark@gmail.com</ContactEmail>
+      <Credits>Credits to:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
       <Notes />
-      <DownloadCount>120</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -60,7 +60,7 @@
                   <ArgumentNumber>0</ArgumentNumber>
                   <EmptyBehavior>0</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
+                  <EntityType>256</EntityType>
                 </SBAArgumentDescriptor>
               </value>
             </item>
@@ -76,7 +76,7 @@
                   <ArgumentNumber>2</ArgumentNumber>
                   <EmptyBehavior>0</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
+                  <EntityType>256</EntityType>
                 </SBAArgumentDescriptor>
               </value>
             </item>
@@ -107,7 +107,7 @@
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>Z29dRkbbhx9uJjUhPJzzS9QO2Gg=</ImportValidationString>
+    <ImportValidationString>+cIdMaUyZbWODDUqoqumhcX6LgY=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>2e379c46-370e-4e5a-a38f-63f8143c0790</SBAId>
+    <SBAId>58afb1e8-7417-435f-aaab-535be7bd692a</SBAId>
     <RootSBAId>e83e525d-7231-4d60-81d0-718031b60ed6</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637007646478917915</SQN>
+    <SQN>638066407512414763</SQN>
     <Name>Restart VM</Name>
     <Description>This script will gracefully restart the selected vSphere VM Guest OS using VMWare Client Tools.
-VMware PowerCLI needs to be installed on the machine running the script. </Description>
-    <Category />
-    <Version>3.5.19</Version>
+VMware PowerCLI needs to be installed on the machine running the script.</Description>
+    <Category>Power Management</Category>
+    <Version>4.5.20</Version>
     <DateCreated>2019-01-15T14:40:06.437</DateCreated>
-    <DateModified>2019-08-07T08:49:04.8</DateModified>
-    <DatePublished>2019-01-15T14:40:06.437</DatePublished>
-    <LastEditorName>oleg.alter</LastEditorName>
+    <DateModified>2022-12-14T15:15:32.037</DateModified>
+    <DatePublished>2022-12-14T15:32:56.797</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
     <CreatorName>Ton de Vreede</CreatorName>
     <Status>4</Status>
     <CheckSum>aIirfgjTQ+NBKma3ki+V8WGgGrI=</CheckSum>
@@ -24,13 +24,13 @@ VMware PowerCLI needs to be installed on the machine running the script. </Descr
       <IconType>0</IconType>
     </Icon>
     <ShareDescriptor>
-      <Author>oleg.alter</Author>
+      <Author>Ton de Vreede</Author>
       <Tags>vmware</Tags>
       <Credits>Credits to: theartvark</Credits>
-      <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>oleg.alter@controlup.com</ContactEmail>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
       <Notes />
-      <DownloadCount>173</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -124,7 +124,7 @@ VMware PowerCLI needs to be installed on the machine running the script. </Descr
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>7Gb9f8XCWepQXHI77lN+wvjEYMk=</ImportValidationString>
+    <ImportValidationString>Hda3uoySDfjIcl+Nc4xFD7X8bG0=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

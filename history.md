@@ -1,3 +1,22 @@
+14-12-2022
+==========
+## Added:
+### _Deploy log4net for ControlUp processes_
+### _Save multiple screenshots to file_
+### _Save screenshot to file_
+### _Log off session via script_
+### _Power on VM via script_
+### _Disable CVAD machine maintenance mode_
+### _Enable CVAD machine maintenance mode_
+
+### Removed:
+### _Disable XenDesktop Maintenance Mode_
+### _Enable XenDesktop Maintenance Mode_
+### _Logoff session_
+### _Power On VM_
+### _Take multiple screenshots_
+### _Take screenshot_
+<BR><BR>
 28-11-2022
 ==========
 ## Added:
@@ -104,6 +123,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 

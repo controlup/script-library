@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>6bb104de-4bc4-4ed4-b00b-f8f6d7fa6577</SBAId>
+    <SBAId>34ec2891-5ddf-4a80-866a-0d9946cade8b</SBAId>
     <RootSBAId>e074c40b-d2d9-42c2-99e8-de59cd023df6</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637006917556111987</SQN>
+    <SQN>638066408398924728</SQN>
     <Name>Reset VM</Name>
     <Description>This script resets the power state for the selected vSphere VM.
-VMware PowerCLI needs to be installed on the machine running the script.</Description>
-    <Category />
-    <Version>2.2.13</Version>
+VMware PowerCLI needs to be installed on the machine running the script.
+</Description>
+    <Category>Power Management</Category>
+    <Version>3.2.14</Version>
     <DateCreated>2019-01-15T14:37:41.387</DateCreated>
-    <DateModified>2019-07-24T13:59:18.94</DateModified>
-    <DatePublished>2019-01-15T14:37:41.387</DatePublished>
-    <LastEditorName>theartvark</LastEditorName>
+    <DateModified>2022-12-14T15:14:52.593</DateModified>
+    <DatePublished>2022-12-14T15:33:03</DatePublished>
+    <LastEditorName>Ton de Vreede</LastEditorName>
     <CreatorName>Ton de Vreede</CreatorName>
     <Status>4</Status>
     <CheckSum>WTxukqeZir+UBzvwpfdmFWIEtnI=</CheckSum>
@@ -24,13 +25,13 @@ VMware PowerCLI needs to be installed on the machine running the script.</Descri
       <IconType>0</IconType>
     </Icon>
     <ShareDescriptor>
-      <Author>theartvark</Author>
+      <Author>Ton de Vreede</Author>
       <Tags>vmware</Tags>
       <Credits>Credits to: theartvark</Credits>
       <AllowExposeEmail>false</AllowExposeEmail>
       <ContactEmail />
       <Notes />
-      <DownloadCount>68</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -108,7 +109,7 @@ VMware PowerCLI needs to be installed on the machine running the script.</Descri
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>XE8f13cjpcIqGcftdISysV7OnWk=</ImportValidationString>
+    <ImportValidationString>dlQAmmKhr9o81g7KzMgPn0ygZBI=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

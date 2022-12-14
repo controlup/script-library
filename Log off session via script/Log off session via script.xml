@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>18cff517-9868-402b-9b49-1e9e08ddcfcc</SBAId>
+    <SBAId>6f68b782-bde1-4641-bfb9-d3dc0b4b91c3</SBAId>
     <RootSBAId>1c0adfea-1a70-424b-b275-c2066a00ac8a</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>636860087715896000</SQN>
-    <Name>Logoff session</Name>
+    <SQN>638066410534352294</SQN>
+    <Name>Log off session via script</Name>
     <Description>Logs off the selected user session</Description>
-    <Category />
-    <Version>1.1.1</Version>
+    <Category>Session Management</Category>
+    <Version>2.1.2</Version>
     <DateCreated>2019-01-27T14:07:49.927</DateCreated>
-    <DateModified>2019-01-27T14:07:49.927</DateModified>
-    <DatePublished>2019-01-27T14:07:49.927</DatePublished>
+    <DateModified>2022-12-14T15:08:20.907</DateModified>
+    <DatePublished>2022-12-14T15:34:00.83</DatePublished>
     <LastEditorName>ek</LastEditorName>
     <CreatorName>ek</CreatorName>
     <Status>4</Status>
@@ -26,10 +26,10 @@
       <Author>ek</Author>
       <Tags>logoff, vdi, xendesktop, rds, xenapp, session</Tags>
       <Credits>Credits to: ek</Credits>
-      <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>ek@controlup.com</ContactEmail>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
       <Notes />
-      <DownloadCount>1427</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>4096</AllowedEntitiesEx>
@@ -60,7 +60,7 @@
                   <ArgumentNumber>0</ArgumentNumber>
                   <EmptyBehavior>0</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
+                  <EntityType>4096</EntityType>
                 </SBAArgumentDescriptor>
               </value>
             </item>
@@ -72,7 +72,7 @@
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>c1hNv91Os3dPTCuqlCBEPg07K5Y=</ImportValidationString>
+    <ImportValidationString>sIHCYPj/BPlUVlFR6lFFsrrsYZ0=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>
