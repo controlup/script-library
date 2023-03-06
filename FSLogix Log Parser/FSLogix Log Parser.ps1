@@ -91,7 +91,7 @@ function Get-FSLogixProfileEvents {
     Write-Verbose "Current Timezone Offset: $($CurrentTimezone.TotalHours)"
 
     Write-Verbose "Searching for FSLogix Timezone offsets"
-    [timespan]$UTCOffset = (($FSLogixLog -match "UTC")[0]).Replace("UTC","")
+    [timespan]$UTCOffset = (($FSLogixLog -match "^UTC")[0]) -replace "^UTC\+{0,1}",''
     Write-Verbose "FSLogix Timezone Offset: $($UTCOffset.TotalHours)"
     $TimeZoneOffset = $CurrentTimezone.Subtract($UTCOffset)
 

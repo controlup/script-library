@@ -78,6 +78,7 @@ param (
 [hashtable]$global:wmiactivityParams = @{ 'ProviderName' = 'Microsoft-Windows-WMI-Activity' }
 [hashtable]$global:terminalServicesParams = @{ 'ProviderName' = 'Microsoft-Windows-TerminalServices-LocalSessionManager' }
 [hashtable]$global:securityParams = @{ 'ProviderName' = 'Microsoft-Windows-Security-Auditing' }
+[hashtable]$global:applicationParams = @{ 'ProviderName' = 'Application' }
 [hashtable]$global:userProfileParams = @{ 'ProviderName' = 'Microsoft-Windows-User Profile Service' }
 [hashtable]$global:groupPolicyParams = @{ 'ProviderName' = 'Microsoft-Windows-GroupPolicy' }
 [hashtable]$global:appdefaultsParams = @{ 'ProviderName' = 'Microsoft-Windows-Shell-Core' }
@@ -86,6 +87,7 @@ param (
 [hashtable]$global:citrixUPMParams = @{ 'ProviderName' = 'Citrix Profile Management' }
 [hashtable]$global:printServiceParams = @{ 'ProviderName' = 'Microsoft-Windows-PrintService' }
 [hashtable]$global:AppVolumesParams = @{ 'ProviderName' = 'svservice' }
+[hashtable]$global:folderRedirectionParams = @{ 'ProviderName' = 'Microsoft-Windows-Folder Redirection' }
 [hashtable]$global:windowsShellCoreParams = @{ 'ProviderName' = 'Microsoft-Windows-Shell-Core' }
 [hashtable]$global:winlogonParams = @{ 'ProviderName' = 'Microsoft-Windows-Winlogon' }
 [hashtable]$global:appReadinessParams = @{ 'ProviderName' = 'Microsoft-Windows-AppReadiness' }
@@ -510,6 +512,7 @@ Function Test-IfCommandExists
     }
 } #end function test-CommandExists
 
+
 function Get-LogonDurationAnalysis {
     [CmdletBinding(DefaultParameterSetName="None")]
     param (
@@ -591,6 +594,9 @@ function Get-LogonDurationAnalysis {
                 [ValidateNotNullOrEmpty()]
                 [array]
                 $EventId,
+
+                [string]
+                $CorrelationActivityID,
         
                 [Parameter(ParameterSetName='DateTime',Mandatory=$true)]
                 [DateTime]
@@ -624,6 +630,9 @@ function Get-LogonDurationAnalysis {
                     [void]$sb.Append("EventID='$eid'")
                 }
                 $ecounter++
+            }
+            if ($PSBoundParameters.ContainsKey("CorrelationActivityID")) {
+                [void]$sb.Append(") and (Correlation/@ActivityID=`"{$CorrelationActivityID}`"")
             }
             if ($ToDate) {
                 [void]$sb.Append(") and TimeCreated[@SystemTime$($greaterThan)='$($FromDate.ToUniversalTime().ToString("s")).$($FromDate.ToUniversalTime().ToString("fff"))Z'")
@@ -815,7 +824,7 @@ function Get-LogonDurationAnalysis {
             try {
                 $PSCmdlet.WriteVerbose("Looking $PhaseName Events")
                 if(!$StartEvent) {
-                    $StartEvent = Get-WinEvent -Oldest -MaxEvents 1 @startParams -FilterXPath $StartXPath -ErrorAction Stop -Verbose:$False
+                    $StartEvent = Get-WinEvent -Oldest -MaxEvents 1 @startParams -FilterXPath $StartXPath -ErrorAction Stop -Verbose:$true
                 }
                 if (!$EndEvent) {
                     if ($StartProvider -eq 'Microsoft-Windows-Security-Auditing' -and $EndProvider -eq 'Microsoft-Windows-Security-Auditing') {
@@ -1091,7 +1100,7 @@ function Get-LogonDurationAnalysis {
                 New-PSDrive -PSProvider Registry -Name HKU -Root HKEY_USERS | out-null
             }
             
-            $UserPrinterGUIDs = [System.Collections.ArrayList]@()
+            $UserPrinterGUIDs = [System.Collections.Generic.List[psobject]]@()
             [array]$PrinterClientSidePortGUIDs = @()
 
             if (-not(Test-Path HKU:\$($Logon.UserSID)\Printers\Connections\ -ErrorAction SilentlyContinue)) {
@@ -1120,8 +1129,8 @@ function Get-LogonDurationAnalysis {
                 return
             }
             #get list of printers:
-            $listOfPrinters = [System.Collections.ArrayList]@()
-            $AllPrinterEvents = [System.Collections.ArrayList]@()
+            $listOfPrinters = [System.Collections.Generic.List[psobject]]@()
+            $AllPrinterEvents = [System.Collections.Generic.List[psobject]]@()
             foreach ($printerEvent in $printerTaskEvents) {
                 if ($printerEvent.Id -eq "300") { #look for event ID 300 -- "Add printer".  Should be unique for each printer
                     #check if this is a GUID
@@ -1949,7 +1958,7 @@ function Get-LogonDurationAnalysis {
         $logonEvent = $null
         $UserLogon = $null
         $wmiEvent = $null
-        $jobs = New-Object System.Collections.ArrayList
+        $jobs = New-Object System.Collections.Generic.List[psobject]
         $prelogonData = New-Object -TypeName System.Collections.Generic.List[psobject]
 
         [string]$initialProgram = $null
@@ -2096,24 +2105,18 @@ function Get-LogonDurationAnalysis {
 
                 ## Merge can add quite a bit if WMI is enabled, so it would be interesting to know if it's used
                 if (-not( $offline )) {
-                    try {
-                        switch (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\System' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "UserPolicyMode" -ErrorAction SilentlyContinue ) {
-                        1 { $LoopBackProcessingMode = "Merge" }
-                        2 { $LoopBackProcessingMode = "Replace" }
-                        } 
-                    } catch {
-                        $LoopBackProcessingMode = "Not configured"
+                    $LoopbackProcessingMode = "Not configured"
+                    switch (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\System' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "UserPolicyMode" -ErrorAction SilentlyContinue ) {
+                            1 { $LoopBackProcessingMode = "Merge" }
+                            2 { $LoopBackProcessingMode = "Replace" }
                     }
                 }
 
                 if (-not( $offline )) {
-                    try {
-                        switch (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\System' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "RSoPLogging" -ErrorAction SilentlyContinue ) {
-                        1 { $RSoPLogging = "Enabled"  }
-                        0 { $RSoPLogging = "Disabled" }
-                        } 
-                    } catch {
-                        $RSoPLogging = "Not configured (Default: Enabled)"
+                    $RSoPLogging = "Not configured (Default: Enabled)" 
+                    switch (Get-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\System' -ErrorAction SilentlyContinue | Select-Object -ExpandProperty "RSoPLogging" -ErrorAction SilentlyContinue ) {
+                            1 { $RSoPLogging = "Enabled"  }
+                            0 { $RSoPLogging = "Disabled" }
                     }
                 }
 
@@ -2164,6 +2167,7 @@ function Get-LogonDurationAnalysis {
                 'UserDomain' = $UserDomain
                 'Logon' = $logon
                 'SharedVars' = $sharedVars
+                'ApplicationEventFile'  = $global:applicationParams[ 'Path' ]
                 'UserProfileEventFile'  = $global:userProfileParams[ 'Path' ]
                 'GroupPolicyEventFile'  = $global:groupPolicyParams[ 'Path' ]
                 'CitrixUPMEventFile'    = $global:citrixUPMParams[ 'Path' ]
@@ -2175,6 +2179,7 @@ function Get-LogonDurationAnalysis {
                 'appsenseEventFile'     = $global:appsenseParams[ 'Path' ]
                 'printEventFile'        = $global:printServiceParams[ 'Path' ]
                 'appdefaultEventFile'   = $global:appdefaultsParams[ 'Path' ]
+                'FolderRedirectionFile' = $global:folderRedirectionParams[ 'Path' ]
                 'WindowsShellCoreFile'  = $global:windowsShellCoreParams[ 'Path' ]
                 'appreadinessEventFile' = $global:appReadinessParams[ 'Path' ]
                 'wmiactivityEventFile'  = $global:wmiactivityParams[ 'Path' ]
@@ -2803,10 +2808,11 @@ function Get-LogonDurationAnalysis {
 
          if ( $global:windowsShellCoreParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'Microsoft-Windows-Shell-Core' -ErrorAction SilentlyContinue)) {
             ($PowerShell = [PowerShell]::Create()).RunspacePool = $RunspacePool
-
+            
             [scriptblock]$windowsShellCoreScriptBlock = $null
             if( $global:windowsShellCoreParams[ 'Path' ] )
             {
+            Write-Host "Ugggg... $WindowsShellCoreFile" -ForegroundColor Green
                 $windowsShellCoreScriptBlock =
                 {
                     Param( $logon , $username , $WindowsShellCoreFile )
@@ -2854,6 +2860,150 @@ function Get-LogonDurationAnalysis {
             [void]$jobs.Add( [pscustomobject]@{ 'PowerShell' = $PowerShell ; 'Handle' = $PowerShell.BeginInvoke() } )
         }
 #endregion
+
+<# TTYE Commented out because it messes with the phases to show FolderRedirection stage. But I'm leaving it in if we ever think about enabling it.
+#region TTYE FolderRedirection time
+         if ( $global:folderRedirectionParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'Microsoft-Windows-Folder Redirection' -ErrorAction SilentlyContinue)) {
+            ($PowerShell = [PowerShell]::Create()).RunspacePool = $RunspacePool
+
+            [scriptblock]$FolderRedirectionScriptBlock = $null
+            if( $global:folderRedirectionParams[ 'Path' ] )
+            {
+                Write-Host "Finding Folder Redirection Events offline"
+                $FolderRedirectionScriptBlock =
+                {
+                    Param( $logon , $startProcessingEvent , $FolderRedirectionFile )
+                    Get-PhaseEvent -source 'Test' -PhaseName 'Folder Redirection' -StartProvider 'Microsoft-Windows-Folder Redirection' `
+                        -StartEventFile $FolderRedirectionFile `
+                        -EndEventFile $FolderRedirectionFile `
+                        -EndProvider 'Microsoft-Windows-Folder Redirection' -StartXPath (
+                        New-XPath -EventId 1000 -From (Get-Date -Date $Logon.LogonTime) `
+                            -CorrelationActivityID "$($startProcessingEvent.ActivityID.Guid)"
+                                
+                                ) -EndXPath (
+                        New-XPath -EventId 1001 -From (Get-Date -Date $Logon.LogonTime) `
+                            -CorrelationActivityID "$($startProcessingEvent.ActivityID.Guid)")
+                }
+            }
+            else ## online
+            {
+                Write-Host "Finding Folder Redirection Events online"
+                $FolderRedirectionScriptBlock =
+                {
+                    Param( $logon, $startProcessingEvent )
+                    Get-PhaseEvent -source 'Group Policy' -PhaseName 'Folder Redirection' -StartProvider 'Microsoft-Windows-Folder Redirection' `
+                        -EndProvider 'Microsoft-Windows-Folder Redirection' -StartXPath (
+                        New-XPath -EventId 1000 -From (Get-Date -Date $Logon.LogonTime) `
+                            -CorrelationActivityID "$($startProcessingEvent.ActivityID.Guid)"
+                        ) -EndXPath (
+                        New-XPath -EventId 1001 -From (Get-Date -Date $Logon.LogonTime) `
+                            -CorrelationActivityID "$($startProcessingEvent.ActivityID.Guid)")
+                }
+            }
+            [void]$PowerShell.AddScript( $FolderRedirectionScriptBlock )
+            [void]$PowerShell.AddParameters( $Parameters )
+            [void]$PowerShell.AddParameter( "startProcessingEvent",$startProcessingEvent )
+            [void]$jobs.Add( [pscustomobject]@{ 'PowerShell' = $PowerShell ; 'Handle' = $PowerShell.BeginInvoke() } )
+        }
+#endregion
+#>
+
+
+#region TTYE VMware DEM Blocking Configurations - #Path based imports
+         if ( $global:applicationParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'Application' -ErrorAction SilentlyContinue)) {
+            ($PowerShell = [PowerShell]::Create()).RunspacePool = $RunspacePool
+
+            [scriptblock]$VMwareDEM1ScriptBlock = $null
+            if( $global:applicationParams[ 'Path' ] )
+            {
+                $VMwareDEM1ScriptBlock =
+                {
+                    Param( $logon , $ApplicationEventFile )
+                    Get-PhaseEvent -source 'VMware DEM' -PhaseName 'Path-based Import' -StartProvider 'Application' `
+                        -StartEventFile $ApplicationEventFile `
+                        -EndEventFile $ApplicationEventFile `
+                        -EndProvider 'Application' -StartXPath (
+                        New-XPath -EventId 256 -From (Get-Date -Date $Logon.LogonTime) `
+                            -SecurityData @{
+                                UserID=$Logon.UserSID
+                            }) -EndXPath (
+                        New-XPath -EventId 257 -From (Get-Date -Date $Logon.LogonTime) `
+                            -SecurityData @{
+                                UserID=$Logon.UserSID
+                            })
+                }
+            }
+            else ## online
+            {
+                $VMwareDEM1ScriptBlock =
+                {
+                    Param( $logon )
+                    Get-PhaseEvent -source 'VMware DEM' -PhaseName 'Path-based Import' -StartProvider 'Immidio Flex+' `
+                        -EndProvider 'Immidio Flex+' -StartXPath (
+                        New-XPath -EventId 256 -From (Get-Date -Date $Logon.LogonTime) `
+                            -SecurityData @{
+                                UserID=$Logon.UserSID
+                            }) -EndXPath (
+                        New-XPath -EventId 257 -From (Get-Date -Date $Logon.LogonTime) `
+                            -SecurityData @{
+                                UserID=$Logon.UserSID
+                            })
+                }
+            }
+            [void]$PowerShell.AddScript( $VMwareDEM1ScriptBlock )
+            [void]$PowerShell.AddParameters( $Parameters )
+            [void]$jobs.Add( [pscustomobject]@{ 'PowerShell' = $PowerShell ; 'Handle' = $PowerShell.BeginInvoke() } )
+        }
+#endregion
+
+
+#region TTYE VMware DEM Blocking Configurations - #Asynchronous actions
+         if ( $global:applicationParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'Application' -ErrorAction SilentlyContinue)) {
+            ($PowerShell = [PowerShell]::Create()).RunspacePool = $RunspacePool
+
+            [scriptblock]$VMwareDEM2ScriptBlock = $null
+            if( $global:applicationParams[ 'Path' ] )
+            {
+                $VMwareDEM2ScriptBlock =
+                {
+                    Param( $logon , $ApplicationEventFile )
+                    Get-PhaseEvent -source 'VMware DEM' -PhaseName 'Async Actions' -StartProvider 'Application' `
+                        -StartEventFile $ApplicationEventFile `
+                        -EndEventFile $ApplicationEventFile `
+                        -EndProvider 'Application' -StartXPath (
+                        New-XPath -EventId 266 -From (Get-Date -Date $Logon.LogonTime) `
+                            -SecurityData @{
+                                UserID=$Logon.UserSID
+                            }) -EndXPath (
+                        New-XPath -EventId 267 -From (Get-Date -Date $Logon.LogonTime) `
+                            -SecurityData @{
+                                UserID=$Logon.UserSID
+                            })
+                }
+            }
+            else ## online
+            {
+                $VMwareDEM2ScriptBlock =
+                {
+                    Param( $logon )
+                    Get-PhaseEvent -source 'VMware DEM' -PhaseName 'Async Actions' -StartProvider 'Immidio Flex+' `
+                        -EndProvider 'Immidio Flex+' -StartXPath (
+                        New-XPath -EventId 266 -From (Get-Date -Date $Logon.LogonTime) `
+                            -SecurityData @{
+                                UserID=$Logon.UserSID
+                            }) -EndXPath (
+                        New-XPath -EventId 267 -From (Get-Date -Date $Logon.LogonTime) `
+                            -SecurityData @{
+                                UserID=$Logon.UserSID
+                            })
+                }
+            }
+            [void]$PowerShell.AddScript( $VMwareDEM2ScriptBlock )
+            [void]$PowerShell.AddParameters( $Parameters )
+            [void]$jobs.Add( [pscustomobject]@{ 'PowerShell' = $PowerShell ; 'Handle' = $PowerShell.BeginInvoke() } )
+        }
+#endregion
+
 
 #region TTYE Citrix WEM phase
 if ($logon.OSReleaseId -eq $null -or $logon.OSReleaseId -gt 1607) {
@@ -4963,6 +5113,7 @@ if ($PsCmdlet.ParameterSetName -like "CreateOfflineAnalysisPackage")
     wevtutil.exe export-log "Microsoft-Windows-User Profile Service/Operational" $(Join-Path -Path $global:logsFolder -ChildPath 'User Profile Service.evtx')
     wevtutil.exe export-log "Microsoft-Windows-AppReadiness/Admin" $(Join-Path -Path $global:logsFolder -ChildPath 'AppReadiness.evtx')
     wevtutil.exe export-log "Microsoft-Windows-WMI-Activity/Operational" $(Join-Path -Path $global:logsFolder -ChildPath 'WMIActivity.evtx')
+    wevtutil.exe export-log "Microsoft-Windows-Folder Redirection/Operational" $(Join-Path -Path $global:logsFolder -ChildPath 'FolderRedirection.evtx')
     wevtutil.exe export-log "Microsoft-FSLogix-Apps/Operational" $(Join-Path -Path $global:logsFolder -ChildPath 'FSLogix.evtx')
     wevtutil.exe export-log "AppSense" $(Join-Path -Path $global:logsFolder -ChildPath 'AppSense.evtx')
     wevtutil.exe export-log "Microsoft-Windows-Shell-Core/AppDefaults" $(Join-Path -Path $global:logsFolder -ChildPath 'AppDefaults.evtx')
@@ -5047,7 +5198,7 @@ if ($PsCmdlet.ParameterSetName -like "OfflineAnalysis")
             'group'       { $global:groupPolicyParams = @{ 'Path' = $file.FullName }      ; break }
             'terminal'    { $global:terminalServicesParams = @{ 'Path' = $file.FullName } ; break }
             'prof'        { $global:userProfileParams = @{ 'Path' = $file.FullName  }     ; break }
-            'application' { $global:citrixUPMParams = @{ 'Path' = $file.FullName } ; $global:AppVolumesParams = @{ 'Path' = $file.FullName }       ; break }
+            'application' { $global:citrixUPMParams = @{ 'Path' = $file.FullName } ; $global:AppVolumesParams = @{ 'Path' = $file.FullName } ; $global:applicationParams = @{ 'Path' = $file.FullName } ; break }
             'fslogix'     { $global:FsLogixParams = @{ 'Path' = $file.FullName }          ; break }
             'sched'       { $global:scheduledTasksParams = @{ 'Path' = $file.FullName }   ; break }
             'appsense'    { $global:appsenseParams = @{ 'Path' = $file.FullName }         ; break }
@@ -5063,6 +5214,10 @@ if ($PsCmdlet.ParameterSetName -like "OfflineAnalysis")
     #Write-Debug "List of discovered files:"
     #Write-Debug "$($(Get-Variable -Name *Params -Scope Global | Select-Object -Property Name,Value -ExpandProperty Value| Out-String))"
 
+    if( ! $global:applicationParams[ 'Path' ] )
+    {
+        Write-Warning "Could not find Application event log file in `"$global:logsFolder`""
+    }
     if( ! $global:securityParams[ 'Path' ] )
     {
         Write-Warning "Could not find Security event log file in `"$global:logsFolder`""
@@ -5424,4 +5579,6 @@ Switch ($PsCmdlet.ParameterSetName) {
 }
 
 Get-LogonDurationAnalysis @params
+
+
 
