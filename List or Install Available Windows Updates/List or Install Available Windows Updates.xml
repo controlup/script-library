@@ -31,11 +31,7 @@ Taken from:</Credits>
       <AllowExposeEmail>false</AllowExposeEmail>
       <ContactEmail />
       <Notes />
-<<<<<<< HEAD
-      <DownloadCount>229</DownloadCount>
-=======
-      <DownloadCount>208</DownloadCount>
->>>>>>> f8b742bdd46bf2e1788df0f17d77a08a8e7bcbe2
+      <DownloadCount>309</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -119,11 +115,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-<<<<<<< HEAD
-    <ImportValidationString>cTzI62aAKIZuSIyNzqD8nr96ojw=</ImportValidationString>
-=======
-    <ImportValidationString>1BY/ADfHibpCMhQpYqTxHUvSQfA=</ImportValidationString>
->>>>>>> f8b742bdd46bf2e1788df0f17d77a08a8e7bcbe2
+    <ImportValidationString>jjyCZ/l9fS+H/NcIaSIsH7p2keE=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

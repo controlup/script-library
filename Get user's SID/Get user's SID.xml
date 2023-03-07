@@ -4,10 +4,10 @@
     <SBAId>e1dbbd9b-5aa9-4494-934b-f766da1fb6a1</SBAId>
     <RootSBAId>163faaa7-41e2-4728-8418-741c3b3742a6</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637460763818131034</SQN>
+    <SQN>638108472037924243</SQN>
     <Name>Get user's SID</Name>
     <Description>This script gets the user SID for the current username. If the same name exists in both the local computer and the domain, both SIDs will be returned.</Description>
-    <Category />
+    <Category>User Environment</Category>
     <Version>2.1.2</Version>
     <DateCreated>2017-01-26T09:12:00.067</DateCreated>
     <DateModified>2021-01-11T18:34:59.37</DateModified>
@@ -31,7 +31,7 @@ Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail>guyrleech@gmail.com</ContactEmail>
       <Notes />
-      <DownloadCount>563</DownloadCount>
+      <DownloadCount>598</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>4096</AllowedEntitiesEx>
@@ -52,7 +52,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>/tAziKdqLPem+EF9+HZTNiQpns8=</ImportValidationString>
+    <ImportValidationString>s9VFXdGZEf0HSeFF/7XnnJNkNbA=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

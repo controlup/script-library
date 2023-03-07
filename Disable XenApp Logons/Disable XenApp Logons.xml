@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>a255c73e-6149-456d-be9d-1ee18c1a95d0</SBAId>
+    <SBAId>e7f3b7de-f23d-4f8b-b3eb-363b908e1096</SBAId>
     <RootSBAId>94f2e3d5-68ea-4e9c-86b7-8b3eec56f411</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>635241583963116845</SQN>
+    <SQN>638108472037924243</SQN>
     <Name>Disable XenApp Logons</Name>
-    <Description>Disable XenApp Logon to the selected server</Description>
-    <Category />
-    <Version>1.0.0</Version>
+    <Description>Disable XenApp Logon to the selected server. This state only persists until the next reboot.</Description>
+    <Category>CVAD Management</Category>
+    <Version>2.0.4</Version>
     <DateCreated>2013-11-24T10:05:36.42</DateCreated>
-    <DateModified>2013-11-24T10:05:36.42</DateModified>
+    <DateModified>2014-02-19T10:38:51.613</DateModified>
     <DatePublished>2013-11-24T10:05:36.42</DatePublished>
-    <LastEditorName>Smart-X Support</LastEditorName>
-    <CreatorName>Smart-X Support</CreatorName>
+    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <CreatorName>Zeev Eisenberg</CreatorName>
     <Status>4</Status>
-    <CheckSum>IRv9rPjjQhxPrmcnOU0gm2i6938=</CheckSum>
+    <CheckSum>yqRu4rFRJEcwS63WjvLUwNXnlSs=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
     <Icon>
@@ -23,23 +23,23 @@
       <IconType>0</IconType>
     </Icon>
     <ShareDescriptor>
-      <Author>Smart-X Support</Author>
-      <Tags />
-      <Credits>Credits to: Smart-X Support
-Original code by: Smart-X Support
+      <Author>Zeev Eisenberg</Author>
+      <Tags>XenApp,Citrix,PowerShell</Tags>
+      <Credits>Credits to: Zeev Eisenberg
+Original code by: Zeev Eisenberg
 Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>support@smart-x.com</ContactEmail>
+      <ContactEmail>zeeve@controlup.com</ContactEmail>
       <Notes />
-      <DownloadCount>16</DownloadCount>
+      <DownloadCount>552</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>272</AllowedEntitiesEx>
       <AtomicEntityEx>256</AtomicEntityEx>
       <AllowedEntities>0</AllowedEntities>
       <AtomicEntity>0</AtomicEntity>
-      <ScriptData>aQBmACAAKAAgACgARwBlAHQALQBQAFMAUwBuAGEAcABpAG4AIAAtAE4AYQBtAGUAIABDAGkAdAByAGkAeAAuAFgAZQBuAEEAcABwAC4AQwBvAG0AbQBhAG4AZABzACAALQBFAHIAcgBvAHIAQQBjAHQAaQBvAG4AIABTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACkAIAAtAGUAcQAgACQAbgB1AGwAbAAgACkADQAKAHsADQAKACAAIABBAGQAZAAtAFAAcwBTAG4AYQBwAGkAbgAgAEMAaQB0AHIAaQB4AC4AWABlAG4AQQBwAHAALgBDAG8AbQBtAGEAbgBkAHMADQAKAH0ADQAKAA0ACgBEAGkAcwBhAGIAbABlAC0AWABBAFMAZQByAHYAZQByAEwAbwBnAE8AbgAgAC0AUwBlAHIAdgBlAHIATgBhAG0AZQAgACQAYQByAGcAcwBbADAAXQAgAA0ACgA=</ScriptData>
-      <IsCompressed>false</IsCompressed>
+      <ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih7/Gj/+a6S/xm/8ayS/xvjXeP1r/D6/xotf48tf4yX9dkb/x6ep/vf01yh+jebXyH6Nya9R/ho5/f1707/LX+P411jRf+mv8fzXqH6NC/r/kn5v6Sf+nXO7hv7FG1P6JP81ZvpJ/Wtc8r9j+vsNtQRsfNNSDy2/B1jlr3FNv624ZcNtWm4X9rCkf9/RXym1ygm/iv5rCbKM6SXh+Ir+/8WvcUo9ndLvKY3MYfCCelzQb26sbyxc+Qa4nHdGZN5Oqb+cMFvS6FManU8jjHWb/p/9GmvGeMFjK4gSGX0vY2voO1CwpM/ljQl/fvJrfMUY/fivccQ/8f/fjbCv6b+K/n/M9CyYSi953OeMD+Zkylh+Rv//iEaKnlf0m4FyxmPZ4v9/Ti1bwhHz/ZrHu+KxAG9DF+BSUKua/n1H9PTnfUzfYVwY2ZKwb/jNOJagesF0WdJnGP0Jf95yj2v6/A6/nf8av4h+/m78GaiU0ufA+xcH3PiGoINO4afmv2PCZcbjajrjep+x+JB/Cb+L+ZsSFwz1C0macm8tYV8z9QANmJ7Tbxi//znmW3gGHJBxO+CXKraG43JLUeE+R9WRbbXkdgLTceqUx7pimFcMG9hnv4bIimC53DCWiuA5CdhlmEb2MoYKThWscpVN802hvWb8+ZKlUjh+yjza0H/nPMvjKAbfZdyhDXyeAld/xXNqNJFog5L+zTqjdzP/0a+xiTO7nPg+2PhS+T2i0Pc/uKdT4k2h3W6HB/GX/Cu6If01njA3QMM0SgujSws7G/gcXC08BYovA5y62s3nGcONgLViPSa8KTTP+D1I4l3GwkjHOX1mtEeXX4w8OJ4GbPCmSPuE3zLjm3P7mdWnMgb0aygJGCVxxIqojn6hR+WNa4YLqRpbmsX0RmjZtkkrHAcWQmzbl9zzdtR2gAsy+vuC4Hzv19ghHpCZ2qQz/v+gK37udMTtpHHnA6SxK4VO7vy+v00QGm71kfIJYGEsfV9A+vzdyO52ueUOjU4s9P8D+iVhb44JAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
       <Interactive>false</Interactive>
       <AltCredentialsType>1</AltCredentialsType>
       <Timeout>60</Timeout>
@@ -74,7 +74,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>1K3sHQmnO9BTtXlE1YCxSnx5F6E=</ImportValidationString>
+    <ImportValidationString>7U1cHUOUAsowerUi3loMNTzkjEA=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

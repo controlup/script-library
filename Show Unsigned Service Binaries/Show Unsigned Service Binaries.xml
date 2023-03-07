@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>f5885de0-4dac-4b04-a637-a86f0bc69d84</SBAId>
+    <RootSBAId>75bbccdc-6b97-4d73-891e-f8933006f8d2</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638136282092769921</SQN>
+    <Name>Show Unsigned Service Binaries</Name>
+    <Description>Query all services, both system and per-user, get the binary responsible for the service, which will be a dll when the service executable is svchost,exe and check its digital signature.
+By default, only services whose binary is not validly signed will be shown but parameters are available to show any signing state and to show all services or just non-Microsoft ones</Description>
+    <Category>Miscellaneous</Category>
+    <Version>1.0.6</Version>
+    <DateCreated>2023-02-23T18:23:21.19</DateCreated>
+    <DateModified>2023-02-23T19:01:57.063</DateModified>
+    <DatePublished>2023-03-03T16:28:34.54</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>t5EnL6wMSJ+3adyQ9mgySTY6idk=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>troubleshooting,security,auditing,windows,applications,dll,exe,code signing</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>2</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>180</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>bbab545f-323d-4ceb-847b-80c9b07c3aa4</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bbab545f-323d-4ceb-847b-80c9b07c3aa4</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Show All Signing States</Name>
+                  <DefaultValue>No</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([yY]es|[Nn]o)$</ValidationString>
+                  <ValidationError>Yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f08c084e-ed15-499f-8e66-4abb05777509</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f08c084e-ed15-499f-8e66-4abb05777509</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Show Non-Microsoft Only</Name>
+                  <DefaultValue>No</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([yY]es|[Nn]o)$</ValidationString>
+                  <ValidationError>Yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>A37fpZdu3qmBkI8/6Su/iw+SINs=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
