@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>77900f5b-b86b-4728-9271-a8f2fa60b453</SBAId>
+    <RootSBAId>eab135b7-8c78-4746-bd65-29827e8ecb8e</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>0</SQN>
+    <Name>Check Profile Sizes</Name>
+    <Description>Check Profile Sizes examines user profiles for all or selected user accounts on the target machine, grouping the results by file type, using the extension.
+
+For each group of files, if the size of the group exceeds a threshold (default 15% of the total profile size) the individual files are listed, sorted by path or by size (descending) and showing the actual file size in bytes.
+
+To keep the output reasonably short, a threshold is set on the number of files shown individually per are listed by path (default 6) - beyond this, files are summarized by folder (order by count of files, descending).
+
+Arguments:
+ThresholdPercentToExpand (default: 15) - the threshold percent of the total profile size at which a file-extension group is listed.
+SamAccountNameList (default: All) - the list of account names to be reported (comma-separated, any leading or trailing spaces will be trimmed). If set to All, the script will include local user and Active Directory user accounts.
+SortBy (default: Size) - must be set to Size (individual files are listed by size, descending) or Path (individual files are listed by full path, ascending).
+PreSummarySize (default: 6) - the number of files that will be listed individually (by group, according to the configured sort order) before the script switches to reporting files grouped by folder.</Description>
+    <Category>User Environment</Category>
+    <Version>1.2.17</Version>
+    <DateCreated>2023-03-08T17:37:42.343</DateCreated>
+    <DateModified>2023-03-23T15:13:00.95</DateModified>
+    <DatePublished>2023-03-23T15:14:06.91</DatePublished>
+    <LastEditorName>bill.powell</LastEditorName>
+    <CreatorName>bill.powell</CreatorName>
+    <Status>3</Status>
+    <CheckSum>U2MTDPmvgzgQ5QxZkewUgsKETx8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>bill.powell</Author>
+      <Tags>profile,disk,fslogix</Tags>
+      <Credits>Credits to: bill.powell
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>bill.powell@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>4115167d-7112-4719-a5a1-5fd9e159482d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4115167d-7112-4719-a5a1-5fd9e159482d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Threshold Percent to Expand</Name>
+                  <DefaultValue>15</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(100|[1-9]{0,1}\d)$</ValidationString>
+                  <ValidationError>only numbers 0-100 allowed</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9eeb567d-b7d1-40f1-a8bb-16890020c830</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9eeb567d-b7d1-40f1-a8bb-16890020c830</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>sAMAccountName List</Name>
+                  <DefaultValue>All</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3ca87a1e-dd52-49e2-b0d5-4a0e7a9a3ecd</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3ca87a1e-dd52-49e2-b0d5-4a0e7a9a3ecd</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Sort Ordering</Name>
+                  <DefaultValue>Size</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(Path|Size)$</ValidationString>
+                  <ValidationError>Choose Path to see file details ordered by folder
+Choose Size to see largest files first, regardless of path</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8d6b6be8-8972-411f-9542-451cd8f7edb0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8d6b6be8-8972-411f-9542-451cd8f7edb0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Number of files to be shown individually</Name>
+                  <DefaultValue>6</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Where there are many files, the first ones are itemised - up to the PreSummarySize - and the remainder shown by folder</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>WS8prha+46AWIBj46smXi4Xa6kc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

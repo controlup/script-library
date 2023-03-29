@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>49be2a9e-48d2-477e-a981-1e1ff0e16b38</SBAId>
+    <RootSBAId>80169eb4-7a3c-4597-a8d3-24abad2ae0eb</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638154248815483347</SQN>
+    <Name>ProcMon - Trace System Activity</Name>
+    <Description>Starts procmon with retention of all events.  Use with caution!</Description>
+    <Category>System Health</Category>
+    <Version>2.10.22</Version>
+    <DateCreated>2018-09-06T01:13:17.217</DateCreated>
+    <DateModified>2023-02-27T17:11:24.663</DateModified>
+    <DatePublished>2023-03-26T10:43:52.62</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>4</Status>
+    <CheckSum>n7XBr8VXyBEE2RlMLwG+vXaMuFM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAd9JREFUOE9joCr48/md9JeDTVM/b/O8+bpB7cXLarf9Px5fNYdKEwbvJiVserdA5f+Hhdr/X2WJ/b/vzvv/DAfD/zNXj7n+//+fBaoMN3jb5/L/0zrz/+8maP5/kSL5/46H+P8Njsb/562p+9+ywvP/jZd7/4PUXX6+Nmf+5YRdk9bkrQBrhIGa6gn/icG9R/T/lx9R/Z+VlrwarAmm2ddjFlZcOOMyGJ83lgSp/d9/3PJ/zlr1/zMmzEsB6QUDkAHfgB4lhIFK/7efNP0fWqXx48Lpa3oYmkFsbBgkd/zgRrABzVf0/wdG21z4+/s/G4oBIAUgDDMMhmFiIM0Ncz3/u4fb3K0qq60GawYBmAEwGhcGKv1/YY/9/9d7WT8/ffFTCEUzzHZsGCYPMuDHVcb/E8ulnt6480IaxQBCGKT560V1sAHFGSEbwJqhACxJDP61xe3/jc2C/+sbJ+cC+RDw7u0LwTWrl3m8fftK9O/fX+zv3r0Q6584NXnVjKR5N6ez//9/keH/89MM/7sqO/73Fmb9j/bm/nHq7FVI9OEDv/79Z6qrzJrSXy76ZOMM6XctRZJvmZgYPtnbOW0A+ogVqowwuP/ondTR41f1T56+YvDw4WNloGZmqBQQMDAAAFca5SrGB3kpAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>procmon,debug</Tags>
+      <Credits>Credits to: Trentent Tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>4</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>2</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>d2b29038-1b94-490f-9ecb-1b0ace147de1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d2b29038-1b94-490f-9ecb-1b0ace147de1</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Drop Filtered Events</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>false|true</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6accce3f-9e83-4f18-9b17-cf1c8f75dd92</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6accce3f-9e83-4f18-9b17-cf1c8f75dd92</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Save Log To</Name>
+                  <DefaultValue>D:\ProcMonLogs</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7dc7849d-f2d5-4c4f-acf5-d88438435da9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7dc7849d-f2d5-4c4f-acf5-d88438435da9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Duration (sec)</Name>
+                  <DefaultValue>15</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>2f1aac17-4a2b-4709-9ff1-d45259f844fc</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2f1aac17-4a2b-4709-9ff1-d45259f844fc</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Filter</Name>
+                  <DefaultValue>Process Name,contains,procmon.exe,exclude;Process Name,contains,procexp.exe,exclude;Process Name,contains,Autoruns.exe,exclude;Process Name,contains,Procmon64.exe,exclude;Process Name,contains,Procexp64.exe,exclude;Process Name,contains,System,exclude</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>3f6ebc71-9d8c-4694-a7c9-153e2a72af29</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3f6ebc71-9d8c-4694-a7c9-153e2a72af29</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>ProcMon Location</Name>
+                  <DefaultValue>C:\swinst\sysinternals</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>CInHzpORF+uIWqDfRK7xmI1KN0A=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,3 +1,10 @@
+27-03-2023
+==========
+## Added:
+### _Check Profile Sizes_
+### _Universal EUC Sync_
+### _ProcMon - Trace System Activity_
+<BR><BR>
 06-03-2023
 ==========
 ## Added:
@@ -134,6 +141,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 

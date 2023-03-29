@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>cf5732fc-4d67-4a9e-a8e2-2dcf0abc79e6</SBAId>
+    <SBAId>f1b99bb5-4e79-4f2f-b5b9-de93ff047eeb</SBAId>
     <RootSBAId>da147a1f-c581-459a-a52b-008356675bc0</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>638066409387070217</SQN>
+    <SQN>638154269689044675</SQN>
     <Name>Enable CVAD machine maintenance mode</Name>
     <Description>Enable XenDesktop maintenance mode for the selected computer(s). Highlight the target VMs, but run it on the broker for the VMs.</Description>
     <Category>CVAD Management</Category>
-    <Version>7.0.9</Version>
+    <Version>8.0.11</Version>
     <DateCreated>2013-11-24T10:15:54.563</DateCreated>
-    <DateModified>2022-12-14T15:13:19.47</DateModified>
-    <DatePublished>2022-12-14T15:33:40.233</DatePublished>
-    <LastEditorName>Zeev Eisenberg</LastEditorName>
+    <DateModified>2023-02-23T14:55:07.257</DateModified>
+    <DatePublished>2023-03-24T11:54:42.247</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
     <CreatorName>Zeev Eisenberg</CreatorName>
     <Status>4</Status>
-    <CheckSum>uDXR3V+ANbqXVCHhR1mVeRSr2Y4=</CheckSum>
+    <CheckSum>DFU58GfGkPAF6TelhV4Lu8+V4+8=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
     <Icon>
@@ -24,24 +24,24 @@
     </Icon>
     <ShareDescriptor>
       <Author>Zeev Eisenberg</Author>
-      <Tags>CVAD,Citrix,PowerShell</Tags>
+      <Tags>citrix,cvad,maintenance</Tags>
       <Credits>Credits to: Zeev Eisenberg
 Original code by: Zeev Eisenberg
 Taken from:</Credits>
-      <AllowExposeEmail>false</AllowExposeEmail>
+      <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail />
       <Notes />
-      <DownloadCount>0</DownloadCount>
+      <DownloadCount>8</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>844424930929936</AllowedEntitiesEx>
       <AtomicEntityEx>256</AtomicEntityEx>
       <AllowedEntities>0</AllowedEntities>
       <AtomicEntity>0</AtomicEntity>
-      <ScriptData>H4sIAAAAAAAEAL1WTU/bQBCdc6X+ByvkAFVJy71UAopaDlBEQG1FezD+IBaJ49qGNmr5733zdtfZmCRt+Kistdfj3Zk3M29m/UbW5Lk8k5705YscyUc5xuwAQ6UBr33JJZQLGUqCt8+45/IO90qupJaxFJCOsCKDvObXECPi6hG+x5ylmJV41jLge4W7aoy4J4YkwooRtF1TUso61mwAmcF3LDtygnEIPKcYJ9hxQN1qNcOYeJhPrRXFMuJsDASz1ku54T2AbwnRX2KeeN4qqk2MkJjG9FJtRXgOcU2o6RqYC7xldscF5XtyRjxr8pZPHV3gLnFpJHboeYZ5Dt9K7E2JJmlit43RQSZMjDuNlgN6ss7xHitrYNSs9Ym8oCeK+6jxfY/xKXH/iUjuEsEVrfWAI8Yq3dOTF9w3H2MA/RmjovFW3/cor7n3GvIN7k7kO55dyjRGAeSK+peXHc1PySjNSt2lmGJ6VbW8+ndPfL233Km5i5D/RVbXyEG1VQN7ycgpkydkb0jvfbnmOoa0YvZDrlN0gcXquJY08TS8m8b0ZbMqt8yLZzga0dOCOn9Q94C2A6IwKPMlvrjaM9zfos6xtRBSq7LUoNJ69r9k1mpIeY59tWV7RH5WuFLmuDcXwSdi10r2GaWMPpvpJzURDXEPW95P895Zyss2D1dB41fkOSL07cGW9sFME7utFgf17dbrBdpNlI+qLfGqdZu4Qli/RBTO5TVQuV2a111ySHtSZSM4IAsDe3cRdD05YJ7yGU/a3dBnmuOw6jLdOLC9fWzZV7N6XxGFq6kUMudBm2WuiqaVUFlGmw5xwV3Ov4GtLteBjQ+hF3/VMQSPCuQqJfLE7phYzk4sK3XM7zVdyE2MtZIOZ3JhcuB6q99l+kRXEln7DOyg63xdmNeOl//FvWi1qomJUHGNGuRxC1WFWcheUYk5zQp80erNqG1iI6yVneLS0y2zXT5gTRrdGTWV9gS8oa2CaG/suXBJy/ev1aev0XZt3t45U5ezYtM+p6fbxoq8+i16jq7Gq02gy6np7h/WYdPju8zOsph+YN5rsmlx93GdRGM532bQWHWcDvgvZ7rRY1TZseVVSMv3qTNnP3u0vD4sv8s9ekiG/2em/f+pRRn/eyfTCtUoa293/xUprcdz+tfiPD/1SW1OpD8M0B6ZIg0AAA==</ScriptData>
+      <ScriptData>H4sIAAAAAAAEAL1Y227bRhCd5wL9h4VsQFYRyXFa9CHoBbEbJAHq2rDcuK3rB1qibNW6VZScGoH/vWfO7PImSqwatyAoksvdmTNnZmeG+kZ25HP5TDrSlV/lJzmRU9y9w6mjjsdrmUgk1zKSWPblBxlKkj47+QW/E4zGGL2ThUxlhtExZgwxvuDbCGePs8d43+fdAHdzXBdyy+cEvyqxxzV9jPQwYwxpS47MZQ9zWkCqyAzzqbySM5zHwHiO88xr7kGmao9hUYSROGfNudc38W8ctAxKOOZyz18HK2NKusF9nONB8bVxRkQ3pdYFZvZwHeF4oKQl0M/wNPQrrjl+JD/n8Gy2ZJXDY8/gCSQrRtM7xdtMppMLWmM2GcvTkgXO898v+bPOcxn7Gi2KtVvQbPiG4NTYCOicvKWmBfU+yMtUUlj5Qp7LgXyJGDvAsY/nrzD6G3TG8IfGYUImJ/TKnD5xwDDH6A0xK/dO3vNtUsGKanhBDXpVPV9j9A38pH75kZo0dlzhOMOoejEiE31ypiNzzo5y8TrGdUTeE3mGEfV/388IPlgywjQ6ekQ+I0MWYcqOMq5r5vhNNqLX+3r0R4yBHvamI2KNyhH0hLiPuOOMq2fcF1O+teiyXTouzXP0ryPfKjMC1geOTjw7yv7c82JWKQcdjyeivTorsKJRd0de4kK2KUdnku7aPH/K0o58l0bUJbRkvjgkrr5neQ855CqdeUqmVaY+7RX4viTyuV93JbtrcosDb8V178nMMPV9lzj2pFmwrol1zZKFzRTdZhTb5AUn3+Is61YdrZSHXWbwa8TGDThRzw0oJU73v8rYhQ3q+T3ea6U4hIYl2c2YjH2+ToDd0cIguYnnK5wtnB/57ogIbQcsicvJI6Ng5PeJzetixohoFsyu1eta3hbLANeYozKe2p77gvT/y6bX0DnnbnyV24lPbVu1lrKN26Gptt06hbyNer5jXjHME2YqzehtrPyT42+IuE17uoznmc867dx+PMKY7Zm/kHMOifSOqDrA28csXdORL7iu2hZX658WGVHUHws79pz1zZVGw6H6+7QgKVnwz1Hn5T5ype52y/3VWndYnyJmyyW945g5FOeA+WRUGLcqp5nJKp9l90Wa40O3FKfcWedUrCU2a+Kzel/yXVaWvZ18oOxb6rYqZSgnG2wJfaRVsQPKnHoNEaVqn2WoQqUJb4Zea8TxUPG0MvYYswmOAaOvU4nggth15+Sjx0kDGvMdltW2EX6jkvWZ3xsbY7Acc9ugye/SSzB09cmaXiMyjbuDUgzq02O6i9VDh747Cv3OgnUzIftJjotQzRwZnxQwlTvzfMyEaFRZ9o3gfFWc+jhacB/u+x7NdscgzXur8RL2QxbTiY9Ny0LXXBXsu/X7JHwNmA1RjkmVMUJEzMD6gMhjv+LBR99D7mvmkhVFV9TX+HNcracIuX77nqBNPJpVqzoDqznnrBM31HRc6H2C3pCjw5rq3FcvKeT1fNYrz2uv7b8ayIm/r+3PGrnoXJ8pt9vTN579cQlj6HWXjJ02Y3PKfDKkhNAla64Z+G+koa8xjlnCsvzQd33msXvKnhHhva9K1j//++zx32eNcrZ4zMV6uacNOdg6VYvB0L1oZbe32+yLVkUUFrWEp2YJXehBNkdt21+zPbCqMeu/1kvqQN+EY+vtyjqgT2OgyvcXRDZJv0EbK5Zaji1/6+2SIeOw5bNf3X8HjZXOJd8XViHt1uaFeuaUX6sQJ9iDf/gupS4rtWskv9zCF1WWZbHx/UZfVfnsLXPKgt5a/1U6TLubD1v667jSX9v4rT6rnvLesqr+v5CQqey/kPp/EC0D7dbs1E7pOfDTWmtdVWez3uLt6sbA/xexWjnWV6+nzb9/A5J0LkvyFQAA</ScriptData>
       <IsCompressed>true</IsCompressed>
       <Interactive>false</Interactive>
-      <AltCredentialsType>0</AltCredentialsType>
+      <AltCredentialsType>3</AltCredentialsType>
       <Timeout>60</Timeout>
       <ScriptType>3</ScriptType>
       <TimeoutPolicy>1</TimeoutPolicy>
@@ -74,7 +74,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>Yy35UQjEZoqu1ERbNghXbydXo34=</ImportValidationString>
+    <ImportValidationString>nKDz17mlzwloLCxkNl+rR56EOXQ=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

@@ -37,7 +37,7 @@
 [string]$strImageType = $args[1]
 [int]$intScreenShotAmount = $args[2]
 # Sleeptimer uses milliseconds, convert now
-[int]$intScreenShotInterval = ($args[3] * 1000)
+[int]$intScreenShotInterval = ([int]$args[3] * 1000)
 
 Function Feedback {
     Param (
