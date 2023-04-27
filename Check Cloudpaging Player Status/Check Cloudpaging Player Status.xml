@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>9e4004b3-175f-4a53-b249-3c632f24cd65</SBAId>
+    <RootSBAId>d477e8c9-018c-43cc-884f-d30cf950a2fa</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>0</SQN>
+    <Name>Check Cloudpaging Player Status</Name>
+    <Description>This script will return the current status of the Cloudpaging Player on a given machine.</Description>
+    <Category>Organizational Actions</Category>
+    <Version>2.0.7</Version>
+    <DateCreated>2022-12-01T12:32:59.797</DateCreated>
+    <DateModified>2023-04-21T18:52:34.207</DateModified>
+    <DatePublished>2023-04-21T18:53:01.14</DatePublished>
+    <LastEditorName>Rory Monaghan</LastEditorName>
+    <CreatorName>Rory Monaghan</CreatorName>
+    <Status>3</Status>
+    <CheckSum>X2Riy+diimZ4fc0918fcahJgUdg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAZCAYAAABQDyyRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABJRJREFUSEu1VgtMHFUUXcQKTUsgapumxfBJO/Pm+2ZndmbZXViWKktoraU2ocTGRButjVYTk9ZPSIxJqya1tAlpxdQEQ62CSWNTBGKola8UBWT5dj/sArWa2toKhib9IPUOzJJlGAtUuMnJzrvv3nvevPuZNemlyS0t9zj49S3Z4qYOF5/X5eBEn0StvEQSUZrJ0smbua41v0jsr0B2LxJDNDk6yJDlQYysS32Q6HMWvlF/gGkg4tYgSx4GLNfsF1+O2/g9QxRpfAANwxRRMUQTsZrL4spWK07sxPSIEXEkhhjyA/hdmnR8aRMOtJvZq3rSGUDEnaCA6M3rE1f1y8w+n4XKBH20FuLBBAJMv5G4bnXM0Y3WggYFe4YRMTGDXMMwRX6eJ7MrLwjsKKwnoFi74VBpWoj5SVWuVbooMR8O8KgKgqgFeM4vUOUhFr0e5FGqOzXpkRMO874+jr4ZJg4DamGsNjkp5vs0XDetQ8TfIYyytPBzywmnZf9/FR0Q3Ia3OhXAiDiYKed6BPovvY1PpmxVFqEsUgd+IWjZxzSK+0smmRJbq/AdkQH0gLe6NsiR2z+2iTu8DLqj23+uLHHdUZ3uHrTquxrF3PKOQ7T/LPKXu3jmN4/Ajgxw1Ixgk0DEmJ/csOm0git0e7urJVyq06n14QmI1MMaxf1l21OuqP3P5qx4a3vOioP5OfGFCkuftgvvt2Hqmi5o8IDCuS/S5PQthCgiv8GGayPtVEAa7nrsfH6vwh6B9Wd+M3VkQEB5fpmaPT/Ou+VlMPud4PQSFOB74LC7x87Ie2yWVWfThOrhiMA9DLGrWcFD4fWPTt7RLrDXw+s5oHZKEGbIZo16Sj5Nx3tDNDmr1WD+tzXRG+QamW+O0B9vsgit2v71EpdlC9TIDL85gYjbUCMFGr3J9LQzbdk3Cj5jFAhu5cpJh3mnj6P+0XRljbLZoz4PcOhYq4X/Lmy7EADXCNxGinYEk+m1J+2razhU3GzBNe0S6/Wz1HjY2EcTXzVKTJ/63MlSJT2Y/hOcx6o2SnsHDW5uvoAYRRr9lIAyChB3CBFxH7kUe63ItKi3ot5CbZp0Hp4n6u24dBDmRruVO9aH6UuRARcKiNszSVyZa93QLzFlQRap/wVuQI6uQn6bPAL1SrWC62Aq+r6Q+U+8PPLD/4VAt8TUd8pspz7gQgGTdtRUutVJegX6ipEBYKKVpytaMsz2Ioe4tjwdn+pUuO5eC+s3sF0wQhz5h6lO5sqNNlVAkV1uzhKz6jOEt+G0HSV0KvmtQzoDKXjgvEcCauCsqYEivUabkJ/xXiubV2hjlH5M3wLdhFeiiw+77Y9fULgevf2CAbUFk3KbqQajBkMDFYi4GRDQG8VW9sUuha2ozpHNvWbmf+deRQBTlZ5MLtp0KF0sCDAo3OOzAJU/HmTJF4pyM57oFlmfkc1CoHaV10zXtGaLj052QBZGD5U55Vd/ErnfDT9CU0432iXmB6O9+QJI78LttbVmmHdVbrHFTJJHSuEzrtiXk9asLYiPT1lMPJ+QkLwzIT75a7cUV7QjW/d1NJn+BcKDcYg2bJ7zAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rory Monaghan</Author>
+      <Tags>Cloudpager,Cloudpaging,Containers,Numecent</Tags>
+      <Credits>Credits to: Rory Monaghan
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAL1U207CQBA9zyb+wwZMeJFGH3xTE4LEkHghQLwkvpS2CAoUSxGN+u+emW3pYjBoTMxmy87smZkzl6WMBBGeMMdQTzMYVHHFU8LzEDEm1BzAwx62sYXyWvw5cSF1o0xT5ymmHGIKH/fETvgVe9mH9CK/Hjq4xQUu0eKpyS1asR7QT4BH9ZWqZDSaT79VaoYYq27Gs889V2SMvoNfz8Ew1ojyq2boZTxO0GD0Otpk0UKX30vysmzaREqEhPb/w8dwNX9oG2Ohlh1FjrgMuRTdMMSm/C74a28nvBXGfca0EXxF5LEC3o+5fCJDyiFl21VraSi90F5yzevXwA1qnIIWzni2OXi4czq5PgM3945TO4+oGfYz7zIhXe2Q9dylJ1v/vC8F+792YNfBu3qp6ly9G/Syuk6yaCOtdKjxXC5Sw4BnQYqcV7Twv7l7uU1Afai6VDMr2HztRhnHy5fWJG5KfwlvV1/ppje6w3onXGJbY/Q0+y9oad37yjqiHKivI+6KcojpraIeUiJkwt6WMy3rVDOofhNdtEP1K5m9c3e0LpEyqHIOenjIJLMyMRLjQ7911Undv8a+JiN5DRE9FdkZlDhRgywjeSm+VtjXXkYOzk5cogyfl9Pzm+la5VxyWH8CWsGNcogFAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>ZsmDW2QFePZ9hPbvkARO/zof0gY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

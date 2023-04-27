@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>5dc1563c-115c-4b71-897d-34cb4e74f1e8</SBAId>
+    <RootSBAId>d717f5cb-b298-4f8d-9e70-af2866cad056</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>0</SQN>
+    <Name>Configure Optimize Drives service for FSLogix Disk Compaction</Name>
+    <Description>Configures the Optimize Drives service so that FSLogix Disk Compaction will function.
+
+This SBA can be executed manually or used with a trigger pack to automate healing of this misconfiguration. More information is available here:
+https://support.controlup.com/docs/trigger-packs</Description>
+    <Category>Organizational Actions</Category>
+    <Version>2.2.5</Version>
+    <DateCreated>2023-04-13T20:08:30.15</DateCreated>
+    <DateModified>2023-04-21T10:04:03.927</DateModified>
+    <DatePublished>2023-04-21T10:11:10.513</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>3</Status>
+    <CheckSum>6ca2w6HcVyjbV/mfxAhgO3mba40=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAAfFJREFUOE9jAAHO2hveGr1331lPf/AfHZtOuoUhptR15xlP/U1zsGYQEGy8tXLjtc//Lz3/8Z8QOHjv6/9lFz7+F2m+1QvVzsAA5Ky/8+YXVMn//6++/Plfv/v1f495j/77LHj8v/Pg2/8ff/yFyv7/fwBoiETr7clQ7agGHHv47b9o863/DBXXUbBC553/11/9BKvBacD7b39AEmANjECs1Xfvv0r3XbghIP7PP/9wG9B/5C1YIVPl9f/l21/9j1rx9H/Ysif/o4E0zJDVlz/hNiB+1TOwIoOJ9/9nb3zxf9LRd/+b9r7+X7D55X+Wqhtgueqdr3AbkL7uOVgRyL9Ja579L9n28n/2hhf/E1c/A7sKJNe89w1uA1Zd+gRWBMLp65//rwPGROWOV//dgbEBEgOFy3FgIOM04Pfff/9tZjz4n7zm+f/CLS//hyx5ArcZhCOWPcUfCyDw6MPv/+ZTH/xnr7kBDzyQIaDw+foLkhZwGvDh+9//ltMegDXlbXrxf/G5j/9nnHz//8oL1BSK1YBbr3/+d5v76L98x53/vPU3/7/4/BuqHBNgNeDs0+//rYAZZcqxd/9rdr2GKsUOcHphyfmP/8uAUfcJKd2jA1BmWnnxI6oBwADLNgMGnOf8x0Rh/Yn3/gKLgCAGBgYGAOmfp8+i73zjAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>FSLogix,disk</Tags>
+      <Credits>Credits to:Trentent Tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANWUTW/TQBCG54zEf7ASDnBIKq4IkFBDEaJqKlKEOG4Tp7Gw3WA7LQHlv/PMeP0VHERzAq28OzPreeedndl9KUN5LI8k8GMsM/kiFzKVS6T3fO3daryVVJxcSyyhLNALWSEFeK2RI0n4fphlIhnyHXKOlrNmaJHMkRS5G3sC8kxO5SORL+WKeQqXQwxy2YBWIh/HIGBVq8PikOM6K0W8ZQ5bcQI5g9059hv+/Y6+MP+vSHOsCbEdksa/xU+tztYlCGlrZ9yT+znZXsiH3mzP8MpYE1tL3imoqiXEaCLq7tJyLDN40YtXjRX/FLDO+e+EcW9jbNmk7GSsMdzX3pY8kPcMDCdbz7dktAFpdYDXPp8CNpHZNKOKw4kxC41hORfEKPtpKK9rjkN5h7U4oisS83NWYWeS4j3BS083Q78htzv+DuQVXxlnhK2LM+JknKEpUuObm69iRtgCedqLPfbnlzFfkeHaY4byjXWAh3Zfcw8H8gz7z87J6kltf7M29TmGd2AeFTPtjobdG/TCqlR25bwTd+fvRGE9cIjVZ6uN1nbEPc+sCzPL+FPr3aluqN6JhZ3jtvUO7Fc07/ANrGNKxkuPftwLMujNIOR1iKzzRvJ87wRU29U9+q/0VGrr3/VUuz5Tq/faZvV/6E1bEUvt12ihfyM2xmZRV9jBJUa6b1Vr/yWe1C/xac9LPPCnrpWJjcOfcvo/em4nvwBc4gX0vAcAAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>yBujyFi25jVWZSh5OEF1gY5R+xw=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

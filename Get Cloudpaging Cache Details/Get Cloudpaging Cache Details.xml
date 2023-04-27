@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>13f3a248-291e-44e6-9097-515df1c7c2cf</SBAId>
+    <RootSBAId>a0963f0a-3c28-411b-a1ee-67bbcbbad39c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>0</SQN>
+    <Name>Get Cloudpaging Cache Details</Name>
+    <Description>This script returns cache details from machines including the cache storage location, the minimum size, maximum size and percentage of cache used.</Description>
+    <Category>Organizational Actions</Category>
+    <Version>2.0.6</Version>
+    <DateCreated>2022-12-01T12:23:58.5</DateCreated>
+    <DateModified>2023-04-21T14:11:12.727</DateModified>
+    <DatePublished>2023-04-21T14:12:46.77</DatePublished>
+    <LastEditorName>Rory Monaghan</LastEditorName>
+    <CreatorName>Rory Monaghan</CreatorName>
+    <Status>3</Status>
+    <CheckSum>9Fvcj25qKQa1cepjxN92dESk8Lo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAZCAYAAABQDyyRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABJRJREFUSEu1VgtMHFUUXcQKTUsgapumxfBJO/Pm+2ZndmbZXViWKktoraU2ocTGRButjVYTk9ZPSIxJqya1tAlpxdQEQ62CSWNTBGKola8UBWT5dj/sArWa2toKhib9IPUOzJJlGAtUuMnJzrvv3nvevPuZNemlyS0t9zj49S3Z4qYOF5/X5eBEn0StvEQSUZrJ0smbua41v0jsr0B2LxJDNDk6yJDlQYysS32Q6HMWvlF/gGkg4tYgSx4GLNfsF1+O2/g9QxRpfAANwxRRMUQTsZrL4spWK07sxPSIEXEkhhjyA/hdmnR8aRMOtJvZq3rSGUDEnaCA6M3rE1f1y8w+n4XKBH20FuLBBAJMv5G4bnXM0Y3WggYFe4YRMTGDXMMwRX6eJ7MrLwjsKKwnoFi74VBpWoj5SVWuVbooMR8O8KgKgqgFeM4vUOUhFr0e5FGqOzXpkRMO874+jr4ZJg4DamGsNjkp5vs0XDetQ8TfIYyytPBzywmnZf9/FR0Q3Ia3OhXAiDiYKed6BPovvY1PpmxVFqEsUgd+IWjZxzSK+0smmRJbq/AdkQH0gLe6NsiR2z+2iTu8DLqj23+uLHHdUZ3uHrTquxrF3PKOQ7T/LPKXu3jmN4/Ajgxw1Ixgk0DEmJ/csOm0git0e7urJVyq06n14QmI1MMaxf1l21OuqP3P5qx4a3vOioP5OfGFCkuftgvvt2Hqmi5o8IDCuS/S5PQthCgiv8GGayPtVEAa7nrsfH6vwh6B9Wd+M3VkQEB5fpmaPT/Ou+VlMPud4PQSFOB74LC7x87Ie2yWVWfThOrhiMA9DLGrWcFD4fWPTt7RLrDXw+s5oHZKEGbIZo16Sj5Nx3tDNDmr1WD+tzXRG+QamW+O0B9vsgit2v71EpdlC9TIDL85gYjbUCMFGr3J9LQzbdk3Cj5jFAhu5cpJh3mnj6P+0XRljbLZoz4PcOhYq4X/Lmy7EADXCNxGinYEk+m1J+2razhU3GzBNe0S6/Wz1HjY2EcTXzVKTJ/63MlSJT2Y/hOcx6o2SnsHDW5uvoAYRRr9lIAyChB3CBFxH7kUe63ItKi3ot5CbZp0Hp4n6u24dBDmRruVO9aH6UuRARcKiNszSVyZa93QLzFlQRap/wVuQI6uQn6bPAL1SrWC62Aq+r6Q+U+8PPLD/4VAt8TUd8pspz7gQgGTdtRUutVJegX6ipEBYKKVpytaMsz2Ioe4tjwdn+pUuO5eC+s3sF0wQhz5h6lO5sqNNlVAkV1uzhKz6jOEt+G0HSV0KvmtQzoDKXjgvEcCauCsqYEivUabkJ/xXiubV2hjlH5M3wLdhFeiiw+77Y9fULgevf2CAbUFk3KbqQajBkMDFYi4GRDQG8VW9sUuha2ozpHNvWbmf+deRQBTlZ5MLtp0KF0sCDAo3OOzAJU/HmTJF4pyM57oFlmfkc1CoHaV10zXtGaLj052QBZGD5U55Vd/ErnfDT9CU0432iXmB6O9+QJI78LttbVmmHdVbrHFTJJHSuEzrtiXk9asLYiPT1lMPJ+QkLwzIT75a7cUV7QjW/d1NJn+BcKDcYg2bJ7zAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rory Monaghan</Author>
+      <Tags>Cloudpager,Cloudpaging,Containers,Numecent</Tags>
+      <Credits>Credits to: Rory Monaghan
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEALVUy07CUBA9axP/oRETN9Dowp2aECCGRIUI8ZG4qW0RIi3YFhWN/+6Z6e1LXitD2s6dO3PmnplzqSGCjzcsMFErhoUG7mhFtCeYIaTnFDaOsY891NbGXzPOo29qPC1aM649zOHghbEh35IvzxlR5GtjgEfcoIc+rS4f8Vq4JUrC7IhZgubp2iHKVNczjPhOMKZ/Uy0LLleuiYm5L7ZFX7yylzA/0lxZC5rsJ4Z9nb659sPlO9STpJEL5vqsK6ihfgNF8sks5ddGh6xaZNQlxyHfPfJNWf4HT/G5jJOo9X3YzVWm/sXduvJx8Ml1QMSgspdxCLTOakTRk+29yzrVwQOa1FEfV7RTdBtPZC0nd/G6gX+fXgdLrdHKmbYrnbSZEePEVBK9DXUuaZUhUS2dWjaLzb0uV6t2tjq7emlu1ZxAmSe0nvOJxZo51dvj6dzDUn5gqkhkua8F/gwfij5Qj+CkSsxuZJHj0u+pL1GFFafxdc5i2+aeX+T3tcu4ueom+XPXd930Q/Y54k9ym6ye6ayv/R7pqX3VrGCd8zkyGp3TEoSEEUv6v3PFye9SGTQ2VC90IDk/+m6pysVbRbon/oQ7PtGKs1o4oC7G5nwW+5v+bzg6Gb8Ul+pGMHy85zrJZiN3cWKUv00vNusVZ/0FzxmuYZQFAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>M03dv7qnRyE7OcEYNbDQNahoj7g=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>8627ce1c-00e4-4dc0-b799-83ecd6eacfca</SBAId>
+    <RootSBAId>4905edcb-0f1b-403d-94a7-f2f8252e4bdf</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>0</SQN>
+    <Name>Sync Cloudpager Workpods</Name>
+    <Description>This script will initiate a sync from the Cloudpager client to the configured Cloudpager tenant and sync all Workpods the logged in user is entitled to.</Description>
+    <Category>Organizational Actions</Category>
+    <Version>2.0.5</Version>
+    <DateCreated>2022-11-29T14:45:54.55</DateCreated>
+    <DateModified>2023-04-21T14:50:38.503</DateModified>
+    <DatePublished>2023-04-21T14:51:17.72</DatePublished>
+    <LastEditorName>Rory Monaghan</LastEditorName>
+    <CreatorName>Rory Monaghan</CreatorName>
+    <Status>3</Status>
+    <CheckSum>QOhXmXTv9+oCfVNAsc5eyJjmCMc=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAZCAYAAABQDyyRAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAABJRJREFUSEu1VgtMHFUUXcQKTUsgapumxfBJO/Pm+2ZndmbZXViWKktoraU2ocTGRButjVYTk9ZPSIxJqya1tAlpxdQEQ62CSWNTBGKola8UBWT5dj/sArWa2toKhib9IPUOzJJlGAtUuMnJzrvv3nvevPuZNemlyS0t9zj49S3Z4qYOF5/X5eBEn0StvEQSUZrJ0smbua41v0jsr0B2LxJDNDk6yJDlQYysS32Q6HMWvlF/gGkg4tYgSx4GLNfsF1+O2/g9QxRpfAANwxRRMUQTsZrL4spWK07sxPSIEXEkhhjyA/hdmnR8aRMOtJvZq3rSGUDEnaCA6M3rE1f1y8w+n4XKBH20FuLBBAJMv5G4bnXM0Y3WggYFe4YRMTGDXMMwRX6eJ7MrLwjsKKwnoFi74VBpWoj5SVWuVbooMR8O8KgKgqgFeM4vUOUhFr0e5FGqOzXpkRMO874+jr4ZJg4DamGsNjkp5vs0XDetQ8TfIYyytPBzywmnZf9/FR0Q3Ia3OhXAiDiYKed6BPovvY1PpmxVFqEsUgd+IWjZxzSK+0smmRJbq/AdkQH0gLe6NsiR2z+2iTu8DLqj23+uLHHdUZ3uHrTquxrF3PKOQ7T/LPKXu3jmN4/Ajgxw1Ixgk0DEmJ/csOm0git0e7urJVyq06n14QmI1MMaxf1l21OuqP3P5qx4a3vOioP5OfGFCkuftgvvt2Hqmi5o8IDCuS/S5PQthCgiv8GGayPtVEAa7nrsfH6vwh6B9Wd+M3VkQEB5fpmaPT/Ou+VlMPud4PQSFOB74LC7x87Ie2yWVWfThOrhiMA9DLGrWcFD4fWPTt7RLrDXw+s5oHZKEGbIZo16Sj5Nx3tDNDmr1WD+tzXRG+QamW+O0B9vsgit2v71EpdlC9TIDL85gYjbUCMFGr3J9LQzbdk3Cj5jFAhu5cpJh3mnj6P+0XRljbLZoz4PcOhYq4X/Lmy7EADXCNxGinYEk+m1J+2razhU3GzBNe0S6/Wz1HjY2EcTXzVKTJ/63MlSJT2Y/hOcx6o2SnsHDW5uvoAYRRr9lIAyChB3CBFxH7kUe63ItKi3ot5CbZp0Hp4n6u24dBDmRruVO9aH6UuRARcKiNszSVyZa93QLzFlQRap/wVuQI6uQn6bPAL1SrWC62Aq+r6Q+U+8PPLD/4VAt8TUd8pspz7gQgGTdtRUutVJegX6ipEBYKKVpytaMsz2Ioe4tjwdn+pUuO5eC+s3sF0wQhz5h6lO5sqNNlVAkV1uzhKz6jOEt+G0HSV0KvmtQzoDKXjgvEcCauCsqYEivUabkJ/xXiubV2hjlH5M3wLdhFeiiw+77Y9fULgevf2CAbUFk3KbqQajBkMDFYi4GRDQG8VW9sUuha2ozpHNvWbmf+deRQBTlZ5MLtp0KF0sCDAo3OOzAJU/HmTJF4pyM57oFlmfkc1CoHaV10zXtGaLj052QBZGD5U55Vd/ErnfDT9CU0432iXmB6O9+QJI78LttbVmmHdVbrHFTJJHSuEzrtiXk9asLYiPT1lMPJ+QkLwzIT75a7cUV7QjW/d1NJn+BcKDcYg2bJ7zAAAAAElFTkSuQmCC</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rory Monaghan</Author>
+      <Tags>Cloudpager,Cloudpaging,Containers,Numecent</Tags>
+      <Credits>Credits to: Rory Monaghan
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAM1WYW/TQAz1ZyT+w6mdtE6sAT6AEAKkqWxiaLQVq9gQQyikaVfRplnS0FWI/87zu0uXtGnLJD6g6i6O47Of7edT65JIKDeSyYhSKkaa8glSAnkkU4mgeSaePJGH8kDqlfYfYNeHbuw0LUhTvPclFl+GsI2w63ldr+BFn56cy2dpS0e6kE6xVGsgRTgxw/KxW48+VioLfAkgTWVQEUUxG7mALpEf0CkmPfuTngx8XcNm07kA2hHkCHaew/dWjoGqJR+BqSs97B3gtSj/H5wWy+BeJw0kjRnBzr5FeJ/Beswu9uWw4C/F2QQ2MW3nkNTKkAEzxEnIEp+7xkqYW+59BGwLx4E7n1VoJnymzjbvwrFcyhE41pUzyDZjT67QGVvnqmxXq+tBSuWp86ic67G31lsPVpplBm8BO5kCc8YsF4WOHt6zxhN8Tyl955n1Khs3YbnXCb4FkNUydBWoy5vl7JzCImZus5W52zV1e6if9mWI3YeXE3ZRc72UF/Ic51/LF9QkIg8T4pq4TL7KS/yG7PYAX8aIofnGZP61NHAyrDz5CP5jyAG5PS6dtl63ozoo4K+q+LHc4tl1ODQHI+9hpbk3C/rd2dfAioy4A4f9qjJitdbDrkhqDqsP3dDhqWE9hiaDzylzj+lh4ax1jTi/DWC2M9MAJ0NypZhFOaPd9TjAz8iv5S1hyLSEnC5r898F51xvsyZ83U1yDXj+3d1SZL211aooewKyvlbC9rv0FjC3gDWozkG9Ku45q/SNN8gtPce8jTS2h9mxc25zWI9n9xCIU+ZdjrWHCBnzyu967fQ5s0xc1xRDfpv8Xb+0w0dkTracoDNWaEYPOaua6JPPPqnchtc2rOfQaq37LnfLFo3eY0WyrRl48o7WisgyoL9iH7KKlsE233Uf+emWsyt6yDm+6qnJfxRG9vEfY7+CsVXc7HCaYu7KTo034VyFDvs2Dm3q6u4pOGHdxxsj2P0PtL85NFYJAAA=</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>losSFYqJDc8dGLZfrCPxPNUP0bo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
