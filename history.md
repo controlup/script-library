@@ -1,3 +1,14 @@
+01-06-2023
+==========
+## Added:
+### _Get AD Domain Controller Status_
+### _Enable Horizon Farm Provisioning_
+### _Disable Horizon Farm Provisioning_
+### _Horizon - Enable RDS Server_
+### _Horizon - Disable RDS Server_
+### _Show Azure Advisor Recommendations_
+### _Get AVD Boot Time_
+<BR><BR>
 27-04-2023
 ==========
 ## Added:
@@ -154,6 +165,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 

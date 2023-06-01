@@ -1,14 +1,14 @@
-﻿#requires -Version 3.0
+﻿#requires -Version 3
 
 <#
     .SYNOPSIS
-    Enabled or Disables Horizon Virtual Desktop pool
+    Enables Horizon RDS Farm provisioning
 
     .DESCRIPTION
-    This script disables or enables Horizon Virtual Desktop pool using Horizon SOAP API via PowerCLI
+    This script enables Horizon RDS Farm provisioning through the VMware.Hv.Helper module
 
     .EXAMPLE
-    Can be used as an Automated action to disable or enable Horizon Virtual Desktop pool.
+    Can be used as an Automated action to disable Horizon RDS Farm provisioning if a resource shortage is detected.
 
     .NOTES
     This script requires VMWare PowerCLI  module to be installed on the machine running the script.
@@ -17,11 +17,8 @@
     Before running this script you will also need to have a PSCredential object available on the target machine. This can be created by running the 'Create credentials for Horizon scripts' script in ControlUp on the target machine.
 
     Context: Can be triggered from the Horizon Machines view
-    Modification history:   13/08/2019 - Anthonie de Vreede - First version
-                            06/04/2023 - Wouter Kursten - Removed VMware.hv.helper dependency
-                            12/05/2023 - Guy Leech - Brought into single script for enable & disable
-                            16/05/2023 - Guy Leech - Added code to hide VMware CEIP warnings temporarily
-                            23/05/2023 - Guy Leech - Merged code from pool provisioning script
+    Modification history: 06/04/2023 - Wouter Kursten - First Version
+                          16/05/2023 - Guy Leech      - Brought to CU scripting standards & into single script
 
     .LINK
     https://code.vmware.com/web/tool/11.3.0/vmware-powercli
@@ -34,25 +31,17 @@
 
 Param
 (
-    # Name of the Horizon Virtual Desktop pool.
-    [string]$strHVPoolName ,
-
+    # Name of the Horizon RDS Farm.
+    [string]$HVRDSFarmname ,
     # Name of the Horizon connection server. Passed from the ControlUp Console.
     [string]$strHVConnectionServerFQDN ,
-
-    ## +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-    ##
-    ## CHANGE THE DEFAULT VALUES BELOW DEPENDING ON WHETHER SCRIPT IS ENABLE OR DISABLE VARIANT AND FOR THE POOL ITSELF OR PROVISIONINING IN THAT POOL
-    ##
-    ## +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
-
-    ## Can't pass the following parameters as non-defaulted parameter otherwise would not work as an automated action
     
-    ## So that we can use same script after this param block for enabling or disabling, by changing the default value for $enable
-    [bool]$enable = $false ,
-    
-    ## So that we can use same script after this param block for enabling/disabling pools or provisioning, by changing the default value for $doProvisioning
-    [bool]$doProvisioning = $false
+    ## So that we can use same script after this declaration for enabling or disabling, by changing this value.
+    ## Can't pass as a non-defaulted parameter otherwise would not work as an automated action
+
+    ##             VVVVVVVV
+    [bool]$enable = $false
+    ##             ^^^^^^^^
 )
 
 ## Map bool to stub for disable or enable messages
@@ -134,12 +123,12 @@ function Get-CUStoredCredential {
     )
 
     # Get the stored credential object
-    $strCUCredFolder = "$([environment]::GetFolderPath( [Environment+SpecialFolder]::CommonApplicationData ))\ControlUp\ScriptSupport"
+    $strCUCredFolder = "$([environment]::GetFolderPath('CommonApplicationData'))\ControlUp\ScriptSupport"
     try {
-        Import-Clixml -LiteralPath (Join-Path -Path $strCUCredFolder -ChildPath "$($env:USERNAME)_$($System)_Cred.xml")
+        Import-Clixml -LiteralPath $strCUCredFolder\$($env:USERNAME)_$($System)_Cred.xml
     }
     catch {
-        Out-CUConsole -Message "The required PSCredential object could not be loaded fron `"$strCUCredFolder`". Please make sure you have run the 'Create credentials for Horizon scripts' script on the target machine." -Exception $_
+        Out-CUConsole -Message "The required PSCredential object could not be loaded. Please make sure you have run the 'Create credentials for Horizon scripts' script on the target machine." -Exception $_
     }
 }
 
@@ -160,12 +149,11 @@ function Load-VMWareModules {
     # Import each module, if Import-Module fails try Add-PSSnapin
     foreach ($component in $Components) {
         try {
-            $warnings = $null
-            Import-Module -Name "VMware.$component" -Verbose:$false -WarningVariable warnings 3>$null >$null
+            $null = Import-Module -Name VMware.$component
         }
         catch {
             try {
-                $null = Add-PSSnapin -Name 'VMware'
+                $null = Add-PSSnapin -Name VMware
             }
             catch {
                 Out-CUConsole -Message 'The required VMWare modules were not found as modules or snapins. Please check the .NOTES and .COMPONENTS sections in the Comments of this script for details.' -Stop
@@ -208,17 +196,17 @@ function Disconnect-HorizonConnectionServer {
         Disconnect-HVServer -Server $HVConnectionServer -Confirm:$false
     }
     catch {
-        Out-CUConsole -Message 'There was a problem disconnecting from the Horizon Connection server. If not running in a persistent session (ControlUp scripts do not run in a persistent session) this is not a problem, the session will eventually be deleted by Horizon.' -Warning
+        Out-CUConsole -Message 'There was a problem disconnecting from the Horizon Connection server. If not running in a persistent session (ControlUp scripts do not run in a persistant session) this is not a problem, the session will eventually be deleted by Horizon.' -Warning
     }
 }
 
-function Get-HVDesktopPool {
+function Get-HVFarm {
     param (
         [parameter(Mandatory = $true,
-            HelpMessage = "Displayname of the Desktop Pool.")]
-        [string]$HVPoolName,
+            HelpMessage = "Name of the RDS Farm.")]
+        [string]$HVFarmname,
         [parameter(Mandatory = $true,
-            HelpMessage = "The VMware Horizon Connection server object.")]
+            HelpMessage = "The Horizon View Connection server object.")]
         [VMware.VimAutomation.HorizonView.Impl.V1.ViewObjectImpl]$HVConnectionServer
     )
     # Try to get the Desktop pools in this pod
@@ -228,16 +216,16 @@ function Get-HVDesktopPool {
         # Create the object with the definiton of what to query
         [VMware.Hv.QueryDefinition]$defn = New-Object VMware.Hv.QueryDefinition
         # entity type to query
-        $defn.queryEntityType = 'DesktopSummaryView'
-        # Filter on the correct displayname
-        $defn.Filter = New-Object VMware.Hv.QueryFilterEquals -property @{ 'memberName' = 'desktopSummaryData.displayName' ; 'value' = $HVPoolname }
+        $defn.queryEntityType = 'FarmSummaryView'
+        # Filter oud rds desktop pools since they don't contain machines
+        $defn.Filter = New-Object VMware.Hv.QueryFilterEquals -property @{'memberName' = 'data.name'; 'value' = "$HVFarmname" }
         # Perform the actual query
-        [array]$queryResults = ($queryService.queryService_create( $HVConnectionServer.extensionData , $defn )).results
+        [array]$queryResults = ($queryService.queryService_create($HVConnectionServer.extensionData, $defn)).results
         # Remove the query
-        $queryService.QueryService_DeleteAll( $HVConnectionServer.extensionData )
+        $queryService.QueryService_DeleteAll($HVConnectionServer.extensionData)
         # Return the results
         if (!$queryResults) {
-            Out-CUConsole -Message "Can't find $HVPoolName, exiting." -Stop
+            Out-CUConsole -message "Can't find $HVFarmname, exiting." -Exception "$HVFarmname not found"
             exit
         }
         else {
@@ -245,72 +233,54 @@ function Get-HVDesktopPool {
         }
     }
     catch {
-        Out-CUConsole -Message 'There was a problem retreiving the VMware Horizon Desktop Pool.' -Exception $_
-        exit
+        Out-CUConsole -Message 'There was a problem retreiving the Horizon View RDS Farm.' -Exception $_
     }
 }
 
-function Set-PoolEnablement {
+function Set-HVFarm {
     param (
         [parameter(Mandatory = $true,
-            HelpMessage = "The Horizon Pool object.")]
-        [object]$HVPool,
+            HelpMessage = "ID of the RDS Farm.")]
+        [VMware.Hv.FarmSummaryView]$hvfarm,
         [parameter(Mandatory = $true,
-            HelpMessage = "The Horizon Connection server object.")]
+            HelpMessage = "The Horizon View Connection server object.")]
         [VMware.VimAutomation.HorizonView.Impl.V1.ViewObjectImpl]$HVConnectionServer,
         [parameter(Mandatory = $true,
             HelpMessage = "True for Enable, False for Disable.")]
         [bool]$Enable ,
         [parameter(Mandatory = $true,
             HelpMessage = "Text for operation for messages.")]
-        [string]$Operation ,
-        [string]$ProvisioningText 
+        [string]$operation
     )
-    
+    if ($HVFarm.data.Type -ieq "MANUAL") {
+        Out-CUConsole -Message 'Could not execute! This a manual Horizon RDS farm, cannot change the number of RDS hosts' -warning $_
+        exit
+    }
     try {
-        $hvpoolid = $HVPool.id
-        $poolname = $HVPool.DesktopSummaryData.name
+        $hvfarmid = $hvfarm.id
+        $hvfarmname = $hvfarm.data.name
         # First define the Service we need
-        [VMware.Hv.desktopService]$desktopservice = new-object vmware.hv.desktopService
-        # Fill the helper for this service with the Desktop information
-        $desktophelper = $desktopservice.read($HVConnectionServer.extensionData, $hvpoolid)
-        [bool]$doUpdate = $false
-        [bool]$existingSetting = $false
-
-        if( -Not [string]::IsNullOrEmpty( $ProvisioningText ) ) {         
-            $existingSetting = $desktophelper.getAutomatedDesktopDataHelper().getVirtualCenterProvisioningSettingsHelper().getEnableProvisioning()
+        [VMware.Hv.FarmService]$farmservice = New-Object -Typename vmware.hv.FarmService
+        # Fill the helper for this service with the application information
+        $farmhelper = $farmservice.read( $HVConnectionServer.extensionData , $HVFarmID )
+        if( $farmhelper.getAutomatedFarmDataHelper().getVirtualCenterProvisioningSettingsHelper().getEnableProvisioning() -eq $enable ) {
+            Out-CUConsole -Message "Farm $hvfarmname is already $($operation)ed." -Warning
         }
         else {
-            $existingSetting = $desktophelper.getDesktopSettingsHelper().getEnabled()
-        }
-
-        if( $existingSetting -eq $Enable ) {
-            Out-CUConsole -Message "Desktop Pool `"$poolname`"$ProvisioningText is already $($Operation)ed." -Warning
-        }
-        elseif( -Not [string]::IsNullOrEmpty( $ProvisioningText )) {
-            # Change the state of provisioning in the helper
-            $desktophelper.getAutomatedDesktopDataHelper().getVirtualCenterProvisioningSettingsHelper().setEnableProvisioning($Enable)
-            $doUpdate = $true
-        }
-        else {
-            # Change the state of the Desktop in the helper
-            $desktophelper.getDesktopSettingsHelper().setEnabled($Enable)
-            $doUpdate = $true
-        }
-        
-        if( $doUpdate ) {
+            # Change the state of the application in the helper
+            $farmhelper.getAutomatedFarmDataHelper().getVirtualCenterProvisioningSettingsHelper().setEnableProvisioning( $enable )
             # Apply the helper to the actual object
-            $desktopservice.update($HVConnectionServer.extensionData, $desktophelper)
-            Out-CUConsole -Message "Successfully $($Operation)ed Desktop Pool$ProvisioningText `"$poolname`"."
+            $farmservice.update( $HVConnectionServer.extensionData , $farmhelper )
+            Out-CUConsole -Message "Successfully $($operation)ed the provisioning state for farm $hvfarmname."
         }
     }
     catch {
-        Out-CUConsole -Message "There was a problem $($Operation)ing Desktop pool `"$poolname`"$provisioningText." -Exception $_
+        Out-CUConsole -Message "There was a problem $($operation)ing the provisioning state for farm $hvfarmname." -Exception $_
     }
 }
 
 # Test arguments
-if( [string]::IsNullOrEmpty( $strHVPoolName ) -or [string]::IsNullOrEmpty( $strHVConnectionServerFQDN ) ) {
+if( [string]::IsNullOrEmpty( $HVRDSFarmname ) -or [string]::IsNullOrEmpty( $strHVConnectionServerFQDN ) ) {
     Out-CUConsole -Message 'The Console or Monitor may not be connected to the Horizon environment, please check this.' -Stop
 }
 
@@ -338,46 +308,34 @@ try {
     Out-CUConsole -Message "Loading credentials"
     [PSCredential]$CredsHorizon = Get-CUStoredCredential -System 'HorizonView'
 
-    ## Stop long warning message about participating in Customer Experience Improvement Program 
-    $null = Set-PowerCLIConfiguration -Scope Session -ParticipateInCEIP $false -Confirm:$false -DisplayDeprecationWarnings $false
-
     # Connect to the Horizon Connection Server
     Out-CUConsole -Message "Connecting to $strHVConnectionServerFQDN"
     [VMware.VimAutomation.HorizonView.Impl.V1.ViewObjectImpl]$objHVConnectionServer = $null
-    Write-Verbose -Message "Connecting to $strHVConnectionServerFQDN as user $($CredsHorizon.Username), local user $env:USERNAME"
     $objHVConnectionServer = Connect-HorizonConnectionServer -HVConnectionServerFQDN $strHVConnectionServerFQDN -Credential $CredsHorizon
 
-    if( -Not $objHVConnectionServer ) {
-        Out-CUConsole -Message "Failed to connect to Horizon Connection Server $strHVConnectionServerFQDN as user $($CredsHorizon.Username)" -Stop
+    if( $objHVConnectionServer ) {
+        # Retreive the RDS Farm
+        Out-CUConsole -Message "Getting details for farm $HVRDSFarmname"
+        $HVFarm = $null
+        $HVFarm = Get-HVFarm -HVFarmname $HVRDSFarmname -HVConnectionServer $objHVConnectionServer
+
+        if( $HVFarm ) {         
+            [string]$actionBase = $operationStubs[ ($enable -as [int] ) ]
+
+            # Enable or Disable Horizon Farm provisioning
+            Out-CUConsole -Message "$($actionbase)ing provisioning for Farm $HVRDSFarmname"
+            Set-HVFarm -HVConnectionServer $objHVConnectionServer -HVFarm $HVFarm -enable:$enable -Operation $actionBase.ToLower()
+
+            # Disconnect from the connection server
+            Out-CUConsole -Message "Disconnecting from $strHVConnectionServerFQDN"
+            Disconnect-HorizonConnectionServer -HVConnectionServer $objHVConnectionServer
+        }
     }
-    
-    [string]$provisioningText = $null
-    if( $doProvisioning ) {
-        $provisioningText = ' provisioning'
-    }
-
-    # Get the Horizon Virtual Desktop Pool
-    Out-CUConsole -Message "Getting details for Desktop Pool `"$strHvPoolName`""
-    [object]$objHVPool = Get-HVDesktopPool -HVPoolName $strHvPoolName -HVConnectionServer $objHVConnectionServer
-
-    [string]$actionBase = $operationStubs[ ($enable -as [int] ) ]
-
-    if( $objHVPool ) {
-        # Enable Horizon Virtual Desktop Pool provisioning
-        Out-CUConsole -Message "$($actionBase)ing Desktop Pool `"$strHvPoolName`""
-        Set-PoolEnablement -HVPool $objHVPool -HVConnectionServer $objHvConnectionServer -Enable:($actionBase -ieq 'enabl') -Operation $actionBase.ToLower() -provisioningText $provisioningText
-    }
-
-    # Disconnect from the Horizon Connection Center
-    Out-CUConsole -Message "Disconnecting from $strHVConnectionServerFQDN"
-    Disconnect-HorizonConnectionServer -HVConnectionServer $objHVConnectionServer
 }
-catch
-{
+catch {
     throw $_
 }
-finally
-{
+finally{
     if( $powerCLISettingsFile -and ( Test-Path -Path $powerCLISettingsFile -PathType Leaf ) ) { ## will be null if we didn't create it and we can leave the folder if we created it
         Remove-Item -Path $powerCLISettingsFile
     }
