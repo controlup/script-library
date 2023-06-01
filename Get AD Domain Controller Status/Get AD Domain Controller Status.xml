@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>bfb6f045-49a8-4dc3-93f1-315507a5d88c</SBAId>
+    <RootSBAId>e52e059a-f4fc-4359-854d-436941f1644a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>0</SQN>
+    <Name>Get AD Domain Controller Status</Name>
+    <Description>List the synchronization status and replication errors of all domain controllers in the domain. 
+
+This script can be executed on a monitor and will request the required data via a PSSession to the domain controller(s). 
+
+This script requires the ActiveDirectory PowerShell module to function. 
+
+If errors are found, this could be a long running script. Increase the timeout if required.</Description>
+    <Category>System Health</Category>
+    <Version>2.0.0</Version>
+    <DateCreated>2023-04-11T10:42:42.477</DateCreated>
+    <DateModified>2023-05-23T12:34:59.457</DateModified>
+    <DatePublished>2023-05-28T11:05:57.347</DatePublished>
+    <LastEditorName>Rein Leen</LastEditorName>
+    <CreatorName>Rein Leen</CreatorName>
+    <Status>3</Status>
+    <CheckSum>CcsErrHuWc3tKJEok9OGdLcy8LA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rein Leen</Author>
+      <Tags>Active Directory,AD,Domain Controller</Tags>
+      <Credits>Credits to: Rein Leen
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>bill.powell@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>h8fZrLhCxvISsjXjzcPg447y/uk=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
