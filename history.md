@@ -1,3 +1,16 @@
+27-04-2023
+==========
+## Added:
+### _Configure Optimize Drives service for FSLogix Disk Compaction_
+### _Check Cloudpaging Player Status_
+### _Clear Cloudpaging Cache_
+### _Get Cloudpaging Cache Details_
+### _Get Cloudpaging Player Version_
+### _Sync Cloudpager Workpods_
+
+### Removed:
+### _Universal EUC Sync_
+<BR><BR>
 27-03-2023
 ==========
 ## Added:
@@ -141,6 +154,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 

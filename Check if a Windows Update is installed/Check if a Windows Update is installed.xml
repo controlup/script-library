@@ -4,7 +4,7 @@
     <SBAId>d9e260f4-4002-4e90-9e08-601b18910793</SBAId>
     <RootSBAId>385c8057-b7c5-41b6-bb4c-5f5e35ae5fb3</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>635960575974384000</SQN>
+    <SQN>638108472037924243</SQN>
     <Name>Check if a Windows Update is installed</Name>
     <Description>The script checks if a Windows Update is installed, using Get-WMIObject commandlet and WMI information under 'win32_quickfixengineering' and 'win32_ReliabilityRecords'. 
 
@@ -13,7 +13,7 @@ They are enabled by default on Windows 7 but Group Policy has to be used to enab
 
 MSDN Win32_ReliabilityRecords class https://msdn.microsoft.com/en-us/library/ee706630(v=vs.85).aspx
 </Description>
-    <Category />
+    <Category>System Health</Category>
     <Version>1.12.57</Version>
     <DateCreated>2015-02-21T14:14:25.793</DateCreated>
     <DateModified>2016-04-05T21:25:29.167</DateModified>
@@ -35,7 +35,7 @@ MSDN Win32_ReliabilityRecords class https://msdn.microsoft.com/en-us/library/ee7
       <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail>ajdin.aliu@matho.ch</ContactEmail>
       <Notes />
-      <DownloadCount>467</DownloadCount>
+      <DownloadCount>485</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>272</AllowedEntitiesEx>
@@ -97,7 +97,7 @@ MSDN Win32_ReliabilityRecords class https://msdn.microsoft.com/en-us/library/ee7
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>A31qrYq8KciCn2Twr7H2DmhS5o4=</ImportValidationString>
+    <ImportValidationString>tMv84tWlFZ5u8EqT41cuyqJqJUE=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

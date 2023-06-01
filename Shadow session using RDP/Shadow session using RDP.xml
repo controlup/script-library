@@ -4,7 +4,7 @@
     <SBAId>433628e1-e166-4b55-b6b0-5357a25f9e4c</SBAId>
     <RootSBAId>c61e0d58-ab49-41bb-a3dc-6e65abdccdc6</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637283314961437704</SQN>
+    <SQN>638108472037924243</SQN>
     <Name>Shadow session using RDP</Name>
     <Description>Leverage MSTSC.exe  for Shadow and remote control of sessions.
 
@@ -12,7 +12,7 @@ For troubleshooting see:
 https://support.controlup.com/hc/en-us/articles/360000602929-Shadow-RDS-Session-without-prompt
 
 Note for Win10:   Make sure you are allowing "Remote Desktop -Shadow (TCP-In)" in the Firewall</Description>
-    <Category />
+    <Category>Session Management</Category>
     <Version>1.7.20</Version>
     <DateCreated>2019-11-09T01:59:14.157</DateCreated>
     <DateModified>2020-06-11T18:15:35.043</DateModified>
@@ -50,7 +50,7 @@ https://support.controlup.com/hc/en-us/articles/360000602929-Shadow-RDS-Session-
 
 Note for Win10:   Make sure you are allowing "Remote Desktop -Shadow (TCP-In)" in the Firewall
 </Notes>
-      <DownloadCount>155</DownloadCount>
+      <DownloadCount>176</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>4096</AllowedEntitiesEx>
@@ -182,7 +182,7 @@ Note for Win10:   Make sure you are allowing "Remote Desktop -Shadow (TCP-In)" i
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>PlnWSkYiz9aod9k5cIsIqtSW+4A=</ImportValidationString>
+    <ImportValidationString>V07shJ36risXL2Oh9jQpQzmd5xc=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>
