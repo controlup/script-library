@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>cf048aeb-6e98-4754-9062-58d836e85089</SBAId>
+    <RootSBAId>5109db3f-d222-4830-bf01-70043b56c017</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638232957879659325</SQN>
+    <Name>List Available CUActions</Name>
+    <Description>This script lists all the available CU Actions for the active monitor version. The CU actions are only available from version 8.8 onwards.</Description>
+    <Category>Miscellaneous</Category>
+    <Version>2.1.8</Version>
+    <DateCreated>2023-05-15T16:22:25.063</DateCreated>
+    <DateModified>2023-06-22T15:45:54.32</DateModified>
+    <DatePublished>2023-06-22T17:14:58.757</DatePublished>
+    <LastEditorName>Bill Powell</LastEditorName>
+    <CreatorName>Bill Powell</CreatorName>
+    <Status>4</Status>
+    <CheckSum>AyTsJ30GcMy4ZJB5Bb/W/dyRAIA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAALJJREFUSEvdz0EKwzAMRNHc/7zeuwoyYXCGjMzEFPIWRdhyf3v0zb4UOF41vnQKjMkmAucPWJGvEB6SgE8EYijK/Tu8IgGfCMSwJF8hPCQBnwjEUJdPJnhOAj4RiOFZrj3AHRLwiUAMRbl/h1ck4BOBGOryyQTPScAnAjGsyocXPCEBnwjEUJHLFN6SgE8EYqDytgKXScAnAjng5yoR8P0v8KLxpRjYpBRorY1p3eZ/0PsPgwQhPddtCSoAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Bill Powell</Author>
+      <Tags>CUActions</Tags>
+      <Credits>Credits to: Bill Powell
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>bill.powell@controlup.com</ContactEmail>
+      <Notes>This script accompanies the Realtime DX version 8.8 release. While it is a useful script in its own right, it also serves as an example of scripting recommended practice.
+
+In particular, these scripts provide template code for:
+* script preferences for verbose/debug/error action/progress
+* increasing the width of the output window
+* specifying a CUAction using its Name and Category
+* loading the correct version of the ControlUp.PowerShell.User.dll (powershell module) to match the running monitor and checking that it has the new CUAction features
+* 'chunking' of data, where there are many rows of data being retrieved
+* performing CUActions on multiple objects
+
+</Notes>
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <InstructionsExecutionOnComputer>The execution machine must be a monitor, but cannot be a console, as only the monitor includes the CUAction dll</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>oIqaNosNVGZq2sJ2rs1QF66/0KY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

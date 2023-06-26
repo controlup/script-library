@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>4cce8f26-2736-4af9-9f8d-8b566161e8c0</SBAId>
+    <RootSBAId>2a11743b-dfa1-493c-a4af-0458249ffd8d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638232949684157957</SQN>
+    <Name>Force Power Off Generic VM</Name>
+    <Description>This script uses the CUActions available in v8.8 onwards to force power off VMs on any supported hypervisor. It can be used as a right-click action or as an automated action by a trigger.
+</Description>
+    <Category>Power Management</Category>
+    <Version>4.0.31</Version>
+    <DateCreated>2023-05-20T17:32:45.557</DateCreated>
+    <DateModified>2023-06-22T16:52:07.157</DateModified>
+    <DatePublished>2023-06-22T17:14:33.223</DatePublished>
+    <LastEditorName>Bill Powell</LastEditorName>
+    <CreatorName>Bill Powell</CreatorName>
+    <Status>4</Status>
+    <CheckSum>ln1Bn63Fr7CFbG1Qbh1i5C1QSJ0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvwAADr8BOAVTJAAAAOdJREFUSEvtkU0OgjAQRgmumrDgLzFUEl14H7yG5/A2XXMKll6BrUv2+CUdG9KKbQNEY/oyi+lAv5e20bgx/ySIVoVCNQF1iwkCK0Fg5TcEbdvmWYohKIpCNm/BV9rzAkPq5gRIx1IIIZdosLxXp0d9NuuapEm867pO/gzsggOvVLoEyyYrtWhVt7Q88op+dRFMewWGWq4qHG5u+zoClJ8Az2te0YXXWqgq7ytyf2QMG5awOPZ7ZND3PeccQ8AYk40Jovd5Nk0HmFP3QbCEILASBFa+J1gRCp0KNsJJMAwDdf5sfIJxfAJdidHQTPB36QAAAABJRU5ErkJggg==</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Bill Powell</Author>
+      <Tags>CUActions,power,stop,citrix,horizon,avd,vm</Tags>
+      <Credits>Credits to: Bill Powell
+Original code by: N/A
+Taken from: N/A</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>bill.powell@controlup.com</ContactEmail>
+      <Notes>This script accompanies the Realtime DX version 8.8 release. While it is a useful script in its own right, it also serves as an example of scripting recommended practice.
+
+In particular, these scripts provide template code for:
+* script preferences for verbose/debug/error action/progress
+* increasing the width of the output window
+* specifying a CUAction using its Name and Category
+* loading the correct version of the ControlUp.PowerShell.User.dll (powershell module) to match the running monitor and checking that it has the new CUAction features
+* 'chunking' of data, where there are many rows of data being retrieved
+* performing CUActions on multiple objects
+
+</Notes>
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>aa99d452-3c93-4f55-8e67-04363516df3d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>aa99d452-3c93-4f55-8e67-04363516df3d</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer>The script must be executed on a monitor</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>qLGL/0l7+ptC43wgDV5DlBLYLOU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6db6f1b3-3ced-4e16-bdb1-3af0e806c8b1</SBAId>
+    <RootSBAId>cbd5a769-be63-44f4-acaf-f0e71f21e7da</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638232952024706175</SQN>
+    <Name>Logoff Disconnected Sessions</Name>
+    <Description>As a CU Admin I want to be able to set up a trigger for disconnected sessions, and run an action to clean up any / all disconnected sessions for that user on all managed machines.
+The same script should work equally-well as a right-click action from a session view..
+</Description>
+    <Category>Session Management</Category>
+    <Version>3.1.12</Version>
+    <DateCreated>2023-05-18T07:53:25.287</DateCreated>
+    <DateModified>2023-06-22T16:52:39.443</DateModified>
+    <DatePublished>2023-06-22T17:15:23.727</DatePublished>
+    <LastEditorName>Bill Powell</LastEditorName>
+    <CreatorName>Bill Powell</CreatorName>
+    <Status>4</Status>
+    <CheckSum>DB9UTAqAF04Gy2ZIAbNEN5GWP8w=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Bill Powell</Author>
+      <Tags>logoff,CUActions,Disconnected,citrix,horizon,avd,rdp</Tags>
+      <Credits>Credits to: Bill Powell
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>bill.powell@controlup.com</ContactEmail>
+      <Notes>This script accompanies the Realtime DX version 8.8 release. While it is a useful script in its own right, it also serves as an example of scripting recommended practice.
+
+In particular, these scripts provide template code for:
+* script preferences for verbose/debug/error action/progress
+* increasing the width of the output window
+* specifying a CUAction using its Name and Category
+* loading the correct version of the ControlUp.PowerShell.User.dll (powershell module) to match the running monitor and checking that it has the new CUAction features
+* 'chunking' of data, where there are many rows of data being retrieved
+* performing CUActions on multiple objects
+
+</Notes>
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>d8fe6cbb-536e-468e-bf09-410bf248c17a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>d8fe6cbb-536e-468e-bf09-410bf248c17a</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer>The execution machine must be a monitor, but cannot be a console, as only the monitor includes the CUAction dll</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>JWBI2LMUCekWtuzdQpzrsjLiJtU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

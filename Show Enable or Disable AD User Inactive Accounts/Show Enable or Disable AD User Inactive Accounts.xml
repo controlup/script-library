@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>1548dacf-0758-4100-87da-5d82b012ede4</SBAId>
+    <RootSBAId>b18a7757-205c-4ffe-aaec-40f586f2223a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638232934387923627</SQN>
+    <Name>Show Enable or Disable AD User Inactive Accounts</Name>
+    <Description>Show all Active Directory Accounts which have not been logged into for specified days or more. 
+System account and accounts without any login activity are ignored by this script.
+Reporting on inactive accounts will return the command to disable those accounts.
+Disabling accounts will return the command to re-enable those accounts to counter mistakes.</Description>
+    <Category>User Environment</Category>
+    <Version>1.1.6</Version>
+    <DateCreated>2023-04-14T13:29:07.74</DateCreated>
+    <DateModified>2023-06-23T11:38:28.407</DateModified>
+    <DatePublished>2023-06-23T16:17:45</DatePublished>
+    <LastEditorName>Rein Leen</LastEditorName>
+    <CreatorName>Rein Leen</CreatorName>
+    <Status>4</Status>
+    <CheckSum>jkbh49sAbKO2wgTV1fVIHSZuLlg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rein Leen</Author>
+      <Tags>Active Directory,security,audit</Tags>
+      <Credits>Credits to: Rein Leen
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>rein@methos.nl</ContactEmail>
+      <Notes>The powershell ActiveDirectory module is distributed as part of Microsoft's Remote Server Administration Tools (RSAT).
+
+On a current Windows Server, you can install RSAT from an administrator prompt:
+
+    Install-WindowsFeature RSAT-AD-PowerShell
+
+For Windows 11, download the Remote Server Administration Tools from Microsoft's web site. RSAT may not be available for some older Windows versions, or may have additional requirements.
+
+When making changes to Active Directory objects, you will need to provide credentials with appropriate privileges.
+</Notes>
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>3810258e-bd23-4a2b-ade8-6a016523ae75</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3810258e-bd23-4a2b-ade8-6a016523ae75</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Operation to perform. Valid options: report / enable / disable</Name>
+                  <DefaultValue>report</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>report|enable|disable|$|none|-</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>5812ce9d-b358-497f-be1f-076e86fee4f5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5812ce9d-b358-497f-be1f-076e86fee4f5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Number of days since last login. Only functional on report operation.</Name>
+                  <DefaultValue>30</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\d+|$|none|-</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>bafbb1f3-b896-471e-8724-33d6bc405cd1</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bafbb1f3-b896-471e-8724-33d6bc405cd1</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Distinguished names of the OUs to search in. Multiple OU's in string format are supported when split with a semicolon. Only functional on report operation.</Name>
+                  <DefaultValue>none</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>DC=[a-z]*,DC=[a-z]*|$|none|-</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>aa4c097e-7d7f-4ec6-8006-bd9f13de0648</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>aa4c097e-7d7f-4ec6-8006-bd9f13de0648</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>User(s) to perform the requested operation on. Works with UPN or SamAccountName. Multiple users in string format are supported when split with a comma or semicolon. Using this parameter ignores Searchbases.</Name>
+                  <DefaultValue>none</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>4Zwc4IC9w7rpRrnfhhPKwsFnWWM=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

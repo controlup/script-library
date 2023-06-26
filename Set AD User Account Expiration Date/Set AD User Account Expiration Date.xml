@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>9170d59c-5727-48a4-bffe-147a8aeb0067</SBAId>
+    <RootSBAId>559328bf-531d-40b7-84a1-4fc562357a7f</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638232937393180499</SQN>
+    <Name>Set AD User Account Expiration Date</Name>
+    <Description>Sets the expiration date of one or multiple user accounts in AD.</Description>
+    <Category>User Environment</Category>
+    <Version>2.1.7</Version>
+    <DateCreated>2023-04-11T11:35:39.073</DateCreated>
+    <DateModified>2023-06-23T10:34:55.6</DateModified>
+    <DatePublished>2023-06-23T16:14:09.407</DatePublished>
+    <LastEditorName>Rein Leen</LastEditorName>
+    <CreatorName>Rein Leen</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Kijww3f7p0ROHhbgQDQesvFU/LU=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rein Leen</Author>
+      <Tags>Active Directory</Tags>
+      <Credits>Credits to: Rein Leen
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>rein@methos.nl</ContactEmail>
+      <Notes>The powershell ActiveDirectory module is distributed as part of Microsoft's Remote Server Administration Tools (RSAT).
+
+On a current Windows Server, you can install RSAT from an administrator prompt:
+
+    Install-WindowsFeature RSAT-AD-PowerShell
+
+For Windows 11, download the Remote Server Administration Tools from Microsoft's web site. RSAT may not be available for some older Windows versions, or may have additional requirements.
+
+When making changes to Active Directory objects, you will need to provide credentials with appropriate privileges.
+
+</Notes>
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7a1c6fcc-93e2-4d4a-b832-cfa079b9a7a9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7a1c6fcc-93e2-4d4a-b832-cfa079b9a7a9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>User(s) to set the AccountExpirationDate of based on UPN or SamAccountName. Multiple users in string format are supported when split with a comma or semicolon.</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7747b792-6fe9-41be-a79a-7a9277e7e46b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7747b792-6fe9-41be-a79a-7a9277e7e46b</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Date (string) when the account should expire. Use the format yyyy-MM-dd HH:mm K. Time and timeoffset are optional. If time and timeoffset are not set the account will expire at the end of the previous day.</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d{4}-\d{2}-\d{2}</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>2uTAyPLRDp2uG7vIH3FTXJbswLE=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

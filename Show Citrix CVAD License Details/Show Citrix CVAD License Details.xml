@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>a8d06746-0f6e-4726-ae54-0c3db0843482</SBAId>
+    <RootSBAId>cc37689f-c7da-4b46-8fe2-bfcbdcc75282</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638232959960106250</SQN>
+    <Name>Show Citrix CVAD License Details</Name>
+    <Description>Run on a Citrix Delivery Controller as a user with at least read only Studio access to site and license data. It will highlight licenses due to expire within the specified number of days, to allow for the renewal process to commence, or where the maximum number of licenses is in use or has been exceeded.</Description>
+    <Category>System Health</Category>
+    <Version>1.1.5</Version>
+    <DateCreated>2023-04-14T17:57:36.17</DateCreated>
+    <DateModified>2023-05-25T10:07:55.003</DateModified>
+    <DatePublished>2023-06-23T16:16:59.377</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>ZQHH3yfLvgTC/TeXIW/Yu/JEJ3I=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>CVAD,citrix,XenApp,XenDesktop,license</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>210205b9-0766-4cf9-8574-3a33ad1c0e5b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>210205b9-0766-4cf9-8574-3a33ad1c0e5b</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Days to Expiry</Name>
+                  <DefaultValue>60</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Positive integers only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>9JDvuCU199ChoLxXTQSAcieAF68=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

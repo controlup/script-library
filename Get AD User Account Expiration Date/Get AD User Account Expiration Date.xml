@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7a03c443-27fa-4d11-b4f4-8208e7b1bb28</SBAId>
+    <RootSBAId>063c2db3-49b9-4a7d-8967-dce736a63933</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638232945225823399</SQN>
+    <Name>Get AD User Account Expiration Date</Name>
+    <Description>Gets the Active Directory expiration date of specified users or all users within specified search bases.</Description>
+    <Category>User Environment</Category>
+    <Version>2.1.12</Version>
+    <DateCreated>2023-04-06T09:06:31.64</DateCreated>
+    <DateModified>2023-06-22T15:28:15.777</DateModified>
+    <DatePublished>2023-06-23T16:09:00.583</DatePublished>
+    <LastEditorName>Rein Leen</LastEditorName>
+    <CreatorName>Rein Leen</CreatorName>
+    <Status>4</Status>
+    <CheckSum>K5X9g4y8EDQj8LC+ThQ7tviuh9A=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rein Leen</Author>
+      <Tags>Active Directory,security</Tags>
+      <Credits>Credits to: Rein Leen
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>rein@methos.nl</ContactEmail>
+      <Notes>The powershell ActiveDirectory module is distributed as part of Microsoft's Remote Server Administration Tools (RSAT).
+
+On a current Windows Server, you can install RSAT from an administrator prompt:
+
+    Install-WindowsFeature RSAT-AD-PowerShell
+
+For Windows 11, download the Remote Server Administration Tools from Microsoft's web site. RSAT may not be available for some older Windows versions, or may have additional requirements.
+
+When making changes to Active Directory objects, you will need to provide credentials with appropriate privileges.
+
+</Notes>
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>29112657-2e19-497c-9619-bde3af61a940</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>29112657-2e19-497c-9619-bde3af61a940</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Number of days before account expiration. 0 days returns the account expiration date of all users within the given parameters.</Name>
+                  <DefaultValue>30</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\d+|^$|none|-</ValidationString>
+                  <ValidationError>Please enter only digits.
+
+This optional parameter can be left empty when using the .NET engine. If using the classic engine enter "none" to signify an empty optional parameter.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>cacd6503-55cb-4820-a5cf-86c4ce5669d9</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>cacd6503-55cb-4820-a5cf-86c4ce5669d9</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>The distinguished names of the OUs to search in. Ignored if Users is specified. Multiple OU's in string format are supported when split with a semicolon.</Name>
+                  <DefaultValue>none</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>DC=[a-z]*,DC=[a-z]*|^$|none|-</ValidationString>
+                  <ValidationError>Please enter a distinguished name for the OU.
+
+This optional parameter can be left empty when using the .NET engine. If using the classic engine enter "none" to signify an empty optional parameter.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9b97dc76-1e68-4442-9d29-78a75a4b9e24</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9b97dc76-1e68-4442-9d29-78a75a4b9e24</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>User(s) to get the AccountExpirationDate of based on UPN or SamAccountName. Using this parameter ignores all other parameters. Multiple users in string format are supported when split with a comma or semicolon</Name>
+                  <DefaultValue>none</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>62470e73-86cd-4827-b2f1-04ca7e819383</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>62470e73-86cd-4827-b2f1-04ca7e819383</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>If True, disabled user accounts will be included in the results.</Name>
+                  <DefaultValue>none</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False|^$|none|-</ValidationString>
+                  <ValidationError>Please enter "True" or "False".
+
+This optional parameter can be left empty when using the .NET engine. If using the classic engine enter "none" to signify an empty optional parameter.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>HGDHO2eL87/4JSscYXe4jLV0ra0=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>1d3c8984-76a3-4a30-be7e-214a46c3044b</SBAId>
+    <RootSBAId>d9f8dbcf-05bb-43d0-a549-a61ffdf5efb1</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638232932575893092</SQN>
+    <Name>Get Windows Events since Boot</Name>
+    <Description>Get the number of times an event has been registered in the Windows event log since the system has booted.
+This can be used to decide whether to reboot a system to bring it back into a "healthy" state.</Description>
+    <Category>System Health</Category>
+    <Version>1.0.4</Version>
+    <DateCreated>2023-06-09T06:43:06.887</DateCreated>
+    <DateModified>2023-06-23T13:21:18.993</DateModified>
+    <DatePublished>2023-06-23T16:13:33.34</DatePublished>
+    <LastEditorName>Rein Leen</LastEditorName>
+    <CreatorName>Rein Leen</CreatorName>
+    <Status>4</Status>
+    <CheckSum>Ua8MXOH/s74VpDPAGNGfa4l4U3s=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Rein Leen</Author>
+      <Tags>Error,Warning,Information,Event log</Tags>
+      <Credits>Credits to: Rein Leen
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>rein@methos.nl</ContactEmail>
+      <Notes />
+      <DownloadCount>1</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>0ffdce40-a3bb-4e01-8653-4d7565291387</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>0ffdce40-a3bb-4e01-8653-4d7565291387</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>EventlogName</Name>
+                  <DefaultValue>Application</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S</ValidationString>
+                  <ValidationError>This parameter cannot be empty.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>6031b53e-9a86-4a12-a0ef-e955c482b18b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>6031b53e-9a86-4a12-a0ef-e955c482b18b</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>EventID</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\d</ValidationString>
+                  <ValidationError>Enter a valid integer number.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>UoVg+S4UrxZ1wCeYCaCmyYLxPvI=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
