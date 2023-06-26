@@ -1,3 +1,18 @@
+26-06-2023
+==========
+## Added:
+### _Get Windows Events since Boot_
+### _Force Power Off Generic VM_
+### _Power On Generic VM_
+### _Logoff Disconnected Sessions_
+### _List Available CUActions_
+### _Show Citrix CVAD License Details_
+### _Show Enable or Disable AD User Inactive Accounts_
+### _Set AD User Force Change Password_
+### _Set AD User Account Expiration Date_
+### _Get AD User Forced to Change Password_
+### _Get AD User Account Expiration Date_
+<BR><BR>
 01-06-2023
 ==========
 ## Added:
@@ -165,6 +180,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 
