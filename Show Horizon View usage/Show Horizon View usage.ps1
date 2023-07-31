@@ -47,6 +47,7 @@ With code from https://github.com/andyjmorgan/HorizonPowershellScripts/blob/mast
 
 @guyrleech 28/07/19 Initial release
 @guyrleech 11/11/19 Tweaks durng blogpost writing
+@guyrleech 28/07/23 Removed -Force as hangs Connect-HVServer. Strip domain from username for connection as domain already passed separately
 
 #>
 
@@ -173,7 +174,8 @@ $VerbosePreference = $oldVerbosePreference
 $oldWarningPreference = $WarningPreference
 $WarningPreference = 'SilentlyContinue' ## may warn about certs or CEIP
 Write-Verbose -Message "$(Get-Date -Format G) : Connecting to $server as $username ..."
-$hvServer = Connect-HVServer -Server $server -User $username -Password $password -Domain $domain -Force -WarningAction SilentlyContinue
+## GRL 2023/07/28 removed -Force as hangs the connection also strip domain from username if present
+$hvServer = Connect-HVServer -Server $server -User ($username -replace '^.*\\') -Password $password -Domain $domain -WarningAction SilentlyContinue
 $password = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 $WarningPreference = $oldWarningPreference
 
@@ -245,10 +247,10 @@ else
 
             $eventType.Value | Sort-Object -Property Time | . { Process `
             {
-                $event = $_
-                if( $event.Message -match '\d+$' )
+                $EventRecord = $_
+                if( $EventRecord.Message -match '\d+$' )
                 {
-                    $point = $chartSeries.Points.AddXY( (Get-Date -Date $event.Time -Format d) , $Matches[0] )
+                    $point = $chartSeries.Points.AddXY( (Get-Date -Date $EventRecord.Time -Format d) , $Matches[0] )
                 }
             }}
         }

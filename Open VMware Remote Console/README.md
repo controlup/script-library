@@ -1,14 +1,14 @@
 ﻿# Name: Open VMware Remote Console
 
-Description: The script will launch the VMware Remote Console for a named VM. This script requires PowerCLI and VMRC from VMware to be installed locally.
+Description: Utilizes the vCenter REST API to query and open the VMware Remote Console 
 
-Version: 6.10.20
+Version: 2.3.13
 
-Creator: Niron Koren
+Creator: Guy Leech
 
-Date Created: 01/03/2017 14:57:16
+Date Created: 09/22/2021 07:49:26
 
-Date Modified: 12/06/2018 18:45:36
+Date Modified: 08/18/2022 18:43:24
 
 Scripting Language: ps1
 

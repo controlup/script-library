@@ -31,7 +31,7 @@ Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail>trentent.tye@controlup.com</ContactEmail>
       <Notes>Now uses the vCenter REST API and falls back to PowerCLI. Much faster. Thanks Guy Leech!</Notes>
-      <DownloadCount>388</DownloadCount>
+      <DownloadCount>405</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -90,7 +90,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>JEK5ofR0WWHRbijs1E9U8LVVwdU=</ImportValidationString>
+    <ImportValidationString>A1pJcwNxMF72oXQRPbXxWMUTjI4=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>
