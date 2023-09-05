@@ -4,10 +4,10 @@
     <SBAId>78475ddd-1d87-40ec-b988-3f56091e2ead</SBAId>
     <RootSBAId>b636f434-2843-4a5c-a21a-eed7a02d0946</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>638136274796333723</SQN>
+    <SQN>638148500354301538</SQN>
     <Name>Analyze Logon Duration</Name>
     <Description>Get a detailed overview of the most recent logon process for a specific user. This script queries the event log for every major event that relates to the logon process. Use this action to track down which phase is responsible for delays during the logon process. Uses WMI to retrieve pre-Windows logon phase data from Citrix so does not use OData and therefore does not need credentials</Description>
-    <Category>Session Management</Category>
+    <Category>User Environment</Category>
     <Version>15.30.166</Version>
     <DateCreated>2018-07-02T18:55:36.987</DateCreated>
     <DateModified>2023-02-16T17:23:13.67</DateModified>
@@ -32,7 +32,7 @@ Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail>trentent.tye@controlup.com</ContactEmail>
       <Notes />
-      <DownloadCount>11</DownloadCount>
+      <DownloadCount>5422</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>4096</AllowedEntitiesEx>
@@ -234,7 +234,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>nLtKbH5D1mzRqoIsxwS9t5K5v4M=</ImportValidationString>
+    <ImportValidationString>d1HraqpH/+AgbsSi1t071Lv1R54=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

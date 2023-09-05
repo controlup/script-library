@@ -71,9 +71,6 @@ param (
 
     )
 
-
-Write-Verbose -message "Line 75"
-
 ## All parameters are not mandatory to allow for offline analysis
 ## Last modified 1209 GMT 2022/04/18 @guyrleech
 
@@ -370,9 +367,6 @@ $AuditDefinitions = @'
     }
 '@
 
-Write-Verbose -message "Line 373" 
-
-
 Function Get-SystemPolicy( [Guid]$subCategoryGuid)
 {
     $buffer = [IntPtr]::Zero
@@ -551,8 +545,6 @@ function Get-LogonDurationAnalysis {
         $Script:AppVolumesOutput = New-Object -TypeName System.Collections.Generic.List[psobject]
         $Script:LogonStartDate = $null
         $Script:UseFSLogixWinLogonEvents = $false
-
-        Write-Verbose -message "just entered Get-LogonDurationAnalysis" 
 
         ## array indexes for event log property fields to make retrieval more meaningful
         ## Event id 4688 (process start)
@@ -832,7 +824,7 @@ function Get-LogonDurationAnalysis {
             try {
                 $PSCmdlet.WriteVerbose("Looking $PhaseName Events")
                 if(!$StartEvent) {
-                    $StartEvent = Get-WinEvent -Oldest -MaxEvents 1 @startParams -FilterXPath $StartXPath -ErrorAction Stop -Verbose:$false
+                    $StartEvent = Get-WinEvent -Oldest -MaxEvents 1 @startParams -FilterXPath $StartXPath -ErrorAction Stop -Verbose:$true
                 }
                 if (!$EndEvent) {
                     if ($StartProvider -eq 'Microsoft-Windows-Security-Auditing' -and $EndProvider -eq 'Microsoft-Windows-Security-Auditing') {
@@ -4034,7 +4026,6 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
         $GPODownloadEvents = @( Get-WinEvent -LogName Microsoft-Windows-GroupPolicy/Operational -FilterXPath $query -ErrorAction SilentlyContinue )
     }
 
-    Write-Verbose "examine download events"
 
     $StartGPODownload = $GPODownloadEvents | Where-Object {$_.id -eq 4126} | Select-Object -ExpandProperty TimeCreated -Last 1 ## last ensures we get the oldest event if there happens to be two events
     $EndGPODownload   = $GPODownloadEvents | Where-Object {$_.id -eq 5257} | Select-Object -ExpandProperty TimeCreated -First 1  ## first ensures we get the latest event if there happens to be two events
@@ -4045,7 +4036,6 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
     [array]$WMIALDTimeEvents = @()
     $GPONotAppliedObjects = $null
 
-    Write-Verbose "use wmi log"
     Write-Debug "Use WMI Log? $useWMILog"
     if ($UseWMILog) {
         $WMIObject = New-Object -TypeName System.Collections.Generic.List[psobject]
@@ -5012,8 +5002,6 @@ Switch ($PsCmdlet.ParameterSetName) {
     }
 }
 
-        Write-Verbose -message "prep machine" 
-
 #Prepare Machine will only operate if the value is a positive non-zero value
 if ($PrepMachine -gt 0) {
     if( ! ( $windowsPrincipal.IsInRole( [System.Security.Principal.WindowsBuiltInRole]::Administrator )))
@@ -5357,8 +5345,6 @@ if ($PsCmdlet.ParameterSetName -like "OfflineAnalysis")
 }
 Write-Debug "Running script as Windows version $global:windowsMajorVersion"
 
-        Write-Verbose -message "check for online" 
-
 ######## TTYE
 if ($PsCmdlet.ParameterSetName -like "Online") ## online
 {
@@ -5367,8 +5353,6 @@ if ($PsCmdlet.ParameterSetName -like "Online") ## online
        Throw 'This script must be run with administrative privilege'
     }
 }
-
-        Write-Verbose -message "get local session info" 
 
 #region Get local session information
 $TSSessions = @'
@@ -5524,8 +5508,6 @@ public class RDPInfo
 }
 '@
 
-        Write-Verbose -message "split user parameter" 
-
 #Split User parameter to UserDomain\Username 
 if( [string]::IsNullOrEmpty( $UserName ) -or [string]::IsNullOrEmpty( $UserDomain ) )
 {
@@ -5540,8 +5522,6 @@ if( [string]::IsNullOrEmpty( $UserName ) -or [string]::IsNullOrEmpty( $UserDomai
     $UserName = $args_fix[1]
     $UserDomain = $args_fix[0]
 }
-
-        Write-Verbose -message "discover session id" 
 
 ## If we are doing an online analysis and don't have the session ID, we'll try and discover it
 if( -not $PSBoundParameters[ 'SessionId' ] -and ( $PsCmdlet.ParameterSetName -eq 'Online' -or  $PsCmdlet.ParameterSetName -eq 'CreateOfflineAnalysisPackage') )
@@ -5561,8 +5541,6 @@ if( -not $PSBoundParameters[ 'SessionId' ] -and ( $PsCmdlet.ParameterSetName -eq
         Write-Warning "User $DomainUser not currently logged on so do not know which session id to analyze"
     }
 }
-
-        Write-Verbose -message "generate parameters" 
 
 #generate parameters to pass to the function
 
@@ -5599,8 +5577,6 @@ Switch ($PsCmdlet.ParameterSetName) {
     'SessionId' = $SessionId
     'CUDesktopLoadTime' = $CUDesktopLoadTime
 }
-
-Write-Verbose -message "just before Get-LogonDurationAnalysis"
 
 Get-LogonDurationAnalysis @params
 
