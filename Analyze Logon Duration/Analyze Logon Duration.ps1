@@ -61,7 +61,7 @@ param (
         [Parameter(Mandatory=$true,  ParameterSetName = 'Online', Position=0)][Parameter(ParameterSetName = 'CreateOfflineAnalysisPackage')]       [String]$DomainUser,
         [Parameter(Mandatory=$false, ParameterSetName = 'Online')][Parameter(ParameterSetName = 'CreateOfflineAnalysisPackage')]                      [int]$SessionID,
         [Parameter(Mandatory=$false, ParameterSetName = 'Online')][Parameter(ParameterSetName = 'CreateOfflineAnalysisPackage')]                   [String]$SessionName,
-        [Parameter(Mandatory=$false, ParameterSetName = 'Online')][Parameter(ParameterSetName = 'CreateOfflineAnalysisPackage')]                  [decimal]$CUDesktopLoadTime,
+        [Parameter(Mandatory=$false, ParameterSetName = 'Online')][Parameter(ParameterSetName = 'CreateOfflineAnalysisPackage')]                   [string]$CUDesktopLoadTime,
         [Parameter(Mandatory=$false, ParameterSetName = 'Online')][Parameter(ParameterSetName = 'CreateOfflineAnalysisPackage')]                   [string]$ClientName,
         [Parameter(Mandatory=$false, ParameterSetName = 'Online')]                                                                                    [int]$PrepMachine = 0,
         [Parameter(Mandatory=$false, ParameterSetName = 'Online')]    [String]$SaveOutputTo = "$env:Windir\Temp\ALD\$($DomainUser.replace("\","-"))_$($SessionId)_$($SessionName.replace("#","-"))_$((Get-Date).ToString("yyyy-dd-M--HH-mm-ss")).txt",
@@ -71,8 +71,49 @@ param (
 
     )
 
+Write-Verbose -Message "Load time string = '$CUDesktopLoadTime', Culture = '$([cultureinfo]::CurrentCulture)'"
 
-Write-Verbose -message "Line 75"
+if ($CUDesktopLoadTime -match "^-?(\d{1,3}(?<firstsep>\.|\,))((\d{3}\k<firstsep>)*(\d{3}(?!\k<firstsep>)(?<finalsep>(\.|\,))))?\d*$") {
+    $firstSep = $Matches.firstsep
+    $finalSep = $Matches.finalsep
+    if ([string]::IsNullOrEmpty($finalSep)) {
+        # we only have one separator, and it must be the decimal separator
+        $decimalSep = $firstSep
+    }
+    else {
+        # we have multiple separators, and the final separator must be the decimal separator
+        $decimalSep = $finalSep
+    }
+    Write-Verbose "string '$LoadTime', decimalSep = '$decimalSep', firstSep = '$firstSep', finalSep = '$finalSep'"
+    $newCulture = Get-Culture
+    if ($decimalSep -eq '.') {
+        $newCulture.NumberFormat.NumberDecimalSeparator = '.'
+        $newCulture.NumberFormat.NumberGroupSeparator = ','
+    }
+    elseif ($decimalSep -eq ',') {
+        $newCulture.NumberFormat.NumberDecimalSeparator = ','
+        $newCulture.NumberFormat.NumberGroupSeparator = '.'
+    }
+    else {
+        Write-Error "$CUDesktopLoadTime : Unsupported decimal separator"
+        exit 0
+    }
+    [decimal]$CUDesktopLoadTime = [decimal]::Parse($CUDesktopLoadTime,$newCulture)
+}
+elseif ($CUDesktopLoadTime -match "^\d+$") {
+    # zero or other integer load time
+    [decimal]$CUDesktopLoadTime = [decimal]::Parse($CUDesktopLoadTime,[cultureinfo]::InvariantCulture)
+}
+elseif ([string]::IsNullOrWhiteSpace($CUDesktopLoadTime)) {
+    # null - can happen for disconnected sessions or running from command-line
+    [decimal]$CUDesktopLoadTime = 0
+}
+else {
+    Write-Error "'$CUDesktopLoadTime' : Unsupported decimal number format"
+    exit 0
+}
+
+Write-Verbose -Message "Internally-parsed Load time = $CUDesktopLoadTime ; $([math]::floor($CUDesktopLoadTime))"
 
 ## All parameters are not mandatory to allow for offline analysis
 ## Last modified 1209 GMT 2022/04/18 @guyrleech
@@ -5603,6 +5644,11 @@ Switch ($PsCmdlet.ParameterSetName) {
 Write-Verbose -message "just before Get-LogonDurationAnalysis"
 
 Get-LogonDurationAnalysis @params
+
+
+
+
+
 
 
 
