@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>6491a081-bf88-4db8-854a-c70fabe74179</SBAId>
+    <RootSBAId>8fe43c85-eae4-4c11-9dbc-5f9093b28a88</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638339946471424626</SQN>
+    <Name>Create Solve users from AD Security Group</Name>
+    <Description>This script is intended to be used to sync the Solve users, based on the membership of the specified AD Security group.</Description>
+    <ActionCategory>Organizational Actions</ActionCategory>
+    <Version>2.3.7</Version>
+    <DateCreated>2023-09-06T14:46:19.573</DateCreated>
+    <DateModified>2023-10-26T17:35:05.69</DateModified>
+    <DatePublished>2023-10-27T09:10:47.143</DatePublished>
+    <LastEditorName>Bill Powell</LastEditorName>
+    <CreatorName>Bill Powell</CreatorName>
+    <Status>3</Status>
+    <CheckSum>STpaVS5cUUddx8YbpBP5kt0odN4=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Bill Powell</Author>
+      <Tags>Solve,Active Directory,security</Tags>
+      <Credits>Credits to: Bill Powell
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>bill.powell@controlup.com</ContactEmail>
+      <Notes>The required CU actions are only available from version 8.8 MR onwards.</Notes>
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>5</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>3</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7adbe5e2-f500-43ca-a78f-86ca56b67f38</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7adbe5e2-f500-43ca-a78f-86ca56b67f38</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Solve User security group</Name>
+                  <DefaultValue>sg-SolveUsersTest</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>SolveUserSecurityGroup</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\S(.*\S){0,1}$</ValidationString>
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer>Must be run on a Monitor with the ActiveDirectory module installed</InstructionsExecutionOnComputer>
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>x89OCe+SfNpH8XUs8A5VKDL1awo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

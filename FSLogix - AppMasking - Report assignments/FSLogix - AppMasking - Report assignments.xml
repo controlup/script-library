@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>47db9514-55d6-4487-ae28-3a0d33666750</SBAId>
+    <RootSBAId>ee52f7de-6021-4264-a4c1-07e7c422f86a</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>0</SQN>
+    <Name>FSLogix - AppMasking - Report assignments</Name>
+    <Description>Report user assignments for all configured AppMasking applications on this machine</Description>
+    <Category>User Environment</Category>
+    <Version>2.2.6</Version>
+    <DateCreated>2023-08-16T16:19:40.143</DateCreated>
+    <DateModified>2023-08-16T16:36:58.097</DateModified>
+    <DatePublished>2023-09-20T13:40:28.547</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>3</Status>
+    <CheckSum>DoyQFL1khSvyVn5Hj/YOIPSCLEo=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvwAADr8BOAVTJAAAAyJJREFUOE9FU0lPU1EUfhgXbBxDXKixGBkj4B8w0Rg3qAujJsSNCzRxoRsTARM1EQQDYhgFRAlCqGAVBzCBAmUIhRZKeRQQKBSoTKW09IHMBd79PPcV8CRfct+57zs53/nOFXYDwIHqfufnmGLzdrrOxsTJRRb+solFpDQzq3NZflo9xK6/N3k15uk0+tdvh+YLSqgIg9fyO9jBxzVQm6ZAJFzIMeByXgcmpDW8a/uDQ3R3p1Rk9O8Pgv8u+TDBSpBnFtfRNi7REWCMQTs8j/oRj3KWCS2jHnhWvPxaJmgIfsI3i+NX3I8B5lr2IiS5BSeS9agjUkWfC+G5ooKqwXlUWJxQpRoQld6OpfUtxKpFVqi3JwqXcgws6IUOdUNzRG5FcGYXGscWUGaZQ2SeqOA7Ffg5NI/Q7G6o0gzo/LOAk0/rcbWgY1W4XWxWNHu3ZKQ226Hpm1Pa3dxmqDSM4WenfU+Cmormtk9hW2Yo0NvxUNMHoW3Mw2b/rmOLkqWiE1VWD9eI9cIiSIEhCjbKypUCXNZnAg8+WPPEgiwce6LF/YpefOl1UotmnH0rQhydg3QmHJIq2IewKLSOSThHcvhMGmwexJTQObkRwtH4Wtz7ZIFadCCMNEZQge7hWUinQ/8XCI2Ebti9V6CW3LlV3I2QRB2ElhE34+1sbcvINkyjtMeptLv2JhPSqSBFApfDc0XmWeR1OhS5NtcyiCsLsWoLvoozSrLININf1nlFIx9cbesg6oy2vSFWkRPlZCeP8q5pPKsehHA+Qy9zLY3U4nFuY0YXWuyL0PS7EUlyoqhtTtTaJITl+Gw0Ty5C9bwe0XnGJaHEOFH+QNML7kRgUjNOpOhRPeDCR3Jkd5G+/najjKQFvjYighZJWvWC7GdJNdZ4vsr+hHaCPE2rbLRLSrubNBO+E98H3D4JJLFxxA3n0gZXwN9DpvIWeNDHEULTjQ8mFpCgRWWPA6PuVVwpNOEmTdu1vKEsW0BCLe6qezg5i7Bvh+4LSuwvap/Ijs7v8L7SDjPjuCSfeq4jrQ347fgrP6rsZxez2lZS60fidigUgvAPvED504sfbEIAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>AppMasking,FSLogix</Tags>
+      <Credits>Credits to: Trentent Tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>bill.powell@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANVW/2/SUBC/n038HxpG3FCLmybGEDFhbOiUbYR10WUjhrHCmHQlbZkjZv+7n7v3XmkpZfiDEfPS1/ft7j73uXfXvqcNekpPyNKtTCd0Rkd0TC2MDvAkd01rk0tj8imgiELMI7rGikVdzEIa0oBuMb+SlTHaCGs9jCO8fewpGR+9ixUlHST0THBCrfipdQ86ehgPRT8jS2Pfo30grgPfAfA76I/hy//kwT59oxodAn0T40XIy/Jc0EfIR2RTAx43YWUAnfeQTeOvCfpD8euHWB2AJZbsYjbCahn7Ie1Aqx2jvsWuJ3gLYPOIqjKP0KZYfQlWT7FWg35PdA4hF0GuK5wEmJkzn6FzLAwpNpo4c4n3qbbEJ/dgo0o3qZMjOWf2etDqAcsqkeToWPRTOGamrTmGrIWcWJCfwKorOkzMp3GUI9EXJiK7TrH7d7wk9U3imBprM9Yeu/dccRzJ3jxfIugPdOYtRvonudtfmpcma/NjXZfK4kjMnYWYT4SzUNt8JWiXMXAIjXuoWA08dXhoqtd3+iR12MGsjdq8yFYdGF3xUPntoJ0Bm0UVPK9pG88b3Ldteod+h95m7NeQkQ4ssY2KaGCNt6KRe16Zatwb9EHe57DrwV5TorMrnl3paGxRiTpyqgVcgdQPC6tJm+eIjdlzdd5vCU+sx9SSKfK/iHh15ca7ovdc1xtlq4P9+crFdkqxl0WgCOSmK2sNyR91p6vQtg+5O6wFEitP+9wBExWdqw3sjICKbbQE2zWw5km+QLzGGPeww7iT0kprHp4Z5qyP6Xxt67w0aNgTC/XWFwk7sZ4cL2PCRjyvZX6VkCjM2b3Q2Rdi1I5rQyEXcxsZ8rcxbi7B2IeWe+SXi97FyRm/Pr4wNxKlCLPOEo5DjdzU7RmGA7m3XsaDx2Jla6/Md/E5EPZxsivYVHVydcXgvCnGddgS7vJt8B2y6Fcq075KTNiWjQyfYDSWnqNbXdNWWNkD43lFWElyxZzyaBTXhdKc3iFOKH75f3cXbE6k+rQylSmUqu9LfnclBiF9wc4U0puZ+rMJS9k4mPZMxy+dG0Hii22nvmamrvC96etsSP6jreJ13v9dtnamGXog/sdVtXfd/LkT3JewEeqaP0PNs4c425fdH2UtL5tU1CeCt0Tp/6F+fF8ey0rDiuL2N/FrBfl2DQAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>WmKqjoRme4mHBYUwgFhpwj68OFU=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

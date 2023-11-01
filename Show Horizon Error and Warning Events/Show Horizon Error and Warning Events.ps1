@@ -1,17 +1,16 @@
-﻿$ErrorActionPreference = 'Stop'
-<#
+﻿<#
     .SYNOPSIS
-    Pulls all Error, Warning and Audit_Fail events from the Horizon Event Database
+    Pulls all admin events from the Horizon Event Database
 
     .DESCRIPTION
-    Uses the Horizon PowerCLI api's to pull all admin related events from the Horizon Event database for all pods. If there is no cloud pod setup it will only process the local pod.
+    Uses the Horizon REST api's to pull all admin related events from the Horizon Event database for all pods. If there is no cloud pod setup it will only process the local pod.
     After pulling the events it will translate the id's for the various objects to names to show the proper names where needed.
 
-    .PARAMETER HVConnectionserverFQDN
+    .PARAMETER ConnectionserverFQDN
     Passes as the Primary Connection server object from a machine
 
     .PARAMETER daysback
-    Amount of days to go back to gather the logs
+    Amount of days to go back to gather the audit logs
 
     .PARAMETER csvlocation
     Path to where the output csv file will be stored ending in \.
@@ -21,108 +20,34 @@
 
 
     .NOTES
-    This script is based on the work done here: https://www.retouw.nl/powercli/new-view-api-query-services-in-powercli-10-1-1-pulling-event-information-without-the-sql-password/
 
-    This script requires VMWare PowerCLI to be installed on the machine running the script.
-    PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers' Or by using the 'Install VMware PowerCLI' script.
-    Credentials can be set using the 'Prepare machine for Horizon View scripts' script.
-
-    This script require Powershell 11.4 or higher and Horizon 7.5 or Higher
-
-    Modification history:   27/08/2020 - Wouter Kursten - First version
-                            10/09/2020 - WOuter Kursten - second version
+    Modification history:   06/05/2020 - Wouter Kursten - First version
+                            10/09/2020 - Wouter Kursten - second version
+                            10/19/2023 - Wouter Kursten - Third Version
     Changelog -
             10/09/2020 - Added check for export folder
             10/09/2020 - Added check if the user is able to write to te logfile
             10/09/2020 - Added check for ending \ in SBA
+            10/19/2023 - Converted to use REST API and other changes
 
-    .LINK
-    https://code.vmware.com/web/tool/11.4.0/vmware-powercli
-    https://www.retouw.nl/powercli/new-view-api-query-services-in-powercli-10-1-1-pulling-event-information-without-the-sql-password/
-
-    .COMPONENT
-    VMWare PowerCLI
 #>
-# Name of the Horizon View connection server. Passed from the ControlUp Console.
-[string]$HVConnectionServerFQDN = $args[0]
+[CmdletBinding()]
+param (
+    [Parameter(Mandatory = $true, HelpMessage = 'FQDN of the connectionserver' )]
+    [string]$ConnectionServerFQDN,
 
-# Amount of days to go back for the logs
-[int]$daysback = $args[1]
+    [Parameter(Mandatory = $true, HelpMessage = 'Amount of hours to look back for events' )]
+    [int]$daysback,
 
-# output location
-[string]$csvlocation = $args[2]
+    [Parameter(Mandatory = $true, HelpMessage = 'folder to export csv to' )]
+    [string]$csvlocation,
 
-# output filename
-[string]$csvfilename = $args[3]
+    [Parameter(Mandatory = $true, HelpMessage = 'filename to export csv to' )]
+    [string]$csvfilename
+)
 
-Function Out-CUConsole {
-    <# This function provides feedback in the console on errors or progress, and aborts if error has occured.
-    If only Message is passed this message is displayed
-    If Warning is specified the message is displayed in the warning stream (Message must be included)
-    If Stop is specified the stop message is displayed in the warning stream and an exception with the Stop message is thrown (Message must be included)
-    If an Exception is passed a warning is displayed and the exception is thrown
-    If an Exception AND Message is passed the Message message is displayed in the warning stream and the exception is thrown
-    #>
-
-    Param (
-        [Parameter(Mandatory = $false)]
-        [string]$Message,
-        [Parameter(Mandatory = $false)]
-        [switch]$Warning,
-        [Parameter(Mandatory = $false)]
-        [switch]$Stop,
-        [Parameter(Mandatory = $false)]
-        $Exception
-    )
-
-    # Throw error, include $Exception details if they exist
-    if ($Exception) {
-        # Write simplified error message to Warning stream, Throw exception with simplified message as well
-        If ($Message) {
-            Write-Warning -Message "$Message`n$($Exception.CategoryInfo.Category)`nPlease see the Error tab for the exception details."
-            Write-Error "$Message`n$($Exception.Exception.Message)`n$($Exception.CategoryInfo)`n$($Exception.Exception.ErrorRecord)" -ErrorAction Stop
-        }
-        Else {
-            Write-Warning "There was an unexpected error: $($Exception.CategoryInfo.Category)`nPlease see the Error tab for details."
-            Throw $Exception
-        }
-    }
-    elseif ($Stop) {
-        # Write simplified error message to Warning stream, Throw exception with simplified message as well
-        Write-Warning -Message "There was an error.`n$Message"
-        Throw $Message
-    }
-    elseif ($Warning) {
-        # Write the warning to Warning stream, thats it. It's a warning.
-        Write-Warning -Message $Message
-    }
-    else {
-        # Not an exception or a warning, output the message
-        Write-Output -InputObject $Message
-    }
-}
-
-Function Test-ArgsCount {
-    <# This function checks that the correct amount of arguments have been passed to the script. As the arguments are passed from the Console or Monitor, the reason this could be that not all the infrastructure was connected to or there is a problem retreiving the information.
-    This will cause a script to fail, and in worst case scenarios the script running but using the wrong arguments.
-    The possible reason for the issue is passed as the $Reason.
-    Example: Test-ArgsCount -ArgsCount 3 -Reason 'The Console may not be connected to the Horizon View environment, please check this.'
-    Success: no ouput
-    Failure: "The script did not get enough arguments from the Console. The Console may not be connected to the Horizon View environment, please check this.", and the script will exit with error code 1
-    Test-ArgsCount -ArgsCount $args -Reason 'Please check you are connectect to the XXXXX environment in the Console'
-    #>
-    Param (
-        [Parameter(Mandatory = $true)]
-        [int]$ArgsCount,
-        [Parameter(Mandatory = $true)]
-        [string]$Reason
-    )
-
-    # Check all the arguments have been passed
-    if ($args.Count -ne $ArgsCount) {
-        Out-CUConsole -Message "The script did not get enough arguments from the Console. $Reason" -Stop
-    }
-}
+$ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 function Get-CUStoredCredential {
     param (
@@ -137,298 +62,381 @@ function Get-CUStoredCredential {
         Import-Clixml -LiteralPath $strCUCredFolder\$($env:USERNAME)_$($System)_Cred.xml
     }
     catch {
-        Out-CUConsole -Message "The required PSCredential object could not be loaded. Please make sure you have run the 'Create credentials for Horizon View scripts' script on the target machine." -Exception $_
+        write-error $_
     }
 }
 
-function Load-VMWareModules {
-    <# Imports VMware PowerCLI modules
-        NOTES:
-        - The required modules to be loaded are passed as an array.
-        - If the PowerCLI versions is below 6.5 some of the modules can't be imported (below version 6 it is Snapins only) using so Add-PSSnapin is used (which automatically loads all VMWare modules)
-    #>
-
-    param (
-        [parameter(Mandatory = $true,
-            HelpMessage = "The VMware module to be loaded. Can be single or multiple values (as array).")]
-        [array]$Components
-    )
-
-    # Try Import-Module for each passed component, try Add-PSSnapin if this fails (only if -Prefix was not specified)
-    # Import each module, if Import-Module fails try Add-PSSnapin
-    foreach ($component in $Components) {
-        try {
-            $null = Import-Module -Name VMware.$component
-        }
-        catch {
-            try {
-                $null = Add-PSSnapin -Name VMware
-            }
-            catch {
-                Out-CUConsole -Message 'The required VMWare PowerCLI components were not found as modules or snapins. Please make sure VMWare PowerCLI (version 6.5 or higher preferred) is installed and available for the user running the script.' -Stop
-            }
-        }
+function Get-HRHeader() {
+    param($accessToken)
+    return @{
+        'Authorization' = 'Bearer ' + $($accessToken.access_token)
+        'Content-Type'  = "application/json"
     }
 }
 
-function Connect-HorizonConnectionServer {
-    param (
-        [parameter(Mandatory = $true,
-            HelpMessage = "The FQDN of the Horizon View Connection server. IP address may be used.")]
-        [string]$HVConnectionServerFQDN,
-        [parameter(Mandatory = $true,
-            HelpMessage = "The PSCredential object used for authentication.")]
-        [PSCredential]$Credential
+function Open-HRConnection() {
+    param(
+        [string] $username,
+        [string] $password,
+        [string] $domain,
+        [string] $url
     )
 
-    try {
-        Connect-HVServer -Server $HVConnectionServerFQDN -Credential $Credential
+    $Credentials = New-Object psobject -Property @{
+        username = $username
+        password = $password
+        domain   = $domain
     }
-    catch {
-        if ($_.Exception.Message.StartsWith('Could not establish trust relationship for the SSL/TLS secure channel with authority')) {
-            Out-CUConsole -Message 'There was a problem connecting to the Horizon View Connection server. It looks like there may be a certificate issue. Please ensure the certificate used on the Horizon View server is trusted by the machine running this script.' -Exception $_
+
+    return invoke-restmethod -Method Post -uri "$url/rest/login" -ContentType "application/json" -Body ($Credentials | ConvertTo-Json)
+}
+
+function Close-HRConnection() {
+    param(
+        $refreshToken,
+        $url
+    )
+    return Invoke-RestMethod -Method post -uri "$url/rest/logout" -ContentType "application/json" -Body ($refreshToken | ConvertTo-Json)
+}
+
+function Get-HorizonRestData() {
+    [CmdletBinding(DefaultParametersetName = 'None')] 
+    param(
+        [Parameter(Mandatory = $true,
+            HelpMessage = 'url to the server i.e. https://pod1cbr1.loft.lab' )]
+        [string] $ServerURL,
+
+        [Parameter(Mandatory = $true,
+            ParameterSetName = "filteringandpagination",
+            HelpMessage = 'Array of ordered hashtables' )]
+        [array] $filters,
+
+        [Parameter(Mandatory = $true,
+            ParameterSetName = "filteringandpagination",
+            HelpMessage = 'Type of filter Options: And, Or' )]
+        [ValidateSet('And', 'Or')]
+        [string] $Filtertype,
+
+        [Parameter(Mandatory = $false,
+            ParameterSetName = "filteringandpagination",
+            HelpMessage = 'Page size, default = 500' )]
+        [int] $pagesize = 1000,
+
+        [Parameter(Mandatory = $true,
+            HelpMessage = 'Part after the url in the swagger UI i.e. /external/v1/ad-users-or-groups' )]
+        [string] $RestMethod,
+
+        [Parameter(Mandatory = $true,
+            HelpMessage = 'Part after the url in the swagger UI i.e. /external/v1/ad-users-or-groups' )]
+        [PSCustomObject] $accessToken,
+
+        [Parameter(Mandatory = $false,
+            ParameterSetName = "filteringandpagination",
+            HelpMessage = '$True for rest methods that contain pagination and filtering, default = False' )]
+        [switch] $filteringandpagination,
+
+        [Parameter(Mandatory = $false,
+            ParameterSetName = "id",
+            HelpMessage = 'To be used with single id based queries like /monitor/v1/connection-servers/{id}' )]
+        [string] $id,
+
+        [Parameter(Mandatory = $false,
+            HelpMessage = 'Extra additions to the query url that comes before the paging/filtering parts like brokering_pod_id=806ca in /rest/inventory/v1/global-sessions?brokering_pod_id=806ca&page=2&size=100' )]
+        [string] $urldetails
+    )
+
+    if ($filteringandpagination) {
+        if ($filters) {
+            $filterhashtable = [ordered]@{}
+            $filterhashtable.add('type', $filtertype)
+            $filterhashtable.filters = @()
+            foreach ($filter in $filters) {
+                $filterhashtable.filters += $filter
+            }
+            $filterflat = $filterhashtable | convertto-json -Compress
+            if ($urldetails) {
+                $urlstart = $ServerURL + "/rest/" + $RestMethod + "?" + $urldetails + "&filter=" + $filterflat + "&page="
+            }
+            else {
+                $urlstart = $ServerURL + "/rest/" + $RestMethod + "?filter=" + $filterflat + "&page="
+            }
         }
         else {
-            Out-CUConsole -Message 'There was a problem connecting to the Horizon View Connection server.' -Exception $_
+            if ($urldetails) {
+                $urlstart = $ServerURL + "/rest/" + $RestMethod + "?" + $urldetails + "&page="
+            }
+            else {
+                $urlstart = $ServerURL + "/rest/" + $RestMethod + "?page="
+            }
+        }
+        $results = [System.Collections.ArrayList]@()
+        $page = 1
+        $uri = $urlstart + $page + "&size=$pagesize"
+        $response = Invoke-webrequest $uri -Method 'GET' -Headers (Get-HRHeader -accessToken $accessToken)
+        $data = $response.content | convertfrom-json
+        $responseheader = $response.headers
+        $data.foreach({ $results.add($_) }) | out-null
+        if ($responseheader.HAS_MORE_RECORDS -contains "TRUE") {
+            do {
+                $page++
+                $uri = $urlstart + $page + "&size=$pagesize"
+                $response = Invoke-webrequest $uri -Method 'GET' -Headers (Get-HRHeader -accessToken $accessToken) 
+                $data = $response.content | convertfrom-json
+                $responseheader = $response.headers
+                $data.foreach({ $results.add($_) }) | out-null
+            } until ($responseheader.HAS_MORE_RECORDS -notcontains "TRUE")
         }
     }
+    elseif ($id) {
+        $uri = $ServerURL + "/rest/" + $RestMethod + "/" + $id
+        $data = Invoke-webrequest $uri -Method 'GET' -Headers (Get-HRHeader -accessToken $accessToken)
+        $results = $data.content | convertfrom-json
+    }
+    else {
+        if ($urldetails) {
+            $uri = $ServerURL + "/rest/" + $RestMethod + "?" + $urldetails
+        }
+        else {
+            $uri = $ServerURL + "/rest/" + $RestMethod
+        }
+        $data = Invoke-webrequest $uri -Method 'GET' -Headers (Get-HRHeader -accessToken $accessToken)
+        $results = $data.content | convertfrom-json
+    }
+
+    return $results
 }
 
-function Disconnect-HorizonConnectionServer {
-    param (
-        [parameter(Mandatory = $true,
-            HelpMessage = "The Horizon View Connection server object.")]
-        [VMware.VimAutomation.HorizonView.Impl.V1.ViewObjectImpl]$HVConnectionServer
+function Get-HorizonCloudPodStatus{
+    param(
+        $accesstoken,
+        $ConnectionServerURL
     )
-
-    try {
-        Disconnect-HVServer -Server $HVConnectionServer -Confirm:$false
-    }
-    catch {
-        Out-CUConsole -Message 'There was a problem disconnecting from the Horizon View Connection server. If not running in a persistent session (ControlUp scripts do not run in a persistant session) this is not a problem, the session will eventually be deleted by Horizon View.' -Warning
-    }
+    write-verbose "Getting Horizon Cloud Pod Status"
+    return  (Get-HorizonRestData -ServerURL $ConnectionServerURL -accessToken $accesstoken -RestMethod "federation/v1/cpa").local_connection_server_status
 }
 
-function get-hverrorevents {
-    param (
-        [parameter(Mandatory = $true,
-            HelpMessage = "Start date.")]
-        $startDate,
-        [parameter(Mandatory = $true,
-            HelpMessage = "End Date.")]
-        $endDate,
-        [parameter(Mandatory = $true,
-            HelpMessage = "The Horizon View Connection server object.")]
-        [VMware.VimAutomation.HorizonView.Impl.V1.ViewObjectImpl]$HVConnectionServer
+function Get-HorizonCloudPodDetails{
+    param(
+        $accesstoken,
+        $ConnectionServerURL
     )
-    # Try to get the Desktop pools in this pod
-    try {
-        # create the service object first
-        [VMware.Hv.QueryServiceService]$queryService = New-Object VMware.Hv.QueryServiceService
-        # Create the object with the definiton of what to query
-        [VMware.Hv.QueryDefinition]$defn = New-Object VMware.Hv.QueryDefinition
-        # entity type to query
-        $defn.queryEntityType = 'EventSummaryView'
-        # Filter on just the user and the vlsi module
-        $timeFilter = new-object VMware.Hv.QueryFilterBetween -property @{'memberName'='data.time'; 'fromValue' = $startDate; 'toValue' = $endDate}
-        $1=New-Object VMware.Hv.QueryFilterEquals -property @{'memberName'='data.severity'; 'value' = "WARNING"}
-        $2=New-Object VMware.Hv.QueryFilterEquals -property @{'memberName'='data.severity'; 'value' = "ERROR"}
-        $3=New-Object VMware.Hv.QueryFilterEquals -property @{'memberName'='data.severity'; 'value' = "AUDIT_FAIL"}
-        $orfilter=new-object VMware.Hv.QueryFilterOr
-        $orfilters=@()
-        $orfilters+=$1
-        $orfilters+=$2
-        $orfilters+=$3
-        $orfilter.Filters=$orfilters
-        $andfilter=new-object vmware.hv.queryfilterand
-        $andfilter.filters+=$timeFilter
-        $andfilter.filters+=$orfilter
-        $defn.Filter = New-Object VMware.Hv.QueryFilterAnd -Property @{ 'filters' = $andfilter }
-
-        # Perform the actual query
-        [array]$queryResults= ($queryService.queryService_create($HVConnectionServer.extensionData, $defn)).results
-        # Remove the query
-        $queryService.QueryService_DeleteAll($HVConnectionServer.extensionData)
-        # Return the results
-        return $queryResults
+    write-verbose "Getting Horizon Cloud Pod details"
+    $CloudPodDetails = @()
+    $pods = Get-HorizonRestData -ServerURL $ConnectionServerURL -accessToken $accesstoken -RestMethod "federation/v1/pods"
+    foreach ($pod in $pods){
+        $PodName = $pod.name
+        write-verbose "Getting details for $podname"
+        $restmethod = "federation/v1/pods/"+$pod.id+"/endpoints"
+        $PodDetails = Get-HorizonRestData -ServerURL $ConnectionServerURL -accessToken $accesstoken -RestMethod $restmethod
+        foreach ($PodDetail in $PodDetails){
+            $name = $PodDetail.name 
+            write-verbose "Creating object with details for $name"
+            $server_address = $PodDetail.server_address
+            $ServerDNS = ($server_address.Replace("https://","")).split(":")[0]
+            $DetailObject = [PSCustomObject]@{
+                PodName     = $PodName
+                Name = $name
+                ServerDNS    = $ServerDNS
+            }
+            $CloudPodDetails+=$DetailObject
+        }
     }
-    catch {
-        Out-CUConsole -Message 'There was a problem retreiving event data from the Horizon View Connection server.' -Warning
-    }
+    return $CloudPodDetails
 }
 
+function Get-HorizonNonCloudPodDetails{
+    param(
+        $accesstoken,
+        $ConnectionServerURL,
+        $ServerName
+    )
+    write-verbose "Getting Horizon Non Cloud Pod details"
+    $EnvDetails = Get-HorizonRestData -ServerURL $ConnectionServerURL -accessToken $accesstoken -RestMethod "config/v2/environment-properties"
+    $ConDetails = Get-HorizonRestData -ServerURL $ConnectionServerURL -accessToken $accesstoken -RestMethod "monitor/v2/connection-servers"
+    $PodName = $EnvDetails.cluster_name
+    write-verbose "Getting details for $podname"
+    $PodDetails = @()
+    foreach ($ConDetail in $ConDetails){
+        $name = $ConDetail.name
+        write-verbose "Creating object with details for $name"
+        $ServerDNS = $servername.replace(($servername.split(".")[0]),$name)
+        write-verbose "Server DNS should be $ServerDNS"
+        $DetailObject = [PSCustomObject]@{
+            PodName     = $PodName
+            Name = $name
+            ServerDNS    = $ServerDNS
+        }
+            $PodDetails+=$DetailObject
+    }
+    return $PodDetails
+}
 
-# Test arguments
-Test-ArgsCount -ArgsCount 4 -Reason 'The Console or Monitor may not be connected to the Horizon View environment, please check this.'
+function connect-hvpod{
+    param($PodName)
+    write-verbose "trying to find a working connection server for $podname"
+    [array]$conservers = $ServerArray | Where-Object {$_.PodName -eq "$podname"} | Select-Object -expandproperty ServerDNS
+    $count = $conservers.count
+	write-verbose $count
+    $start=0
+    $result= "None"
+    do{
+        write-verbose "Attempt: $start"
+        $conserver = $conservers[$start]
+        $serverurl = "https://$conserver"
+        if((Test-netConnection $conserver -port 443 -InformationLevel quiet) -eq $true){
+            $login_tokens = Open-HRConnection -username $username -password $UnsecurePassword -domain $Domain -url $serverurl
+        }
+        else{
+            $login_tokens = $null
+        }
+        if($null -ne $login_tokens){
+            $result= "Success"
+            $Script:LastSelectedConnectionServer = $conserver
+            write-verbose "Connected using $LastSelectedConnectionServer"
+            return $login_tokens
+        }
+        else{
+            $result= "None"
+            $start++
+            if($start -lt $count){
+                write-verbose "Failed connecting to $conserver, trying the next one."
+            }
+            else{
+                write-verbose "Cannot find a working connection server for $podname"
+                $result= "Failure"
+                return $result
+            }
+        }
 
-# Set the credentials location
-[string]$strCUCredFolder = "$([environment]::GetFolderPath('CommonApplicationData'))\ControlUp\ScriptSupport"
+    }
+    until(($result -eq "Success") -or ($result -eq "Failure"))
+}
+# we need the following to ignore invalid certificates
 
-# Make Verbose messages green
-$host.privatedata.VerboseForegroundColor="Green"
+Add-Type @"
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+public class TrustAllCertsPolicy : ICertificatePolicy {
+    public bool CheckValidationResult(
+    ServicePoint srvPoint, X509Certificate certificate,
+    WebRequest request, int certificateProblem) {
+        return true;
+    }
+}
+"@
 
-# Import the VMware PowerCLI modules
-Load-VMwareModules -Components @('VimAutomation.HorizonView')
+[System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
+
+# Set Tls versions
+$allProtocols = [System.Net.SecurityProtocolType]'Ssl3,Tls,Tls11,Tls12'
+[System.Net.ServicePointManager]::SecurityProtocol = $allProtocols
 
 # Get the stored credentials for running the script
-[PSCredential]$CredsHorizon = Get-CUStoredCredential -System 'HorizonView'
 
-# Connect to the Horizon View Connection Server
-[VMware.VimAutomation.HorizonView.Impl.V1.ViewObjectImpl]$objHVConnectionServer = Connect-HorizonConnectionServer -HVConnectionServerFQDN $HVConnectionServerFQDN -Credential $CredsHorizon
-
-# checks if this connectionserver is member of a cloud pod federation
-
-[VMware.Hv.PodFederationLocalPodStatus]$HVpodstatus=($objHVConnectionServer.ExtensionData.PodFederation.PodFederation_Get()).localpodstatus
-
-if ($HVpodstatus.status -eq "ENABLED"){
-    # Retreives all pods
-    [array]$HVpods=$objHVConnectionServer.ExtensionData.Pod.Pod_List()
-    # retreive the first connection server from each pod
-    $HVPodendpoints=@()
-    [array]$HVPodendpoints = foreach ($hvpod in $hvpods) {$objHVConnectionServer.ExtensionData.PodEndpoint.PodEndpoint_List($hvpod.id) | select-object -first 1}
-
-    # Convert from url to only the name
-    [array]$hvconnectionservers=$HVPodendpoints.serveraddress.replace("https://","").replace(":8472/","")
-    # Disconnect from the current connection server
-    Disconnect-HorizonConnectionServer -HVConnectionServer $objHVConnectionServer
-}
-else {
-    # Create list with one entry
-    $hvconnectionservers=$hvConnectionServerfqdn
-    # Disconnect from the current connection server
-    Disconnect-HorizonConnectionServer -HVConnectionServer $objHVConnectionServer
-}
-
+[PSCredential]$creds = Get-CUStoredCredential -System 'HorizonView'
 $date = get-date
+$thentime = (get-date).adddays(-$daysback)
 
-$sinceDate = (get-date).AddDays(-$daysback)
+$nowepoch = ([DateTimeOffset]$date).ToUnixTimeMilliseconds()
+$thenepoch = ([DateTimeOffset]$thentime).ToUnixTimeMilliseconds()
 
-$errorevents = @()
+$username = ($creds.GetNetworkCredential()).userName
+$domain = ($creds.GetNetworkCredential()).Domain
+$UnsecurePassword = ($creds.GetNetworkCredential()).password
 
+$url = "https://$ConnectionServerFQDN"
+$login_tokens = Open-HRConnection -username $username -password $UnsecurePassword -domain $Domain -url $url
+$AccessToken = $login_tokens | Select-Object Access_token
+$RefreshToken = $login_tokens | Select-Object Refresh_token
 
-
-foreach ($hvconnectionserver in $hvconnectionservers){
-    if ($HVpodstatus.status -eq "ENABLED"){
-        [VMware.VimAutomation.HorizonView.Impl.V1.ViewObjectImpl]$objHVConnectionServer = Connect-HorizonConnectionServer -HVConnectionServerFQDN $hvconnectionserver -Credential $CredsHorizon
-        # Retreive the name of the pod
-        [string]$podname=$objHVConnectionServer.extensionData.pod.Pod_list() | where-object {$_.localpod -eq $True} | select-object -expandproperty Displayname
-        Out-CUConsole -message "Processing Pod $podname"
-        $events= get-hverrorevents -HVConnectionServer $objHVConnectionServer -startDate $sinceDate -endDate $date
-
-        foreach ($event in $events){
-            if($event.data.RDSServerid){
-                try{
-                    $rdsserver=$objHVConnectionServer.ExtensionData.rdsserver.rdsserver_Get($event.data.rdsserverid).base
-                    $rdsservername = $rdsserver.Name
-                }
-                catch{
-                    $rdsservername = "RDS Server not found"
-                    $farmname = "RDS Farm could not be found because the RDS server could not be resolved"
-                }
-            if($rdsserver){
-                try{
-                    $farmname=($objHVConnectionServer.ExtensionData.farm.farm_get($rdsserver.farm)).data.displayname
-                }
-                catch{
-                    $farmname = "RDS Farm not found"
-                }
-        }
-            }
-            else{
-                $rdsservername = $null
-                $farmname = $event.namesdata.farmdisplayname
-            }
-
-            $errorevents+=New-Object PSObject -Property @{"Event Type" = $event.data.eventType;
-                "Pod" = $podname;
-                "Severity" = $event.data.severity;
-                "Time" = $event.data.time;
-                "Message" = $event.data.message;
-                "Node" = $event.data.node;
-                "User" = $event.namesdata.userdisplayname;
-                "Machinename" = $event.namesdata.Machinename;
-                "RDSServer" = $rdsservername;
-                "RDSFarm" = $farmname;
-                "Poolname" = $event.namesdata.DesktopDisplayName;
-                "Application" = $event.namesdata.ApplicationDisplayName
-                "Persistentdisk" = $event.namesdata.PersistentdiskName
-            }
-        }
-    }
-
-    else {
-        [VMware.VimAutomation.HorizonView.Impl.V1.ViewObjectImpl]$objHVConnectionServer = Connect-HorizonConnectionServer -HVConnectionServerFQDN $hvconnectionserver -Credential $CredsHorizon
-        # Get the Horizon View desktop Pools within the pod
-        Out-CUConsole -message "Processing the local pod"
-        [string]$podname="Local"
-        Out-CUConsole -message "Processing Pod $podname"
-        $events= get-hverrorevents -HVConnectionServer $objHVConnectionServer -startDate $sinceDate -endDate $date
-
-        foreach ($event in $events){
-            if($event.data.RDSServerid){
-                try{
-                    $rdsserver=$objHVConnectionServer.ExtensionData.rdsserver.rdsserver_Get($event.data.rdsserverid).base
-                    $rdsservername = $rdsserver.Name
-                }
-                catch{
-                    $rdsservername = "RDS Server not found"
-                    $farmname = "RDS Farm could not be found because the RDS server could not be resolved"
-                }
-            if($rdsserver){
-                try{
-                    $farmname=($objHVConnectionServer.ExtensionData.farm.farm_get($rdsserver.farm)).data.displayname
-                }
-                catch{
-                    $farmname = "RDS Farm not found"
-                }
-        }
-            }
-            else{
-                $rdsservername = $null
-                $farmname = $event.namesdata.farmdisplayname
-            }
-
-            $errorevents+=New-Object PSObject -Property @{"Event Type" = $event.data.eventType;
-                "Pod" = $podname;
-                "Severity" = $event.data.severity;
-                "Time" = $event.data.time;
-                "Message" = $event.data.message;
-                "Node" = $event.data.node;
-                "User" = $event.namesdata.userdisplayname;
-                "Machinename" = $event.namesdata.Machinename;
-                "RDSServer" = $rdsservername;
-                "RDSFarm" = $farmname;
-                "Poolname" = $event.namesdata.DesktopDisplayName;
-                "Application" = $event.namesdata.ApplicationDisplayName
-                "Persistentdisk" = $event.namesdata.PersistentdiskName
-            }
-        }
-    }
-    Disconnect-HorizonConnectionServer -HVConnectionServer $objHVConnectionServer
-}
-
-write-output $errorevents | select-object -property Time,Node,message | sort-object -property Pod,Time | format-table * -autosize -wrap
-
-if ($csvlocation -eq "%temp%"){
-    $csvlocation=$env:TEMP+"\" 
-}
-elseif(!($csvlocation -match '\\$')){
-    $csvlocation=$csvlocation+"\"
-}
-
-if (test-path $csvlocation){
-    $csvpath = $csvlocation+$csvfilename
+$CloudPodStatus = Get-HorizonCloudPodStatus -ConnectionServerURL $url -accesstoken $AccessToken
+write-output "Cloud Pod Status: $cloudPodStatus"
+if($CloudPodStatus -eq "ENABLED"){
+    $CloudPodDetails = Get-HorizonCloudPodDetails -ConnectionServerURL $url -accesstoken $AccessToken
+    [array]$ServerArray = $CloudPodDetails
 }
 else{
-    out-cuconsole -message "Unable to find folder $csvlocation reverting to default $strCUCredFolder"
-    $csvpath = $strCUCredFolder+"\"+$csvfilename
+    $PodDetails = Get-HorizonNonCloudPodDetails -ConnectionServerURL $url -accesstoken $AccessToken -ServerName $connectionserveraddress
+    [array]$ServerArray = $PodDetails
+}
+Close-HRConnection -refreshToken $RefreshToken -url $url
+$auditevents = New-Object System.Collections.ArrayList
+
+[array]$auditseveritytypes=@("ERROR","WARNING","AUDIT_FAIL")
+
+foreach($podname in ($serverarray | select-object -expandproperty Podname -unique)){
+    write-output "Getting data for $podname"
+    try{
+        $login_tokens = connect-hvpod -podname $podname
+        if($login_tokens -eq "Failure"){
+            write-output "failed to connect so can't apply secondary image."
+            break
+        }
+        $AccessToken = $login_tokens | Select-Object Access_token
+        $RefreshToken = $login_tokens | Select-Object Refresh_token
+        $serverURL = "https://$LastSelectedConnectionServer"
+    }
+    catch{
+        write-output "Error Connecting."
+        break
+    }
+    $rawauditevents = @()
+    foreach ($audittype in $auditseveritytypes) {
+        $auditfilters = @()
+        $timefilter = [ordered]@{}
+        $timefilter.add('type', 'Between')
+        $timefilter.add('name', 'time')
+        $timefilter.add('fromValue', $thenepoch)
+        $timefilter.add('toValue', $nowepoch)
+        $auditfilters += $timefilter
+        $auditfilter = [ordered]@{}
+        $auditfilter.add('type', 'Equals')
+        $auditfilter.add('name', 'severity')
+        $auditfilter.add('value', $audittype)
+        $auditfilters += $auditfilter
+        $rawauditevents += Get-HorizonRestData -ServerURL $serverURL -RestMethod "/external/v1/audit-events" -accessToken $accessToken -filteringandpagination -Filtertype "And" -filters $auditfilters
+    }
+    $count = $rawauditevents.count
+    write-verbose "Found $count events for $podname"
+    foreach ($event in $rawauditevents) {
+        $readabletimestamp = ([datetimeoffset]::FromUnixTimeMilliseconds(($event).Time)).ToLocalTime()
+        $readabletimestamputc = [datetimeoffset]::FromUnixTimeMilliseconds(($event).Time)
+        $timeepoch = ($event).time
+        $event.psobject.Properties.Remove('Time')
+        $event | Add-Member -MemberType NoteProperty -Name Pod -Value $podname
+        $event | Add-Member -MemberType NoteProperty -Name time -Value $readabletimestamp
+        $event | Add-Member -MemberType NoteProperty -Name time_utc -Value $readabletimestamputc
+        $event | Add-Member -MemberType NoteProperty -Name time_epoch -Value $timeepoch
+        $auditevents.add($event) | out-null
+    }
+
+    Close-HRConnection -refreshToken $RefreshToken -url $serverURL
+}
+# checks if this connect
+
+$auditevents | sort-object -property podname, time_epoch | format-table time,type,severity,machine_dns_name -autosize -wrap
+
+if ($csvlocation -eq "%temp%") {
+    $csvlocation = $env:TEMP + "\" 
+}
+elseif (!($csvlocation -match '\\$')) {
+    $csvlocation = $csvlocation + "\"
+}
+
+if (test-path $csvlocation) {
+    $csvpath = $csvlocation + $csvfilename
+}
+else {
+    write-output "Unable to find folder $csvlocation reverting to default $strCUCredFolder"
+    $csvpath = $strCUCredFolder + "\" + $csvfilename
 }
 Try { [io.file]::OpenWrite($csvpath).close() }
 Catch {
-    $csvpathnew = $strCUCredFolder+"\"+$csvfilename
-    out-cuconsole -message "Unable to write to output file $csvpath reverting to default folder $csvpathnew"
-    $csvpath=$csvpathnew
+    $csvpathnew = $strCUCredFolder + "\" + $csvfilename
+    write-output "Unable to write to output file $csvpath reverting to default folder $csvpathnew"
+    $csvpath = $csvpathnew
 }
-out-cuconsole -Message "Writing Logfile"
-$errorevents | sort-object -property Pod,Time | ConvertTo-Csv -NoTypeInformation | Out-File $csvpath -Encoding utf8 -force
-out-cuconsole -message "Logfile written to $csvpath"
+write-output "Writing Logfile"
+$auditevents | sort-object -property Podname, time_epoch | ConvertTo-Csv -NoTypeInformation | Out-File $csvpath -Encoding utf8 -force
+write-output "Logfile written to $csvpath"
+

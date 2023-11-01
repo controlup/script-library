@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>e9f40fad-a3ec-45cb-8b2a-2317bbaf776a</SBAId>
+    <RootSBAId>e832c018-30a8-4374-ab42-cbc2bb34a30e</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638343655772756010</SQN>
+    <Name>Request a certificate from CA</Name>
+    <Description>Requests a certificate from a enterprise certificate authority and automatically binds it to port 443 of the IIS Default Site.</Description>
+    <ActionCategory>Organizational Actions</ActionCategory>
+    <Version>2.2.7</Version>
+    <DateCreated>2023-10-06T02:03:25.41</DateCreated>
+    <DateModified>2023-10-31T18:08:16.137</DateModified>
+    <DatePublished>2023-10-31T16:12:57.277</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>3</Status>
+    <CheckSum>SklLVppRKWLh82fn0XoZg5OnfE0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>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</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>certificate,IIS</Tags>
+      <Credits>Credits to: Trentent Tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>2201793a-b510-4121-ac09-4a1435e8b9dd</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>2201793a-b510-4121-ac09-4a1435e8b9dd</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Certificate Authority Name</Name>
+                  <DefaultValue>MSADCS01</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <ArgumentName>CertificateAuthority</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>194a838f-5c2a-435b-88b1-b18aab9de5a0</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>194a838f-5c2a-435b-88b1-b18aab9de5a0</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Certificate Template Name</Name>
+                  <DefaultValue>WebServer</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>CertificateTemplate</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>.</ValidationString>
+                  <ValidationError>Must be the template name, not the friendly name</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>EnZEeHcKA46//WxlWDFo0AGVCr8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

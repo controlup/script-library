@@ -13,22 +13,23 @@
         . .\Get-FSLogixProfileLog.ps1 -User BOTTHEORY\amttye -SessionId 2
         Gets all events for the user "amttye" from domain "bottheory" on this machine
 
+    .PARAMETER User
+        samAccountName in the format DOMAIN\samAccountName
+            
+    .PARAMETER SessionId
+        the session id
+
     .NOTES
         This script must be run on a machine where the user is currently logged on.
-
-    .CONTEXT
-        Session
-
-    .MODIFICATION_HISTORY
+        CONTEXT : Session
+        MODIFICATION_HISTORY:
         Created TTYE : 2019-11-19
         Edit: Ton de Vreede 2022-9-15 - small bugfix for error handling
-
-
-    AUTHOR: Trentent Tye
+        AUTHOR: Trentent Tye
 #>
 [CmdLetBinding()]
 Param (
-    [Parameter(Mandatory=$true,HelpMessage='Enter the username in the format DOMAIN\Username')][ValidateNotNullOrEmpty()]       [string]$User,
+    [Parameter(Mandatory=$true,HelpMessage='Enter the samAccountName in the format DOMAIN\samAccountName')][ValidateNotNullOrEmpty()]       [string]$User,
     [Parameter(Mandatory=$true,HelpMessage='Enter the session ID')][ValidateNotNullOrEmpty()]                                   [int]$SessionId
 )
 
@@ -36,7 +37,7 @@ Param (
 $ErrorActionPreference = "Stop"
 ###$VerbosePreference = "continue"
 
-[int]$outputWidth = 800
+[int]$outputWidth = 1500
 # Altering the size of the PS Buffer
 $PSWindow = (Get-Host).UI.RawUI
 $WideDimensions = $PSWindow.BufferSize
@@ -44,48 +45,17 @@ $WideDimensions.Width = $outputWidth
 $PSWindow.BufferSize = $WideDimensions
 
 $userdomain = ($user -split "\\")[0]
-$username = ($user -split "\\")[1]
+$samAccountName = ($user -split "\\")[1]
 
-function Get-FSLogixProfileEvents {
+function Process-FSLogixLogFile {
     [CmdletBinding()]
     param(
-    [Parameter(Mandatory=$true)]
-    [DateTime]
-    $Start,
-
-    [Parameter(Mandatory=$true)]
-    [String]
-    $Username
+    [Parameter(Mandatory=$true)][String]$LogFile
     )
 
-
-    Write-Verbose "Username: `"$($Username)`""
-    Write-Verbose "User Session StartTime: `"$($Start)`""
-
-    #FSLogix Log path is here: C:\ProgramData\FSLogix\Logs\Profile
-    #at the time of this testing version 2.9.7205.27375 of FSLogix provided all the necessary information
-
-    Write-Verbose "Looking for file with `"$($($start).ToString("yyyyMMdd"))`" in the file name"
-    try {
-        $FSLogixLogDir = Get-ItemPropertyValue -Path HKLM:\SOFTWARE\FSLogix\Logging -Name Logdir
-        Write-Verbose "LogDir value configured. LogDir set to $FSLogixLogDir"
-        }
-    Catch {
-        #LogDir registry value not found. Set to default:
-            Write-Verbose "LogDir value not set. Setting LogDir to default path"
-            $FSLogixLogDir = "C:\ProgramData\FSLogix\Logs"
-        }
-
-    $profileLog = ls "$FSLogixLogDir\Profile" | Where {$_.Name -like "*$($($start).ToString("yyyyMMdd"))*"}
-
-    try {
-        Test-Path $profileLog.FullName | out-null
-    } catch {
-        Write-Error "Unable to determine or find FSLogix profile log file."
-        break
-    }
-    Write-Verbose "Found Profile Log file: $($profileLog.FullName)"
-    $FSLogixLog = Get-Content "$($profileLog.fullname)"
+    Write-Verbose "Found Log file: $($LogFile)"
+    $FSLogixLog = Get-Content "$($LogFile)"
+    $logfilePath = Get-Item $LogFile
 
     $CurrentTimezone = ((Get-TimeZone).baseUtcOffset)
     Write-Verbose "Current Timezone Offset: $($CurrentTimezone.TotalHours)"
@@ -108,9 +78,10 @@ function Get-FSLogixProfileEvents {
                 if ($FSLogixTime -ge $start) {
                     $obj = [PSCustomObject]@{
                         Time = $FSLogixTime
+                        Source   = ($logfilePath.Name).split("-")[0]
                         ThreadId = $_.Matches[1].Value -replace ("\[","") -replace ("\]","")
                         LogLevel = $_.Matches[2].Value -replace ("\[","") -replace ("\]","")
-                        Message = $_.Matches[3].Value.Trim()
+                        Message  = $_.Matches[3].Value.Trim()
                     }
 
                     $FSLogixLogObject.Add($obj)|Out-Null
@@ -119,20 +90,82 @@ function Get-FSLogixProfileEvents {
         }
     }
 
-    
-    $SessionEvents = $FSLogixLogObject | Where {$_.Message -like "*LoadProfile: $username*"}
+
+    $SessionEvents = $FSLogixLogObject | Where-Object {$_.Message -like "*$samaccountname*"}
     Write-Verbose "Number of SessionEvents: $($SessionEvents.Count)"
-    $FSLogixStartEvent = $SessionEvents[0].time
-    $FSLogixEndEvent = $SessionEvents[1].time
-    $returnObject = New-Object System.Collections.ArrayList
-    foreach ($FSLogixLogLine in $FSLogixLogObject) {
-        if (($FSLogixLogLine.Time -le $FSLogixEndEvent) -and ($FSLogixLogLine.Time -ge $FSLogixStartEvent)) {
-            $returnObject.Add($FSLogixLogLine)|Out-Null
+    Write-Verbose "SessionEvents:"
+    #Write-Verbose "$($SessionEvents | Format-Table | Out-String)"
+
+    ## Going to assume that the process and thread ID will be unique. This maybe a mistake ##TTYE
+    if ($SessionEvents.count -gt 0) {
+        ## Get unique thread/process id
+        $ProcessThreadID = $SessionEvents.threadid | Sort-Object -Unique
+        Write-Verbose "Number of unique thread id's : $($ProcessThreadID.Count)"
+        Write-Verbose "$($ProcessThreadID)"
+        ## Get all events with the process threadid
+        $FSLogixEvents = New-Object System.Collections.ArrayList
+        foreach ($threadId in $ProcessThreadID) {
+            Write-Verbose "ThreadID: `"$threadId`""
+            Write-Verbose "$($FSLogixLogObject | Where-Object {$_.ThreadId -like "*$threadId*"})"
+            $FSLogixLogObject.ForEach({if ($_.ThreadId -eq $threadId) {$FSLogixEvents.Add($_)}})
+        }
+        return $FSLogixEvents
+    } else {
+        Write-Verbose "Found no events for $samAccountName in $file"
+    }
+}
+
+function Get-FSLogixProfileEvents {
+    [CmdletBinding()]
+    param(
+    [Parameter(Mandatory=$true)]
+    [DateTime]
+    $Start,
+
+    [Parameter(Mandatory=$true)]
+    [String]
+    $samAccountName
+    )
+
+
+    Write-Verbose "samAccountName: `"$($samAccountName)`""
+    Write-Verbose "User Session StartTime: `"$($Start)`""
+
+    #FSLogix Log path is here: C:\ProgramData\FSLogix\Logs\Profile
+    #at the time of this testing version 2.9.7205.27375 of FSLogix provided all the necessary information
+
+    Write-Verbose "Looking for file with `"$($($start).ToString("yyyyMMdd"))`" in the file name"
+    try {
+        $FSLogixLogDir = Get-ItemPropertyValue -Path HKLM:\SOFTWARE\FSLogix\Logging -Name Logdir
+        Write-Verbose "LogDir value configured. LogDir set to $FSLogixLogDir"
+        }
+    Catch {
+        #LogDir registry value not found. Set to default:
+            Write-Verbose "LogDir value not set. Setting LogDir to default path"
+            $FSLogixLogDir = "C:\ProgramData\FSLogix\Logs"
+        }
+
+    $logFiles = Get-ChildItem -Path "$FSLogixLogDir" -Recurse | Where-Object {$_.Name -like "*$($($start).ToString("yyyyMMdd"))*"}
+
+    $AllEvents = New-Object System.Collections.ArrayList
+    $SortedEvents = New-Object System.Collections.ArrayList
+    foreach ($file in $LogFiles.FullName) {
+        Write-Verbose "Checking for events in logfile: $file"
+        try {
+            Test-Path $file | out-null
+        } catch {
+            Write-Error "Unable to determine or find FSLogix profile log file. Failed with file $file"
+            break
+        }
+        
+        $AllEvents.Add($(Process-FSLogixLogFile -LogFile $($file)))|Out-Null
+        foreach ($events in $allEvents) {
+            foreach ($event in $events) {
+                $SortedEvents.Add($event) | Out-Null
+            }
         }
     }
-
-    return $returnObject
-
+    $SortedEvents | Select-Object -Property Time,ThreadId,Source,LogLevel,Message -Unique | Sort-Object -Property Time | Format-Table -AutoSize
 }
 
 #region Login Information Gathering
@@ -168,7 +201,7 @@ $LSADefinitions = @'
     {
         public UInt32 Size;
         public LUID LoginID;
-        public LSA_UNICODE_STRING Username;
+        public LSA_UNICODE_STRING samAccountName;
         public LSA_UNICODE_STRING LoginDomain;
         public LSA_UNICODE_STRING AuthenticationPackage;
         public UInt32 LogonType;
@@ -251,7 +284,7 @@ else
 
                 #extract some useful information from the session data struct
                 [datetime]$loginTime = [datetime]::FromFileTime( $data.LoginTime )
-                $thisUser = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.Username.buffer) #get the account name
+                $thisUser = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.samAccountName.buffer) #get the account name
                 $thisDomain = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.LoginDomain.buffer) #get the domain name
                 try
                 { 
@@ -266,7 +299,7 @@ else
                 {
                     $earliestSession = $loginTime
                 }
-                if( $thisUser -eq $Username -and $thisDomain -eq $UserDomain -and $secType -match 'Interactive' )
+                if( $thisUser -eq $samAccountName -and $thisDomain -eq $UserDomain -and $secType -match 'Interactive' )
                 {
                     $authPackage = [System.Runtime.InteropServices.Marshal]::PtrToStringUni($data.AuthenticationPackage.buffer) #get the authentication package
                     $session = $data.Session # get the session number
@@ -278,7 +311,7 @@ else
 
                         [pscustomobject]@{
                             'Sid' = $sid
-                            'Username' = $thisUser
+                            'samAccountName' = $thisUser
                             'Domain' = $thisDomain
                             'Session' = $session
                             'LoginId' = [uint64]( $loginID = [Int64]("0x{0:x8}{1:x8}" -f $data.LoginID.HighPart , $data.LoginID.LowPart) )
@@ -302,7 +335,7 @@ else
     [void]([Win32.Secure32]::LsaFreeReturnBuffer( $luidPtr ))
     $luidPtr = [IntPtr]::Zero
 
-    Write-Debug "Found $(if( $lsaSessions ) { $lsaSessions.Count } else { 0 }) LSA sessions for $UserDomain\$Username, earliest session $(if( $earliestSession ) { Get-Date $earliestSession -Format G } else { 'never' })"
+    Write-Debug "Found $(if( $lsaSessions ) { $lsaSessions.Count } else { 0 }) LSA sessions for $UserDomain\$samAccountName, earliest session $(if( $earliestSession ) { Get-Date $earliestSession -Format G } else { 'never' })"
 }
 
 if( $lsaSessions -and $lsaSessions.Count )
@@ -311,7 +344,7 @@ if( $lsaSessions -and $lsaSessions.Count )
     [array]$loginIds = @( $lsaSessions | Where-Object { $_.LoginTime -eq $lsaSessions[0].LoginTime } | Select-Object -ExpandProperty LoginId )
     if( ! $loginIds -or ! $loginIds.Count )
     {
-        Write-Error "Found no login ids for $username at $(Get-Date -Date $lsaSessions[0].LoginTime -Format G)"
+        Write-Error "Found no login ids for $samAccountName at $(Get-Date -Date $lsaSessions[0].LoginTime -Format G)"
     }
     $Logon = New-Object -TypeName psobject -Property @{
         LogonTime = $lsaSessions[0].LoginTime
@@ -320,15 +353,17 @@ if( $lsaSessions -and $lsaSessions.Count )
         LogonID = $loginIds
         UserSID = $lsaSessions[0].Sid
         Type = $lsaSessions[0].Type
-        UserName = $Username
+        SamAccountName = $samAccountName
         UserDomain = $UserDomain
     }
 }
 else
 {
-    Throw "Failed to retrieve logon session for $UserDomain\$Username from LSASS"
+    Throw "Failed to retrieve logon session for $UserDomain\$samAccountName from LSASS"
 }
 
 #endregion
 
-Get-FSLogixProfileEvents -Start $logon.LogonTime -Username $logon.UserName
+Get-FSLogixProfileEvents -Start $logon.LogonTime -samAccountName $logon.samAccountName
+
+

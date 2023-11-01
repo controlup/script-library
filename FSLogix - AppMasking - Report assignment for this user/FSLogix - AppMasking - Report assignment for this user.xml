@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>7634bcd0-f271-488b-b789-3ec014ad0f35</SBAId>
+    <RootSBAId>b96cd612-df85-4605-afb7-17a3e7f734b6</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638343655080368808</SQN>
+    <Name>FSLogix - AppMasking - Report assignment for this user</Name>
+    <Description>Reports application assignments for this selected user on configured AppMasking applications on this machine</Description>
+    <ActionCategory>User Environment</ActionCategory>
+    <Version>3.2.10</Version>
+    <DateCreated>2023-08-16T16:08:24.43</DateCreated>
+    <DateModified>2023-10-26T19:28:36.373</DateModified>
+    <DatePublished>2023-10-31T16:11:48.037</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>3</Status>
+    <CheckSum>ha/AqIRirbbvw3LTICWhNfjbTRA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAAyJJREFUOE9FU0lPU1EUfhgXbBxDXKixGBkj4B8w0Rg3qAujJsSNCzRxoRsTARM1EQQDYhgFRAlCqGAVBzCBAmUIhRZKeRQQKBSoTKW09IHMBd79PPcV8CRfct+57zs53/nOFXYDwIHqfufnmGLzdrrOxsTJRRb+solFpDQzq3NZflo9xK6/N3k15uk0+tdvh+YLSqgIg9fyO9jBxzVQm6ZAJFzIMeByXgcmpDW8a/uDQ3R3p1Rk9O8Pgv8u+TDBSpBnFtfRNi7REWCMQTs8j/oRj3KWCS2jHnhWvPxaJmgIfsI3i+NX3I8B5lr2IiS5BSeS9agjUkWfC+G5ooKqwXlUWJxQpRoQld6OpfUtxKpFVqi3JwqXcgws6IUOdUNzRG5FcGYXGscWUGaZQ2SeqOA7Ffg5NI/Q7G6o0gzo/LOAk0/rcbWgY1W4XWxWNHu3ZKQ226Hpm1Pa3dxmqDSM4WenfU+Cmormtk9hW2Yo0NvxUNMHoW3Mw2b/rmOLkqWiE1VWD9eI9cIiSIEhCjbKypUCXNZnAg8+WPPEgiwce6LF/YpefOl1UotmnH0rQhydg3QmHJIq2IewKLSOSThHcvhMGmwexJTQObkRwtH4Wtz7ZIFadCCMNEZQge7hWUinQ/8XCI2Ebti9V6CW3LlV3I2QRB2ElhE34+1sbcvINkyjtMeptLv2JhPSqSBFApfDc0XmWeR1OhS5NtcyiCsLsWoLvoozSrLININf1nlFIx9cbesg6oy2vSFWkRPlZCeP8q5pPKsehHA+Qy9zLY3U4nFuY0YXWuyL0PS7EUlyoqhtTtTaJITl+Gw0Ty5C9bwe0XnGJaHEOFH+QNML7kRgUjNOpOhRPeDCR3Jkd5G+/najjKQFvjYighZJWvWC7GdJNdZ4vsr+hHaCPE2rbLRLSrubNBO+E98H3D4JJLFxxA3n0gZXwN9DpvIWeNDHEULTjQ8mFpCgRWWPA6PuVVwpNOEmTdu1vKEsW0BCLe6qezg5i7Bvh+4LSuwvap/Ijs7v8L7SDjPjuCSfeq4jrQ347fgrP6rsZxez2lZS60fidigUgvAPvED504sfbEIAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>AppMasking,FSLogix</Tags>
+      <Credits>Credits to:Trentent Tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>trentent.tye@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEANVXbW/SUBQ+n038D023uKGCmybGEDFBBjplG2FddNmIIpTBpJS0ZY6Y/Xefe+695ba03fxgNtO03NdznvOcl3t5Sxv0mB6RpZ4KHdMpHdIRddDax2vO6qdLLs3Jp4AiCtGPaIwRi/rohTShC5qhP+SROZ4pxgZoR/j1MSf3+Pi6GJG7A0POAivkiJ8Y9yBjgPaE5QtkSex71ATiBvDtA7+D7xFs+Z8saNJXqtMB0LfRzkJe4fecPmB/RGVqweI2tFxA5jX2JvHXGf0B2/WTtV6AJbGzj94UoxXMh7QLqeUY9QyzHuO1weYh1bgf4Vli9DlYPcFYHfI9ljnBvgj7+sxJgJ5e8wky58yQZKONNT/we6I0iZV70FGjy8TKKa/TcwNI9YDlLp4U3rHoF3MsmLZSDFmZnFjYv4BWl2Vony9jL0csLzQ8+5B8d3+8mPIWsU+1thVrt8V9B9q7zF4TedtE21qLxiwrhyr2JNoF98bM3mEcwz6NCvy2wiCqnsMVJI/PCFIClf3ZbP1N/RgV1gZdOUzcaUwNrm8OR56DfhXvMfsqVHpeMMIk82kpB5Cyh1rZwtuAXbpufqOPfAI46HVxKmQjCCC1z1krrHXwnAKPxPKSdvC+QqTv0Bt8d+l1ppQ66oEDbUJPlaUIqTOWKr5iZKnQb9C72IfiPQMGD7rb7J/3bOdQ+WObStTjVR1gDDgiLIyaGM7gHT3nquqzzawJObqiLVGFNuGxPuedy3LPVNWTunqYz4rYUox0EygCzjeprcVZLDOrBmlN7LvCWMCe85TtPTBSVRWjhZkpUAkdHcY2Bta8nc/guznaA8wI3OZuKTUPT8lgN21jsmp0VXXQaIQlFqq+zzvKxrjZLmKiDH+OuT80dtgpvecq/0K0unGFsnMxd5Eh/xrjVgHGEaRco8a4+LpYueLXxzl3yV6K0OsVcBwq5Pr0WGHY57j11iy4zVdlZZU+nZ8C4Qgr+4xN1idX1Q+RN5vxaWAxd/k6RAxZ9DuRaV/YJ0JXGZm+QGvOX+Hd2gN97DtboC2vMismV4JT0ZrGdaGUkjvhE2qbY+4YNczH+pmKrWRlEmd+g7Nc3gLESfIZM0vs3lqrP1vQtO4H/ei8MC1xOEIjFWlPjFWrqAmMm0U5ceLpyiMia6TyxbxL3oWXvHvoenXNvg8WWVVRt6Ipx7QLNHYs9YhrZWCc0Tbun6v57xjJWlNKoLgh8Y9AnhF5vN8Xq1eM/Qd0hKmbwA33buKqVBTnUlte1svoXDDeEiVvj6M4rm+rHpoVO3HS/wF4xGk9rA4AAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>3931645c-7526-4d64-aca0-9fbe5a24e5cb</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>3931645c-7526-4d64-aca0-9fbe5a24e5cb</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>ADDN</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>username</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>F8B8sMauhZH9UKU91IN6Fgc3y38=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

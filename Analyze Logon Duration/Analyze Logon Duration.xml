@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>4b5813ff-894c-419b-8aab-0d58d01cfe1f</SBAId>
+    <SBAId>f9f534a6-6cea-4497-879a-ab2a5a7d402f</SBAId>
     <RootSBAId>b636f434-2843-4a5c-a21a-eed7a02d0946</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
     <SQN>638286427551867244</SQN>
     <Name>Analyze Logon Duration</Name>
     <Description>Get a detailed overview of the most recent logon process for a specific user. This script queries the event log for every major event that relates to the logon process. Use this action to track down which phase is responsible for delays during the logon process. Uses WMI to retrieve pre-Windows logon phase data from Citrix so does not use OData and therefore does not need credentials</Description>
-    <Category>User Environment</Category>
-    <Version>17.32.174</Version>
+    <ActionCategory>User Environment</ActionCategory>
+    <Version>18.32.175</Version>
     <DateCreated>2018-07-02T18:55:36.987</DateCreated>
-    <DateModified>2023-08-17T10:21:35.807</DateModified>
-    <DatePublished>2023-08-24T14:36:57.367</DatePublished>
-    <LastEditorName>Bill Powell</LastEditorName>
+    <DateModified>2023-10-10T17:07:30.32</DateModified>
+    <DatePublished>2023-10-10T17:22:46.953</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
     <CreatorName>Guy Leech</CreatorName>
-    <Status>4</Status>
+    <Status>3</Status>
     <CheckSum>Ss4wQy/8LXTeCxwR0xnCmZ5j9ZI=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
@@ -30,9 +30,9 @@ Original code by: Guy Leech
 Original code by: Niron Koren
 Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>bill.powell@controlup.com</ContactEmail>
+      <ContactEmail>techmarketing@controlup.com</ContactEmail>
       <Notes />
-      <DownloadCount>6015</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>4096</AllowedEntitiesEx>
@@ -60,29 +60,11 @@ Taken from:</Credits>
                   <ArgumentId>b53ba4ac-cfae-49bf-9157-a5f03568ec4f</ArgumentId>
                   <ArgumentType>2</ArgumentType>
                   <Name>iSessionID</Name>
-                  <ArgumentNumber>5</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <ArgumentName>SessionId</ArgumentName>
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>4096</EntityType>
-                </SBAArgumentDescriptor>
-              </value>
-            </item>
-            <item>
-              <key>
-                <string>a7bf3a8d-4ff0-4067-860a-77089887d020</string>
-              </key>
-              <value>
-                <SBAArgumentDescriptor>
-                  <ArgumentId>a7bf3a8d-4ff0-4067-860a-77089887d020</ArgumentId>
-                  <ArgumentType>1</ArgumentType>
-                  <Name>-ClientName</Name>
-                  <DefaultValue>-ClientName</DefaultValue>
-                  <ArgumentNumber>8</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
-                  <ValidationString>^\-ClientName$</ValidationString>
-                  <ValidationError />
-                  <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
                 </SBAArgumentDescriptor>
               </value>
             </item>
@@ -95,8 +77,9 @@ Taken from:</Credits>
                   <ArgumentId>cbe898b4-3e6b-4fc5-a639-dd69f2f95bf7</ArgumentId>
                   <ArgumentType>2</ArgumentType>
                   <Name>sUserAccount</Name>
-                  <ArgumentNumber>1</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>DomainUser</ArgumentName>
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>4096</EntityType>
                 </SBAArgumentDescriptor>
@@ -111,29 +94,11 @@ Taken from:</Credits>
                   <ArgumentId>2e72f5d3-6a3b-4abe-b12e-e2ab8387008b</ArgumentId>
                   <ArgumentType>2</ArgumentType>
                   <Name>sSessionName</Name>
-                  <ArgumentNumber>7</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <ArgumentName>SessionName</ArgumentName>
+                  <EmptyBehavior>1</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>4096</EntityType>
-                </SBAArgumentDescriptor>
-              </value>
-            </item>
-            <item>
-              <key>
-                <string>e2ecd613-0d78-4906-97b7-d6f34f24efce</string>
-              </key>
-              <value>
-                <SBAArgumentDescriptor>
-                  <ArgumentId>e2ecd613-0d78-4906-97b7-d6f34f24efce</ArgumentId>
-                  <ArgumentType>1</ArgumentType>
-                  <Name>-DomainUser</Name>
-                  <DefaultValue>-DomainUser</DefaultValue>
-                  <ArgumentNumber>0</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
-                  <ValidationString>-DomainUser</ValidationString>
-                  <ValidationError />
-                  <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
                 </SBAArgumentDescriptor>
               </value>
             </item>
@@ -146,48 +111,11 @@ Taken from:</Credits>
                   <ArgumentId>01c1b15a-8bd4-4727-b2e0-ebf53ab52db0</ArgumentId>
                   <ArgumentType>2</ArgumentType>
                   <Name>ShellLoadTime</Name>
-                  <ArgumentNumber>3</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <ArgumentName>CUDesktopLoadTime</ArgumentName>
+                  <EmptyBehavior>1</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>4096</EntityType>
-                </SBAArgumentDescriptor>
-              </value>
-            </item>
-            <item>
-              <key>
-                <string>d009d194-afed-416a-a84a-d08ca4ccc3dd</string>
-              </key>
-              <value>
-                <SBAArgumentDescriptor>
-                  <ArgumentId>d009d194-afed-416a-a84a-d08ca4ccc3dd</ArgumentId>
-                  <ArgumentType>1</ArgumentType>
-                  <Name>-SessionId</Name>
-                  <DefaultValue>-SessionId</DefaultValue>
-                  <ArgumentNumber>4</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
-                  <ValidationString>-SessionId</ValidationString>
-                  <ValidationError />
-                  <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
-                </SBAArgumentDescriptor>
-              </value>
-            </item>
-            <item>
-              <key>
-                <string>973e9811-583e-4514-946a-43f7089c0c6c</string>
-              </key>
-              <value>
-                <SBAArgumentDescriptor>
-                  <ArgumentId>973e9811-583e-4514-946a-43f7089c0c6c</ArgumentId>
-                  <ArgumentType>1</ArgumentType>
-                  <Name>-CUDesktopLoadTime</Name>
-                  <DefaultValue>-CUDesktopLoadTime</DefaultValue>
-                  <ArgumentNumber>2</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
-                  <ValidationString>-CUDesktopLoadTime</ValidationString>
-                  <ValidationError />
-                  <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
                 </SBAArgumentDescriptor>
               </value>
             </item>
@@ -200,29 +128,11 @@ Taken from:</Credits>
                   <ArgumentId>3166d49e-d26d-4d19-b1e6-1196bc83b713</ArgumentId>
                   <ArgumentType>2</ArgumentType>
                   <Name>sClientName</Name>
-                  <ArgumentNumber>9</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <ArgumentName>ClientName</ArgumentName>
+                  <EmptyBehavior>1</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>4096</EntityType>
-                </SBAArgumentDescriptor>
-              </value>
-            </item>
-            <item>
-              <key>
-                <string>2371788a-e6ff-4766-8dc5-8b018befc232</string>
-              </key>
-              <value>
-                <SBAArgumentDescriptor>
-                  <ArgumentId>2371788a-e6ff-4766-8dc5-8b018befc232</ArgumentId>
-                  <ArgumentType>1</ArgumentType>
-                  <Name>-SessionName</Name>
-                  <DefaultValue>-SessionName</DefaultValue>
-                  <ArgumentNumber>6</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
-                  <ValidationString>^\-SessionName$</ValidationString>
-                  <ValidationError />
-                  <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
                 </SBAArgumentDescriptor>
               </value>
             </item>
@@ -234,7 +144,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>1nE5FNwGwa7Pvj8PDTBnU8SYwxE=</ImportValidationString>
+    <ImportValidationString>PY2ll6B4ZwDLkF7KteqeG0GOR6I=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

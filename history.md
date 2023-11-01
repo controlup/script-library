@@ -1,3 +1,16 @@
+01-11-2023
+==========
+## Added:
+### _Request a certificate from CA_
+### _Create Solve users from AD Security Group_
+### _FSLogix - AppMasking - Report assignments_
+### _FSLogix - AppMasking - Report assignment for this user_
+### _FSLogix - AppMasking - List Rules_
+### _Set AD User Password_
+
+### Removed:
+### _Show Horizon View usage_
+<BR><BR>
 26-06-2023
 ==========
 ## Added:
@@ -180,6 +193,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 
