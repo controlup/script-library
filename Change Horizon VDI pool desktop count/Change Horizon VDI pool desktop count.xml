@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>a450e1b4-33dc-4c18-abac-16d8abeaa900</SBAId>
+    <SBAId>969c1482-cf95-4002-8447-a6c58a37131c</SBAId>
     <RootSBAId>b24d9654-caf3-40e5-bc6c-96853fed9f62</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637895924185374377</SQN>
+    <SQN>638148109918849949</SQN>
     <Name>Change Horizon VDI pool desktop count</Name>
     <Description>Changes the amount VDI desktops in a desktop pool. Use UP_FRONT or ON_DEMAND for the Provisioningtype depending if you want to provision all desktops up front. If UP_FRONT is used minNumberOfMachines and numberOfSpareMachines will be ignored.
 
@@ -13,14 +13,14 @@ This action should be executed against a Horizon endpoint machine (one which has
 This script requires VMWare PowerCLI  to be installed on the machine running the script.
     PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers'
 </Description>
-    <Category />
-    <Version>3.7.12</Version>
+    <ActionCategory>Horizon Management</ActionCategory>
+    <Version>4.7.13</Version>
     <DateCreated>2020-01-09T09:25:40.31</DateCreated>
-    <DateModified>2022-03-26T10:06:32.317</DateModified>
-    <DatePublished>2022-03-26T10:06:39.983</DatePublished>
-    <LastEditorName>wouter.kursten</LastEditorName>
+    <DateModified>2023-11-24T10:57:23.8</DateModified>
+    <DatePublished>2023-11-24T11:00:22.43</DatePublished>
+    <LastEditorName>Wouter Kursten</LastEditorName>
     <CreatorName>Wouter Kursten</CreatorName>
-    <Status>4</Status>
+    <Status>3</Status>
     <CheckSum>Ynh6VZEwM5T3EDMBhzqP2TeKLi0=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
@@ -29,15 +29,15 @@ This script requires VMWare PowerCLI  to be installed on the machine running the
       <IconType>0</IconType>
     </Icon>
     <ShareDescriptor>
-      <Author>wouter.kursten</Author>
+      <Author>Wouter Kursten</Author>
       <Tags>vdi,horizon,vmware</Tags>
-      <Credits>Credits to: w.kursten
+      <Credits>Credits to: Wouter Kursten
 Original code by:
 Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
       <Notes />
-      <DownloadCount>35</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -67,7 +67,8 @@ Taken from:</Credits>
                   <Name>HzPrimaryConnectionServer</Name>
                   <DefaultValue />
                   <ArgumentNumber>1</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <ValidationError />
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
@@ -85,7 +86,8 @@ Taken from:</Credits>
                   <Name>hzPoolName</Name>
                   <DefaultValue />
                   <ArgumentNumber>0</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <ValidationError />
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
@@ -195,7 +197,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>HDtM27VEx9OrjwfoPmGFaR6h6no=</ImportValidationString>
+    <ImportValidationString>KrvI5mSZ1cYwHO0kodnAlMS+/mw=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

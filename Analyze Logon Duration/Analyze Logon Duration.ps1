@@ -3817,8 +3817,8 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                 { ($_.Id -eq 9662 -and $_.Properties[4].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9659 -and $_.Properties[1].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9661 -and $_.Properties[0].Value -match "SessionID:$sessionID`$")} )) -and $appsenseEvents.Count )
             {
                 ## Times are in UTC so convert to local time - https://devblogs.microsoft.com/scripting/powertip-convert-from-utc-to-my-local-time-zone/
-                $currentTimeZone = Get-CimInstance -ClassName Win32_TimeZone | Select-Object -ExpandProperty StandardName
-                $TZ = [System.TimeZoneInfo]::FindSystemTimeZoneById( $currentTimeZone )
+                $currentTimeZone = Get-TimeZone    # without parameters, gets the current time zone
+                $TZ = [System.TimeZoneInfo]::FindSystemTimeZoneById( $currentTimeZone.Id )
                 $emuserProcess = $null
                 [bool]$foundPSError = $false
                 [bool]$foundPSGood = $false
@@ -5644,6 +5644,7 @@ Switch ($PsCmdlet.ParameterSetName) {
 Write-Verbose -message "just before Get-LogonDurationAnalysis"
 
 Get-LogonDurationAnalysis @params
+
 
 
 

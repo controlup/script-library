@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>13892421-eb7a-439e-8e14-566fe14c2b67</SBAId>
+    <SBAId>adfc25b5-2e5b-49ec-a0e4-48b1bcfc650d</SBAId>
     <RootSBAId>2b9ad4b6-cfbf-4b62-8500-422ca21680ca</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
     <SQN>637394942681692056</SQN>
@@ -12,14 +12,14 @@ The script also uses the Horizon api's to poll the Cloud Pod status of the syste
 This Script Requires a Horizon Credential file for the user running the scipt. This can be created using the Create credentials for Horizon scripts Script Action.
 Requires Horizon 7.5 or later
 This script requires VMware PowerCLI to be installed on the machine running the script. PowerCLI can be installed using the Install and configure VMware PowerCLI Script Action</Description>
-    <Category />
-    <Version>2.7.79</Version>
+    <ActionCategory>Horizon Management</ActionCategory>
+    <Version>3.8.81</Version>
     <DateCreated>2020-09-22T09:36:03.24</DateCreated>
-    <DateModified>2020-10-28T15:00:46.61</DateModified>
-    <DatePublished>2020-10-28T15:01:29.133</DatePublished>
+    <DateModified>2023-11-24T11:07:33.903</DateModified>
+    <DatePublished>2023-11-24T11:13:42.61</DatePublished>
     <LastEditorName>Wouter Kursten</LastEditorName>
     <CreatorName>Wouter Kursten</CreatorName>
-    <Status>4</Status>
+    <Status>3</Status>
     <CheckSum>P1/Hl7IUSq06oD0rLrrFYAWfvx4=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
@@ -29,14 +29,14 @@ This script requires VMware PowerCLI to be installed on the machine running the 
     </Icon>
     <ShareDescriptor>
       <Author>Wouter Kursten</Author>
-      <Tags>horizon, vdi, snapshot</Tags>
-      <Credits>Credits to: w.kursten
+      <Tags>horizon,vdi,snapshot</Tags>
+      <Credits>Credits to: Wouter Kursten
 Original code by:
 Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
       <Notes />
-      <DownloadCount>45</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -51,29 +51,10 @@ Taken from:</Credits>
       <ScriptType>3</ScriptType>
       <TimeoutPolicy>1</TimeoutPolicy>
       <ConcurrencyMode>2</ConcurrencyMode>
-      <ExecutionContext>0</ExecutionContext>
+      <ExecutionContext>3</ExecutionContext>
       <Arguments>
         <inner>
           <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
-            <item>
-              <key>
-                <string>8cc10885-55c3-4c42-a2a2-49bb68be1039</string>
-              </key>
-              <value>
-                <SBAArgumentDescriptor>
-                  <ArgumentId>8cc10885-55c3-4c42-a2a2-49bb68be1039</ArgumentId>
-                  <ArgumentType>1</ArgumentType>
-                  <Name>Mark Machines for Deletion (VDI Only)</Name>
-                  <DefaultValue>False</DefaultValue>
-                  <ArgumentNumber>1</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
-                  <ValidationString>True|False</ValidationString>
-                  <ValidationError>Please use True or False</ValidationError>
-                  <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
-                </SBAArgumentDescriptor>
-              </value>
-            </item>
             <item>
               <key>
                 <string>73986296-2b25-475e-ba50-751f17bd6ff8</string>
@@ -103,9 +84,29 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>HzPrimaryConnectionServer</Name>
                   <ArgumentNumber>0</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>8cc10885-55c3-4c42-a2a2-49bb68be1039</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>8cc10885-55c3-4c42-a2a2-49bb68be1039</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Mark Machines for Deletion (VDI Only)</Name>
+                  <DefaultValue>False</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>True|False</ValidationString>
+                  <ValidationError>Please use True or False</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
                 </SBAArgumentDescriptor>
               </value>
             </item>
@@ -117,7 +118,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>wDF5vkBZu3aZLnu4mk0cRXsog4o=</ImportValidationString>
+    <ImportValidationString>gOwr3BvjBkSX+zb+eXryykj5vLE=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

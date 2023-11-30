@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>0982f2b6-1c0a-464f-b00c-0fa5056b315b</SBAId>
+    <SBAId>17134a20-ee2d-4e39-8acf-bd6cf1da04e3</SBAId>
     <RootSBAId>0dd1a4f5-b9c2-406c-bd55-6f2bab8f6e0e</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
     <SQN>637309299305581664</SQN>
@@ -15,14 +15,14 @@ If you get TLS/SSL errors use this command Set-PowerCLIConfiguration -InvalidCer
 To get rid of the CEIP warning use Set-PowerCLIConfiguration -ParticipateInCeip $true 
    or Set-PowerCLIConfiguration -ParticipateInCeip $false
 Credentials can be set using the 'Create credentials for Horizon View scripts' script.</Description>
-    <Category />
-    <Version>1.2.3</Version>
+    <ActionCategory>Horizon Management</ActionCategory>
+    <Version>2.4.6</Version>
     <DateCreated>2020-07-07T10:52:51.263</DateCreated>
-    <DateModified>2020-07-21T09:27:44.78</DateModified>
-    <DatePublished>2020-07-21T11:58:53.46</DatePublished>
+    <DateModified>2023-11-24T11:10:38.077</DateModified>
+    <DatePublished>2023-11-24T11:13:10.127</DatePublished>
     <LastEditorName>Wouter Kursten</LastEditorName>
     <CreatorName>Wouter Kursten</CreatorName>
-    <Status>4</Status>
+    <Status>3</Status>
     <CheckSum>j3MSa3etsaRmJNLRjoknQjH4gWY=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
@@ -32,14 +32,14 @@ Credentials can be set using the 'Create credentials for Horizon View scripts' s
     </Icon>
     <ShareDescriptor>
       <Author>Wouter Kursten</Author>
-      <Tags>horizon, vdi, message</Tags>
-      <Credits>Credits to: wouter.kursten
+      <Tags>horizon,vdi,message</Tags>
+      <Credits>Credits to: Wouter Kursten
 Original code by:
 Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
       <Notes />
-      <DownloadCount>72</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>4096</AllowedEntitiesEx>
@@ -66,9 +66,46 @@ Taken from:</Credits>
                 <SBAArgumentDescriptor>
                   <ArgumentId>acf065c8-c587-4319-8023-a6cf3e1f8d71</ArgumentId>
                   <ArgumentType>2</ArgumentType>
-                  <Name>hzPoolName</Name>
+                  <Name>hzPoolDisplayName</Name>
                   <ArgumentNumber>2</ArgumentNumber>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>4096</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>c0648528-c228-497c-8cc8-8792cc1e5646</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c0648528-c228-497c-8cc8-8792cc1e5646</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Message severity level</Name>
+                  <DefaultValue>INFO</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
                   <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>WARNING|ERROR|INFO</ValidationString>
+                  <ValidationError>This requires either WARNING, ERRO or INFO all capitalized.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>970e28bb-ec8a-4f58-ba16-13d36d1b94fe</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>970e28bb-ec8a-4f58-ba16-13d36d1b94fe</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sUserAccount</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>4096</EntityType>
                 </SBAArgumentDescriptor>
@@ -103,44 +140,10 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>HzPrimaryConnectionServer</Name>
                   <ArgumentNumber>0</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
-                </SBAArgumentDescriptor>
-              </value>
-            </item>
-            <item>
-              <key>
-                <string>c0648528-c228-497c-8cc8-8792cc1e5646</string>
-              </key>
-              <value>
-                <SBAArgumentDescriptor>
-                  <ArgumentId>c0648528-c228-497c-8cc8-8792cc1e5646</ArgumentId>
-                  <ArgumentType>1</ArgumentType>
-                  <Name>Message severity level</Name>
-                  <DefaultValue>INFO</DefaultValue>
-                  <ArgumentNumber>4</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
-                  <ValidationString>WARNING|ERROR|INFO</ValidationString>
-                  <ValidationError>This requires either WARNING, ERRO or INFO all capitalized.</ValidationError>
-                  <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>0</EntityType>
-                </SBAArgumentDescriptor>
-              </value>
-            </item>
-            <item>
-              <key>
-                <string>970e28bb-ec8a-4f58-ba16-13d36d1b94fe</string>
-              </key>
-              <value>
-                <SBAArgumentDescriptor>
-                  <ArgumentId>970e28bb-ec8a-4f58-ba16-13d36d1b94fe</ArgumentId>
-                  <ArgumentType>2</ArgumentType>
-                  <Name>sUserAccount</Name>
-                  <ArgumentNumber>1</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
-                  <MaskTypedCharacters>false</MaskTypedCharacters>
-                  <EntityType>4096</EntityType>
                 </SBAArgumentDescriptor>
               </value>
             </item>
@@ -152,7 +155,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>hKl/93M/3Rn+D3trbRK1ctol4vA=</ImportValidationString>
+    <ImportValidationString>6q9mM1M6VSksBj4le9yiGhLe588=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>d2aaabbc-7c06-40fc-ad88-a0d91b269e94</SBAId>
+    <SBAId>6a1afd76-5aab-4648-9b20-832712ad5c97</SBAId>
     <RootSBAId>c7904f85-b87a-409e-a7e7-acf7b0402725</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637230792076347143</SQN>
+    <SQN>638148121932133121</SQN>
     <Name>Recover Provisioning for Horizon Linked Clone Pool</Name>
     <Description>This script acts when provisioning gets disabled for linked clones desktop pools because the overcommit ratio is set too low. It will calculate the correct ratio and set it to that.
 After changing the ratio it will enable provisioning and when set to true it can also force a rebalance of the datastores.
@@ -13,14 +13,14 @@ When using iwth a trigger the Connection Server FQDN and Horizon Pool name need 
 This script requires VMWare PowerCLI to be installed on the machine running the script.
 PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers' Or by using the 'Install VMware PowerCLI' script.
 Credentials can be set using the 'Prepare machine for Horizon View scripts' script.</Description>
-    <Category />
-    <Version>1.1.3</Version>
+    <ActionCategory>Horizon Management</ActionCategory>
+    <Version>2.1.4</Version>
     <DateCreated>2020-04-02T13:03:03.013</DateCreated>
-    <DateModified>2020-04-21T11:38:09.47</DateModified>
-    <DatePublished>2020-04-21T11:22:35.65</DatePublished>
+    <DateModified>2023-11-24T11:08:48.227</DateModified>
+    <DatePublished>2023-11-24T11:13:18.08</DatePublished>
     <LastEditorName>Wouter Kursten</LastEditorName>
     <CreatorName>Wouter Kursten</CreatorName>
-    <Status>4</Status>
+    <Status>3</Status>
     <CheckSum>Yb0/MJBVzPomPuLRVSaecYK1cz8=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
@@ -31,13 +31,13 @@ Credentials can be set using the 'Prepare machine for Horizon View scripts' scri
     <ShareDescriptor>
       <Author>Wouter Kursten</Author>
       <Tags>horizon, vdi, provisioning, vmware</Tags>
-      <Credits>Credits to: wouter.kursten
+      <Credits>Credits to: Wouter Kursten
 Original code by:
 Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
       <Notes />
-      <DownloadCount>17</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -66,7 +66,8 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>HzPrimaryConnectionServer</Name>
                   <ArgumentNumber>1</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
                 </SBAArgumentDescriptor>
@@ -82,7 +83,8 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>hzPoolName</Name>
                   <ArgumentNumber>0</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
                 </SBAArgumentDescriptor>
@@ -115,7 +117,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>sSzTVGn6Y1IR0hm2gWhscKYZwc4=</ImportValidationString>
+    <ImportValidationString>AZaNsn1yXp/S792G5/5vcjFDxO4=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

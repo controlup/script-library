@@ -8,13 +8,13 @@ This script requires VMWare PowerCLI to be installed on the machine running the 
 PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers' Or by using the 'Install VMware PowerCLI' script.
 Credentials can be set using the 'Prepare machine for Horizon View scripts' script.
 
-Version: 1.1.3
+Version: 2.1.4
 
 Creator: Wouter Kursten
 
 Date Created: 04/02/2020 13:03:03
 
-Date Modified: 04/21/2020 11:38:09
+Date Modified: 11/24/2023 11:08:48
 
 Scripting Language: ps1
 

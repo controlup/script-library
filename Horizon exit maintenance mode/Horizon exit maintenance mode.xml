@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>c5618219-afe1-4b8a-911b-6776b0a5ab99</SBAId>
+    <SBAId>e19ebc8e-9a82-43fa-9f62-b02cddeba1d7</SBAId>
     <RootSBAId>c119511e-020f-42d8-8829-77c18b39dd0b</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637109770171792254</SQN>
+    <SQN>638148398237790452</SQN>
     <Name>Horizon exit maintenance mode</Name>
     <Description>Take Horizon View machine out of Maintenance.
 Can be used as an Automated action to remove a machine from maintenance after a plannend maintenance window
@@ -12,14 +12,14 @@ Can be used as an Automated action to remove a machine from maintenance after a 
     PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers'
     Vmware.Hv.Helper can be installed using the 'Prepare machine for Horizon View scripts' script. It can also be found on Github (see LINK). Download the module and place it in your systemdrive Program Files\WindowsPowerShell\Modules folder 
 </Description>
-    <Category />
-    <Version>1.6.12</Version>
+    <ActionCategory>Horizon Management</ActionCategory>
+    <Version>2.6.13</Version>
     <DateCreated>2019-08-22T11:47:27.727</DateCreated>
-    <DateModified>2019-12-03T13:33:48.59</DateModified>
-    <DatePublished>2019-08-22T11:47:27.727</DatePublished>
-    <LastEditorName>theartvark</LastEditorName>
-    <CreatorName>theartvark</CreatorName>
-    <Status>4</Status>
+    <DateModified>2023-11-24T11:09:47.007</DateModified>
+    <DatePublished>2023-11-24T11:13:37.267</DatePublished>
+    <LastEditorName>Wouter Kursten</LastEditorName>
+    <CreatorName>Ton de Vreede</CreatorName>
+    <Status>3</Status>
     <CheckSum>MAk28nNpRZjGYDjea9XI24gJ2F4=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
@@ -28,15 +28,15 @@ Can be used as an Automated action to remove a machine from maintenance after a 
       <IconType>0</IconType>
     </Icon>
     <ShareDescriptor>
-      <Author>theartvark</Author>
+      <Author>Wouter Kursten</Author>
       <Tags />
-      <Credits>Credits to: theartvark
+      <Credits>Credits to: Ton de Vreede
 Original code by:
 Taken from:</Credits>
-      <AllowExposeEmail>false</AllowExposeEmail>
-      <ContactEmail />
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
       <Notes />
-      <DownloadCount>24</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -66,8 +66,8 @@ Taken from:</Credits>
                   <Name>sName</Name>
                   <DefaultValue />
                   <ArgumentNumber>0</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
-                  <ValidationString />
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <ValidationError />
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
@@ -84,7 +84,8 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>HzPrimaryConnectionServer</Name>
                   <ArgumentNumber>1</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
                 </SBAArgumentDescriptor>
@@ -98,7 +99,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>L2Xm7RRT/BpIpz/yqFygrCOoY6U=</ImportValidationString>
+    <ImportValidationString>N4/UGA1/g4ReXkfVtXL4pwfX0ho=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

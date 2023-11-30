@@ -8,13 +8,13 @@ This script requires VMWare PowerCLI  to be installed on the machine running the
     PowerCLI can be installed through PowerShell (PowerShell version 5 or higher required) by running the command 'Install-Module VMWare.PowerCLI -Force -AllowCLobber -Scope AllUsers'
 
 
-Version: 3.7.12
+Version: 4.7.13
 
 Creator: Wouter Kursten
 
 Date Created: 01/09/2020 09:25:40
 
-Date Modified: 03/26/2022 10:06:32
+Date Modified: 11/24/2023 10:57:23
 
 Scripting Language: ps1
 

@@ -10,13 +10,13 @@ To get rid of the CEIP warning use Set-PowerCLIConfiguration -ParticipateInCeip 
    or Set-PowerCLIConfiguration -ParticipateInCeip $false
 Credentials can be set using the 'Create credentials for Horizon View scripts' script.
 
-Version: 1.2.3
+Version: 2.4.6
 
 Creator: Wouter Kursten
 
 Date Created: 07/07/2020 10:52:51
 
-Date Modified: 07/21/2020 09:27:44
+Date Modified: 11/24/2023 11:10:38
 
 Scripting Language: ps1
 

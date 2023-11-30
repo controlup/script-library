@@ -7,13 +7,13 @@ Can be used as an Automated action to remove a machine from maintenance after a 
     Vmware.Hv.Helper can be installed using the 'Prepare machine for Horizon View scripts' script. It can also be found on Github (see LINK). Download the module and place it in your systemdrive Program Files\WindowsPowerShell\Modules folder 
 
 
-Version: 1.6.12
+Version: 2.6.13
 
-Creator: theartvark
+Creator: Ton de Vreede
 
 Date Created: 08/22/2019 11:47:27
 
-Date Modified: 12/03/2019 13:33:48
+Date Modified: 11/24/2023 11:09:47
 
 Scripting Language: ps1
 

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>15f96a81-c269-43be-8bec-8d68409bf66d</SBAId>
+    <SBAId>80ee679e-a488-4c70-8c5d-5e0b98b5713c</SBAId>
     <RootSBAId>721fa355-7144-451a-bd50-25d3d86f409a</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>637581704495884367</SQN>
+    <SQN>638148115925425087</SQN>
     <Name>Horizon Recover Instant Clone VDI Machine</Name>
     <Description>This script Recovers a Horizon View Instant Clone using the VMware Horizon api's. You can use this to 'rebuild' an Instant Clone if there is an issue with the machine. 
 This action should be executed against a Horizon endpoint machine (one which has the HZ Primary Connection Server column populated in ControlUp Console). The script uses the target machine to determine the connection server address, and is executed on the machine running ControlUp Console.</Description>
-    <Category />
-    <Version>2.6.7</Version>
+    <ActionCategory>Horizon Management</ActionCategory>
+    <Version>3.6.8</Version>
     <DateCreated>2020-01-11T23:21:08.277</DateCreated>
-    <DateModified>2021-05-18T12:31:51.963</DateModified>
-    <DatePublished>2021-05-25T10:35:45.427</DatePublished>
-    <LastEditorName>wouter.kursten</LastEditorName>
+    <DateModified>2023-11-24T11:09:27.063</DateModified>
+    <DatePublished>2023-11-24T11:13:28</DatePublished>
+    <LastEditorName>Wouter Kursten</LastEditorName>
     <CreatorName>Ton de Vreede</CreatorName>
-    <Status>4</Status>
+    <Status>3</Status>
     <CheckSum>7GJS0TRBDsEHIcOP9NjLHthqiP0=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
@@ -24,15 +24,15 @@ This action should be executed against a Horizon endpoint machine (one which has
       <IconType>0</IconType>
     </Icon>
     <ShareDescriptor>
-      <Author>matthew.froggatt</Author>
+      <Author>Wouter Kursten</Author>
       <Tags>horizon,vmware</Tags>
-      <Credits>Credits to: theartvark
+      <Credits>Credits to: Ton de Vreede
 Original code by:
 Taken from:</Credits>
-      <AllowExposeEmail>false</AllowExposeEmail>
-      <ContactEmail />
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
       <Notes />
-      <DownloadCount>55</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
@@ -61,7 +61,8 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>hzSource</Name>
                   <ArgumentNumber>2</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
                 </SBAArgumentDescriptor>
@@ -77,7 +78,8 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>sName</Name>
                   <ArgumentNumber>0</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
                 </SBAArgumentDescriptor>
@@ -93,7 +95,8 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>HzPrimaryConnectionServer</Name>
                   <ArgumentNumber>3</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
                 </SBAArgumentDescriptor>
@@ -109,7 +112,8 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>hzPoolName</Name>
                   <ArgumentNumber>1</ArgumentNumber>
-                  <EmptyBehavior>0</EmptyBehavior>
+                  <ArgumentName />
+                  <EmptyBehavior>2</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>256</EntityType>
                 </SBAArgumentDescriptor>
@@ -123,7 +127,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>0wN4mSB/1O+lAyKICf9oiaSLHCs=</ImportValidationString>
+    <ImportValidationString>mf3WlPwg/MpwPdrt36sj3wD6h2Q=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

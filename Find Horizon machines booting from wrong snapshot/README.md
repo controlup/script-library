@@ -7,13 +7,13 @@ This Script Requires a Horizon Credential file for the user running the scipt. T
 Requires Horizon 7.5 or later
 This script requires VMware PowerCLI to be installed on the machine running the script. PowerCLI can be installed using the Install and configure VMware PowerCLI Script Action
 
-Version: 2.7.79
+Version: 3.8.81
 
 Creator: Wouter Kursten
 
 Date Created: 09/22/2020 09:36:03
 
-Date Modified: 10/28/2020 15:00:46
+Date Modified: 11/24/2023 11:07:33
 
 Scripting Language: ps1
 
