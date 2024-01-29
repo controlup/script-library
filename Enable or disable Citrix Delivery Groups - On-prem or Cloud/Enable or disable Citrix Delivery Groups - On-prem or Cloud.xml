@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>88557c0a-3b8c-42cd-a6a2-1fa441bc1f7f</SBAId>
+    <RootSBAId>75414777-dead-beef-feed-54186e026e4e</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638420437390926649</SQN>
+    <Name>Enable or disable Citrix Delivery Groups - On-prem or Cloud</Name>
+    <Description>Run on a Delivery Controller or where the CVAD PowerShell snapins are available, e.g. Studio is installed or on a machine with the DaaS Remote PowerShell SDK (for Cloud). User running the script for on-prem must have sufficient permission to change the enabled state of the selected delivery groups. For Cloud, CU stored credentials must have previously been saved for the local user running the script.
+
+To use this script as an automated action where parameters cannot be passed, copy the script and set the $disable parameter in the Param() block at the top of the script to "true" or "false" depending on whether you are disabling or enabling delivery groups respectively.
+
+The Cloud Customer Id or Delivery Controller is an optional argument which can be used when there are more than 1 credential file for the user running the script so that the correct Cloud customer can be chosen. When used on-prem, the parameter is used to tell the script what delivery controller to connect to when the script is not run on a DDC.</Description>
+    <ActionCategory>CVAD Management</ActionCategory>
+    <Version>2.1.13</Version>
+    <DateCreated>2020-10-06T22:00:59.507</DateCreated>
+    <DateModified>2024-01-26T14:09:57.57</DateModified>
+    <DatePublished>2024-01-26T15:08:24.123</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>G5GDXyqCUqegRW3wfkHAz7vmLW8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>Citrix,XenApp,XenDesktop,CVAD,VDI,delivery groups</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>@guyrleech</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b78db49f-fa58-41ac-a82d-6ec76ad2c023</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b78db49f-fa58-41ac-a82d-6ec76ad2c023</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Disable</Name>
+                  <DefaultValue>false</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[Tt]rue|[Ff]alse$</ValidationString>
+                  <ValidationError>true or false only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>63871658-8c54-4b87-85bd-c9d65044a488</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>63871658-8c54-4b87-85bd-c9d65044a488</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Delivery Group Name/Pattern</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>\S+</ValidationString>
+                  <ValidationError>Cannot be blank</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f6caa1c2-f1cf-4a47-8564-114c9e97b88a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f6caa1c2-f1cf-4a47-8564-114c9e97b88a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Cloud Customer Id or Delivery Controller</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <ArgumentName>cloudCustomerId</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>cnK8/EjLoc6O2WUIMMzzOsz/+qE=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

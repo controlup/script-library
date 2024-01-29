@@ -1,3 +1,11 @@
+29-01-2024
+==========
+## Added:
+### _AZ change disk caching_
+### _ServiceNow Events Management - Free Space_
+### _Store Citrix Cloud Credentials for CU Scripts_
+### _Enable or disable Citrix Delivery Groups - On-prem or Cloud_
+<BR><BR>
 01-11-2023
 ==========
 ## Added:
@@ -193,6 +201,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 
