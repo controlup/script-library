@@ -7,13 +7,13 @@ Arguments:
   End - optional time to stop log export at. Can be specified either as a date/time or a number of units of time from the start value specified.
 If date/time values are used, they must be enclosed in double quotes, e.g. "02/02/2018 08:00:00"
 
-Version: 1.3.6
+Version: 2.4.7
 
 Creator: Guy Leech
 
 Date Created: 10/23/2018 15:57:48
 
-Date Modified: 11/26/2018 16:39:47
+Date Modified: 01/26/2024 14:09:57
 
 Scripting Language: ps1
 

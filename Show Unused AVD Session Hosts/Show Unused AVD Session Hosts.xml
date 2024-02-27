@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>c0cb08eb-132b-4909-bc35-b21ef7376308</SBAId>
+    <RootSBAId>7ae66a6d-fa8b-48ad-bbfb-350221fb6c02</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638443247653995913</SQN>
+    <Name>Show Unused AVD Session Hosts</Name>
+    <Description>Use Azure Log Analytics data to find AVD Session Hosts which have not hosted any user sessions in the given timeframe. This can include both those powered up, which will likely incur more cost, as well as those not powered up.
+Requires previously saved credentials for Azure for the user that runs the script - these can be stored using a ControlUp script.</Description>
+    <ActionCategory>Cloud Management</ActionCategory>
+    <Version>1.0.7</Version>
+    <DateCreated>2024-02-07T19:02:57.653</DateCreated>
+    <DateModified>2024-02-25T14:09:57.57</DateModified>
+    <DatePublished>2024-02-23T22:39:25.4</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>3</Status>
+    <CheckSum>tju10YspL4SGMWRa3+bMLWGHnQQ=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>azure,unused</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>@guyrleech</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>1</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>27c3bb62-077e-4490-b227-60b691a69742</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>27c3bb62-077e-4490-b227-60b691a69742</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureID</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>AZid</ArgumentName>
+                  <EmptyBehavior>2</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9f60cc9e-fddd-4eae-a39e-616c445095fa</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9f60cc9e-fddd-4eae-a39e-616c445095fa</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>AzureTenantID</Name>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <ArgumentName>AZtenantId</ArgumentName>
+                  <EmptyBehavior>2</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e8c4fc89-e745-4b3d-8693-f7fce233039b</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e8c4fc89-e745-4b3d-8693-f7fce233039b</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Days Back</Name>
+                  <DefaultValue>30</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <ArgumentName>daysBack</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>a82ce8e6-7776-490a-99b4-d2aed6847a20</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>a82ce8e6-7776-490a-99b4-d2aed6847a20</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include Summary</Name>
+                  <DefaultValue>yes</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <ArgumentName>summary</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no|only)$</ValidationString>
+                  <ValidationError>Yes , no or only accepted</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>e47bdfa4-1142-45d7-b30d-52ae03f77f2f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>e47bdfa4-1142-45d7-b30d-52ae03f77f2f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Same Resource Group Only</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <ArgumentName>resourceGroupOnly</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>Yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>266673c9-7f0c-4fc8-b7a5-1b79c0c5b28a</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>266673c9-7f0c-4fc8-b7a5-1b79c0c5b28a</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Same Host Pool Only</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <ArgumentName>hostpoolOnly</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>def68f43-9225-4fe4-85e9-c8b909cb70ca</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>def68f43-9225-4fe4-85e9-c8b909cb70ca</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include Used Session Hosts</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>6</ArgumentNumber>
+                  <ArgumentName>includeUsedWithUsers</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b2a200d9-945c-4999-9e4c-c3fdf187c7ec</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b2a200d9-945c-4999-9e4c-c3fdf187c7ec</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Include Not Powered On</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>7</ArgumentNumber>
+                  <ArgumentName>includeNotPoweredOn</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>mdwJs2Fc4fI+c3/G5A6vK7WojVY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

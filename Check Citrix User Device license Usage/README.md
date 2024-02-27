@@ -5,7 +5,7 @@ WARNING: avoid running the script against multiple sessions simultaneously to pr
 
 Version: 1.19.27
 
-Creator: mc
+Creator: Marcel Calef/Dennis Geerlings
 
 Date Created: 10/03/2019 22:34:27
 

@@ -5,6 +5,7 @@
     @guyrleech, 2018
 
     Modification History:
+        2023/12/21  Guy Leech  Fixed bug where no results gave date error. Some optimisations
 #>
 
 ## Arguments are:
@@ -14,11 +15,13 @@
 
 [string]$logsFolder = "$($env:ProgramFiles)\Citrix\Receiver StoreFront\Admin\trace" 
 
+$VerbosePreference = 'SilentlyContinue'
+
 if( ! ( Test-Path -Path $logsFolder -PathType Container ) )
 {
     [string]$exceptionText = "StoreFront log folder $logsFolder does not exist."
     [string]$product = 'Citrix StoreFront'
-    $installDir = Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction SilentlyContinue | Where-Object { $_.DisplayName -match $product } | Select -First 1 -ExpandProperty InstallLocation
+    $installDir = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction SilentlyContinue | Where-Object DisplayName -match $product | Select-Object -First 1 -ExpandProperty InstallLocation
     if( [string]::IsNullOrEmpty( $installDir ) )
     {
         $exceptionText += ' StoreFront installation not found.'
@@ -130,7 +133,7 @@ Function Process-LogFile
 
     Write-Verbose "Processing $inputFile ..." 
     ## Missing parent context so add
-    [xml]$wellformatted = "<$parent>" + ( Get-Content $inputFile ) + "</$parent>"
+    [xml]$wellformatted = "<$parent>" + ( Get-Content -Path $inputFile ) + "</$parent>"
 
     <#
     <EventID>0</EventID>
@@ -145,45 +148,58 @@ Function Process-LogFile
 
     try
     {
-        $wellformatted.$parent.ChildNodes | Where-Object { [datetime]$_.System.TimeCreated.SystemTime -ge $start -and [datetime]$_.System.TimeCreated.SystemTime -le $end } | ForEach-Object `
+        $wellformatted.$parent.ChildNodes.Where( { [datetime]$_.System.TimeCreated.SystemTime -ge $start -and [datetime]$_.System.TimeCreated.SystemTime -le $end } ).ForEach( `
         {
-            $result = [pscustomobject]@{'Date'=[datetime]$_.System.TimeCreated.SystemTime; 
-                'File' = (Split-Path $inputFile -Leaf); 
-                'Type'=$_.System.Type;
-                'Subtype'=$_.System.Subtype.Name;
-                'Level'=$_.System.Level;
-                'SourceName'=$_.System.Source.Name;
-                'Computer'=$_.System.Computer;
-                'ApplicationData'=$_.ApplicationData}
+            $result = [pscustomobject]@{
+                'Date'=[datetime]$_.System.TimeCreated.SystemTime
+                'File' = (Split-Path $inputFile -Leaf)
+                'Type'=$_.System.Type
+                'Subtype'=$_.System.Subtype.Name
+                'Level'=$_.System.Level
+                'SourceName'=$_.System.Source.Name
+                'Computer'=$_.System.Computer
+                'ApplicationData'=$_.ApplicationData
+            }
             ## Not all objects have all properties
             if( ( Get-Member -InputObject $_.system -Name 'Process' -Membertype Properties -ErrorAction SilentlyContinue ) )
             {
+                Add-Member -InputObject $result -NotePropertyMembers @{
+                    'Process' = $_.System.Process.ProcessName
+                    'PID' =  $_.System.Process.ProcessID
+                    'TID' = $_.System.Process.ThreadID
+                }
+                <#
                 $result | Add-Member -MemberType NoteProperty -Name 'Process' -Value $_.System.Process.ProcessName
                 $result | Add-Member -MemberType NoteProperty -Name 'PID' -Value $_.System.Process.ProcessID;`
                 $result | Add-Member -MemberType NoteProperty -Name 'TID' -Value $_.System.Process.ThreadID;`
+                #>
             }
             $result
-        } | Select Date,File,SourceName,Type,SubType,Level,Computer,Process,PID,TID,ApplicationData ## This is the order they will be displayed in
+        } ) | Select-Object -Property Date,File,SourceName,Type,SubType,Level,Computer,Process,PID,TID,ApplicationData ## This is the order they will be displayed in
     }
     catch {}
 }
 
 [int]$filesCount = 0
+[array]$relevantLogFiles =  @( Get-ChildItem -Path $logsFolder | Where-Object LastWriteTime -ge $startDate )
 
-[array]$results = @( Get-ChildItem -Path $logsFolder | Where-Object { $_.LastWriteTime -ge $startDate } | ForEach-Object `
+Write-Verbose -Message "Got $($relevantLogFiles.Count) log files modified after $($startDate.ToString('G'))"
+
+[array]$results = @( ForEach( $logFile in $relevantLogFiles )
 {
-    Process-LogFile -inputFile $_.FullName -start $startDate -end $endDate
     $filesCount++
+    Write-Verbose -Message "$filesCount / $($relevantLogFiles.Count) : $($logFile.Name)"
+    Process-LogFile -inputFile $logFile.FullName -start $startDate -end $endDate
 })
 
 if( $results )
 {
     "$($results.Count) log entries found in $filesCount files between $(Get-Date $startDate -Format U) and $(Get-Date $endDate -Format U), writing to $outputFile"
 
-    $results | Sort Date | Export-Csv -Path $outputFile -NoTypeInformation -NoClobber
+    $results | Sort-Object -Property Date | Export-Csv -Path $outputFile -NoTypeInformation -NoClobber
 }
 else
 {
-    Write-Warning "No entries found between $(Get-Date $earliest -Format G) and $(Get-Date $endDate -Format G) in $filesCount files searched"
+    Write-Warning "No entries found between $(Get-Date $startDate -Format G) and $(Get-Date $endDate -Format G) in $filesCount files searched"
 }
 

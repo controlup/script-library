@@ -2,13 +2,13 @@
 
 Description: This Script-Based action retrieves the HDX Insight information for a given user session
 
-Version: 2.1.4
+Version: 3.1.5
 
 Creator: Esther Barthel, MSc
 
 Date Created: 11/15/2020 02:46:53
 
-Date Modified: 11/26/2020 13:36:56
+Date Modified: 01/26/2024 14:09:57
 
 Scripting Language: ps1
 

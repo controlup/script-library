@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>eebdc48d-c32b-4487-a9ff-eb7f35b4295d</SBAId>
+    <SBAId>5827b3ae-3124-4b17-b43c-59fde1116cad</SBAId>
     <RootSBAId>5eb97801-876c-4996-bfe7-cb06d914e0d5</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>636789292018252000</SQN>
+    <SQN>638420446461495701</SQN>
     <Name>Show StoreFront log file</Name>
     <Description>Pull all log separate Citrix StoreFront log files into a single time sorted csv file. You may need to change the StoreFront logging levels first which can be done with the "Show or Change StoreFront Logging" SBA. Use to help diagnose StoreFront issues.
 Arguments:
@@ -12,15 +12,15 @@ Arguments:
   Start - optional time to start log export from, e.g. just before the problem started or was reproduced. Can be specified as a date/time or as a number of units of time back from the present such as 7d or 1w where s=second,m=minute,h=hour,d=day,w=week,y=year
   End - optional time to stop log export at. Can be specified either as a date/time or a number of units of time from the start value specified.
 If date/time values are used, they must be enclosed in double quotes, e.g. "02/02/2018 08:00:00"</Description>
-    <Category />
-    <Version>1.3.6</Version>
+    <ActionCategory>CVAD Management</ActionCategory>
+    <Version>2.4.7</Version>
     <DateCreated>2018-10-23T15:57:48.027</DateCreated>
-    <DateModified>2018-11-26T16:39:47.323</DateModified>
-    <DatePublished>2018-10-23T15:57:48.027</DatePublished>
+    <DateModified>2024-01-26T14:09:57.57</DateModified>
+    <DatePublished>2024-01-26T15:06:54.657</DatePublished>
     <LastEditorName>Guy Leech</LastEditorName>
     <CreatorName>Guy Leech</CreatorName>
     <Status>4</Status>
-    <CheckSum>RlRSZ2tBjvkklD681667vRXYyLo=</CheckSum>
+    <CheckSum>/gXHsufpmxnLgMo4RmB6+OHxcWM=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
     <Icon>
@@ -32,16 +32,16 @@ If date/time values are used, they must be enclosed in double quotes, e.g. "02/0
       <Tags>Citrix,StoreFront,Logging</Tags>
       <Credits>Credits to: guy.leech (@guyrleech)</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>guyrleech@gmail.com</ContactEmail>
+      <ContactEmail>@guyrleech</ContactEmail>
       <Notes />
-      <DownloadCount>94</DownloadCount>
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
       <AtomicEntityEx>256</AtomicEntityEx>
       <AllowedEntities>0</AllowedEntities>
       <AtomicEntity>0</AtomicEntity>
-      <ScriptData>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</ScriptData>
+      <ScriptData>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</ScriptData>
       <IsCompressed>true</IsCompressed>
       <Interactive>false</Interactive>
       <AltCredentialsType>0</AltCredentialsType>
@@ -118,7 +118,7 @@ If date/time values are used, they must be enclosed in double quotes, e.g. "02/0
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>wRlmHnJru7kBOW6Mq+nJsgoGcUg=</ImportValidationString>
+    <ImportValidationString>hxSO4Cjs3Q47I24niTfdUtHc9/Q=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

@@ -1,40 +1,48 @@
-﻿#requires -version 3.0
+﻿#require -version 3.0
 
 <#
 .SYNOPSIS
-    Find Azure resources which should probably be assigned to resources but are not, eg disks, network interfaces, network security groups , public IP addresses
+    Find Azure resources which have not been used in x days by looking for events for them in the activity log
 
 .DESCRIPTION
     Using REST API calls
 
 .PARAMETER azid
     The relative URI of the Azure VM
-    
+
 .PARAMETER AZtenantId
     The azure tenant ID
-    
+
+.PARAMETER daysback
+    The number of days to search back in the logs
+
 .PARAMETER resourceGroupOnly
     Only return results for the resource group containing the AZid
-    
+
+.PARAMETER includeProviderRegex
+    Only include Azure resources where the providers match this regular expression
+
+.PARAMETER excludeProviderRegex
+    Exclude Azure resources where the providers match this regular expression
+
 .PARAMETER sortby
-    Sort the results by this property
-    
+    Which output property to sort (group) by
+
 .PARAMETER raw
-    Output raw objects to pipeline rather than text
+    Output objects rather than text
 
 .NOTES
     Version:        0.1
     Author:         Guy Leech, BSc based on code from Esther Barthel, MSc
-    Creation Date:  2022-09-16
-    Updated:        2022-06-17  Guy Leech  Added public IP addresses and changed mechanisms for determining unattached
-                    2024-02-08  Guy Leech  Added setting of TLS12 & TLS13
-                    2024-02-15  Guy Leech  Improved mechanism for determinging API version to use
-                    2024-02-16  Guy Leech  Switched to checking managedBy rather than getting full resource details
-                    2024-02-21  Guy Leech  Error 429 handling. API version caching moved to function that uses it. Fix for public IP attached to NAT gateway & network interfaces with private end points
-                    2024-02-22  Guy Leech  Fixed bug where unattached network resources not flagged as orphans. Added code to deal with less than perfect certificates (code moved to AZ functions)
+    Creation Date:  2021-10-30
+    Updated:        2022-06-17  Guy Leech  Added code to deal with paging in results
+                    2022-09-30  Guy Leech  Added setting of TLS12 & TLS13
+                    2024-02-09  Guy Leech  Fixed bug around auto selection of api versions when no release version available. Refactored to query api version available if not passed
+                    2024-02-14  Guy Leech  Added code to ignore "delete" activities in log & filter out other non-relevant entries. Logic to use managedby for resource if available otherwise get resource details.
+                    2024-02-16  Guy Leech  PS script analyser run. Superfluous code removed
+                    2024-02-21  Guy Leech  Error 429 handling. API version caching moved to function that uses it.
+                    2024-02-23  Guy Leech  Updated shared Azure functions imported
 #>
-
-## TODO Need to check that the parent/associated resource still exists - e.g. does VM still exist for a NIC?
 
 [CmdletBinding()]
 
@@ -42,9 +50,12 @@ Param
 (
     [string]$AZid ,## passed by CU as the URL to the VM minus the FQDN
     [string]$AZtenantId ,
+    [double]$daysBack = 30 ,
     [ValidateSet('Yes','No')]
     [string]$resourceGroupOnly = 'Yes',
     [string]$sortby = 'type' ,
+    [string]$includeProviderRegex ,
+    [string]$excludeProviderRegex ,
     [switch]$raw
 )
 
@@ -54,10 +65,17 @@ $ErrorActionPreference = $(if( $PSBoundParameters[ 'erroraction' ] ) { $ErrorAct
 $ProgressPreference = 'SilentlyContinue'
 
 [int]$outputWidth = 400
-if( ( $PSWindow = (Get-Host).UI.RawUI ) -and ( $WideDimensions = $PSWindow.BufferSize ) )
+try
 {
-    $WideDimensions.Width = $outputWidth
-    $PSWindow.BufferSize = $WideDimensions
+    if( ( $PSWindow = (Get-Host).UI.RawUI ) -and ( $WideDimensions = $PSWindow.BufferSize ) )
+    {
+        $WideDimensions.Width = $outputWidth
+        $PSWindow.BufferSize = $WideDimensions
+    }
+}
+catch
+{
+    ## not fatal
 }
 
 ## exclude resource types that we cannot determine if have been used or not in this script (AVD resources can be checked by looking at session usage but we don't do that currently)
@@ -72,7 +90,10 @@ if( ( $PSWindow = (Get-Host).UI.RawUI ) -and ( $WideDimensions = $PSWindow.Buffe
 )
 
 [string]$providersApiVersion = '2021-04-01'
+[string]$computeApiVersion = '2021-07-01'
+[string]$insightsApiVersion = '2015-04-01'
 [string]$resourceManagementApiVersion = '2021-04-01'
+
 [string]$baseURL = 'https://management.azure.com'
 [string]$credentialType = 'Azure'
 [hashtable]$script:apiversionCache = @{}
@@ -135,10 +156,10 @@ function Get-AzSPStoredCredentials {
     }
     Elseif( $system -eq 'Azure' )
     {
-        ## try old Azure file name 
-        $azSPCredentials = Get-AzSPStoredCredentials -system 'AZ' -tenantId $AZtenantId 
+        ## try old Azure file name
+        $azSPCredentials = Get-AzSPStoredCredentials -system 'AZ' -tenantId $AZtenantId
     }
-    
+
     if( -not $AzSPCredentials )
     {
         Write-Error -Message "The Azure Service Principal Credentials file stored for this user ($($env:USERNAME)) cannot be found at $credentialsFile.`nCreate the file with the Set-AzSPCredentials script action (prerequisite)."
@@ -540,8 +561,48 @@ function Invoke-AzureRestMethod {
 
 #endregion AzureFunctions
 
-[datetime]$startTime = [datetime]::Now
+Function ConvertTo-Object
+{
+    [CmdletBinding()]
+    Param
+    (
+        $Tables , ## TODO work with multiple tables - array of array ?
+        $ExtraFields
+    )
+    ForEach( $table in $tables )
+    {
+        ForEach( $row in $table.rows )
+        {
+            [hashtable]$result = @{ TableName = $table.Name }
+            if( $ExtraFields -and $ExtraFields.Count -gt 0 )
+            {
+                $result += $ExtraFields
+            }
+            For( [int]$index = 0 ; $index -lt $row.Count ; $index++ )
+            {
+                if( $table.columns[ $index ].type -ieq 'long' )
+                {
+                    $result.Add( $table.columns[ $index ].name , $row[ $index ] -as [long] )
+                }
+                elseif( $table.columns[ $index ].type -ieq 'datetime' )
+                {
+                    $result.Add( $table.columns[ $index ].name , $row[ $index ] -as [datetime] )
+                }
+                else
+                {
+                    if( $table.columns[ $index ].type -ine 'string' )
+                    {
+                        Write-Warning -Message "Unimplemented type $($table.columns[ $index ].type), treating as string"
+                    }
+                    $result.Add( $table.columns[ $index ].name , $row[ $index ] )
+                }
+            }
+            [pscustomobject]$result
+        }
+    }
+}
 
+[datetime]$startTime = [datetime]::Now
 $azSPCredentials = $null
 $azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenantId $AZtenantId
 
@@ -550,7 +611,7 @@ If ( -Not $azSPCredentials )
     Exit 1 ## will already have output error
 }
 
-## TLS and certificate handling now set in the Azure functions
+[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12 -bor [System.Net.SecurityProtocolType]::Tls13
 
 # Sign in to Azure with the Service Principal retrieved from the credentials file and retrieve the bearer token
 Write-Verbose -Message "Authenticating to tenant $($azSPCredentials.tenantID) as $($azSPCredentials.spCreds.Username)"
@@ -573,236 +634,304 @@ else
     Throw "Failed to parse subscription id and resource group from $AZid"
 }
 
+[datetime]$startFrom = (Get-Date).AddDays( -$daysBack )
+[string]$filter = "eventTimestamp ge '$(Get-Date -Date $startFrom -Format s)'"
+if( $resourceGroupOnly -eq 'yes' )
+{
+    $filter = "$filter and resourceGroupName eq '$resourceGroupName'"
+}
+
 ## https://docs.microsoft.com/en-us/rest/api/resources/resources/list-by-resource-group
 [string]$resourcesURL = $null
 if( $resourceGroupOnly -ieq 'yes' )
 {
-    $resourcesURL = "resourceGroups/$resourceGroupName"
+    $resourcesURL = "resourceGroups/$resourceGroupName/"
 }
 ## else ## will be for the subscription
 
-[array]$allResources = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/$resourcesURL/resources`?`$expand=createdTime,changedTime,lastusedTime,managedBy&api-version=$resourceManagementApiVersion" -retries 2 | Where-Object type -NotIn $excludedResourceTypes )
+## get all provider details so we can pick version if we don't have one
+##[array]$allProviders = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/providers?api-version=$providersApiVersion" -retries 2 )
 
-[hashtable]$resourceDetails = @{}
-[hashtable]$resourceGroups = @{}
+##Write-Verbose -Message "$([datetime]::Now.ToString( 'G' )): Got $($allProviders.count) providers"
 
-[string[]]$typesOfInterest = @( 'Microsoft.Network/networkInterfaces' , 'Microsoft.Compute/disks' , 'Microsoft.Network/networkSecurityGroups' , 'Microsoft.Network/publicIPAddresses' )
+[array]$allResources = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/$($resourcesURL)resources`?`$expand=createdTime,changedTime,managedBy`&api-version=$resourceManagementApiVersion" -retries 2 | Where-Object type -NotIn $excludedResourceTypes )
 
-ForEach( $resource in $allResources )
+Write-Verbose -Message "$([datetime]::Now.ToString( 'G' )): Got $($allResources.Count) resources in total"
+
+## https://docs.microsoft.com/en-us/rest/api/monitor/activity-logs/list
+## we only need the resource id  so only get that for efficiency plus operation name so we can ignore delete. Also, resource helath and advisor operations show but with no tenant id so remove those
+[array]$allevents = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/providers/Microsoft.Insights/eventtypes/management/values`?api-version=$insightsApiVersion&`$filter=$filter&`$select=resourceid,tenantid,channels,operationname" -retries 2 | Where-Object { $_.tenantId -ieq $AZtenantId -and $_.channels -ieq 'Operation' -and $_.operationname.value -notmatch '^Microsoft\.Advisor/' -and $_.operationName.value -notmatch '/delete$' | Select-Object -Property resourceid })
+
+Write-Verbose -Message "$([datetime]::Now.ToString( 'G' )): Got $($allevents.Count) events in total"
+
+## produce hash table keyed on resource id
+[hashtable]$resourcesInActivityLog = $allevents | Group-Object -Property resourceId -AsHashTable
+
+if( $null -eq $resourcesInActivityLog )
 {
-    ## only cache the resource types that could be orphaned from a deleted parent
-    if( $resource.type -in $typesOfInterest )
+    $resourcesInActivityLog = @{}
+}
+
+Write-Verbose -Message "$([datetime]::Now.ToString( 'G' )): Got $($resourcesInActivityLog.Count) resources from activity log and $($allResources.Count) resources via resource group $resourceGroupName"
+
+##[hashtable]$usedVMs = @{}
+[hashtable]$resourceDetails = @{}
+[hashtable]$vmDetails = @{}
+[hashtable]$resourceGroups = @{}
+[int]$counter = 0
+[string[]]$resourceTypesOfInterest  = @( 'Microsoft.Network/networkInterfaces'  , 'Microsoft.Compute/virtualMachines' , 'Microsoft.Compute/disks' ) ## seems that managedBy for disks is not reliable
+[System.Collections.generic.list[object]]$unusedResources = @( ForEach( $resource in $allResources )
+{
+    $counter++
+    if( ( -Not [string]::IsNullOrEmpty( $includeProviderRegex ) -and $resource.type -notmatch $includeProviderRegex ) -or ( -Not [string]::IsNullOrEmpty( $excludeProviderRegex ) -and $resource.Type -match $excludeProviderRegex ) )
     {
-        if( $resource.PSObject.Properties[ 'managedBy' ] ) ## use this to save another AZ request
+        Write-Verbose -Message "-- excluding $($resource.type) $($resource.name)"
+    }
+    elseif( -Not $resourcesInActivityLog[ $resource.id ] )
+    {
+        [bool]$include = $null -eq $resource.psobject.properties[ 'createdTime' ] -or ( $null -ne $resource.createdTime -and [datetime]$resource.createdTime -lt $startFrom )
+
+        ##[bool]$include = $null -ne $resource.psobject.properties[ 'changedTime' ] -and $null -ne $resource.changedTime -and [datetime]$resource.changedTime -lt $startFrom
+
+        if( $include -and ( $null -eq $resource.psobject.properties[ 'changedTime' ] -or ( $null -ne $resource.changedTime -and [datetime]$resource.changedTime -lt $startFrom) ))
         {
-            if( -Not [string]::IsNullOrEmpty( $resource.ManagedBy ))
+            Write-Verbose -Message "$counter / $($allResources.Count) : including $($resource.id)"
+            ## last modified time on resource itself can be newer than we were told in the /resources query - no longer seems to be the case as of 2024/02/12
+            ## TODO do we need to throttle the requests ?
+            $resourceDetail = $null
+            if( $resource.type -in $resourceTypesOfInterest )
             {
-                if( -Not $resourceDetails.ContainsKey( $resource.managedBy ) )
+                ## if we have managedBy property then no need to fetch resource detail
+                if( $resource.PSObject.Properties[ 'managedBy' ] )
                 {
-                    if( $resource.type -ieq 'Microsoft.Compute/disks' )
+                    Write-Verbose "** Got managed by $($resource.managedBy) for $($resource.id)"
+                }
+                elseif( $resourceDetail = Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/$($resource.id)" -retries 2 -newestApiVersion -propertyToReturn $null -type $resource.type )
+                {
+                    if( $resource.type -ieq 'Microsoft.Compute/virtualMachines' )
                     {
-                        [hashtable]$diskState = @{ 'DiskState' = 'Attached' }
-                        if( $resource.psObject.Properties[ 'properties' ] )
+                        $vmDetails.Add( $resource.Id , $resourceDetail ) ## will check these later for orphaned resources
+                    }
+                    $resourceDetails.Add( $resource.id , $resourceDetail ) ## use in 2nd pass
+                }
+            }
+            if( $include )
+            {
+                ## what if VM has been running the whole time so no start/stop? Check if running now
+                if( $resource.type -ieq 'Microsoft.Compute/virtualMachines' )
+                {
+                    ## https://docs.microsoft.com/en-us/rest/api/compute/virtual-machines/instance-view
+                    if( $null -ne ( $instanceView = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/$($resource.id)/instanceView`?api-version=$computeApiVersion" -property $null) ) )
+                    {
+                        if( $instanceview.Statuses | Where-Object code -match '^PowerState/(.*)$' ) ## -and ( $powerstate = ($line -split '/' , 2 )[-1] ))
                         {
-                            Add-Member -InputObject $resource.properties -NotePropertyMembers $diskState -Force
+                            ## https://learn.microsoft.com/en-us/dotnet/api/microsoft.azure.management.compute.fluent.powerstate?view=azure-dotnet-legacy
+                            if( $matches[1] -ine 'Deallocated' ) ## if stopped then still accumulating cost. unknown warrants inclusion
+                            {
+                                $include = $false
+                                ##$usedVMs.Add( $resource.id , $instanceView ) ## disks could be useful in 2nd pass
+                            }
                         }
                         else
                         {
-                            Add-Member -InputObject $resource -MemberType NoteProperty -Name properties -Value ([pscustomobject]$diskState)
+                            Write-Warning -Message "Failed to determine if vm $($resource.Name) is powered up"
                         }
                     }
-                    else ## not a disk
+                    else
                     {
-                        $null = $null
+                        Write-Warning -Message "Failed to get state of VM $($resource.name)"
                     }
-                    $resourceDetails.Add( $resource.id , $resource )
                 }
-                ## else resource is already in dictionary
-            }
-            else ## managedby present but empty which we assume means not managed
-            {
-                $null
-            }
-        }
-        elseif( $resourceDetail = Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/$($resource.id)" -retries 2 -newestApiVersion -propertyToReturn $null -type $resource.type )
-        {      
-            $resourceDetails.Add( $resource.id , $resourceDetail ) ## use in 2nd pass
-        }
-        else
-        {
-            Write-Warning -Message "Failed to get details for resource $($resource.id)"
-        }
-        
-        if( $resourceGroupOnly -ieq 'no')
-        {
-            if( $resource.id -match '\bsubscriptions/([^/]+)/resourceGroups/([^/]+)/providers/Microsoft\.' )
-            {
-                [string]$thisResourceGroupName = $Matches[2]
 
-                if( -Not $resourceGroups.ContainsKey( $thisResourceGroupName ))
+                if( $resourceGroupOnly -ieq 'no')
                 {
-                    try
+                    if( $resource.id -match '\bsubscriptions/([^/]+)/resourceGroups/([^/]+)/providers/Microsoft\.' )
                     {
-                        $resourceGroups.Add( $thisResourceGroupName , $resource )
+                        [string]$thisResourceGroupName = $Matches[2]
+
+                        if( -Not $resourceGroups.ContainsKey( $thisResourceGroupName ) )
+                        {
+                            try
+                            {
+                                $resourceGroups.Add( $thisResourceGroupName , $resource )
+                            }
+                            catch
+                            {
+                                ## already got it
+                            }
+                        }
+                        Add-Member -InputObject $resource -MemberType NoteProperty -Name 'Resource Group' -Value $thisResourceGroupName
                     }
-                    catch
+                    else
                     {
-                        ## already got it
+                        Write-Warning -Message "Failed to determine resource group from $($resource.id)"
                     }
                 }
-                ## else already got it
-                Add-Member -InputObject $resource -MemberType NoteProperty -Name 'Resource Group' -Value $thisResourceGroupName
-            }
-            else
-            {
-                Write-Warning -Message "Failed to determine resource group from $($resource.id)"
-            }
-        }
-    }
-    ## else not an orphanable type
-}
 
-## second pass if Microsoft.Compute/disks or Microsoft.Network/networkinterfaces or Microsoft.Network/networkSecurityGroups then check parent VM (if there is one) as we will have it in the unused collection
-## cache VM details so if disk is for a machine we already have, we don't need to get it from Azure again
-$potentiallyUnassignedResources = New-Object -TypeName System.Collections.Generic.List[object] ## make a generic list so we can add extra items later as necessary
-[array]$parents = @( ForEach( $potentiallyUnassignedResource in $allResources )
-{
-    [bool]$childResource = $false
-    $parent = $null
-
-    if( $potentiallyUnassignedResource.type -ieq 'Microsoft.Network/networkInterfaces' )
-    {
-        $childResource = $true
-        if( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] )
-        {
-            if( -Not ( $parent = $resourceDetail | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty virtualMachine -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue ) )
-            {
-                $parent = $resourceDetail | Select-Object -ExpandProperty properties -ErrorAction SilentlyContinue | Select-Object -ExpandProperty privateEndpoint -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue
-            }
-        }
-        else
-        {
-            Write-Warning -Message "Unable to get details for network interface `"$($potentiallyUnassignedResource.id)`""
-        }    
-    }
-    elseif( $potentiallyUnassignedResource.type -ieq 'Microsoft.Compute/disks' )
-    {
-        $childResource = $true
-        ## if there is a parent, check that disk state is not unattached
-        ##if( ( $parent = $resourceDetails[ $potentiallyUnassignedResource.id ] | Select-Object -ExpandProperty managedBy -ErrorAction SilentlyContinue ) -and ( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] ) -and $resourceDetail.properties.DiskState -ieq 'Unattached' )
-        if( ( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] ) -and $resourceDetail.psobject.properties[ 'properties' ] -and $resourceDetail.properties.psobject.properties[ 'DiskState' ]  )
-        {
-            $parent = ( $resourceDetail.properties.DiskState -ine 'Unattached' ) ## don't need id
-        }
-        else
-        {
-            Write-Verbose -Message "Unable to get details for disk `"$($potentiallyUnassignedResource.id)`" so assuming unattached" ## there was a managedby property but it was empty
-            $parent = $null
-        }    
-    }
-    elseif( $potentiallyUnassignedResource.type -ieq 'Microsoft.Network/networkSecurityGroups' )
-    {
-       $childResource = $true
-       if( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] )
-       {
-            if( $resourceDetail.properties.psobject.properties[ 'subnets' ] -and $resourceDetail.properties.subnets.Count -gt 0 )
-            {
-                $parent = $resourceDetail.properties | Select-Object -ExpandProperty subnets | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue
-            }
-            elseif( $resourceDetail.properties.psobject.properties[ 'networkInterfaces' ] -and $resourceDetail.properties.networkInterfaces.Count -gt 0 )
-            {
-                $parent = $resourceDetail.properties | Select-Object -ExpandProperty networkInterfaces | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue
-            }
-        }
-        else
-        {
-            Write-Warning -Message "Unable to get details for network security group `"$($potentiallyUnassignedResource.id)`""
-        }
-
-    }
-    elseif( $potentiallyUnassignedResource.type -ieq 'Microsoft.Network/publicIPAddresses' )
-    {
-       $childResource = $true
-       if( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] )
-       {
-            if( -Not ( $parent = $resourceDetail | Select-Object -ExpandProperty properties -ErrorAction SilentlyContinue | Select-Object -ExpandProperty ipConfiguration -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue ) )
-            {
-                $parent = $resourceDetail | Select-Object -ExpandProperty properties -ErrorAction SilentlyContinue | Select-Object -ExpandProperty natGateway -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue
-            }
-        }
-        else
-        {
-            Write-Warning -Message "Unable to get details for public IP address `"$($potentiallyUnassignedResource.id)`""
-        }
-    }
-
-    if( $childResource )
-    {
-        if( $null -eq $parent -or $false -eq $parent )
-        {
-            $potentiallyUnassignedResources.Add( $potentiallyUnassignedResource )
-        }
-        elseif( -Not ( $parent -is [bool] ) ) ## record the parent, if not disk, so that we can later check if the parent is orphaned (network interfaces and network security groups) and add it to the orphans collection
-        {
-            ForEach( $resource in $parent )
-            {
-                [pscustomobject]@{
-                    Parent = $resource
-                    Child  = $potentiallyUnassignedResource
+                if( $include )
+                {
+                    $resource
                 }
+            }
+
+            if( -Not $include )
+            {
+                Write-Verbose -Message "`tUsed : $($resource.id)"
             }
         }
     }
 })
 
-## look through discovered parents to see if actually orphaned so can add their children to the orphan list if not already present
-ForEach( $parent in $parents )
+Write-Verbose -Message "$([datetime]::Now.ToString( 'G' )): Got $($unusedResources.Count) potentially unused resources out of $($allResources.Count) total"
+
+[hashtable]$VMsNSGs = @{}
+
+ForEach( $nic in $resourceDetails.GetEnumerator().Where( { $_.value.PSObject.Properties[ 'type' ] -and $_.value.type -ieq 'Microsoft.Network/networkInterfaces' } ))
 {
-    if( ( $potentiallyUnassignedResources | Where-Object id -ieq $parent.parent ) -and ( -Not ( $potentiallyUnassignedResources | Where-Object id -ieq $parent.Child.Id ) ) )
+    ## TODO could there be more than one of either?
+    if( ( $NSG = $nic.value.properties | Select-Object -ExpandProperty networkSecurityGroup -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id ) `
+        -and ( $VM = $nic.value.properties | Select-Object -ExpandProperty virtualMachine -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id ) )
     {
-        $potentiallyUnassignedResources.Add( $parent.child )
+        if( -Not $VMsNSGs.ContainsKey( $NSG ) )
+        {
+            $VMsNSGs.Add( $NSG , ([System.Collections.Generic.List[object]]@( $VM ) ))
+        }
+        else
+        {
+            $VMsNSGs[ $NSG ].Add( $VM )
+        }
     }
 }
 
-if( -Not $raw )
-{
-    [string]$message = "Found $($potentiallyUnassignedResources.Count) resources potentially orphaned in "
+Write-Verbose -Message "$([datetime]::Now.ToString( 'G' )): Got $($VMsNSGs.Count) network security groups"
 
-    if( $resourceGroupOnly -ieq 'no' )
+$unusedResourceIds = New-Object -TypeName System.Collections.Generic.HashSet[string] -ArgumentList ([StringComparer]::InvariantCultureIgnoreCase)
+
+## ForEach on a list does not use $_ for the item being iterated on
+## Checking existence is far quicker than an array for large numbers of items
+ForEach( $unusedResource in $unusedResources )
+{
+    if( $null -ne $unusedResource -and $unusedResource.Id )
     {
-        [array]$resourceGroupsInvolved = @( $potentiallyUnassignedResources | Group-Object -Property 'Resource Group' )
-        $message += "$($resourceGroupsInvolved.Count) resource groups"
-   
-        if( -Not $PSBoundParameters[ 'sortby' ] -or $sortby -imatch '^resource' ) ## convert "resourcegroup" to "resource group"
+        $null = $unusedResourceIds.Add( $unusedResource.Id )
+    }
+}
+Write-Verbose -Message "$([datetime]::Now.ToString( 'G' )): Got $($unusedResourceIds.Count) resource ids in dictionary"
+
+[int]$originalTotal = $unusedResources.Count
+## second pass if Microsoft.Compute/disks or Microsoft.Network/networkinterfaces or Microsoft.Network/networkSecurityGroups then check parent VM (if there is one) as we will have it in the unused collection
+## cache VM details so if disk is for a machine we already have, we don't need to get it from Azure again
+For( [int]$index = $unusedResources.Count -1 ; $index -ge 0 ; $index-- )
+{
+    $potentionallyUnusedResource = $unusedResources[ $index ]
+    Write-Verbose -Message "$([datetime]::Now.ToString( 'G' )): checking unused resource @ $index / $($unusedResources.Count) / $originalTotal"
+    [bool]$remove = $false
+    [bool]$orphaned = $false
+    [bool]$childResource = $false
+    $parentVM = $null
+
+    if( $potentionallyUnusedResource.type -ieq 'Microsoft.Network/networkInterfaces' )
+    {
+        $childResource = $true
+
+        if( -Not ( $parentVM = $potentionallyUnusedResource | Select-Object -ExpandProperty managedBy -ErrorAction SilentlyContinue ) ) ## not seen this property returned for NICs but it may change
         {
-            $sortby = 'Resource Group'
+            $parentVM = $resourceDetails[ $potentionallyUnusedResource.id ] | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty virtualMachine -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id
         }
+    }
+    elseif( $potentionallyUnusedResource.type -ieq 'Microsoft.Compute/disks' )
+    {
+        $childResource = $true
+        if( -Not ( $parentVM = $potentionallyUnusedResource | Select-Object -ExpandProperty managedBy -ErrorAction SilentlyContinue ) ) ## managedBy in all resources query was not reliably returning it
+        {
+            $parentVM = $resourceDetails[ $potentionallyUnusedResource.id ] | Select-Object -ExpandProperty managedBy -ErrorAction SilentlyContinue
+        }
+    }
+    elseif( $potentionallyUnusedResource.type -ieq 'Microsoft.Network/networkSecurityGroups' )
+    {
+       if( $VMs = $VMsNSGs[ $potentionallyUnusedResource.id ] )
+       {
+            ## not orphaned but need to see if any of the VMs using it are in use
+            ForEach( $VM in $VMs )
+            {
+                ## if( -Not ( $unused = $unusedResources.Where( { $_.id -ieq $VM } ) ))
+                if( -Not ( $unused = $unusedResourceIds.Contains( $VM )))
+                {
+                    $remove = $true
+                    break
+                }
+            }
+        }
+        else
+        {
+            $orphaned = $true
+        }
+    }
+
+    if( $childResource )
+    {
+        if( $parentVM )
+        {
+            ## now see if in our unused VMs and if not we remove from this list as must've been in use
+            ## if( -Not ( $unused = $unusedResources.Where( { $_.id -ieq $parentVM } , 1 ) ))
+            if( -Not ( $unused = $unusedResourceIds.Contains( $parentVM ) ) )
+            {
+                $remove = $true
+            }
+            else
+            {
+                Add-Member -InputObject $potentionallyUnusedResource -Force -MemberType NoteProperty -Name 'ParentVM' -Value $parentVM
+            }
+        }
+        else
+        {
+           $orphaned = $true ## could it be in a different resource group?
+        }
+    }
+    if( $remove )
+    {
+        $unusedResources.RemoveAt( $index )
     }
     else
     {
-        $message += "resource group $resourceGroupName"
-        if( $sortby -imatch '^resource' ) ## if only processing resource group then cannot sort on resource group
-        {
-            $sortby = 'type'
-        }
+        Add-Member -InputObject $potentionallyUnusedResource -Force -MemberType NoteProperty -Name 'Orphaned' -Value $(if( $orphaned ) { 'Possibly' } else { 'No' } )
     }
-
-    $message += ". Output sorted by $sortby"
-
-    Write-Output -InputObject $message
 }
 
-[array]$outputObjects = @( $potentiallyUnassignedResources | Select-Object -Property *,
-    @{name='Created';expression={ $_.createdTime -as [datetime] }} ,
-    @{name='Changed';expression={ $_.changedTime -as [datetime] }}  -ExcludeProperty id,tags,managedBy,sku,createdTime,changedTime )
+[string]$message = "$([datetime]::Now.ToString( 'G' )): Found $($unusedResources.Count) resources, out of $($allResources.count) examined, potentially not used since $(Get-Date -Format G -Date $startFrom) in "
 
-if( $raw )
+if( $resourceGroupOnly -ieq 'no' )
 {
-    $outputObjects
+    $message += "$($resourceGroups.Count) resource groups"
+    if( -Not $PSBoundParameters[ 'sortby' ] -or $sortby -match 'resource' ) ## deal with spaces
+    {
+        $sortby = 'Resource Group'
+    }
 }
 else
 {
-    $outputObjects | Sort-Object -Property $sortby | Format-Table -AutoSize  -Wrap
+    $message += "resource group $resourceGroupName"
+}
+
+$message += ". Output sorted by $sortby"
+
+if( -not $raw )
+{
+    Write-Output -InputObject $message
+}
+
+$finalOutput = $unusedResources | Select-Object -Property *,
+    @{name='Created';expression={ $_.createdTime -as [datetime] }} ,
+    @{name='Changed';expression={ $_.changedTime -as [datetime] }} ,
+    @{name='Parent';expression={ $( if( $_.PSObject.Properties[ 'parentVM' ] ) { $_.parentVM } else { $_.managedby }) -replace '^/subscriptions/[^/]+/' }} -ExcludeProperty parentVM,id,tags,managedBy,createdTime,changedTime | Sort-Object -Property $sortby
+
+if( $raw )
+{
+    $finalOutput
+}
+else
+{
+    $finalOutput | Format-Table -AutoSize
 }
 
 

@@ -1,3 +1,15 @@
+27-02-2024
+==========
+## Added:
+### _Show Monitor Capacity and Usage_
+### _Show Unused AVD Session Hosts_
+### _Compare Driver Versions and Hotfixes_
+### _Check Service Account Expiry_
+### _AZ Show Resources Not Used in Time Period_
+
+### Removed:
+### _AZ Show Resources Not Used in last X days_
+<BR><BR>
 29-01-2024
 ==========
 ## Added:
@@ -201,6 +213,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 

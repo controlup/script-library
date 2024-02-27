@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ae8ef9aa-e5a0-4b22-9d47-2d87a221cd42</SBAId>
+    <RootSBAId>aba0284c-9ee1-4d9d-855b-efeb0f138815</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638443247407177761</SQN>
+    <Name>Show Monitor Capacity and Usage</Name>
+    <Description>This script shows the Monitor Capacity and Usage from the monitor side.
+
+Works for both Cloud and On-Prem deployments!
+
+RT 8.6.5 and higher only</Description>
+    <ActionCategory>System Health</ActionCategory>
+    <Version>2.0.2</Version>
+    <DateCreated>2024-02-12T12:50:01.03</DateCreated>
+    <DateModified>2024-02-25T14:09:57.57</DateModified>
+    <DatePublished>2024-02-23T22:39:00.717</DatePublished>
+    <LastEditorName>Bill Powell</LastEditorName>
+    <CreatorName>Wouter Kursten</CreatorName>
+    <Status>3</Status>
+    <CheckSum>cm+NvQI2icP3S3brMA6j04zkYtA=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Wouter Kursten</Author>
+      <Tags>monitor,capacity,controlup,service</Tags>
+      <Credits>Credits to: Wouter Kursten
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>wouter.kursten@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>ZxPm/ZqAFdd/VN9YiySHdYs3yo8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

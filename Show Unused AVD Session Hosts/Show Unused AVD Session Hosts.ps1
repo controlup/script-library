@@ -2,7 +2,7 @@
 
 <#
 .SYNOPSIS
-    Find Azure resources which should probably be assigned to resources but are not, eg disks, network interfaces, network security groups , public IP addresses
+    Find Azure resources which have not been used in x days by looking for events for them in the activity log
 
 .DESCRIPTION
     Using REST API calls
@@ -13,28 +13,34 @@
 .PARAMETER AZtenantId
     The azure tenant ID
     
+.PARAMETER daysback
+    The number of days to search back in the logs
+
+.PARAMETER hostpoolOnly
+    Only return results for the host pool containing the AZid
+    
 .PARAMETER resourceGroupOnly
     Only return results for the resource group containing the AZid
     
-.PARAMETER sortby
-    Sort the results by this property
-    
-.PARAMETER raw
-    Output raw objects to pipeline rather than text
+.PARAMETER includeUsedWithUsers
+    Incude session hosts which have had users on them otherwise only show machines which have had no users
+
+.PARAMETER includeNotPoweredOn
+    Incude session hosts which have not been powered on in the period otherwise include all
+
+.PARAMETER VMOnly
+    Only return results for the resource in the AZid
 
 .NOTES
     Version:        0.1
     Author:         Guy Leech, BSc based on code from Esther Barthel, MSc
-    Creation Date:  2022-09-16
-    Updated:        2022-06-17  Guy Leech  Added public IP addresses and changed mechanisms for determining unattached
+    Creation Date:  2021-10-30
+    Updated:        2022-06-17  Guy Leech  Added code to deal with paging in results
+                    2024-02-06  Guy Leech  Updated API version numbers. Added -includeUsedWithUsers and -includeNotPoweredOn. Implemented -hostpoolOnly
+                    2024-02-07  Guy Leech  Summary added
                     2024-02-08  Guy Leech  Added setting of TLS12 & TLS13
-                    2024-02-15  Guy Leech  Improved mechanism for determinging API version to use
-                    2024-02-16  Guy Leech  Switched to checking managedBy rather than getting full resource details
-                    2024-02-21  Guy Leech  Error 429 handling. API version caching moved to function that uses it. Fix for public IP attached to NAT gateway & network interfaces with private end points
-                    2024-02-22  Guy Leech  Fixed bug where unattached network resources not flagged as orphans. Added code to deal with less than perfect certificates (code moved to AZ functions)
+                    2024-02-23  Guy Leech  Updated shared Azure functions imported
 #>
-
-## TODO Need to check that the parent/associated resource still exists - e.g. does VM still exist for a NIC?
 
 [CmdletBinding()]
 
@@ -42,10 +48,19 @@ Param
 (
     [string]$AZid ,## passed by CU as the URL to the VM minus the FQDN
     [string]$AZtenantId ,
+    [double]$daysBack = 30 ,
+    [ValidateSet('Yes','No','Only')]
+    [string]$summary = 'Yes',
     [ValidateSet('Yes','No')]
     [string]$resourceGroupOnly = 'Yes',
-    [string]$sortby = 'type' ,
-    [switch]$raw
+    [ValidateSet('Yes','No')]
+    [string]$hostpoolOnly = 'yes',
+    [ValidateSet('Yes','No')]
+    [string]$includeUsedWithUsers = 'No',
+    [ValidateSet('Yes','No')]
+    [string]$includeNotPoweredOn = 'No'
+    ##[string]$sortby = 'type' ,
+    ##[switch]$raw
 )
 
 $VerbosePreference = $(if( $PSBoundParameters[ 'verbose' ] ) { $VerbosePreference } else { 'SilentlyContinue' })
@@ -60,26 +75,21 @@ if( ( $PSWindow = (Get-Host).UI.RawUI ) -and ( $WideDimensions = $PSWindow.Buffe
     $PSWindow.BufferSize = $WideDimensions
 }
 
-## exclude resource types that we cannot determine if have been used or not in this script (AVD resources can be checked by looking at session usage but we don't do that currently)
-
-[string[]]$excludedResourceTypes = @(
-    'Microsoft.AAD/DomainServices'
-    'Microsoft.Compute/virtualMachines/extensions'
-    'Microsoft.Insights/activityLogAlerts'
-    'Microsoft.DesktopVirtualization/workspaces' ## since we do not know if used or not and have no runnable/bootable resources
-    'Microsoft.DesktopVirtualization/hostpools'  ## as above
-    'Microsoft.DesktopVirtualization/applicationgroups' ## ""
-)
-
-[string]$providersApiVersion = '2021-04-01'
-[string]$resourceManagementApiVersion = '2021-04-01'
+[string]$insightsApiVersion = '2015-04-01'
+[string]$OperationalInsightsApiVersion = '2022-10-01'
+[string]$desktopVirtualisationApiVersion = '2023-09-05'
 [string]$baseURL = 'https://management.azure.com'
 [string]$credentialType = 'Azure'
 [hashtable]$script:apiversionCache = @{}
-
+$warnings = New-Object -TypeName System.Collections.Generic.List[string]
 Write-Verbose -Message "AZid is $AZid"
 
 #region AzureFunctions
+
+Function Get-CurrentLineNumber
+{ 
+    $MyInvocation.ScriptLineNumber 
+}
 
 function Get-AzSPStoredCredentials {
     <#
@@ -540,7 +550,54 @@ function Invoke-AzureRestMethod {
 
 #endregion AzureFunctions
 
-[datetime]$startTime = [datetime]::Now
+Function ConvertTo-Object
+{
+    [CmdletBinding()]
+    Param
+    (
+        $Tables , ## TODO work with multiple tables - array of array ?
+        $ExtraFields
+    )
+    ForEach( $table in $tables )
+    {
+        ForEach( $row in $table.rows )
+        {
+            [hashtable]$result = @{ TableName = $table.Name }
+            if( $ExtraFields -and $ExtraFields.Count -gt 0 )
+            {
+                $result += $ExtraFields
+            }
+            For( [int]$index = 0 ; $index -lt $row.Count ; $index++ )
+            {
+                if( $table.columns[ $index ].type -ieq 'long' )
+                {
+                    $result.Add( $table.columns[ $index ].name , $row[ $index ] -as [long] )
+                }
+                elseif( $table.columns[ $index ].type -ieq 'datetime' )
+                {
+                    $result.Add( $table.columns[ $index ].name , $row[ $index ] -as [datetime] )
+                }
+                else
+                {
+                    if( $table.columns[ $index ].type -ine 'string' )
+                    {
+                        $warnings.Add(  "Unimplemented type $($table.columns[ $index ].type), treating as string" )
+                    }
+                    $result.Add( $table.columns[ $index ].name , $row[ $index ] )
+                }
+            }
+            [pscustomobject]$result
+        }
+    }
+}
+
+Function Out-PassThru
+{
+    Process
+    {
+        $_
+    }
+}
 
 $azSPCredentials = $null
 $azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenantId $AZtenantId
@@ -550,8 +607,6 @@ If ( -Not $azSPCredentials )
     Exit 1 ## will already have output error
 }
 
-## TLS and certificate handling now set in the Azure functions
-
 # Sign in to Azure with the Service Principal retrieved from the credentials file and retrieve the bearer token
 Write-Verbose -Message "Authenticating to tenant $($azSPCredentials.tenantID) as $($azSPCredentials.spCreds.Username)"
 if( -Not ( $azBearerToken = Get-AzBearerToken -SPCredentials $azSPCredentials.spCreds -TenantID $azSPCredentials.tenantID -scope $baseURL ) )
@@ -559,8 +614,11 @@ if( -Not ( $azBearerToken = Get-AzBearerToken -SPCredentials $azSPCredentials.sp
     Throw "Failed to get Azure bearer token"
 }
 
+[string]$vmName = ($AZid -split '/')[-1]
+    
 [string]$subscriptionId = $null
 [string]$resourceGroupName = $null
+$hostPoolForAzId = $null
 
 ## subscriptions/58ffa3cb-2f63-4242-a06d-deadbeef/resourceGroups/WVD/providers/Microsoft.Compute/virtualMachines/GLMW10WVD-0
 if( $AZid -match '\bsubscriptions/([^/]+)/resourceGroups/([^/]+)/providers/Microsoft\.' )
@@ -573,239 +631,294 @@ else
     Throw "Failed to parse subscription id and resource group from $AZid"
 }
 
+## https://docs.microsoft.com/en-us/rest/api/monitor/activity-logs/list
+[datetime]$scriptStartTime = [datetime]::Now
+[datetime]$startFrom = $scriptStartTime.AddDays( -$daysBack )
+[string]$filter = "eventTimestamp ge '$(Get-Date -Date $startFrom -Format s)'"
+if( $resourceGroupOnly -eq 'yes' )
+{
+    $filter = "$filter and resourceGroupName eq '$resourceGroupName'"
+}
+
 ## https://docs.microsoft.com/en-us/rest/api/resources/resources/list-by-resource-group
 [string]$resourcesURL = $null
 if( $resourceGroupOnly -ieq 'yes' )
 {
     $resourcesURL = "resourceGroups/$resourceGroupName"
 }
-## else ## will be for the subscription
 
-[array]$allResources = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/$resourcesURL/resources`?`$expand=createdTime,changedTime,lastusedTime,managedBy&api-version=$resourceManagementApiVersion" -retries 2 | Where-Object type -NotIn $excludedResourceTypes )
+[array]$hostpools = @()
 
-[hashtable]$resourceDetails = @{}
-[hashtable]$resourceGroups = @{}
-
-[string[]]$typesOfInterest = @( 'Microsoft.Network/networkInterfaces' , 'Microsoft.Compute/disks' , 'Microsoft.Network/networkSecurityGroups' , 'Microsoft.Network/publicIPAddresses' )
-
-ForEach( $resource in $allResources )
+## TODO filter if host pool only parameter passed to script 
+if( $resourceGroupOnly -ieq 'yes' )
 {
-    ## only cache the resource types that could be orphaned from a deleted parent
-    if( $resource.type -in $typesOfInterest )
-    {
-        if( $resource.PSObject.Properties[ 'managedBy' ] ) ## use this to save another AZ request
-        {
-            if( -Not [string]::IsNullOrEmpty( $resource.ManagedBy ))
-            {
-                if( -Not $resourceDetails.ContainsKey( $resource.managedBy ) )
-                {
-                    if( $resource.type -ieq 'Microsoft.Compute/disks' )
-                    {
-                        [hashtable]$diskState = @{ 'DiskState' = 'Attached' }
-                        if( $resource.psObject.Properties[ 'properties' ] )
-                        {
-                            Add-Member -InputObject $resource.properties -NotePropertyMembers $diskState -Force
-                        }
-                        else
-                        {
-                            Add-Member -InputObject $resource -MemberType NoteProperty -Name properties -Value ([pscustomobject]$diskState)
-                        }
-                    }
-                    else ## not a disk
-                    {
-                        $null = $null
-                    }
-                    $resourceDetails.Add( $resource.id , $resource )
-                }
-                ## else resource is already in dictionary
-            }
-            else ## managedby present but empty which we assume means not managed
-            {
-                $null
-            }
-        }
-        elseif( $resourceDetail = Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/$($resource.id)" -retries 2 -newestApiVersion -propertyToReturn $null -type $resource.type )
-        {      
-            $resourceDetails.Add( $resource.id , $resourceDetail ) ## use in 2nd pass
-        }
-        else
-        {
-            Write-Warning -Message "Failed to get details for resource $($resource.id)"
-        }
-        
-        if( $resourceGroupOnly -ieq 'no')
-        {
-            if( $resource.id -match '\bsubscriptions/([^/]+)/resourceGroups/([^/]+)/providers/Microsoft\.' )
-            {
-                [string]$thisResourceGroupName = $Matches[2]
-
-                if( -Not $resourceGroups.ContainsKey( $thisResourceGroupName ))
-                {
-                    try
-                    {
-                        $resourceGroups.Add( $thisResourceGroupName , $resource )
-                    }
-                    catch
-                    {
-                        ## already got it
-                    }
-                }
-                ## else already got it
-                Add-Member -InputObject $resource -MemberType NoteProperty -Name 'Resource Group' -Value $thisResourceGroupName
-            }
-            else
-            {
-                Write-Warning -Message "Failed to determine resource group from $($resource.id)"
-            }
-        }
-    }
-    ## else not an orphanable type
+    ## https://learn.microsoft.com/en-us/rest/api/desktopvirtualization/host-pools/list-by-resource-group?view=rest-desktopvirtualization-2022-02-10-preview&tabs=HTTP
+    $hostpools = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/resourcegroups/$resourceGroupName/providers/Microsoft.DesktopVirtualization/hostPools?api-version=$desktopVirtualisationApiVersion" )
+}
+else ## get all host pools
+{
+    $hostpools = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/providers/Microsoft.DesktopVirtualization/hostPools?api-version=$desktopVirtualisationApiVersion" )
 }
 
-## second pass if Microsoft.Compute/disks or Microsoft.Network/networkinterfaces or Microsoft.Network/networkSecurityGroups then check parent VM (if there is one) as we will have it in the unused collection
-## cache VM details so if disk is for a machine we already have, we don't need to get it from Azure again
-$potentiallyUnassignedResources = New-Object -TypeName System.Collections.Generic.List[object] ## make a generic list so we can add extra items later as necessary
-[array]$parents = @( ForEach( $potentiallyUnassignedResource in $allResources )
+Write-Verbose -Message "Retrieved $($hostpools.Count) host pools"
+    
+[array]$logSinsights = @()
+
+Write-Verbose -Message "Got $($hostpools.Count) hostpools"
+
+if( $null -eq $hostpools -or $hostpools.Count -eq 0 )
 {
-    [bool]$childResource = $false
-    $parent = $null
-
-    if( $potentiallyUnassignedResource.type -ieq 'Microsoft.Network/networkInterfaces' )
-    {
-        $childResource = $true
-        if( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] )
-        {
-            if( -Not ( $parent = $resourceDetail | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty virtualMachine -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue ) )
-            {
-                $parent = $resourceDetail | Select-Object -ExpandProperty properties -ErrorAction SilentlyContinue | Select-Object -ExpandProperty privateEndpoint -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue
-            }
-        }
-        else
-        {
-            Write-Warning -Message "Unable to get details for network interface `"$($potentiallyUnassignedResource.id)`""
-        }    
-    }
-    elseif( $potentiallyUnassignedResource.type -ieq 'Microsoft.Compute/disks' )
-    {
-        $childResource = $true
-        ## if there is a parent, check that disk state is not unattached
-        ##if( ( $parent = $resourceDetails[ $potentiallyUnassignedResource.id ] | Select-Object -ExpandProperty managedBy -ErrorAction SilentlyContinue ) -and ( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] ) -and $resourceDetail.properties.DiskState -ieq 'Unattached' )
-        if( ( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] ) -and $resourceDetail.psobject.properties[ 'properties' ] -and $resourceDetail.properties.psobject.properties[ 'DiskState' ]  )
-        {
-            $parent = ( $resourceDetail.properties.DiskState -ine 'Unattached' ) ## don't need id
-        }
-        else
-        {
-            Write-Verbose -Message "Unable to get details for disk `"$($potentiallyUnassignedResource.id)`" so assuming unattached" ## there was a managedby property but it was empty
-            $parent = $null
-        }    
-    }
-    elseif( $potentiallyUnassignedResource.type -ieq 'Microsoft.Network/networkSecurityGroups' )
-    {
-       $childResource = $true
-       if( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] )
-       {
-            if( $resourceDetail.properties.psobject.properties[ 'subnets' ] -and $resourceDetail.properties.subnets.Count -gt 0 )
-            {
-                $parent = $resourceDetail.properties | Select-Object -ExpandProperty subnets | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue
-            }
-            elseif( $resourceDetail.properties.psobject.properties[ 'networkInterfaces' ] -and $resourceDetail.properties.networkInterfaces.Count -gt 0 )
-            {
-                $parent = $resourceDetail.properties | Select-Object -ExpandProperty networkInterfaces | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue
-            }
-        }
-        else
-        {
-            Write-Warning -Message "Unable to get details for network security group `"$($potentiallyUnassignedResource.id)`""
-        }
-
-    }
-    elseif( $potentiallyUnassignedResource.type -ieq 'Microsoft.Network/publicIPAddresses' )
-    {
-       $childResource = $true
-       if( $resourceDetail = $resourceDetails[ $potentiallyUnassignedResource.id ] )
-       {
-            if( -Not ( $parent = $resourceDetail | Select-Object -ExpandProperty properties -ErrorAction SilentlyContinue | Select-Object -ExpandProperty ipConfiguration -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue ) )
-            {
-                $parent = $resourceDetail | Select-Object -ExpandProperty properties -ErrorAction SilentlyContinue | Select-Object -ExpandProperty natGateway -ErrorAction SilentlyContinue | Select-Object -ExpandProperty id -ErrorAction SilentlyContinue
-            }
-        }
-        else
-        {
-            Write-Warning -Message "Unable to get details for public IP address `"$($potentiallyUnassignedResource.id)`""
-        }
-    }
-
-    if( $childResource )
-    {
-        if( $null -eq $parent -or $false -eq $parent )
-        {
-            $potentiallyUnassignedResources.Add( $potentiallyUnassignedResource )
-        }
-        elseif( -Not ( $parent -is [bool] ) ) ## record the parent, if not disk, so that we can later check if the parent is orphaned (network interfaces and network security groups) and add it to the orphans collection
-        {
-            ForEach( $resource in $parent )
-            {
-                [pscustomobject]@{
-                    Parent = $resource
-                    Child  = $potentiallyUnassignedResource
-                }
-            }
-        }
-    }
-})
-
-## look through discovered parents to see if actually orphaned so can add their children to the orphan list if not already present
-ForEach( $parent in $parents )
-{
-    if( ( $potentiallyUnassignedResources | Where-Object id -ieq $parent.parent ) -and ( -Not ( $potentiallyUnassignedResources | Where-Object id -ieq $parent.Child.Id ) ) )
-    {
-        $potentiallyUnassignedResources.Add( $parent.child )
-    }
+    Throw "No host pools found"
 }
 
-if( -Not $raw )
+[hashtable]$sessionhostsUsed = @{} ## New-Object -TypeName System.Collections.Generic.List[object]
+
+## if we have any AVD, see if we have Log Insights
+[array]$workspaces = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces?api-version=$OperationalInsightsApiVersion" -retries 2 )
+
+if( -Not ( $loganalyticsBearerToken = Get-AzBearerToken -SPCredentials $azSPCredentials.spCreds -TenantID $azSPCredentials.tenantID -scope 'https://api.loganalytics.io' ) )
 {
-    [string]$message = "Found $($potentiallyUnassignedResources.Count) resources potentially orphaned in "
-
-    if( $resourceGroupOnly -ieq 'no' )
-    {
-        [array]$resourceGroupsInvolved = @( $potentiallyUnassignedResources | Group-Object -Property 'Resource Group' )
-        $message += "$($resourceGroupsInvolved.Count) resource groups"
-   
-        if( -Not $PSBoundParameters[ 'sortby' ] -or $sortby -imatch '^resource' ) ## convert "resourcegroup" to "resource group"
-        {
-            $sortby = 'Resource Group'
-        }
-    }
-    else
-    {
-        $message += "resource group $resourceGroupName"
-        if( $sortby -imatch '^resource' ) ## if only processing resource group then cannot sort on resource group
-        {
-            $sortby = 'type'
-        }
-    }
-
-    $message += ". Output sorted by $sortby"
-
-    Write-Output -InputObject $message
+    Throw "Unable to get log analytics bearer token for $($azSPCredentials.spCreds)"
 }
-
-[array]$outputObjects = @( $potentiallyUnassignedResources | Select-Object -Property *,
-    @{name='Created';expression={ $_.createdTime -as [datetime] }} ,
-    @{name='Changed';expression={ $_.changedTime -as [datetime] }}  -ExcludeProperty id,tags,managedBy,sku,createdTime,changedTime )
-
-if( $raw )
+elseif( $null -eq $workspaces -or $workspaces.Count -eq 0 )
 {
-    $outputObjects
+    Throw "No log analytics workspaces found so no AVD session history available"
 }
 else
 {
-    $outputObjects | Sort-Object -Property $sortby | Format-Table -AutoSize  -Wrap
+    ForEach( $workspace in $workspaces )
+    {
+        if( $workspace.properties.retentionInDays -lt $daysBack )
+        {
+            $warnings.Add( "Days retention is $($workspace.properties.retentionInDays) in logs `"$($workspace.name)`" is less than days back requested of $daysBack so may miss some AVD sessions" )
+        }
+        ## $usages = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$($workspace.Name)/usages?api-version=$OperationalInsightsApiVersion" -propertyToReturn $null -retries 2 )
+        $query = "WVDConnections | where TimeGenerated > ago($($daysBack)d) and State == `"Connected`""
+
+        ## https://docs.microsoft.com/en-us/rest/api/loganalytics/dataaccess/query/get?tabs=HTTP
+        $queryResult = Invoke-AzureRestMethod -BearerToken $loganalyticsBearerToken -uri "https://api.loganalytics.io/v1/workspaces/$($workspace.properties.customerId)/query?query=$query" -propertyToReturn $null -retries 2
+        if( $null -ne $queryResult -and $queryResult.PSObject.Properties[ 'tables' ] )
+        {
+            ## sessionhostname that comes back is fqdn and we prepend host pool name so we can cross reference to session hosts
+            $AVDconnections = ConvertTo-Object -Tables $queryResult.tables -ExtraFields @{ Workspace = $workspace } | Select-Object -Property *,@{n='hostname';e={ ($_.SessionHostName -split '\.')[0] }},@{n='hostpool' ; e = { $script:thishostpool = $_._ResourceId -replace '^/subscriptions/[a-z0-9\-]+/resourcegroups/wvd/providers/microsoft\.desktopvirtualization/hostpools/' ; $script:thishostpool }},@{n='hostPoolSessionHost';e={ "$($script:thishostpool)/$($_.SessionHostName)"}} | Group-Object -Property hostPoolSessionHost -AsHashTable -AsString
+            $sessionhostsUsed += $AVDconnections
+            Write-Verbose -Message "Got $($sessionhostsUsed.count) session hosts that have been used since $(Get-Date -Date $startFrom -Format G)"
+        }
+    }
+}
+## iterate over all host pools to get session hosts in them and then look them up in the log analytics data to see if they have been logged on to or not so we can mark as such in output
+
+if( $sessionhostsUsed.Count -eq 0 )
+{
+    $warnings.Add( "No session connect events found since $($startFrom.ToString('G'))" )
 }
 
+[array]$allSessionHosts = @( ForEach( $hostpool in $hostpools )
+{
+    ## https://learn.microsoft.com/en-us/rest/api/desktopvirtualization/session-hosts/list?tabs=HTTP
+    ## /subscriptions/58ffa3cb-DEAD-BEEF-DADA-369c1fcebbf5/resourcegroups/WVD/providers/Microsoft.DesktopVirtualization/hostpools/host-pool-server
+    [string]$thisResourceGroup = $hostpool.id -replace '^/subscriptions/[^/]+/resourcegroups/([^/]+)/providers/.*$' , '$1'
+    [array]$sessionHosts = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/resourceGroups/$thisResourceGroup/providers/Microsoft.DesktopVirtualization/hostPools/$($hostpool.name)/sessionHosts?api-version=$desktopVirtualisationApiVersion" -retries 2 )
+    if( $null -eq $sessionHosts -or $sessionHosts.Count -eq 0 )
+    {
+        $warnings.Add( "Host pool `"$($hostpool.name)`" in resource group `"$thisResourceGroup`" contains no session hosts" )
+    }
+    else
+    {
+        ForEach( $sessionHost in $sessionHosts )
+        {
+            if( $sessionHost.properties.resourceId -ieq $AZid )
+            {
+                $hostPoolForAzId = $hostpool
+            }
+            $result = Add-Member -PassThru -InputObject $sessionHost -NotePropertyMembers @{              
+                ## session host is hostpool/sessionhost.fqdn
+                SessionHostName = $sessionhost.Name -replace '^.*/([^.]+)\..*$' , '$1'
+                HostPool = $hostpool.name
+                ResourceGroup = $thisResourceGroup
+                Used = $sessionhostsUsed[ $sessionHost.Name ]
+            }
+            $result
+        }
+    }
+    if( $hostpoolOnly -ieq 'yes' -and $null -ne $hostPoolForAzId )
+    {
+        break ## we have found the hostpool for the passed AZid but there may be earlier hostpools/sessionhosts that we still need to ignore
+    }
+})
+
+Write-Verbose -Message "Got $($allSessionHosts.Count) session hosts in $($hostpools.Count) host pools"
+
+if( $hostpoolOnly -ieq 'yes' )
+{
+    if( $null -eq $hostPoolForAzId )
+    {
+        Throw "Unable to find a host pool containing resource id $AZid"
+    }
+    if( $hostpools.Count -gt 1 )
+    {
+        $hostpools = @( $hostPoolForAzId ) ## the only host pool we are interested in
+        $allSessionHosts = @( $allSessionHosts | Where-Object HostPool -ieq $hostPoolForAzId.Name )
+    }
+}
+
+Write-Verbose -Message "Now have $($hostpools.Count) host pools and $($allSessionHosts.Count) session hosts"
+
+## https://docs.microsoft.com/en-us/rest/api/monitor/activity-logs/list
+
+[datetime]$startFrom = (Get-Date).AddDays( -$daysBack )
+[string]$filter = "eventTimestamp ge '$(Get-Date -Date $startFrom -Format s)' and resourceProvider eq 'Microsoft.Compute'"
+## cannot filter on ResourceProvider and ResourceGroup so post filter on the latter
+## TODO filter on host pool only
+
+[array]$startDealllocateEvents = @( Invoke-AzureRestMethod -BearerToken $azBearerToken -uri "$baseURL/subscriptions/$subscriptionId/providers/Microsoft.Insights/eventtypes/management/values`?api-version=$insightsApiVersion&`$filter=$filter&`$select=operationname,resourcegroupname,eventTimestamp,resourceid,status,eventname" -propertyToReturn 'value' -retries 2 | Where-Object { ( $_.OperationName.value -ieq 'Microsoft.Compute/virtualMachines/deallocate/action' -or $_.OperationName.value -ieq 'Microsoft.Compute/virtualMachines/start/action' ) -and $_.status.value -ieq 'Succeeded' -and $_.eventName.value -ieq 'EndRequest' -and ( $resourceGroupOnly -ieq 'no' -or $_.ResourceGroupName -ieq $resourceGroupName ) } `
+    | Select-Object -Property @{n='time';e={([datetime]$_.eventTimestamp).ToUniversalTime() }}, ## maintain uTC as casting string to datetime makes local time
+        @{n='operation';e={$_.operationname.value -replace 'Microsoft.Compute/virtualMachines/(.+)/action' , '$1' }},
+        resourcegroupname,
+        @{n='VM';e={ $_.resourceid -replace '^.*/providers/Microsoft\.Compute/virtualMachines/' }} | Sort-Object -Property time | Group-Object -Property VM,resourcegroupname )
+
+[int]$counter = 0
+[array]$upTimes = @( ForEach( $machine in $startDealllocateEvents ) `
+{
+    $counter++
+    [uint64]$secondsRunning = 0
+    $VM,$resourcegroup = $machine.name -split ',\s?'
+    Write-Verbose -Message "$counter : $($startDealllocateEvents.Count) : $resourcegroup / $VM"
+    [datetime]$lastStartTime = $startFrom ## assume machine was already running before logging if we don't see a start event before a deallocate
+    ForEach( $event in $machine.group )
+    {
+        if( $event.operation -ieq 'start' )
+        {
+            $lastStartTime = $event.Time
+        }
+        elseif( $event.operation -ieq 'deallocate' )
+        {
+            if( $lastStartTime -ne [datetime]::MinValue )
+            {
+                $running = ($event.time - $lastStartTime).TotalSeconds
+                $secondsRunning += $running
+                $lastStartTime = [datetime]::MinValue
+            }
+            else
+            {
+                $warnings.Add( "Got another deallocate for $($machine.machinename) without a start event in between" )
+            }
+        }
+        else
+        {
+            $warnings.Add( "Unexepected event $($event) for $($machine.name)" )
+        }
+    }
+    if( $lastStartTime -ne [datetime]::MinValue )
+    {
+        ## still running as not seen deallocate for previous start - ## TODO do we cross check that it is still running?
+        $running = ($scriptStartTime - $lastStartTime ).TotalSeconds
+        if( $running -gt 0 )
+        {
+            $secondsRunning += $running
+        }
+    }
+    $result = [pscustomobject]@{
+        'VM' = $VM
+        'ResourceGroupName' = $resourcegroup
+        'UpTimeSeconds' = $secondsRunning
+    }
+    Write-Verbose -Message "$resourcegroup/$VM up $($result.UpTimeSeconds) seconds"
+    $result
+})
+
+[array]$usage = @( ForEach( $machine in $allSessionHosts )
+{
+    [array]$uniqueUsers = @()
+    [int]$totalSessions = 0
+    [uint64]$VMupTimeSeconds = 0
+    $VMupTimeSeconds =  $upTimes | Where-Object { $_.VM -ieq $machine.SessionHostName -and $_.ResourceGroupName -ieq $machine.ResourceGroup } | Select-Object -ExpandProperty UpTimeSeconds -First 1
+    $used = $sessionhostsUsed[ $machine.name ]
+    if( $used ) ##  VM has had user
+    {
+        if( $includeUsedWithUsers -ieq 'yes' )
+        {
+            $uniqueUsers = @( $used | Group-Object -Property username )
+            $totalSessions = $used.Count
+        }
+        else ## used but not including used session hosts
+        {
+            continue
+        }
+    }
+    elseif( $includeNotPoweredOn -ieq 'no' -and $VMupTimeSeconds -eq 0 )
+    {
+        continue
+    }
+
+    $result = [pscustomobject]@{
+        'Host Pool' = $machine.HostPool
+        'Session Host Name' = $machine.SessionHostName
+        'Unique Users' = $uniqueUsers.Count
+        'Total Sessions' = $totalSessions
+        'Run time (hours)' = [math]::Round( $VMupTimeSeconds / 3600 , 2 )
+    }
+    if( $resourceGroupOnly -ine 'yes' )
+    {
+        Add-Member -InputObject $result -MemberType NoteProperty -Name 'Resource Group' -Value $machine.ResourceGroup
+    }
+    $result
+} )
+
+if( $summary -ine 'no' )
+{
+    [array]$usageByHostPool = @( $usage | Group-Object -Property 'Host Pool' )
+    [array]$allSessionHostsByHostPool = @( $allSessionHosts | Group-Object -Property HostPool )
+
+    [array]$summaryData = @( ForEach( $hostpool in $hostpools ) `
+    {
+        $hostpoolUsage = $usageByHostPool | Where-Object Name -ieq $hostpool.Name
+        $sessionHostsForHostPool = $allSessionHostsByHostPool | Where-Object Name -ieq $hostpool.name
+        $sessionLess = @( $usage | Where-Object { $_.'Host Pool' -ieq $hostpool.Name -and $_.'Total Sessions' -eq 0 -and $_.'Run time (hours)' -gt 0 } )
+        $hadSession  = @( $usage | Where-Object { $_.'Host Pool' -ieq $hostpool.Name -and $_.'Total Sessions' -gt 0 } )
+
+        if( $includeNotPoweredOn -ieq 'yes' -or $sessionLess.Count -gt 0 )
+        {
+            $result = [pscustomobject]@{
+                'Host Pool' = $hostpool.name
+                'Total Session Hosts' = $sessionHostsForHostPool.Count
+                'Session Hosts with User Sessions' = $hadSession.Count 
+                'Powered Up but Unused' = $sessionLess.Count
+                'Powered Up but Unused - Hours Total' = $sessionLess | Measure-Object -Property 'Run time (hours)' -Sum | Select-Object -ExpandProperty Sum
+            }
+            $result ## output
+        }
+    })
+    
+    if( $null -ne $summaryData -and $summaryData.Count -gt 0 )
+    {
+        Write-Output -InputObject "Session host usage summary across $($hostpools.Count) host pools & $($allSessionHosts.Count) session hosts :"
+        $summaryData | Sort-Object -property 'Session Hosts Powered Up Unused Hours' -Descending | Format-Table -AutoSize
+    }
+    ## else no summary data which we inform about below
+
+    if( $summary -ieq 'only' )
+    {
+        exit 0
+    }
+}
+
+if( $null -eq $usage -or $usage.Count -eq 0 )
+{
+    Write-Output -InputObject "None of the $($allsessionHosts.Count) session hosts in the $($hostpools.Count) host pools meet the criteria to be displayed here"
+}
+else ## some usage
+{
+    Write-Output -InputObject "Indvidual Session Host usage and run time since $($startFrom.ToString('G'))"
+
+    $usage | Sort-Object -Property @{ expression = 'Unique Users' ; descending = $false } , @{ expression = 'Run time (hours)' ; descending = $true } | Format-Table -AutoSize
+}
 
 [datetime]$endTime = [datetime]::Now
 Write-Verbose -Message "$($endtime.ToString( 'G')) : total run time $(($endTime - $startTime).TotalSeconds) seconds, making $($script:totalRequests) requests"
+
+if( $null -ne $warnings -and $warnings.Count -gt 0 )
+{
+    $warnings | Write-Warning
+}
 

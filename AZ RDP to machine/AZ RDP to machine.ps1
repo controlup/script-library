@@ -26,6 +26,8 @@
                     2022-09-26  Added -force to continue on possible non-fatal errors
                     2022-09-29  Added retries when getting external IP address
                     2022-09-30  Added setting of TLS12 & TLS13
+                    2022-10-20  Added try/catch around window buffer size setting
+                    2023-12-27  Fix for rule name already existing. Fix for not finding existing external IP address rule. Change spaces in rule name to underscores
 #>
 
 [CmdletBinding()]
@@ -45,10 +47,17 @@ $ErrorActionPreference = $(if( $PSBoundParameters[ 'erroraction' ] ) { $ErrorAct
 $ProgressPreference = 'SilentlyContinue'
 
 [int]$outputWidth = 250
-if( ( $PSWindow = (Get-Host).UI.RawUI ) -and ( $WideDimensions = $PSWindow.BufferSize ) )
+try
 {
-    $WideDimensions.Width = $outputWidth
-    $PSWindow.BufferSize = $WideDimensions
+    if( ( $PSWindow = (Get-Host).UI.RawUI ) -and ( $WideDimensions = $PSWindow.BufferSize ) )
+    {
+        $WideDimensions.Width = $outputWidth
+        $PSWindow.BufferSize = $WideDimensions
+    }
+}
+catch
+{
+    ## not a showstopper but we don't want it to terminate the script
 }
 
 [string]$computeApiVersion = '2021-07-01'
@@ -704,6 +713,8 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
     }
 
     Write-Verbose -Message "External IP address is $externalIPAddress"
+    
+    [string]$newRuleName = "Allow RDP port $rdpPort via ControlUp from $($externalIPAddress)" -replace '\s' , '_'
 
     if( $thisNetworkInterface )
     {
@@ -776,7 +787,7 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
                                 {
                                     $ruleAppliesToUs = $true
                                 }
-                                elseif( ($securityRule.sourceAddressPrefix -as [int]) -ne $null ) ## single IP address
+                                elseif( ($securityRule.sourceAddressPrefix -as [ipaddress]) -ne $null ) ## single IP address
                                 {
                                     if( $ruleAppliesToUs = ( $securityRule.sourceAddressPrefix -eq $externalIPAddress ))
                                     {
@@ -882,56 +893,62 @@ If ($azSPCredentials = Get-AzSPStoredCredentials -system $credentialType -tenant
         }
         elseif( $networkSecurityGroup )
         {
-            ## new rule priority must be higher (so lower number) than highest priority deny rule and must be unique
-            if( $highestDeniedRulePriority -lt [int]::MaxValue )
+            if( $null -ne $networkSecurityGroup.securityRules -and $networkSecurityGroup.securityRules.Where( { $_.name -ieq $newRuleName } ) )
             {
-                $newRulePriority = $highestDeniedRulePriority - 1
-            }
-
-            while( $newRulePriority -ge $highestPriorityRuleAllowed -and $prioritiesUsed.ContainsKey( $newRulePriority ) )
-            {
-                $newRulePriority -= $rulePriorityGap ## leave a gap in case someone needs to put a rule between
-            }
-
-            Write-Verbose -Message "New rule priority is $newRulePriority"
-
-            if( $newRulePriority -lt $highestPriorityRuleAllowed )
-            {
-                Throw "Unable to find a priority for the network rule as highest priority allowed is $highestPriorityRuleAllowed"
-            }
-
-            ## can only be one NSG per NIC so we will need to edit the NSG already on the NIC rather than creating a new NSG
-            [string]$newRuleName = "Allow RDP port $rdpPort (ControlUp) from $($externalIPAddress)"
-            $newrules = [pscustomobject]@{ location = $vm.location
-                properties = @{ securityrules = ( $networkSecurityGroup.securityRules + 
-                    [pscustomobject]@{ 
-                        name = $newRuleName
-                        properties = @{
-                            description                = "Added by ControlUp script by $env:USERNAME $(Get-Date -Format G)"
-                            protocol                   = 'TCP'
-                            sourcePortRange            = '*'
-                            destinationPortRange       = $rdpPort
-                            sourceAddressPrefix        = $externalIPAddress
-                            destinationAddressPrefix   = $thisNetworkInterface.properties.ipConfigurations | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty privateIPAddress -First 1
-                            access                     = 'Allow'
-                            priority                   = $newRulePriority
-                            direction                  = 'Inbound'
-                        }
-                    })
-                }
-            }
-            if( -Not ( $newruleResult = Invoke-AzureRestMethod -BearerToken $azBearerToken -uri $networkSecurityGroupURI -body $newrules -property $null -method PUT ) )
-            {
-                Write-Warning "Error when trying to create new rule in network security group"
-            }
-
-            if( -Not ( Wait-ProvisioningComplete -bearerToken $azBearerToken -uri $networkSecurityGroupURI -waitForSeconds $provisioningWaitTimeSeconds ))
-            {
-                Write-Warning -Message "Timed out waiting for network security group update to finish"
+                Write-Warning -Message "Already have a network securoty rule `"$newRuleName`""
             }
             else
             {
-                Write-Output -InputObject "Added new rule `"$newRuleName`" at priority $newRulePriority to network security group `"$(Split-Path -Path $networkSecurityGroupId -Leaf)`" for $externalIPAddress"
+                ## new rule priority must be higher (so lower number) than highest priority deny rule and must be unique
+                if( $highestDeniedRulePriority -lt [int]::MaxValue )
+                {
+                    $newRulePriority = $highestDeniedRulePriority - 1
+                }
+
+                while( $newRulePriority -ge $highestPriorityRuleAllowed -and $prioritiesUsed.ContainsKey( $newRulePriority ) )
+                {
+                    $newRulePriority -= $rulePriorityGap ## leave a gap in case someone needs to put a rule between
+                }
+
+                Write-Verbose -Message "New rule priority is $newRulePriority"
+
+                if( $newRulePriority -lt $highestPriorityRuleAllowed )
+                {
+                    Throw "Unable to find a priority for the network rule as highest priority allowed is $highestPriorityRuleAllowed"
+                }
+
+                ## can only be one NSG per NIC so we will need to edit the NSG already on the NIC rather than creating a new NSG
+                $newrules = [pscustomobject]@{ location = $vm.location
+                    properties = @{ securityrules = ( $networkSecurityGroup.securityRules + 
+                        [pscustomobject]@{ 
+                            name = $newRuleName
+                            properties = @{
+                                description                = "Added by ControlUp script by $env:USERNAME $(Get-Date -Format G)"
+                                protocol                   = 'TCP'
+                                sourcePortRange            = '*'
+                                destinationPortRange       = $rdpPort
+                                sourceAddressPrefix        = $externalIPAddress
+                                destinationAddressPrefix   = $thisNetworkInterface.properties.ipConfigurations | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty privateIPAddress -First 1
+                                access                     = 'Allow'
+                                priority                   = $newRulePriority
+                                direction                  = 'Inbound'
+                            }
+                        })
+                    }
+                }
+                if( -Not ( $newruleResult = Invoke-AzureRestMethod -BearerToken $azBearerToken -uri $networkSecurityGroupURI -body $newrules -property $null -method PUT ) )
+                {
+                    Write-Warning "Error when trying to create new rule in network security group"
+                }
+
+                if( -Not ( Wait-ProvisioningComplete -bearerToken $azBearerToken -uri $networkSecurityGroupURI -waitForSeconds $provisioningWaitTimeSeconds ))
+                {
+                    Write-Warning -Message "Timed out waiting for network security group update to finish"
+                }
+                else
+                {
+                    Write-Output -InputObject "Added new rule `"$newRuleName`" at priority $newRulePriority to network security group `"$(Split-Path -Path $networkSecurityGroupId -Leaf)`" for $externalIPAddress"
+                }
             }
         }
         else

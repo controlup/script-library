@@ -109,7 +109,7 @@ function Invoke-ADMLogin {
         {
             # Login to the ADM and create a session (stored in $NSSession)
             $invokeRestMethodParams = @{
-                Uri             = "http://$ADMIP/nitro/v1/config/login"
+                Uri             = "https://$ADMIP/nitro/v1/config/login"
                 Body            = "object="+$Login
                 Method          = "Post"
                 SessionVariable = "ADMSession"
@@ -355,7 +355,7 @@ function ConvertEpochToDateTime {
 
 #    # Convert epoch/unix time to datetime (and take local timezone into account)
     $baseDateTime = New-Object -Type DateTime -ArgumentList 1970, 1, 1, 0, 0, 0, 0
-    $Offset = [TimeZoneInfo]::Local | Select BaseUtcOffset
+    $Offset = [TimeZoneInfo]::Local | Select-Object BaseUtcOffset
     $utcTime = $(Get-Date $($baseDateTime.AddSeconds($ePochTime)) -Format r)
     $localTime = Get-Date($($off.BaseUtcOffset) + $(Get-Date $($baseDateTime.AddSeconds($ePochTime)) -Format r)) #-UFormat %c 
     return $localTime
@@ -405,7 +405,7 @@ $icaSession = Get-ADMHDXInsightICASession -ADMIP $ADMIP -ADMSession $WebSession 
 # Present the information:
 Write-Host "Citrix ADM HDX Insight session details for $($HDXUserName): " -ForegroundColor Yellow
 #$icaSession.ica_session | Select serverside_packet_retransmits,user_type,is_msi,count_usb_rejected,ip_block_name,launch_duration,latitude,l7_threshold_configure_value,longitude,region_code,region,host_delay,total_bytes,is_active,client_ip_address,pn_agent_version,client_latency,client_hostname,count_usb_accepted,usb_status,client_side_ns_delay,server_side_ns_delay,application_enumeration_duration,session_reconnect,serverside_rto,l7_threshold_max_server_breach,duration_summary_bandwidth,country,session_hop_diagram,clientside_packet_retransmits,server_ip_address,count_usb_stopped,rpt_sample_time,clientside_0_win,session_setup_time,bandwidth,clientside_rto,ica_app_name,client_version,clientside_cb,session_rtt,ica_user_name,country_code,l7_threshold_breach_count,state,client_type,euem,l7_clientside_latency,device_type,server_jitter,id,client_jitter,server_latency,is_multi_hop,serverside_0_win,l7_threshold_max_client_breach,serverside_cb,l7_threshold_avg_client_breach,session_type,acr_count,sr_reconnect_count,ha_failover_count,selected_time_totalte,l7_monitoring_supported,l7_threshold_avg_server_breach,client_srtt,edt_type,ica_device_ip_address,city,receiver_version,up_time,client_tx_bytes,session_setup_time_local,client_rx_bytes,server_srtt,session_end_time,l7_serverside_latency | Format-List
-$icaSession.ica_session | Select @{Name='User'; Expression={$_.ica_user_name}}, 
+$icaSession.ica_session | Select-Object @{Name='User'; Expression={$_.ica_user_name}}, 
     # User information
     @{Name='User access type'; Expression={$_.user_type}}, 
     @{Name='Session id'; Expression={$_.id}},
@@ -456,4 +456,6 @@ $icaSession.ica_session | Select @{Name='User'; Expression={$_.ica_user_name}},
 
 ## Logoff from the ADM (using the global variable SessionID) (because the other method keeps timing out)
 Invoke-ADMLogout -ADMIP $ADMIP -ADMSession $WebSession #-Verbose
+
+
 

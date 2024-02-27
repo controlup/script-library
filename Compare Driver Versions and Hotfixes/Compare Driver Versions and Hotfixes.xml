@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>4c65b9cd-6913-41f2-a989-3e844646cfed</SBAId>
+    <RootSBAId>a3ffee6b-23ba-4f5b-93de-86aea49a9fa8</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638443247157400888</SQN>
+    <Name>Compare Driver Versions and Hotfixes</Name>
+    <Description>Show running drivers with different versions on two different systems and also show drivers that exist on one but not the other.
+Also compares OS hotfixes between the two systems and shows any differences.
+The account that runs the script must have remote WMI/CIM permission to the other machine.</Description>
+    <ActionCategory>System Health</ActionCategory>
+    <Version>1.1.9</Version>
+    <DateCreated>2024-02-01T20:17:17.64</DateCreated>
+    <DateModified>2024-02-25T14:09:57.57</DateModified>
+    <DatePublished>2024-02-23T22:38:35.74</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>3</Status>
+    <CheckSum>DTUfOsbjw0B3Mp2vW0OUUTf0Ugg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>driver,HotFix,Updates,Windows Updates</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>@guyrleech</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>600</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7e30e435-be83-48a2-b410-141fe656ee84</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7e30e435-be83-48a2-b410-141fe656ee84</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Other Machine</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>otherMachine</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\w{3,}</ValidationString>
+                  <ValidationError>Must specify name of machine to compare with</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>54a44932-3d77-4a20-a8fc-6567043d554d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>54a44932-3d77-4a20-a8fc-6567043d554d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Running Drivers Only</Name>
+                  <DefaultValue>yes</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <ArgumentName>runningOnly</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|no)$</ValidationString>
+                  <ValidationError>Yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>6wcPoqT2HStc6CjHAT2hTCP1I/A=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

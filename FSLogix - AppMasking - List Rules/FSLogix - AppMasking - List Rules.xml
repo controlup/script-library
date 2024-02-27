@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ac66ad87-30ee-453b-b460-8482b103770e</SBAId>
+    <RootSBAId>cd8b0dd5-f8d8-4b88-a28b-e6d9483dfdf4</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>0</SQN>
+    <Name>FSLogix - AppMasking - List Rules</Name>
+    <Description>Lists the FSLogix AppMasking Rules on the machine</Description>
+    <Category>User Environment</Category>
+    <Version>2.2.3</Version>
+    <DateCreated>2023-08-16T15:55:19.04</DateCreated>
+    <DateModified>2023-09-11T16:14:44.12</DateModified>
+    <DatePublished>2023-09-20T13:39:37.817</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>3</Status>
+    <CheckSum>FV1ycmMR+YHZLDl3oTRZK24SFRM=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAAyJJREFUOE9FU0lPU1EUfhgXbBxDXKixGBkj4B8w0Rg3qAujJsSNCzRxoRsTARM1EQQDYhgFRAlCqGAVBzCBAmUIhRZKeRQQKBSoTKW09IHMBd79PPcV8CRfct+57zs53/nOFXYDwIHqfufnmGLzdrrOxsTJRRb+solFpDQzq3NZflo9xK6/N3k15uk0+tdvh+YLSqgIg9fyO9jBxzVQm6ZAJFzIMeByXgcmpDW8a/uDQ3R3p1Rk9O8Pgv8u+TDBSpBnFtfRNi7REWCMQTs8j/oRj3KWCS2jHnhWvPxaJmgIfsI3i+NX3I8B5lr2IiS5BSeS9agjUkWfC+G5ooKqwXlUWJxQpRoQld6OpfUtxKpFVqi3JwqXcgws6IUOdUNzRG5FcGYXGscWUGaZQ2SeqOA7Ffg5NI/Q7G6o0gzo/LOAk0/rcbWgY1W4XWxWNHu3ZKQ226Hpm1Pa3dxmqDSM4WenfU+Cmormtk9hW2Yo0NvxUNMHoW3Mw2b/rmOLkqWiE1VWD9eI9cIiSIEhCjbKypUCXNZnAg8+WPPEgiwce6LF/YpefOl1UotmnH0rQhydg3QmHJIq2IewKLSOSThHcvhMGmwexJTQObkRwtH4Wtz7ZIFadCCMNEZQge7hWUinQ/8XCI2Ebti9V6CW3LlV3I2QRB2ElhE34+1sbcvINkyjtMeptLv2JhPSqSBFApfDc0XmWeR1OhS5NtcyiCsLsWoLvoozSrLININf1nlFIx9cbesg6oy2vSFWkRPlZCeP8q5pPKsehHA+Qy9zLY3U4nFuY0YXWuyL0PS7EUlyoqhtTtTaJITl+Gw0Ty5C9bwe0XnGJaHEOFH+QNML7kRgUjNOpOhRPeDCR3Jkd5G+/najjKQFvjYighZJWvWC7GdJNdZ4vsr+hHaCPE2rbLRLSrubNBO+E98H3D4JJLFxxA3n0gZXwN9DpvIWeNDHEULTjQ8mFpCgRWWPA6PuVVwpNOEmTdu1vKEsW0BCLe6qezg5i7Bvh+4LSuwvap/Ijs7v8L7SDjPjuCSfeq4jrQ347fgrP6rsZxez2lZS60fidigUgvAPvED504sfbEIAAAAASUVORK5CYII=</IconData>
+      <IconType>2</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>FSLogix,AppMasking</Tags>
+      <Credits>Credits to:Trentent Tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>bill.powell@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAMWUbUsbQRSFz+dC/8OgpanUVFtBJLSCxEYjVcu6hYqVEpOoockmzEax/77P3OxuN8nGb6UMO5m5b+fcl8lHreulXshl650udKkznesrpzZfWZuvSH1NNJbXVCn3qe6ROLWw/4L8TgM9ce/qARuPLsFmqN+qs4/VUQ9ZD4sD4kz4PUWW6hd+Cd4Onwcs+8gC/jzDQ30GpwmLNixj9nMY/2+em9wGGmEV7qMs1sz7hogBpYNuWPjWdIv/Exn12QOvoEvxqpfi1ioqEPoTWxWqsm4T14ExnuPnQPeGEnK6NRaB3WapLikcPZoJEmfWU6tMgqZRiZWvswW0Zc5N61Jg/Z29KtaFeabgj0Hcslp3YTZjuhzxlIiHZNvia9KhfBJ+6tgmN+YWMc1VWE3LrlN0KGZdws2Rp9MHbfPt0Idt7bG/1+4S/oG+4XNsGA2L4IueJ1a/mK7PeK9rv/B/xcx6mz0P/gj2g6JDn3QFh0SPyLxVIZ+jazAaOrKOtNAMrYueWB3r3puVnm+pxIRzF02Yv7L3LOoqPhsF5yubSp9N7jU5zL+gKOt7ziZk4nSCPnjUS/Ly+blK1OnQvd17JY+1Bdwf2btMOUXF7K2t5Bwxe/+aY+0ZjvPv/e/Lfm1Ii/yq/g0C6qP17gaENJuvPwv7xEPGBQAA</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>1</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>39KvXI+BAESdveEBJDJXJtlfSfs=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
