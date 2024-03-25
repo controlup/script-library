@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>eba7aa86-2a49-413c-b586-15c029694277</SBAId>
+    <RootSBAId>49fec47d-9571-458f-9284-bc618af55bb9</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638467251168205907</SQN>
+    <Name>Parallels RAS Session Information</Name>
+    <Description>Get and display Parallels RAS session information.
+Run on a Connection Broker and as a user who has CU stored credentials on the machine where the script will run.</Description>
+    <ActionCategory>Session Management</ActionCategory>
+    <Version>1.0.7</Version>
+    <DateCreated>2023-11-14T15:07:33.567</DateCreated>
+    <DateModified>2024-03-24T14:09:57.57</DateModified>
+    <DatePublished>2024-03-22T17:25:16.82</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>3</Status>
+    <CheckSum>LTI9zADLWt6m0kbzvl4NQoMggp0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>parallels ras</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by: Guy Leech
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>@guyrleech</ContactEmail>
+      <Notes>Commissioned by Parallels RAS</Notes>
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>4eb79952-8bdf-4608-ae04-f8e835ade69d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>4eb79952-8bdf-4608-ae04-f8e835ade69d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Session State</Name>
+                  <DefaultValue>all</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>sessionState</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>9318aa78-1e09-4ea7-a5ce-de4ea922c44d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>9318aa78-1e09-4ea7-a5ce-de4ea922c44d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Sort By</Name>
+                  <DefaultValue>user</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <ArgumentName>sortBy</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>bTxWbhHw8FLJFmv4Ba58QZ1a7aA=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

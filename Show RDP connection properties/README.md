@@ -4,7 +4,7 @@ Description: This SBA will check the event logs and report the negotiated RDP ve
 
 Version: 1.5.13
 
-Creator: mc
+Creator: Marcel Calef
 
 Date Created: 11/22/2018 00:15:04
 

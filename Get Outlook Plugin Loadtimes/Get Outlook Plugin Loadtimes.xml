@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>84e23801-e631-42a1-8bb5-5444a898745e</SBAId>
+    <RootSBAId>625a925f-9c57-43f1-8339-aeaa2e1bf1e7</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638467250656262249</SQN>
+    <Name>Get Outlook Plugin Loadtimes</Name>
+    <Description>Looks for Event 45 around the start of the outlook.exe process and displays the load time of the plugins</Description>
+    <ActionCategory>User Environment</ActionCategory>
+    <Version>2.1.5</Version>
+    <DateCreated>2024-02-08T14:11:56.69</DateCreated>
+    <DateModified>2024-03-24T14:09:57.57</DateModified>
+    <DatePublished>2024-03-22T17:24:25.627</DatePublished>
+    <LastEditorName>Peter Nap</LastEditorName>
+    <CreatorName>Peter Nap</CreatorName>
+    <Status>3</Status>
+    <CheckSum>j9hjtZ+qEAZDgsX+DMtmBbbqld8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Peter Nap</Author>
+      <Tags>application,outlook</Tags>
+      <Credits>Credits to: Peter Nap
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>peter.nap@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>65536</AllowedEntitiesEx>
+      <AtomicEntityEx>65536</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>H4sIAAAAAAAEAL1XaW/aQBCdz5X6HyyCBGlKDrXpEalSc5BDLWlUWuUDiloCBNI4gdqGKkr47337dm3WxhgHtWhle72e883M7rghbWlKIB1c13KL54UUpS9DvLt49uVG6pg3xcP9m6Fx5AOuIle74ktDNsH3XJ5FV1GqMgLlHbh8Q39ELRXry2fI7+JLxcxOIVHL35UBhgt9Ldp3je93pKzTOg/riq4gX2K2FkhTxXcP7x7ktCzuOmau0e3KvexzXX2/gxQl7xHXufQw93BVIP1SfmGmpDjyAL9+yLrlwYkcUGNHfuP5Wrb51sS3NhFS1CFqR+RRkjXibdJ2KXk+5uMI20N61sH3Fiwtx7B26IuTwH+VfA+8O2bYFAd4+pDmgXtg4aWiFpe/LjXS+tDexWyVPvgmVgEj8hOUhcjaiT6PnENQBkb2KVb+TKFcgvf3oFQY3UKjipLLuE1i6WN9gqfKknXk0DW5Grx7RKKLvCzF7DiRK/pUzoGAktmhlABIr1rxem8wDaXGsQ3HCmzv0e4bRuYK94ArDq5JzPTTg9cOfXCYvUPo6jFPJ1x+VCFN0oXrA3K0TGwcIqDzx4kqO83CIlEKiOIIHG5U2/P3gEoii7IyPU23xqOcYoPKMl2TAT3SuCudm4n6ysOp8207EbHsyE3w2YWmNmX6yNch/LukPo1Tw1hwgVmN3vYw38E4NNh5C2SaIxspOZYc55QRcJ86hhTf1F/cyj5Rtr3YyfSrMAePFjMjRF2jsJnJcwCOrO/ZEZjUkkPsrmizyoUW7FA+92G78tPeQ3Q9DGijwlhhnkdLMSbV3pfOUiRq7z/m9CAc+5Q9MDnqWaeeI2H1qVwYIVL7sKEG3d9RW1X5CtpdvFefpG9F9piJdu3aQ2tcvI5njTNUgNrDVLziPoZa81RGQ17J2lTevUB1XEjy7Ckxt0uom4ZsmY4kP0o6wl1zpieHRimfxdtLsvgIeZFu7VMtfrMUi1WX10QW7UF+D7MR9XsL2Pt2SQgfyydYXfsHCL9bisWFCGPHqvYynqoLLCxk+Rb29/9p+3iqV5wdD7V76t43MF1Q1jmQb8e3u6/ZXekZeqD4SiVxJtzLU8+PPPbl8yHeW69Zp4j2LO/ZZ0d4DSOLb4zdR/89ucykZGcQ/hXN7jXS+5txbDX+Zvc8+s9Pn6PTGKg/uTpWwv+G6XhOn04vZX4FKZrZ+9ij+Tu7ZYZWIKEJra7pvrUvfwFR1B3ydA8AAA==</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>7b41215c-4cff-4df1-8533-0ee95df89738</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7b41215c-4cff-4df1-8533-0ee95df89738</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>dtStartTime</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName />
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>65536</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>rmVPbv1RJsAScxkq1VsBjzZ1md8=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

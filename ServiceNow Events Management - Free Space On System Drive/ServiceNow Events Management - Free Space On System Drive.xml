@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>d305279c-d204-49c3-b0d9-5e592b2795a4</SBAId>
+    <RootSBAId>ce111b40-0dac-44d6-9358-6555b46253c1</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638446599393337486</SQN>
+    <Name>ServiceNow Events Management - Free Space On System Drive</Name>
+    <Description>Send events to the ServiceNow Events Management interface for tracking free space events</Description>
+    <ActionCategory>System Health</ActionCategory>
+    <Version>1.31.36</Version>
+    <DateCreated>2023-11-24T11:59:04.57</DateCreated>
+    <DateModified>2024-02-27T12:44:10.563</DateModified>
+    <DatePublished>2024-02-27T19:45:39.333</DatePublished>
+    <LastEditorName>Trentent Tye</LastEditorName>
+    <CreatorName>Trentent Tye</CreatorName>
+    <Status>3</Status>
+    <CheckSum>O5G1kVi5xUUHG4TRmBHeAWVr8+c=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Trentent Tye</Author>
+      <Tags>disk,disk space,free space,partition,storage</Tags>
+      <Credits>Credits to: Trentent Tye
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>techmarketing@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>120</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>105f6b6e-1fa5-479b-8a8d-974bcedd7b45</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>105f6b6e-1fa5-479b-8a8d-974bcedd7b45</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Severity</Name>
+                  <DefaultValue>4</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <ArgumentName>Severity</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>1b747d88-6d7d-4dbc-85a3-e9aec69c0328</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>1b747d88-6d7d-4dbc-85a3-e9aec69c0328</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>ServiceNowEndpoint</Name>
+                  <DefaultValue>https://dev142496.service-now.com/api/global/em/jsonv2</DefaultValue>
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <ArgumentName>ServiceNowEndpoint</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>7baed9f2-5a93-471b-bd49-bd7889e8f976</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>7baed9f2-5a93-471b-bd49-bd7889e8f976</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>AuthenticationHeader</Name>
+                  <DefaultValue>YWRtaW46cEolZy9mcjdERlg4</DefaultValue>
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <ArgumentName>AuthenticationHeader</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>c9dc1c0b-cf06-41b1-8901-ac4322098bcd</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>c9dc1c0b-cf06-41b1-8901-ac4322098bcd</ArgumentId>
+                  <ArgumentType>2</ArgumentType>
+                  <Name>sName</Name>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>Machine</ArgumentName>
+                  <EmptyBehavior>2</EmptyBehavior>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>256</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>+2xfNB8hEUIbL6HkzZd7M5sbhDY=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

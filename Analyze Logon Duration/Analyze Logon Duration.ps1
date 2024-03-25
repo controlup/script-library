@@ -116,7 +116,7 @@ else {
 Write-Verbose -Message "Internally-parsed Load time = $CUDesktopLoadTime ; $([math]::floor($CUDesktopLoadTime))"
 
 ## All parameters are not mandatory to allow for offline analysis
-## Last modified 1209 GMT 2022/04/18 @guyrleech
+## Last modified 1410 GMT 2024/02/05 @guyrleech
 
 ## A mechanism to allow script use offline with saved event logs
 [hashtable]$global:wmiactivityParams = @{ 'ProviderName' = 'Microsoft-Windows-WMI-Activity' }
@@ -2804,7 +2804,7 @@ function Get-LogonDurationAnalysis {
                     })
                 }
             }
-            [void]$PowerShell.AddScript( $citrixScriptBlockDomain )
+            [void]$PowerShell.AddScript( $citrixScriptBlock )
             [void]$PowerShell.AddParameters( $Parameters )
             [void]$jobs.Add( [pscustomobject]@{ 'PowerShell' = $PowerShell ; 'Handle' = $PowerShell.BeginInvoke() } )
         }
@@ -2861,7 +2861,7 @@ function Get-LogonDurationAnalysis {
             [scriptblock]$windowsShellCoreScriptBlock = $null
             if( $global:windowsShellCoreParams[ 'Path' ] )
             {
-            Write-Host "Ugggg... $WindowsShellCoreFile" -ForegroundColor Green
+##            Write-Host "Ugggg... $WindowsShellCoreFile" -ForegroundColor Green
                 $windowsShellCoreScriptBlock =
                 {
                     Param( $logon , $username , $WindowsShellCoreFile )
@@ -4691,7 +4691,7 @@ if( $offline ) {
         $params.Add('Id', 213)
         $params.Add('StartTime', $($Script:Output|Where-Object{$_."PhaseName" -eq "AppX - Load Packages"}).StartTime)
         $params.Add('EndTime', $($Script:Output|Where-Object{$_."PhaseName" -eq "AppX - Load Packages"}).EndTime)
-        $AppXLoadedPackageEvents = get-winevent -FilterHashtable $params -ErrorAction SilentlyContinue
+        $AppXLoadedPackageEvents = @( Get-WinEvent -FilterHashtable $params -ErrorAction SilentlyContinue )
     }
 } else { ##online  
     if ($Script:Output|Where-Object{$_."PhaseName" -eq "AppX - Load Packages"}) {
@@ -4699,7 +4699,7 @@ if( $offline ) {
         $params.Add('Id', 213)
         $params.Add('StartTime', $($Script:Output|Where-Object{$_."PhaseName" -eq "AppX - Load Packages"}).StartTime)
         $params.Add('EndTime', $($Script:Output | Where-Object{$_."PhaseName" -eq "AppX - Load Packages"}).EndTime)
-        $AppXLoadedPackageEvents = get-winevent -FilterHashtable $params -ErrorAction SilentlyContinue
+        $AppXLoadedPackageEvents = @( Get-WinEvent -FilterHashtable $params -ErrorAction SilentlyContinue )
     }
 }
 
@@ -5644,6 +5644,8 @@ Switch ($PsCmdlet.ParameterSetName) {
 Write-Verbose -message "just before Get-LogonDurationAnalysis"
 
 Get-LogonDurationAnalysis @params
+
+
 
 
 

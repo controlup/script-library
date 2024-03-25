@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>536c6744-94ee-48b5-8aca-81c0990ed759</SBAId>
+    <RootSBAId>9cc7e797-bc2b-4a6b-9863-a14a63b08f2d</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638467250888991813</SQN>
+    <Name>Parallels RAS Agent statuses</Name>
+    <Description>Show the status of all Parallels RAS agents.
+Run on a Connection Broker and as a user who has CU stored credentials on the machine where the script will run.</Description>
+    <ActionCategory>Host Management</ActionCategory>
+    <Version>1.0.7</Version>
+    <DateCreated>2023-11-07T22:43:13.237</DateCreated>
+    <DateModified>2024-03-24T14:09:57.57</DateModified>
+    <DatePublished>2024-03-22T17:24:48.9</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>3</Status>
+    <CheckSum>DIV1y5rmcGvz5/0z0WtX0atwpJE=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>parallels ras</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by: Guy Leech
+Taken from:</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>@guyrleech</ContactEmail>
+      <Notes>Commissioned by Parallels RAS</Notes>
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>3</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>5daa40dc-e0c5-40bf-a5b7-f39aadf730e7</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>5daa40dc-e0c5-40bf-a5b7-f39aadf730e7</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Type</Name>
+                  <DefaultValue>all</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>ServerType</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>W9cl8ap8+dJWCzPcQjR1QQRvD4k=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

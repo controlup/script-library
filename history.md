@@ -1,3 +1,17 @@
+25-03-2024
+==========
+## Added:
+### _Get Outlook Plugin Loadtimes_
+### _ServiceNow Events Management - Free Space On System Drive_
+### _Change Drain Mode_
+### _Parallels RAS Session Information_
+### _Report Certificate and Secret Expiry for Azure Tenant_
+### _Parallels RAS Agent statuses_
+### _Show processes locking a file_
+
+### Removed:
+### _Show proceses locking a file_
+<BR><BR>
 27-02-2024
 ==========
 ## Added:
@@ -213,6 +227,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 

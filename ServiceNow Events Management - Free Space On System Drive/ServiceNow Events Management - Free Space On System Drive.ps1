@@ -1,5 +1,4 @@
-﻿#requires -Version 5
-<#
+﻿ <#
     .SYNOPSIS
         Sends a payload to ServiceNow in the Events Management database
 
@@ -38,7 +37,6 @@
 
 [CmdLetBinding()]
 Param (
-    [Parameter(Mandatory=$true,HelpMessage='Logical Disk Drive Letter')][ValidateNotNullOrEmpty()]                          [string]$LogicalDisk,
     [Parameter(Mandatory=$true,HelpMessage='Name of the machine')][ValidateNotNullOrEmpty()]                                [string]$Machine,
     [Parameter(Mandatory=$true,HelpMessage='Severity Value')][ValidateNotNullOrEmpty()]                                     [string]$Severity,
     [Parameter(Mandatory=$true,HelpMessage='ServiceNow Events Management API URL')][ValidateNotNullOrEmpty()]               [string]$ServiceNowEndpoint,
@@ -72,7 +70,6 @@ Param (
 }
 
 #Start-Transcript -Path "D:\Log.txt" -Force
-Write-Output "LogialDisk:$LogicalDisk"
 Write-Output "Machine:$Machine"
 Write-Output "ServiceNowEndpoint:$ServiceNowEndpoint"
 Write-Output "AuthenticationHeader:$($AuthenticationHeader.Substring(0,3))..."
@@ -97,7 +94,7 @@ $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0
 $headers.Add('Authorization', ('Basic {0}' -f $AuthenticationHeader))
 
 $Source = "ControlUp"
-$resource = ($LogicalDisk | ConvertTo-Json).Replace("`"","")
+$resource = $SystemDrive
 $node = $Machine
 $type = "Disk"
 $MetricName = "DiskSpace"
@@ -147,4 +144,3 @@ try {
     Write-Error "$($failure.Exception | select-object *)"
 }
 #Stop-Transcript
-
