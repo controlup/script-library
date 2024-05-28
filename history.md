@@ -1,3 +1,8 @@
+26-05-2024
+==========
+## Added:
+### _Get Pending Reboot_
+<BR><BR>
 25-03-2024
 ==========
 ## Added:
@@ -227,6 +232,10 @@
 ### _Beta Enable Audit process tracking and others required for Logon Duration Analysis_
 ### _Check Horizon Teams Optimization Readiness_ --> Outdated
 ### _Horizon Recover Instant Clone_ --> Replaced by _Horizon Recover Instant Clone VDI Machine_ and _Horizon Recover Instant Clone RDS Machine_
+
+
+
+
 
 
 

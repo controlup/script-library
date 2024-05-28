@@ -30,6 +30,7 @@
     2022/11/20  Benjamin Skoda  Updates
     2022/12/12  Guy Leech       Parameter changes
     2022/12/13  Guy Leech       Changed log file name to include date, time and computer name. Added -FinalLogLevel, disabled nulling of log file name
+    2024/02/28  Guy Leech       Added -supportMode to output log lines in a different format. Trimming quotes off log path
 #>
 
 [CmdletBinding()]
@@ -47,8 +48,10 @@ param (
     [string]$LogLevel = 'ERROR' ,
    
     [ValidateSet( 'DEBUG', 'ERROR', 'FATAL', 'ALL', 'VERBOSE', 'INFO', 'OFF' )]
-    [string]$FinalLogLevel = 'FATAL'
+    [string]$FinalLogLevel = 'FATAL' ,
    
+    [ValidateSet( 'yes','no' )]
+    [string]$supportMode = 'no'
 )
 
 $DebugPreference = $(if( $PSBoundParameters[ 'debug' ] ) { 'Continue' } else { 'SilentlyContinue' })
@@ -72,6 +75,12 @@ catch
     Write-Warning -Message "Failed to set output width to $($WideDimensions.width) : $_"
 }
 
+[string]$conversionPattern = "'%date',%logger,'[%thread]','%level','%message%'%newline"
+
+if( $supportMode -ieq 'yes' ) {
+    $conversionPattern = "%date{yyyy-MM-dd HH:mm:ss.fff};[%level];%property{log4net:HostName};%appdomain;%logger;%stacktrace;%message;%newline"
+}
+
 [XML]$log4net = @"
 <?xml version="1.0" encoding="UTF-8"?>
     <!--
@@ -85,9 +94,9 @@ catch
     		<maxSizeRollBackups value="2"/>
     		<maximumFileSize value="100MB"/>
     		<staticLogFileName value="true"/>
-        <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+            <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
     		<layout type="log4net.Layout.PatternLayout">
-    			<conversionPattern value="'%date',%logger,'[%thread]','%level','%message%'%newline"/>
+    			<conversionPattern value="$conversionPattern"/>
     		</layout>
     	</appender>
       <root>
@@ -97,16 +106,20 @@ catch
     </log4net>
 "@
 
+## CU agent can quote paths so we unquote
+$logPath = $logPath.Trim( '" ' )
+
 ##Write-Host "###########################"
 Write-Host "User Inputs":
-Write-Host "LogLevel set: $($LogLevel)"
+Write-Host "LogLevel set: $LogLevel"
 Write-Host "Name of CU component: $($exeName)" 
 ##Write-Host "Path of CU components : $($exePath)" 
-Write-Host "Run the logger for $($logDurationSeconds) seconds" 
+Write-Host "Run the logger for $logDurationSeconds seconds"
+Write-Host "Log path is $LogPath"
 ##Write-Host "###########################"
 
 if ( -Not ( Test-Path $LogPath -PathType Container)  ){
-    if( -Not ( New-Item $logPath -ItemType Directory ) ) {
+    if( -Not ( New-Item $logPath -ItemType Directory -Force ) ) {
         Throw "Problem creating log folder `"$logPath`""
     }
 }

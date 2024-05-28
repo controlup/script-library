@@ -18,7 +18,7 @@ Import-Module Cloudpaging
 $ProgramFilesX86 =[Environment]::getfolderpath([environment+specialfolder]::ProgramFilesX86)
 
 $CloudpagerExePath = Join-Path $ProgramFilesX86 "Numecent\Cloudpager\Cloudpager.exe"
-$arg = " /autodeploy"
+$arg = " autodeploy"
 
 if (-not(Test-Path -Path $CloudpagerExePath)) {
     try {
@@ -39,4 +39,5 @@ else {
         Write-Error "Failed"
     }
 }
+
 
