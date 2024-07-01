@@ -1,3 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><SBADescriptor><SBAId>da62a273-c98d-4a38-9d9a-0092bfb1bd95</SBAId><RootSBAId>6134ee37-2b47-48a1-a609-e8e46a0a34eb</RootSBAId><StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId><SQN>637750914366483521</SQN><Name>Get shutdown reason</Name><Description>Finds the reason the machine shut down in the event log of the target machine.</Description><Category /><Version>1.4.10</Version><DateCreated>2021-06-02T22:19:22.04</DateCreated><DateModified>2021-12-25T22:52:24.7511853+02:00</DateModified><DatePublished>0001-01-01T00:00:00</DatePublished><LastEditorName>Ton.de.Vreede</LastEditorName><CreatorName>Dennis Geerlings</CreatorName><Status>1</Status><CheckSum>ARMYpwdaQrqEjaOHf8TDfWiwnv0=</CheckSum><DenyCommunityShare>true</DenyCommunityShare><ShareDescriptor><Author>Dennis Geerlings</Author><Tags>shutdown</Tags><Credits>Credits to: Dennis Geerlings
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>76cd80d5-762c-46ba-823b-2c7e6f1f52a1</SBAId>
+    <RootSBAId>6134ee37-2b47-48a1-a609-e8e46a0a34eb</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638148314145468961</SQN>
+    <Name>Get shutdown reason</Name>
+    <Description>Finds the reason the machine shut down in the event log of the target machine.</Description>
+    <ActionCategory>Power Management</ActionCategory>
+    <Version>1.4.9</Version>
+    <DateCreated>2021-06-02T22:19:22.04</DateCreated>
+    <DateModified>2021-12-14T14:56:00.163</DateModified>
+    <DatePublished>2021-12-14T14:57:52.757</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Dennis Geerlings</CreatorName>
+    <Status>4</Status>
+    <CheckSum>ARMYpwdaQrqEjaOHf8TDfWiwnv0=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Dennis Geerlings</Author>
+      <Tags>shutdown</Tags>
+      <Credits>Credits to: Dennis Geerlings
 Original code by:
-Taken from:</Credits><AllowExposeEmail>false</AllowExposeEmail><ContactEmail /><DownloadCount>22</DownloadCount></ShareDescriptor><ExecutionDescriptor><AllowedEntitiesEx>256</AllowedEntitiesEx><AtomicEntityEx>256</AtomicEntityEx><AllowedEntities>0</AllowedEntities><AtomicEntity>0</AtomicEntity><ScriptData>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</ScriptData><IsCompressed>true</IsCompressed><Interactive>false</Interactive><AltCredentialsType>0</AltCredentialsType><Timeout>60</Timeout><ScriptType>3</ScriptType><TimeoutPolicy>1</TimeoutPolicy><ConcurrencyMode>2</ConcurrencyMode><ExecutionContext>0</ExecutionContext><Arguments><inner><sxSerializedDictionaryOfStringSBAArgumentDescriptor><item><key><string>b8945b6f-0208-4e08-af44-58381a86dfad</string></key><value><SBAArgumentDescriptor><ArgumentId>b8945b6f-0208-4e08-af44-58381a86dfad</ArgumentId><ArgumentType>1</ArgumentType><Name>Hours Back</Name><DefaultValue>24</DefaultValue><ArgumentNumber>0</ArgumentNumber><ValidationString>^[0-9]+$</ValidationString><ValidationError>Please enter the number of hours you want to go back through the event log.</ValidationError><MaskTypedCharacters>false</MaskTypedCharacters><EntityType>0</EntityType></SBAArgumentDescriptor></value></item></sxSerializedDictionaryOfStringSBAArgumentDescriptor></inner></Arguments><InstructionsExecutionOnComputer /><SupressOutputDialog>false</SupressOutputDialog><DefaultSharedCredGuid /></ExecutionDescriptor><ImportValidationString>3w4WUiRyR7GxVmnDtBXhKe6sFbs=</ImportValidationString><IsVersionAudited>false</IsVersionAudited></SBADescriptor></ArrayOfSBADescriptor>
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail />
+      <Notes />
+      <DownloadCount>104</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>b8945b6f-0208-4e08-af44-58381a86dfad</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b8945b6f-0208-4e08-af44-58381a86dfad</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Hours Back</Name>
+                  <DefaultValue>24</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^[0-9]+$</ValidationString>
+                  <ValidationError>Please enter the number of hours you want to go back through the event log.</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>j1dnXTIBNVao3duc9fEc6JZt2Ss=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>

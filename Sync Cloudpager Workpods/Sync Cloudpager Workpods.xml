@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>8627ce1c-00e4-4dc0-b799-83ecd6eacfca</SBAId>
+    <SBAId>cbbce646-42fd-4db1-9bfc-01b61d1d2e00</SBAId>
     <RootSBAId>4905edcb-0f1b-403d-94a7-f2f8252e4bdf</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>0</SQN>
+    <SQN>638523310412402539</SQN>
     <Name>Sync Cloudpager Workpods</Name>
     <Description>This script will initiate a sync from the Cloudpager client to the configured Cloudpager tenant and sync all Workpods the logged in user is entitled to.</Description>
-    <Category>Organizational Actions</Category>
-    <Version>2.0.5</Version>
+    <ActionCategory>Organizational Actions</ActionCategory>
+    <Version>3.0.7</Version>
     <DateCreated>2022-11-29T14:45:54.55</DateCreated>
-    <DateModified>2023-04-21T14:50:38.503</DateModified>
-    <DatePublished>2023-04-21T14:51:17.72</DatePublished>
+    <DateModified>2024-05-26T14:09:57.57</DateModified>
+    <DatePublished>2024-05-26T14:00:44.463</DatePublished>
     <LastEditorName>Rory Monaghan</LastEditorName>
     <CreatorName>Rory Monaghan</CreatorName>
-    <Status>3</Status>
-    <CheckSum>QOhXmXTv9+oCfVNAsc5eyJjmCMc=</CheckSum>
+    <Status>4</Status>
+    <CheckSum>lHKC7uGXdgBRkxow13cnt2CW1QI=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
     <Icon>
@@ -26,19 +26,19 @@
       <Author>Rory Monaghan</Author>
       <Tags>Cloudpager,Cloudpaging,Containers,Numecent</Tags>
       <Credits>Credits to: Rory Monaghan
-Original code by:
+Original code by: Rory Monaghan
 Taken from:</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail />
-      <Notes />
-      <DownloadCount>0</DownloadCount>
+      <ContactEmail>Rory@rorymon.com</ContactEmail>
+      <Notes>Only changed was to update the autodeploy parameter to the current standard</Notes>
+      <DownloadCount>8</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>4096</AllowedEntitiesEx>
       <AtomicEntityEx>4096</AtomicEntityEx>
       <AllowedEntities>0</AllowedEntities>
       <AtomicEntity>0</AtomicEntity>
-      <ScriptData>H4sIAAAAAAAEAM1WYW/TQAz1ZyT+w6mdtE6sAT6AEAKkqWxiaLQVq9gQQyikaVfRplnS0FWI/87zu0uXtGnLJD6g6i6O47Of7edT65JIKDeSyYhSKkaa8glSAnkkU4mgeSaePJGH8kDqlfYfYNeHbuw0LUhTvPclFl+GsI2w63ldr+BFn56cy2dpS0e6kE6xVGsgRTgxw/KxW48+VioLfAkgTWVQEUUxG7mALpEf0CkmPfuTngx8XcNm07kA2hHkCHaew/dWjoGqJR+BqSs97B3gtSj/H5wWy+BeJw0kjRnBzr5FeJ/Beswu9uWw4C/F2QQ2MW3nkNTKkAEzxEnIEp+7xkqYW+59BGwLx4E7n1VoJnymzjbvwrFcyhE41pUzyDZjT67QGVvnqmxXq+tBSuWp86ic67G31lsPVpplBm8BO5kCc8YsF4WOHt6zxhN8Tyl955n1Khs3YbnXCb4FkNUydBWoy5vl7JzCImZus5W52zV1e6if9mWI3YeXE3ZRc72UF/Ic51/LF9QkIg8T4pq4TL7KS/yG7PYAX8aIofnGZP61NHAyrDz5CP5jyAG5PS6dtl63ozoo4K+q+LHc4tl1ODQHI+9hpbk3C/rd2dfAioy4A4f9qjJitdbDrkhqDqsP3dDhqWE9hiaDzylzj+lh4ax1jTi/DWC2M9MAJ0NypZhFOaPd9TjAz8iv5S1hyLSEnC5r898F51xvsyZ83U1yDXj+3d1SZL211aooewKyvlbC9rv0FjC3gDWozkG9Ku45q/SNN8gtPce8jTS2h9mxc25zWI9n9xCIU+ZdjrWHCBnzyu967fQ5s0xc1xRDfpv8Xb+0w0dkTracoDNWaEYPOaua6JPPPqnchtc2rOfQaq37LnfLFo3eY0WyrRl48o7WisgyoL9iH7KKlsE233Uf+emWsyt6yDm+6qnJfxRG9vEfY7+CsVXc7HCaYu7KTo034VyFDvs2Dm3q6u4pOGHdxxsj2P0PtL85NFYJAAA=</ScriptData>
+      <ScriptData>H4sIAAAAAAAEAM1W72vTUBS9nwX/h9AN1uEa9IMiosKoHU62trjiJk4kpmlXbNOYNHZF9r977nkvXdK+tg78ICEvNy/3x7n3nvvInqQSyU/JZUQpE08a8glSCnkkU4mx81x8eSqP5ZHsOfXPodfH3tjuNCFN8d6XRAIZQjfGqvZ6v4YXffpyIZ+lLR3pQjrFrbsepBgWM9wBVuMxwJ3JAl9CSFMZOKIoZk8usZfKD+wpJrX9RU8efN1AZ5NdiN0R5Bh6vsX3TlpA1ZSPwNSVHtYO8BqU/w9Og2XwIEsPksaMoWfeYrzPoD1mF/tyVPKXwTaFTkLdOSTV8siAGeKkZEnAVWOlzK3wPgK2heXAvU8XmgmfmdUtutCSKzkGx7pyBtlk7Ms1OmPq7Mp2tbo+pEyeWY/KuR57a7z1oKVZ5vAWspMZMOfMclHq6NEDazzB94zSd9qsV9mzE1Z4neBbCFk1I1uBPXm7nJ1TaCTMbbYyd7umbh/1074MsQbwcsIuaq5X8lJewP6NfEFNYvIwJa6JzeSrvMI1ZLcH+DJGDM03IfNvpA7LyGn5BP4TyCG5Pa5YG6/bUR2W8Lsq3pJbPLsWh+bgyQdoae6N0v7u7GtgRU7cocV+7Yzo3vWxKpKaxRpgb2jx1DgbOTxOmXlC+4XV1XvE6a0DsZmYOhgZkSnlHKr57K7GIS5Pfi/PCI88S8no6m5xXXLK9SxrwNf9HNeA59+dLGXOG12tinInJOdrFWx3lbeQuYWsgTsH9aq456zSN54ft/Sc8CzS2D4mx0y5yWE9nlkjIM6YdzXWPiLkzKs46bXPF8wytV1TDMVZ8nf90g4fkzf5cn7OWKEZPRScaqBPAfukchte29CeY1dr3be5G7Zo9B4rkm/NwJf31FZEhgH9Ff2IVTQMNvmu+yism1av7KHg+KqnBv8nPDnAH8aBg7EubnY4TQlXZafGm3CuIot9G4c2dXX3FJyw7uONEe6WE/0HL4xz0FgJAAA=</ScriptData>
       <IsCompressed>true</IsCompressed>
       <Interactive>false</Interactive>
       <AltCredentialsType>0</AltCredentialsType>
@@ -52,7 +52,7 @@ Taken from:</Credits>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>losSFYqJDc8dGLZfrCPxPNUP0bo=</ImportValidationString>
+    <ImportValidationString>NtqfcZ+qkiNKMaReUuT/0ZR6hqA=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>d99f6b3b-046d-40d8-94ea-3b27932469a9</SBAId>
+    <SBAId>e4845b43-856f-462f-bc42-a52081d56763</SBAId>
     <RootSBAId>11e14a2c-268b-47c2-854d-fe198eba60ab</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>638066403490900766</SQN>
+    <SQN>638523308248507633</SQN>
     <Name>Deploy log4net for ControlUp processes</Name>
-    <Description>ControlUp binaries generate minimum logging to prevent disk exhaustion. 
- To enable DEBUG logs, deploying the log4net in the same directory as a ControlUp process initiates the capture.
- This script will initiate the logging process and allow to place the log file in a custom location.
- If log duration different than zero, the log capture with stop at the end of the period.</Description>
-    <Category>Miscellaneous</Category>
-    <Version>1.10.49</Version>
+    <Description>ControlUp binaries by default generate minimum logging to prevent disk exhaustion. 
+To enable DEBUG logs, deploying the log4net file in the same directory as a ControlUp process initiates the capture.
+This script will initiate the logging process and allows placing of the log file in a custom location.
+If log duration is greater than zero, the log capture with stop at the end of the period.
+
+Support Mode changes the format of the lines in the resultant log file to make it easier to merge multiple log files, where required.</Description>
+    <ActionCategory>User Environment</ActionCategory>
+    <Version>2.10.56</Version>
     <DateCreated>2020-10-01T17:05:27.35</DateCreated>
-    <DateModified>2022-12-13T19:48:39.75</DateModified>
-    <DatePublished>2022-12-14T15:34:34.987</DatePublished>
+    <DateModified>2024-05-26T14:09:57.57</DateModified>
+    <DatePublished>2024-05-26T14:00:02.493</DatePublished>
     <LastEditorName>Guy Leech</LastEditorName>
     <CreatorName>Marcel Calef</CreatorName>
     <Status>4</Status>
-    <CheckSum>pD80Uth6HRqH6r62Emqqk3SgTa8=</CheckSum>
+    <CheckSum>tewtkLBvpDWr1t4ZwaBGaMA0tnI=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
     <Icon>
@@ -27,21 +29,21 @@
     </Icon>
     <ShareDescriptor>
       <Author>Marcel Calef</Author>
-      <Tags />
+      <Tags>log4net</Tags>
       <Credits>Credits to: Marcel Calef
 Original code by:
 Taken from:</Credits>
-      <AllowExposeEmail>false</AllowExposeEmail>
+      <AllowExposeEmail>true</AllowExposeEmail>
       <ContactEmail />
       <Notes />
-      <DownloadCount>1</DownloadCount>
+      <DownloadCount>90</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>65536</AllowedEntitiesEx>
       <AtomicEntityEx>65536</AtomicEntityEx>
       <AllowedEntities>0</AllowedEntities>
       <AtomicEntity>0</AtomicEntity>
-      <ScriptData>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</ScriptData>
+      <ScriptData>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</ScriptData>
       <IsCompressed>true</IsCompressed>
       <Interactive>false</Interactive>
       <AltCredentialsType>0</AltCredentialsType>
@@ -64,6 +66,7 @@ Taken from:</Credits>
                   <Name>Log duration [sec]</Name>
                   <DefaultValue>30</DefaultValue>
                   <ArgumentNumber>2</ArgumentNumber>
+                  <ArgumentName>logDurationSeconds</ArgumentName>
                   <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString>^[0-9]{1,2}$|^[1-3][0-9]{2}$</ValidationString>
                   <ValidationError>5 to 360 or 0 to log until manually stopped</ValidationError>
@@ -80,12 +83,13 @@ Taken from:</Credits>
                 <SBAArgumentDescriptor>
                   <ArgumentId>2ab6617a-60f2-4aeb-8273-edd38abec945</ArgumentId>
                   <ArgumentType>1</ArgumentType>
-                  <Name>logPath</Name>
-                  <DefaultValue>c:\temp\</DefaultValue>
+                  <Name>Log Folder</Name>
+                  <DefaultValue>c:\temp</DefaultValue>
                   <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>logpath</ArgumentName>
                   <EmptyBehavior>0</EmptyBehavior>
-                  <ValidationString>^[a-z|A-Z0-9:\-_\\\. ]+\\$</ValidationString>
-                  <ValidationError>Path for the log including a trailing \. A network share to which the SYSTEM account can write is recommended. The filename will be autogenerated</ValidationError>
+                  <ValidationString>^([a-zA-Z]:\\|\\\\[^\\]+\\).+</ValidationString>
+                  <ValidationError />
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>0</EntityType>
                 </SBAArgumentDescriptor>
@@ -101,6 +105,7 @@ Taken from:</Credits>
                   <ArgumentType>2</ArgumentType>
                   <Name>sName</Name>
                   <ArgumentNumber>1</ArgumentNumber>
+                  <ArgumentName>exeName</ArgumentName>
                   <EmptyBehavior>0</EmptyBehavior>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>65536</EntityType>
@@ -118,6 +123,7 @@ Taken from:</Credits>
                   <Name>Log level</Name>
                   <DefaultValue>DEBUG</DefaultValue>
                   <ArgumentNumber>3</ArgumentNumber>
+                  <ArgumentName>loglevel</ArgumentName>
                   <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString>^(DEBUG|ERROR|FATAL|ALL|VERBOSE|INFO|OFF)$</ValidationString>
                   <ValidationError>Specify one of:
@@ -138,10 +144,31 @@ DEBUG ERROR FATAL ALL VERBOSE INFO OFF</ValidationError>
                   <Name>Final Log Level</Name>
                   <DefaultValue>OFF</DefaultValue>
                   <ArgumentNumber>4</ArgumentNumber>
+                  <ArgumentName>FinalLogLevel</ArgumentName>
                   <EmptyBehavior>0</EmptyBehavior>
                   <ValidationString>^(DEBUG|ERROR|FATAL|ALL|VERBOSE|INFO|OFF)$</ValidationString>
                   <ValidationError>Specify one of:
 DEBUG ERROR FATAL ALL VERBOSE INFO OFF</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>f6006cc2-e0bc-4a62-b721-f46b0bd9567f</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>f6006cc2-e0bc-4a62-b721-f46b0bd9567f</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Support Mode</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <ArgumentName>supportMode</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|YES|NO|no)$</ValidationString>
+                  <ValidationError>YES or NO</ValidationError>
                   <MaskTypedCharacters>false</MaskTypedCharacters>
                   <EntityType>0</EntityType>
                 </SBAArgumentDescriptor>
@@ -155,7 +182,7 @@ DEBUG ERROR FATAL ALL VERBOSE INFO OFF</ValidationError>
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>wciVqXxV6b3zWYMsSM0XRR0P48k=</ImportValidationString>
+    <ImportValidationString>sW09qlZ8ZDq6OXooij9DFx6rQpk=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>

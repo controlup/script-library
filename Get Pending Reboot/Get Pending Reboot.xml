@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>2025fca8-250a-42a5-aa32-93b3affb08a0</SBAId>
+    <RootSBAId>6c0da86f-befa-4b82-80f5-cfc119403640</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638523312557809950</SQN>
+    <Name>Get Pending Reboot</Name>
+    <Description>Check various registry locations to see if a computer rename, domain join/disjoin, Component Based Servicing, Application updates or Windows Update has registered the need for a reboot.
+Also check if the SCCM client is installed and if so query that for a reboot requirement</Description>
+    <ActionCategory>Power Management</ActionCategory>
+    <Version>1.3.3</Version>
+    <DateCreated>2024-05-24T20:00:31.053</DateCreated>
+    <DateModified>2024-05-26T14:09:57.57</DateModified>
+    <DatePublished>2024-05-26T14:00:22.56</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>4</Status>
+    <CheckSum>uOccIcdFtwttLPyMz7JXwTKVe1Y=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>reboot</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by: Brian Wilhite
+Taken from: https://github.com/bcwilhite/PendingReboot</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>@guyrleech</ContactEmail>
+      <Notes />
+      <DownloadCount>29</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>9TJwo0so1SXEcMYyDTWgLba6Zzc=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
