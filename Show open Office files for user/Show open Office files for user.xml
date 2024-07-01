@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>ac77c37f-3b28-4dac-a5fb-c152e490f100</SBAId>
+    <RootSBAId>bc8556d1-3942-4ca5-93a7-8224bebdfe6c</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638552799275911171</SQN>
+    <Name>Show open Office files for user</Name>
+    <Description>Show the open Excel, Word or PowerPoint files for the user, highlighting the active one and naming the active sheet of the active workbook if Excel.</Description>
+    <ActionCategory>User Environment</ActionCategory>
+    <Version>1.2.17</Version>
+    <DateCreated>2024-02-29T13:58:29.087</DateCreated>
+    <DateModified>2024-05-31T17:02:07.44</DateModified>
+    <DatePublished>2024-06-29T17:45:27.59</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>3</Status>
+    <CheckSum>ej3k/TPM6jBzT/xLcELQxjmEQW8=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>microsoft office,word,excel,powerpoint</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by:
+Taken from:</Credits>
+      <AllowExposeEmail>false</AllowExposeEmail>
+      <ContactEmail>@guyrleech</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>4096</AllowedEntitiesEx>
+      <AtomicEntityEx>4096</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>60</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>2</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>46ea9c3c-d567-42f0-9ce9-d0c97ac5540d</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>46ea9c3c-d567-42f0-9ce9-d0c97ac5540d</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Office product</Name>
+                  <DefaultValue>Excel</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>officeApplication</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^([Ee]xcel|[Ww]inword|[Ww]ord|[Pp]owerpnt|[Pp]owerpoint)$</ValidationString>
+                  <ValidationError>Excel, Word or PowerPoint only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>x5dnGE7EhEC6NkrIizZ7VEsnSqo=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
