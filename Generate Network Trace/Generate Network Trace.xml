@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SBADescriptor>
+    <SBAId>0ec7a470-fc6b-463c-9500-586fbea3b4bc</SBAId>
+    <RootSBAId>2aea4cd8-6dfb-4760-86c6-2618c8eb2498</RootSBAId>
+    <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
+    <SQN>638718606456545462</SQN>
+    <Name>Generate Network Trace</Name>
+    <Description>Produces a native Windows network trace in etl format, downloads a signed Microsoft utility from GitHub and runs that to convert the etl file to a pcapng file that Wireshark can open.
+After successful conversion the source etl trace will be deleted, leaving the converted file whose name and location will be in the output window.
+Specifying output files on network shares may not work as the script needs to run as system so may not have access.
+Address filters can be a comma separated list of IP addresses or resolveable names or leave blank to not filter.
+Protocol filters can be a comma separated list of TCP, UDP, ICMP, IGMP or leave blank to not filter.
+Ether type filters can be a comma separated list of IPv4, IPv6, ARP, etc or leave blank to not filter.
+https://github.com/microsoft/etl2pcapng</Description>
+    <ActionCategory>Network Analysis</ActionCategory>
+    <Version>1.2.20</Version>
+    <DateCreated>2024-10-02T20:50:37.127</DateCreated>
+    <DateModified>2025-01-12T14:09:57.57</DateModified>
+    <DatePublished>2025-01-07T15:30:45.653</DatePublished>
+    <LastEditorName>Guy Leech</LastEditorName>
+    <CreatorName>Guy Leech</CreatorName>
+    <Status>3</Status>
+    <CheckSum>/KzYNzQYWXGqlaGJJ53x+ClXZkg=</CheckSum>
+    <EULAVersion>1.0.0.0</EULAVersion>
+    <DenyCommunityShare>false</DenyCommunityShare>
+    <Icon>
+      <IconData />
+      <IconType>0</IconType>
+    </Icon>
+    <ShareDescriptor>
+      <Author>Guy Leech</Author>
+      <Tags>network,latency,bandwidth,connectivity</Tags>
+      <Credits>Credits to: Guy Leech
+Original code by: N/A
+Taken from: N/A</Credits>
+      <AllowExposeEmail>true</AllowExposeEmail>
+      <ContactEmail>@guyrleech</ContactEmail>
+      <Notes>Requires the following PowerShell Modules: NetEventPacketCapture, DNSClient. 
+</Notes>
+      <DownloadCount>0</DownloadCount>
+    </ShareDescriptor>
+    <ExecutionDescriptor>
+      <AllowedEntitiesEx>256</AllowedEntitiesEx>
+      <AtomicEntityEx>256</AtomicEntityEx>
+      <AllowedEntities>0</AllowedEntities>
+      <AtomicEntity>0</AtomicEntity>
+      <ScriptData>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</ScriptData>
+      <IsCompressed>true</IsCompressed>
+      <Interactive>false</Interactive>
+      <AltCredentialsType>0</AltCredentialsType>
+      <Timeout>300</Timeout>
+      <ScriptType>3</ScriptType>
+      <TimeoutPolicy>1</TimeoutPolicy>
+      <ConcurrencyMode>2</ConcurrencyMode>
+      <ExecutionContext>0</ExecutionContext>
+      <Arguments>
+        <inner>
+          <sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+            <item>
+              <key>
+                <string>bd00800c-203c-4fea-ab05-f0755d175f92</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>bd00800c-203c-4fea-ab05-f0755d175f92</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Duration Seconds</Name>
+                  <DefaultValue>30</DefaultValue>
+                  <ArgumentNumber>0</ArgumentNumber>
+                  <ArgumentName>durationSeconds</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^\d+$</ValidationString>
+                  <ValidationError>Positive integer values only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>b66f3ca1-ae7a-41a7-8f71-9c5818d245e5</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>b66f3ca1-ae7a-41a7-8f71-9c5818d245e5</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Overwrite</Name>
+                  <DefaultValue>no</DefaultValue>
+                  <ArgumentNumber>1</ArgumentNumber>
+                  <ArgumentName>overwrite</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString>^(yes|Yes|No|no)$</ValidationString>
+                  <ValidationError>Yes or no only</ValidationError>
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>64f2c43b-6232-438f-b8a2-b036eb13bccd</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>64f2c43b-6232-438f-b8a2-b036eb13bccd</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Addresses</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>3</ArgumentNumber>
+                  <ArgumentName>Addresses</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>70038351-7c14-4028-9f8f-669fdaca8796</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>70038351-7c14-4028-9f8f-669fdaca8796</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Protocols</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>4</ArgumentNumber>
+                  <ArgumentName>Protocols</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>eeecc86d-0e8f-4eb9-bef4-2eae80d4feab</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>eeecc86d-0e8f-4eb9-bef4-2eae80d4feab</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Output File</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>2</ArgumentNumber>
+                  <ArgumentName>outputFile</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+            <item>
+              <key>
+                <string>300c2d54-c5ba-41f2-af76-f550f40ab22e</string>
+              </key>
+              <value>
+                <SBAArgumentDescriptor>
+                  <ArgumentId>300c2d54-c5ba-41f2-af76-f550f40ab22e</ArgumentId>
+                  <ArgumentType>1</ArgumentType>
+                  <Name>Ether Types</Name>
+                  <DefaultValue />
+                  <ArgumentNumber>5</ArgumentNumber>
+                  <ArgumentName>etherTypes</ArgumentName>
+                  <EmptyBehavior>0</EmptyBehavior>
+                  <ValidationString />
+                  <ValidationError />
+                  <MaskTypedCharacters>false</MaskTypedCharacters>
+                  <EntityType>0</EntityType>
+                </SBAArgumentDescriptor>
+              </value>
+            </item>
+          </sxSerializedDictionaryOfStringSBAArgumentDescriptor>
+        </inner>
+      </Arguments>
+      <InstructionsExecutionOnComputer />
+      <SupressOutputDialog>false</SupressOutputDialog>
+      <UseSdk>false</UseSdk>
+    </ExecutionDescriptor>
+    <MissingCred>false</MissingCred>
+    <ImportValidationString>lBBK5Ku9ZHZ3UTLyE3YOIv3wXoQ=</ImportValidationString>
+    <IsVersionAudited>false</IsVersionAudited>
+  </SBADescriptor>
+</ArrayOfSBADescriptor>
