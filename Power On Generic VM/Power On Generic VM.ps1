@@ -6,7 +6,7 @@
   .PARAMETER hostname
   The hostname to perform the action on, supplied via a trigger or right-click action against a VM
   .NOTES
-   Version:        0.1
+   Version:        0.2
    Context:        Computer, executes on Monitor
    Author:         Bill Powell
    Requires:       Realtime DX 8.8
@@ -106,7 +106,8 @@ Write-Output "Action $RequiredAction applied to $hostname from $($ThisComputer.N
 
 $Action = (Get-CUAvailableActions -DisplayName $RequiredAction | Where-Object {($_.Title -eq $RequiredAction) -and ($_.IsSBA -eq $false) -and ($_.Category -eq $RequiredActionCategory)})[0]
 
-$Allrows = Invoke-CUQuery -Table $Action.Table -Fields * -Where "sName = '${hostname}'"
+$Allrows = Invoke-CUQuery -Table $Action.Table -Fields * -Search "${hostname}" 
+
 $Allrows.Data | ForEach-Object {
     $VMTableRow = $_
 

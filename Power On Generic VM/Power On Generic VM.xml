@@ -1,54 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfSBADescriptor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SBADescriptor>
-    <SBAId>ed3f0707-e2a4-419e-acf4-5f09b067bbc4</SBAId>
+    <SBAId>45cb5c86-fdd5-4d44-999a-96c24293b10f</SBAId>
     <RootSBAId>caf60fcf-4669-40c1-a82e-d612dcc9cade</RootSBAId>
     <StoreId>d159c1e2-9a6c-4324-bbe8-a69e941c6b98</StoreId>
-    <SQN>638232947065416967</SQN>
+    <SQN>638753916106643335</SQN>
     <Name>Power On Generic VM</Name>
     <Description>This script uses the CUActions available in v8.8 onwards to power on VMs on any supported hypervisor. It can be used as a right-click action or as an automated action by a trigger.</Description>
-    <Category>Power Management</Category>
-    <Version>3.0.10</Version>
+    <ActionCategory>Power Management</ActionCategory>
+    <Version>4.0.11</Version>
     <DateCreated>2023-05-20T17:32:45.557</DateCreated>
-    <DateModified>2023-06-22T16:53:02.83</DateModified>
-    <DatePublished>2023-06-22T17:15:46.073</DatePublished>
-    <LastEditorName>Bill Powell</LastEditorName>
+    <DateModified>2025-02-23T14:09:57.57</DateModified>
+    <DatePublished>2025-02-17T12:20:10.663</DatePublished>
+    <LastEditorName>Chris Twiest</LastEditorName>
     <CreatorName>Bill Powell</CreatorName>
-    <Status>4</Status>
-    <CheckSum>UeGUgp10M33hJmY2BMTm4iZcox8=</CheckSum>
+    <Status>3</Status>
+    <CheckSum>q2dVpoLw/uibBzw2J5yfcXVT408=</CheckSum>
     <EULAVersion>1.0.0.0</EULAVersion>
     <DenyCommunityShare>false</DenyCommunityShare>
     <Icon>
-      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvwAADr8BOAVTJAAAARZJREFUSEvtks0KgkAUhd0UmiWFQ0FQbqJNmyCKXLSsTUSbXPYWPVFLH6EHcN8z+Aru7dDcYpx+Rispwo+LHg937tEZtThn/ilA+yg0VAog9TZFgJIiQMlvBIRhuNqsWbsJ/y6GYeBq27brurTmAnxSjwIwHaNLi1b1MLOOc6nM/QTNQRCg0/d96BqrYwlfC9QBeHd915fmXstZDjCXWs8ZesfCEnpOEwAtDRVL7OTAEc2EpvtNwN3N4SV2cuCIZkLTPek+3yJjyKQt6k562bYIJ9Zos/LWkUbz4ofMM3DU0HXWyHbIHM/zYD4CPyiuFdMcTcfidACf1POAlykClBQBSr4X8EFoqBiQE6kCoigilZ2cvyCOT+5PyFbdcG/TAAAAAElFTkSuQmCC</IconData>
+      <IconData>iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAARZJREFUSEvtks0KgkAUhd0UmiWFQ0FQbqJNmyCKXLSsTUSbXPYWPVFLH6EHcN8z+Aru7dDcYpx+Rispwo+LHg937tEZtThn/ilA+yg0VAog9TZFgJIiQMlvBIRhuNqsWbsJ/y6GYeBq27brurTmAnxSjwIwHaNLi1b1MLOOc6nM/QTNQRCg0/d96BqrYwlfC9QBeHd915fmXstZDjCXWs8ZesfCEnpOEwAtDRVL7OTAEc2EpvtNwN3N4SV2cuCIZkLTPek+3yJjyKQt6k562bYIJ9Zos/LWkUbz4ofMM3DU0HXWyHbIHM/zYD4CPyiuFdMcTcfidACf1POAlykClBQBSr4X8EFoqBiQE6kCoigilZ2cvyCOT+5PyFbdcG/TAAAAAElFTkSuQmCC</IconData>
       <IconType>2</IconType>
     </Icon>
     <ShareDescriptor>
       <Author>Bill Powell</Author>
-      <Tags>CUActions,power,start,citrix,horizon,avd,vm</Tags>
+      <Tags>avd,citrix,cuactions,horizon,parallels ras,power,start,vm</Tags>
       <Credits>Credits to: Bill Powell
 Original code by: N/A
 Taken from: N/A</Credits>
       <AllowExposeEmail>true</AllowExposeEmail>
-      <ContactEmail>bill.powell@controlup.com</ContactEmail>
-      <Notes>This script accompanies the Realtime DX version 8.8 release. While it is a useful script in its own right, it also serves as an example of scripting recommended practice.
-
-In particular, these scripts provide template code for:
-* script preferences for verbose/debug/error action/progress
-* increasing the width of the output window
-* specifying a CUAction using its Name and Category
-* loading the correct version of the ControlUp.PowerShell.User.dll (powershell module) to match the running monitor and checking that it has the new CUAction features
-* 'chunking' of data, where there are many rows of data being retrieved
-* performing CUActions on multiple objects
-
-</Notes>
-      <DownloadCount>1</DownloadCount>
+      <ContactEmail>chris.twiest@controlup.com</ContactEmail>
+      <Notes />
+      <DownloadCount>0</DownloadCount>
     </ShareDescriptor>
     <ExecutionDescriptor>
       <AllowedEntitiesEx>256</AllowedEntitiesEx>
       <AtomicEntityEx>256</AtomicEntityEx>
       <AllowedEntities>0</AllowedEntities>
       <AtomicEntity>0</AtomicEntity>
-      <ScriptData>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</ScriptData>
+      <ScriptData>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</ScriptData>
       <IsCompressed>true</IsCompressed>
       <Interactive>false</Interactive>
       <AltCredentialsType>3</AltCredentialsType>
@@ -84,7 +74,7 @@ In particular, these scripts provide template code for:
       <UseSdk>false</UseSdk>
     </ExecutionDescriptor>
     <MissingCred>false</MissingCred>
-    <ImportValidationString>THOCzz+djWB69RIEdjr23eVAIU4=</ImportValidationString>
+    <ImportValidationString>/lh9AjXW8zmFW4bREVLVK+fwa0M=</ImportValidationString>
     <IsVersionAudited>false</IsVersionAudited>
   </SBADescriptor>
 </ArrayOfSBADescriptor>
