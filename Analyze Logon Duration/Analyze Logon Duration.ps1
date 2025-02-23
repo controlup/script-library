@@ -1528,7 +1528,7 @@ function Get-LogonDurationAnalysis {
                         {
                             $Script:Output.Add( [pscustomobject]@{
                                 'Source' = 'FSLogix'
-                                'PhaseName' = 'LoadProfile*'
+                                'PhaseName' = 'Profile Container*'
                                 'Duration' = $Duration.TotalSeconds
                                 'EndTime' = $FSLogixWinLogonOutput.EndTime
                                 'StartTime' = $FSLogixWinLogonOutput.StartTime
@@ -1545,7 +1545,7 @@ function Get-LogonDurationAnalysis {
                     {
                         $Script:Output.Add([pscustomobject]@{
                             'Source' = 'FSLogix'
-                            'PhaseName' = "LoadProfile"
+                            'PhaseName' = "Profile Container"
                             'Duration' = $Duration.TotalSeconds
                             'EndTime' = $SessionEvents[1].time
                             'StartTime' = $SessionEvents[0].time
@@ -2174,6 +2174,7 @@ function Get-LogonDurationAnalysis {
                     LogonTimeFileTime = $lsaSessions[0].LoginTime.ToFileTime()
                     FormatTime = $lsaSessions[0].LoginTime.ToString( 'HH:mm:ss.fff' )
                     TimeZone = [System.TimeZoneInfo]::Local | Select-Object -ExpandProperty Id -ErrorAction SilentlyContinue
+                    SessionId = $SessionId
                     LogonID = $loginIds
                     UserSID = $lsaSessions[0].Sid
                     Type = $lsaSessions[0].Type
@@ -3311,7 +3312,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                 $winlogonScriptBlock =
                 {
                     Param( $logon , $username , $WinlogonFile )
-                    Get-PhaseEvent -source 'FSLogix' -PhaseName 'ShellStart' -StartProvider 'Microsoft-Windows-Winlogon' `
+                    Get-PhaseEvent -source 'FSLogix' -PhaseName 'ODFC Container' -StartProvider 'Microsoft-Windows-Winlogon' `
                         -StartEventFile $WinlogonFile `
                         -EndEventFile $WinlogonFile `
                         -EndProvider 'Microsoft-Windows-Winlogon' -StartXPath (
@@ -3336,7 +3337,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                 $winlogonScriptBlock =
                 {
                     Param( $logon )
-                    Get-PhaseEvent -source 'FSLogix' -PhaseName 'ShellStart' -StartProvider 'Microsoft-Windows-Winlogon' `
+                    Get-PhaseEvent -source 'FSLogix' -PhaseName 'ODFC Container' -StartProvider 'Microsoft-Windows-Winlogon' `
                         -EndProvider 'Microsoft-Windows-Winlogon' -StartXPath (
                         New-XPath -EventId 811 -From (Get-Date -Date $Logon.LogonTime) `
                             -SecurityData @{
@@ -3805,7 +3806,7 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
             {
                 if( $global:appsenseParams[ 'Path' ] )
                 {
-                    $appsenseOffline.Add( 'Path' , $global:appsenseParams[ 'Path' ] )
+                    $appsenseOffline.Add( 'Path' , @($($global:appsenseParams[ 'Path' ]),$($parameters['ApplicationEventFile'])) )  ## TTYE - You can configure AppSense to save events to the Application Log. We'll check there too then.
                 }
                 else
                 {
@@ -3813,8 +3814,23 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                 }
             }
 
-            if( -Not $abort -and ( [array]$appSenseEvents = @( Get-WinEvent -Oldest -FilterHashtable ( @{ StartTime = $logon.LogonTime ; UserID = $logon.UserSid ; Id = 9662 , 9659 , 9661 ; ProviderName = 'AppSense Environment Manager.'  } + $appsenseOffline ) -ErrorAction SilentlyContinue ).Where( 
-                { ($_.Id -eq 9662 -and $_.Properties[4].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9659 -and $_.Properties[1].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9661 -and $_.Properties[0].Value -match "SessionID:$sessionID`$")} )) -and $appsenseEvents.Count )
+
+            ## TTYE - ProviderName changes depending on whether the event is stored in the Application Log or the AppSense Log. Application log is "AppSense Environment Manager" AppSense Log is "AppSense Environment Manager." #ProviderName = @('AppSense Environment Manager.','AppSense Environment Manager')
+            $AppSenseEventsApplicationLog = (Get-WinEvent -Oldest -FilterHashtable ( @{ StartTime = $logon.LogonTime ; UserID = $logon.UserSid ; Id = 9662 , 9659 , 9661  ; LogName = "Application" }) -ErrorAction SilentlyContinue)
+            $AppSenseEventsAppSenseLog = (Get-WinEvent -Oldest -FilterHashtable ( @{ StartTime = $logon.LogonTime ; UserID = $logon.UserSid ; Id = 9662 , 9659 , 9661  ; LogName = "AppSense" }) -ErrorAction SilentlyContinue)
+
+            if ($AppSenseEventsApplicationLog.count -ge 1) {
+                $AppSenseEventLog = "Application"
+            }
+            if ($AppSenseEventsAppSenseLog.count -ge 1) {
+                $AppSenseEventLog = "AppSense"
+            }
+
+            Write-Verbose "AppSense events were detected in the $AppSenseEventLog log"
+
+
+            if( -Not $abort -and ( [array]$appSenseEvents = @( Get-WinEvent -Oldest -FilterHashtable ( @{ StartTime = $logon.LogonTime ; UserID = $logon.UserSid ; Id = 9662 , 9659 , 9661  ; LogName = $AppSenseEventLog }  ) -ErrorAction SilentlyContinue ).Where( 
+                {($_.ProviderName -like "AppSense Environment Manager*") -and ($_.Id -eq 9662 -and $_.Properties[4].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9659 -and $_.Properties[1].Value -match "SessionID:$sessionID`$") -or ($_.Id -eq 9661 -and $_.Properties[0].Value -match "SessionID:$sessionID`$")} )) -and $appsenseEvents.Count )
             {
                 ## Times are in UTC so convert to local time - https://devblogs.microsoft.com/scripting/powertip-convert-from-utc-to-my-local-time-zone/
                 $currentTimeZone = Get-TimeZone    # without parameters, gets the current time zone
@@ -3829,17 +3845,21 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                     {
                         if( $appsenseEvent.Properties[0].Value -eq 'Dsktp' -and ! $emuserProcess )
                         {
-                            ## The emuser is launched in SubjectLogonId 999 as system so we have to check that it is the right one (e.g. two overlapping logons) so look for current running process rather than in event logs - restarted process will confused things though
-                            ## could also check that parent is emcoreservice.exe
-                            if( $emuserProcess = Get-Process -Name EmUser -ErrorAction SilentlyContinue | Where-Object { $_.SessionId -eq $SessionId -and $_.StartTime -ge $logon.LogonTime  -and $_.StartTime -le $appsenseEvent.TimeCreated -and $_.Path -match '\\Environment Manager\\Agent\\EmUser\.exe$' }  | Sort-Object -Property StartTime | Select-Object -First 1 )
+                            ## The emuser is launched in SubjectLogonId 999 as system so we have to check that it is the right one (e.g. two overlapping logons)... essentially, if there were two of these events we have to bail this measurement because we don't know which belongs to what user
+                            if( $securityParams[ 'Path' ] )
+                            {
+                                $emuserProcess = Get-WinEvent -Path $securityParams['Path'] -FilterXPath "*[System/EventID=4688 and System/TimeCreated[@SystemTime>='$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("s")).$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("fff"))Z'] and EventData[Data[@Name='NewProcessName']='C:\Program Files\AppSense\Environment Manager\Agent\EmUser.exe' and Data[@Name='ParentProcessName']='C:\Program Files\AppSense\Environment Manager\Agent\EmCoreService.exe']]" -ErrorAction SilentlyContinue
+                            } else {
+                                $emuserProcess = Get-WinEvent -LogName Security -FilterXPath "*[System/EventID=4688 and System/TimeCreated[@SystemTime>='$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("s")).$($startProcessingEvent.TimeCreated.ToUniversalTime().ToString("fff"))Z'] and EventData[Data[@Name='NewProcessName']='C:\Program Files\AppSense\Environment Manager\Agent\EmUser.exe' and Data[@Name='ParentProcessName']='C:\Program Files\AppSense\Environment Manager\Agent\EmCoreService.exe']]" -ErrorAction SilentlyContinue
+                            }
+                            if ($emuserProcess.count -ge 1)
                             {
                                 $Script:Output.Add( ( [pscustomobject]@{ 
                                     'Source' = 'Ivanti EM'
                                     'PhaseName' = 'Personalization Loading'
-                                    'StartTime' = $emuserProcess.StartTime
+                                    'StartTime' = $emuserProcess.TimeCreated
                                     'EndTime'   = $appsenseEvent.TimeCreated
-                                    'Duration'  = ($appsenseEvent.TimeCreated - $emuserProcess.StartTime).TotalSeconds }))
-                                $foundPSGood = $true
+                                    'Duration'  = ($appsenseEvent.TimeCreated - $emuserProcess.TimeCreated).TotalSeconds }))
                             }
                             else
                             {
@@ -3905,6 +3925,43 @@ if ( $global:citrixUPMParams[ 'Path' ] -or ( Get-WinEvent -ListProvider 'CitrixC
                 }
                 $sharedVariables.warnings.Add( "Ivanti EM service present and $($status)running but found no relevant local events - are event ids 9662 & 9659 enabled in the configuration?" )
             }
+
+            ##TTYE - It's been observed that Ivanti will do some setup processing prior to its event log generation. Fortunately, the Winlogon log will identify when it starts notifying technology when it is its turn to start
+            ##       Winlogon phases used by Ivanti: EmPolicy, EmSysNotify
+            ##TTYE - The challenge here is AppSense will be called multiple times by winlogon so we have to mark each pair of events
+            ##       I can do this by finding all events and then going through each pair
+            
+            <#
+            if( -Not $abort -and ( [array]$appSenseWinLogonEvents = @( Get-WinEvent -Oldest -FilterHashtable ( @{ StartTime = $logon.LogonTime ; UserID = $logon.UserSid ; Id = 811 , 812   } + $global:winlogonParams ) -ErrorAction SilentlyContinue ).Where( 
+                {($_.Properties[1].Value -match "EmPolicy") -or ($_.Properties[1].Value -match "EmSysNotify")})) -and $appSenseWinLogonEvents.Count) {
+                ## iterate through the events and match each 'start' - 'finish' pair of events as a phase
+                $ivantiEventCount = 0
+                foreach ($appSenseWinLogonEvent in $appSenseWinLogonEvents) {
+                    if ($appSenseWinLogonEvent.Id -eq 811) {
+                        remove-variable appSenseWinLogon812Event -ErrorAction SilentlyContinue
+                        #write-host "$($appSenseWinLogonEvent | Out-String)"
+                        #write-host "$($appSenseWinLogonEvent.Properties[1].Value)"
+                        ## Get the next 812 event after this 811 event
+                        $appSenseWinLogon812Event = $appSenseWinLogonEvents.Where({($_.RecordId -gt $appSenseWinLogonEvent.RecordId) -and ($_.Id -eq 812) -and ($_.Properties[1].Value -eq $appSenseWinLogonEvent.Properties[1].Value)})[0]
+                        $startTime = $appSenseWinLogonEvent.TimeCreated
+                        $endTime = $appSenseWinLogon812Event.TimeCreated
+                        $duration = $endTime - $startTime
+                        $phaseName = "$($appSenseWinLogonEvent.Properties[1].Value) $($ivantiEventCount)"
+                        
+                        $ivantiEventCount = $ivantiEventCount+1
+                        
+                        $Script:Output.Add( [pscustomobject]@{
+                            'Source' = 'Ivanti'
+                            'PhaseName' = $phaseName
+                            'Duration' = $Duration.TotalSeconds
+                            'EndTime' = $endTime
+                            'StartTime' = $startTime
+                        } )
+                        
+                    }
+                }
+            }
+            #>
         }
 #endregion Ivanti EM
 
@@ -4466,7 +4523,7 @@ if ($startProcessingEvent.TimeCreated -gt $logon.LogonTime) { ## This should alw
                                 ## This should be a WMI event
                                 $indexNumber = $GPOWMIEvents.IndexOf($GPOWMIEvent)
                                 if ($XMLGPOWMIevent.event.UserData.Operation_ClientFailure.resultcode -ne "0x80041032") {  ##Did the WQL query fail? -- 80041032 is a success
-                                    if (Get-Variable duration -ErrorAction SilentlyContinue) { Remove-Variable duration }
+                                    if (Get-Variable duration -ErrorAction SilentlyContinue) { Remove-Variable duration -ErrorAction SilentlyContinue }
                                     $duration = "$(Get-WMIEnumerationResult -HexCode $XMLGPOWMIevent.event.UserData.Operation_ClientFailure.resultcode)"
                                     $DurationMs = "0"
                                 } else {
@@ -5372,6 +5429,7 @@ if ($PsCmdlet.ParameterSetName -like "OfflineAnalysis")
     {
         $UserName = $logonDetails.UserName
         $UserDomain = $logonDetails.UserDomain
+        $SessionID = $logonDetails.SessionId
         if( [string]::IsNullOrEmpty( $UserName ) -or [string]::IsNullOrEmpty( $UserDomain ) )
         {
             Throw "Failed to get user name and/or domain details from JSON file `"$jsonFile`" containing previosuly saved logon information"
