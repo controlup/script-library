@@ -1,4 +1,4 @@
-﻿<# 
+ <# 
 .SYNOPSIS 
     Ensures ControlUp Automation module meets the minimum required version, then schedules an Invoke-CUAgentUpdate task.
 
@@ -105,16 +105,16 @@ if (-not $moduleInstalled) {
     $ModuleInstallPath = "C:\Program Files\WindowsPowerShell\Modules\$ModuleName"
 
     # Step 1: Download the .nupkg file
-    write-ouput "Downloading $ModuleName module..."
+    Write-Output "Downloading $ModuleName module..."
     Invoke-WebRequest -Uri $ModuleUrl -OutFile $DownloadPath
 
     # Step 2: Rename .nupkg to .zip to allow extraction
-    write-ouput "Renaming .nupkg to .zip..."
+    Write-Output "Renaming .nupkg to .zip..."
     If (Test-Path $ZipPath) { Remove-Item -Force $ZipPath }
     Rename-Item -Path $DownloadPath -NewName $ZipPath -Force
 
     # Step 3: Extract the .zip file
-    write-ouput "Extracting module..."
+    Write-Output "Extracting module..."
     if (Test-Path $ExtractPath) { Remove-Item -Recurse -Force $ExtractPath }
     Expand-Archive -Path $ZipPath -DestinationPath $ExtractPath
 
@@ -123,32 +123,32 @@ if (-not $moduleInstalled) {
     $DllFiles = Get-ChildItem -Path $ExtractPath -Filter "*.dll" -Recurse
 
     if (-not $Psd1File) {
-        write-ouput "Error: Could not find the module manifest (.psd1)."
+        Write-Output "Error: Could not find the module manifest (.psd1)."
         exit 1
     }
 
     # Step 5: Prepare the installation directory
-    write-ouput "Setting up module directory..."
+    Write-Output "Setting up module directory..."
     if (Test-Path $ModuleInstallPath) { Remove-Item -Recurse -Force $ModuleInstallPath }
     New-Item -ItemType Directory -Path $ModuleInstallPath | Out-Null
 
     # Step 6: Move necessary files into the module folder
-    write-ouput "Copying module files..."
+    Write-Output "Copying module files..."
     Copy-Item -Path $Psd1File.FullName -Destination $ModuleInstallPath -Force
     Copy-Item -Path $DllFiles.FullName -Destination $ModuleInstallPath -Force
 
-    write-ouput "Module installed successfully in $ModuleInstallPath"
+    Write-Output "Module installed successfully in $ModuleInstallPath"
 
     # Step 7: Import the module
-    write-ouput "Importing module..."
+    Write-Output "Importing module..."
     Import-Module $ModuleName -Force
 
     # Step 8: Verify installation
-    write-ouput "Verifying module installation..."
+    Write-Output "Verifying module installation..."
     if (Get-Module -ListAvailable -Name $ModuleName) {
-        write-ouput "$ModuleName successfully installed and available."
+        Write-Output "$ModuleName successfully installed and available."
     } else {
-        write-ouput "Error: Module not found after installation."
+        Write-Output "Error: Module not found after installation."
     }
 }
 
@@ -254,21 +254,21 @@ $action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NonInter
 # Define the scheduled task principal to run as SYSTEM (to prevent permission issues)
 $principal = New-ScheduledTaskPrincipal -UserId "SYSTEM" -LogonType ServiceAccount -RunLevel Highest
 
+#Definte the task trigger
+$TriggerTime = (Get-Date).AddSeconds(20)
+$Trigger = New-ScheduledTaskTrigger -Once -At $TriggerTime
+
 # Define task settings
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Seconds 0)
 
 # Register and start the scheduled task
 try {
-    Register-ScheduledTask -TaskName $taskName -Description "This script is generated with the Invoke-CUAgentUpdate Action in the ControlUp console." -Action $action -Principal $principal -Settings $settings -Force
+    Register-ScheduledTask -TaskName $taskName -Description "This script is generated with the Invoke-CUAgentUpdate Action in the ControlUp console." -Action $action -Principal $principal -Settings $settings -Trigger $trigger -Force
     Write-Output "Scheduled task successfully registered."
 
-    Write-Output "Starting scheduled task: $taskName"
-    Start-ScheduledTask -TaskName $taskName
-    Write-Output "Scheduled task started successfully."
 } catch {
     Write-Error "Failed to create or start scheduled task: $_"
     exit 1
 }
 
 Write-Output "The upgrade to $desiredVersion will now start. The upgrade may take a few minutes."
-

@@ -6,13 +6,13 @@ The script requires the ControlUp Automation PowerShell Module to be installed. 
 
 When the TAGS parameter is set to true, any installation errors will be written to ControlUp Tags. To view these errors, you may need to enable the Tags column in ControlUp. If the installation completes successfully, no tag will be created.
 
-Version: 2.8.37
+Version: 3.8.38
 
 Creator: Chris Twiest
 
 Date Created: 10/15/2024 16:29:27
 
-Date Modified: 02/23/2025 14:09:57
+Date Modified: 02/27/2025 14:09:57
 
 Scripting Language: ps1
 
